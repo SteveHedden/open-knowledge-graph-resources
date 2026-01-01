@@ -1,0 +1,16 @@
+# Copy this file, rename it, and fill in the fields to add a new resource.
+# Do not commit filled data to _template.yaml.
+
+id:
+name:
+kind:            # ontology | taxonomy | vocabulary | reference-dataset | schema
+domain:
+free:
+license:
+  name:
+  url:
+publisher:
+description:
+links:
+  homepage:
+distributions: []
