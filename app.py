@@ -9,7 +9,7 @@ WDQS_URL = "https://query.wikidata.org/sparql"
 # IMPORTANT: WDQS asks bots/scripts to use an identifiable User-Agent with contact info. :contentReference[oaicite:0]{index=0}
 USER_AGENT = "KGResourcesStreamlit/0.1 (contact: you@example.com)"
 
-st.set_page_config(page_title="Free Knowledge Graph Resources", layout="wide")
+st.set_page_config(page_title="Knowledge Graph Resources", layout="wide")
 st.title("Knowledge Graph Resources")
 st.caption("Ontologies, controlled vocabularies, and semantic tools—queried from Wikidata.")
 
