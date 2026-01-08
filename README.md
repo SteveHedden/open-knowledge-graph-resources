@@ -42,3 +42,14 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
+
+## Data & License
+
+Data: Wikidata (CC0)
+Code: MIT License
+
+## Contributing
+
+Contributions are welcome.
+Open an issue to suggest improvements or report bugs
+Submit a pull request for fixes, enhancements, or new ideas
