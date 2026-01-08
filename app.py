@@ -20,6 +20,15 @@ RESOURCE_KIND = st.sidebar.selectbox(
 
 LIMIT = st.sidebar.slider("Max results", 50, 2000, 500, step=50)
 
+REPO_URL = "https://github.com/SteveHedden/open-knowledge-graph-resources"
+
+with st.sidebar:
+    st.markdown("### About")
+    st.markdown(
+        f"- **Source code:** [GitHub repository]({REPO_URL})\n"
+        f"- **Data:** Wikidata (live queries)"
+    )
+
 BASE_QUERY_ONTO_VOCAB = f"""
 SELECT
   ?item
