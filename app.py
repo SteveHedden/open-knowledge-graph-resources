@@ -50,6 +50,11 @@ WHERE {{
         ?item p:P31 ?statement1 .
         ?statement1 (ps:P31/(wdt:P279*)) wd:Q1469824 . # controlled vocabulary
       }}
+      UNION
+      {{
+        ?item p:P31 ?statement2 .
+        ?statement2 (ps:P31/(wdt:P279*)) wd:Q8269924 .  # taxonomy  <-- add this
+      }}
     }}
     LIMIT {LIMIT}
   }}
