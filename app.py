@@ -68,6 +68,7 @@ GROUP BY ?item ?itemLabel
 """
 
 # You can refine "software" class later; this is a decent starting point.
+# You can refine "software" class later; this is a decent starting point.
 BASE_QUERY_SOFTWARE = f"""
 SELECT
   ?item
@@ -75,6 +76,8 @@ SELECT
   (GROUP_CONCAT(DISTINCT STR(?officialWebsite); separator=" | ") AS ?officialWebsites)
   (GROUP_CONCAT(DISTINCT ?licenseLabel; separator=" | ") AS ?licenses)
   (GROUP_CONCAT(DISTINCT ?partOfLabel; separator=" | ") AS ?partOf)
+  (SAMPLE(?version) AS ?latestVersion)
+  (MAX(?pubDate) AS ?latestReleaseDate)
 WHERE {{
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". }}
 
@@ -89,6 +92,20 @@ WHERE {{
   OPTIONAL {{ ?item wdt:P275 ?license . }}
   OPTIONAL {{ ?item wdt:P361 ?partOfEntity . }}
 
+  # P348 statement + P577 qualifier on that statement
+  OPTIONAL {{
+    ?item p:P348 ?verStmt .
+    ?verStmt ps:P348 ?version .
+    OPTIONAL {{ ?verStmt pq:P577 ?pubDate . }}
+  }}
+
+    # P348 statement + P577 qualifier on that statement
+  OPTIONAL {{
+    ?item p:P348 ?verStmt .
+    ?verStmt ps:P348 ?version .
+    OPTIONAL {{ ?verStmt pq:P577 ?pubDate . }}
+  }}
+
   SERVICE wikibase:label {{
     bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
     ?license rdfs:label ?licenseLabel .
@@ -97,6 +114,7 @@ WHERE {{
 }}
 GROUP BY ?item ?itemLabel
 """
+
 
 def run_wdqs(query: str) -> dict:
     headers = {
@@ -123,6 +141,8 @@ def query_to_df(query: str) -> pd.DataFrame:
             "Official websites": b.get("officialWebsites", {}).get("value", ""),
             "Licenses": b.get("licenses", {}).get("value", ""),
             "Part of": b.get("partOf", {}).get("value", ""),
+            "latest release": b.get("latestReleaseDate", {}).get("value", ""),
+
         })
     return pd.DataFrame(rows)
 
@@ -132,26 +152,74 @@ query = BASE_QUERY_ONTO_VOCAB if RESOURCE_KIND.startswith("Ontologies") else BAS
 st.info("Tip: This app caches results for 6 hours to reduce load on Wikidata Query Service.")
 df = query_to_df(query)
 
-# Put resources with websites on top
+is_software = RESOURCE_KIND.startswith("Software")
+
+# Common derived fields
 df["Has website"] = df["Official websites"].str.strip().ne("")
 df["Has license"] = df["Licenses"].str.strip().ne("")
 
-df = df.sort_values(
-    by=["Has website", "Has license", "Item"],
-    ascending=[False, False, True]
-).drop(columns=["Has website", "Has license"])
-
-# Make links nicer for clicking
-df["Wikidata page"] = df["Wikidata"]  # this is already a full URL like https://www.wikidata.org/entity/Q...
+# ---- Make links nicer for clicking (common) ----
+df["Wikidata page"] = df["Wikidata"]
 df["Official website"] = df["Official websites"].str.split(" | ").str[0].fillna("")
 
-# Move "Part of" to be the last column
-cols = list(df.columns)
+# ---- Branch: Software vs Ontologies/Vocabs ----
+if is_software:
+    # Parse release date only for software
+    df["latest release"] = pd.to_datetime(df["latest release"], errors="coerce")
 
-if "Part of" in cols:
-    cols = [c for c in cols if c != "Part of"] + ["Part of"]
-    df = df[cols]
+    # Sort: newest releases first, then quality signals, then name
+    df = df.sort_values(
+        by=["latest release", "Has website", "Has license", "Item"],
+        ascending=[False, False, False, True]
+    )
 
+    # Re-order columns for software
+    desired_cols = [
+        "Item",
+        "latest release",
+        "Licenses",
+        "Official website",
+        "Wikidata page",
+    ]
+    # Only keep ones that exist (safe if you tweak later)
+    df = df[[c for c in desired_cols if c in df.columns]]
+
+    # Display config: show dates nicely
+    column_config = {
+        "Wikidata page": st.column_config.LinkColumn("Wikidata", display_text="Open"),
+        "Official website": st.column_config.LinkColumn("Website", display_text="Visit"),
+        "latest release": st.column_config.DateColumn("Latest release"),
+    }
+
+else:
+    # Ontologies/Vocabs: don't treat "latest release" as meaningful
+    # (it will be blank / NaT for most, and sorting by it is weird)
+
+    # Sort: prioritize website/license coverage, then name
+    df = df.sort_values(
+        by=["Has website", "Has license", "Item"],
+        ascending=[False, False, True]
+    )
+
+    # Re-order columns for ontologies/vocabs
+    desired_cols = [
+        "Item",
+        "Licenses",
+        "Official website",
+        "Wikidata page",
+        "Part of",
+    ]
+    df = df[[c for c in desired_cols if c in df.columns]]
+
+    column_config = {
+        "Wikidata page": st.column_config.LinkColumn("Wikidata", display_text="Open"),
+        "Official website": st.column_config.LinkColumn("Website", display_text="Visit"),
+    }
+
+# Drop helper cols if they somehow survived
+df = df.drop(columns=[c for c in ["Has website", "Has license", "Wikidata", "Official websites"] if c in df.columns], errors="ignore")
+
+# Client-side filter (works for both)
 search = st.text_input("Filter results (client-side)", "")
 if search:
     df = df[df["Item"].str.contains(search, case=False, na=False)]
@@ -159,17 +227,8 @@ if search:
 st.write(f"Results: {len(df):,}")
 
 st.data_editor(
-    df.drop(columns=["Wikidata", "Official websites"]),
+    df,
     use_container_width=True,
     disabled=True,
-    column_config={
-        "Wikidata page": st.column_config.LinkColumn(
-            "Wikidata",
-            display_text="Open"
-        ),
-        "Official website": st.column_config.LinkColumn(
-            "Website",
-            display_text="Visit"
-        ),
-    },
+    column_config=column_config,
 )
