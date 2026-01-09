@@ -80,7 +80,7 @@ WHERE {{
 
   {{
     SELECT DISTINCT ?item WHERE {{
-      ?item wdt:P31/wdt:P279* wd:Q7397 .  # software
+      ?item wdt:P31/wdt:P279* wd:Q124653107 .  # software
     }}
     LIMIT {LIMIT}
   }}
