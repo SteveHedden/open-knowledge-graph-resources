@@ -422,6 +422,17 @@
     okg:title "Dgraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q67280318> .
 
+<https://openknowledgegraphs.com/software/dosdp-tools/> a okg:Software ;
+    rdfs:label "DOSDP Tools" ;
+    okg:description "toolkit for working with Dead Simple OWL Design Patterns and OWL ontologies" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "0.20.0" ;
+    okg:releaseDate "2026-05-12"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/INCATools/dosdp-tools> ;
+    okg:title "DOSDP Tools" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140685867> .
+
 <https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
     rdfs:label "dotNetRDF" ;
     okg:description "open source .NET library for RDF" ;
@@ -476,6 +487,18 @@
     okg:sourceRepo <https://github.com/emmo-repo/EMMOntoPy> ;
     okg:title "EMMOntoPy" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653415> .
+
+<https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/> a okg:Software ;
+    rdfs:label "Euler Yet another proof Engine" ;
+    okg:description "Euler Yet another proof Engine (EYE), a Semantic Web reasoning engine for N3 and RDF rules" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://eulersharp.sourceforge.net/> ;
+    okg:latestVersion "11.24.4" ;
+    okg:releaseDate "2026-05-12"^^xsd:date ;
+    okg:softwareType okg:ReasoningInference ;
+    okg:sourceRepo <https://github.com/eyereasoner/eye> ;
+    okg:title "Euler Yet another proof Engine" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140686385> .
 
 <https://openknowledgegraphs.com/software/excel-2-rdf/> a okg:Software ;
     rdfs:label "Excel 2 RDF" ;
@@ -801,6 +824,17 @@
     okg:title "Jelly" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140621080> .
 
+<https://openknowledgegraphs.com/software/json-ld-playground/> a okg:Software ;
+    rdfs:label "JSON-LD Playground" ;
+    okg:description "web-based playground for processing and testing JSON-LD documents" ;
+    okg:homepage <https://json-ld.org/playground/> ;
+    okg:latestVersion "1.0" ;
+    okg:releaseDate "2016-11-06"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/json-ld/json-ld.org> ;
+    okg:title "JSON-LD Playground" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140685868> .
+
 <https://openknowledgegraphs.com/software/json-rql/> a okg:Software ;
     rdfs:label "json-rql" ;
     okg:description "JSON Resource Query Language, for simple, consistent query APIs" ;
@@ -865,6 +899,17 @@
     okg:sourceRepo <https://github.com/Orbifold/knwler> ;
     okg:title "Knwler" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140431581> .
+
+<https://openknowledgegraphs.com/software/konclude/> a okg:Software ;
+    rdfs:label "Konclude" ;
+    okg:description "a tableau-based parallel OWL 2 DL reasoner" ;
+    okg:homepage <https://www.derivo.de/produkte/konclude/> ;
+    okg:latestVersion "0.7.0-1138" ;
+    okg:releaseDate "2021-06-19"^^xsd:date ;
+    okg:softwareType okg:ReasoningInference ;
+    okg:sourceRepo <https://github.com/konclude/Konclude> ;
+    okg:title "Konclude" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140686380> .
 
 <https://openknowledgegraphs.com/software/levelgraph/> a okg:Software ;
     rdfs:label "Levelgraph" ;
@@ -1204,6 +1249,21 @@
     okg:sourceRepo <https://github.com/monarch-initiative/ontogpt> ;
     okg:title "OntoGPT" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q125352352> .
+
+<https://openknowledgegraphs.com/software/ontology-development-kit/> a okg:Software ;
+    rdfs:label "Ontology Development Kit" ;
+    okg:creator okg:Creator_Christopher_J_Mungall_Q20746118,
+        okg:Creator_Damien_Goutte_Gattat_Q59702685,
+        okg:Creator_Nicolas_Matentzoglu_Q60972192 ;
+    okg:description "The Ontology Development Kit is a toolbox of various ontology related tools such as ROBOT and dosdp-tools, bundled as a docker image. It provides executable workflows for managing ontologies continuous integration, releases and dynamic imports." ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <http://incatools.github.io/ontology-development-kit/> ;
+    okg:latestVersion "1.6" ;
+    okg:releaseDate "2025-05-29"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/INCATools/ontology-development-kit> ;
+    okg:title "Ontology Development Kit" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q112336713> .
 
 <https://openknowledgegraphs.com/software/ontology-pitfall-scanner/> a okg:Software ;
     rdfs:label "OntOlogy Pitfall Scanner!" ;
@@ -1799,6 +1859,18 @@
     okg:title "Reactodia" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q131278990> .
 
+<https://openknowledgegraphs.com/software/reasonable/> a okg:Software ;
+    rdfs:label "Reasonable" ;
+    okg:description "an OWL 2 RL reasoner implemented in Rust with Python bindings and a command-line interface" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://reasonable.gtf.fyi/> ;
+    okg:latestVersion "0.4.4" ;
+    okg:releaseDate "2026-05-28"^^xsd:date ;
+    okg:softwareType okg:ReasoningInference ;
+    okg:sourceRepo <https://github.com/gtfierro/reasonable> ;
+    okg:title "Reasonable" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140686382> .
+
 <https://openknowledgegraphs.com/software/redstore/> a okg:Software ;
     rdfs:label "RedStore" ;
     okg:description "RedStore is a lightweight RDF triplestore written in C using the Redland library." ;
@@ -1969,6 +2041,15 @@
     okg:title "SEPA" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653399> .
 
+<https://openknowledgegraphs.com/software/sequoia-reasoner/> a okg:Software ;
+    rdfs:label "Sequoia Reasoner" ;
+    okg:description "a consequence-based OWL 2 DL ontology reasoner supporting the SROIQ subset" ;
+    okg:homepage <https://www.cs.ox.ac.uk/isg/tools/Sequoia/> ;
+    okg:softwareType okg:ReasoningInference ;
+    okg:sourceRepo <https://github.com/andrewdbate/Sequoia> ;
+    okg:title "Sequoia Reasoner" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140686383> .
+
 <https://openknowledgegraphs.com/software/shacl-engine/> a okg:Software ;
     rdfs:label "shacl-engine" ;
     okg:creator okg:Creator_Thomas_Bergwinkl_Q140363721 ;
@@ -2119,8 +2200,8 @@
     okg:description "SPARQL Anything is a system for Semantic Web re-engineering that allows users to ... query anything with SPARQL." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://sparql-anything.cc/> ;
-    okg:latestVersion "1.1.0" ;
-    okg:releaseDate "2025-12-17"^^xsd:date ;
+    okg:latestVersion "1.2.0" ;
+    okg:releaseDate "2026-07-24"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/SPARQL-Anything/sparql.anything> ;
     okg:title "SPARQL Anything" ;
@@ -2579,6 +2660,17 @@
     okg:title "WebVOWL" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56569953> .
 
+<https://openknowledgegraphs.com/software/whelk-reasoner/> a okg:Software ;
+    rdfs:label "Whelk reasoner" ;
+    okg:description "an OWL EL and OWL RL reasoner for ontology-intensive applications" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "1.2.1" ;
+    okg:releaseDate "2024-09-30"^^xsd:date ;
+    okg:softwareType okg:ReasoningInference ;
+    okg:sourceRepo <https://github.com/INCATools/whelk> ;
+    okg:title "Whelk reasoner" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140686381> .
+
 <https://openknowledgegraphs.com/software/widoco/> a okg:Software ;
     rdfs:label "Widoco" ;
     okg:description "Wizard for documenting ontologies. WIDOCO is a step by step generator of HTML templates with the documentation of your ontology. It uses the LODE environment to create part of the template." ;
@@ -2671,6 +2763,11 @@ okg:Creator_Bryan_B_Thompson_Q124856586 a okg:Person ;
 okg:Creator_Christophe_Debruyne_Q58043647 a okg:Person ;
     rdfs:label "Christophe Debruyne" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q58043647> .
+
+okg:Creator_Damien_Goutte_Gattat_Q59702685 a okg:Person ;
+    rdfs:label "Damien Goutte-Gattat" ;
+    okg:githubProfile <https://github.com/gouttegd> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q59702685> .
 
 okg:Creator_Dan_Connolly_Q3013037 a okg:Person ;
     rdfs:label "Dan Connolly" ;
@@ -2781,6 +2878,11 @@ okg:Creator_Miguel_Couceiro_Q130809594 a okg:Person ;
 okg:Creator_Nicholas_Car_Q59846078 a okg:Person ;
     rdfs:label "Nicholas Car" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59846078> .
+
+okg:Creator_Nicolas_Matentzoglu_Q60972192 a okg:Person ;
+    rdfs:label "Nicolas Matentzoglu" ;
+    okg:githubProfile <https://github.com/matentzn> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q60972192> .
 
 okg:Creator_Ontopic_Q115740336 a okg:Organization ;
     rdfs:label "Ontopic" ;
@@ -2962,12 +3064,6 @@ okg:License_open_access_Q232932 a okg:License ;
     rdfs:label "open access" ;
     okg:licenseName "open access" .
 
-okg:Creator_Christopher_J_Mungall_Q20746118 a okg:Person ;
-    rdfs:label "Christopher J. Mungall" ;
-    okg:githubProfile <https://github.com/cmungall> ;
-    okg:googleScholarProfile <https://scholar.google.com/citations?user=gJZc3SoAAAAJ> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q20746118> .
-
 okg:Creator_Jixiong_Liu_Q114775165 a okg:Person ;
     rdfs:label "Jixiong Liu" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=GiXjj-sAAAAJ> ;
@@ -2986,6 +3082,12 @@ okg:Creator_Zazuko_Q93230157 a okg:Organization ;
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
     okg:licenseName "W3C Software License" .
+
+okg:Creator_Christopher_J_Mungall_Q20746118 a okg:Person ;
+    rdfs:label "Christopher J. Mungall" ;
+    okg:githubProfile <https://github.com/cmungall> ;
+    okg:googleScholarProfile <https://scholar.google.com/citations?user=gJZc3SoAAAAJ> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q20746118> .
 
 okg:Creator_Lionel_Tailhardat_Q130811255 a okg:Person ;
     rdfs:label "Lionel Tailhardat" ;

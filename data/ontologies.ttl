@@ -24794,6 +24794,14 @@
     okg:title "RealEstateCore" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138638895> .
 
+<https://openknowledgegraphs.com/resource/reasonable-ontology-templates-ottr/> a okg:OntologyLanguage ;
+    rdfs:label "Reasonable Ontology Templates (OTTR)" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "ontology template language and framework for representing and instantiating RDF and OWL modeling patterns" ;
+    okg:homepage <https://ottr.xyz/> ;
+    okg:title "Reasonable Ontology Templates (OTTR)" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140685864> .
+
 <https://openknowledgegraphs.com/resource/red-blue-translator/> a okg:ControlledVocabulary ;
     rdfs:label "Red Blue Translator" ;
     okg:category okg:GovernmentPublicSector ;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T14:48:05Z",
+  "generatedAt": "2026-07-25T08:17:05Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -19896,6 +19896,17 @@
       "licenses": [
         "3-clause BSD License"
       ]
+    },
+    {
+      "title": "Reasonable Ontology Templates (OTTR)",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140685864",
+      "types": [
+        "OntologyLanguage"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/reasonable-ontology-templates-ottr/",
+      "description": "ontology template language and framework for representing and instantiating RDF and OWL modeling patterns",
+      "category": "Technology & Web",
+      "homepage": "https://ottr.xyz/"
     },
     {
       "title": "Red Blue Translator",

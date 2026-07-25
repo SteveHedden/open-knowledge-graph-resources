@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T14:48:05Z",
+  "generatedAt": "2026-07-25T08:17:05Z",
   "items": [
     {
       "title": "4store",
@@ -700,6 +700,22 @@
       "softwareType": "Graph Database"
     },
     {
+      "title": "DOSDP Tools",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140685867",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/dosdp-tools/",
+      "description": "toolkit for working with Dead Simple OWL Design Patterns and OWL ontologies",
+      "sourceRepo": "https://github.com/INCATools/dosdp-tools",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "0.20.0",
+      "releaseDate": "2026-05-12",
+      "softwareType": "Ontology Engineering"
+    },
+    {
       "title": "dotNetRDF",
       "wikidataId": "https://www.wikidata.org/wiki/Q56844056",
       "types": [
@@ -778,6 +794,23 @@
       "latestVersion": "0.11.4",
       "releaseDate": "2026-05-13",
       "softwareType": "Developer Library"
+    },
+    {
+      "title": "Euler Yet another proof Engine",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140686385",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/",
+      "description": "Euler Yet another proof Engine (EYE), a Semantic Web reasoning engine for N3 and RDF rules",
+      "homepage": "https://eulersharp.sourceforge.net/",
+      "sourceRepo": "https://github.com/eyereasoner/eye",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "11.24.4",
+      "releaseDate": "2026-05-12",
+      "softwareType": "Reasoning & Inference"
     },
     {
       "title": "Excel 2 RDF",
@@ -1294,6 +1327,20 @@
       "softwareType": "Stream Processing"
     },
     {
+      "title": "JSON-LD Playground",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140685868",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/json-ld-playground/",
+      "description": "web-based playground for processing and testing JSON-LD documents",
+      "homepage": "https://json-ld.org/playground/",
+      "sourceRepo": "https://github.com/json-ld/json-ld.org",
+      "latestVersion": "1.0",
+      "releaseDate": "2016-11-06",
+      "softwareType": "Developer Library"
+    },
+    {
       "title": "json-rql",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653438",
       "types": [
@@ -1387,6 +1434,20 @@
       "latestVersion": "1.1.0",
       "releaseDate": "2026-03-28",
       "softwareType": "Knowledge Graph Construction"
+    },
+    {
+      "title": "Konclude",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140686380",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/konclude/",
+      "description": "a tableau-based parallel OWL 2 DL reasoner",
+      "homepage": "https://www.derivo.de/produkte/konclude/",
+      "sourceRepo": "https://github.com/konclude/Konclude",
+      "latestVersion": "0.7.0-1138",
+      "releaseDate": "2021-06-19",
+      "softwareType": "Reasoning & Inference"
     },
     {
       "title": "Levelgraph",
@@ -1922,6 +1983,44 @@
       "latestVersion": "1.1.1",
       "releaseDate": "2026-04-07",
       "softwareType": "Knowledge Graph Construction"
+    },
+    {
+      "title": "Ontology Development Kit",
+      "wikidataId": "https://www.wikidata.org/wiki/Q112336713",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/",
+      "description": "The Ontology Development Kit is a toolbox of various ontology related tools such as ROBOT and dosdp-tools, bundled as a docker image. It provides executable workflows for managing ontologies continuous integration, releases and dynamic imports.",
+      "homepage": "http://incatools.github.io/ontology-development-kit/",
+      "sourceRepo": "https://github.com/INCATools/ontology-development-kit",
+      "creators": [
+        {
+          "name": "Christopher J. Mungall",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q20746118",
+          "githubProfile": "https://github.com/cmungall",
+          "googleScholarProfile": "https://scholar.google.com/citations?user=gJZc3SoAAAAJ"
+        },
+        {
+          "name": "Damien Goutte-Gattat",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q59702685",
+          "githubProfile": "https://github.com/gouttegd"
+        },
+        {
+          "name": "Nicolas Matentzoglu",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q60972192",
+          "githubProfile": "https://github.com/matentzn"
+        }
+      ],
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "latestVersion": "1.6",
+      "releaseDate": "2025-05-29",
+      "softwareType": "Ontology Engineering"
     },
     {
       "title": "OntOlogy Pitfall Scanner!",
@@ -2918,6 +3017,23 @@
       "softwareType": "Visualization"
     },
     {
+      "title": "Reasonable",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140686382",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/reasonable/",
+      "description": "an OWL 2 RL reasoner implemented in Rust with Python bindings and a command-line interface",
+      "homepage": "https://reasonable.gtf.fyi/",
+      "sourceRepo": "https://github.com/gtfierro/reasonable",
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "latestVersion": "0.4.4",
+      "releaseDate": "2026-05-28",
+      "softwareType": "Reasoning & Inference"
+    },
+    {
       "title": "RedStore",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653383",
       "types": [
@@ -3167,6 +3283,18 @@
       "latestVersion": "1.0.24",
       "releaseDate": "2026-06-12",
       "softwareType": "SPARQL Tooling"
+    },
+    {
+      "title": "Sequoia Reasoner",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140686383",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/sequoia-reasoner/",
+      "description": "a consequence-based OWL 2 DL ontology reasoner supporting the SROIQ subset",
+      "homepage": "https://www.cs.ox.ac.uk/isg/tools/Sequoia/",
+      "sourceRepo": "https://github.com/andrewdbate/Sequoia",
+      "softwareType": "Reasoning & Inference"
     },
     {
       "title": "SHACL Play!",
@@ -3436,8 +3564,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "1.1.0",
-      "releaseDate": "2025-12-17",
+      "latestVersion": "1.2.0",
+      "releaseDate": "2026-07-24",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -4202,6 +4330,22 @@
       "latestVersion": "1.1.7",
       "releaseDate": "2026-06-04",
       "softwareType": "Visualization"
+    },
+    {
+      "title": "Whelk reasoner",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140686381",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/whelk-reasoner/",
+      "description": "an OWL EL and OWL RL reasoner for ontology-intensive applications",
+      "sourceRepo": "https://github.com/INCATools/whelk",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "1.2.1",
+      "releaseDate": "2024-09-30",
+      "softwareType": "Reasoning & Inference"
     },
     {
       "title": "Widoco",
