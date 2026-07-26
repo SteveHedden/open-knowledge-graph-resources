@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T08:34:16Z",
+  "generatedAt": "2026-07-26T20:07:16Z",
   "items": [
     {
       "title": "4store",
@@ -1124,6 +1124,18 @@
       "softwareType": "AI Agent Tooling"
     },
     {
+      "title": "Graphy.js",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140704884",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/graphy-js/",
+      "description": "collection of JavaScript libraries for parsing, serializing, and manipulating RDF",
+      "homepage": "https://graphy.link/",
+      "sourceRepo": "https://github.com/blake-regalia/graphy.js",
+      "softwareType": "Developer Library"
+    },
+    {
       "title": "GRUFF",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653417",
       "types": [
@@ -1633,6 +1645,21 @@
       "softwareType": "Graph Database"
     },
     {
+      "title": "maplib",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140704881",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/maplib/",
+      "description": "Python/Rust library for constructing RDF knowledge graphs from tabular data using OTTR templates",
+      "homepage": "https://datatreehouse.github.io/documentation/",
+      "sourceRepo": "https://github.com/magbak/maplib",
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "MarkLogic",
       "wikidataId": "https://www.wikidata.org/wiki/Q29364583",
       "types": [
@@ -1773,6 +1800,20 @@
         "Q114843172"
       ],
       "softwareType": "Graph Database"
+    },
+    {
+      "title": "N3.js",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140704882",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/n3-js/",
+      "description": "JavaScript implementation of the RDF.js specification for handling RDF data",
+      "sourceRepo": "https://github.com/rdfjs/N3.js",
+      "licenses": [
+        "MIT License"
+      ],
+      "softwareType": "Developer Library"
     },
     {
       "title": "National Library of Korea Linked Open Data",
@@ -3519,6 +3560,18 @@
       "softwareType": "Graph Database"
     },
     {
+      "title": "Sophia RDF toolkit",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140704885",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/",
+      "description": "Rust toolkit for RDF and Linked Data",
+      "homepage": "https://pchampin.github.io/sophia_rs/",
+      "sourceRepo": "https://github.com/pchampin/sophia_rs",
+      "softwareType": "Developer Library"
+    },
+    {
       "title": "Spanqit",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653444",
       "types": [
@@ -4037,6 +4090,20 @@
       "latestVersion": "1.0.0",
       "releaseDate": "2015-09-19",
       "softwareType": "Graph Database"
+    },
+    {
+      "title": "Titanium JSON-LD",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140704883",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/titanium-json-ld/",
+      "description": "Java implementation of the JSON-LD 1.1 processing algorithm and API",
+      "sourceRepo": "https://github.com/filip26/titanium-json-ld",
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "softwareType": "Developer Library"
     },
     {
       "title": "TopBraid Composer",

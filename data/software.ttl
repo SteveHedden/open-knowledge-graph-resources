@@ -692,6 +692,15 @@
     okg:title "Graphiti" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639972> .
 
+<https://openknowledgegraphs.com/software/graphy-js/> a okg:Software ;
+    rdfs:label "Graphy.js" ;
+    okg:description "collection of JavaScript libraries for parsing, serializing, and manipulating RDF" ;
+    okg:homepage <https://graphy.link/> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/blake-regalia/graphy.js> ;
+    okg:title "Graphy.js" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140704884> .
+
 <https://openknowledgegraphs.com/software/gruff/> a okg:Software ;
     rdfs:label "GRUFF" ;
     okg:description "Commercial graph database" ;
@@ -1020,6 +1029,16 @@
     okg:title "LUPOSDATE" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653373> .
 
+<https://openknowledgegraphs.com/software/maplib/> a okg:Software ;
+    rdfs:label "maplib" ;
+    okg:description "Python/Rust library for constructing RDF knowledge graphs from tabular data using OTTR templates" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://datatreehouse.github.io/documentation/> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/magbak/maplib> ;
+    okg:title "maplib" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140704881> .
+
 <https://openknowledgegraphs.com/software/marklogic/> a okg:Software ;
     rdfs:label "MarkLogic" ;
     okg:creator okg:Creator_MarkLogic_Q6766381 ;
@@ -1108,6 +1127,15 @@
     okg:sourceRepo <https://github.com/quoll/mulgara> ;
     okg:title "Mulgara" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6933960> .
+
+<https://openknowledgegraphs.com/software/n3-js/> a okg:Software ;
+    rdfs:label "N3.js" ;
+    okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
+    okg:title "N3.js" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140704882> .
 
 <https://openknowledgegraphs.com/software/national-library-of-korea-linked-open-data/> a okg:Software ;
     rdfs:label "National Library of Korea Linked Open Data" ;
@@ -2176,6 +2204,15 @@
     okg:title "Sones GraphDB" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2301321> .
 
+<https://openknowledgegraphs.com/software/sophia-rdf-toolkit/> a okg:Software ;
+    rdfs:label "Sophia RDF toolkit" ;
+    okg:description "Rust toolkit for RDF and Linked Data" ;
+    okg:homepage <https://pchampin.github.io/sophia_rs/> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/pchampin/sophia_rs> ;
+    okg:title "Sophia RDF toolkit" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140704885> .
+
 <https://openknowledgegraphs.com/software/spanqit/> a okg:Software ;
     rdfs:label "Spanqit" ;
     okg:description "Java-based SPARQL query generator" ;
@@ -2491,6 +2528,15 @@
     okg:sourceRepo <https://github.com/thinkaurelius/titan> ;
     okg:title "Titan" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q28123776> .
+
+<https://openknowledgegraphs.com/software/titanium-json-ld/> a okg:Software ;
+    rdfs:label "Titanium JSON-LD" ;
+    okg:description "Java implementation of the JSON-LD 1.1 processing algorithm and API" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/filip26/titanium-json-ld> ;
+    okg:title "Titanium JSON-LD" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140704883> .
 
 <https://openknowledgegraphs.com/software/topbraid-composer/> a okg:Software ;
     rdfs:label "TopBraid Composer" ;
