@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T20:07:16Z",
+  "generatedAt": "2026-07-26T21:35:18Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -20100,6 +20100,78 @@
       "homepage": "https://rkd.nl/explore/thesaurus"
     },
     {
+      "title": "RML-CC",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706300",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rml-cc/",
+      "description": "collections and containers ontology module of the RDF Mapping Language",
+      "category": "Technology & Web",
+      "homepage": "https://w3id.org/rml/cc",
+      "sourceRepo": "https://github.com/kg-construct/rml-cc"
+    },
+    {
+      "title": "RML-Core",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706298",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rml-core/",
+      "description": "core ontology module of the RDF Mapping Language",
+      "category": "Technology & Web",
+      "homepage": "https://w3id.org/rml/core",
+      "sourceRepo": "https://github.com/kg-construct/rml-core"
+    },
+    {
+      "title": "RML-FNML",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706301",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rml-fnml/",
+      "description": "functions and transformations ontology module integrating the Function Ontology with RML",
+      "category": "Technology & Web",
+      "homepage": "https://w3id.org/rml/fnml",
+      "sourceRepo": "https://github.com/kg-construct/rml-fnml"
+    },
+    {
+      "title": "RML-IO",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706299",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rml-io/",
+      "description": "source and target ontology module of the RDF Mapping Language",
+      "category": "Technology & Web",
+      "homepage": "https://w3id.org/rml/io",
+      "sourceRepo": "https://github.com/kg-construct/rml-io"
+    },
+    {
+      "title": "RML-LV",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706304",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rml-lv/",
+      "description": "logical views ontology module of the RDF Mapping Language",
+      "category": "Technology & Web",
+      "homepage": "https://w3id.org/rml/lv",
+      "sourceRepo": "https://github.com/kg-construct/rml-lv"
+    },
+    {
+      "title": "RML-star",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706303",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rml-star/",
+      "description": "ontology module for generating RDF-star graphs with RML",
+      "category": "Technology & Web",
+      "homepage": "https://w3id.org/rml/star",
+      "sourceRepo": "https://github.com/kg-construct/rml-star"
+    },
+    {
       "title": "RNA Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q55118589",
       "types": [
@@ -25037,6 +25109,18 @@
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
       ]
+    },
+    {
+      "title": "xR2RML",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706305",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/xr2rml/",
+      "description": "mapping language and RDF vocabulary for relational and non-relational databases",
+      "category": "Technology & Web",
+      "homepage": "https://www.i3s.unice.fr/~fmichel/xr2rml_specification.html",
+      "sourceRepo": "https://www.i3s.unice.fr/~fmichel/xr2rml_specification.html"
     },
     {
       "title": "Yahoo! Knowledge Graph",

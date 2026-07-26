@@ -377,6 +377,15 @@
     okg:title "cwm" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50745537> .
 
+<https://openknowledgegraphs.com/software/d2rq/> a okg:Software ;
+    rdfs:label "D2RQ" ;
+    okg:description "platform for accessing relational databases as virtual RDF graphs" ;
+    okg:homepage <https://d2rq.org/> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/d2rq/d2rq> ;
+    okg:title "D2RQ" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706150> .
+
 <https://openknowledgegraphs.com/software/d3-sparql/> a okg:Software ;
     rdfs:label "d3-sparql" ;
     okg:description "Query a SPARQL endpoint with a SELECT query and get the data ready to be used with d3js" ;
@@ -398,6 +407,15 @@
     okg:sourceRepo <https://github.com/ktym/d3sparql> ;
     okg:title "d3sparql.js" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653434> .
+
+<https://openknowledgegraphs.com/software/darq-sparql-federation-engine/> a okg:Software ;
+    rdfs:label "DARQ SPARQL federation engine" ;
+    okg:description "historical federated SPARQL query engine" ;
+    okg:homepage <https://darq.sourceforge.net/> ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://darq.sourceforge.net/> ;
+    okg:title "DARQ SPARQL federation engine" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706152> .
 
 <https://openknowledgegraphs.com/software/dbpedia-archivo/> a okg:Software ;
     rdfs:label "DBPedia Archivo" ;
@@ -445,6 +463,14 @@
     okg:title "dotNetRDF" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56844056> .
 
+<https://openknowledgegraphs.com/software/dragoman-rdf-mapping-optimizer/> a okg:Software ;
+    rdfs:label "Dragoman RDF mapping optimizer" ;
+    okg:description "framework for optimizing and executing declarative knowledge-graph mappings" ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/SDM-TIB/Dragoman> ;
+    okg:title "Dragoman RDF mapping optimizer" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706232> .
+
 <https://openknowledgegraphs.com/software/duck-rdf/> a okg:Software ;
     rdfs:label "duck_rdf" ;
     okg:description "DuckDB community extension for reading, writing, profiling, and querying RDF data" ;
@@ -463,6 +489,15 @@
     okg:softwareType okg:GraphDatabase ;
     okg:title "Dydra" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653381> .
+
+<https://openknowledgegraphs.com/software/elda-linked-data-api/> a okg:Software ;
+    rdfs:label "Elda Linked Data API" ;
+    okg:description "Java implementation of the Linked Data API for configurable REST interfaces over RDF data" ;
+    okg:homepage <https://epimorphics.github.io/elda/current/index.html> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/epimorphics/elda> ;
+    okg:title "Elda Linked Data API" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705561> .
 
 <https://openknowledgegraphs.com/software/elk/> a okg:Software ;
     rdfs:label "ELK" ;
@@ -547,6 +582,14 @@
     okg:sourceRepo <https://bitbucket.org/dtsarkov/factplusplus> ;
     okg:title "FaCT++" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394243> .
+
+<https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
+    rdfs:label "FlexRML" ;
+    okg:description "memory-efficient C++ RML interpreter" ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/wintechis/flex-rml> ;
+    okg:title "FlexRML" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706217> .
 
 <https://openknowledgegraphs.com/software/flint-sparql-editor/> a okg:Software ;
     rdfs:label "Flint SPARQL Editor" ;
@@ -647,6 +690,23 @@
     okg:title "FS2KG" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653407> .
 
+<https://openknowledgegraphs.com/software/fuxi-rdf-reasoner/> a okg:Software ;
+    rdfs:label "FuXi RDF reasoner" ;
+    okg:description "Python semantic web logical reasoning system" ;
+    okg:homepage <https://pypi.org/project/fuxi/> ;
+    okg:softwareType okg:ReasoningInference ;
+    okg:sourceRepo <https://pypi.org/project/fuxi/> ;
+    okg:title "FuXi RDF reasoner" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706153> .
+
+<https://openknowledgegraphs.com/software/gdotv/> a okg:Software ;
+    rdfs:label "gdotv" ;
+    okg:description "graph database client with query editing and visualization for RDF triplestores and other graph databases" ;
+    okg:homepage <https://gdotv.com/> ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:title "gdotv" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705423> .
+
 <https://openknowledgegraphs.com/software/gh-rdf3x/> a okg:Software ;
     rdfs:label "GH-RDF3X" ;
     okg:description "Extension of the rdf3x engine and the translatesparql tool" ;
@@ -701,6 +761,15 @@
     okg:title "Graphy.js" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140704884> .
 
+<https://openknowledgegraphs.com/software/grlc-sparql-api-constructor/> a okg:Software ;
+    rdfs:label "grlc SPARQL API constructor" ;
+    okg:description "software that generates RESTful Web APIs from SPARQL queries stored in Git repositories" ;
+    okg:homepage <https://grlc.io/> ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/CLARIAH/grlc> ;
+    okg:title "grlc SPARQL API constructor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705559> .
+
 <https://openknowledgegraphs.com/software/gruff/> a okg:Software ;
     rdfs:label "GRUFF" ;
     okg:description "Commercial graph database" ;
@@ -740,6 +809,15 @@
     okg:sourceRepo <https://github.com/LiUSemWeb/HeFQUIN> ;
     okg:title "HeFQUIN" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653408> .
+
+<https://openknowledgegraphs.com/software/helio-ecosystem/> a okg:Software ;
+    rdfs:label "Helio Ecosystem" ;
+    okg:description "framework for generating and publishing knowledge graphs as Linked Data" ;
+    okg:homepage <https://helio-playground.linkeddata.es/home> ;
+    okg:softwareType okg:KnowledgeGraphConstruction ;
+    okg:sourceRepo <https://github.com/helio-ecosystem> ;
+    okg:title "Helio Ecosystem" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706218> .
 
 <https://openknowledgegraphs.com/software/hermit/> a okg:Software ;
     rdfs:label "HermiT" ;
@@ -797,6 +875,14 @@
     okg:softwareType okg:GraphDatabase ;
     okg:title "InfiniteGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6029732> .
+
+<https://openknowledgegraphs.com/software/j2rm/> a okg:Software ;
+    rdfs:label "J2RM" ;
+    okg:description "ontology-based JSON-to-RDF mapping tool" ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/KGCP/g0-Builder-J2RM> ;
+    okg:title "J2RM" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706224> .
 
 <https://openknowledgegraphs.com/software/janusgraph/> a okg:Software ;
     rdfs:label "JanusGraph" ;
@@ -876,6 +962,15 @@
     okg:title "juliett" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140514553> .
 
+<https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/> a okg:Software ;
+    rdfs:label "Karma semantic mapping platform" ;
+    okg:description "visual platform for semantic modeling and RDF generation" ;
+    okg:homepage <https://usc-isi-i2.github.io/karma/> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/usc-isi-i2/karma> ;
+    okg:title "Karma semantic mapping platform" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706222> .
+
 <https://openknowledgegraphs.com/software/katts/> a okg:Software ;
     rdfs:label "Katts" ;
     okg:description "Katts is A Triple Torrent Sieve" ;
@@ -920,6 +1015,15 @@
     okg:title "Knwler" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140431581> .
 
+<https://openknowledgegraphs.com/software/kolibrie-sparql-engine/> a okg:Software ;
+    rdfs:label "Kolibrie SPARQL engine" ;
+    okg:description "Rust-based SPARQL query engine and RDF stream-processing system" ;
+    okg:homepage <https://streamintelligencelab.github.io/Kolibrie-website/> ;
+    okg:softwareType okg:StreamProcessing ;
+    okg:sourceRepo <https://github.com/StreamIntelligenceLab/Kolibrie> ;
+    okg:title "Kolibrie SPARQL engine" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705186> .
+
 <https://openknowledgegraphs.com/software/konclude/> a okg:Software ;
     rdfs:label "Konclude" ;
     okg:description "a tableau-based parallel OWL 2 DL reasoner" ;
@@ -949,6 +1053,16 @@
     okg:sourceRepo <https://github.com/mro/librdf.sqlite> ;
     okg:title "librdf.sqlite" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653382> .
+
+<https://openknowledgegraphs.com/software/linked-data-fragments-server/> a okg:Software ;
+    rdfs:label "Linked Data Fragments Server" ;
+    okg:description "Node.js server for publishing Triple Pattern Fragments and other Linked Data Fragments" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://linkeddatafragments.org/software/> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/LinkedDataFragments/Server.js> ;
+    okg:title "Linked Data Fragments Server" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705553> .
 
 <https://openknowledgegraphs.com/software/linked-open-vocabularies/> a okg:Software ;
     rdfs:label "Linked Open Vocabularies" ;
@@ -1029,6 +1143,15 @@
     okg:title "LUPOSDATE" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653373> .
 
+<https://openknowledgegraphs.com/software/mapeathor/> a okg:Software ;
+    rdfs:label "Mapeathor" ;
+    okg:description "spreadsheet-based R2RML, RML, and YARRRML mapping generator" ;
+    okg:homepage <https://morph.oeg.fi.upm.es/tool/mapeathor> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/oeg-upm/mapeathor> ;
+    okg:title "Mapeathor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706221> .
+
 <https://openknowledgegraphs.com/software/maplib/> a okg:Software ;
     rdfs:label "maplib" ;
     okg:description "Python/Rust library for constructing RDF knowledge graphs from tabular data using OTTR templates" ;
@@ -1039,6 +1162,15 @@
     okg:title "maplib" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140704881> .
 
+<https://openknowledgegraphs.com/software/mapping-workbench/> a okg:Software ;
+    rdfs:label "Mapping Workbench" ;
+    okg:description "collaborative platform for developing and validating knowledge-graph mappings" ;
+    okg:homepage <https://meaningfy.ws/mapping-workbench/> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://meaningfy.ws/mapping-workbench/> ;
+    okg:title "Mapping Workbench" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706220> .
+
 <https://openknowledgegraphs.com/software/marklogic/> a okg:Software ;
     rdfs:label "MarkLogic" ;
     okg:creator okg:Creator_MarkLogic_Q6766381 ;
@@ -1048,6 +1180,14 @@
     okg:softwareType okg:GraphDatabase ;
     okg:title "MarkLogic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29364583> .
+
+<https://openknowledgegraphs.com/software/matey-yarrrml-editor/> a okg:Software ;
+    rdfs:label "Matey YARRRML editor" ;
+    okg:description "browser-based editor for YARRRML mappings" ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/RMLio/matey> ;
+    okg:title "Matey YARRRML editor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706223> .
 
 <https://openknowledgegraphs.com/software/mem0/> a okg:Software ;
     rdfs:label "Mem0" ;
@@ -1105,6 +1245,14 @@
     okg:sourceRepo <https://github.com/jpcik/morph-streams> ;
     okg:title "Morph-Streams" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653396> .
+
+<https://openknowledgegraphs.com/software/morph-xr2rml/> a okg:Software ;
+    rdfs:label "Morph-xR2RML" ;
+    okg:description "xR2RML implementation for mapping non-relational data to RDF" ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/frmichel/morph-xr2rml> ;
+    okg:title "Morph-xR2RML" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706216> .
 
 <https://openknowledgegraphs.com/software/morph/> a okg:Software ;
     rdfs:label "Morph" ;
@@ -1452,6 +1600,14 @@
     okg:title "Openllet" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394117> .
 
+<https://openknowledgegraphs.com/software/openskos/> a okg:Software ;
+    rdfs:label "OpenSKOS" ;
+    okg:description "open-source platform for publishing and managing SKOS vocabularies" ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/openskos/openskos> ;
+    okg:title "OpenSKOS" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705495> .
+
 <https://openknowledgegraphs.com/software/orientdb/> a okg:Software ;
     rdfs:label "OrientDB" ;
     okg:description "open source NoSQL database management system written in Java" ;
@@ -1589,6 +1745,14 @@
     okg:title "Polypheny" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q122920886> .
 
+<https://openknowledgegraphs.com/software/prez-linked-data-api/> a okg:Software ;
+    rdfs:label "Prez Linked Data API" ;
+    okg:description "RDF framework for publishing Linked Data through profile-based APIs and web interfaces" ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/RDFLib/prez> ;
+    okg:title "Prez Linked Data API" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705560> .
+
 <https://openknowledgegraphs.com/software/processor/> a okg:Software ;
     rdfs:label "Processor" ;
     okg:description "Ontology-driven Linked Data processor and server for SPARQL backends. Apache License." ;
@@ -1636,6 +1800,14 @@
     okg:sourceRepo <https://github.com/Orange-OpenSource/pygraft-gen> ;
     okg:title "PyGraft-gen" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138778697> .
+
+<https://openknowledgegraphs.com/software/pyldapi/> a okg:Software ;
+    rdfs:label "pyLDAPI" ;
+    okg:description "Python framework for serving RDF as Linked Data APIs" ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/RDFLib/pyLDAPI> ;
+    okg:title "pyLDAPI" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705552> .
 
 <https://openknowledgegraphs.com/software/pylodstorage/> a okg:Software ;
     rdfs:label "pyLoDStorage" ;
@@ -1746,6 +1918,14 @@
     okg:sourceRepo <https://github.com/rdf-ext> ;
     okg:title "rdf-ext" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q137777350> .
+
+<https://openknowledgegraphs.com/software/rdf-glance/> a okg:Software ;
+    rdfs:label "RDF Glance" ;
+    okg:description "lightweight browser for exploring RDF graphs" ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/xdobry/rdfglance> ;
+    okg:title "RDF Glance" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705421> .
 
 <https://openknowledgegraphs.com/software/rdf-playground/> a okg:Software ;
     rdfs:label "RDF Playground" ;
@@ -1943,6 +2123,14 @@
     okg:title "RMLMapper" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140646499> .
 
+<https://openknowledgegraphs.com/software/rmlstreamer/> a okg:Software ;
+    rdfs:label "RMLStreamer" ;
+    okg:description "streaming RML materialization engine" ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/RMLio/RMLStreamer> ;
+    okg:title "RMLStreamer" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706215> .
+
 <https://openknowledgegraphs.com/software/robot-is-an-obo-tool/> a okg:Software ;
     rdfs:label "ROBOT is an OBO Tool" ;
     okg:description "high-level tool for working with OBO ontologies" ;
@@ -2069,6 +2257,22 @@
     okg:sourceRepo <https://github.com/semantica-agi/semantica> ;
     okg:title "Semantica" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138634135> .
+
+<https://openknowledgegraphs.com/software/sempala/> a okg:Software ;
+    rdfs:label "Sempala" ;
+    okg:description "historical SPARQL query processor for Hadoop and Impala" ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/aschaetzle/Sempala> ;
+    okg:title "Sempala" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705182> .
+
+<https://openknowledgegraphs.com/software/semspect/> a okg:Software ;
+    rdfs:label "SemSpect" ;
+    okg:description "commercial visual exploration and querying tool for RDF and knowledge graphs" ;
+    okg:homepage <https://www.semspect.de/> ;
+    okg:softwareType okg:Visualization ;
+    okg:title "SemSpect" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705420> .
 
 <https://openknowledgegraphs.com/software/sentag/> a okg:Software ;
     rdfs:label "SenTag" ;
@@ -2212,6 +2416,14 @@
     okg:sourceRepo <https://github.com/pchampin/sophia_rs> ;
     okg:title "Sophia RDF toolkit" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140704885> .
+
+<https://openknowledgegraphs.com/software/souslesens/> a okg:Software ;
+    rdfs:label "SousLeSens" ;
+    okg:description "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri" ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/souslesens/souslesensVocables> ;
+    okg:title "SousLeSens" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705496> .
 
 <https://openknowledgegraphs.com/software/spanqit/> a okg:Software ;
     rdfs:label "Spanqit" ;
@@ -2399,6 +2611,15 @@
     okg:title "sparqlprog" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653453> .
 
+<https://openknowledgegraphs.com/software/spread2rml-software/> a okg:Software ;
+    rdfs:label "Spread2RML software" ;
+    okg:description "tool for predicting RML mappings from messy spreadsheets" ;
+    okg:homepage <https://www.dfki.uni-kl.de/~mschroeder/demo/spread2rml/> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://www.dfki.uni-kl.de/~mschroeder/demo/spread2rml/> ;
+    okg:title "Spread2RML software" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706234> .
+
 <https://openknowledgegraphs.com/software/sq-sparql-cli/> a okg:Software ;
     rdfs:label "sq (SPARQL CLI)" ;
     okg:description "small Rust command-line client for querying SPARQL endpoints, designed for both interactive use and direct invocation by AI agents" ;
@@ -2495,6 +2716,15 @@
     okg:sourceRepo <https://github.com/Orange-OpenSource/Table-Annotation> ;
     okg:title "Table Annotation" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q126363875> .
+
+<https://openknowledgegraphs.com/software/tentris/> a okg:Software ;
+    rdfs:label "Tentris" ;
+    okg:description "RDF graph database and SPARQL engine using a compressed Hypertrie index" ;
+    okg:homepage <https://tentris.io/> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/dice-group/tentris> ;
+    okg:title "Tentris" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705181> .
 
 <https://openknowledgegraphs.com/software/terminusdb/> a okg:Software ;
     rdfs:label "TerminusDB" ;
@@ -2678,6 +2908,14 @@
     okg:title "VISU" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653456> .
 
+<https://openknowledgegraphs.com/software/visual-sparql-builder/> a okg:Software ;
+    rdfs:label "Visual SPARQL Builder" ;
+    okg:description "standalone visual interface for constructing SPARQL queries" ;
+    okg:homepage <https://leipert.github.io/vsb/> ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:title "Visual SPARQL Builder" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705422> .
+
 <https://openknowledgegraphs.com/software/vizbrick/> a okg:Software ;
     rdfs:label "VizBrick" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
@@ -2697,6 +2935,14 @@
     okg:sourceRepo <https://bitbucket.org/art-uniroma2/vocbench3> ;
     okg:title "VocBench" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140431709> .
+
+<https://openknowledgegraphs.com/software/vocprez/> a okg:Software ;
+    rdfs:label "VocPrez" ;
+    okg:description "software for publishing RDF vocabularies through human- and machine-readable web interfaces" ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/RDFLib/VocPrez> ;
+    okg:title "VocPrez" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705494> .
 
 <https://openknowledgegraphs.com/software/wallix-triplestore/> a okg:Software ;
     rdfs:label "Wallix Triplestore" ;
@@ -2772,6 +3018,14 @@
     okg:title "Wikibase" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q16354758> .
 
+<https://openknowledgegraphs.com/software/wistor/> a okg:Software ;
+    rdfs:label "Wistor" ;
+    okg:description "commercial no-code platform for building applications and APIs on RDF, OWL, SHACL, and SPARQL data" ;
+    okg:homepage <https://wistor.nl/> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:title "Wistor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705554> .
+
 <https://openknowledgegraphs.com/software/yarrrml-parser/> a okg:Software ;
     rdfs:label "YARRRML Parser" ;
     okg:description "JavaScript library and command-line tool for converting YARRRML mappings to RML" ;
@@ -2783,6 +3037,15 @@
     okg:sourceRepo <https://github.com/RMLio/yarrrml-parser> ;
     okg:title "YARRRML Parser" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140646515> .
+
+<https://openknowledgegraphs.com/software/yars2-rdf-store/> a okg:Software ;
+    rdfs:label "YARS2 RDF store" ;
+    okg:description "distributed Java RDF store for querying graph-structured data" ;
+    okg:homepage <https://doi.org/10.1016/j.websem.2008.06.001> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://sw.deri.org/2004/06/yars/> ;
+    okg:title "YARS2 RDF store" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706154> .
 
 <https://openknowledgegraphs.com/software/yasgui/> a okg:Software ;
     rdfs:label "Yasgui" ;
@@ -3242,11 +3505,11 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
 okg:ReasoningInference a okg:SoftwareType ;
     rdfs:label "Reasoning & Inference" .
 
-okg:DataMappingETL a okg:SoftwareType ;
-    rdfs:label "RDF Data Mapping / ETL" .
-
 okg:KnowledgeGraphConstruction a okg:SoftwareType ;
     rdfs:label "Knowledge Graph Construction" .
+
+okg:DataMappingETL a okg:SoftwareType ;
+    rdfs:label "RDF Data Mapping / ETL" .
 
 okg:DeveloperLibrary a okg:SoftwareType ;
     rdfs:label "Developer Library" .

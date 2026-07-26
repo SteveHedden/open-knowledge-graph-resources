@@ -24932,6 +24932,60 @@
     okg:title "RKDthesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q137317255> .
 
+<https://openknowledgegraphs.com/resource/rml-cc/> a okg:Ontology ;
+    rdfs:label "RML-CC" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "collections and containers ontology module of the RDF Mapping Language" ;
+    okg:homepage <https://w3id.org/rml/cc> ;
+    okg:sourceRepo <https://github.com/kg-construct/rml-cc> ;
+    okg:title "RML-CC" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706300> .
+
+<https://openknowledgegraphs.com/resource/rml-core/> a okg:Ontology ;
+    rdfs:label "RML-Core" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "core ontology module of the RDF Mapping Language" ;
+    okg:homepage <https://w3id.org/rml/core> ;
+    okg:sourceRepo <https://github.com/kg-construct/rml-core> ;
+    okg:title "RML-Core" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706298> .
+
+<https://openknowledgegraphs.com/resource/rml-fnml/> a okg:Ontology ;
+    rdfs:label "RML-FNML" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "functions and transformations ontology module integrating the Function Ontology with RML" ;
+    okg:homepage <https://w3id.org/rml/fnml> ;
+    okg:sourceRepo <https://github.com/kg-construct/rml-fnml> ;
+    okg:title "RML-FNML" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706301> .
+
+<https://openknowledgegraphs.com/resource/rml-io/> a okg:Ontology ;
+    rdfs:label "RML-IO" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "source and target ontology module of the RDF Mapping Language" ;
+    okg:homepage <https://w3id.org/rml/io> ;
+    okg:sourceRepo <https://github.com/kg-construct/rml-io> ;
+    okg:title "RML-IO" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706299> .
+
+<https://openknowledgegraphs.com/resource/rml-lv/> a okg:Ontology ;
+    rdfs:label "RML-LV" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "logical views ontology module of the RDF Mapping Language" ;
+    okg:homepage <https://w3id.org/rml/lv> ;
+    okg:sourceRepo <https://github.com/kg-construct/rml-lv> ;
+    okg:title "RML-LV" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706304> .
+
+<https://openknowledgegraphs.com/resource/rml-star/> a okg:Ontology ;
+    rdfs:label "RML-star" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "ontology module for generating RDF-star graphs with RML" ;
+    okg:homepage <https://w3id.org/rml/star> ;
+    okg:sourceRepo <https://github.com/kg-construct/rml-star> ;
+    okg:title "RML-star" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706303> .
+
 <https://openknowledgegraphs.com/resource/rna-ontology-q99546338/> a okg:Ontology ;
     rdfs:label "RNA ontology" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -28229,6 +28283,15 @@
     okg:sourceRepo <https://github.com/obophenotype/xenopus-phenotype-ontology> ;
     okg:title "Xenopus Phenotype Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661843> .
+
+<https://openknowledgegraphs.com/resource/xr2rml/> a okg:Ontology ;
+    rdfs:label "xR2RML" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "mapping language and RDF vocabulary for relational and non-relational databases" ;
+    okg:homepage <https://www.i3s.unice.fr/~fmichel/xr2rml_specification.html> ;
+    okg:sourceRepo <https://www.i3s.unice.fr/~fmichel/xr2rml_specification.html> ;
+    okg:title "xR2RML" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140706305> .
 
 <https://openknowledgegraphs.com/resource/yahoo-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "Yahoo! Knowledge Graph" ;

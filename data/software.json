@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T20:07:16Z",
+  "generatedAt": "2026-07-26T21:35:18Z",
   "items": [
     {
       "title": "4store",
@@ -635,6 +635,18 @@
       "softwareType": "Developer Library"
     },
     {
+      "title": "D2RQ",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706150",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/d2rq/",
+      "description": "platform for accessing relational databases as virtual RDF graphs",
+      "homepage": "https://d2rq.org/",
+      "sourceRepo": "https://github.com/d2rq/d2rq",
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "d3-sparql",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653431",
       "types": [
@@ -664,6 +676,18 @@
       ],
       "latestVersion": "0.0.0",
       "releaseDate": "2015-02-20",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
+      "title": "DARQ SPARQL federation engine",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706152",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/darq-sparql-federation-engine/",
+      "description": "historical federated SPARQL query engine",
+      "homepage": "https://darq.sourceforge.net/",
+      "sourceRepo": "https://darq.sourceforge.net/",
       "softwareType": "SPARQL Tooling"
     },
     {
@@ -733,6 +757,17 @@
       "softwareType": "Developer Library"
     },
     {
+      "title": "Dragoman RDF mapping optimizer",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706232",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/dragoman-rdf-mapping-optimizer/",
+      "description": "framework for optimizing and executing declarative knowledge-graph mappings",
+      "sourceRepo": "https://github.com/SDM-TIB/Dragoman",
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "duck_rdf",
       "wikidataId": "https://www.wikidata.org/wiki/Q140685541",
       "types": [
@@ -760,6 +795,18 @@
         "proprietary license"
       ],
       "softwareType": "Graph Database"
+    },
+    {
+      "title": "Elda Linked Data API",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705561",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/elda-linked-data-api/",
+      "description": "Java implementation of the Linked Data API for configurable REST interfaces over RDF data",
+      "homepage": "https://epimorphics.github.io/elda/current/index.html",
+      "sourceRepo": "https://github.com/epimorphics/elda",
+      "softwareType": "Developer Library"
     },
     {
       "title": "ELK",
@@ -885,6 +932,17 @@
       "latestVersion": "1.6.5",
       "releaseDate": "2016-12-31",
       "softwareType": "Reasoning & Inference"
+    },
+    {
+      "title": "FlexRML",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706217",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/flexrml/",
+      "description": "memory-efficient C++ RML interpreter",
+      "sourceRepo": "https://github.com/wintechis/flex-rml",
+      "softwareType": "RDF Data Mapping / ETL"
     },
     {
       "title": "Flint SPARQL Editor",
@@ -1032,6 +1090,29 @@
       "softwareType": "Knowledge Graph Construction"
     },
     {
+      "title": "FuXi RDF reasoner",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706153",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/fuxi-rdf-reasoner/",
+      "description": "Python semantic web logical reasoning system",
+      "homepage": "https://pypi.org/project/fuxi/",
+      "sourceRepo": "https://pypi.org/project/fuxi/",
+      "softwareType": "Reasoning & Inference"
+    },
+    {
+      "title": "gdotv",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705423",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/gdotv/",
+      "description": "graph database client with query editing and visualization for RDF triplestores and other graph databases",
+      "homepage": "https://gdotv.com/",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
       "title": "GH-RDF3X",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653393",
       "types": [
@@ -1136,6 +1217,18 @@
       "softwareType": "Developer Library"
     },
     {
+      "title": "grlc SPARQL API constructor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705559",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/grlc-sparql-api-constructor/",
+      "description": "software that generates RESTful Web APIs from SPARQL queries stored in Git repositories",
+      "homepage": "https://grlc.io/",
+      "sourceRepo": "https://github.com/CLARIAH/grlc",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
       "title": "GRUFF",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653417",
       "types": [
@@ -1194,6 +1287,18 @@
       "latestVersion": "0.0.2",
       "releaseDate": "2023-12-28",
       "softwareType": "SPARQL Tooling"
+    },
+    {
+      "title": "Helio Ecosystem",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706218",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/helio-ecosystem/",
+      "description": "framework for generating and publishing knowledge graphs as Linked Data",
+      "homepage": "https://helio-playground.linkeddata.es/home",
+      "sourceRepo": "https://github.com/helio-ecosystem",
+      "softwareType": "Knowledge Graph Construction"
     },
     {
       "title": "HermiT",
@@ -1287,6 +1392,17 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/",
       "homepage": "http://www.infinitegraph.com",
       "softwareType": "Graph Database"
+    },
+    {
+      "title": "J2RM",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706224",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/j2rm/",
+      "description": "ontology-based JSON-to-RDF mapping tool",
+      "sourceRepo": "https://github.com/KGCP/g0-Builder-J2RM",
+      "softwareType": "RDF Data Mapping / ETL"
     },
     {
       "title": "JanusGraph",
@@ -1400,6 +1516,18 @@
       "softwareType": "Reasoning & Inference"
     },
     {
+      "title": "Karma semantic mapping platform",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706222",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/",
+      "description": "visual platform for semantic modeling and RDF generation",
+      "homepage": "https://usc-isi-i2.github.io/karma/",
+      "sourceRepo": "https://github.com/usc-isi-i2/karma",
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "Katts",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653397",
       "types": [
@@ -1464,6 +1592,18 @@
       "softwareType": "Knowledge Graph Construction"
     },
     {
+      "title": "Kolibrie SPARQL engine",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705186",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/kolibrie-sparql-engine/",
+      "description": "Rust-based SPARQL query engine and RDF stream-processing system",
+      "homepage": "https://streamintelligencelab.github.io/Kolibrie-website/",
+      "sourceRepo": "https://github.com/StreamIntelligenceLab/Kolibrie",
+      "softwareType": "Stream Processing"
+    },
+    {
       "title": "Konclude",
       "wikidataId": "https://www.wikidata.org/wiki/Q140686380",
       "types": [
@@ -1503,6 +1643,21 @@
       "sourceRepo": "https://github.com/mro/librdf.sqlite",
       "licenses": [
         "proprietary license"
+      ],
+      "softwareType": "Graph Database"
+    },
+    {
+      "title": "Linked Data Fragments Server",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705553",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/",
+      "description": "Node.js server for publishing Triple Pattern Fragments and other Linked Data Fragments",
+      "homepage": "https://linkeddatafragments.org/software/",
+      "sourceRepo": "https://github.com/LinkedDataFragments/Server.js",
+      "licenses": [
+        "MIT License"
       ],
       "softwareType": "Graph Database"
     },
@@ -1645,6 +1800,18 @@
       "softwareType": "Graph Database"
     },
     {
+      "title": "Mapeathor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706221",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/",
+      "description": "spreadsheet-based R2RML, RML, and YARRRML mapping generator",
+      "homepage": "https://morph.oeg.fi.upm.es/tool/mapeathor",
+      "sourceRepo": "https://github.com/oeg-upm/mapeathor",
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "maplib",
       "wikidataId": "https://www.wikidata.org/wiki/Q140704881",
       "types": [
@@ -1657,6 +1824,18 @@
       "licenses": [
         "3-clause BSD License"
       ],
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
+      "title": "Mapping Workbench",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706220",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/mapping-workbench/",
+      "description": "collaborative platform for developing and validating knowledge-graph mappings",
+      "homepage": "https://meaningfy.ws/mapping-workbench/",
+      "sourceRepo": "https://meaningfy.ws/mapping-workbench/",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -1679,6 +1858,17 @@
         "freeware"
       ],
       "softwareType": "Graph Database"
+    },
+    {
+      "title": "Matey YARRRML editor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706223",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/matey-yarrrml-editor/",
+      "description": "browser-based editor for YARRRML mappings",
+      "sourceRepo": "https://github.com/RMLio/matey",
+      "softwareType": "RDF Data Mapping / ETL"
     },
     {
       "title": "Mem0",
@@ -1784,6 +1974,17 @@
         "proprietary license"
       ],
       "softwareType": "Stream Processing"
+    },
+    {
+      "title": "Morph-xR2RML",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706216",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/morph-xr2rml/",
+      "description": "xR2RML implementation for mapping non-relational data to RDF",
+      "sourceRepo": "https://github.com/frmichel/morph-xr2rml",
+      "softwareType": "RDF Data Mapping / ETL"
     },
     {
       "title": "Mulgara",
@@ -2328,6 +2529,17 @@
       "softwareType": "Reasoning & Inference"
     },
     {
+      "title": "OpenSKOS",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705495",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/openskos/",
+      "description": "open-source platform for publishing and managing SKOS vocabularies",
+      "sourceRepo": "https://github.com/openskos/openskos",
+      "softwareType": "Ontology Engineering"
+    },
+    {
       "title": "OrientDB",
       "wikidataId": "https://www.wikidata.org/wiki/Q808716",
       "types": [
@@ -2556,6 +2768,17 @@
       "softwareType": "Graph Database"
     },
     {
+      "title": "Prez Linked Data API",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705560",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/",
+      "description": "RDF framework for publishing Linked Data through profile-based APIs and web interfaces",
+      "sourceRepo": "https://github.com/RDFLib/prez",
+      "softwareType": "Developer Library"
+    },
+    {
       "title": "Processor",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653440",
       "types": [
@@ -2628,6 +2851,17 @@
       "latestVersion": "0.0.11",
       "releaseDate": "2026-01-23",
       "softwareType": "Knowledge Graph Construction"
+    },
+    {
+      "title": "pyLDAPI",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705552",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/",
+      "description": "Python framework for serving RDF as Linked Data APIs",
+      "sourceRepo": "https://github.com/RDFLib/pyLDAPI",
+      "softwareType": "Developer Library"
     },
     {
       "title": "pyLoDStorage",
@@ -2827,6 +3061,17 @@
         "proprietary license"
       ],
       "softwareType": "Knowledge Graph Construction"
+    },
+    {
+      "title": "RDF Glance",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705421",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-glance/",
+      "description": "lightweight browser for exploring RDF graphs",
+      "sourceRepo": "https://github.com/xdobry/rdfglance",
+      "softwareType": "Visualization"
     },
     {
       "title": "RDF Playground",
@@ -3139,6 +3384,17 @@
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
+      "title": "RMLStreamer",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706215",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/",
+      "description": "streaming RML materialization engine",
+      "sourceRepo": "https://github.com/RMLio/RMLStreamer",
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "ROBOT is an OBO Tool",
       "wikidataId": "https://www.wikidata.org/wiki/Q116908518",
       "types": [
@@ -3325,6 +3581,28 @@
       "latestVersion": "0.6.0",
       "releaseDate": "2026-07-21",
       "softwareType": "Knowledge Graph Construction"
+    },
+    {
+      "title": "Sempala",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705182",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/sempala/",
+      "description": "historical SPARQL query processor for Hadoop and Impala",
+      "sourceRepo": "https://github.com/aschaetzle/Sempala",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
+      "title": "SemSpect",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705420",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/semspect/",
+      "description": "commercial visual exploration and querying tool for RDF and knowledge graphs",
+      "homepage": "https://www.semspect.de/",
+      "softwareType": "Visualization"
     },
     {
       "title": "SenTag",
@@ -3570,6 +3848,17 @@
       "homepage": "https://pchampin.github.io/sophia_rs/",
       "sourceRepo": "https://github.com/pchampin/sophia_rs",
       "softwareType": "Developer Library"
+    },
+    {
+      "title": "SousLeSens",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705496",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/souslesens/",
+      "description": "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri",
+      "sourceRepo": "https://github.com/souslesens/souslesensVocables",
+      "softwareType": "Ontology Engineering"
     },
     {
       "title": "Spanqit",
@@ -3861,6 +4150,18 @@
       "softwareType": "SPARQL Tooling"
     },
     {
+      "title": "Spread2RML software",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706234",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/spread2rml-software/",
+      "description": "tool for predicting RML mappings from messy spreadsheets",
+      "homepage": "https://www.dfki.uni-kl.de/~mschroeder/demo/spread2rml/",
+      "sourceRepo": "https://www.dfki.uni-kl.de/~mschroeder/demo/spread2rml/",
+      "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
       "title": "sq (SPARQL CLI)",
       "wikidataId": "https://www.wikidata.org/wiki/Q140456734",
       "types": [
@@ -4042,6 +4343,18 @@
         "GNU General Public License, version 3.0"
       ],
       "softwareType": "Knowledge Graph Construction"
+    },
+    {
+      "title": "Tentris",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705181",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/",
+      "description": "RDF graph database and SPARQL engine using a compressed Hypertrie index",
+      "homepage": "https://tentris.io/",
+      "sourceRepo": "https://github.com/dice-group/tentris",
+      "softwareType": "Graph Database"
     },
     {
       "title": "TerminusDB",
@@ -4354,6 +4667,17 @@
       "softwareType": "SPARQL Tooling"
     },
     {
+      "title": "Visual SPARQL Builder",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705422",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/visual-sparql-builder/",
+      "description": "standalone visual interface for constructing SPARQL queries",
+      "homepage": "https://leipert.github.io/vsb/",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
       "title": "VizBrick",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653405",
       "types": [
@@ -4381,6 +4705,17 @@
       ],
       "latestVersion": "15.1.2",
       "releaseDate": "2026-06-04",
+      "softwareType": "Ontology Engineering"
+    },
+    {
+      "title": "VocPrez",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705494",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/vocprez/",
+      "description": "software for publishing RDF vocabularies through human- and machine-readable web interfaces",
+      "sourceRepo": "https://github.com/RDFLib/VocPrez",
       "softwareType": "Ontology Engineering"
     },
     {
@@ -4499,6 +4834,17 @@
       "softwareType": "Knowledge Graph Construction"
     },
     {
+      "title": "Wistor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140705554",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/wistor/",
+      "description": "commercial no-code platform for building applications and APIs on RDF, OWL, SHACL, and SPARQL data",
+      "homepage": "https://wistor.nl/",
+      "softwareType": "Developer Library"
+    },
+    {
       "title": "YARRRML Parser",
       "wikidataId": "https://www.wikidata.org/wiki/Q140646515",
       "types": [
@@ -4514,6 +4860,18 @@
       "latestVersion": "1.12.2",
       "releaseDate": "2025-10-22",
       "softwareType": "RDF Data Mapping / ETL"
+    },
+    {
+      "title": "YARS2 RDF store",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140706154",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/yars2-rdf-store/",
+      "description": "distributed Java RDF store for querying graph-structured data",
+      "homepage": "https://doi.org/10.1016/j.websem.2008.06.001",
+      "sourceRepo": "https://sw.deri.org/2004/06/yars/",
+      "softwareType": "Graph Database"
     },
     {
       "title": "Yasgui",
