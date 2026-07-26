@@ -548,6 +548,17 @@
     okg:title "FaCT++" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394243> .
 
+<https://openknowledgegraphs.com/software/flint-sparql-editor/> a okg:Software ;
+    rdfs:label "Flint SPARQL Editor" ;
+    okg:description "reusable browser-based editor for authoring SPARQL queries" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "1.0.3" ;
+    okg:releaseDate "2012-10-16"^^xsd:date ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/TSO-Openup/FlintSparqlEditor> ;
+    okg:title "Flint SPARQL Editor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140696645> .
+
 <https://openknowledgegraphs.com/software/flockdb/> a okg:Software ;
     rdfs:label "FlockDB" ;
     okg:description "graph-based distributed data manager, project no longer maintained since 2012" ;
@@ -1948,6 +1959,17 @@
     okg:title "safe" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114077329> .
 
+<https://openknowledgegraphs.com/software/sage-sparql-query-engine/> a okg:Software ;
+    rdfs:label "SaGe SPARQL query engine" ;
+    okg:description "preemptive SPARQL query engine for Web-scale RDF datasets" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "2.3.0" ;
+    okg:releaseDate "2021-04-19"^^xsd:date ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/sage-org/sage-engine> ;
+    okg:title "SaGe SPARQL query engine" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140696649> .
+
 <https://openknowledgegraphs.com/software/sampo-ui/> a okg:Software ;
     rdfs:label "Sampo-UI" ;
     okg:description "Sampo-UI is a framework for developing user interfaces for semantic portals to publish Linked Open Data." ;
@@ -2215,6 +2237,16 @@
     okg:sourceRepo <https://github.com/lambdamusic/Sparql-cli> ;
     okg:title "Sparql-cli" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653451> .
+
+<https://openknowledgegraphs.com/software/sparql-js/> a okg:Software ;
+    rdfs:label "SPARQL.js" ;
+    okg:description "JavaScript parser and generator for the SPARQL query language" ;
+    okg:latestVersion "3.7.3" ;
+    okg:releaseDate "2024-08-23"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/RubenVerborgh/SPARQL.js> ;
+    okg:title "SPARQL.js" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140696647> .
 
 <https://openknowledgegraphs.com/software/sparql-parser/> a okg:Software ;
     rdfs:label "SPARQL parser" ;

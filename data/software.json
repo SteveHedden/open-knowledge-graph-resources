@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T08:17:05Z",
+  "generatedAt": "2026-07-26T08:34:16Z",
   "items": [
     {
       "title": "4store",
@@ -885,6 +885,22 @@
       "latestVersion": "1.6.5",
       "releaseDate": "2016-12-31",
       "softwareType": "Reasoning & Inference"
+    },
+    {
+      "title": "Flint SPARQL Editor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140696645",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/flint-sparql-editor/",
+      "description": "reusable browser-based editor for authoring SPARQL queries",
+      "sourceRepo": "https://github.com/TSO-Openup/FlintSparqlEditor",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "1.0.3",
+      "releaseDate": "2012-10-16",
+      "softwareType": "SPARQL Tooling"
     },
     {
       "title": "FlockDB",
@@ -3146,6 +3162,22 @@
       "softwareType": "SPARQL Tooling"
     },
     {
+      "title": "SaGe SPARQL query engine",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140696649",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/",
+      "description": "preemptive SPARQL query engine for Web-scale RDF datasets",
+      "sourceRepo": "https://github.com/sage-org/sage-engine",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "2.3.0",
+      "releaseDate": "2021-04-19",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
       "title": "Sampo-UI",
       "wikidataId": "https://www.wikidata.org/wiki/Q122949732",
       "types": [
@@ -3623,6 +3655,19 @@
         "Unlicense"
       ],
       "softwareType": "SPARQL Tooling"
+    },
+    {
+      "title": "SPARQL.js",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140696647",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-js/",
+      "description": "JavaScript parser and generator for the SPARQL query language",
+      "sourceRepo": "https://github.com/RubenVerborgh/SPARQL.js",
+      "latestVersion": "3.7.3",
+      "releaseDate": "2024-08-23",
+      "softwareType": "Developer Library"
     },
     {
       "title": "SPARQL2Git",
