@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T15:21:53Z",
+  "generatedAt": "2026-07-27T16:10:28Z",
   "items": [
     {
       "title": "4store",
@@ -816,7 +816,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/elk/",
       "description": "semantic reasoner",
-      "homepage": "http://elk.semanticweb.org/",
+      "homepage": "https://www.uni-ulm.de/en/elkreasoner/",
       "sourceRepo": "https://github.com/liveontologies/elk-reasoner",
       "licenses": [
         "Apache Software License 2.0"
@@ -1508,7 +1508,6 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/juliett/",
       "description": "N3/RDF Surfaces reasoner that lowers Notation3 rules to first-order logic and decides them with the Z3 SMT solver, running as WebAssembly in the browser",
       "homepage": "https://phochste.codeberg.page/juliett/",
-      "sourceRepo": "https://codeberg.org/phochste/juliett",
       "licenses": [
         "MIT License"
       ],

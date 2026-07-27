@@ -503,7 +503,7 @@
     rdfs:label "ELK" ;
     okg:description "semantic reasoner" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://elk.semanticweb.org/> ;
+    okg:homepage <https://www.uni-ulm.de/en/elkreasoner/> ;
     okg:latestVersion "0.6.0" ;
     okg:releaseDate "2024-05-25"^^xsd:date ;
     okg:softwareType okg:ReasoningInference ;
@@ -958,7 +958,6 @@
     okg:homepage <https://phochste.codeberg.page/juliett/> ;
     okg:latestVersion "v0.5.0" ;
     okg:softwareType okg:ReasoningInference ;
-    okg:sourceRepo <https://codeberg.org/phochste/juliett> ;
     okg:title "juliett" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140514553> .
 
