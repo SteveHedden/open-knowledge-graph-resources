@@ -745,8 +745,8 @@
     okg:description "open-source framework for building temporal knowledge graphs as evolving context for AI agents" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://help.getzep.com/graphiti> ;
-    okg:latestVersion "0.29.2" ;
-    okg:releaseDate "2026-06-08"^^xsd:date ;
+    okg:latestVersion "0.29.3" ;
+    okg:releaseDate "2026-07-27"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/getzep/graphiti> ;
     okg:title "Graphiti" ;
@@ -2842,8 +2842,8 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.7.14" ;
-    okg:releaseDate "2026-07-23"^^xsd:date ;
+    okg:latestVersion "2.8.3" ;
+    okg:releaseDate "2026-07-27"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:title "TrustGraph" ;
@@ -2854,8 +2854,8 @@
     okg:description "In-memory, columnar graph database engine for real-time analytics, with Cypher query support and git-style version control over graph data" ;
     okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://useturingdb.com/> ;
-    okg:latestVersion "1.35" ;
-    okg:releaseDate "2026-07-08"^^xsd:date ;
+    okg:latestVersion "1.36" ;
+    okg:releaseDate "2026-07-27"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/turing-db/turingdb> ;
     okg:title "TuringDB" ;
