@@ -1747,6 +1747,7 @@
 <https://openknowledgegraphs.com/software/prez-linked-data-api/> a okg:Software ;
     rdfs:label "Prez Linked Data API" ;
     okg:description "RDF framework for publishing Linked Data through profile-based APIs and web interfaces" ;
+    okg:homepage <https://prez.dev/> ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/RDFLib/prez> ;
     okg:title "Prez Linked Data API" ;
@@ -1803,6 +1804,7 @@
 <https://openknowledgegraphs.com/software/pyldapi/> a okg:Software ;
     rdfs:label "pyLDAPI" ;
     okg:description "Python framework for serving RDF as Linked Data APIs" ;
+    okg:homepage <https://pyldapi.readthedocs.io/> ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/RDFLib/pyLDAPI> ;
     okg:title "pyLDAPI" ;

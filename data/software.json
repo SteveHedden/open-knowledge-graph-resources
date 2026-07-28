@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T08:47:58Z",
+  "generatedAt": "2026-07-28T15:12:45Z",
   "items": [
     {
       "title": "4store",
@@ -2774,6 +2774,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/",
       "description": "RDF framework for publishing Linked Data through profile-based APIs and web interfaces",
+      "homepage": "https://prez.dev/",
       "sourceRepo": "https://github.com/RDFLib/prez",
       "softwareType": "Developer Library"
     },
@@ -2859,6 +2860,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/",
       "description": "Python framework for serving RDF as Linked Data APIs",
+      "homepage": "https://pyldapi.readthedocs.io/",
       "sourceRepo": "https://github.com/RDFLib/pyLDAPI",
       "softwareType": "Developer Library"
     },
