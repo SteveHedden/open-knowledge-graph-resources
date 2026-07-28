@@ -1804,7 +1804,7 @@
 <https://openknowledgegraphs.com/software/pyldapi/> a okg:Software ;
     rdfs:label "pyLDAPI" ;
     okg:description "Python framework for serving RDF as Linked Data APIs" ;
-    okg:homepage <https://pyldapi.readthedocs.io/> ;
+    okg:homepage <https://pypi.org/project/pyldapi/> ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/RDFLib/pyLDAPI> ;
     okg:title "pyLDAPI" ;
