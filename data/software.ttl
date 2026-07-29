@@ -381,6 +381,8 @@
     rdfs:label "D2RQ" ;
     okg:description "platform for accessing relational databases as virtual RDF graphs" ;
     okg:homepage <https://d2rq.org/> ;
+    okg:latestVersion "0.8.1" ;
+    okg:releaseDate "2012-06-22"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/d2rq/d2rq> ;
     okg:title "D2RQ" ;
@@ -466,6 +468,9 @@
 <https://openknowledgegraphs.com/software/dragoman-rdf-mapping-optimizer/> a okg:Software ;
     rdfs:label "Dragoman RDF mapping optimizer" ;
     okg:description "framework for optimizing and executing declarative knowledge-graph mappings" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:latestVersion "2.0" ;
+    okg:releaseDate "2022-04-06"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/SDM-TIB/Dragoman> ;
     okg:title "Dragoman RDF mapping optimizer" ;
@@ -586,6 +591,8 @@
 <https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
     rdfs:label "FlexRML" ;
     okg:description "memory-efficient C++ RML interpreter" ;
+    okg:latestVersion "3.0.0" ;
+    okg:releaseDate "2026-05-15"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/wintechis/flex-rml> ;
     okg:title "FlexRML" ;
@@ -755,7 +762,10 @@
 <https://openknowledgegraphs.com/software/graphy-js/> a okg:Software ;
     rdfs:label "Graphy.js" ;
     okg:description "collection of JavaScript libraries for parsing, serializing, and manipulating RDF" ;
+    okg:hasLicense okg:License_ISC_license_Q386474 ;
     okg:homepage <https://graphy.link/> ;
+    okg:latestVersion "4.3.0" ;
+    okg:releaseDate "2020-08-22"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/blake-regalia/graphy.js> ;
     okg:title "Graphy.js" ;
@@ -764,7 +774,10 @@
 <https://openknowledgegraphs.com/software/grlc-sparql-api-constructor/> a okg:Software ;
     rdfs:label "grlc SPARQL API constructor" ;
     okg:description "software that generates RESTful Web APIs from SPARQL queries stored in Git repositories" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://grlc.io/> ;
+    okg:latestVersion "1.3.11" ;
+    okg:releaseDate "2026-05-13"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/CLARIAH/grlc> ;
     okg:title "grlc SPARQL API constructor" ;
@@ -1018,6 +1031,8 @@
     rdfs:label "Kolibrie SPARQL engine" ;
     okg:description "Rust-based SPARQL query engine and RDF stream-processing system" ;
     okg:homepage <https://streamintelligencelab.github.io/Kolibrie-website/> ;
+    okg:latestVersion "0.1.1" ;
+    okg:releaseDate "2026-02-20"^^xsd:date ;
     okg:softwareType okg:StreamProcessing ;
     okg:sourceRepo <https://github.com/StreamIntelligenceLab/Kolibrie> ;
     okg:title "Kolibrie SPARQL engine" ;
@@ -1058,6 +1073,8 @@
     okg:description "Node.js server for publishing Triple Pattern Fragments and other Linked Data Fragments" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://linkeddatafragments.org/software/> ;
+    okg:latestVersion "2.2.2" ;
+    okg:releaseDate "2017-05-01"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/LinkedDataFragments/Server.js> ;
     okg:title "Linked Data Fragments Server" ;
@@ -1145,7 +1162,10 @@
 <https://openknowledgegraphs.com/software/mapeathor/> a okg:Software ;
     rdfs:label "Mapeathor" ;
     okg:description "spreadsheet-based R2RML, RML, and YARRRML mapping generator" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://morph.oeg.fi.upm.es/tool/mapeathor> ;
+    okg:latestVersion "1.7.5" ;
+    okg:releaseDate "2024-05-12"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/oeg-upm/mapeathor> ;
     okg:title "Mapeathor" ;
@@ -1156,6 +1176,8 @@
     okg:description "Python/Rust library for constructing RDF knowledge graphs from tabular data using OTTR templates" ;
     okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://datatreehouse.github.io/documentation/> ;
+    okg:latestVersion "0.4.8" ;
+    okg:releaseDate "2023-08-11"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/magbak/maplib> ;
     okg:title "maplib" ;
@@ -1183,6 +1205,9 @@
 <https://openknowledgegraphs.com/software/matey-yarrrml-editor/> a okg:Software ;
     rdfs:label "Matey YARRRML editor" ;
     okg:description "browser-based editor for YARRRML mappings" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "1.2.0" ;
+    okg:releaseDate "2024-09-24"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/RMLio/matey> ;
     okg:title "Matey YARRRML editor" ;
@@ -1248,6 +1273,9 @@
 <https://openknowledgegraphs.com/software/morph-xr2rml/> a okg:Software ;
     rdfs:label "Morph-xR2RML" ;
     okg:description "xR2RML implementation for mapping non-relational data to RDF" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:latestVersion "1.3.2" ;
+    okg:releaseDate "2023-08-23"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/frmichel/morph-xr2rml> ;
     okg:title "Morph-xR2RML" ;
@@ -1279,6 +1307,8 @@
     rdfs:label "N3.js" ;
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "2.1.0" ;
+    okg:releaseDate "2026-06-23"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:title "N3.js" ;
@@ -1602,6 +1632,8 @@
 <https://openknowledgegraphs.com/software/openskos/> a okg:Software ;
     rdfs:label "OpenSKOS" ;
     okg:description "open-source platform for publishing and managing SKOS vocabularies" ;
+    okg:latestVersion "2.2" ;
+    okg:releaseDate "2019-01-21"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/openskos/openskos> ;
     okg:title "OpenSKOS" ;
@@ -1624,9 +1656,9 @@
     okg:description "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://docs.origintrail.io/> ;
-    okg:latestVersion "10.0.9" ;
+    okg:latestVersion "10.0.10" ;
     okg:partOf "OriginTrail Decentralized Knowledge Graph" ;
-    okg:releaseDate "2026-07-21"^^xsd:date ;
+    okg:releaseDate "2026-07-28"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/OriginTrail/dkg> ;
     okg:title "OriginTrail DKG V10 node" ;
@@ -1747,7 +1779,10 @@
 <https://openknowledgegraphs.com/software/prez-linked-data-api/> a okg:Software ;
     rdfs:label "Prez Linked Data API" ;
     okg:description "RDF framework for publishing Linked Data through profile-based APIs and web interfaces" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://prez.dev/> ;
+    okg:latestVersion "4.5.0" ;
+    okg:releaseDate "2025-03-06"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/RDFLib/prez> ;
     okg:title "Prez Linked Data API" ;
@@ -1804,7 +1839,10 @@
 <https://openknowledgegraphs.com/software/pyldapi/> a okg:Software ;
     rdfs:label "pyLDAPI" ;
     okg:description "Python framework for serving RDF as Linked Data APIs" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://pypi.org/project/pyldapi/> ;
+    okg:latestVersion "4.2" ;
+    okg:releaseDate "2021-08-06"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/RDFLib/pyLDAPI> ;
     okg:title "pyLDAPI" ;
@@ -1923,6 +1961,8 @@
 <https://openknowledgegraphs.com/software/rdf-glance/> a okg:Software ;
     rdfs:label "RDF Glance" ;
     okg:description "lightweight browser for exploring RDF graphs" ;
+    okg:latestVersion "0.17" ;
+    okg:releaseDate "2026-07-17"^^xsd:date ;
     okg:softwareType okg:Visualization ;
     okg:sourceRepo <https://github.com/xdobry/rdfglance> ;
     okg:title "RDF Glance" ;
@@ -2127,6 +2167,9 @@
 <https://openknowledgegraphs.com/software/rmlstreamer/> a okg:Software ;
     rdfs:label "RMLStreamer" ;
     okg:description "streaming RML materialization engine" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "2.5.0" ;
+    okg:releaseDate "2023-06-02"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/RMLio/RMLStreamer> ;
     okg:title "RMLStreamer" ;
@@ -2262,6 +2305,9 @@
 <https://openknowledgegraphs.com/software/sempala/> a okg:Software ;
     rdfs:label "Sempala" ;
     okg:description "historical SPARQL query processor for Hadoop and Impala" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:latestVersion "2.1" ;
+    okg:releaseDate "2017-07-07"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/aschaetzle/Sempala> ;
     okg:title "Sempala" ;
@@ -2412,7 +2458,10 @@
 <https://openknowledgegraphs.com/software/sophia-rdf-toolkit/> a okg:Software ;
     rdfs:label "Sophia RDF toolkit" ;
     okg:description "Rust toolkit for RDF and Linked Data" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://pchampin.github.io/sophia_rs/> ;
+    okg:latestVersion "0.10.0" ;
+    okg:releaseDate "2026-05-19"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/pchampin/sophia_rs> ;
     okg:title "Sophia RDF toolkit" ;
@@ -2421,6 +2470,9 @@
 <https://openknowledgegraphs.com/software/souslesens/> a okg:Software ;
     rdfs:label "SousLeSens" ;
     okg:description "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "3.12.0" ;
+    okg:releaseDate "2026-07-17"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/souslesens/souslesensVocables> ;
     okg:title "SousLeSens" ;
@@ -2721,9 +2773,12 @@
 <https://openknowledgegraphs.com/software/tentris/> a okg:Software ;
     rdfs:label "Tentris" ;
     okg:description "RDF graph database and SPARQL engine using a compressed Hypertrie index" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://tentris.io/> ;
+    okg:latestVersion "1.5.0" ;
+    okg:releaseDate "2025-07-30"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
-    okg:sourceRepo <https://github.com/dice-group/tentris> ;
+    okg:sourceRepo <https://github.com/dice-group/tentris-research-project> ;
     okg:title "Tentris" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140705181> .
 
@@ -2764,6 +2819,8 @@
     rdfs:label "Titanium JSON-LD" ;
     okg:description "Java implementation of the JSON-LD 1.1 processing algorithm and API" ;
     okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:latestVersion "1.7.0" ;
+    okg:releaseDate "2025-10-05"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/filip26/titanium-json-ld> ;
     okg:title "Titanium JSON-LD" ;
@@ -2844,8 +2901,8 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.8.3" ;
-    okg:releaseDate "2026-07-27"^^xsd:date ;
+    okg:latestVersion "2.8.4" ;
+    okg:releaseDate "2026-07-28"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:title "TrustGraph" ;
@@ -2940,6 +2997,8 @@
 <https://openknowledgegraphs.com/software/vocprez/> a okg:Software ;
     rdfs:label "VocPrez" ;
     okg:description "software for publishing RDF vocabularies through human- and machine-readable web interfaces" ;
+    okg:latestVersion "2.5.15" ;
+    okg:releaseDate "2024-08-20"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/RDFLib/VocPrez> ;
     okg:title "VocPrez" ;
@@ -3373,6 +3432,10 @@ okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 a o
 okg:License_GNU_Library_General_Public_License_version_2_0_or_later_Q27016756 a okg:License ;
     rdfs:label "GNU Library General Public License, version 2.0 or later" ;
     okg:licenseName "GNU Library General Public License, version 2.0 or later" .
+
+okg:License_ISC_license_Q386474 a okg:License ;
+    rdfs:label "ISC license" ;
+    okg:licenseName "ISC license" .
 
 okg:License_Mozilla_Public_License_version_2_0_Q25428413 a okg:License ;
     rdfs:label "Mozilla Public License, version 2.0" ;

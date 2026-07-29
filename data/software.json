@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T15:37:35Z",
+  "generatedAt": "2026-07-29T08:50:59Z",
   "items": [
     {
       "title": "4store",
@@ -644,6 +644,8 @@
       "description": "platform for accessing relational databases as virtual RDF graphs",
       "homepage": "https://d2rq.org/",
       "sourceRepo": "https://github.com/d2rq/d2rq",
+      "latestVersion": "0.8.1",
+      "releaseDate": "2012-06-22",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -765,6 +767,11 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/dragoman-rdf-mapping-optimizer/",
       "description": "framework for optimizing and executing declarative knowledge-graph mappings",
       "sourceRepo": "https://github.com/SDM-TIB/Dragoman",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "2.0",
+      "releaseDate": "2022-04-06",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -942,6 +949,8 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/flexrml/",
       "description": "memory-efficient C++ RML interpreter",
       "sourceRepo": "https://github.com/wintechis/flex-rml",
+      "latestVersion": "3.0.0",
+      "releaseDate": "2026-05-15",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -1214,6 +1223,11 @@
       "description": "collection of JavaScript libraries for parsing, serializing, and manipulating RDF",
       "homepage": "https://graphy.link/",
       "sourceRepo": "https://github.com/blake-regalia/graphy.js",
+      "licenses": [
+        "ISC license"
+      ],
+      "latestVersion": "4.3.0",
+      "releaseDate": "2020-08-22",
       "softwareType": "Developer Library"
     },
     {
@@ -1226,6 +1240,11 @@
       "description": "software that generates RESTful Web APIs from SPARQL queries stored in Git repositories",
       "homepage": "https://grlc.io/",
       "sourceRepo": "https://github.com/CLARIAH/grlc",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "1.3.11",
+      "releaseDate": "2026-05-13",
       "softwareType": "SPARQL Tooling"
     },
     {
@@ -1600,6 +1619,8 @@
       "description": "Rust-based SPARQL query engine and RDF stream-processing system",
       "homepage": "https://streamintelligencelab.github.io/Kolibrie-website/",
       "sourceRepo": "https://github.com/StreamIntelligenceLab/Kolibrie",
+      "latestVersion": "0.1.1",
+      "releaseDate": "2026-02-20",
       "softwareType": "Stream Processing"
     },
     {
@@ -1658,6 +1679,8 @@
       "licenses": [
         "MIT License"
       ],
+      "latestVersion": "2.2.2",
+      "releaseDate": "2017-05-01",
       "softwareType": "Graph Database"
     },
     {
@@ -1808,6 +1831,11 @@
       "description": "spreadsheet-based R2RML, RML, and YARRRML mapping generator",
       "homepage": "https://morph.oeg.fi.upm.es/tool/mapeathor",
       "sourceRepo": "https://github.com/oeg-upm/mapeathor",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "1.7.5",
+      "releaseDate": "2024-05-12",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -1823,6 +1851,8 @@
       "licenses": [
         "3-clause BSD License"
       ],
+      "latestVersion": "0.4.8",
+      "releaseDate": "2023-08-11",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -1867,6 +1897,11 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/matey-yarrrml-editor/",
       "description": "browser-based editor for YARRRML mappings",
       "sourceRepo": "https://github.com/RMLio/matey",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "1.2.0",
+      "releaseDate": "2024-09-24",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -1983,6 +2018,11 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/morph-xr2rml/",
       "description": "xR2RML implementation for mapping non-relational data to RDF",
       "sourceRepo": "https://github.com/frmichel/morph-xr2rml",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "1.3.2",
+      "releaseDate": "2023-08-23",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -2013,6 +2053,8 @@
       "licenses": [
         "MIT License"
       ],
+      "latestVersion": "2.1.0",
+      "releaseDate": "2026-06-23",
       "softwareType": "Developer Library"
     },
     {
@@ -2536,6 +2578,8 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/openskos/",
       "description": "open-source platform for publishing and managing SKOS vocabularies",
       "sourceRepo": "https://github.com/openskos/openskos",
+      "latestVersion": "2.2",
+      "releaseDate": "2019-01-21",
       "softwareType": "Ontology Engineering"
     },
     {
@@ -2569,8 +2613,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "10.0.9",
-      "releaseDate": "2026-07-21",
+      "latestVersion": "10.0.10",
+      "releaseDate": "2026-07-28",
       "softwareType": "AI Agent Tooling"
     },
     {
@@ -2776,6 +2820,11 @@
       "description": "RDF framework for publishing Linked Data through profile-based APIs and web interfaces",
       "homepage": "https://prez.dev/",
       "sourceRepo": "https://github.com/RDFLib/prez",
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "latestVersion": "4.5.0",
+      "releaseDate": "2025-03-06",
       "softwareType": "Developer Library"
     },
     {
@@ -2862,6 +2911,11 @@
       "description": "Python framework for serving RDF as Linked Data APIs",
       "homepage": "https://pypi.org/project/pyldapi/",
       "sourceRepo": "https://github.com/RDFLib/pyLDAPI",
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "latestVersion": "4.2",
+      "releaseDate": "2021-08-06",
       "softwareType": "Developer Library"
     },
     {
@@ -3072,6 +3126,8 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-glance/",
       "description": "lightweight browser for exploring RDF graphs",
       "sourceRepo": "https://github.com/xdobry/rdfglance",
+      "latestVersion": "0.17",
+      "releaseDate": "2026-07-17",
       "softwareType": "Visualization"
     },
     {
@@ -3393,6 +3449,11 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/",
       "description": "streaming RML materialization engine",
       "sourceRepo": "https://github.com/RMLio/RMLStreamer",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "2.5.0",
+      "releaseDate": "2023-06-02",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -3592,6 +3653,11 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/sempala/",
       "description": "historical SPARQL query processor for Hadoop and Impala",
       "sourceRepo": "https://github.com/aschaetzle/Sempala",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "2.1",
+      "releaseDate": "2017-07-07",
       "softwareType": "SPARQL Tooling"
     },
     {
@@ -3848,6 +3914,11 @@
       "description": "Rust toolkit for RDF and Linked Data",
       "homepage": "https://pchampin.github.io/sophia_rs/",
       "sourceRepo": "https://github.com/pchampin/sophia_rs",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "0.10.0",
+      "releaseDate": "2026-05-19",
       "softwareType": "Developer Library"
     },
     {
@@ -3859,6 +3930,11 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/souslesens/",
       "description": "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri",
       "sourceRepo": "https://github.com/souslesens/souslesensVocables",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "3.12.0",
+      "releaseDate": "2026-07-17",
       "softwareType": "Ontology Engineering"
     },
     {
@@ -4354,7 +4430,12 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/",
       "description": "RDF graph database and SPARQL engine using a compressed Hypertrie index",
       "homepage": "https://tentris.io/",
-      "sourceRepo": "https://github.com/dice-group/tentris",
+      "sourceRepo": "https://github.com/dice-group/tentris-research-project",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "1.5.0",
+      "releaseDate": "2025-07-30",
       "softwareType": "Graph Database"
     },
     {
@@ -4417,6 +4498,8 @@
       "licenses": [
         "3-clause BSD License"
       ],
+      "latestVersion": "1.7.0",
+      "releaseDate": "2025-10-05",
       "softwareType": "Developer Library"
     },
     {
@@ -4560,8 +4643,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "2.8.3",
-      "releaseDate": "2026-07-27",
+      "latestVersion": "2.8.4",
+      "releaseDate": "2026-07-28",
       "softwareType": "AI Agent Tooling"
     },
     {
@@ -4717,6 +4800,8 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/vocprez/",
       "description": "software for publishing RDF vocabularies through human- and machine-readable web interfaces",
       "sourceRepo": "https://github.com/RDFLib/VocPrez",
+      "latestVersion": "2.5.15",
+      "releaseDate": "2024-08-20",
       "softwareType": "Ontology Engineering"
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T15:37:35Z",
+  "generatedAt": "2026-07-29T08:50:59Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -4501,6 +4501,24 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/dolce-dns-ultralite/",
       "description": "simplification and an improvement of some parts of DOLCE Lite-Plus library , and Descriptions and Situations ontology",
       "category": "General / Cross-domain"
+    },
+    {
+      "title": "Domain Knowledge Infrastructure DKI",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140752694",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/domain-knowledge-infrastructure-dki/",
+      "description": "Is a domain knowledge infrastructure that transforms a name, project, brand, methodology, or ecosystem into a canonical digital entity, readable by humans and machines. It combines public domain, structured schema, persistent identifiers",
+      "category": "Technology & Web",
+      "homepage": "https://wikisales.wikibase.cloud/wiki/Item:Q22",
+      "creators": [
+        {
+          "name": "Paulo Cesar Pereira dos Santos",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q140427962"
+        }
+      ]
     },
     {
       "title": "Domesday Book",
@@ -20109,7 +20127,10 @@
       "description": "collections and containers ontology module of the RDF Mapping Language",
       "category": "Technology & Web",
       "homepage": "https://w3id.org/rml/cc",
-      "sourceRepo": "https://github.com/kg-construct/rml-cc"
+      "sourceRepo": "https://github.com/kg-construct/rml-cc",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "RML-Core",
@@ -20121,7 +20142,10 @@
       "description": "core ontology module of the RDF Mapping Language",
       "category": "Technology & Web",
       "homepage": "https://w3id.org/rml/core",
-      "sourceRepo": "https://github.com/kg-construct/rml-core"
+      "sourceRepo": "https://github.com/kg-construct/rml-core",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "RML-FNML",
@@ -20133,7 +20157,10 @@
       "description": "functions and transformations ontology module integrating the Function Ontology with RML",
       "category": "Technology & Web",
       "homepage": "https://w3id.org/rml/fnml",
-      "sourceRepo": "https://github.com/kg-construct/rml-fnml"
+      "sourceRepo": "https://github.com/kg-construct/rml-fnml",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "RML-IO",
@@ -20145,7 +20172,10 @@
       "description": "source and target ontology module of the RDF Mapping Language",
       "category": "Technology & Web",
       "homepage": "https://w3id.org/rml/io",
-      "sourceRepo": "https://github.com/kg-construct/rml-io"
+      "sourceRepo": "https://github.com/kg-construct/rml-io",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "RML-LV",
@@ -20169,7 +20199,10 @@
       "description": "ontology module for generating RDF-star graphs with RML",
       "category": "Technology & Web",
       "homepage": "https://w3id.org/rml/star",
-      "sourceRepo": "https://github.com/kg-construct/rml-star"
+      "sourceRepo": "https://github.com/kg-construct/rml-star",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "RNA Ontology",

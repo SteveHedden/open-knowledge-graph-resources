@@ -3048,6 +3048,15 @@
     okg:title "DOLCE+DnS Ultralite" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111650164> .
 
+<https://openknowledgegraphs.com/resource/domain-knowledge-infrastructure-dki/> a okg:Ontology ;
+    rdfs:label "Domain Knowledge Infrastructure DKI" ;
+    okg:category okg:TechnologyWeb ;
+    okg:creator okg:Creator_Paulo_Cesar_Pereira_dos_Santos_Q140427962 ;
+    okg:description "Is a domain knowledge infrastructure that transforms a name, project, brand, methodology, or ecosystem into a canonical digital entity, readable by humans and machines. It combines public domain, structured schema, persistent identifiers" ;
+    okg:homepage <https://wikisales.wikibase.cloud/wiki/Item:Q22> ;
+    okg:title "Domain Knowledge Infrastructure DKI" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140752694> .
+
 <https://openknowledgegraphs.com/resource/domesday-book/> a okg:ControlledVocabulary ;
     rdfs:label "Domesday Book" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -24936,6 +24945,7 @@
     rdfs:label "RML-CC" ;
     okg:category okg:TechnologyWeb ;
     okg:description "collections and containers ontology module of the RDF Mapping Language" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <https://w3id.org/rml/cc> ;
     okg:sourceRepo <https://github.com/kg-construct/rml-cc> ;
     okg:title "RML-CC" ;
@@ -24945,6 +24955,7 @@
     rdfs:label "RML-Core" ;
     okg:category okg:TechnologyWeb ;
     okg:description "core ontology module of the RDF Mapping Language" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <https://w3id.org/rml/core> ;
     okg:sourceRepo <https://github.com/kg-construct/rml-core> ;
     okg:title "RML-Core" ;
@@ -24954,6 +24965,7 @@
     rdfs:label "RML-FNML" ;
     okg:category okg:TechnologyWeb ;
     okg:description "functions and transformations ontology module integrating the Function Ontology with RML" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <https://w3id.org/rml/fnml> ;
     okg:sourceRepo <https://github.com/kg-construct/rml-fnml> ;
     okg:title "RML-FNML" ;
@@ -24963,6 +24975,7 @@
     rdfs:label "RML-IO" ;
     okg:category okg:TechnologyWeb ;
     okg:description "source and target ontology module of the RDF Mapping Language" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <https://w3id.org/rml/io> ;
     okg:sourceRepo <https://github.com/kg-construct/rml-io> ;
     okg:title "RML-IO" ;
@@ -24981,6 +24994,7 @@
     rdfs:label "RML-star" ;
     okg:category okg:TechnologyWeb ;
     okg:description "ontology module for generating RDF-star graphs with RML" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <https://w3id.org/rml/star> ;
     okg:sourceRepo <https://github.com/kg-construct/rml-star> ;
     okg:title "RML-star" ;
@@ -29062,6 +29076,10 @@ okg:Creator_Patrick_Colm_Audley_Q139770478 a okg:Person ;
     okg:githubProfile <https://github.com/paudley> ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=YgbTpqwAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q139770478> .
+
+okg:Creator_Paulo_Cesar_Pereira_dos_Santos_Q140427962 a okg:Person ;
+    rdfs:label "Paulo Cesar Pereira dos Santos" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140427962> .
 
 okg:Creator_Prime_Minister_s_Office_Q10677814 a okg:Organization ;
     rdfs:label "Prime Minister's Office" ;
