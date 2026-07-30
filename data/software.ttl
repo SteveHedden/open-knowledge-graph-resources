@@ -300,6 +300,16 @@
     okg:title "Cognee" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639987> .
 
+<https://openknowledgegraphs.com/software/comunica/> a okg:Software ;
+    rdfs:label "Comunica" ;
+    okg:description "modular knowledge-graph querying framework" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://comunica.dev/> ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/comunica/comunica> ;
+    okg:title "Comunica" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140764067> .
+
 <https://openknowledgegraphs.com/software/corese/> a okg:Software ;
     rdfs:label "Corese" ;
     okg:description "Software platform implementing and extending the standards of the Semantic Web." ;
@@ -1120,8 +1130,8 @@
     okg:description "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://linkml.neverblink.eu/> ;
-    okg:latestVersion "0.11.1" ;
-    okg:releaseDate "2026-07-23"^^xsd:date ;
+    okg:latestVersion "0.11.2" ;
+    okg:releaseDate "2026-07-28"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/NeverBlink-OSS/linkml-scala> ;
     okg:title "LinkML-Scala" ;
@@ -1307,8 +1317,8 @@
     rdfs:label "N3.js" ;
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "2.1.0" ;
-    okg:releaseDate "2026-06-23"^^xsd:date ;
+    okg:latestVersion "2.1.1" ;
+    okg:releaseDate "2026-07-03"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:title "N3.js" ;
@@ -1781,8 +1791,8 @@
     okg:description "RDF framework for publishing Linked Data through profile-based APIs and web interfaces" ;
     okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://prez.dev/> ;
-    okg:latestVersion "4.5.0" ;
-    okg:releaseDate "2025-03-06"^^xsd:date ;
+    okg:latestVersion "4.23.7" ;
+    okg:releaseDate "2026-07-20"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/RDFLib/prez> ;
     okg:title "Prez Linked Data API" ;
@@ -2223,6 +2233,7 @@
     rdfs:label "SaGe SPARQL query engine" ;
     okg:description "preemptive SPARQL query engine for Web-scale RDF datasets" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://sage.univ-nantes.fr/> ;
     okg:latestVersion "2.3.0" ;
     okg:releaseDate "2021-04-19"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
@@ -2543,6 +2554,7 @@
 <https://openknowledgegraphs.com/software/sparql-js/> a okg:Software ;
     rdfs:label "SPARQL.js" ;
     okg:description "JavaScript parser and generator for the SPARQL query language" ;
+    okg:homepage <https://www.npmjs.com/package/sparqljs> ;
     okg:latestVersion "3.7.3" ;
     okg:releaseDate "2024-08-23"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
@@ -2864,6 +2876,17 @@
     okg:title "TQ Data Foundation" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140443441> .
 
+<https://openknowledgegraphs.com/software/traqula/> a okg:Software ;
+    rdfs:label "Traqula" ;
+    okg:creator okg:Creator_SGF_SPARQL_Updates_over_Decentralized_Knowledge_Graphs_without_Access_Path_Dependencies_Q137242347 ;
+    okg:description "modular framework for parsing, transforming, and generating SPARQL queries" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://comunica.github.io/traqula/> ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/comunica/traqula> ;
+    okg:title "Traqula" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140764069> .
+
 <https://openknowledgegraphs.com/software/triplewave/> a okg:Software ;
     rdfs:label "Triplewave" ;
     okg:description "TripleWave is a framework to publish RDF streams on the Web." ;
@@ -2901,8 +2924,8 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.8.4" ;
-    okg:releaseDate "2026-07-28"^^xsd:date ;
+    okg:latestVersion "2.8.5" ;
+    okg:releaseDate "2026-07-29"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:title "TrustGraph" ;
@@ -3312,6 +3335,10 @@ okg:Creator_Pieter_Bonte_Q56418770 a okg:Person ;
 okg:Creator_Protein_Information_Resource_Q1256927 a okg:Organization ;
     rdfs:label "Protein Information Resource" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1256927> .
+
+okg:Creator_SGF_SPARQL_Updates_over_Decentralized_Knowledge_Graphs_without_Access_Path_Dependencies_Q137242347 a okg:Organization ;
+    rdfs:label "SGF: SPARQL Updates over Decentralized Knowledge Graphs without Access Path Dependencies" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q137242347> .
 
 okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 a okg:Organization ;
     rdfs:label "SIB Swiss Institute of Bioinformatics" ;

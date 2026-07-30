@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T08:50:59Z",
+  "generatedAt": "2026-07-30T08:36:58Z",
   "items": [
     {
       "title": "4store",
@@ -509,6 +509,21 @@
       "latestVersion": "1.2.2",
       "releaseDate": "2026-06-26",
       "softwareType": "AI Agent Tooling"
+    },
+    {
+      "title": "Comunica",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140764067",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/comunica/",
+      "description": "modular knowledge-graph querying framework",
+      "homepage": "https://comunica.dev/",
+      "sourceRepo": "https://github.com/comunica/comunica",
+      "licenses": [
+        "MIT License"
+      ],
+      "softwareType": "SPARQL Tooling"
     },
     {
       "title": "Corese",
@@ -1789,8 +1804,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "0.11.1",
-      "releaseDate": "2026-07-23",
+      "latestVersion": "0.11.2",
+      "releaseDate": "2026-07-28",
       "softwareType": "Developer Library"
     },
     {
@@ -2053,8 +2068,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "2.1.0",
-      "releaseDate": "2026-06-23",
+      "latestVersion": "2.1.1",
+      "releaseDate": "2026-07-03",
       "softwareType": "Developer Library"
     },
     {
@@ -2823,8 +2838,8 @@
       "licenses": [
         "3-clause BSD License"
       ],
-      "latestVersion": "4.5.0",
-      "releaseDate": "2025-03-06",
+      "latestVersion": "4.23.7",
+      "releaseDate": "2026-07-20",
       "softwareType": "Developer Library"
     },
     {
@@ -3528,6 +3543,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/",
       "description": "preemptive SPARQL query engine for Web-scale RDF datasets",
+      "homepage": "https://sage.univ-nantes.fr/",
       "sourceRepo": "https://github.com/sage-org/sage-engine",
       "licenses": [
         "MIT License"
@@ -4083,6 +4099,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-js/",
       "description": "JavaScript parser and generator for the SPARQL query language",
+      "homepage": "https://www.npmjs.com/package/sparqljs",
       "sourceRepo": "https://github.com/RubenVerborgh/SPARQL.js",
       "latestVersion": "3.7.3",
       "releaseDate": "2024-08-23",
@@ -4568,6 +4585,28 @@
       "softwareType": "Knowledge Graph Construction"
     },
     {
+      "title": "Traqula",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140764069",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/traqula/",
+      "description": "modular framework for parsing, transforming, and generating SPARQL queries",
+      "homepage": "https://comunica.github.io/traqula/",
+      "sourceRepo": "https://github.com/comunica/traqula",
+      "creators": [
+        {
+          "name": "SGF: SPARQL Updates over Decentralized Knowledge Graphs without Access Path Dependencies",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q137242347"
+        }
+      ],
+      "licenses": [
+        "MIT License"
+      ],
+      "softwareType": "SPARQL Tooling"
+    },
+    {
       "title": "Triplewave",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653395",
       "types": [
@@ -4643,8 +4682,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "2.8.4",
-      "releaseDate": "2026-07-28",
+      "latestVersion": "2.8.5",
+      "releaseDate": "2026-07-29",
       "softwareType": "AI Agent Tooling"
     },
     {
