@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T08:36:58Z",
+  "generatedAt": "2026-07-31T08:57:33Z",
   "items": [
     {
       "title": "4store",
@@ -523,6 +523,8 @@
       "licenses": [
         "MIT License"
       ],
+      "latestVersion": "5.3.0",
+      "releaseDate": "2026-07-10",
       "softwareType": "SPARQL Tooling"
     },
     {
@@ -736,8 +738,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "25.3.8",
-      "releaseDate": "2026-07-09",
+      "latestVersion": "25.4.0",
+      "releaseDate": "2026-07-30",
       "softwareType": "Graph Database"
     },
     {
@@ -1860,7 +1862,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/maplib/",
-      "description": "Python/Rust library for constructing RDF knowledge graphs from tabular data using OTTR templates",
+      "description": "High-performance Python/Rust framework for constructing and querying RDF knowledge graphs from tabular data using OTTR templates, with Polars/Apache Arrow integration, SPARQL, RDFS reasoning, SHACL validation, and Datalog support.",
       "homepage": "https://datatreehouse.github.io/documentation/",
       "sourceRepo": "https://github.com/magbak/maplib",
       "licenses": [
@@ -2628,8 +2630,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "10.0.10",
-      "releaseDate": "2026-07-28",
+      "latestVersion": "10.0.11",
+      "releaseDate": "2026-07-30",
       "softwareType": "AI Agent Tooling"
     },
     {
@@ -4604,6 +4606,8 @@
       "licenses": [
         "MIT License"
       ],
+      "latestVersion": "1.0.0",
+      "releaseDate": "2025-12-02",
       "softwareType": "SPARQL Tooling"
     },
     {

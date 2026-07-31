@@ -305,6 +305,8 @@
     okg:description "modular knowledge-graph querying framework" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://comunica.dev/> ;
+    okg:latestVersion "5.3.0" ;
+    okg:releaseDate "2026-07-10"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/comunica/comunica> ;
     okg:title "Comunica" ;
@@ -445,8 +447,8 @@
     okg:description "graph database software" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://dgraph.io/> ;
-    okg:latestVersion "25.3.8" ;
-    okg:releaseDate "2026-07-09"^^xsd:date ;
+    okg:latestVersion "25.4.0" ;
+    okg:releaseDate "2026-07-30"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/dgraph-io/dgraph> ;
     okg:title "Dgraph" ;
@@ -1183,7 +1185,7 @@
 
 <https://openknowledgegraphs.com/software/maplib/> a okg:Software ;
     rdfs:label "maplib" ;
-    okg:description "Python/Rust library for constructing RDF knowledge graphs from tabular data using OTTR templates" ;
+    okg:description "High-performance Python/Rust framework for constructing and querying RDF knowledge graphs from tabular data using OTTR templates, with Polars/Apache Arrow integration, SPARQL, RDFS reasoning, SHACL validation, and Datalog support." ;
     okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://datatreehouse.github.io/documentation/> ;
     okg:latestVersion "0.4.8" ;
@@ -1666,9 +1668,9 @@
     okg:description "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://docs.origintrail.io/> ;
-    okg:latestVersion "10.0.10" ;
+    okg:latestVersion "10.0.11" ;
     okg:partOf "OriginTrail Decentralized Knowledge Graph" ;
-    okg:releaseDate "2026-07-28"^^xsd:date ;
+    okg:releaseDate "2026-07-30"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/OriginTrail/dkg> ;
     okg:title "OriginTrail DKG V10 node" ;
@@ -2882,6 +2884,8 @@
     okg:description "modular framework for parsing, transforming, and generating SPARQL queries" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://comunica.github.io/traqula/> ;
+    okg:latestVersion "1.0.0" ;
+    okg:releaseDate "2025-12-02"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/comunica/traqula> ;
     okg:title "Traqula" ;
