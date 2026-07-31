@@ -2180,6 +2180,7 @@
     rdfs:label "RMLStreamer" ;
     okg:description "streaming RML materialization engine" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://rml.io/tools/> ;
     okg:latestVersion "2.5.0" ;
     okg:releaseDate "2023-06-02"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
