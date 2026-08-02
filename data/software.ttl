@@ -139,8 +139,8 @@
     okg:description "open-source multi-model database system" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://www.arangodb.com> ;
-    okg:latestVersion "3.12.9.4" ;
-    okg:releaseDate "2026-06-23"^^xsd:date ;
+    okg:latestVersion "3.12.10" ;
+    okg:releaseDate "2026-08-01"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/arangodb/arangodb> ;
     okg:title "ArangoDB" ;
@@ -989,6 +989,7 @@
 <https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/> a okg:Software ;
     rdfs:label "Karma semantic mapping platform" ;
     okg:description "visual platform for semantic modeling and RDF generation" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://usc-isi-i2.github.io/karma/> ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/usc-isi-i2/Web-Karma> ;
@@ -1864,8 +1865,8 @@
     rdfs:label "pyLoDStorage" ;
     okg:description "python List of Dict (Table) Storage library" ;
     okg:hasLicense okg:License_Apache_License_Q616526 ;
-    okg:latestVersion "0.19.5" ;
-    okg:releaseDate "2026-06-21"^^xsd:date ;
+    okg:latestVersion "0.19.6" ;
+    okg:releaseDate "2026-07-31"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/WolfgangFahl/pyLoDStorage> ;
     okg:title "pyLoDStorage" ;
@@ -2272,8 +2273,8 @@
     okg:description "RML-compliant engine for constructing RDF knowledge graphs from heterogeneous data" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://doi.org/10.5281/zenodo.3872103> ;
-    okg:latestVersion "4.7.5.15" ;
-    okg:releaseDate "2026-07-14"^^xsd:date ;
+    okg:latestVersion "4.7.5.15.1" ;
+    okg:releaseDate "2026-07-31"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/SDM-TIB/SDM-RDFizer> ;
     okg:title "SDM-RDFizer" ;
@@ -2485,8 +2486,8 @@
     rdfs:label "SousLeSens" ;
     okg:description "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "3.12.0" ;
-    okg:releaseDate "2026-07-17"^^xsd:date ;
+    okg:latestVersion "3.13.0" ;
+    okg:releaseDate "2026-07-31"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/souslesens/souslesensVocables> ;
     okg:title "SousLeSens" ;

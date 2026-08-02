@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T08:28:50Z",
+  "generatedAt": "2026-08-02T08:31:44Z",
   "items": [
     {
       "title": "4store",
@@ -268,8 +268,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "3.12.9.4",
-      "releaseDate": "2026-06-23",
+      "latestVersion": "3.12.10",
+      "releaseDate": "2026-08-01",
       "softwareType": "Graph Database"
     },
     {
@@ -1560,6 +1560,9 @@
       "description": "visual platform for semantic modeling and RDF generation",
       "homepage": "https://usc-isi-i2.github.io/karma/",
       "sourceRepo": "https://github.com/usc-isi-i2/Web-Karma",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -2947,8 +2950,8 @@
       "licenses": [
         "Apache License"
       ],
-      "latestVersion": "0.19.5",
-      "releaseDate": "2026-06-21",
+      "latestVersion": "0.19.6",
+      "releaseDate": "2026-07-31",
       "softwareType": "Developer Library"
     },
     {
@@ -3607,8 +3610,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "4.7.5.15",
-      "releaseDate": "2026-07-14",
+      "latestVersion": "4.7.5.15.1",
+      "releaseDate": "2026-07-31",
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -3952,8 +3955,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "3.12.0",
-      "releaseDate": "2026-07-17",
+      "latestVersion": "3.13.0",
+      "releaseDate": "2026-07-31",
       "softwareType": "Ontology Engineering"
     },
     {
