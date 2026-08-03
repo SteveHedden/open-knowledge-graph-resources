@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T10:08:43Z",
+  "generatedAt": "2026-08-03T13:53:49Z",
   "items": [
     {
       "title": "4store",
@@ -5028,6 +5028,23 @@
       ],
       "latestVersion": "4.0.113",
       "releaseDate": "2020-04-08",
+      "softwareType": "SPARQL Tooling"
+    },
+    {
+      "title": "Yasgui (Matdata)",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140834866",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/",
+      "description": "SPARQL query interface maintained by Matdata; fork of Triply's Yasgui",
+      "homepage": "https://yasgui.matdata.eu/",
+      "sourceRepo": "https://github.com/Matdata-eu/yasgui",
+      "partOf": "Yasgui",
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "5.20.2",
       "softwareType": "SPARQL Tooling"
     },
     {

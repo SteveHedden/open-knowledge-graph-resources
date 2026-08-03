@@ -3136,6 +3136,18 @@
     okg:title "YARS2 RDF store" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140706154> .
 
+<https://openknowledgegraphs.com/software/yasgui-matdata/> a okg:Software ;
+    rdfs:label "Yasgui (Matdata)" ;
+    okg:description "SPARQL query interface maintained by Matdata; fork of Triply's Yasgui" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://yasgui.matdata.eu/> ;
+    okg:latestVersion "5.20.2" ;
+    okg:partOf "Yasgui" ;
+    okg:softwareType okg:SparqlTooling ;
+    okg:sourceRepo <https://github.com/Matdata-eu/yasgui> ;
+    okg:title "Yasgui (Matdata)" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140834866> .
+
 <https://openknowledgegraphs.com/software/yasgui/> a okg:Software ;
     rdfs:label "Yasgui" ;
     okg:creator okg:Creator_Triply_Q110891877 ;
