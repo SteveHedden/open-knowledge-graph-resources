@@ -1108,8 +1108,8 @@
     okg:description "The low-code Knowledge Graph application platform. Apache license." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://atomgraph.github.io/LinkedDataHub/> ;
-    okg:latestVersion "5.6.1" ;
-    okg:releaseDate "2026-07-26"^^xsd:date ;
+    okg:latestVersion "5.7.0" ;
+    okg:releaseDate "2026-08-02"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/AtomGraph/LinkedDataHub> ;
     okg:title "LinkedDataHub" ;
@@ -1320,8 +1320,8 @@
     rdfs:label "N3.js" ;
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "2.1.1" ;
-    okg:releaseDate "2026-07-03"^^xsd:date ;
+    okg:latestVersion "2.1.2" ;
+    okg:releaseDate "2026-08-02"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:title "N3.js" ;
