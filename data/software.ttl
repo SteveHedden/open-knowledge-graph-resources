@@ -3141,8 +3141,9 @@
     okg:description "SPARQL query interface maintained by Matdata; fork of Triply's Yasgui" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://yasgui.matdata.eu/> ;
-    okg:latestVersion "5.20.2" ;
+    okg:latestVersion "5.20.3" ;
     okg:partOf "Yasgui" ;
+    okg:releaseDate "2026-06-25"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/Matdata-eu/yasgui> ;
     okg:title "Yasgui (Matdata)" ;
