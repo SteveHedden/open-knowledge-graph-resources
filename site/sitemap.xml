@@ -211,12 +211,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/autoridades-upsa/</loc>
+    <loc>https://openknowledgegraphs.com/resource/babelnet/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/babelnet/</loc>
+    <loc>https://openknowledgegraphs.com/resource/bank-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -481,6 +481,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://openknowledgegraphs.com/resource/chemical-information-ontology/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://openknowledgegraphs.com/resource/chemonvisual/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -517,11 +522,6 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/clinical-laboratory-ontology/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://openknowledgegraphs.com/resource/clinical-measurement-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -701,11 +701,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/curate-ontology/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://openknowledgegraphs.com/resource/cyc/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -867,11 +862,6 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/eagle-vocabulary/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://openknowledgegraphs.com/resource/eagle-i-research-resource-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1071,7 +1061,22 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://openknowledgegraphs.com/resource/fish-evidence-thesaurus/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://openknowledgegraphs.com/resource/fish-maritime-craft-types/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/fish-monument-types-thesaurus/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/fish-thesaurus-of-monument-types/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1306,11 +1311,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/health-surveillance-ontology/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://openknowledgegraphs.com/resource/helsinki-term-bank-for-the-arts-and-sciences/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -1332,6 +1332,11 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/higher-education-resource-types/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/historic-england-periods/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1966,11 +1971,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/norwegian-thesaurus-on-genre-and-form/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://openknowledgegraphs.com/resource/nsk/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -1987,6 +1987,11 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/nwcg-glossary-of-wildland-fire/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/nyordslistan-2024/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2181,6 +2186,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://openknowledgegraphs.com/resource/openaire-research-graph/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://openknowledgegraphs.com/resource/openthesaurus/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -2227,11 +2237,6 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/pathogen-transmission-ontology/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://openknowledgegraphs.com/resource/pathway-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2336,11 +2341,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/proper-name-ontology/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://openknowledgegraphs.com/resource/prophy/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -2366,11 +2366,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/publication-forum/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://openknowledgegraphs.com/resource/r2ml/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -2382,11 +2377,6 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/rameau/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://openknowledgegraphs.com/resource/rat-strain-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -2636,11 +2626,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://openknowledgegraphs.com/resource/reasonable-ontology-templates-ottr/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://openknowledgegraphs.com/resource/relations-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -2802,6 +2787,11 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/saldo/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/saliva-ontology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -3002,6 +2992,16 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/resource/superpattern-ontology/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/swedish-neologism-list-2023/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/resource/swedish-neologism-list-2025/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -4052,6 +4052,11 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/software/semspect/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/software/sepa/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

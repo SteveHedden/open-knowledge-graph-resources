@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T12:24:08Z",
+  "generatedAt": "2026-08-04T13:06:22Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -3723,7 +3723,14 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/courage-knowledge-graph/",
       "description": "registry about cultural heritage of dissent in former socialist countries",
       "category": "Library & Cultural Heritage",
-      "homepage": "http://cultural-opposition.eu"
+      "homepage": "http://cultural-opposition.eu",
+      "creators": [
+        {
+          "name": "Hungarian Academy of Sciences",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q265058"
+        }
+      ]
     },
     {
       "title": "CoVoc Coronavirus Vocabulary",
@@ -3912,7 +3919,14 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/culture-knowledge-graph/",
       "description": "Knowledge Graph connecting all research data produced within the NFDI4Culture research landscape",
       "category": "Library & Cultural Heritage",
-      "homepage": "https://nfdi4culture.de/de/ressourcen/knowledge-graph.html"
+      "homepage": "https://nfdi4culture.de/de/ressourcen/knowledge-graph.html",
+      "creators": [
+        {
+          "name": "NFDI4Culture",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q98276929"
+        }
+      ]
     },
     {
       "title": "Cumulative Index to Nursing and Allied Health Literature Subject Headings",
@@ -5187,7 +5201,14 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/era-knowledge-graph/",
       "description": "EU infrastructure for European railway network data and interoperability",
       "category": "Technology & Web",
-      "homepage": "https://www.era.europa.eu/domains/registers/era-knowlege-graph_en"
+      "homepage": "https://www.era.europa.eu/domains/registers/era-knowlege-graph_en",
+      "creators": [
+        {
+          "name": "European Commission",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q8880"
+        }
+      ]
     },
     {
       "title": "ERA Vocabulary",
@@ -15234,6 +15255,13 @@
       "category": "Life Sciences & Healthcare",
       "homepage": "https://data.monarchinitiative.org/monarch-kg/index.html",
       "sourceRepo": "https://github.com/monarch-initiative/monarch-ingest",
+      "creators": [
+        {
+          "name": "The Monarch Initiative",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q34645736"
+        }
+      ],
       "licenses": [
         "3-clause BSD License"
       ]

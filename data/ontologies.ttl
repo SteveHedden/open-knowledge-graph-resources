@@ -2513,6 +2513,7 @@
 <https://openknowledgegraphs.com/resource/courage-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "COURAGE Knowledge Graph" ;
     okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Hungarian_Academy_of_Sciences_Q265058 ;
     okg:description "registry about cultural heritage of dissent in former socialist countries" ;
     okg:homepage <http://cultural-opposition.eu> ;
     okg:title "COURAGE Knowledge Graph" ;
@@ -2653,6 +2654,7 @@
 <https://openknowledgegraphs.com/resource/culture-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "Culture Knowledge Graph" ;
     okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_NFDI4Culture_Q98276929 ;
     okg:description "Knowledge Graph connecting all research data produced within the NFDI4Culture research landscape" ;
     okg:homepage <https://nfdi4culture.de/de/ressourcen/knowledge-graph.html> ;
     okg:title "Culture Knowledge Graph" ;
@@ -14964,6 +14966,7 @@
 <https://openknowledgegraphs.com/resource/era-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "ERA Knowledge Graph" ;
     okg:category okg:TechnologyWeb ;
+    okg:creator okg:Creator_European_Commission_Q8880 ;
     okg:description "EU infrastructure for European railway network data and interoperability" ;
     okg:homepage <https://www.era.europa.eu/domains/registers/era-knowlege-graph_en> ;
     okg:title "ERA Knowledge Graph" ;
@@ -21579,6 +21582,7 @@
 <https://openknowledgegraphs.com/resource/monarch-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "Monarch Knowledge Graph" ;
     okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_The_Monarch_Initiative_Q34645736 ;
     okg:description "Cross-species biomedical knowledge graph integrating disease, phenotype, gene, and ortholog data from ~20 source ontologies and datasets, built by the Monarch Initiative" ;
     okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://data.monarchinitiative.org/monarch-kg/index.html> ;
@@ -28693,10 +28697,6 @@ okg:Creator_Ernst_Wagner_Q1360479 a okg:Person ;
     rdfs:label "Ernst Wagner" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1360479> .
 
-okg:Creator_European_Commission_Q8880 a okg:Organization ;
-    rdfs:label "European Commission" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q8880> .
-
 okg:Creator_European_Holocaust_Research_Infrastructure_Q21755493 a okg:Organization ;
     rdfs:label "European Holocaust Research Infrastructure" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q21755493> .
@@ -28836,6 +28836,10 @@ okg:Creator_Holger_Knublauch_Q98809810 a okg:Person ;
     rdfs:label "Holger Knublauch" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=okRcixMAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q98809810> .
+
+okg:Creator_Hungarian_Academy_of_Sciences_Q265058 a okg:Organization ;
+    rdfs:label "Hungarian Academy of Sciences" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q265058> .
 
 okg:Creator_IAB_Technology_Laboratory_Q135643489 a okg:Organization ;
     rdfs:label "IAB Technology Laboratory" ;
@@ -29003,6 +29007,10 @@ okg:Creator_Mohamed_Chafik_Q2738611 a okg:Person ;
 okg:Creator_Museum_of_the_City_of_Rio_de_Janeiro_Q10333503 a okg:Organization ;
     rdfs:label "Museum of the City of Rio de Janeiro" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q10333503> .
+
+okg:Creator_NFDI4Culture_Q98276929 a okg:Organization ;
+    rdfs:label "NFDI4Culture" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q98276929> .
 
 okg:Creator_National_Library_of_Australia_Q623578 a okg:Organization ;
     rdfs:label "National Library of Australia" ;
@@ -29208,6 +29216,10 @@ okg:Creator_Tanja_Bekhuis_Q30504725 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=sRTte5AAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q30504725> .
 
+okg:Creator_The_Monarch_Initiative_Q34645736 a okg:Organization ;
+    rdfs:label "The Monarch Initiative" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q34645736> .
+
 okg:Creator_The_Open_University_Q2413375 a okg:Organization ;
     rdfs:label "The Open University" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2413375> .
@@ -29406,6 +29418,10 @@ okg:Creator_David_Shotton_Q28913576 a okg:Person ;
     rdfs:label "David Shotton" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=YyvE-_oAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q28913576> .
+
+okg:Creator_European_Commission_Q8880 a okg:Organization ;
+    rdfs:label "European Commission" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q8880> .
 
 okg:Creator_Filipi_Miranda_Soares_Q111524976 a okg:Person ;
     rdfs:label "Filipi Miranda Soares" ;
