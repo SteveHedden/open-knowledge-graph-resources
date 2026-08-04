@@ -14964,6 +14964,8 @@
 <https://openknowledgegraphs.com/resource/era-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "ERA Knowledge Graph" ;
     okg:category okg:TechnologyWeb ;
+    okg:description "EU infrastructure for European railway network data and interoperability" ;
+    okg:homepage <https://www.era.europa.eu/domains/registers/era-knowlege-graph_en> ;
     okg:title "ERA Knowledge Graph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130626355> .
 

@@ -152,8 +152,8 @@
     okg:description "database system" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://arcadedb.com> ;
-    okg:latestVersion "26.7.3" ;
-    okg:releaseDate "2026-07-17"^^xsd:date ;
+    okg:latestVersion "26.8.1" ;
+    okg:releaseDate "2026-08-03"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/ArcadeData/arcadedb> ;
     okg:title "ArcadeDB" ;
@@ -2930,8 +2930,8 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.8.5" ;
-    okg:releaseDate "2026-07-29"^^xsd:date ;
+    okg:latestVersion "2.8.9" ;
+    okg:releaseDate "2026-08-04"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:title "TrustGraph" ;
