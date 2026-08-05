@@ -3207,6 +3207,16 @@
     okg:title "Dublin Core Metadata Element Set" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q624610> .
 
+<https://openknowledgegraphs.com/resource/dublin-core-metadata-terms/> a okg:Ontology ;
+    rdfs:label "Dublin Core Metadata Terms" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Thomas_Baker_Q46914185 ;
+    okg:description "Extended vocabulary of metadata terms maintained by DCMI; includes DCMES elements plus properties, classes, datatypes, and encoding schemes for RDF and Linked Data" ;
+    okg:homepage <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/> ;
+    okg:sourceRepo <https://github.com/dcmi/vocabtool> ;
+    okg:title "Dublin Core Metadata Terms" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140878702> .
+
 <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/> a okg:ControlledVocabulary ;
     rdfs:label "Dutch National Thesaurus for Author Names" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -23561,6 +23571,16 @@
     okg:title "Physico-chemical methods and properties" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114677850> .
 
+<https://openknowledgegraphs.com/resource/pico-ontology/> a okg:Ontology ;
+    rdfs:label "PICO Ontology" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_Cochrane_Q1105202 ;
+    okg:description "Formal ontology for PICO (Population, Intervention, Comparison, Outcome) framework used in systematic reviews" ;
+    okg:homepage <https://data.cochrane.org/ontologies/pico/index-en.html> ;
+    okg:sourceRepo <https://data.cochrane.org/ontologies/pico/> ;
+    okg:title "PICO Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140870185> .
+
 <https://openknowledgegraphs.com/resource/pim-authority/> a okg:ControlledVocabulary ;
     rdfs:label "PIM authority" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -28637,6 +28657,10 @@ okg:Creator_Claver_Boundja_Andely_Beeve_Q102035972 a okg:Person ;
     rdfs:label "Claver Boundja Andely-Beeve" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q102035972> .
 
+okg:Creator_Cochrane_Q1105202 a okg:Organization ;
+    rdfs:label "Cochrane" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1105202> .
+
 okg:Creator_Consejo_Nacional_de_Investigaciones_Cientificas_y_Tecnicas_Centro_Argentino_de_Informacion_Cientifica_y_Tecnologica_Q24214058 a okg:Organization ;
     rdfs:label "Consejo Nacional de Investigaciones Científicas y Técnicas, Centro Argentino de Información Científica y Tecnológica" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q24214058> .
@@ -29223,6 +29247,11 @@ okg:Creator_The_Monarch_Initiative_Q34645736 a okg:Organization ;
 okg:Creator_The_Open_University_Q2413375 a okg:Organization ;
     rdfs:label "The Open University" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2413375> .
+
+okg:Creator_Thomas_Baker_Q46914185 a okg:Person ;
+    rdfs:label "Thomas Baker" ;
+    okg:githubProfile <https://github.com/tombaker> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q46914185> .
 
 okg:Creator_Timothy_W_Clark_Q30743874 a okg:Person ;
     rdfs:label "Timothy W. Clark" ;

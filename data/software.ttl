@@ -1366,8 +1366,8 @@
     okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232,
         okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
     okg:homepage <https://neo4j.com/> ;
-    okg:latestVersion "2026.06.0" ;
-    okg:releaseDate "2026-07-08"^^xsd:date ;
+    okg:latestVersion "5.26.29" ;
+    okg:releaseDate "2026-08-04"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/neo4j/neo4j> ;
     okg:title "Neo4j" ;
@@ -1669,9 +1669,9 @@
     okg:description "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://docs.origintrail.io/> ;
-    okg:latestVersion "10.0.11" ;
+    okg:latestVersion "10.0.12" ;
     okg:partOf "OriginTrail Decentralized Knowledge Graph" ;
-    okg:releaseDate "2026-07-30"^^xsd:date ;
+    okg:releaseDate "2026-08-04"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/OriginTrail/dkg> ;
     okg:title "OriginTrail DKG V10 node" ;

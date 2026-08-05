@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T13:06:22Z",
+  "generatedAt": "2026-08-05T08:44:28Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -4763,6 +4763,26 @@
       "category": "Library & Cultural Heritage",
       "homepage": "https://dublincore.org",
       "namespaceURI": "http://purl.org/dc/elements/1.1/"
+    },
+    {
+      "title": "Dublin Core Metadata Terms",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140878702",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/dublin-core-metadata-terms/",
+      "description": "Extended vocabulary of metadata terms maintained by DCMI; includes DCMES elements plus properties, classes, datatypes, and encoding schemes for RDF and Linked Data",
+      "category": "Library & Cultural Heritage",
+      "homepage": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+      "sourceRepo": "https://github.com/dcmi/vocabtool",
+      "creators": [
+        {
+          "name": "Thomas Baker",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q46914185",
+          "githubProfile": "https://github.com/tombaker"
+        }
+      ]
     },
     {
       "title": "Dutch National Thesaurus for Author Names",
@@ -18195,6 +18215,25 @@
       "category": "Life Sciences & Healthcare",
       "homepage": "http://www.ebi.ac.uk/chebi",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies"
+    },
+    {
+      "title": "PICO Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140870185",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/pico-ontology/",
+      "description": "Formal ontology for PICO (Population, Intervention, Comparison, Outcome) framework used in systematic reviews",
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://data.cochrane.org/ontologies/pico/index-en.html",
+      "sourceRepo": "https://data.cochrane.org/ontologies/pico/",
+      "creators": [
+        {
+          "name": "Cochrane",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q1105202"
+        }
+      ]
     },
     {
       "title": "PIM authority",
