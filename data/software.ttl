@@ -137,7 +137,7 @@
         okg:Creator_Jan_Steemann_Q122765337,
         okg:Creator_Wilfried_Goesgens_Q122765389 ;
     okg:description "open-source multi-model database system" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://www.arangodb.com> ;
     okg:latestVersion "3.12.10" ;
     okg:releaseDate "2026-08-01"^^xsd:date ;
@@ -652,7 +652,8 @@
 <https://openknowledgegraphs.com/software/fluree/> a okg:Software ;
     rdfs:label "fluree" ;
     okg:description "Fluree’s platform enables trusted, linked, and composable data" ;
-    okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
+        okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://flur.ee> ;
     okg:latestVersion "4.1.4" ;
     okg:releaseDate "2026-07-23"^^xsd:date ;
@@ -879,6 +880,20 @@
     okg:title "Holonet Galactic Encyclopedia" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138779666> .
 
+<https://openknowledgegraphs.com/software/hugegraph/> a okg:Software ;
+    rdfs:label "HugeGraph" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
+        okg:Creator_Baidu_Q14772 ;
+    okg:description "High-performance graph database supporting 100+ billion vertices and edges" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://hugegraph.apache.org> ;
+    okg:latestVersion "1.7.0" ;
+    okg:releaseDate "2025-11-16"^^xsd:date ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/apache/hugegraph> ;
+    okg:title "HugeGraph" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q97348917> .
+
 <https://openknowledgegraphs.com/software/imagesnippets-q125506367/> a okg:Software ;
     rdfs:label "ImageSnippets" ;
     okg:description "ImageSnippets is a fully operational web application for creating precise image descriptions/annotations using linked data" ;
@@ -1062,6 +1077,16 @@
     okg:title "Konclude" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140686380> .
 
+<https://openknowledgegraphs.com/software/kuzudb/> a okg:Software ;
+    rdfs:label "KuzuDB" ;
+    okg:description "Embedded property graph database with vector and full-text search, implements Cypher" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://kuzudb.com> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/kuzudb/kuzu> ;
+    okg:title "KuzuDB" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140900293> .
+
 <https://openknowledgegraphs.com/software/levelgraph/> a okg:Software ;
     rdfs:label "Levelgraph" ;
     okg:description "Graph database JS style for Node.js and the Browser. Built upon LevelUp and LevelDB." ;
@@ -1237,6 +1262,16 @@
     okg:sourceRepo <https://github.com/mem0ai/mem0> ;
     okg:title "Mem0" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639966> .
+
+<https://openknowledgegraphs.com/software/memgraph/> a okg:Software ;
+    rdfs:label "Memgraph" ;
+    okg:description "High-performance in-memory graph database for real-time analytics and GraphRAG" ;
+    okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
+    okg:homepage <https://memgraph.com> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/memgraph/memgraph> ;
+    okg:title "Memgraph" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140897550> .
 
 <https://openknowledgegraphs.com/software/metaphactory/> a okg:Software ;
     rdfs:label "metaphactory" ;
@@ -1746,6 +1781,7 @@
     okg:description "SPARQL graph database system" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://oxigraph.org> ;
     okg:latestVersion "0.5.9" ;
     okg:releaseDate "2026-06-18"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
@@ -3187,6 +3223,10 @@ okg:Creator_Ashley_Sommer_Q135051208 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=wtekwVIAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q135051208> .
 
+okg:Creator_Baidu_Q14772 a okg:Organization ;
+    rdfs:label "Baidu" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q14772> .
+
 okg:Creator_Benjamin_Stach_Q130811256 a okg:Person ;
     rdfs:label "Benjamin Stach" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130811256> .
@@ -3544,17 +3584,9 @@ okg:Creator_Lionel_Tailhardat_Q130811255 a okg:Person ;
     rdfs:label "Lionel Tailhardat" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130811255> .
 
-okg:License_Business_Source_License_1_1_Q121359688 a okg:License ;
-    rdfs:label "Business Source License 1.1" ;
-    okg:licenseName "Business Source License 1.1" .
-
 okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a okg:License ;
     rdfs:label "GNU Lesser General Public License, version 3.0 or later" ;
     okg:licenseName "GNU Lesser General Public License, version 3.0 or later" .
-
-okg:Creator_Apache_Software_Foundation_Q489709 a okg:Organization ;
-    rdfs:label "Apache Software Foundation" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q489709> .
 
 okg:Creator_Sparna_Q117319690 a okg:Organization ;
     rdfs:label "Sparna" ;
@@ -3568,10 +3600,18 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     rdfs:label "4-clause BSD License" ;
     okg:licenseName "4-clause BSD License" .
 
+okg:Creator_Apache_Software_Foundation_Q489709 a okg:Organization ;
+    rdfs:label "Apache Software Foundation" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q489709> .
+
 okg:Creator_Raphael_Troncy_Q50290708 a okg:Person ;
     rdfs:label "Raphaël Troncy" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=1BxhcigAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50290708> .
+
+okg:License_Business_Source_License_1_1_Q121359688 a okg:License ;
+    rdfs:label "Business Source License 1.1" ;
+    okg:licenseName "Business Source License 1.1" .
 
 okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a okg:License ;
     rdfs:label "GNU Affero General Public License, version 3.0 or later" ;
@@ -3627,12 +3667,12 @@ okg:DeveloperLibrary a okg:SoftwareType ;
 okg:OntologyEngineering a okg:SoftwareType ;
     rdfs:label "Ontology Engineering" .
 
+okg:SparqlTooling a okg:SoftwareType ;
+    rdfs:label "SPARQL Tooling" .
+
 okg:License_MIT_License_Q334661 a okg:License ;
     rdfs:label "MIT License" ;
     okg:licenseName "MIT License" .
-
-okg:SparqlTooling a okg:SoftwareType ;
-    rdfs:label "SPARQL Tooling" .
 
 okg:License_proprietary_license_Q3238057 a okg:License ;
     rdfs:label "proprietary license" ;
