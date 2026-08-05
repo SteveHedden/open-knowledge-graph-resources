@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T08:44:28Z",
+  "generatedAt": "2026-08-05T12:15:01Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -20293,6 +20293,35 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/rna-ontology-q99546338/",
       "description": "ontology for all aspects of RNA",
       "category": "Life Sciences & Healthcare"
+    },
+    {
+      "title": "ROBOKOP",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140876601",
+      "types": [
+        "KnowledgeGraph"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/robokop/",
+      "description": "Knowledge graph system for exploring relationships between biomedical entities",
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://robokop.renci.org/",
+      "sourceRepo": "https://github.com/NCATS-Gamma/robokop",
+      "creators": [
+        {
+          "name": "Karamarie Fecho",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q90242182"
+        },
+        {
+          "name": "Renaissance Computing Institute",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7312413"
+        },
+        {
+          "name": "University of North Carolina at Chapel Hill",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q192334"
+        }
+      ]
     },
     {
       "title": "ROF character",

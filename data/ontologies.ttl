@@ -25041,6 +25041,18 @@
     okg:title "RNA Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118589> .
 
+<https://openknowledgegraphs.com/resource/robokop/> a okg:KnowledgeGraph ;
+    rdfs:label "ROBOKOP" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_Karamarie_Fecho_Q90242182,
+        okg:Creator_Renaissance_Computing_Institute_Q7312413,
+        okg:Creator_University_of_North_Carolina_at_Chapel_Hill_Q192334 ;
+    okg:description "Knowledge graph system for exploring relationships between biomedical entities" ;
+    okg:homepage <https://robokop.renci.org/> ;
+    okg:sourceRepo <https://github.com/NCATS-Gamma/robokop> ;
+    okg:title "ROBOKOP" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140876601> .
+
 <https://openknowledgegraphs.com/resource/rof-character-for-rda/> a okg:ControlledVocabulary ;
     rdfs:label "ROF character for RDA" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -28916,6 +28928,10 @@ okg:Creator_Jon_Edward_Ahlquist_Q2355365 a okg:Person ;
     rdfs:label "Jon Edward Ahlquist" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2355365> .
 
+okg:Creator_Karamarie_Fecho_Q90242182 a okg:Person ;
+    rdfs:label "Karamarie Fecho" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q90242182> .
+
 okg:Creator_Karin_Bertalan_Q137902211 a okg:Person ;
     rdfs:label "Karin Bertalan" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q137902211> .
@@ -29140,6 +29156,10 @@ okg:Creator_Raphael_Troncy_Q50290708 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=1BxhcigAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50290708> .
 
+okg:Creator_Renaissance_Computing_Institute_Q7312413 a okg:Organization ;
+    rdfs:label "Renaissance Computing Institute" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7312413> .
+
 okg:Creator_Rhein_Kreis_Neuss_Q6253 a okg:Organization ;
     rdfs:label "Rhein-Kreis Neuss" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6253> .
@@ -29268,6 +29288,10 @@ okg:Creator_United_Nations_Group_of_Experts_on_Geographical_Names_Q838685 a okg:
 okg:Creator_United_States_National_Library_of_Medicine_Q611833 a okg:Organization ;
     rdfs:label "United States National Library of Medicine" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q611833> .
+
+okg:Creator_University_of_North_Carolina_at_Chapel_Hill_Q192334 a okg:Organization ;
+    rdfs:label "University of North Carolina at Chapel Hill" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q192334> .
 
 okg:Creator_Ute_Monika_Schwob_Q95200817 a okg:Person ;
     rdfs:label "Ute Monika Schwob" ;
