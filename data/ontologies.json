@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T12:15:01Z",
+  "generatedAt": "2026-08-05T15:33:29Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -24403,6 +24403,39 @@
       "description": "UniPathway is a manually curated resource of metabolic pathways for the UniProtKB/Swiss-Prot knowledgebase. It provides a structured controlled vocabulary to describe the role of a protein in a metabolic pathway.",
       "category": "Life Sciences & Healthcare",
       "sourceRepo": "https://github.com/geneontology/unipathway"
+    },
+    {
+      "title": "UniProt",
+      "wikidataId": "https://www.wikidata.org/wiki/Q905695",
+      "types": [
+        "KnowledgeGraph"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/uniprot/",
+      "description": "database of protein sequence and functional information",
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://www.uniprot.org/",
+      "partOf": "ELIXIR EMBL-EBI Node",
+      "creators": [
+        {
+          "name": "EMBL's European Bioinformatics Institute",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q1341845"
+        },
+        {
+          "name": "Protein Information Resource",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q1256927"
+        },
+        {
+          "name": "SIB Swiss Institute of Bioinformatics",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q3152521"
+        }
+      ],
+      "licenses": [
+        "Creative Commons Attribution 4.0 International",
+        "Creative Commons Attribution-NoDerivs 3.0 Unported"
+      ]
     },
     {
       "title": "Unique Entity Identifier",

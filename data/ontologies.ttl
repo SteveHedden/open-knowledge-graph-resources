@@ -27764,6 +27764,20 @@
     okg:title "Unipathway" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q85719315> .
 
+<https://openknowledgegraphs.com/resource/uniprot/> a okg:KnowledgeGraph ;
+    rdfs:label "UniProt" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_EMBL_s_European_Bioinformatics_Institute_Q1341845,
+        okg:Creator_Protein_Information_Resource_Q1256927,
+        okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 ;
+    okg:description "database of protein sequence and functional information" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257,
+        okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 ;
+    okg:homepage <https://www.uniprot.org/> ;
+    okg:partOf "ELIXIR EMBL-EBI Node" ;
+    okg:title "UniProt" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q905695> .
+
 <https://openknowledgegraphs.com/resource/unique-entity-identifier/> a okg:ControlledVocabulary ;
     rdfs:label "Unique Entity Identifier" ;
     okg:category okg:GovernmentPublicSector ;
@@ -28713,6 +28727,10 @@ okg:Creator_ELNET_Consortium_Q12361408 a okg:Organization ;
     rdfs:label "ELNET Consortium" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q12361408> .
 
+okg:Creator_EMBL_s_European_Bioinformatics_Institute_Q1341845 a okg:Organization ;
+    rdfs:label "EMBL's European Bioinformatics Institute" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1341845> .
+
 okg:Creator_Edward_Denison_Ross_Q1292041 a okg:Person ;
     rdfs:label "Edward Denison Ross" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1292041> .
@@ -29135,6 +29153,10 @@ okg:Creator_Prime_Minister_s_Office_Q10677814 a okg:Organization ;
     rdfs:label "Prime Minister's Office" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q10677814> .
 
+okg:Creator_Protein_Information_Resource_Q1256927 a okg:Organization ;
+    rdfs:label "Protein Information Resource" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1256927> .
+
 okg:Creator_Public_Library_of_Science_Q233358 a okg:Organization ;
     rdfs:label "Public Library of Science" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q233358> .
@@ -29185,6 +29207,10 @@ okg:Creator_Rotraut_Acker_Sutter_Q102348994 a okg:Person ;
 okg:Creator_Ryan_Shaw_Q104904906 a okg:Person ;
     rdfs:label "Ryan Shaw" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104904906> .
+
+okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 a okg:Organization ;
+    rdfs:label "SIB Swiss Institute of Bioinformatics" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q3152521> .
 
 okg:Creator_Sage_Publishing_Q251266 a okg:Organization ;
     rdfs:label "Sage Publishing" ;
@@ -29365,10 +29391,6 @@ okg:License_Creative_Commons_Attribution_3_0_Netherlands_Q53859967 a okg:License
     rdfs:label "Creative Commons Attribution 3.0 Netherlands" ;
     okg:licenseName "Creative Commons Attribution 3.0 Netherlands" .
 
-okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 a okg:License ;
-    rdfs:label "Creative Commons Attribution-NoDerivs 3.0 Unported" ;
-    okg:licenseName "Creative Commons Attribution-NoDerivs 3.0 Unported" .
-
 okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_2_0_Generic_Q28050835 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" ;
     okg:licenseName "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" .
@@ -29539,6 +29561,10 @@ okg:InternationalDevelopment a okg:Category ;
 okg:License_Apache_License_Q616526 a okg:License ;
     rdfs:label "Apache License" ;
     okg:licenseName "Apache License" .
+
+okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 a okg:License ;
+    rdfs:label "Creative Commons Attribution-NoDerivs 3.0 Unported" ;
+    okg:licenseName "Creative Commons Attribution-NoDerivs 3.0 Unported" .
 
 okg:License_Creative_Commons_Attribution_NonCommercial_NoDerivatives_4_0_International_Q24082749 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International" ;
