@@ -961,13 +961,19 @@ def creators_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, str]]
     return creators
 
 
-def add_related_tools(graph: Graph, max_related: int = 5) -> None:
-    """Compute 'related tools' links between software resources that share a
-    softwareType, ranked by Jaccard similarity over each resource's
-    programmingLanguage/hasLicense/creator neighbors in the graph. Writes the
-    top matches back as OKG.relatedTo triples. Ties (including the common case
-    of two resources sharing zero neighbors, e.g. missing creator data) fall
-    back to alphabetical order by title.
+def add_related_tools(
+    graph: Graph,
+    group_predicate: URIRef,
+    feature_predicates: list[URIRef],
+    max_related: int = 5,
+) -> None:
+    """Compute 'related' links between resources that share a value for
+    group_predicate (OKG.softwareType for software, OKG.category for
+    ontologies/vocabularies), ranked by Jaccard similarity over each
+    resource's neighbors along feature_predicates in the graph. Writes the
+    top matches back as OKG.relatedTo triples. Ties (including the common
+    case of two resources sharing zero neighbors, e.g. missing creator data)
+    fall back to alphabetical order by title.
 
     Candidates are pre-filtered to resources that have a homepage — the
     dominant reason a resource never gets a published page in generate_pages.py
@@ -980,35 +986,32 @@ def add_related_tools(graph: Graph, max_related: int = 5) -> None:
     subjects = sorted(
         {
             s
-            for s in graph.subjects(predicate=OKG.softwareType)
+            for s in graph.subjects(predicate=group_predicate)
             if isinstance(s, URIRef) and (s, OKG.homepage, None) in graph
         },
         key=str,
     )
 
-    software_type: dict[URIRef, URIRef] = {}
+    group_value: dict[URIRef, URIRef] = {}
     titles: dict[URIRef, str] = {}
     features: dict[URIRef, set[tuple[str, str]]] = {}
 
     for subject in subjects:
-        type_iri = first_iri_value(graph, subject, OKG.softwareType)
-        if not type_iri:
+        group_iri = first_iri_value(graph, subject, group_predicate)
+        if not group_iri:
             continue
-        software_type[subject] = URIRef(type_iri)
+        group_value[subject] = URIRef(group_iri)
         titles[subject] = first_literal_value(graph, subject, OKG.title) or str(subject)
 
         feature_set: set[tuple[str, str]] = set()
-        for lang in graph.objects(subject, OKG.programmingLanguage):
-            feature_set.add(("lang", str(lang)))
-        for license_node in graph.objects(subject, OKG.hasLicense):
-            feature_set.add(("license", str(license_node)))
-        for creator_node in graph.objects(subject, OKG.creator):
-            feature_set.add(("creator", str(creator_node)))
+        for predicate in feature_predicates:
+            for value in graph.objects(subject, predicate):
+                feature_set.add((str(predicate), str(value)))
         features[subject] = feature_set
 
     buckets: dict[URIRef, list[URIRef]] = {}
-    for subject, type_iri in software_type.items():
-        buckets.setdefault(type_iri, []).append(subject)
+    for subject, group_iri in group_value.items():
+        buckets.setdefault(group_iri, []).append(subject)
 
     for members in buckets.values():
         for subject in members:
@@ -1128,9 +1131,10 @@ def extract_items_from_graph(
             programming_languages = all_literal_values(graph, subject, OKG.programmingLanguage)
             if programming_languages:
                 item["programmingLanguages"] = programming_languages
-            related_tools = related_tools_for_resource(graph, subject)
-            if related_tools:
-                item["relatedTools"] = related_tools
+
+        related_tools = related_tools_for_resource(graph, subject)
+        if related_tools:
+            item["relatedTools"] = related_tools
 
         items.append(item)
 
@@ -1507,7 +1511,16 @@ def run() -> int:
             slug_registry=uri_registry["software"],
             programming_language_labels=software_programming_language_labels,
         )
-        add_related_tools(software_graph)
+        add_related_tools(
+            software_graph,
+            group_predicate=OKG.softwareType,
+            feature_predicates=[OKG.programmingLanguage, OKG.hasLicense, OKG.creator],
+        )
+        add_related_tools(
+            ontology_graph,
+            group_predicate=OKG.category,
+            feature_predicates=[RDF.type, OKG.hasLicense, OKG.creator],
+        )
 
         generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
         ontologies_json = build_json_payload(
