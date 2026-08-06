@@ -245,12 +245,13 @@ def make_page(item, dataset, slug):
     related_tools_html = ""
     related_tools = item.get("relatedTools", [])
     if related_tools:
+        related_heading = "Related tools" if dataset == "software" else "Related resources"
         related_links = " ".join(
             f'<a href="{esc(entry["canonicalUrl"])}">{esc(entry["title"])}</a>' for entry in related_tools
         )
         related_tools_html = f"""
       <div class="detail-related">
-        <h2 class="detail-related-heading">Related tools</h2>
+        <h2 class="detail-related-heading">{related_heading}</h2>
         <div class="detail-related-links">
           {related_links}
         </div>
