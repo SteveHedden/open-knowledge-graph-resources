@@ -457,14 +457,11 @@ def main():
         if os.path.exists(dirpath):
             shutil.rmtree(dirpath)
 
-    # Step 4: Generate pages, using the slug already assigned by fetch_data.py
-    # (item["canonicalUrl"], e.g. https://openknowledgegraphs.com/software/foops/)
-    # so a resource's URI never has to change once its page appears.
-    generated = 0
+    # Step 4: Determine the final page-worthy set (same checks as before), so we
+    # know which canonicalUrls will actually have a page before rendering any
+    # of them — needed to prune relatedTools down to links that won't 404.
+    survivors = []
     skipped_no_canonical_url = 0
-    pages = []
-    page_slugs = {"resource": {}, "software": {}}  # QID -> slug mapping
-
     for dataset, item in candidates:
         if good_urls is not None and item["homepage"].strip() not in good_urls:
             continue
@@ -478,6 +475,25 @@ def main():
             skipped_no_canonical_url += 1
             continue
 
+        survivors.append((dataset, item, qid, slug))
+
+    if skipped_no_canonical_url:
+        print(f"Skipped {skipped_no_canonical_url} candidates with no canonicalUrl (stale data/*.json — rerun fetch_data.py)")
+
+    survivor_urls = {item.get("canonicalUrl") for _, item, _, _ in survivors if item.get("canonicalUrl")}
+
+    # Step 5: Generate pages, using the slug already assigned by fetch_data.py
+    # (item["canonicalUrl"], e.g. https://openknowledgegraphs.com/software/foops/)
+    # so a resource's URI never has to change once its page appears.
+    generated = 0
+    pages = []
+    page_slugs = {"resource": {}, "software": {}}  # QID -> slug mapping
+
+    for dataset, item, qid, slug in survivors:
+        related_tools = item.get("relatedTools")
+        if related_tools:
+            item = {**item, "relatedTools": [r for r in related_tools if r["canonicalUrl"] in survivor_urls]}
+
         page_dir = os.path.join(SITE_DIR, dataset, slug)
         os.makedirs(page_dir, exist_ok=True)
 
@@ -489,18 +505,15 @@ def main():
         page_slugs[dataset][qid] = slug
         generated += 1
 
-    if skipped_no_canonical_url:
-        print(f"Skipped {skipped_no_canonical_url} candidates with no canonicalUrl (stale data/*.json — rerun fetch_data.py)")
-
     print(f"Generated {generated} pages")
 
-    # Step 5: Generate sitemap
+    # Step 6: Generate sitemap
     sitemap = generate_sitemap(pages)
     with open(os.path.join(SITE_DIR, "sitemap.xml"), "w") as f:
         f.write(sitemap)
     print(f"Sitemap: {len(pages) + 7} URLs")
 
-    # Step 6: Save QID-to-slug mapping for frontend
+    # Step 7: Save QID-to-slug mapping for frontend
     with open(os.path.join(DATA_DIR, "page_qids.json"), "w") as f:
         json.dump(page_slugs, f)
     print(f"Saved page_qids.json ({len(page_slugs['resource'])} resource, {len(page_slugs['software'])} software)")
