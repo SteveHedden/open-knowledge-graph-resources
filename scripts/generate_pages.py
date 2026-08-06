@@ -167,6 +167,17 @@ def make_json_ld(item, dataset):
             "url": BASE_URL,
         },
     }
+    if item.get("latestVersion"):
+        ld["softwareVersion"] = item["latestVersion"]
+    if item.get("releaseDate"):
+        ld["datePublished"] = item["releaseDate"]
+    if item.get("sourceRepo"):
+        ld["codeRepository"] = item["sourceRepo"]
+    if item.get("softwareType"):
+        ld["applicationCategory"] = item["softwareType"]
+    if item.get("programmingLanguages"):
+        langs = item["programmingLanguages"]
+        ld["programmingLanguage"] = langs[0] if len(langs) == 1 else langs
     creators = item.get("creators", [])
     if creators:
         creator_entries = []

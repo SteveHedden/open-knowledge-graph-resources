@@ -130,7 +130,7 @@ SOFTWARE_BASE_QUERY = """
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?license ?partOfEntity ?creator
+SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?license ?partOfEntity ?creator ?programmingLanguage
 WHERE {
   {
     ?item wdt:P31/wdt:P279* wd:Q124653107 .  # semantic web software
@@ -156,6 +156,7 @@ WHERE {
     { ?item wdt:P170 ?creator . } UNION
     { ?item wdt:P50 ?creator . }
   }
+  OPTIONAL { ?item wdt:P277 ?programmingLanguage . }
 }
 """
 
@@ -212,6 +213,7 @@ class ResourceRecord:
     licenses: set[str] = field(default_factory=set)
     part_of_labels: set[str] = field(default_factory=set)
     creators: set[str] = field(default_factory=set)
+    programming_languages: set[str] = field(default_factory=set)
     latest_version: str | None = None
     release_date: date | None = None
 
@@ -638,10 +640,11 @@ def parse_software_rows(
     rows: list[dict],
     labels: dict[str, str],
     descriptions: dict[str, str],
-) -> tuple[dict[str, ResourceRecord], dict[str, str], dict[str, str]]:
+) -> tuple[dict[str, ResourceRecord], dict[str, str], dict[str, str], dict[str, str]]:
     records: dict[str, ResourceRecord] = {}
     license_labels: dict[str, str] = {}
     creator_labels: dict[str, str] = {}
+    programming_language_labels: dict[str, str] = {}
 
     for row in rows:
         item_iri_raw = binding_value(row, "item")
@@ -682,7 +685,15 @@ def parse_software_rows(
             record.creators.add(creator_iri)
             creator_labels[creator_iri] = label_for_entity(creator_iri, labels)
 
-    return records, license_labels, creator_labels
+        programming_language_iri_raw = binding_value(row, "programmingLanguage")
+        if programming_language_iri_raw:
+            programming_language_iri = canonical_entity_iri(programming_language_iri_raw)
+            record.programming_languages.add(programming_language_iri)
+            programming_language_labels[programming_language_iri] = label_for_entity(
+                programming_language_iri, labels
+            )
+
+    return records, license_labels, creator_labels, programming_language_labels
 
 
 def parse_wikidata_datetime(raw_value: str | None) -> datetime | None:
@@ -909,6 +920,10 @@ def first_iri_value(graph: Graph, subject: URIRef, predicate: URIRef) -> str | N
     return None
 
 
+def all_literal_values(graph: Graph, subject: URIRef, predicate: URIRef) -> list[str]:
+    return sorted({str(value) for value in graph.objects(subject, predicate) if isinstance(value, Literal)})
+
+
 def license_labels_for_resource(graph: Graph, subject: URIRef) -> list[str]:
     labels: set[str] = set()
     for license_node in graph.objects(subject, OKG.hasLicense):
@@ -1029,6 +1044,9 @@ def extract_items_from_graph(
                 software_type_label = first_literal_value(graph, URIRef(software_type_iri), RDFS.label)
                 if software_type_label:
                     item["softwareType"] = software_type_label
+            programming_languages = all_literal_values(graph, subject, OKG.programmingLanguage)
+            if programming_languages:
+                item["programmingLanguages"] = programming_languages
 
         items.append(item)
 
@@ -1057,6 +1075,7 @@ def build_graph(
     include_software_fields: bool,
     dataset_path: str,
     slug_registry: dict[str, str],
+    programming_language_labels: dict[str, str] | None = None,
 ) -> Graph:
     graph = Graph()
     graph.bind("okg", OKG)
@@ -1140,6 +1159,11 @@ def build_graph(
                 graph.add((resource_iri, OKG.softwareType, software_type_iri))
                 graph.add((software_type_iri, RDF.type, OKG.SoftwareType))
                 graph.add((software_type_iri, RDFS.label, Literal(record.software_type)))
+
+            for language_iri in sorted(record.programming_languages):
+                language_label = (programming_language_labels or {}).get(language_iri)
+                if language_label:
+                    graph.add((resource_iri, OKG.programmingLanguage, Literal(language_label)))
 
     return graph
 
@@ -1319,7 +1343,12 @@ def run() -> int:
     ontology_records, ontology_license_labels, ontology_creator_labels = parse_ontology_rows(
         ontology_rows, labels, descriptions
     )
-    software_records, software_license_labels, software_creator_labels = parse_software_rows(
+    (
+        software_records,
+        software_license_labels,
+        software_creator_labels,
+        software_programming_language_labels,
+    ) = parse_software_rows(
         software_base_rows,
         labels,
         descriptions,
@@ -1391,6 +1420,7 @@ def run() -> int:
             include_software_fields=True,
             dataset_path="software",
             slug_registry=uri_registry["software"],
+            programming_language_labels=software_programming_language_labels,
         )
 
         generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
