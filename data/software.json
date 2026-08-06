@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T22:16:29Z",
+  "generatedAt": "2026-08-06T04:08:45Z",
   "items": [
     {
       "title": "4store",
@@ -16,7 +16,10 @@
       ],
       "latestVersion": "1.1.7",
       "releaseDate": "2024-05-10",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q15777"
+      ]
     },
     {
       "title": "ABECTO",
@@ -40,7 +43,10 @@
       ],
       "latestVersion": "3.1.5",
       "releaseDate": "2026-01-03",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Akutan",
@@ -54,7 +60,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q37227"
+      ]
     },
     {
       "title": "AllegroGraph",
@@ -75,7 +84,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q849146"
+      ]
     },
     {
       "title": "Allotrope Data Format",
@@ -120,7 +132,10 @@
       ],
       "latestVersion": "3.0",
       "releaseDate": "2014-02-11",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "AnzoGraph",
@@ -161,7 +176,10 @@
       ],
       "latestVersion": "5.6.0",
       "releaseDate": "2025-10-15",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Apache Jena Fuseki",
@@ -185,7 +203,10 @@
       ],
       "latestVersion": "4.2.0",
       "releaseDate": "2021-09-12",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Apache Marmotta",
@@ -206,7 +227,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Apache Rya",
@@ -235,7 +259,10 @@
       ],
       "latestVersion": "4.0.0",
       "releaseDate": "2019-07-27",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "ArangoDB",
@@ -270,7 +297,10 @@
       ],
       "latestVersion": "3.12.10",
       "releaseDate": "2026-08-01",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "ArcadeDB",
@@ -294,7 +324,10 @@
       ],
       "latestVersion": "26.8.1",
       "releaseDate": "2026-08-03",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "ASQC",
@@ -308,7 +341,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "AtomicServer",
@@ -325,7 +361,11 @@
       ],
       "latestVersion": "0.40.3",
       "releaseDate": "2026-07-06",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2005",
+        "Q978185"
+      ]
     },
     {
       "title": "AutoSparql",
@@ -340,7 +380,10 @@
       "licenses": [
         "GNU General Public License, version 3.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "AWS Neptune",
@@ -378,7 +421,10 @@
       ],
       "latestVersion": "2.1.5",
       "releaseDate": "2019-03-19",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "BnF authorities",
@@ -413,7 +459,10 @@
       ],
       "latestVersion": "0.4.13",
       "releaseDate": "2025-11-13",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "CEL",
@@ -431,7 +480,11 @@
       ],
       "latestVersion": "0.6.0",
       "releaseDate": "2017-07-01",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251",
+        "Q849146"
+      ]
     },
     {
       "title": "Chainsaw",
@@ -459,7 +512,10 @@
       ],
       "latestVersion": "4.6.0",
       "releaseDate": "2026-01-28",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Chowlk",
@@ -475,7 +531,10 @@
       ],
       "latestVersion": "0.0.1",
       "releaseDate": "2020-12-09",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q8811"
+      ]
     },
     {
       "title": "CM-Well",
@@ -491,7 +550,10 @@
       ],
       "latestVersion": "1.5.170",
       "releaseDate": "2020-03-24",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q460584"
+      ]
     },
     {
       "title": "Cognee",
@@ -508,7 +570,10 @@
       ],
       "latestVersion": "1.2.2",
       "releaseDate": "2026-06-26",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Comunica",
@@ -543,7 +608,10 @@
       ],
       "latestVersion": "4.5.0",
       "releaseDate": "2023-12-14",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "CostFed",
@@ -558,7 +626,10 @@
         "GNU Affero General Public License, version 3.0",
         "GNU Affero General Public License, version 3.0 or later"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "CoW",
@@ -575,7 +646,10 @@
       ],
       "latestVersion": "2.0.0",
       "releaseDate": "2024-03-08",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "CQELS",
@@ -590,7 +664,10 @@
       "licenses": [
         "GNU Lesser General Public License, version 3.0"
       ],
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "CubicWeb",
@@ -607,7 +684,10 @@
       ],
       "latestVersion": "4.8.0",
       "releaseDate": "2024-05-21",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "CumulusRDF",
@@ -621,7 +701,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "cwm",
@@ -649,7 +732,10 @@
       "licenses": [
         "W3C Software License"
       ],
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "D2RQ",
@@ -679,7 +765,10 @@
       ],
       "latestVersion": "2.0.0",
       "releaseDate": "2019-05-03",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "d3sparql.js",
@@ -695,7 +784,11 @@
       ],
       "latestVersion": "0.0.0",
       "releaseDate": "2015-02-20",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005",
+        "Q8811"
+      ]
     },
     {
       "title": "DARQ SPARQL federation engine",
@@ -723,7 +816,10 @@
         "GNU Affero General Public License, version 3.0",
         "GNU Affero General Public License, version 3.0 or later"
       ],
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Dgraph",
@@ -740,7 +836,10 @@
       ],
       "latestVersion": "25.4.0",
       "releaseDate": "2026-07-30",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q37227"
+      ]
     },
     {
       "title": "DOSDP Tools",
@@ -773,7 +872,10 @@
       ],
       "latestVersion": "3.5.2",
       "releaseDate": "2026-07-03",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q5289"
+      ]
     },
     {
       "title": "Dragoman RDF mapping optimizer",
@@ -806,7 +908,10 @@
       ],
       "latestVersion": "2.8.1",
       "releaseDate": "2026-07-13",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "Dydra",
@@ -847,7 +952,10 @@
       ],
       "latestVersion": "0.6.0",
       "releaseDate": "2024-05-25",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "EMMOntoPy",
@@ -864,7 +972,10 @@
       ],
       "latestVersion": "0.11.4",
       "releaseDate": "2026-05-13",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Euler Yet another proof Engine",
@@ -905,7 +1016,10 @@
       ],
       "latestVersion": "4.0.2",
       "releaseDate": "2026-04-27",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "F-UJI",
@@ -922,7 +1036,10 @@
       ],
       "latestVersion": "3.5.1",
       "releaseDate": "2025-10-14",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "fabric",
@@ -936,7 +1053,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q37227"
+      ]
     },
     {
       "title": "FaCT++",
@@ -955,7 +1075,10 @@
       ],
       "latestVersion": "1.6.5",
       "releaseDate": "2016-12-31",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "FlexRML",
@@ -1000,7 +1123,11 @@
       ],
       "latestVersion": "1.8.5",
       "releaseDate": "2012-03-09",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251",
+        "Q460584"
+      ]
     },
     {
       "title": "Flora-2",
@@ -1025,7 +1152,10 @@
       "licenses": [
         "3-clause BSD License"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "fluree",
@@ -1060,7 +1190,10 @@
       ],
       "latestVersion": "0.4.0",
       "releaseDate": "2026-05-04",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "ForestQB",
@@ -1089,7 +1222,10 @@
       ],
       "latestVersion": "0.2.0",
       "releaseDate": "2020-03-04",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Framework",
@@ -1114,7 +1250,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "FuXi RDF reasoner",
@@ -1151,7 +1290,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "Graphameleon Web extension",
@@ -1191,7 +1333,10 @@
         "4-clause BSD License"
       ],
       "latestVersion": "2.1.0",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "graphd",
@@ -1212,7 +1357,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q15777"
+      ]
     },
     {
       "title": "Graphiti",
@@ -1229,7 +1377,10 @@
       ],
       "latestVersion": "0.29.3",
       "releaseDate": "2026-07-27",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Graphy.js",
@@ -1291,7 +1442,10 @@
       "licenses": [
         "3-clause BSD License"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "Halyard",
@@ -1306,7 +1460,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "HeFQUIN",
@@ -1323,7 +1480,10 @@
       ],
       "latestVersion": "0.0.2",
       "releaseDate": "2023-12-28",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Helio Ecosystem",
@@ -1352,7 +1512,10 @@
         "proprietary license"
       ],
       "latestVersion": "1.3.8",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Hets",
@@ -1369,7 +1532,10 @@
       ],
       "latestVersion": "0.105",
       "releaseDate": "2020-12-14",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q34010"
+      ]
     },
     {
       "title": "Holonet Galactic Encyclopedia",
@@ -1393,7 +1559,11 @@
       "licenses": [
         "Creative Commons CC0 License"
       ],
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q24589705",
+        "Q28865"
+      ]
     },
     {
       "title": "HugeGraph",
@@ -1457,7 +1627,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/",
       "homepage": "http://www.infinitegraph.com",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "J2RM",
@@ -1480,12 +1653,22 @@
       "description": "distributed online transaction processing and OLAP graph database system with BerkeleyDB, Apache Cassandra and Apache HBase support; uses the TinkerPop framework and Gremlin graph traversal language; written in Java",
       "homepage": "https://janusgraph.org/",
       "sourceRepo": "https://github.com/JanusGraph/janusgraph",
+      "creators": [
+        {
+          "name": "Linux Foundation",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q858851"
+        }
+      ],
       "licenses": [
         "Apache License"
       ],
       "latestVersion": "1.1.0",
       "releaseDate": "2024-11-09",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "jcel",
@@ -1503,7 +1686,10 @@
       ],
       "latestVersion": "0.24.0",
       "releaseDate": "2016-07-09",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "JDBC 4 SPARQL",
@@ -1517,7 +1703,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Jelly",
@@ -1548,7 +1737,10 @@
       "sourceRepo": "https://github.com/json-ld/json-ld.org",
       "latestVersion": "1.0",
       "releaseDate": "2016-11-06",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "json-rql",
@@ -1563,7 +1755,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "juliett",
@@ -1578,7 +1773,10 @@
         "MIT License"
       ],
       "latestVersion": "v0.5.0",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q37227"
+      ]
     },
     {
       "title": "Karma semantic mapping platform",
@@ -1607,7 +1805,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "KGX",
@@ -1624,7 +1825,10 @@
       ],
       "latestVersion": "2.7.0",
       "releaseDate": "2026-05-28",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Kineo",
@@ -1640,7 +1844,10 @@
       ],
       "latestVersion": "0.0.108",
       "releaseDate": "2024-11-17",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q17118377"
+      ]
     },
     {
       "title": "Knwler",
@@ -1657,7 +1864,10 @@
       ],
       "latestVersion": "1.1.0",
       "releaseDate": "2026-03-28",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Kolibrie SPARQL engine",
@@ -1700,7 +1910,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "Levelgraph",
@@ -1716,7 +1929,10 @@
       ],
       "latestVersion": "4.0.0",
       "releaseDate": "2024-04-24",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "librdf.sqlite",
@@ -1761,7 +1977,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "LinkedDataHub",
@@ -1778,7 +1997,10 @@
       ],
       "latestVersion": "5.7.0",
       "releaseDate": "2026-08-02",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q32110"
+      ]
     },
     {
       "title": "LinkedPipes ETL",
@@ -1807,7 +2029,11 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251",
+        "Q28925578"
+      ]
     },
     {
       "title": "LinkML",
@@ -1839,7 +2065,10 @@
       ],
       "latestVersion": "1.11.1",
       "releaseDate": "2026-05-20",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "LinkML-Scala",
@@ -1856,7 +2085,10 @@
       ],
       "latestVersion": "0.11.2",
       "releaseDate": "2026-07-28",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q460584"
+      ]
     },
     {
       "title": "LogMap",
@@ -1870,7 +2102,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "LUPOSDATE",
@@ -1884,7 +2119,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Mapeathor",
@@ -1951,7 +2189,12 @@
       "licenses": [
         "freeware"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q15777",
+        "Q2005",
+        "Q2407"
+      ]
     },
     {
       "title": "Matey YARRRML editor",
@@ -1984,7 +2227,11 @@
       ],
       "latestVersion": "2.0.12",
       "releaseDate": "2026-07-13",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q28865",
+        "Q978185"
+      ]
     },
     {
       "title": "Memgraph",
@@ -2031,7 +2278,10 @@
       "licenses": [
         "GNU General Public License, version 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "Minimal mappings",
@@ -2073,7 +2323,10 @@
       ],
       "latestVersion": "2.10.0",
       "releaseDate": "2026-01-20",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Morph-Streams",
@@ -2087,7 +2340,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Morph-xR2RML",
@@ -2119,7 +2375,10 @@
         "Open Software License",
         "Q114843172"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "N3.js",
@@ -2189,7 +2448,10 @@
       ],
       "latestVersion": "3.8.0",
       "releaseDate": "2024-05-17",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Neo4j",
@@ -2207,7 +2469,11 @@
       ],
       "latestVersion": "5.26.29",
       "releaseDate": "2026-08-04",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251",
+        "Q460584"
+      ]
     },
     {
       "title": "NEOntometrics",
@@ -2224,7 +2490,10 @@
       ],
       "latestVersion": "1.0.0",
       "releaseDate": "2022-08-12",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q406009"
+      ]
     },
     {
       "title": "neosemantics",
@@ -2250,7 +2519,10 @@
       ],
       "latestVersion": "2025.06.1",
       "releaseDate": "2026-06-16",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "NitrosBase",
@@ -2266,7 +2538,10 @@
       ],
       "latestVersion": "2.0",
       "releaseDate": "2018-12-03",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "Node Quadstore",
@@ -2283,7 +2558,10 @@
       ],
       "latestVersion": "3.0.0",
       "releaseDate": "2017-10-19",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "onto-tool",
@@ -2299,7 +2577,10 @@
       ],
       "latestVersion": "1.8.0",
       "releaseDate": "2023-10-17",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Ontofelia",
@@ -2315,7 +2596,10 @@
         "Apache Software License 2.0"
       ],
       "latestVersion": "0.0.1",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q978185"
+      ]
     },
     {
       "title": "Ontofox",
@@ -2330,7 +2614,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Web Ontology Language"
+      ]
     },
     {
       "title": "OntoGPT",
@@ -2361,7 +2648,10 @@
       ],
       "latestVersion": "1.1.1",
       "releaseDate": "2026-04-07",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Ontology Development Kit",
@@ -2435,7 +2725,10 @@
       "licenses": [
         "4-clause BSD License"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "OnToology",
@@ -2452,7 +2745,10 @@
       ],
       "latestVersion": "1.7.0",
       "releaseDate": "2021-06-21",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "ontop",
@@ -2481,7 +2777,10 @@
       ],
       "latestVersion": "5.5.0",
       "releaseDate": "2026-02-14",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "OntopSpark",
@@ -2498,7 +2797,10 @@
       ],
       "latestVersion": "4.1.0",
       "releaseDate": "2021-08-25",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "ontopstream",
@@ -2514,7 +2816,10 @@
       ],
       "latestVersion": "4.0.3",
       "releaseDate": "2021-11-14",
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "OntoSpy",
@@ -2531,7 +2836,10 @@
       ],
       "latestVersion": "2.1.1",
       "releaseDate": "2022-11-16",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Ontotext GraphDB",
@@ -2560,7 +2868,10 @@
       ],
       "latestVersion": "11.0.0",
       "releaseDate": "2025-04-14",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "OntoUML Plugin for Visual Paradigm",
@@ -2576,7 +2887,10 @@
       ],
       "latestVersion": "1.1.9",
       "releaseDate": "2019-02-14",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "OOPS",
@@ -2647,7 +2961,10 @@
       ],
       "latestVersion": "2.6.5",
       "releaseDate": "2019-09-27",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "OpenSKOS",
@@ -2677,7 +2994,10 @@
       ],
       "latestVersion": "3.2.55",
       "releaseDate": "2026-07-20",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "OriginTrail DKG V10 node",
@@ -2695,7 +3015,10 @@
       ],
       "latestVersion": "10.0.12",
       "releaseDate": "2026-08-04",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q978185"
+      ]
     },
     {
       "title": "Ostrich",
@@ -2711,7 +3034,10 @@
       ],
       "latestVersion": "1.0.0",
       "releaseDate": "2017-09-01",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "OWBO - Ontology White Board",
@@ -2725,7 +3051,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q8811"
+      ]
     },
     {
       "title": "OWL-RL",
@@ -2742,7 +3071,10 @@
       ],
       "latestVersion": "7.6.2",
       "releaseDate": "2026-07-08",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "OWL2Vec*",
@@ -2758,7 +3090,10 @@
       ],
       "latestVersion": "0.2.1",
       "releaseDate": "2022-01-03",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "OWLAPI",
@@ -2774,7 +3109,10 @@
         "Apache Software License 2.0",
         "proprietary license"
       ],
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Owlready2",
@@ -2788,7 +3126,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Oxigraph",
@@ -2815,7 +3156,10 @@
       ],
       "latestVersion": "0.5.9",
       "releaseDate": "2026-06-18",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q575650"
+      ]
     },
     {
       "title": "O’FAIRE",
@@ -2832,7 +3176,10 @@
       ],
       "latestVersion": "2.2.0",
       "releaseDate": "2024-06-02",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Parliament",
@@ -2848,7 +3195,10 @@
       ],
       "latestVersion": "2.8.1",
       "releaseDate": "2022-06-09",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Pellet",
@@ -2872,7 +3222,10 @@
       ],
       "latestVersion": "2.3.1",
       "releaseDate": "2013-05-07",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Polypheny",
@@ -2889,7 +3242,10 @@
       ],
       "latestVersion": "0.10.1",
       "releaseDate": "2025-10-25",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Prez Linked Data API",
@@ -2923,7 +3279,10 @@
       ],
       "latestVersion": "4.1.1",
       "releaseDate": "2023-07-10",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Protégé",
@@ -2947,7 +3306,10 @@
       ],
       "latestVersion": "5.6.9",
       "releaseDate": "2026-03-07",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Pubby",
@@ -2964,7 +3326,10 @@
       ],
       "latestVersion": "0.3.3",
       "releaseDate": "2011-01-26",
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "PyGraft-gen",
@@ -2980,7 +3345,10 @@
       ],
       "latestVersion": "0.0.11",
       "releaseDate": "2026-01-23",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "pyLDAPI",
@@ -3043,7 +3411,10 @@
       ],
       "latestVersion": "0.40.0",
       "releaseDate": "2026-07-08",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "qEndpoint",
@@ -3064,7 +3435,10 @@
       ],
       "latestVersion": "2.5.4",
       "releaseDate": "2025-12-18",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "QLever",
@@ -3107,7 +3481,10 @@
       ],
       "latestVersion": "0.5.50",
       "releaseDate": "2026-07-17",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "QuitStore",
@@ -3124,7 +3501,10 @@
       ],
       "latestVersion": "0.26.0",
       "releaseDate": "2022-02-02",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "R2RML-F",
@@ -3145,7 +3525,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "RACER",
@@ -3161,7 +3544,11 @@
       ],
       "latestVersion": "2.0",
       "releaseDate": "2014-05-29",
-      "softwareType": "Reasoning & Inference"
+      "softwareType": "Reasoning & Inference",
+      "programmingLanguages": [
+        "Q251",
+        "Q849146"
+      ]
     },
     {
       "title": "Radar Station",
@@ -3196,7 +3583,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "RDF Glance",
@@ -3225,7 +3615,10 @@
       ],
       "latestVersion": "1.0",
       "releaseDate": "2020-10-27",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q8811"
+      ]
     },
     {
       "title": "RDF Transform",
@@ -3240,7 +3633,10 @@
       "partOf": "OpenRefine",
       "latestVersion": "2.3.6",
       "releaseDate": "2025-09-22",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "rdf-ext",
@@ -3274,7 +3670,10 @@
       ],
       "latestVersion": "1.0.4",
       "releaseDate": "2025-01-29",
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q24589705"
+      ]
     },
     {
       "title": "rdf-validate-shacl",
@@ -3298,7 +3697,10 @@
       ],
       "latestVersion": "0.6.5",
       "releaseDate": "2025-05-30",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q978185"
+      ]
     },
     {
       "title": "rdf2rml",
@@ -3312,7 +3714,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q42478"
+      ]
     },
     {
       "title": "RDF4J",
@@ -3330,7 +3735,10 @@
       ],
       "latestVersion": "5.3.2",
       "releaseDate": "2026-06-29",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "RDFGraphGen",
@@ -3346,7 +3754,10 @@
       ],
       "latestVersion": "1.2",
       "releaseDate": "2025-05-21",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "RDFLib",
@@ -3364,7 +3775,10 @@
       ],
       "latestVersion": "7.6.0",
       "releaseDate": "2026-02-13",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "RDFox",
@@ -3395,7 +3809,10 @@
       ],
       "latestVersion": "4.0.0",
       "releaseDate": "2026-07-05",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q2370"
+      ]
     },
     {
       "title": "RDFUnit",
@@ -3421,7 +3838,10 @@
       ],
       "latestVersion": "0.8.23",
       "releaseDate": "2021-05-16",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Reactive-Sparql",
@@ -3437,7 +3857,10 @@
       ],
       "latestVersion": "0.3.1",
       "releaseDate": "2019-09-22",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q460584"
+      ]
     },
     {
       "title": "Reactodia",
@@ -3454,7 +3877,10 @@
       ],
       "latestVersion": "0.35.1",
       "releaseDate": "2026-07-10",
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q978185"
+      ]
     },
     {
       "title": "Reasonable",
@@ -3488,7 +3914,10 @@
       ],
       "latestVersion": "0.5.4",
       "releaseDate": "2011-10-27",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q15777"
+      ]
     },
     {
       "title": "RIQ",
@@ -3502,7 +3931,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q15777"
+      ]
     },
     {
       "title": "RMLMapper",
@@ -3519,7 +3951,10 @@
       ],
       "latestVersion": "8.1.0",
       "releaseDate": "2025-12-23",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "RMLStreamer",
@@ -3569,7 +4004,10 @@
       ],
       "latestVersion": "3.0.0",
       "releaseDate": "2026-02-04",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "RSP4J",
@@ -3585,7 +4023,10 @@
       ],
       "latestVersion": "1.1.7",
       "releaseDate": "2022-10-18",
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "safe",
@@ -3600,7 +4041,11 @@
         "GNU General Public License, version 2.0",
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q206904",
+        "Q251"
+      ]
     },
     {
       "title": "SaGe SPARQL query engine",
@@ -3632,7 +4077,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "SANSA",
@@ -3656,7 +4104,10 @@
       ],
       "latestVersion": "2.11",
       "releaseDate": "2021-06-10",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q460584"
+      ]
     },
     {
       "title": "SDM-RDFizer",
@@ -3673,7 +4124,10 @@
       ],
       "latestVersion": "4.7.5.15.1",
       "releaseDate": "2026-07-31",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Semagrow",
@@ -3690,7 +4144,10 @@
       ],
       "latestVersion": "2.2.1",
       "releaseDate": "2021-10-08",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Semantic UI",
@@ -3708,7 +4165,10 @@
       ],
       "latestVersion": "2.5.0",
       "releaseDate": "2022-10-06",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Semantica",
@@ -3766,7 +4226,11 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q2005",
+        "Q28865"
+      ]
     },
     {
       "title": "SEPA",
@@ -3783,7 +4247,10 @@
       ],
       "latestVersion": "1.0.24",
       "releaseDate": "2026-06-12",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Sequoia Reasoner",
@@ -3819,7 +4286,10 @@
       ],
       "latestVersion": "0.12.2",
       "releaseDate": "2026-07-16",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SHACL Playground",
@@ -3843,7 +4313,10 @@
       ],
       "latestVersion": "1.3.11",
       "releaseDate": "2026-06-26",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "shacl-engine",
@@ -3867,7 +4340,10 @@
       ],
       "latestVersion": "1.1.2",
       "releaseDate": "2026-06-30",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "SHACTOR",
@@ -3883,7 +4359,10 @@
         "Creative Commons Attribution-NonCommercial-NoDerivatives",
         "proprietary license"
       ],
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SKOS Play!",
@@ -3907,7 +4386,10 @@
       ],
       "latestVersion": "0.9.1",
       "releaseDate": "2022-03-18",
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SMASSIF-RML",
@@ -3943,7 +4425,10 @@
       ],
       "latestVersion": "0.1.0",
       "releaseDate": "2023-03-17",
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "snap-sparql-query",
@@ -3957,7 +4442,10 @@
       "licenses": [
         "GNU Lesser General Public License, version 3.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SNORQL",
@@ -3971,7 +4459,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Sones GraphDB",
@@ -3985,7 +4476,10 @@
         "end-user license agreement",
         "GNU Affero General Public License"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2370"
+      ]
     },
     {
       "title": "Sophia RDF toolkit",
@@ -4034,7 +4528,10 @@
       ],
       "latestVersion": "1.1",
       "releaseDate": "2017-12-07",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Sparklis",
@@ -4048,7 +4545,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q212587"
+      ]
     },
     {
       "title": "Sparksee",
@@ -4083,7 +4583,10 @@
       ],
       "latestVersion": "12.2.0",
       "releaseDate": "2026-03-24",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q978185"
+      ]
     },
     {
       "title": "SPARQL Anything",
@@ -4100,7 +4603,10 @@
       ],
       "latestVersion": "1.2.0",
       "releaseDate": "2026-07-24",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SPARQL parser",
@@ -4113,7 +4619,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Sparql Transformer",
@@ -4128,7 +4637,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Sparql-cli",
@@ -4142,7 +4654,10 @@
       "licenses": [
         "GNU General Public License, version 3.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Sparql-Proxy",
@@ -4156,7 +4671,10 @@
       "licenses": [
         "Unlicense"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SPARQL.js",
@@ -4192,7 +4710,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q8811"
+      ]
     },
     {
       "title": "SPARQL2NL",
@@ -4206,7 +4727,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SparqlAnalytics",
@@ -4220,7 +4744,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "SPARQLBlocks",
@@ -4234,7 +4761,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "sparqled",
@@ -4249,7 +4779,10 @@
         "GNU Affero General Public License, version 3.0",
         "GNU Affero General Public License, version 3.0 or later"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SparqlExplorer",
@@ -4263,7 +4796,10 @@
       "licenses": [
         "GNU Lesser General Public License"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q978185"
+      ]
     },
     {
       "title": "SPARQLFederator",
@@ -4277,7 +4813,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SPARQLLab",
@@ -4291,7 +4830,10 @@
       "licenses": [
         "Eclipse Public License 1.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q51798"
+      ]
     },
     {
       "title": "sparqlprog",
@@ -4308,7 +4850,10 @@
       ],
       "latestVersion": "0.2.9",
       "releaseDate": "2019-09-05",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q163468"
+      ]
     },
     {
       "title": "Spread2RML software",
@@ -4334,7 +4879,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q575650"
+      ]
     },
     {
       "title": "Squebi",
@@ -4348,7 +4896,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "ssb-consum-up",
@@ -4384,7 +4935,10 @@
       ],
       "latestVersion": "0.1.0",
       "releaseDate": "2023-03-17",
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q849146"
+      ]
     },
     {
       "title": "Stardog",
@@ -4413,7 +4967,10 @@
       "licenses": [
         "Mozilla Public License, version 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Streaming Sparql",
@@ -4429,7 +4986,10 @@
       ],
       "latestVersion": "0.0.7.3",
       "releaseDate": "2024-05-31",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "StreamingMassif",
@@ -4450,7 +5010,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "SurrealDB",
@@ -4468,7 +5031,10 @@
       ],
       "latestVersion": "3.2.0",
       "releaseDate": "2026-07-06",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q575650"
+      ]
     },
     {
       "title": "Table Annotation",
@@ -4503,7 +5069,10 @@
       "licenses": [
         "GNU General Public License, version 3.0"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "Tentris",
@@ -4537,7 +5106,10 @@
       ],
       "latestVersion": "12.0.6",
       "releaseDate": "2026-06-24",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q163468"
+      ]
     },
     {
       "title": "Timbr",
@@ -4568,7 +5140,10 @@
       ],
       "latestVersion": "1.0.0",
       "releaseDate": "2015-09-19",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Titanium JSON-LD",
@@ -4622,7 +5197,10 @@
       ],
       "latestVersion": "1.5.0",
       "releaseDate": "2026-03-23",
-      "softwareType": "Developer Library"
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "Q251"
+      ]
     },
     {
       "title": "Torchic Tab",
@@ -4635,7 +5213,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "TQ Data Foundation",
@@ -4690,7 +5271,10 @@
       ],
       "latestVersion": "2.1.1",
       "releaseDate": "2016-09-09",
-      "softwareType": "Stream Processing"
+      "softwareType": "Stream Processing",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Triply",
@@ -4753,7 +5337,10 @@
       ],
       "latestVersion": "2.8.9",
       "releaseDate": "2026-08-04",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "TuringDB",
@@ -4770,7 +5357,10 @@
       ],
       "latestVersion": "1.36",
       "releaseDate": "2026-07-27",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q2407"
+      ]
     },
     {
       "title": "UniProt",
@@ -4817,7 +5407,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q477690"
+      ]
     },
     {
       "title": "Virtuoso Universal Server",
@@ -4842,7 +5435,10 @@
       ],
       "latestVersion": "7.2.17",
       "releaseDate": "2026-05-07",
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q15777"
+      ]
     },
     {
       "title": "VISU",
@@ -4856,7 +5452,10 @@
       "licenses": [
         "MIT License"
       ],
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q6309506"
+      ]
     },
     {
       "title": "Visual SPARQL Builder",
@@ -4880,7 +5479,10 @@
       "licenses": [
         "proprietary license"
       ],
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q105099901"
+      ]
     },
     {
       "title": "VocBench",
@@ -4924,7 +5526,10 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "softwareType": "Graph Database"
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Q37227"
+      ]
     },
     {
       "title": "Waves",
@@ -4953,7 +5558,10 @@
       ],
       "latestVersion": "1.5.0",
       "releaseDate": "2026-06-30",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Q28865"
+      ]
     },
     {
       "title": "WebVOWL",
@@ -4970,7 +5578,10 @@
       ],
       "latestVersion": "1.1.7",
       "releaseDate": "2026-06-04",
-      "softwareType": "Visualization"
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "Whelk reasoner",
@@ -5003,7 +5614,11 @@
       ],
       "latestVersion": "1.4.25",
       "releaseDate": "2024-06-30",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Q2005",
+        "Q251"
+      ]
     },
     {
       "title": "Wikibase",
@@ -5025,7 +5640,11 @@
       "licenses": [
         "GNU General Public License, version 2.0 or later"
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Q2005",
+        "Q59"
+      ]
     },
     {
       "title": "Wistor",
@@ -5053,7 +5672,10 @@
       ],
       "latestVersion": "1.12.2",
       "releaseDate": "2025-10-22",
-      "softwareType": "RDF Data Mapping / ETL"
+      "softwareType": "RDF Data Mapping / ETL",
+      "programmingLanguages": [
+        "Q2005"
+      ]
     },
     {
       "title": "YARS2 RDF store",
@@ -5089,7 +5711,11 @@
       ],
       "latestVersion": "4.0.113",
       "releaseDate": "2020-04-08",
-      "softwareType": "SPARQL Tooling"
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "Q2005",
+        "Q978185"
+      ]
     },
     {
       "title": "Yasgui (Matdata)",
