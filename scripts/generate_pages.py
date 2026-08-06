@@ -242,6 +242,20 @@ def make_page(item, dataset, slug):
             version_html += f" ({d})"
         version_html += "</p>"
 
+    related_tools_html = ""
+    related_tools = item.get("relatedTools", [])
+    if related_tools:
+        related_links = " ".join(
+            f'<a href="{esc(entry["canonicalUrl"])}">{esc(entry["title"])}</a>' for entry in related_tools
+        )
+        related_tools_html = f"""
+      <div class="detail-related">
+        <h2 class="detail-related-heading">Related tools</h2>
+        <div class="detail-related-links">
+          {related_links}
+        </div>
+      </div>"""
+
     return f"""<!doctype html>
 <html lang="en">
   <head>
@@ -335,6 +349,31 @@ def make_page(item, dataset, slug):
       .detail-field strong {{
         color: var(--text-primary, #333);
       }}
+      .detail-related {{
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }}
+      .detail-related-heading {{
+        font-size: 1.1rem;
+        margin: 0 0 0.75rem;
+      }}
+      .detail-related-links {{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }}
+      .detail-related-links a {{
+        background: var(--bg-muted, #f0f0f0);
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        text-decoration: none;
+        color: inherit;
+      }}
+      .detail-related-links a:hover {{
+        background: var(--highlight, #f6ca67);
+      }}
     </style>
   </head>
   <body>
@@ -354,6 +393,7 @@ def make_page(item, dataset, slug):
       </div>
       {license_html}
       {version_html}
+      {related_tools_html}
     </div>
   </body>
 </html>"""
