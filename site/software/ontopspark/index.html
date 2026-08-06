@@ -110,6 +110,31 @@
       .detail-field strong {
         color: var(--text-primary, #333);
       }
+      .detail-related {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-related-heading {
+        font-size: 1.1rem;
+        margin: 0 0 0.75rem;
+      }
+      .detail-related-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .detail-related-links a {
+        background: var(--bg-muted, #f0f0f0);
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        text-decoration: none;
+        color: inherit;
+      }
+      .detail-related-links a:hover {
+        background: var(--highlight, #f6ca67);
+      }
     </style>
   </head>
   <body>
@@ -129,6 +154,13 @@
       </div>
       <p class="detail-field"><strong>License:</strong> Apache Software License 2.0</p>
       <p class="detail-field"><strong>Latest version:</strong> 4.1.0 (2021-08-25)</p>
+      
+      <div class="detail-related">
+        <h2 class="detail-related-heading">Related tools</h2>
+        <div class="detail-related-links">
+          <a href="https://openknowledgegraphs.com/software/chimera/">Chimera</a> <a href="https://openknowledgegraphs.com/software/sparql-anything/">SPARQL Anything</a> <a href="https://openknowledgegraphs.com/software/dragoman-rdf-mapping-optimizer/">Dragoman RDF mapping optimizer</a> <a href="https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/">Karma semantic mapping platform</a> <a href="https://openknowledgegraphs.com/software/mapeathor/">Mapeathor</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
