@@ -968,9 +968,21 @@ def add_related_tools(graph: Graph, max_related: int = 5) -> None:
     top matches back as OKG.relatedTo triples. Ties (including the common case
     of two resources sharing zero neighbors, e.g. missing creator data) fall
     back to alphabetical order by title.
+
+    Candidates are pre-filtered to resources that have a homepage — the
+    dominant reason a resource never gets a published page in generate_pages.py
+    (see passes_content_filter there) — so abandoned/thin entries don't crowd
+    out real matches in the top N. generate_pages.py still does a final prune
+    against the actual page-worthy set (its content filter also checks
+    description quality and does a live link check), so this is a quality
+    pre-filter, not a substitute for that.
     """
     subjects = sorted(
-        {s for s in graph.subjects(predicate=OKG.softwareType) if isinstance(s, URIRef)},
+        {
+            s
+            for s in graph.subjects(predicate=OKG.softwareType)
+            if isinstance(s, URIRef) and (s, OKG.homepage, None) in graph
+        },
         key=str,
     )
 
