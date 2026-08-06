@@ -961,6 +961,75 @@ def creators_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, str]]
     return creators
 
 
+def add_related_tools(graph: Graph, max_related: int = 5) -> None:
+    """Compute 'related tools' links between software resources that share a
+    softwareType, ranked by Jaccard similarity over each resource's
+    programmingLanguage/hasLicense/creator neighbors in the graph. Writes the
+    top matches back as OKG.relatedTo triples. Ties (including the common case
+    of two resources sharing zero neighbors, e.g. missing creator data) fall
+    back to alphabetical order by title.
+    """
+    subjects = sorted(
+        {s for s in graph.subjects(predicate=OKG.softwareType) if isinstance(s, URIRef)},
+        key=str,
+    )
+
+    software_type: dict[URIRef, URIRef] = {}
+    titles: dict[URIRef, str] = {}
+    features: dict[URIRef, set[tuple[str, str]]] = {}
+
+    for subject in subjects:
+        type_iri = first_iri_value(graph, subject, OKG.softwareType)
+        if not type_iri:
+            continue
+        software_type[subject] = URIRef(type_iri)
+        titles[subject] = first_literal_value(graph, subject, OKG.title) or str(subject)
+
+        feature_set: set[tuple[str, str]] = set()
+        for lang in graph.objects(subject, OKG.programmingLanguage):
+            feature_set.add(("lang", str(lang)))
+        for license_node in graph.objects(subject, OKG.hasLicense):
+            feature_set.add(("license", str(license_node)))
+        for creator_node in graph.objects(subject, OKG.creator):
+            feature_set.add(("creator", str(creator_node)))
+        features[subject] = feature_set
+
+    buckets: dict[URIRef, list[URIRef]] = {}
+    for subject, type_iri in software_type.items():
+        buckets.setdefault(type_iri, []).append(subject)
+
+    for members in buckets.values():
+        for subject in members:
+            subject_features = features.get(subject, set())
+            scored: list[tuple[float, str, URIRef]] = []
+            for other in members:
+                if other == subject:
+                    continue
+                other_features = features.get(other, set())
+                union = subject_features | other_features
+                score = len(subject_features & other_features) / len(union) if union else 0.0
+                scored.append((score, titles.get(other, str(other)), other))
+            scored.sort(key=lambda row: (-row[0], row[1].casefold()))
+            for _, _, related_subject in scored[:max_related]:
+                graph.add((subject, OKG.relatedTo, related_subject))
+
+
+def related_tools_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, str]]:
+    """Returns related tools in the Jaccard-ranked order add_related_tools wrote
+    them in (best match first) — deliberately not re-sorted alphabetically,
+    unlike license/creator extraction, since rank here is meaningful.
+    """
+    related: list[dict[str, str]] = []
+    for node in graph.objects(subject, OKG.relatedTo):
+        if not isinstance(node, URIRef):
+            continue
+        title = first_literal_value(graph, node, OKG.title)
+        if not title:
+            continue
+        related.append({"title": title, "canonicalUrl": str(node)})
+    return related
+
+
 def extract_items_from_graph(
     graph: Graph,
     allowed_types: set[URIRef],
@@ -1047,6 +1116,9 @@ def extract_items_from_graph(
             programming_languages = all_literal_values(graph, subject, OKG.programmingLanguage)
             if programming_languages:
                 item["programmingLanguages"] = programming_languages
+            related_tools = related_tools_for_resource(graph, subject)
+            if related_tools:
+                item["relatedTools"] = related_tools
 
         items.append(item)
 
@@ -1423,6 +1495,7 @@ def run() -> int:
             slug_registry=uri_registry["software"],
             programming_language_labels=software_programming_language_labels,
         )
+        add_related_tools(software_graph)
 
         generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
         ontologies_json = build_json_payload(
