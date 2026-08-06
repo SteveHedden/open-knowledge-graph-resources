@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T13:05:58Z",
+  "generatedAt": "2026-08-05T22:16:29Z",
   "items": [
     {
       "title": "4store",
@@ -266,7 +266,7 @@
         }
       ],
       "licenses": [
-        "Apache Software License 2.0"
+        "Business Source License 1.1"
       ],
       "latestVersion": "3.12.10",
       "releaseDate": "2026-08-01",
@@ -292,8 +292,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "26.7.3",
-      "releaseDate": "2026-07-17",
+      "latestVersion": "26.8.1",
+      "releaseDate": "2026-08-03",
       "softwareType": "Graph Database"
     },
     {
@@ -1038,6 +1038,7 @@
       "homepage": "https://flur.ee",
       "sourceRepo": "https://github.com/fluree/db",
       "licenses": [
+        "Apache Software License 2.0",
         "Business Source License 1.1"
       ],
       "latestVersion": "4.1.4",
@@ -1395,6 +1396,35 @@
       "softwareType": "Visualization"
     },
     {
+      "title": "HugeGraph",
+      "wikidataId": "https://www.wikidata.org/wiki/Q97348917",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/",
+      "description": "High-performance graph database supporting 100+ billion vertices and edges",
+      "homepage": "https://hugegraph.apache.org",
+      "sourceRepo": "https://github.com/apache/hugegraph",
+      "creators": [
+        {
+          "name": "Apache Software Foundation",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q489709"
+        },
+        {
+          "name": "Baidu",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q14772"
+        }
+      ],
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "1.7.0",
+      "releaseDate": "2025-11-16",
+      "softwareType": "Graph Database"
+    },
+    {
       "title": "ImageSnippets",
       "wikidataId": "https://www.wikidata.org/wiki/Q125506321",
       "types": [
@@ -1656,6 +1686,21 @@
       "latestVersion": "0.7.0-1138",
       "releaseDate": "2021-06-19",
       "softwareType": "Reasoning & Inference"
+    },
+    {
+      "title": "KuzuDB",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140900293",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/",
+      "description": "Embedded property graph database with vector and full-text search, implements Cypher",
+      "homepage": "https://kuzudb.com",
+      "sourceRepo": "https://github.com/kuzudb/kuzu",
+      "licenses": [
+        "MIT License"
+      ],
+      "softwareType": "Graph Database"
     },
     {
       "title": "Levelgraph",
@@ -1942,6 +1987,21 @@
       "softwareType": "AI Agent Tooling"
     },
     {
+      "title": "Memgraph",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140897550",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/",
+      "description": "High-performance in-memory graph database for real-time analytics and GraphRAG",
+      "homepage": "https://memgraph.com",
+      "sourceRepo": "https://github.com/memgraph/memgraph",
+      "licenses": [
+        "Business Source License 1.1"
+      ],
+      "softwareType": "Graph Database"
+    },
+    {
       "title": "metaphactory",
       "wikidataId": "https://www.wikidata.org/wiki/Q23831237",
       "types": [
@@ -2145,8 +2205,8 @@
         "GNU Affero General Public License, version 3.0",
         "GNU General Public License, version 3.0"
       ],
-      "latestVersion": "2026.06.0",
-      "releaseDate": "2026-07-08",
+      "latestVersion": "5.26.29",
+      "releaseDate": "2026-08-04",
       "softwareType": "Graph Database"
     },
     {
@@ -2633,8 +2693,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "10.0.11",
-      "releaseDate": "2026-07-30",
+      "latestVersion": "10.0.12",
+      "releaseDate": "2026-08-04",
       "softwareType": "AI Agent Tooling"
     },
     {
@@ -2738,6 +2798,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/",
       "description": "SPARQL graph database system",
+      "homepage": "https://oxigraph.org",
       "sourceRepo": "https://github.com/oxigraph/oxigraph",
       "creators": [
         {
@@ -4690,8 +4751,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "2.8.5",
-      "releaseDate": "2026-07-29",
+      "latestVersion": "2.8.9",
+      "releaseDate": "2026-08-04",
       "softwareType": "AI Agent Tooling"
     },
     {
@@ -5031,19 +5092,22 @@
       "softwareType": "SPARQL Tooling"
     },
     {
-      "title": "Yasgui",
+      "title": "Yasgui (Matdata)",
       "wikidataId": "https://www.wikidata.org/wiki/Q140834866",
       "types": [
         "Software"
       ],
-      "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-q140834866/",
+      "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/",
       "description": "SPARQL query interface maintained by Matdata; fork of Triply's Yasgui",
       "homepage": "https://yasgui.matdata.eu/",
       "sourceRepo": "https://github.com/Matdata-eu/yasgui",
+      "partOf": "Yasgui",
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "5.20.2"
+      "latestVersion": "5.20.3",
+      "releaseDate": "2026-06-25",
+      "softwareType": "SPARQL Tooling"
     },
     {
       "title": "Zep",

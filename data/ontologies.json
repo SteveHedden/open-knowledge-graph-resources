@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T13:05:58Z",
+  "generatedAt": "2026-08-05T22:16:29Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -3723,7 +3723,14 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/courage-knowledge-graph/",
       "description": "registry about cultural heritage of dissent in former socialist countries",
       "category": "Library & Cultural Heritage",
-      "homepage": "http://cultural-opposition.eu"
+      "homepage": "http://cultural-opposition.eu",
+      "creators": [
+        {
+          "name": "Hungarian Academy of Sciences",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q265058"
+        }
+      ]
     },
     {
       "title": "CoVoc Coronavirus Vocabulary",
@@ -3912,7 +3919,14 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/culture-knowledge-graph/",
       "description": "Knowledge Graph connecting all research data produced within the NFDI4Culture research landscape",
       "category": "Library & Cultural Heritage",
-      "homepage": "https://nfdi4culture.de/de/ressourcen/knowledge-graph.html"
+      "homepage": "https://nfdi4culture.de/de/ressourcen/knowledge-graph.html",
+      "creators": [
+        {
+          "name": "NFDI4Culture",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q98276929"
+        }
+      ]
     },
     {
       "title": "Cumulative Index to Nursing and Allied Health Literature Subject Headings",
@@ -4751,6 +4765,26 @@
       "namespaceURI": "http://purl.org/dc/elements/1.1/"
     },
     {
+      "title": "Dublin Core Metadata Terms",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140878702",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/dublin-core-metadata-terms/",
+      "description": "Extended vocabulary of metadata terms maintained by DCMI; includes DCMES elements plus properties, classes, datatypes, and encoding schemes for RDF and Linked Data",
+      "category": "Library & Cultural Heritage",
+      "homepage": "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/",
+      "sourceRepo": "https://github.com/dcmi/vocabtool",
+      "creators": [
+        {
+          "name": "Thomas Baker",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q46914185",
+          "githubProfile": "https://github.com/tombaker"
+        }
+      ]
+    },
+    {
       "title": "Dutch National Thesaurus for Author Names",
       "wikidataId": "https://www.wikidata.org/wiki/Q104787839",
       "types": [
@@ -5185,7 +5219,16 @@
         "KnowledgeGraph"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/era-knowledge-graph/",
-      "category": "Technology & Web"
+      "description": "EU infrastructure for European railway network data and interoperability",
+      "category": "Technology & Web",
+      "homepage": "https://www.era.europa.eu/domains/registers/era-knowlege-graph_en",
+      "creators": [
+        {
+          "name": "European Commission",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q8880"
+        }
+      ]
     },
     {
       "title": "ERA Vocabulary",
@@ -15232,6 +15275,13 @@
       "category": "Life Sciences & Healthcare",
       "homepage": "https://data.monarchinitiative.org/monarch-kg/index.html",
       "sourceRepo": "https://github.com/monarch-initiative/monarch-ingest",
+      "creators": [
+        {
+          "name": "The Monarch Initiative",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q34645736"
+        }
+      ],
       "licenses": [
         "3-clause BSD License"
       ]
@@ -18167,6 +18217,25 @@
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies"
     },
     {
+      "title": "PICO Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140870185",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/pico-ontology/",
+      "description": "Formal ontology for PICO (Population, Intervention, Comparison, Outcome) framework used in systematic reviews",
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://data.cochrane.org/ontologies/pico/index-en.html",
+      "sourceRepo": "https://data.cochrane.org/ontologies/pico/",
+      "creators": [
+        {
+          "name": "Cochrane",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q1105202"
+        }
+      ]
+    },
+    {
       "title": "PIM authority",
       "wikidataId": "https://www.wikidata.org/wiki/Q54878968",
       "types": [
@@ -20224,6 +20293,35 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/rna-ontology-q99546338/",
       "description": "ontology for all aspects of RNA",
       "category": "Life Sciences & Healthcare"
+    },
+    {
+      "title": "ROBOKOP",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140876601",
+      "types": [
+        "KnowledgeGraph"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/robokop/",
+      "description": "Knowledge graph system for exploring relationships between biomedical entities",
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://robokop.renci.org/",
+      "sourceRepo": "https://github.com/NCATS-Gamma/robokop",
+      "creators": [
+        {
+          "name": "Karamarie Fecho",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q90242182"
+        },
+        {
+          "name": "Renaissance Computing Institute",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7312413"
+        },
+        {
+          "name": "University of North Carolina at Chapel Hill",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q192334"
+        }
+      ]
     },
     {
       "title": "ROF character",
@@ -24305,6 +24403,39 @@
       "description": "UniPathway is a manually curated resource of metabolic pathways for the UniProtKB/Swiss-Prot knowledgebase. It provides a structured controlled vocabulary to describe the role of a protein in a metabolic pathway.",
       "category": "Life Sciences & Healthcare",
       "sourceRepo": "https://github.com/geneontology/unipathway"
+    },
+    {
+      "title": "UniProt",
+      "wikidataId": "https://www.wikidata.org/wiki/Q905695",
+      "types": [
+        "KnowledgeGraph"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/uniprot/",
+      "description": "database of protein sequence and functional information",
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://www.uniprot.org/",
+      "partOf": "ELIXIR EMBL-EBI Node",
+      "creators": [
+        {
+          "name": "EMBL's European Bioinformatics Institute",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q1341845"
+        },
+        {
+          "name": "Protein Information Resource",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q1256927"
+        },
+        {
+          "name": "SIB Swiss Institute of Bioinformatics",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q3152521"
+        }
+      ],
+      "licenses": [
+        "Creative Commons Attribution 4.0 International",
+        "Creative Commons Attribution-NoDerivs 3.0 Unported"
+      ]
     },
     {
       "title": "Unique Entity Identifier",

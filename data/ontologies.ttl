@@ -2513,6 +2513,7 @@
 <https://openknowledgegraphs.com/resource/courage-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "COURAGE Knowledge Graph" ;
     okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Hungarian_Academy_of_Sciences_Q265058 ;
     okg:description "registry about cultural heritage of dissent in former socialist countries" ;
     okg:homepage <http://cultural-opposition.eu> ;
     okg:title "COURAGE Knowledge Graph" ;
@@ -2653,6 +2654,7 @@
 <https://openknowledgegraphs.com/resource/culture-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "Culture Knowledge Graph" ;
     okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_NFDI4Culture_Q98276929 ;
     okg:description "Knowledge Graph connecting all research data produced within the NFDI4Culture research landscape" ;
     okg:homepage <https://nfdi4culture.de/de/ressourcen/knowledge-graph.html> ;
     okg:title "Culture Knowledge Graph" ;
@@ -3204,6 +3206,16 @@
     okg:namespaceURI dc: ;
     okg:title "Dublin Core Metadata Element Set" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q624610> .
+
+<https://openknowledgegraphs.com/resource/dublin-core-metadata-terms/> a okg:Ontology ;
+    rdfs:label "Dublin Core Metadata Terms" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Thomas_Baker_Q46914185 ;
+    okg:description "Extended vocabulary of metadata terms maintained by DCMI; includes DCMES elements plus properties, classes, datatypes, and encoding schemes for RDF and Linked Data" ;
+    okg:homepage <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/> ;
+    okg:sourceRepo <https://github.com/dcmi/vocabtool> ;
+    okg:title "Dublin Core Metadata Terms" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140878702> .
 
 <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/> a okg:ControlledVocabulary ;
     rdfs:label "Dutch National Thesaurus for Author Names" ;
@@ -14964,6 +14976,9 @@
 <https://openknowledgegraphs.com/resource/era-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "ERA Knowledge Graph" ;
     okg:category okg:TechnologyWeb ;
+    okg:creator okg:Creator_European_Commission_Q8880 ;
+    okg:description "EU infrastructure for European railway network data and interoperability" ;
+    okg:homepage <https://www.era.europa.eu/domains/registers/era-knowlege-graph_en> ;
     okg:title "ERA Knowledge Graph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130626355> .
 
@@ -21577,6 +21592,7 @@
 <https://openknowledgegraphs.com/resource/monarch-knowledge-graph/> a okg:KnowledgeGraph ;
     rdfs:label "Monarch Knowledge Graph" ;
     okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_The_Monarch_Initiative_Q34645736 ;
     okg:description "Cross-species biomedical knowledge graph integrating disease, phenotype, gene, and ortholog data from ~20 source ontologies and datasets, built by the Monarch Initiative" ;
     okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <https://data.monarchinitiative.org/monarch-kg/index.html> ;
@@ -23555,6 +23571,16 @@
     okg:title "Physico-chemical methods and properties" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114677850> .
 
+<https://openknowledgegraphs.com/resource/pico-ontology/> a okg:Ontology ;
+    rdfs:label "PICO Ontology" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_Cochrane_Q1105202 ;
+    okg:description "Formal ontology for PICO (Population, Intervention, Comparison, Outcome) framework used in systematic reviews" ;
+    okg:homepage <https://data.cochrane.org/ontologies/pico/index-en.html> ;
+    okg:sourceRepo <https://data.cochrane.org/ontologies/pico/> ;
+    okg:title "PICO Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140870185> .
+
 <https://openknowledgegraphs.com/resource/pim-authority/> a okg:ControlledVocabulary ;
     rdfs:label "PIM authority" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -25014,6 +25040,18 @@
     okg:homepage <http://roc.bgsu.edu> ;
     okg:title "RNA Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118589> .
+
+<https://openknowledgegraphs.com/resource/robokop/> a okg:KnowledgeGraph ;
+    rdfs:label "ROBOKOP" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_Karamarie_Fecho_Q90242182,
+        okg:Creator_Renaissance_Computing_Institute_Q7312413,
+        okg:Creator_University_of_North_Carolina_at_Chapel_Hill_Q192334 ;
+    okg:description "Knowledge graph system for exploring relationships between biomedical entities" ;
+    okg:homepage <https://robokop.renci.org/> ;
+    okg:sourceRepo <https://github.com/NCATS-Gamma/robokop> ;
+    okg:title "ROBOKOP" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140876601> .
 
 <https://openknowledgegraphs.com/resource/rof-character-for-rda/> a okg:ControlledVocabulary ;
     rdfs:label "ROF character for RDA" ;
@@ -27726,6 +27764,20 @@
     okg:title "Unipathway" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q85719315> .
 
+<https://openknowledgegraphs.com/resource/uniprot/> a okg:KnowledgeGraph ;
+    rdfs:label "UniProt" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_EMBL_s_European_Bioinformatics_Institute_Q1341845,
+        okg:Creator_Protein_Information_Resource_Q1256927,
+        okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 ;
+    okg:description "database of protein sequence and functional information" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257,
+        okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 ;
+    okg:homepage <https://www.uniprot.org/> ;
+    okg:partOf "ELIXIR EMBL-EBI Node" ;
+    okg:title "UniProt" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q905695> .
+
 <https://openknowledgegraphs.com/resource/unique-entity-identifier/> a okg:ControlledVocabulary ;
     rdfs:label "Unique Entity Identifier" ;
     okg:category okg:GovernmentPublicSector ;
@@ -28631,6 +28683,10 @@ okg:Creator_Claver_Boundja_Andely_Beeve_Q102035972 a okg:Person ;
     rdfs:label "Claver Boundja Andely-Beeve" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q102035972> .
 
+okg:Creator_Cochrane_Q1105202 a okg:Organization ;
+    rdfs:label "Cochrane" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1105202> .
+
 okg:Creator_Consejo_Nacional_de_Investigaciones_Cientificas_y_Tecnicas_Centro_Argentino_de_Informacion_Cientifica_y_Tecnologica_Q24214058 a okg:Organization ;
     rdfs:label "Consejo Nacional de Investigaciones Científicas y Técnicas, Centro Argentino de Información Científica y Tecnológica" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q24214058> .
@@ -28671,6 +28727,10 @@ okg:Creator_ELNET_Consortium_Q12361408 a okg:Organization ;
     rdfs:label "ELNET Consortium" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q12361408> .
 
+okg:Creator_EMBL_s_European_Bioinformatics_Institute_Q1341845 a okg:Organization ;
+    rdfs:label "EMBL's European Bioinformatics Institute" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1341845> .
+
 okg:Creator_Edward_Denison_Ross_Q1292041 a okg:Person ;
     rdfs:label "Edward Denison Ross" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1292041> .
@@ -28690,10 +28750,6 @@ okg:Creator_Erhard_Hinrichs_Q51843931 a okg:Person ;
 okg:Creator_Ernst_Wagner_Q1360479 a okg:Person ;
     rdfs:label "Ernst Wagner" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1360479> .
-
-okg:Creator_European_Commission_Q8880 a okg:Organization ;
-    rdfs:label "European Commission" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q8880> .
 
 okg:Creator_European_Holocaust_Research_Infrastructure_Q21755493 a okg:Organization ;
     rdfs:label "European Holocaust Research Infrastructure" ;
@@ -28835,6 +28891,10 @@ okg:Creator_Holger_Knublauch_Q98809810 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=okRcixMAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q98809810> .
 
+okg:Creator_Hungarian_Academy_of_Sciences_Q265058 a okg:Organization ;
+    rdfs:label "Hungarian Academy of Sciences" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q265058> .
+
 okg:Creator_IAB_Technology_Laboratory_Q135643489 a okg:Organization ;
     rdfs:label "IAB Technology Laboratory" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q135643489> .
@@ -28885,6 +28945,10 @@ okg:Creator_John_P_McCrae_Q47454172 a okg:Person ;
 okg:Creator_Jon_Edward_Ahlquist_Q2355365 a okg:Person ;
     rdfs:label "Jon Edward Ahlquist" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2355365> .
+
+okg:Creator_Karamarie_Fecho_Q90242182 a okg:Person ;
+    rdfs:label "Karamarie Fecho" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q90242182> .
 
 okg:Creator_Karin_Bertalan_Q137902211 a okg:Person ;
     rdfs:label "Karin Bertalan" ;
@@ -29002,6 +29066,10 @@ okg:Creator_Museum_of_the_City_of_Rio_de_Janeiro_Q10333503 a okg:Organization ;
     rdfs:label "Museum of the City of Rio de Janeiro" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q10333503> .
 
+okg:Creator_NFDI4Culture_Q98276929 a okg:Organization ;
+    rdfs:label "NFDI4Culture" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q98276929> .
+
 okg:Creator_National_Library_of_Australia_Q623578 a okg:Organization ;
     rdfs:label "National Library of Australia" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q623578> .
@@ -29085,6 +29153,10 @@ okg:Creator_Prime_Minister_s_Office_Q10677814 a okg:Organization ;
     rdfs:label "Prime Minister's Office" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q10677814> .
 
+okg:Creator_Protein_Information_Resource_Q1256927 a okg:Organization ;
+    rdfs:label "Protein Information Resource" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1256927> .
+
 okg:Creator_Public_Library_of_Science_Q233358 a okg:Organization ;
     rdfs:label "Public Library of Science" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q233358> .
@@ -29105,6 +29177,10 @@ okg:Creator_Raphael_Troncy_Q50290708 a okg:Person ;
     rdfs:label "Raphaël Troncy" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=1BxhcigAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50290708> .
+
+okg:Creator_Renaissance_Computing_Institute_Q7312413 a okg:Organization ;
+    rdfs:label "Renaissance Computing Institute" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7312413> .
 
 okg:Creator_Rhein_Kreis_Neuss_Q6253 a okg:Organization ;
     rdfs:label "Rhein-Kreis Neuss" ;
@@ -29131,6 +29207,10 @@ okg:Creator_Rotraut_Acker_Sutter_Q102348994 a okg:Person ;
 okg:Creator_Ryan_Shaw_Q104904906 a okg:Person ;
     rdfs:label "Ryan Shaw" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104904906> .
+
+okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 a okg:Organization ;
+    rdfs:label "SIB Swiss Institute of Bioinformatics" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q3152521> .
 
 okg:Creator_Sage_Publishing_Q251266 a okg:Organization ;
     rdfs:label "Sage Publishing" ;
@@ -29206,9 +29286,18 @@ okg:Creator_Tanja_Bekhuis_Q30504725 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=sRTte5AAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q30504725> .
 
+okg:Creator_The_Monarch_Initiative_Q34645736 a okg:Organization ;
+    rdfs:label "The Monarch Initiative" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q34645736> .
+
 okg:Creator_The_Open_University_Q2413375 a okg:Organization ;
     rdfs:label "The Open University" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2413375> .
+
+okg:Creator_Thomas_Baker_Q46914185 a okg:Person ;
+    rdfs:label "Thomas Baker" ;
+    okg:githubProfile <https://github.com/tombaker> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q46914185> .
 
 okg:Creator_Timothy_W_Clark_Q30743874 a okg:Person ;
     rdfs:label "Timothy W. Clark" ;
@@ -29225,6 +29314,10 @@ okg:Creator_United_Nations_Group_of_Experts_on_Geographical_Names_Q838685 a okg:
 okg:Creator_United_States_National_Library_of_Medicine_Q611833 a okg:Organization ;
     rdfs:label "United States National Library of Medicine" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q611833> .
+
+okg:Creator_University_of_North_Carolina_at_Chapel_Hill_Q192334 a okg:Organization ;
+    rdfs:label "University of North Carolina at Chapel Hill" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q192334> .
 
 okg:Creator_Ute_Monika_Schwob_Q95200817 a okg:Person ;
     rdfs:label "Ute Monika Schwob" ;
@@ -29297,10 +29390,6 @@ okg:License_Creative_Commons_Attribution_3_0_IGO_Q26259495 a okg:License ;
 okg:License_Creative_Commons_Attribution_3_0_Netherlands_Q53859967 a okg:License ;
     rdfs:label "Creative Commons Attribution 3.0 Netherlands" ;
     okg:licenseName "Creative Commons Attribution 3.0 Netherlands" .
-
-okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 a okg:License ;
-    rdfs:label "Creative Commons Attribution-NoDerivs 3.0 Unported" ;
-    okg:licenseName "Creative Commons Attribution-NoDerivs 3.0 Unported" .
 
 okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_2_0_Generic_Q28050835 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" ;
@@ -29405,6 +29494,10 @@ okg:Creator_David_Shotton_Q28913576 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=YyvE-_oAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q28913576> .
 
+okg:Creator_European_Commission_Q8880 a okg:Organization ;
+    rdfs:label "European Commission" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q8880> .
+
 okg:Creator_Filipi_Miranda_Soares_Q111524976 a okg:Person ;
     rdfs:label "Filipi Miranda Soares" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=75U3PgEAAAAJ> ;
@@ -29468,6 +29561,10 @@ okg:InternationalDevelopment a okg:Category ;
 okg:License_Apache_License_Q616526 a okg:License ;
     rdfs:label "Apache License" ;
     okg:licenseName "Apache License" .
+
+okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 a okg:License ;
+    rdfs:label "Creative Commons Attribution-NoDerivs 3.0 Unported" ;
+    okg:licenseName "Creative Commons Attribution-NoDerivs 3.0 Unported" .
 
 okg:License_Creative_Commons_Attribution_NonCommercial_NoDerivatives_4_0_International_Q24082749 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International" ;
