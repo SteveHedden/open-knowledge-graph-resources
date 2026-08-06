@@ -361,22 +361,6 @@
     okg:title "Authority file of the Valencian Library" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q127257982> .
 
-<https://openknowledgegraphs.com/resource/autores-uy/> a okg:ControlledVocabulary ;
-    rdfs:label "Autores.uy" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Creative_Commons_Uruguay_Q22972975,
-        okg:Creator_Wikimedia_Uruguay_Q18559903 ;
-    okg:description "Uruguayan authors database" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_ShareAlike_4_0_International_Q18199165 ;
-    okg:homepage <http://autores.uy> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/adamlink/>,
-        <https://openknowledgegraphs.com/resource/archaeological-cadastre/>,
-        <https://openknowledgegraphs.com/resource/archer/>,
-        <https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/>,
-        <https://openknowledgegraphs.com/resource/austlang/> ;
-    okg:title "Autores.uy" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q22975461> .
-
 <https://openknowledgegraphs.com/resource/autoridades-upsa/> a okg:ControlledVocabulary ;
     rdfs:label "Autoridades UPSA" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -21334,6 +21318,22 @@
     okg:title "Filicophyta" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3071822> .
 
+<https://openknowledgegraphs.com/resource/financial-industry-business-ontology/> a okg:Ontology ;
+    rdfs:label "Financial Industry Business Ontology" ;
+    okg:category okg:FinanceBusiness ;
+    okg:creator okg:Creator_Object_Management_Group_Q252733 ;
+    okg:description "OWL/RDF ontology defining the terms and relationships of the financial industry, jointly developed by the EDM Council and Object Management Group" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://spec.edmcouncil.org/fibo/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
+        <https://openknowledgegraphs.com/resource/economics-ontology/>,
+        <https://openknowledgegraphs.com/resource/epcis/>,
+        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
+        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/> ;
+    okg:sourceRepo <https://github.com/edmcouncil/fibo> ;
+    okg:title "Financial Industry Business Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140909448> .
+
 <https://openknowledgegraphs.com/resource/finnish-land-register/> a okg:ControlledVocabulary ;
     rdfs:label "Finnish land register" ;
     okg:category okg:Geospatial ;
@@ -36513,6 +36513,10 @@ okg:Creator_Nikola_Moushmov_Q7035608 a okg:Person ;
     rdfs:label "Nikola Moushmov" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7035608> .
 
+okg:Creator_Object_Management_Group_Q252733 a okg:Organization ;
+    rdfs:label "Object Management Group" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q252733> .
+
 okg:Creator_Ontotext_Q7095072 a okg:Organization ;
     rdfs:label "Ontotext" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7095072> .
@@ -36790,6 +36794,10 @@ okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_2_0_Generic_Q2
     rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" ;
     okg:licenseName "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" .
 
+okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_3_0_Unported_Q15643954 a okg:License ;
+    rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported" ;
+    okg:licenseName "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported" .
+
 okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_4_0_International_Q42553662 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International" ;
     okg:licenseName "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International" .
@@ -36882,6 +36890,22 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Arctic Report Card" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q4787541> .
 
+<https://openknowledgegraphs.com/resource/autores-uy/> a okg:ControlledVocabulary ;
+    rdfs:label "Autores.uy" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Creative_Commons_Uruguay_Q22972975,
+        okg:Creator_Wikimedia_Uruguay_Q18559903 ;
+    okg:description "Uruguayan authors database" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_ShareAlike_4_0_International_Q18199165 ;
+    okg:homepage <http://autores.uy> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/adamlink/>,
+        <https://openknowledgegraphs.com/resource/archaeological-cadastre/>,
+        <https://openknowledgegraphs.com/resource/archer/>,
+        <https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/>,
+        <https://openknowledgegraphs.com/resource/costume-core/> ;
+    okg:title "Autores.uy" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q22975461> .
+
 <https://openknowledgegraphs.com/resource/blinding-identity-taxonomy-bit/> a okg:Taxonomy ;
     rdfs:label "Blinding Identity Taxonomy (BIT)" ;
     okg:category okg:TechnologyWeb ;
@@ -36910,6 +36934,22 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Brick schema" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q108937928> .
 
+<https://openknowledgegraphs.com/resource/costume-core/> a okg:ControlledVocabulary,
+        okg:Ontology ;
+    rdfs:label "Costume Core" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:description "specification for cataloging historic clothing" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_3_0_Unported_Q15643954,
+        okg:License_Creative_Commons_Attribution_ShareAlike_4_0_International_Q18199165 ;
+    okg:homepage <http://www.ardenkirkland.com/costumecore/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/adamlink/>,
+        <https://openknowledgegraphs.com/resource/archaeological-cadastre/>,
+        <https://openknowledgegraphs.com/resource/archer/>,
+        <https://openknowledgegraphs.com/resource/autores-uy/>,
+        <https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/> ;
+    okg:title "Costume Core" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q100251806> .
+
 <https://openknowledgegraphs.com/resource/d3fend-ontology/> a okg:Ontology ;
     rdfs:label "D3FEND Ontology" ;
     okg:category okg:TechnologyWeb ;
@@ -36936,8 +36976,8 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <https://cst.ku.dk/projekter/dannet/> ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/bibliographic-ontology/>,
-        <https://openknowledgegraphs.com/resource/costume-core/>,
         <https://openknowledgegraphs.com/resource/eviterbo/>,
+        <https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/>,
         <https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/>,
         <https://openknowledgegraphs.com/resource/rda-track-configuration/> ;
     okg:title "DanNet" ;
@@ -37842,20 +37882,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Corporate body name authority list" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130947725> .
 
-<https://openknowledgegraphs.com/resource/costume-core/> a okg:ControlledVocabulary,
-        okg:Ontology ;
-    rdfs:label "Costume Core" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:description "specification for cataloging historic clothing" ;
-    okg:homepage <http://www.ardenkirkland.com/costumecore/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/adamlink/>,
-        <https://openknowledgegraphs.com/resource/archaeological-cadastre/>,
-        <https://openknowledgegraphs.com/resource/archer/>,
-        <https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/>,
-        <https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/> ;
-    okg:title "Costume Core" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q100251806> .
-
 <https://openknowledgegraphs.com/resource/cyber-investigation-analysis-standard-expression-ontology/> a okg:Ontology ;
     rdfs:label "Cyber-investigation Analysis Standard Expression Ontology" ;
     okg:category okg:TechnologyWeb ;
@@ -38069,10 +38095,6 @@ okg:License_Creative_Commons_Attribution_2_0_Generic_Q19125117 a okg:License ;
     rdfs:label "Creative Commons Attribution 2.0 Generic" ;
     okg:licenseName "Creative Commons Attribution 2.0 Generic" .
 
-okg:License_MIT_License_Q334661 a okg:License ;
-    rdfs:label "MIT License" ;
-    okg:licenseName "MIT License" .
-
 okg:License_proprietary_license_Q3238057 a okg:License ;
     rdfs:label "proprietary license" ;
     okg:licenseName "proprietary license" .
@@ -38279,6 +38301,10 @@ okg:License_Artistic_License_2_0_Q14624826 a okg:License ;
     rdfs:label "Artistic License 2.0" ;
     okg:licenseName "Artistic License 2.0" .
 
+okg:License_MIT_License_Q334661 a okg:License ;
+    rdfs:label "MIT License" ;
+    okg:licenseName "MIT License" .
+
 okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     rdfs:label "Open Data Commons Attribution License" ;
     okg:licenseName "Open Data Commons Attribution License" .
@@ -38457,21 +38483,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <https://openknowledgegraphs.com/resource/zebrafish-developmental-stages-ontology/> ;
     okg:title "Infectious Disease Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118413> .
-
-<https://openknowledgegraphs.com/resource/integrated-authority-file/> a okg:ControlledVocabulary ;
-    rdfs:label "Integrated Authority File" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_German_National_Library_Q27302 ;
-    okg:description "German National Library authority file for personal names, subject headings and corporate bodies" ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <https://gnd.network/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/camp-list/>,
-        <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/>,
-        <https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/>,
-        <https://openknowledgegraphs.com/resource/kanto/>,
-        <https://openknowledgegraphs.com/resource/yale-lux/> ;
-    okg:title "Integrated Authority File" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q36578> .
 
 <https://openknowledgegraphs.com/resource/kbpedia/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -38950,6 +38961,21 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
         <https://openknowledgegraphs.com/resource/fish-thesaurus-of-monument-types/> ;
     okg:title "Historic England Periods" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q77938635> .
+
+<https://openknowledgegraphs.com/resource/integrated-authority-file/> a okg:ControlledVocabulary ;
+    rdfs:label "Integrated Authority File" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_German_National_Library_Q27302 ;
+    okg:description "German National Library authority file for personal names, subject headings and corporate bodies" ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <https://gnd.network/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/camp-list/>,
+        <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/>,
+        <https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/>,
+        <https://openknowledgegraphs.com/resource/kanto/>,
+        <https://openknowledgegraphs.com/resource/yale-lux/> ;
+    okg:title "Integrated Authority File" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q36578> .
 
 <https://openknowledgegraphs.com/resource/k-scholar/> a okg:ControlledVocabulary ;
     rdfs:label "K-Scholar" ;
@@ -39449,10 +39475,6 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     okg:title "Solanaceae Phenotype Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q99542996> .
 
-okg:License_Creative_Commons_Attribution_ShareAlike_4_0_International_Q18199165 a okg:License ;
-    rdfs:label "Creative Commons Attribution-ShareAlike 4.0 International" ;
-    okg:licenseName "Creative Commons Attribution-ShareAlike 4.0 International" .
-
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
     okg:licenseName "W3C Software License" .
@@ -39519,6 +39541,10 @@ okg:Creator_Library_of_Congress_Q131454 a okg:Organization ;
     rdfs:label "Library of Congress" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q131454> .
 
+okg:License_Creative_Commons_Attribution_ShareAlike_4_0_International_Q18199165 a okg:License ;
+    rdfs:label "Creative Commons Attribution-ShareAlike 4.0 International" ;
+    okg:licenseName "Creative Commons Attribution-ShareAlike 4.0 International" .
+
 okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
     rdfs:label "3-clause BSD License" ;
     okg:licenseName "3-clause BSD License" .
@@ -39564,22 +39590,6 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
     okg:sourceRepo <https://gitlab.com/era-europa-eu/public> ;
     okg:title "ERA Vocabulary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130382269> .
-
-<https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/> a okg:ControlledVocabulary,
-        okg:Ontology ;
-    rdfs:label "Film Club Knowledge Graph (FCKG)" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:description "An RDF knowledge graph of award nominations across six major film award systems, with a SHACL-based ontology for validation and inference. Designed for predictive modeling, longitudinal analysis, and enrichment via external APIs." ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <https://stevehedden.github.io/fckg/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/camp-list/>,
-        <https://openknowledgegraphs.com/resource/costume-core/>,
-        <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/>,
-        <https://openknowledgegraphs.com/resource/kanto/>,
-        <https://openknowledgegraphs.com/resource/yale-lux/> ;
-    okg:sourceRepo <https://github.com/SteveHedden/fckg> ;
-    okg:title "Film Club Knowledge Graph (FCKG)" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138610409> .
 
 <https://openknowledgegraphs.com/resource/general-finnish-ontology/> a okg:ControlledVocabulary,
         okg:Ontology ;
@@ -39682,45 +39692,21 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
     okg:title "Australian Standard Classification of Education" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q109011716> .
 
-<https://openknowledgegraphs.com/resource/epcis/> a okg:Ontology ;
-    rdfs:label "EPCIS" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "global GS1 standard" ;
-    okg:homepage <https://ref.gs1.org/standards/epcis/artefacts> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
-        <https://openknowledgegraphs.com/resource/economics-ontology/>,
-        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
-        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
-        <https://openknowledgegraphs.com/resource/goodrelations/> ;
-    okg:title "EPCIS" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1275619> .
-
-<https://openknowledgegraphs.com/resource/ethereum-ontology/> a okg:Ontology ;
-    rdfs:label "Ethereum ontology" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "ontology of the Ethereum protocol" ;
-    okg:homepage <https://consensys.github.io/EthOn/EthOn_spec.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
-        <https://openknowledgegraphs.com/resource/economics-ontology/>,
-        <https://openknowledgegraphs.com/resource/epcis/>,
-        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
-        <https://openknowledgegraphs.com/resource/goodrelations/> ;
-    okg:sourceRepo <https://github.com/ConsenSys/EthOn> ;
-    okg:title "Ethereum ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q61883314> .
-
-<https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/> a okg:Ontology ;
-    rdfs:label "GLEIF LEI model in RDF" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "suite of RDF/OWL ontologies for representing Legal Entity Identifier data" ;
-    okg:homepage <https://www.gleif.org/en/lei-data/semantic-representation-of-the-lei/lei-model-in-rdf-resource-description-framework> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
-        <https://openknowledgegraphs.com/resource/economics-ontology/>,
-        <https://openknowledgegraphs.com/resource/epcis/>,
-        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
-        <https://openknowledgegraphs.com/resource/goodrelations/> ;
-    okg:title "GLEIF LEI model in RDF" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140639079> .
+<https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/> a okg:ControlledVocabulary,
+        okg:Ontology ;
+    rdfs:label "Film Club Knowledge Graph (FCKG)" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:description "An RDF knowledge graph of award nominations across six major film award systems, with a SHACL-based ontology for validation and inference. Designed for predictive modeling, longitudinal analysis, and enrichment via external APIs." ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <https://stevehedden.github.io/fckg/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/camp-list/>,
+        <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/>,
+        <https://openknowledgegraphs.com/resource/integrated-authority-file/>,
+        <https://openknowledgegraphs.com/resource/kanto/>,
+        <https://openknowledgegraphs.com/resource/yale-lux/> ;
+    okg:sourceRepo <https://github.com/SteveHedden/fckg> ;
+    okg:title "Film Club Knowledge Graph (FCKG)" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q138610409> .
 
 okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
     rdfs:label "Creative Commons Attribution" ;
@@ -39765,6 +39751,19 @@ okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
     okg:title "Cochrane linked-data vocabulary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q76161329> .
 
+<https://openknowledgegraphs.com/resource/epcis/> a okg:Ontology ;
+    rdfs:label "EPCIS" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "global GS1 standard" ;
+    okg:homepage <https://ref.gs1.org/standards/epcis/artefacts> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
+        <https://openknowledgegraphs.com/resource/economics-ontology/>,
+        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
+        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
+        <https://openknowledgegraphs.com/resource/goodrelations/> ;
+    okg:title "EPCIS" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1275619> .
+
 <https://openknowledgegraphs.com/resource/estonian-wordnet/> a okg:ControlledVocabulary,
         okg:KnowledgeGraph ;
     rdfs:label "Estonian Wordnet" ;
@@ -39777,6 +39776,20 @@ okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
         <https://openknowledgegraphs.com/resource/ruwordnet/> ;
     okg:title "Estonian Wordnet" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q31277898> .
+
+<https://openknowledgegraphs.com/resource/ethereum-ontology/> a okg:Ontology ;
+    rdfs:label "Ethereum ontology" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "ontology of the Ethereum protocol" ;
+    okg:homepage <https://consensys.github.io/EthOn/EthOn_spec.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
+        <https://openknowledgegraphs.com/resource/economics-ontology/>,
+        <https://openknowledgegraphs.com/resource/epcis/>,
+        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
+        <https://openknowledgegraphs.com/resource/goodrelations/> ;
+    okg:sourceRepo <https://github.com/ConsenSys/EthOn> ;
+    okg:title "Ethereum ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q61883314> .
 
 <https://openknowledgegraphs.com/resource/federal-registry-of-health-establishments-argentina/> a okg:ControlledVocabulary ;
     rdfs:label "Federal Registry of Health Establishments (Argentina)" ;
@@ -39802,6 +39815,19 @@ okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
         <https://openknowledgegraphs.com/resource/reasonable-ontology-templates-ottr/> ;
     okg:title "FO(.)" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q110921241> .
+
+<https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/> a okg:Ontology ;
+    rdfs:label "GLEIF LEI model in RDF" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "suite of RDF/OWL ontologies for representing Legal Entity Identifier data" ;
+    okg:homepage <https://www.gleif.org/en/lei-data/semantic-representation-of-the-lei/lei-model-in-rdf-resource-description-framework> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
+        <https://openknowledgegraphs.com/resource/economics-ontology/>,
+        <https://openknowledgegraphs.com/resource/epcis/>,
+        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
+        <https://openknowledgegraphs.com/resource/goodrelations/> ;
+    okg:title "GLEIF LEI model in RDF" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140639079> .
 
 <https://openknowledgegraphs.com/resource/kenet/> a okg:ControlledVocabulary,
         okg:KnowledgeGraph ;
@@ -39952,19 +39978,6 @@ okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
     okg:title "street list of Aachen" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2025684> .
 
-<https://openknowledgegraphs.com/resource/bank-ontology/> a okg:Ontology ;
-    rdfs:label "Bank Ontology" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "ontology for banking and financial services concepts" ;
-    okg:homepage <http://world-comp.org/p2011/IKE5165.pdf> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/economics-ontology/>,
-        <https://openknowledgegraphs.com/resource/epcis/>,
-        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
-        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
-        <https://openknowledgegraphs.com/resource/goodrelations/> ;
-    okg:title "Bank Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118244> .
-
 <https://openknowledgegraphs.com/resource/bibliographia-medica-cechoslovaca/> a okg:ControlledVocabulary ;
     rdfs:label "Bibliographia Medica Čechoslovaca" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -39978,19 +39991,6 @@ okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
         <https://openknowledgegraphs.com/resource/k-scholar/> ;
     okg:title "Bibliographia Medica Čechoslovaca" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q27970267> .
-
-<https://openknowledgegraphs.com/resource/economics-ontology/> a okg:Ontology ;
-    rdfs:label "Economics Ontology" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "ontology" ;
-    okg:homepage <http://kw1.uni-paderborn.de/fileadmin/kw/institute-einrichtungen/humanwissenschaften/philosophie/personal/hagengruber/PublikationenDateien/45-60/ECO.pdf> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
-        <https://openknowledgegraphs.com/resource/epcis/>,
-        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
-        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
-        <https://openknowledgegraphs.com/resource/goodrelations/> ;
-    okg:title "Economics Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118367> .
 
 <https://openknowledgegraphs.com/resource/faoterm/> a okg:ControlledVocabulary ;
     rdfs:label "FAOTERM" ;
@@ -40063,6 +40063,19 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
     okg:title "Aquatic Sciences and Fisheries Thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q109180016> .
 
+<https://openknowledgegraphs.com/resource/bank-ontology/> a okg:Ontology ;
+    rdfs:label "Bank Ontology" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "ontology for banking and financial services concepts" ;
+    okg:homepage <http://world-comp.org/p2011/IKE5165.pdf> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/economics-ontology/>,
+        <https://openknowledgegraphs.com/resource/epcis/>,
+        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
+        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
+        <https://openknowledgegraphs.com/resource/goodrelations/> ;
+    okg:title "Bank Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118244> .
+
 <https://openknowledgegraphs.com/resource/cabi-thesaurus/> a okg:ControlledVocabulary ;
     rdfs:label "CABI Thesaurus" ;
     okg:category okg:EnvironmentAgriculture ;
@@ -40087,6 +40100,19 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
         <https://openknowledgegraphs.com/resource/general-multilingual-environmental-thesaurus/> ;
     okg:title "Cadastro Ambiental Rural" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q131861687> .
+
+<https://openknowledgegraphs.com/resource/economics-ontology/> a okg:Ontology ;
+    rdfs:label "Economics Ontology" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "ontology" ;
+    okg:homepage <http://kw1.uni-paderborn.de/fileadmin/kw/institute-einrichtungen/humanwissenschaften/philosophie/personal/hagengruber/PublikationenDateien/45-60/ECO.pdf> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/bank-ontology/>,
+        <https://openknowledgegraphs.com/resource/epcis/>,
+        <https://openknowledgegraphs.com/resource/ethereum-ontology/>,
+        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
+        <https://openknowledgegraphs.com/resource/goodrelations/> ;
+    okg:title "Economics Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118367> .
 
 <https://openknowledgegraphs.com/resource/federal-reserve-subject-taxonomy/> a okg:ControlledVocabulary ;
     rdfs:label "Federal Reserve Subject Taxonomy" ;
@@ -41022,9 +41048,6 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
 okg:Geospatial a okg:Category ;
     rdfs:label "Geospatial" .
 
-okg:FinanceBusiness a okg:Category ;
-    rdfs:label "Finance & Business" .
-
 <https://openknowledgegraphs.com/resource/bio2rdf-chembl/> a okg:KnowledgeGraph ;
     rdfs:label "bio2rdf-chembl" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -41050,6 +41073,9 @@ okg:FinanceBusiness a okg:Category ;
         <https://openknowledgegraphs.com/resource/bio2rdf-irefindex/> ;
     okg:title "bio2rdf-goa" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138358776> .
+
+okg:FinanceBusiness a okg:Category ;
+    rdfs:label "Finance & Business" .
 
 <https://openknowledgegraphs.com/resource/addgene/> a okg:KnowledgeGraph ;
     rdfs:label "Addgene" ;

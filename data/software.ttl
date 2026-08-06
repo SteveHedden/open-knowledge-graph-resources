@@ -603,8 +603,8 @@
     rdfs:label "N3.js" ;
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "2.1.2" ;
-    okg:releaseDate "2026-08-02"^^xsd:date ;
+    okg:latestVersion "2.2.0" ;
+    okg:releaseDate "2026-08-05"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:title "N3.js" ;
@@ -700,8 +700,8 @@
     rdfs:label "open-ontologies" ;
     okg:description "Open-source ontology engine for RDF and OWL with SPARQL querying, SHACL validation, and OWL2-DL reasoning. Written in Rust and runs as a lightweight MCP server." ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "1.0.0" ;
-    okg:releaseDate "2026-06-13"^^xsd:date ;
+    okg:latestVersion "1.1.1" ;
+    okg:releaseDate "2026-08-05"^^xsd:date ;
     okg:softwareType okg:ReasoningInference ;
     okg:sourceRepo <https://github.com/fabio-rovai/open-ontologies> ;
     okg:title "open-ontologies" ;

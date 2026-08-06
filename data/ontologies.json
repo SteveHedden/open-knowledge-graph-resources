@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T05:42:38Z",
+  "generatedAt": "2026-08-06T08:46:13Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -2332,6 +2332,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Costume Core",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/costume-core/"
+        },
+        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -2346,10 +2350,6 @@
         {
           "title": "Archivio di Autorità del Museo Galileo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
-        },
-        {
-          "title": "AUSTLANG",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/austlang/"
         }
       ]
     },
@@ -8025,10 +8025,18 @@
       "description": "specification for cataloging historic clothing",
       "category": "Library & Cultural Heritage",
       "homepage": "http://www.ardenkirkland.com/costumecore/",
+      "licenses": [
+        "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+        "Creative Commons Attribution-ShareAlike 4.0 International"
+      ],
       "relatedTools": [
         {
           "title": "Film Club Knowledge Graph (FCKG)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
+        },
+        {
+          "title": "Autores.uy",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/autores-uy/"
         },
         {
           "title": "Adamlink",
@@ -8041,10 +8049,6 @@
         {
           "title": "ARCHER",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archer/"
-        },
-        {
-          "title": "Archivio di Autorità del Museo Galileo",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
         }
       ]
     },
@@ -8891,10 +8895,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographic-ontology/"
         },
         {
-          "title": "Costume Core",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/costume-core/"
-        },
-        {
           "title": "eViterbo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/eviterbo/"
         },
@@ -8905,6 +8905,10 @@
         {
           "title": "RDA track configuration",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/rda-track-configuration/"
+        },
+        {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         }
       ]
     },
@@ -12834,10 +12838,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/camp-list/"
         },
         {
-          "title": "Costume Core",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/costume-core/"
-        },
-        {
           "title": "Dutch National Thesaurus for Author Names",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
@@ -12848,6 +12848,54 @@
         {
           "title": "Yale LUX",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
+        },
+        {
+          "title": "Integrated Authority File",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
+        }
+      ]
+    },
+    {
+      "title": "Financial Industry Business Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140909448",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/financial-industry-business-ontology/",
+      "description": "OWL/RDF ontology defining the terms and relationships of the financial industry, jointly developed by the EDM Council and Object Management Group",
+      "category": "Finance & Business",
+      "homepage": "https://spec.edmcouncil.org/fibo/",
+      "sourceRepo": "https://github.com/edmcouncil/fibo",
+      "creators": [
+        {
+          "name": "Object Management Group",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q252733"
+        }
+      ],
+      "licenses": [
+        "MIT License"
+      ],
+      "relatedTools": [
+        {
+          "title": "Bank Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/bank-ontology/"
+        },
+        {
+          "title": "Economics Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/economics-ontology/"
+        },
+        {
+          "title": "EPCIS",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/epcis/"
+        },
+        {
+          "title": "Ethereum ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ethereum-ontology/"
+        },
+        {
+          "title": "GLEIF LEI model in RDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/"
         }
       ]
     },
