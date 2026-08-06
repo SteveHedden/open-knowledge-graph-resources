@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T05:11:40Z",
+  "generatedAt": "2026-08-06T05:42:38Z",
   "items": [
     {
       "title": "4store",
@@ -30,16 +30,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/"
         },
         {
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+        },
+        {
           "title": "Neo4j",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         },
         {
           "title": "Virtuoso Universal Server",
           "canonicalUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/"
-        },
-        {
-          "title": "MarkLogic",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
         }
       ]
     },
@@ -371,7 +371,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/apache-rya/",
-      "description": "Mirror of Apache Rya",
+      "description": "distributed RDF triple store built on Apache Accumulo for scalable SPARQL querying over massive datasets",
       "homepage": "https://rya.apache.org/",
       "sourceRepo": "https://github.com/apache/rya",
       "creators": [
@@ -485,7 +485,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/",
-      "description": "database system",
+      "description": "multi-model graph database supporting SQL, Cypher, Gremlin, and MongoDB query language; conceptual fork of OrientDB",
       "homepage": "https://arcadedb.com",
       "sourceRepo": "https://github.com/ArcadeData/arcadedb",
       "creators": [
@@ -1370,7 +1370,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dgraph/",
-      "description": "graph database software",
+      "description": "distributed, horizontally scalable native GraphQL graph database written in Go",
       "homepage": "https://dgraph.io/",
       "sourceRepo": "https://github.com/dgraph-io/dgraph",
       "licenses": [
@@ -2785,8 +2785,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
         },
         {
-          "title": "qEndpoint",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+          "title": "Strabon",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/strabon/"
         }
       ]
     },
@@ -4278,6 +4278,10 @@
       ],
       "relatedTools": [
         {
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+        },
+        {
           "title": "InfiniteGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
         },
@@ -4292,10 +4296,6 @@
         {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
-        },
-        {
-          "title": "OrientDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
         }
       ]
     },
@@ -5358,7 +5358,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/",
-      "description": "SPARQL graph database system",
+      "description": "embeddable SPARQL and RDF graph database written in Rust, with Python, JavaScript, and CLI bindings",
       "homepage": "https://oxigraph.org",
       "sourceRepo": "https://github.com/oxigraph/oxigraph",
       "creators": [
@@ -5851,6 +5851,9 @@
           "wikidataId": "https://www.wikidata.org/wiki/Q100501108"
         }
       ],
+      "licenses": [
+        "GNU General Public License, version 3.0"
+      ],
       "latestVersion": "2.5.4",
       "releaseDate": "2025-12-18",
       "softwareType": "Graph Database",
@@ -5859,8 +5862,16 @@
       ],
       "relatedTools": [
         {
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
+        },
+        {
           "title": "InfiniteGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
+        },
+        {
+          "title": "4store",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         },
         {
           "title": "Halyard",
@@ -5869,14 +5880,6 @@
         {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
-        },
-        {
-          "title": "OrientDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
-        },
-        {
-          "title": "Polypheny",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
         }
       ]
     },
@@ -5977,16 +5980,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/"
         },
         {
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+        },
+        {
           "title": "Neo4j",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         },
         {
           "title": "AllegroGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
         }
       ]
     },
@@ -6654,16 +6657,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/"
         },
         {
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+        },
+        {
           "title": "Neo4j",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         },
         {
           "title": "Virtuoso Universal Server",
           "canonicalUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/"
-        },
-        {
-          "title": "MarkLogic",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
         }
       ]
     },
@@ -8528,7 +8531,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/terminusdb/",
-      "description": "open source graph database software",
+      "description": "open-source document graph database with Git-like version control for collaborative data management",
       "homepage": "https://terminusdb.org",
       "sourceRepo": "https://github.com/terminusdb/terminusdb",
       "licenses": [
