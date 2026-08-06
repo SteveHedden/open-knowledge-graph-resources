@@ -1318,6 +1318,7 @@ def run() -> int:
         label_entities.update(collect_entity_iris(software_base_rows, "license"))
         label_entities.update(collect_entity_iris(software_base_rows, "partOfEntity"))
         label_entities.update(collect_entity_iris(software_base_rows, "creator"))
+        label_entities.update(collect_entity_iris(software_base_rows, "programmingLanguage"))
 
         time.sleep(QUERY_PAUSE_SECONDS)
         logging.info("Querying Wikidata for labels of %d referenced entities", len(label_entities))
