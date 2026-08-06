@@ -534,6 +534,22 @@
     okg:title "Matey YARRRML editor" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140706223> .
 
+<https://openknowledgegraphs.com/software/mentor/> a okg:Software ;
+    rdfs:label "Mentor" ;
+    okg:creator okg:Creator_Ivo_Velitchkov_Q110818830 ;
+    okg:description "Visual Studio Code extension providing editing support for RDF languages and knowledge graphs" ;
+    okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
+    okg:homepage <https://mentor-vscode.dev> ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
+        <https://openknowledgegraphs.com/software/cubicweb/>,
+        <https://openknowledgegraphs.com/software/cwm/>,
+        <https://openknowledgegraphs.com/software/dotnetrdf/>,
+        <https://openknowledgegraphs.com/software/duck-rdf/> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/faubulous/mentor-vscode> ;
+    okg:title "Mentor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140916243> .
+
 <https://openknowledgegraphs.com/software/millenniumdb/> a okg:Software ;
     rdfs:label "MillenniumDB" ;
     okg:description "graph database system implemented in C++" ;
@@ -1725,6 +1741,10 @@ okg:Creator_Holger_Knublauch_Q98809810 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=okRcixMAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q98809810> .
 
+okg:Creator_Ivo_Velitchkov_Q110818830 a okg:Person ;
+    rdfs:label "Ivo Velitchkov" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q110818830> .
+
 okg:Creator_J_Harry_Caufield_Q85945198 a okg:Person ;
     rdfs:label "J Harry Caufield" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q85945198> .
@@ -2145,10 +2165,6 @@ okg:Creator_Steve_Hedden_Q140443546 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=8av-W5EAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140443546> .
 
-okg:Creator_Zazuko_Q93230157 a okg:Organization ;
-    rdfs:label "Zazuko" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q93230157> .
-
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
     okg:licenseName "W3C Software License" .
@@ -2464,6 +2480,10 @@ okg:Creator_Christopher_J_Mungall_Q20746118 a okg:Person ;
 okg:Creator_Lionel_Tailhardat_Q130811255 a okg:Person ;
     rdfs:label "Lionel Tailhardat" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130811255> .
+
+okg:Creator_Zazuko_Q93230157 a okg:Organization ;
+    rdfs:label "Zazuko" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q93230157> .
 
 okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a okg:License ;
     rdfs:label "GNU Lesser General Public License, version 3.0 or later" ;
@@ -3575,23 +3595,6 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:title "Blazegraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q20127748> .
 
-<https://openknowledgegraphs.com/software/cwm/> a okg:Software ;
-    rdfs:label "cwm" ;
-    okg:creator okg:Creator_Dan_Connolly_Q3013037,
-        okg:Creator_Tim_Berners_Lee_Q80 ;
-    okg:description "general-purpose data processing software for the Semantic Web" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <https://www.w3.org/2000/10/swap/doc/cwm> ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/cubicweb/>,
-        <https://openknowledgegraphs.com/software/emmontopy/>,
-        <https://openknowledgegraphs.com/software/kgx/>,
-        <https://openknowledgegraphs.com/software/pyshacl/>,
-        <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:title "cwm" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q50745537> .
-
 <https://openknowledgegraphs.com/software/excel-2-rdf/> a okg:Software ;
     rdfs:label "Excel 2 RDF" ;
     okg:creator okg:Creator_Sparna_Q117319690 ;
@@ -3751,7 +3754,8 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
 
 <https://openknowledgegraphs.com/software/yasgui/> a okg:Software ;
     rdfs:label "Yasgui" ;
-    okg:creator okg:Creator_Triply_Q110891877 ;
+    okg:creator okg:Creator_Triply_Q110891877,
+        okg:Creator_Zazuko_Q93230157 ;
     okg:description "Yet Another Sparql GUI" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://yasgui.triply.cc/> ;
@@ -3765,7 +3769,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
         <https://openknowledgegraphs.com/software/yasgui-matdata/> ;
     okg:releaseDate "2020-04-08"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
-    okg:sourceRepo <https://github.com/TriplyDB/Yasgui> ;
+    okg:sourceRepo <https://github.com/rdfjs/Yasgui> ;
     okg:title "Yasgui" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114893193> .
 
@@ -3778,6 +3782,23 @@ okg:Creator_Yoan_Chabot_Q120918268 a okg:Person ;
 okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:License ;
     rdfs:label "GNU Affero General Public License, version 3.0" ;
     okg:licenseName "GNU Affero General Public License, version 3.0" .
+
+<https://openknowledgegraphs.com/software/cwm/> a okg:Software ;
+    rdfs:label "cwm" ;
+    okg:creator okg:Creator_Dan_Connolly_Q3013037,
+        okg:Creator_Tim_Berners_Lee_Q80 ;
+    okg:description "general-purpose data processing software for the Semantic Web" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/2000/10/swap/doc/cwm> ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/cubicweb/>,
+        <https://openknowledgegraphs.com/software/emmontopy/>,
+        <https://openknowledgegraphs.com/software/kgx/>,
+        <https://openknowledgegraphs.com/software/pyshacl/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:title "cwm" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q50745537> .
 
 <https://openknowledgegraphs.com/software/hefquin/> a okg:Software ;
     rdfs:label "HeFQUIN" ;
@@ -4077,10 +4098,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "Semagrow" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653409> .
 
-okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
-    rdfs:label "GNU General Public License, version 3.0" ;
-    okg:licenseName "GNU General Public License, version 3.0" .
-
 <https://openknowledgegraphs.com/software/autosparql/> a okg:Software ;
     rdfs:label "AutoSparql" ;
     okg:description "Warning: Not working at the moment" ;
@@ -4237,6 +4254,10 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
 okg:AIAgentTooling a okg:SoftwareType ;
     rdfs:label "AI Agent Tooling" .
 
+okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
+    rdfs:label "GNU General Public License, version 3.0" ;
+    okg:licenseName "GNU General Public License, version 3.0" .
+
 <https://openknowledgegraphs.com/software/anapsid/> a okg:Software ;
     rdfs:label "anapsid" ;
     okg:description "adaptive query processing engine for SPARQL endpoints" ;
@@ -4271,42 +4292,6 @@ okg:AIAgentTooling a okg:SoftwareType ;
     okg:sourceRepo <https://github.com/comunica/comunica> ;
     okg:title "Comunica" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140764067> .
-
-<https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
-    rdfs:label "dotNetRDF" ;
-    okg:description "open source .NET library for RDF" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <http://dotnetrdf.org/> ;
-    okg:latestVersion "3.5.2" ;
-    okg:programmingLanguage ".NET Framework" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/duck-rdf/>,
-        <https://openknowledgegraphs.com/software/json-rql/>,
-        <https://openknowledgegraphs.com/software/rdf-ext/>,
-        <https://openknowledgegraphs.com/software/rdf-validate-shacl/>,
-        <https://openknowledgegraphs.com/software/shacl-engine/> ;
-    okg:releaseDate "2026-07-03"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://github.com/dotnetrdf/dotnetrdf> ;
-    okg:title "dotNetRDF" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q56844056> .
-
-<https://openknowledgegraphs.com/software/duck-rdf/> a okg:Software ;
-    rdfs:label "duck_rdf" ;
-    okg:description "DuckDB community extension for reading, writing, profiling, and querying RDF data" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://duckdb.org/community_extensions/extensions/rdf> ;
-    okg:latestVersion "2.8.1" ;
-    okg:programmingLanguage "C++" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/dotnetrdf/>,
-        <https://openknowledgegraphs.com/software/json-rql/>,
-        <https://openknowledgegraphs.com/software/rdf-ext/>,
-        <https://openknowledgegraphs.com/software/rdf-validate-shacl/>,
-        <https://openknowledgegraphs.com/software/shacl-engine/> ;
-    okg:releaseDate "2026-07-13"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://github.com/nonodename/duck_rdf> ;
-    okg:title "duck_rdf" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140685541> .
 
 <https://openknowledgegraphs.com/software/fluree/> a okg:Software ;
     rdfs:label "fluree" ;
@@ -4357,26 +4342,6 @@ okg:AIAgentTooling a okg:SoftwareType ;
     okg:title "4store" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29981675> .
 
-<https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
-    rdfs:label "Apache Jena" ;
-    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
-        okg:Creator_HP_Labs_Q266936 ;
-    okg:description "open source semantic web framework for Java" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://jena.apache.org/> ;
-    okg:latestVersion "5.6.0" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/linkml-scala/>,
-        <https://openknowledgegraphs.com/software/rdf4j/>,
-        <https://openknowledgegraphs.com/software/rdfsharp/>,
-        <https://openknowledgegraphs.com/software/sophia-rdf-toolkit/>,
-        <https://openknowledgegraphs.com/software/topbraid-shacl-api/> ;
-    okg:releaseDate "2025-10-15"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://git.apache.org/jena> ;
-    okg:title "Apache Jena" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
-
 <https://openknowledgegraphs.com/software/apache-marmotta/> a okg:Software ;
     rdfs:label "Apache Marmotta" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709 ;
@@ -4393,23 +4358,41 @@ okg:AIAgentTooling a okg:SoftwareType ;
     okg:title "Apache Marmotta" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q16928009> .
 
-<https://openknowledgegraphs.com/software/cubicweb/> a okg:Software ;
-    rdfs:label "CubicWeb" ;
-    okg:description "semantic web framework" ;
-    okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_Q18534390 ;
-    okg:homepage <https://www.cubicweb.org/> ;
-    okg:latestVersion "4.8.0" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/cwm/>,
-        <https://openknowledgegraphs.com/software/emmontopy/>,
-        <https://openknowledgegraphs.com/software/kgx/>,
-        <https://openknowledgegraphs.com/software/pyshacl/>,
-        <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:releaseDate "2024-05-21"^^xsd:date ;
+<https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
+    rdfs:label "dotNetRDF" ;
+    okg:description "open source .NET library for RDF" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <http://dotnetrdf.org/> ;
+    okg:latestVersion "3.5.2" ;
+    okg:programmingLanguage ".NET Framework" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/duck-rdf/>,
+        <https://openknowledgegraphs.com/software/json-rql/>,
+        <https://openknowledgegraphs.com/software/rdf-ext/>,
+        <https://openknowledgegraphs.com/software/rdf-validate-shacl/>,
+        <https://openknowledgegraphs.com/software/shacl-engine/> ;
+    okg:releaseDate "2026-07-03"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://forge.extranet.logilab.fr/cubicweb/cubicweb> ;
-    okg:title "CubicWeb" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q2839592> .
+    okg:sourceRepo <https://github.com/dotnetrdf/dotnetrdf> ;
+    okg:title "dotNetRDF" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q56844056> .
+
+<https://openknowledgegraphs.com/software/duck-rdf/> a okg:Software ;
+    rdfs:label "duck_rdf" ;
+    okg:description "DuckDB community extension for reading, writing, profiling, and querying RDF data" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://duckdb.org/community_extensions/extensions/rdf> ;
+    okg:latestVersion "2.8.1" ;
+    okg:programmingLanguage "C++" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/dotnetrdf/>,
+        <https://openknowledgegraphs.com/software/json-rql/>,
+        <https://openknowledgegraphs.com/software/rdf-ext/>,
+        <https://openknowledgegraphs.com/software/rdf-validate-shacl/>,
+        <https://openknowledgegraphs.com/software/shacl-engine/> ;
+    okg:releaseDate "2026-07-13"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/nonodename/duck_rdf> ;
+    okg:title "duck_rdf" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140685541> .
 
 <https://openknowledgegraphs.com/software/linkeddatahub/> a okg:Software ;
     rdfs:label "LinkedDataHub" ;
@@ -4450,6 +4433,26 @@ okg:AIAgentTooling a okg:SoftwareType ;
 okg:Visualization a okg:SoftwareType ;
     rdfs:label "Visualization" .
 
+<https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
+    rdfs:label "Apache Jena" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
+        okg:Creator_HP_Labs_Q266936 ;
+    okg:description "open source semantic web framework for Java" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://jena.apache.org/> ;
+    okg:latestVersion "5.6.0" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/linkml-scala/>,
+        <https://openknowledgegraphs.com/software/rdf4j/>,
+        <https://openknowledgegraphs.com/software/rdfsharp/>,
+        <https://openknowledgegraphs.com/software/sophia-rdf-toolkit/>,
+        <https://openknowledgegraphs.com/software/topbraid-shacl-api/> ;
+    okg:releaseDate "2025-10-15"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://git.apache.org/jena> ;
+    okg:title "Apache Jena" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
+
 <https://openknowledgegraphs.com/software/bnf-authorities/> a okg:Software ;
     rdfs:label "BnF authorities" ;
     okg:creator okg:Creator_Bibliotheque_nationale_de_France_Q193563 ;
@@ -4482,6 +4485,24 @@ okg:Visualization a okg:SoftwareType ;
     okg:sourceRepo <https://github.com/CLARIAH/COW> ;
     okg:title "CoW" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140646520> .
+
+<https://openknowledgegraphs.com/software/cubicweb/> a okg:Software ;
+    rdfs:label "CubicWeb" ;
+    okg:description "semantic web framework" ;
+    okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_Q18534390 ;
+    okg:homepage <https://www.cubicweb.org/> ;
+    okg:latestVersion "4.8.0" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/cwm/>,
+        <https://openknowledgegraphs.com/software/emmontopy/>,
+        <https://openknowledgegraphs.com/software/kgx/>,
+        <https://openknowledgegraphs.com/software/pyshacl/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:releaseDate "2024-05-21"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://forge.extranet.logilab.fr/cubicweb/cubicweb> ;
+    okg:title "CubicWeb" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q2839592> .
 
 <https://openknowledgegraphs.com/software/dbpedia-archivo/> a okg:Software ;
     rdfs:label "DBPedia Archivo" ;

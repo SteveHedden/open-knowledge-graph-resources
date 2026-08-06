@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T08:46:13Z",
+  "generatedAt": "2026-08-06T14:31:56Z",
   "items": [
     {
       "title": "4store",
@@ -3915,6 +3915,50 @@
         {
           "title": "4store",
           "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
+        }
+      ]
+    },
+    {
+      "title": "Mentor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140916243",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/mentor/",
+      "description": "Visual Studio Code extension providing editing support for RDF languages and knowledge graphs",
+      "homepage": "https://mentor-vscode.dev",
+      "sourceRepo": "https://github.com/faubulous/mentor-vscode",
+      "creators": [
+        {
+          "name": "Ivo Velitchkov",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q110818830"
+        }
+      ],
+      "licenses": [
+        "GNU General Public License, version 3.0"
+      ],
+      "softwareType": "Developer Library",
+      "relatedTools": [
+        {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+        },
+        {
+          "title": "cwm",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cwm/"
+        },
+        {
+          "title": "dotNetRDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
+          "title": "duck_rdf",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/duck-rdf/"
         }
       ]
     },
@@ -9563,12 +9607,17 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/",
       "description": "Yet Another Sparql GUI",
       "homepage": "https://yasgui.triply.cc/",
-      "sourceRepo": "https://github.com/TriplyDB/Yasgui",
+      "sourceRepo": "https://github.com/rdfjs/Yasgui",
       "creators": [
         {
           "name": "Triply",
           "type": "Organization",
           "wikidataId": "https://www.wikidata.org/wiki/Q110891877"
+        },
+        {
+          "name": "Zazuko",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q93230157"
         }
       ],
       "licenses": [
