@@ -2204,19 +2204,6 @@
     okg:title "Description historique des monnaies frappées sous l'Empire romain" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q12899629> .
 
-<https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
-    rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "ontology for categories underlying natural language and human common sense" ;
-    okg:homepage <http://www.loa.istc.cnr.it/old/DOLCE.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/afo-foundational-ontology/>,
-        <https://openknowledgegraphs.com/resource/behavior-perspective-model/>,
-        <https://openknowledgegraphs.com/resource/biomimetic-ontology/>,
-        <https://openknowledgegraphs.com/resource/common-core-ontologies/>,
-        <https://openknowledgegraphs.com/resource/conceptual-model-ontology/> ;
-    okg:title "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
-
 <https://openknowledgegraphs.com/resource/diabetes-mellitus-diagnosis-ontology/> a okg:Ontology ;
     rdfs:label "Diabetes mellitus Diagnosis Ontology" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -24840,7 +24827,7 @@
     okg:homepage <https://blackcatinformatics.ca/fr/gmeow/> ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
         <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
-        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
         <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/>,
         <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
     okg:sourceRepo <https://github.com/Blackcat-Informatics/gmeow-ontology> ;
@@ -25934,6 +25921,23 @@
     okg:description "Identifier for a poet on Kavita Kosh" ;
     okg:title "Kavita Kosh ID" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50598913> .
+
+<https://openknowledgegraphs.com/resource/kbpedia/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "KBpedia" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "free ontology aimed at making data and knowledge interoperable for machine learning" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://kbpedia.org/> ;
+    okg:partOf "Semantic Web" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/addiction-ontology/>,
+        <https://openknowledgegraphs.com/resource/apollo-structured-vocabulary-q138523337/>,
+        <https://openknowledgegraphs.com/resource/covoc-coronavirus-vocabulary/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology/> ;
+    okg:sourceRepo <https://github.com/Cognonto/kbpedia> ;
+    okg:title "KBpedia" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q64139102> .
 
 <https://openknowledgegraphs.com/resource/kenom-controlled-vokabulary/> a okg:ControlledVocabulary ;
     rdfs:label "KENOM (Controlled Vokabulary)" ;
@@ -38484,23 +38488,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "Infectious Disease Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118413> .
 
-<https://openknowledgegraphs.com/resource/kbpedia/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "KBpedia" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "free ontology aimed at making data and knowledge interoperable for machine learning" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://kbpedia.org/> ;
-    okg:partOf "Semantic Web" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/addiction-ontology/>,
-        <https://openknowledgegraphs.com/resource/apollo-structured-vocabulary-q138523337/>,
-        <https://openknowledgegraphs.com/resource/covoc-coronavirus-vocabulary/>,
-        <https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology/>,
-        <https://openknowledgegraphs.com/resource/drosophila-phenotype-ontology-q138523323/> ;
-    okg:sourceRepo <https://github.com/Cognonto/kbpedia> ;
-    okg:title "KBpedia" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q64139102> .
-
 <https://openknowledgegraphs.com/resource/mass-spectrometry-ontology/> a okg:Ontology ;
     rdfs:label "Mass spectrometry ontology" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -38631,23 +38618,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "Authority file of the Iraqi Authors" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104499950> .
 
-<https://openknowledgegraphs.com/resource/basic-formal-ontology/> a okg:Ontology ;
-    rdfs:label "Basic Formal Ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:creator okg:Creator_Barry_Smith_Q809101 ;
-    okg:description "top-level ontology developed to promote interoperability among domain ontologies" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <http://basic-formal-ontology.org/> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
-        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
-        <https://openknowledgegraphs.com/resource/kbpedia/>,
-        <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/>,
-        <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
-    okg:sourceRepo <https://github.com/bfo-ontology/BFO-2020> ;
-    okg:title "Basic Formal Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q4866972> .
-
 <https://openknowledgegraphs.com/resource/beta-cell-genomics-application-ontology/> a okg:Ontology ;
     rdfs:label "Beta Cell Genomics Application Ontology" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -38753,8 +38723,8 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:homepage <https://www.coreemotionframework.com> ;
     okg:partOf "CEF ecosystem" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
         <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
-        <https://openknowledgegraphs.com/resource/kbpedia/>,
         <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/>,
         <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
     okg:title "Core Emotion Framework" ;
@@ -39043,21 +39013,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "Ontology for Energy Investigations" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118509> .
 
-<https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/> a okg:Ontology ;
-    rdfs:label "Ontology of units of Measure 2.0" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "ontology" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <http://www.ontology-of-units-of-measure.org/page/om-2> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
-        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
-        <https://openknowledgegraphs.com/resource/kbpedia/>,
-        <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
-    okg:sourceRepo <https://github.com/HajoRijgersberg/OM> ;
-    okg:title "Ontology of units of Measure 2.0" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q60675026> .
-
 <https://openknowledgegraphs.com/resource/openaire-research-graph/> a okg:KnowledgeGraph ;
     rdfs:label "OpenAIRE Research Graph" ;
     okg:category okg:TechnologyWeb ;
@@ -39175,21 +39130,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "UETK" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q119080945> .
 
-<https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> a okg:Ontology ;
-    rdfs:label "Universal Open Game Theory Ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "modular OWL and SHACL ontology for game-theoretic semantics" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://edithatogo.github.io/UOGTO/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
-        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
-        <https://openknowledgegraphs.com/resource/kbpedia/>,
-        <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/> ;
-    okg:sourceRepo <https://github.com/edithatogo/UOGTO> ;
-    okg:title "Universal Open Game Theory Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140323510> .
-
 <https://openknowledgegraphs.com/resource/vcard-ontology/> a okg:Ontology ;
     rdfs:label "vCard Ontology" ;
     okg:category okg:TechnologyWeb ;
@@ -39239,6 +39179,23 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
         <https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/> ;
     okg:title "Animal Trait Ontology for Livestock" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111194687> .
+
+<https://openknowledgegraphs.com/resource/basic-formal-ontology/> a okg:Ontology ;
+    rdfs:label "Basic Formal Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_Barry_Smith_Q809101 ;
+    okg:description "top-level ontology developed to promote interoperability among domain ontologies" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <http://basic-formal-ontology.org/> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
+        <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/>,
+        <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
+    okg:sourceRepo <https://github.com/bfo-ontology/BFO-2020> ;
+    okg:title "Basic Formal Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q4866972> .
 
 <https://openknowledgegraphs.com/resource/crop-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -39385,6 +39342,21 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     okg:title "Library of Congress Subject Headings" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1823134> .
 
+<https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/> a okg:Ontology ;
+    rdfs:label "Ontology of units of Measure 2.0" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <http://www.ontology-of-units-of-measure.org/page/om-2> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
+        <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
+    okg:sourceRepo <https://github.com/HajoRijgersberg/OM> ;
+    okg:title "Ontology of units of Measure 2.0" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q60675026> .
+
 <https://openknowledgegraphs.com/resource/rml-cc/> a okg:Ontology ;
     rdfs:label "RML-CC" ;
     okg:category okg:TechnologyWeb ;
@@ -39475,6 +39447,21 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     okg:title "Solanaceae Phenotype Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q99542996> .
 
+<https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> a okg:Ontology ;
+    rdfs:label "Universal Open Game Theory Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "modular OWL and SHACL ontology for game-theoretic semantics" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://edithatogo.github.io/UOGTO/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
+        <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/> ;
+    okg:sourceRepo <https://github.com/edithatogo/UOGTO> ;
+    okg:title "Universal Open Game Theory Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140323510> .
+
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
     okg:licenseName "W3C Software License" .
@@ -39493,6 +39480,21 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
         <https://openknowledgegraphs.com/resource/yale-lux/> ;
     okg:title "Camp List" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q107530620> .
+
+<https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
+    rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology for categories underlying natural language and human common sense" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://www.loa.istc.cnr.it/dolce/overview.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
+        <https://openknowledgegraphs.com/resource/general-finnish-ontology/>,
+        <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/>,
+        <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
+    okg:sourceRepo <https://github.com/appliedontolab/DOLCE> ;
+    okg:title "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
 
 <https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/> a okg:ControlledVocabulary ;
     rdfs:label "Dutch National Thesaurus for Author Names" ;
@@ -39600,7 +39602,7 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
     okg:homepage <https://finto.fi/yso> ;
     okg:partOf "Finto" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/core-emotion-framework/>,
+        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
         <https://openknowledgegraphs.com/resource/iptc-newscodes/>,
         <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/>,
         <https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/> ;
@@ -40912,6 +40914,19 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
     okg:title "Apollo Structured Vocabulary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138523337> .
 
+<https://openknowledgegraphs.com/resource/conceptual-model-ontology/> a okg:Ontology ;
+    rdfs:label "Conceptual Model Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology" ;
+    okg:homepage <http://purl.org/twc/ontologies/cmo.owl> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/afo-foundational-ontology/>,
+        <https://openknowledgegraphs.com/resource/behavior-perspective-model/>,
+        <https://openknowledgegraphs.com/resource/biomimetic-ontology/>,
+        <https://openknowledgegraphs.com/resource/common-core-ontologies/>,
+        <https://openknowledgegraphs.com/resource/cyc/> ;
+    okg:title "Conceptual Model Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118345> .
+
 <https://openknowledgegraphs.com/resource/covoc-coronavirus-vocabulary/> a okg:KnowledgeGraph,
         okg:Ontology ;
     rdfs:label "CoVoc Coronavirus Vocabulary" ;
@@ -40940,19 +40955,6 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
     okg:title "Developing Human Brain Atlas Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138527803> .
 
-<https://openknowledgegraphs.com/resource/conceptual-model-ontology/> a okg:Ontology ;
-    rdfs:label "Conceptual Model Ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "ontology" ;
-    okg:homepage <http://purl.org/twc/ontologies/cmo.owl> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/afo-foundational-ontology/>,
-        <https://openknowledgegraphs.com/resource/behavior-perspective-model/>,
-        <https://openknowledgegraphs.com/resource/biomimetic-ontology/>,
-        <https://openknowledgegraphs.com/resource/common-core-ontologies/>,
-        <https://openknowledgegraphs.com/resource/cyc/> ;
-    okg:title "Conceptual Model Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118345> .
-
 <https://openknowledgegraphs.com/resource/common-core-ontologies/> a okg:Ontology ;
     rdfs:label "Common Core Ontologies" ;
     okg:category okg:GeneralCrossDomain ;
@@ -40965,20 +40967,6 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
         <https://openknowledgegraphs.com/resource/cyc/> ;
     okg:title "Common Core Ontologies" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118323> .
-
-<https://openknowledgegraphs.com/resource/addiction-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Addiction Ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <https://www.ebi.ac.uk/ols4/ontologies/addicto> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/apollo-structured-vocabulary-q138523337/>,
-        <https://openknowledgegraphs.com/resource/covoc-coronavirus-vocabulary/>,
-        <https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology/>,
-        <https://openknowledgegraphs.com/resource/drosophila-phenotype-ontology-q138523323/>,
-        <https://openknowledgegraphs.com/resource/echinoderm-anatomy-and-development-ontology/> ;
-    okg:title "Addiction Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138527801> .
 
 <https://openknowledgegraphs.com/resource/behavior-perspective-model/> a okg:Ontology ;
     rdfs:label "Behavior Perspective Model" ;
@@ -41005,6 +40993,20 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
         <https://openknowledgegraphs.com/resource/cyc/> ;
     okg:title "Biomimetic Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118257> .
+
+<https://openknowledgegraphs.com/resource/addiction-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Addiction Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:homepage <https://www.ebi.ac.uk/ols4/ontologies/addicto> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/apollo-structured-vocabulary-q138523337/>,
+        <https://openknowledgegraphs.com/resource/covoc-coronavirus-vocabulary/>,
+        <https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology/>,
+        <https://openknowledgegraphs.com/resource/drosophila-phenotype-ontology-q138523323/>,
+        <https://openknowledgegraphs.com/resource/echinoderm-anatomy-and-development-ontology/> ;
+    okg:title "Addiction Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q138527801> .
 
 <https://openknowledgegraphs.com/resource/computer-aided-engineering-modeling-language-ontology/> a okg:Ontology ;
     rdfs:label "Computer Aided Engineering Modeling Language Ontology" ;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T14:31:56Z",
+  "generatedAt": "2026-08-07T07:24:48Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -2562,6 +2562,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "Ontology of units of Measure 2.0",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
         },
@@ -2576,10 +2580,6 @@
         {
           "title": "General Finnish Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
-          "title": "KBpedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
         }
       ]
     },
@@ -7759,6 +7759,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "Ontology of units of Measure 2.0",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
         },
@@ -7773,10 +7777,6 @@
         {
           "title": "General Finnish Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
-          "title": "KBpedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
         }
       ]
     },
@@ -9276,27 +9276,31 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/",
       "description": "ontology for categories underlying natural language and human common sense",
       "category": "General / Cross-domain",
-      "homepage": "http://www.loa.istc.cnr.it/old/DOLCE.html",
+      "homepage": "https://www.loa.istc.cnr.it/dolce/overview.html",
+      "sourceRepo": "https://github.com/appliedontolab/DOLCE",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ],
       "relatedTools": [
         {
-          "title": "AFO Foundational Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/afo-foundational-ontology/"
+          "title": "Ontology of units of Measure 2.0",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
         },
         {
-          "title": "Behavior Perspective Model",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/behavior-perspective-model/"
+          "title": "Universal Open Game Theory Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
         },
         {
-          "title": "Biomimetic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/biomimetic-ontology/"
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
         },
         {
-          "title": "Common Core Ontologies",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/common-core-ontologies/"
+          "title": "Core Emotion Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
         },
         {
-          "title": "Conceptual Model Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/conceptual-model-ontology/"
+          "title": "General Finnish Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
         }
       ]
     },
@@ -14606,6 +14610,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "IPTC NewsCodes",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/iptc-newscodes/"
         },
@@ -14620,10 +14628,6 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Core Emotion Framework",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
         }
       ]
     },
@@ -19643,6 +19647,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "Ontology of units of Measure 2.0",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
         },
@@ -19657,10 +19665,6 @@
         {
           "title": "Core Emotion Framework",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
-        },
-        {
-          "title": "General Finnish Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
         }
       ]
     },
@@ -22768,12 +22772,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/covoc-coronavirus-vocabulary/"
         },
         {
-          "title": "Developing Human Brain Atlas Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology/"
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
         },
         {
-          "title": "Drosophila Phenotype Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/drosophila-phenotype-ontology-q138523323/"
+          "title": "Developing Human Brain Atlas Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology/"
         }
       ]
     },
@@ -31903,6 +31907,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "Universal Open Game Theory Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
         },
@@ -31917,10 +31925,6 @@
         {
           "title": "General Finnish Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
-          "title": "KBpedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
         }
       ]
     },
@@ -46416,6 +46420,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "Ontology of units of Measure 2.0",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
         },
@@ -46430,10 +46438,6 @@
         {
           "title": "General Finnish Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
-          "title": "KBpedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
         }
       ]
     },
