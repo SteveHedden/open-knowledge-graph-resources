@@ -2949,11 +2949,13 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:description "High-performance in-memory graph database for real-time analytics and GraphRAG" ;
     okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://memgraph.com> ;
+    okg:latestVersion "3.12.0" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/4store/>,
         <https://openknowledgegraphs.com/software/arangodb/>,
         <https://openknowledgegraphs.com/software/fluree/>,
         <https://openknowledgegraphs.com/software/surrealdb/>,
         <https://openknowledgegraphs.com/software/turingdb/> ;
+    okg:releaseDate "2026-07-15"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/memgraph/memgraph> ;
     okg:title "Memgraph" ;
@@ -2997,7 +2999,7 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232,
         okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
     okg:homepage <https://neo4j.com/> ;
-    okg:latestVersion "5.26.29" ;
+    okg:latestVersion "2026.07.1" ;
     okg:programmingLanguage "Java",
         "Scala" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/4store/>,
@@ -3005,7 +3007,7 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <https://openknowledgegraphs.com/software/infinitegraph/>,
         <https://openknowledgegraphs.com/software/nebulagraph/>,
         <https://openknowledgegraphs.com/software/qendpoint/> ;
-    okg:releaseDate "2026-08-04"^^xsd:date ;
+    okg:releaseDate "2026-08-05"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/neo4j/neo4j> ;
     okg:title "Neo4j" ;
@@ -3759,7 +3761,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:description "Yet Another Sparql GUI" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://yasgui.triply.cc/> ;
-    okg:latestVersion "4.0.113" ;
+    okg:latestVersion "4.2.34" ;
     okg:programmingLanguage "JavaScript",
         "TypeScript" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/comunica/>,
@@ -3767,7 +3769,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
         <https://openknowledgegraphs.com/software/sage-sparql-query-engine/>,
         <https://openknowledgegraphs.com/software/semagrow/>,
         <https://openknowledgegraphs.com/software/yasgui-matdata/> ;
-    okg:releaseDate "2020-04-08"^^xsd:date ;
+    okg:releaseDate "2024-02-06"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/rdfjs/Yasgui> ;
     okg:title "Yasgui" ;
@@ -4401,14 +4403,14 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:description "The low-code Knowledge Graph application platform. Apache license." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://atomgraph.github.io/LinkedDataHub/> ;
-    okg:latestVersion "5.7.0" ;
+    okg:latestVersion "5.7.1" ;
     okg:programmingLanguage "XSLT" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/bnf-authorities/>,
         <https://openknowledgegraphs.com/software/framework/>,
         <https://openknowledgegraphs.com/software/helio-ecosystem/>,
         <https://openknowledgegraphs.com/software/knwler/>,
         <https://openknowledgegraphs.com/software/metaphactory/> ;
-    okg:releaseDate "2026-08-02"^^xsd:date ;
+    okg:releaseDate "2026-08-06"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/AtomGraph/LinkedDataHub> ;
     okg:title "LinkedDataHub" ;
