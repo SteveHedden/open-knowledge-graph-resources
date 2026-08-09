@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T07:02:57Z",
+  "generatedAt": "2026-08-09T07:04:40Z",
   "items": [
     {
       "title": "4store",
@@ -2662,6 +2662,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
         },
@@ -2672,10 +2676,6 @@
         {
           "title": "Sampo-UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
-        },
-        {
-          "title": "SemSpect",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/semspect/"
         }
       ]
     },
@@ -3932,13 +3932,6 @@
       "description": "Visual Studio Code extension providing editing support for RDF languages and knowledge graphs",
       "homepage": "https://mentor-vscode.dev",
       "sourceRepo": "https://github.com/faubulous/mentor-vscode",
-      "creators": [
-        {
-          "name": "Ivo Velitchkov",
-          "type": "Person",
-          "wikidataId": "https://www.wikidata.org/wiki/Q110818830"
-        }
-      ],
       "licenses": [
         "GNU General Public License, version 3.0"
       ],
@@ -4520,6 +4513,55 @@
         {
           "title": "MarkLogic",
           "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        }
+      ]
+    },
+    {
+      "title": "Nodica",
+      "wikidataId": "https://www.wikidata.org/wiki/Q140937850",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/",
+      "description": "Web-based tool for visualizing graphs with image-filled nodes, taken from SPARQL CONSTRUCT/DESCRIBE results or from a file.",
+      "homepage": "https://kvistgaard.github.io/nodica/index.html",
+      "sourceRepo": "https://github.com/kvistgaard/nodica",
+      "creators": [
+        {
+          "name": "Ivo Velitchkov",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q110818830"
+        }
+      ],
+      "licenses": [
+        "MIT License"
+      ],
+      "latestVersion": "0.4.0",
+      "releaseDate": "2026-08-08",
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Sampo-UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
+        },
+        {
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
+        },
+        {
+          "title": "rdf-sketch",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
+        },
+        {
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+        },
+        {
+          "title": "Pubby",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
         }
       ]
     },
@@ -5237,8 +5279,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "10.0.12",
-      "releaseDate": "2026-08-04",
+      "latestVersion": "10.0.13",
+      "releaseDate": "2026-08-07",
       "softwareType": "AI Agent Tooling",
       "programmingLanguages": [
         "TypeScript"
@@ -5740,16 +5782,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
           "title": "Reactodia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
-        },
-        {
-          "title": "Sampo-UI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         }
       ]
     },
@@ -6263,16 +6305,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "Holonet Galactic Encyclopedia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
-        },
-        {
-          "title": "Reactodia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
         }
       ]
     },
@@ -6620,6 +6662,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
         },
@@ -6630,10 +6676,6 @@
         {
           "title": "Sampo-UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
-        },
-        {
-          "title": "SemSpect",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/semspect/"
         }
       ]
     },
@@ -6974,6 +7016,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
@@ -6984,10 +7030,6 @@
         {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
-        },
-        {
-          "title": "Reactodia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
         }
       ]
     },
@@ -7238,6 +7280,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
         },
@@ -7248,10 +7294,6 @@
         {
           "title": "Reactodia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
-        },
-        {
-          "title": "Sampo-UI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         }
       ]
     },
@@ -7573,16 +7615,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
           "title": "Reactodia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
-        },
-        {
-          "title": "Sampo-UI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         }
       ]
     },
@@ -9369,6 +9411,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         },
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
@@ -9379,10 +9425,6 @@
         {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
-        },
-        {
-          "title": "Reactodia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
         }
       ]
     },

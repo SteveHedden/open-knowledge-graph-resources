@@ -36550,6 +36550,8 @@ okg:Creator_Patrick_Colm_Audley_Q139770478 a okg:Person ;
 
 okg:Creator_Paulo_Cesar_Pereira_dos_Santos_Q140427962 a okg:Person ;
     rdfs:label "Paulo Cesar Pereira dos Santos" ;
+    okg:githubProfile <https://github.com/paulo-leads> ;
+    okg:googleScholarProfile <https://scholar.google.com/citations?user=bTydpFsAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140427962> .
 
 okg:Creator_Prime_Minister_s_Office_Q10677814 a okg:Organization ;

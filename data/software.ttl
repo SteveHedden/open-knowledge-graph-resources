@@ -536,7 +536,6 @@
 
 <https://openknowledgegraphs.com/software/mentor/> a okg:Software ;
     rdfs:label "Mentor" ;
-    okg:creator okg:Creator_Ivo_Velitchkov_Q110818830 ;
     okg:description "Visual Studio Code extension providing editing support for RDF languages and knowledge graphs" ;
     okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
     okg:homepage <https://mentor-vscode.dev> ;
@@ -1056,6 +1055,19 @@
     okg:sourceRepo <https://github.com/aschaetzle/Sempala> ;
     okg:title "Sempala" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140705182> .
+
+<https://openknowledgegraphs.com/software/semspect/> a okg:Software ;
+    rdfs:label "SemSpect" ;
+    okg:description "commercial visual exploration and querying tool for RDF and knowledge graphs" ;
+    okg:homepage <https://www.semspect.de/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/reactodia/> ;
+    okg:softwareType okg:Visualization ;
+    okg:title "SemSpect" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140705420> .
 
 <https://openknowledgegraphs.com/software/sentag/> a okg:Software ;
     rdfs:label "SenTag" ;
@@ -2109,10 +2121,10 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:latestVersion "0.9.1" ;
     okg:programmingLanguage "Java" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
         <https://openknowledgegraphs.com/software/pubby/>,
         <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/> ;
+        <https://openknowledgegraphs.com/software/reactodia/> ;
     okg:releaseDate "2022-03-18"^^xsd:date ;
     okg:softwareType okg:Visualization ;
     okg:sourceRepo <https://github.com/sparna-git/skos-play> ;
@@ -2370,19 +2382,6 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
     okg:title "ROBOT is an OBO Tool" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q116908518> .
 
-<https://openknowledgegraphs.com/software/semspect/> a okg:Software ;
-    rdfs:label "SemSpect" ;
-    okg:description "commercial visual exploration and querying tool for RDF and knowledge graphs" ;
-    okg:homepage <https://www.semspect.de/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/> ;
-    okg:softwareType okg:Visualization ;
-    okg:title "SemSpect" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140705420> .
-
 <https://openknowledgegraphs.com/software/sparql2git/> a okg:Software ;
     rdfs:label "SPARQL2Git" ;
     okg:creator okg:Creator_Albert_Merono_Penuela_Q57553187 ;
@@ -2434,24 +2433,6 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
     okg:sourceRepo <https://bitbucket.org/art-uniroma2/vocbench3> ;
     okg:title "VocBench" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140431709> .
-
-<https://openknowledgegraphs.com/software/webvowl/> a okg:Software ;
-    rdfs:label "WebVOWL" ;
-    okg:description "web tool for visualizing ontologies" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://service.tib.eu/webvowl/> ;
-    okg:latestVersion "1.1.7" ;
-    okg:programmingLanguage "JavaScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/> ;
-    okg:releaseDate "2026-06-04"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/VisualDataWeb/WebVOWL> ;
-    okg:title "WebVOWL" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q56569953> .
 
 <https://openknowledgegraphs.com/software/yarrrml-parser/> a okg:Software ;
     rdfs:label "YARRRML Parser" ;
@@ -2643,7 +2624,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:description "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://docs.origintrail.io/> ;
-    okg:latestVersion "10.0.12" ;
+    okg:latestVersion "10.0.13" ;
     okg:partOf "OriginTrail Decentralized Knowledge Graph" ;
     okg:programmingLanguage "TypeScript" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
@@ -2651,7 +2632,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
         <https://openknowledgegraphs.com/software/mem0/>,
         <https://openknowledgegraphs.com/software/ndoli/>,
         <https://openknowledgegraphs.com/software/ontofelia/> ;
-    okg:releaseDate "2026-08-04"^^xsd:date ;
+    okg:releaseDate "2026-08-07"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/OriginTrail/dkg> ;
     okg:title "OriginTrail DKG V10 node" ;
@@ -2821,6 +2802,24 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:sourceRepo <https://github.com/AtomGraph/Web-Algebra> ;
     okg:title "Web-Algebra" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140422054> .
+
+<https://openknowledgegraphs.com/software/webvowl/> a okg:Software ;
+    rdfs:label "WebVOWL" ;
+    okg:description "web tool for visualizing ontologies" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://service.tib.eu/webvowl/> ;
+    okg:latestVersion "1.1.7" ;
+    okg:programmingLanguage "JavaScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/> ;
+    okg:releaseDate "2026-06-04"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/VisualDataWeb/WebVOWL> ;
+    okg:title "WebVOWL" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q56569953> .
 
 okg:Creator_Sparna_Q117319690 a okg:Organization ;
     rdfs:label "Sparna" ;
@@ -3103,6 +3102,24 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:sourceRepo <https://github.com/eclipse-rdf4j/rdf4j> ;
     okg:title "RDF4J" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7455975> .
+
+<https://openknowledgegraphs.com/software/reactodia/> a okg:Software ;
+    rdfs:label "Reactodia" ;
+    okg:description "JavaScript library for visual interaction with graph data in a form of a diagram" ;
+    okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 ;
+    okg:homepage <https://reactodia.github.io> ;
+    okg:latestVersion "0.35.1" ;
+    okg:programmingLanguage "TypeScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/> ;
+    okg:releaseDate "2026-07-10"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/reactodia/reactodia-workspace> ;
+    okg:title "Reactodia" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q131278990> .
 
 <https://openknowledgegraphs.com/software/rmlstreamer/> a okg:Software ;
     rdfs:label "RMLStreamer" ;
@@ -3442,6 +3459,22 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:sourceRepo <https://github.com/sage-org/sage-engine> ;
     okg:title "SaGe SPARQL query engine" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140696649> .
+
+<https://openknowledgegraphs.com/software/sampo-ui/> a okg:Software ;
+    rdfs:label "Sampo-UI" ;
+    okg:description "Sampo-UI is a framework for developing user interfaces for semantic portals to publish Linked Open Data." ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://seco.cs.aalto.fi/tools/sampo-ui/> ;
+    okg:programmingLanguage "JavaScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/webvowl/> ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/SemanticComputing/dbpedia-sampo-ui-demo> ;
+    okg:title "Sampo-UI" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q122949732> .
 
 <https://openknowledgegraphs.com/software/semantic-ui/> a okg:Software ;
     rdfs:label "Semantic UI" ;
@@ -3820,24 +3853,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "HeFQUIN" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653408> .
 
-<https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/> a okg:Software ;
-    rdfs:label "Holonet Galactic Encyclopedia" ;
-    okg:creator okg:Creator_Yoan_Chabot_Q120918268 ;
-    okg:description "Wikidata-based gateway to explore data about Star Wars" ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <https://sw-holonet.com/> ;
-    okg:programmingLanguage "Python",
-        "Vue.js" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/>,
-        <https://openknowledgegraphs.com/software/semspect/> ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/yoanchabot/holonet_datasets> ;
-    okg:title "Holonet Galactic Encyclopedia" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138779666> .
-
 <https://openknowledgegraphs.com/software/linked-open-vocabularies/> a okg:Software ;
     rdfs:label "Linked Open Vocabularies" ;
     okg:description "dataset of ontologies" ;
@@ -3979,42 +3994,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "Processor" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653440> .
 
-<https://openknowledgegraphs.com/software/pubby/> a okg:Software ;
-    rdfs:label "Pubby" ;
-    okg:description "Linked Data frontend for SPARQL endpoints" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://www4.wiwiss.fu-berlin.de/pubby/> ;
-    okg:latestVersion "0.3.3" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/>,
-        <https://openknowledgegraphs.com/software/skos-play/> ;
-    okg:releaseDate "2011-01-26"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/cygri/pubby> ;
-    okg:title "Pubby" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q124653441> .
-
-<https://openknowledgegraphs.com/software/rdf-sketch/> a okg:Software ;
-    rdfs:label "rdf-sketch" ;
-    okg:description "Sketch RDF in the web browser with immediate visualization" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://sketch.zazuko.com/> ;
-    okg:latestVersion "1.0.4" ;
-    okg:programmingLanguage "Vue.js" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/>,
-        <https://openknowledgegraphs.com/software/webvowl/> ;
-    okg:releaseDate "2025-01-29"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/zazuko/rdf-sketch> ;
-    okg:title "rdf-sketch" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q125506320> .
-
 <https://openknowledgegraphs.com/software/rdflib/> a okg:Software ;
     rdfs:label "RDFLib" ;
     okg:description "Python library for working with RDF" ;
@@ -4047,40 +4026,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:softwareType okg:GraphDatabase ;
     okg:title "RDFox" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q105745603> .
-
-<https://openknowledgegraphs.com/software/reactodia/> a okg:Software ;
-    rdfs:label "Reactodia" ;
-    okg:description "JavaScript library for visual interaction with graph data in a form of a diagram" ;
-    okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 ;
-    okg:homepage <https://reactodia.github.io> ;
-    okg:latestVersion "0.35.1" ;
-    okg:programmingLanguage "TypeScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/>,
-        <https://openknowledgegraphs.com/software/semspect/> ;
-    okg:releaseDate "2026-07-10"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/reactodia/reactodia-workspace> ;
-    okg:title "Reactodia" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q131278990> .
-
-<https://openknowledgegraphs.com/software/sampo-ui/> a okg:Software ;
-    rdfs:label "Sampo-UI" ;
-    okg:description "Sampo-UI is a framework for developing user interfaces for semantic portals to publish Linked Open Data." ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://seco.cs.aalto.fi/tools/sampo-ui/> ;
-    okg:programmingLanguage "JavaScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/webvowl/> ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/SemanticComputing/dbpedia-sampo-ui-demo> ;
-    okg:title "Sampo-UI" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q122949732> .
 
 <https://openknowledgegraphs.com/software/semagrow/> a okg:Software ;
     rdfs:label "Semagrow" ;
@@ -4183,6 +4128,24 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "Graphiti" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639972> .
 
+<https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/> a okg:Software ;
+    rdfs:label "Holonet Galactic Encyclopedia" ;
+    okg:creator okg:Creator_Yoan_Chabot_Q120918268 ;
+    okg:description "Wikidata-based gateway to explore data about Star Wars" ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <https://sw-holonet.com/> ;
+    okg:programmingLanguage "Python",
+        "Vue.js" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/reactodia/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/> ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/yoanchabot/holonet_datasets> ;
+    okg:title "Holonet Galactic Encyclopedia" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q138779666> .
+
 <https://openknowledgegraphs.com/software/kgx/> a okg:Software ;
     rdfs:label "KGX" ;
     okg:description "Python library and CLI for converting and validating knowledge graphs conforming to the Biolink Model across RDF, Neo4j, ArangoDB, and other formats" ;
@@ -4219,6 +4182,25 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "KuzuDB" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140900293> .
 
+<https://openknowledgegraphs.com/software/nodica/> a okg:Software ;
+    rdfs:label "Nodica" ;
+    okg:creator okg:Creator_Ivo_Velitchkov_Q110818830 ;
+    okg:description "Web-based tool for visualizing graphs with image-filled nodes, taken from SPARQL CONSTRUCT/DESCRIBE results or from a file." ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://kvistgaard.github.io/nodica/index.html> ;
+    okg:latestVersion "0.4.0" ;
+    okg:programmingLanguage "JavaScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/>,
+        <https://openknowledgegraphs.com/software/webvowl/> ;
+    okg:releaseDate "2026-08-08"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/kvistgaard/nodica> ;
+    okg:title "Nodica" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140937850> .
+
 <https://openknowledgegraphs.com/software/ofaire/> a okg:Software ;
     rdfs:label "O’FAIRE" ;
     okg:description "This project is a FAIRness assessment tool for ontologies, vocabularies and semantic resources." ;
@@ -4236,6 +4218,42 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:sourceRepo <https://github.com/agroportal/fairness> ;
     okg:title "O’FAIRE" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653420> .
+
+<https://openknowledgegraphs.com/software/pubby/> a okg:Software ;
+    rdfs:label "Pubby" ;
+    okg:description "Linked Data frontend for SPARQL endpoints" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <http://www4.wiwiss.fu-berlin.de/pubby/> ;
+    okg:latestVersion "0.3.3" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/reactodia/>,
+        <https://openknowledgegraphs.com/software/skos-play/> ;
+    okg:releaseDate "2011-01-26"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/cygri/pubby> ;
+    okg:title "Pubby" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q124653441> .
+
+<https://openknowledgegraphs.com/software/rdf-sketch/> a okg:Software ;
+    rdfs:label "rdf-sketch" ;
+    okg:description "Sketch RDF in the web browser with immediate visualization" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://sketch.zazuko.com/> ;
+    okg:latestVersion "1.0.4" ;
+    okg:programmingLanguage "Vue.js" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/>,
+        <https://openknowledgegraphs.com/software/webvowl/> ;
+    okg:releaseDate "2025-01-29"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/zazuko/rdf-sketch> ;
+    okg:title "rdf-sketch" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q125506320> .
 
 <https://openknowledgegraphs.com/software/sepa/> a okg:Software ;
     rdfs:label "SEPA" ;
@@ -4434,9 +4452,6 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:title "Polypheny" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q122920886> .
 
-okg:Visualization a okg:SoftwareType ;
-    rdfs:label "Visualization" .
-
 <https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
     rdfs:label "Apache Jena" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
@@ -4572,6 +4587,9 @@ okg:Visualization a okg:SoftwareType ;
 
 okg:StreamProcessing a okg:SoftwareType ;
     rdfs:label "Stream Processing" .
+
+okg:Visualization a okg:SoftwareType ;
+    rdfs:label "Visualization" .
 
 <https://openknowledgegraphs.com/software/cel/> a okg:Software ;
     rdfs:label "CEL" ;
