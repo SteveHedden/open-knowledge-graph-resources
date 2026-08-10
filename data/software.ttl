@@ -3108,14 +3108,14 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:description "JavaScript library for visual interaction with graph data in a form of a diagram" ;
     okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 ;
     okg:homepage <https://reactodia.github.io> ;
-    okg:latestVersion "0.35.1" ;
+    okg:latestVersion "0.35.2" ;
     okg:programmingLanguage "TypeScript" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
         <https://openknowledgegraphs.com/software/nodica/>,
         <https://openknowledgegraphs.com/software/pubby/>,
         <https://openknowledgegraphs.com/software/rdf-sketch/>,
         <https://openknowledgegraphs.com/software/sampo-ui/> ;
-    okg:releaseDate "2026-07-10"^^xsd:date ;
+    okg:releaseDate "2026-08-08"^^xsd:date ;
     okg:softwareType okg:Visualization ;
     okg:sourceRepo <https://github.com/reactodia/reactodia-workspace> ;
     okg:title "Reactodia" ;
