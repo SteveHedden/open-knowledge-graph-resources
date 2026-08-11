@@ -3090,14 +3090,14 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:hasLicense okg:License_Eclipse_Distribution_License_Q26245522,
         okg:License_Resource_3_clause_BSD_License_Q18491847 ;
     okg:homepage <http://rdf4j.org/> ;
-    okg:latestVersion "5.3.2" ;
+    okg:latestVersion "6.0.0" ;
     okg:programmingLanguage "Java" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/emmontopy/>,
         <https://openknowledgegraphs.com/software/kgx/>,
         <https://openknowledgegraphs.com/software/prez-linked-data-api/>,
         <https://openknowledgegraphs.com/software/pyldapi/>,
         <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:releaseDate "2026-06-29"^^xsd:date ;
+    okg:releaseDate "2026-08-10"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/eclipse-rdf4j/rdf4j> ;
     okg:title "RDF4J" ;
@@ -3670,14 +3670,14 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:description "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://linkml.neverblink.eu/> ;
-    okg:latestVersion "0.11.2" ;
+    okg:latestVersion "0.12.1" ;
     okg:programmingLanguage "Scala" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
         <https://openknowledgegraphs.com/software/rdfsharp/>,
         <https://openknowledgegraphs.com/software/sansa/>,
         <https://openknowledgegraphs.com/software/sophia-rdf-toolkit/>,
         <https://openknowledgegraphs.com/software/topbraid-shacl-api/> ;
-    okg:releaseDate "2026-07-28"^^xsd:date ;
+    okg:releaseDate "2026-08-10"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/NeverBlink-OSS/linkml-scala> ;
     okg:title "LinkML-Scala" ;
@@ -4321,13 +4321,13 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://flur.ee> ;
-    okg:latestVersion "4.1.4" ;
+    okg:latestVersion "4.1.5" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/dgraph/>,
         <https://openknowledgegraphs.com/software/halyard/>,
         <https://openknowledgegraphs.com/software/memgraph/>,
         <https://openknowledgegraphs.com/software/nebulagraph/>,
         <https://openknowledgegraphs.com/software/tentris/> ;
-    okg:releaseDate "2026-07-23"^^xsd:date ;
+    okg:releaseDate "2026-08-11"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/fluree/db> ;
     okg:title "fluree" ;
