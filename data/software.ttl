@@ -78,6 +78,21 @@
     okg:title "CARML" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140646501> .
 
+<https://openknowledgegraphs.com/software/cellar/> a okg:Software ;
+    rdfs:label "CELLAR" ;
+    okg:creator okg:Creator_Publications_Office_of_the_European_Union_Q480222 ;
+    okg:description "semantic repository of the Publications Office of the European Union for EU legal content, publications, and reference datasets, exposed via a public SPARQL endpoint" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://op.europa.eu/en/web/eu-vocabularies/cellar> ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/4store/>,
+        <https://openknowledgegraphs.com/software/allegrograph/>,
+        <https://openknowledgegraphs.com/software/apache-marmotta/>,
+        <https://openknowledgegraphs.com/software/apache-rya/>,
+        <https://openknowledgegraphs.com/software/arangodb/> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:title "CELLAR" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141014591> .
+
 <https://openknowledgegraphs.com/software/chainsaw/> a okg:Software ;
     rdfs:label "Chainsaw" ;
     okg:description "semantic reasoner" ;
@@ -1410,14 +1425,14 @@
     okg:description "open-source document graph database with Git-like version control for collaborative data management" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://terminusdb.org> ;
-    okg:latestVersion "12.0.6" ;
+    okg:latestVersion "12.0.7" ;
     okg:programmingLanguage "Prolog" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/dgraph/>,
         <https://openknowledgegraphs.com/software/fluree/>,
         <https://openknowledgegraphs.com/software/halyard/>,
         <https://openknowledgegraphs.com/software/nebulagraph/>,
         <https://openknowledgegraphs.com/software/tentris/> ;
-    okg:releaseDate "2026-06-24"^^xsd:date ;
+    okg:releaseDate "2026-08-10"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/terminusdb/terminusdb> ;
     okg:title "TerminusDB" ;
@@ -1853,6 +1868,10 @@ okg:Creator_Protein_Information_Resource_Q1256927 a okg:Organization ;
     rdfs:label "Protein Information Resource" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1256927> .
 
+okg:Creator_Publications_Office_of_the_European_Union_Q480222 a okg:Organization ;
+    rdfs:label "Publications Office of the European Union" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q480222> .
+
 okg:Creator_SGF_SPARQL_Updates_over_Decentralized_Knowledge_Graphs_without_Access_Path_Dependencies_Q137242347 a okg:Organization ;
     rdfs:label "SGF: SPARQL Updates over Decentralized Knowledge Graphs without Access Path Dependencies" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q137242347> .
@@ -1920,10 +1939,6 @@ okg:License_BSD_licenses_Q191307 a okg:License ;
 okg:License_CeCILL_C_Q125359628 a okg:License ;
     rdfs:label "CeCILL-C" ;
     okg:licenseName "CeCILL-C" .
-
-okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 a okg:License ;
-    rdfs:label "Creative Commons Attribution 4.0 International" ;
-    okg:licenseName "Creative Commons Attribution 4.0 International" .
 
 okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 a okg:License ;
     rdfs:label "Creative Commons Attribution-NoDerivs 3.0 Unported" ;
@@ -2099,14 +2114,14 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:description "Free online SHACL tool suite : RDF data validation, documentation generation, and more." ;
     okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 ;
     okg:homepage <https://shacl-play.sparna.fr/play/> ;
-    okg:latestVersion "0.12.2" ;
+    okg:latestVersion "0.12.3" ;
     okg:programmingLanguage "Java" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/foops/>,
         <https://openknowledgegraphs.com/software/ofaire/>,
         <https://openknowledgegraphs.com/software/protege/>,
         <https://openknowledgegraphs.com/software/rdfunit/>,
         <https://openknowledgegraphs.com/software/shactor/> ;
-    okg:releaseDate "2026-07-16"^^xsd:date ;
+    okg:releaseDate "2026-08-10"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/sparna-git/shacl-play> ;
     okg:title "SHACL Play!" ;
@@ -2176,6 +2191,10 @@ okg:Creator_Steve_Hedden_Q140443546 a okg:Person ;
     okg:githubProfile <https://github.com/SteveHedden> ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=8av-W5EAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140443546> .
+
+okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 a okg:License ;
+    rdfs:label "Creative Commons Attribution 4.0 International" ;
+    okg:licenseName "Creative Commons Attribution 4.0 International" .
 
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
@@ -2833,26 +2852,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     rdfs:label "4-clause BSD License" ;
     okg:licenseName "4-clause BSD License" .
 
-<https://openknowledgegraphs.com/software/apache-rya/> a okg:Software ;
-    rdfs:label "Apache Rya" ;
-    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
-        okg:Creator_Laboratory_for_Telecommunication_Sciences_Q106472263 ;
-    okg:description "distributed RDF triple store built on Apache Accumulo for scalable SPARQL querying over massive datasets" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://rya.apache.org/> ;
-    okg:latestVersion "4.0.0" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-marmotta/>,
-        <https://openknowledgegraphs.com/software/halyard/>,
-        <https://openknowledgegraphs.com/software/nebulagraph/>,
-        <https://openknowledgegraphs.com/software/orientdb/>,
-        <https://openknowledgegraphs.com/software/polypheny/> ;
-    okg:releaseDate "2019-07-27"^^xsd:date ;
-    okg:softwareType okg:GraphDatabase ;
-    okg:sourceRepo <https://github.com/apache/rya> ;
-    okg:title "Apache Rya" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q28915769> .
-
 <https://openknowledgegraphs.com/software/arcadedb/> a okg:Software ;
     rdfs:label "ArcadeDB" ;
     okg:creator okg:Creator_Arcade_Data_Ltd_Q113997707 ;
@@ -3228,42 +3227,25 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     rdfs:label "GNU Affero General Public License, version 3.0 or later" ;
     okg:licenseName "GNU Affero General Public License, version 3.0 or later" .
 
-<https://openknowledgegraphs.com/software/allegrograph/> a okg:Software ;
-    rdfs:label "AllegroGraph" ;
-    okg:creator okg:Creator_Franz_Inc_Q11333728 ;
-    okg:description "horizontally distributed, multi-model (document and graph), entity-event knowledge graph database system" ;
-    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
-    okg:homepage <http://www.franz.com/agraph/allegrograph> ;
-    okg:programmingLanguage "Common Lisp" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/blazegraph/>,
-        <https://openknowledgegraphs.com/software/corese/>,
-        <https://openknowledgegraphs.com/software/nitrosbase/>,
-        <https://openknowledgegraphs.com/software/rdfox/>,
-        <https://openknowledgegraphs.com/software/stardog/> ;
+<https://openknowledgegraphs.com/software/apache-rya/> a okg:Software ;
+    rdfs:label "Apache Rya" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
+        okg:Creator_Laboratory_for_Telecommunication_Sciences_Q106472263 ;
+    okg:description "distributed RDF triple store built on Apache Accumulo for scalable SPARQL querying over massive datasets" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://rya.apache.org/> ;
+    okg:latestVersion "4.0.0" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-marmotta/>,
+        <https://openknowledgegraphs.com/software/halyard/>,
+        <https://openknowledgegraphs.com/software/nebulagraph/>,
+        <https://openknowledgegraphs.com/software/orientdb/>,
+        <https://openknowledgegraphs.com/software/polypheny/> ;
+    okg:releaseDate "2019-07-27"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
-    okg:title "AllegroGraph" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q4731408> .
-
-<https://openknowledgegraphs.com/software/arangodb/> a okg:Software ;
-    rdfs:label "ArangoDB" ;
-    okg:creator okg:Creator_Frank_Celler_Q102180218,
-        okg:Creator_Jan_Steemann_Q122765337,
-        okg:Creator_Wilfried_Goesgens_Q122765389 ;
-    okg:description "open-source multi-model database system" ;
-    okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
-    okg:homepage <https://www.arangodb.com> ;
-    okg:latestVersion "3.12.10" ;
-    okg:programmingLanguage "C++" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/fluree/>,
-        <https://openknowledgegraphs.com/software/gstore/>,
-        <https://openknowledgegraphs.com/software/kuzudb/>,
-        <https://openknowledgegraphs.com/software/memgraph/>,
-        <https://openknowledgegraphs.com/software/turingdb/> ;
-    okg:releaseDate "2026-08-01"^^xsd:date ;
-    okg:softwareType okg:GraphDatabase ;
-    okg:sourceRepo <https://github.com/arangodb/arangodb> ;
-    okg:title "ArangoDB" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q20072115> .
+    okg:sourceRepo <https://github.com/apache/rya> ;
+    okg:title "Apache Rya" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q28915769> .
 
 <https://openknowledgegraphs.com/software/corese/> a okg:Software ;
     rdfs:label "Corese" ;
@@ -3571,14 +3553,14 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.8.9" ;
+    okg:latestVersion "2.8.14" ;
     okg:programmingLanguage "Python" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
         <https://openknowledgegraphs.com/software/graphiti/>,
         <https://openknowledgegraphs.com/software/mem0/>,
         <https://openknowledgegraphs.com/software/ndoli/>,
         <https://openknowledgegraphs.com/software/web-algebra/> ;
-    okg:releaseDate "2026-08-04"^^xsd:date ;
+    okg:releaseDate "2026-08-11"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:title "TrustGraph" ;
@@ -3609,6 +3591,43 @@ okg:License_GNU_General_Public_License_version_2_0_Q10513450 a okg:License ;
 okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:License ;
     rdfs:label "GNU Lesser General Public License, version 3.0" ;
     okg:licenseName "GNU Lesser General Public License, version 3.0" .
+
+<https://openknowledgegraphs.com/software/allegrograph/> a okg:Software ;
+    rdfs:label "AllegroGraph" ;
+    okg:creator okg:Creator_Franz_Inc_Q11333728 ;
+    okg:description "horizontally distributed, multi-model (document and graph), entity-event knowledge graph database system" ;
+    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
+    okg:homepage <http://www.franz.com/agraph/allegrograph> ;
+    okg:programmingLanguage "Common Lisp" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/blazegraph/>,
+        <https://openknowledgegraphs.com/software/corese/>,
+        <https://openknowledgegraphs.com/software/nitrosbase/>,
+        <https://openknowledgegraphs.com/software/rdfox/>,
+        <https://openknowledgegraphs.com/software/stardog/> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:title "AllegroGraph" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q4731408> .
+
+<https://openknowledgegraphs.com/software/arangodb/> a okg:Software ;
+    rdfs:label "ArangoDB" ;
+    okg:creator okg:Creator_Frank_Celler_Q102180218,
+        okg:Creator_Jan_Steemann_Q122765337,
+        okg:Creator_Wilfried_Goesgens_Q122765389 ;
+    okg:description "open-source multi-model database system" ;
+    okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
+    okg:homepage <https://www.arangodb.com> ;
+    okg:latestVersion "3.12.10" ;
+    okg:programmingLanguage "C++" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/fluree/>,
+        <https://openknowledgegraphs.com/software/gstore/>,
+        <https://openknowledgegraphs.com/software/kuzudb/>,
+        <https://openknowledgegraphs.com/software/memgraph/>,
+        <https://openknowledgegraphs.com/software/turingdb/> ;
+    okg:releaseDate "2026-08-01"^^xsd:date ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/arangodb/arangodb> ;
+    okg:title "ArangoDB" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q20072115> .
 
 <https://openknowledgegraphs.com/software/blazegraph/> a okg:Software ;
     rdfs:label "Blazegraph" ;
@@ -3670,14 +3689,14 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:description "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://linkml.neverblink.eu/> ;
-    okg:latestVersion "0.12.1" ;
+    okg:latestVersion "0.12.2" ;
     okg:programmingLanguage "Scala" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
         <https://openknowledgegraphs.com/software/rdfsharp/>,
         <https://openknowledgegraphs.com/software/sansa/>,
         <https://openknowledgegraphs.com/software/sophia-rdf-toolkit/>,
         <https://openknowledgegraphs.com/software/topbraid-shacl-api/> ;
-    okg:releaseDate "2026-08-10"^^xsd:date ;
+    okg:releaseDate "2026-08-11"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/NeverBlink-OSS/linkml-scala> ;
     okg:title "LinkML-Scala" ;
@@ -4346,40 +4365,6 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:title "InfiniteGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6029732> .
 
-<https://openknowledgegraphs.com/software/4store/> a okg:Software ;
-    rdfs:label "4store" ;
-    okg:description "RDF database system" ;
-    okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
-    okg:homepage <https://4store.github.io> ;
-    okg:latestVersion "1.1.7" ;
-    okg:programmingLanguage "C" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/neo4j/>,
-        <https://openknowledgegraphs.com/software/qendpoint/>,
-        <https://openknowledgegraphs.com/software/quitstore/>,
-        <https://openknowledgegraphs.com/software/redstore/>,
-        <https://openknowledgegraphs.com/software/virtuoso-universal-server/> ;
-    okg:releaseDate "2024-05-10"^^xsd:date ;
-    okg:softwareType okg:GraphDatabase ;
-    okg:sourceRepo <https://github.com/4store/4store> ;
-    okg:title "4store" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q29981675> .
-
-<https://openknowledgegraphs.com/software/apache-marmotta/> a okg:Software ;
-    rdfs:label "Apache Marmotta" ;
-    okg:creator okg:Creator_Apache_Software_Foundation_Q489709 ;
-    okg:description "open platform for linked data" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://marmotta.apache.org> ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-rya/>,
-        <https://openknowledgegraphs.com/software/halyard/>,
-        <https://openknowledgegraphs.com/software/nebulagraph/>,
-        <https://openknowledgegraphs.com/software/orientdb/>,
-        <https://openknowledgegraphs.com/software/polypheny/> ;
-    okg:softwareType okg:GraphDatabase ;
-    okg:title "Apache Marmotta" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q16928009> .
-
 <https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
     rdfs:label "dotNetRDF" ;
     okg:description "open source .NET library for RDF" ;
@@ -4452,6 +4437,24 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:title "Polypheny" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q122920886> .
 
+<https://openknowledgegraphs.com/software/4store/> a okg:Software ;
+    rdfs:label "4store" ;
+    okg:description "RDF database system" ;
+    okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
+    okg:homepage <https://4store.github.io> ;
+    okg:latestVersion "1.1.7" ;
+    okg:programmingLanguage "C" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/qendpoint/>,
+        <https://openknowledgegraphs.com/software/quitstore/>,
+        <https://openknowledgegraphs.com/software/redstore/>,
+        <https://openknowledgegraphs.com/software/virtuoso-universal-server/> ;
+    okg:releaseDate "2024-05-10"^^xsd:date ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/4store/4store> ;
+    okg:title "4store" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q29981675> .
+
 <https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
     rdfs:label "Apache Jena" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
@@ -4471,6 +4474,22 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:sourceRepo <https://git.apache.org/jena> ;
     okg:title "Apache Jena" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
+
+<https://openknowledgegraphs.com/software/apache-marmotta/> a okg:Software ;
+    rdfs:label "Apache Marmotta" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709 ;
+    okg:description "open platform for linked data" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <http://marmotta.apache.org> ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-rya/>,
+        <https://openknowledgegraphs.com/software/halyard/>,
+        <https://openknowledgegraphs.com/software/nebulagraph/>,
+        <https://openknowledgegraphs.com/software/orientdb/>,
+        <https://openknowledgegraphs.com/software/polypheny/> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:title "Apache Marmotta" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q16928009> .
 
 <https://openknowledgegraphs.com/software/bnf-authorities/> a okg:Software ;
     rdfs:label "BnF authorities" ;
