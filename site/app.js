@@ -4,6 +4,10 @@
   const DATA_PATHS = {
     ontologies: ["./data/ontologies.json", "../data/ontologies.json"],
     software: ["./data/software.json", "../data/software.json"],
+    controlledVocabularies: [
+      "./data/controlled_vocabularies.json",
+      "../data/controlled_vocabularies.json",
+    ],
   };
 
   const DEFAULT_STATE = {
@@ -13,46 +17,15 @@
     softwareType: "all",
   };
 
-  const CATEGORY_OPTIONS = [
-    { id: "all", label: "All" },
-    { id: "life-sciences-healthcare", label: "Life Sciences & Healthcare" },
-    { id: "geospatial", label: "Geospatial" },
-    { id: "government-public-sector", label: "Government & Public Sector" },
-    { id: "international-development", label: "International Development" },
-    { id: "finance-business", label: "Finance & Business" },
-    { id: "library-cultural-heritage", label: "Library & Cultural Heritage" },
-    { id: "technology-web", label: "Technology & Web" },
-    { id: "environment-agriculture", label: "Environment & Agriculture" },
-    { id: "general-cross-domain", label: "General / Cross-domain" },
-  ];
-  const CATEGORY_IDS = new Set(CATEGORY_OPTIONS.map((entry) => entry.id));
-  const CATEGORY_ID_TO_LABEL = new Map(
-    CATEGORY_OPTIONS.map((entry) => [entry.id, entry.label])
-  );
-  const CATEGORY_LABEL_TO_ID = new Map(
-    CATEGORY_OPTIONS.filter((entry) => entry.id !== "all").map((entry) => [entry.label, entry.id])
-  );
+  let CATEGORY_OPTIONS = [{ id: "all", label: "All" }];
+  let CATEGORY_IDS = new Set(["all"]);
+  let CATEGORY_ID_TO_LABEL = new Map([["all", "All"]]);
+  let CATEGORY_LABEL_TO_ID = new Map();
 
-  const SOFTWARE_TYPE_OPTIONS = [
-    { id: "all", label: "All" },
-    { id: "graph-database", label: "Graph Database" },
-    { id: "sparql-tooling", label: "SPARQL Tooling" },
-    { id: "ontology-engineering", label: "Ontology Engineering" },
-    { id: "reasoning-inference", label: "Reasoning & Inference" },
-    { id: "data-mapping-etl", label: "RDF Data Mapping / ETL" },
-    { id: "developer-library", label: "Developer Library" },
-    { id: "knowledge-graph-construction", label: "Knowledge Graph Construction" },
-    { id: "ai-agent-tooling", label: "AI Agent Tooling" },
-    { id: "visualization", label: "Visualization" },
-    { id: "stream-processing", label: "Stream Processing" },
-  ];
-  const SOFTWARE_TYPE_IDS = new Set(SOFTWARE_TYPE_OPTIONS.map((entry) => entry.id));
-  const SOFTWARE_TYPE_ID_TO_LABEL = new Map(
-    SOFTWARE_TYPE_OPTIONS.map((entry) => [entry.id, entry.label])
-  );
-  const SOFTWARE_TYPE_LABEL_TO_ID = new Map(
-    SOFTWARE_TYPE_OPTIONS.filter((entry) => entry.id !== "all").map((entry) => [entry.label, entry.id])
-  );
+  let SOFTWARE_TYPE_OPTIONS = [{ id: "all", label: "All" }];
+  let SOFTWARE_TYPE_IDS = new Set(["all"]);
+  let SOFTWARE_TYPE_ID_TO_LABEL = new Map([["all", "All"]]);
+  let SOFTWARE_TYPE_LABEL_TO_ID = new Map();
 
   const TAB_DEFAULT_SORT = {
     ontologies: { sort: "documentationScore", order: "desc" },
@@ -116,6 +89,75 @@
     },
     pageSlugs: { resource: {}, software: {} },
   };
+
+  function normalizeVocabularyOptions(rawEntries) {
+    const options = [{ id: "all", label: "All" }];
+    const seenIds = new Set(["all"]);
+    const seenLabels = new Set(["All"]);
+    if (!Array.isArray(rawEntries)) {
+      return options;
+    }
+    rawEntries.forEach((entry) => {
+      const id = typeof entry?.id === "string" ? entry.id.trim() : "";
+      const label = typeof entry?.label === "string" ? entry.label.trim() : "";
+      if (!id || !label || seenIds.has(id) || seenLabels.has(label)) {
+        return;
+      }
+      seenIds.add(id);
+      seenLabels.add(label);
+      options.push({ id, label });
+    });
+    return options;
+  }
+
+  function renderVocabularyButtons(container, options, dataAttribute) {
+    const list = container?.querySelector(".category-pill-list");
+    if (!list) {
+      return [];
+    }
+    list.replaceChildren();
+    options.forEach((entry) => {
+      const button = document.createElement("button");
+      button.className = `category-pill${entry.id === "all" ? " is-active" : ""}`;
+      button.type = "button";
+      button.setAttribute("aria-pressed", entry.id === "all" ? "true" : "false");
+      button.dataset[dataAttribute] = entry.id;
+      button.textContent = entry.label;
+      list.appendChild(button);
+    });
+    return Array.from(list.querySelectorAll(".category-pill"));
+  }
+
+  function configureControlledVocabularies(payload) {
+    CATEGORY_OPTIONS = normalizeVocabularyOptions(payload?.categories);
+    SOFTWARE_TYPE_OPTIONS = normalizeVocabularyOptions(payload?.softwareTypes);
+
+    CATEGORY_IDS = new Set(CATEGORY_OPTIONS.map((entry) => entry.id));
+    CATEGORY_ID_TO_LABEL = new Map(CATEGORY_OPTIONS.map((entry) => [entry.id, entry.label]));
+    CATEGORY_LABEL_TO_ID = new Map(
+      CATEGORY_OPTIONS.filter((entry) => entry.id !== "all").map((entry) => [entry.label, entry.id])
+    );
+    SOFTWARE_TYPE_IDS = new Set(SOFTWARE_TYPE_OPTIONS.map((entry) => entry.id));
+    SOFTWARE_TYPE_ID_TO_LABEL = new Map(
+      SOFTWARE_TYPE_OPTIONS.map((entry) => [entry.id, entry.label])
+    );
+    SOFTWARE_TYPE_LABEL_TO_ID = new Map(
+      SOFTWARE_TYPE_OPTIONS.filter((entry) => entry.id !== "all").map(
+        (entry) => [entry.label, entry.id]
+      )
+    );
+
+    dom.categoryButtons = renderVocabularyButtons(
+      dom.categoryFilters,
+      CATEGORY_OPTIONS,
+      "category"
+    );
+    dom.softwareTypeButtons = renderVocabularyButtons(
+      dom.softwareTypeFilters,
+      SOFTWARE_TYPE_OPTIONS,
+      "softwareType"
+    );
+  }
 
   let state = normalizeState(parseStateFromUrl());
   let lastTrackedSearchSignature = "";
@@ -1301,20 +1343,23 @@
 
   async function init() {
     setLoadingState();
-    updateTabUi();
-    updateCategoryUi();
-    updateSoftwareTypeUi();
-    syncSearchInput();
-    bindEvents();
 
     try {
-      const [ontologyResult, softwareResult] = await Promise.all([
+      const [ontologyResult, softwareResult, vocabularyResult] = await Promise.all([
         fetchJsonWithFallback(DATA_PATHS.ontologies),
         fetchJsonWithFallback(DATA_PATHS.software),
+        fetchJsonWithFallback(DATA_PATHS.controlledVocabularies),
       ]);
 
       const ontologyPayload = ontologyResult.payload;
       const softwarePayload = softwareResult.payload;
+      configureControlledVocabularies(vocabularyResult.payload);
+      state = normalizeState(parseStateFromUrl());
+      updateTabUi();
+      updateCategoryUi();
+      updateSoftwareTypeUi();
+      syncSearchInput();
+      bindEvents();
       updateTtlLinksFromJsonPath(ontologyResult.path);
 
       store.ontologies = Array.isArray(ontologyPayload.items)

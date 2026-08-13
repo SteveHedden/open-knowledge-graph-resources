@@ -804,14 +804,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Plant Environment Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-environment-ontology/"
-        },
-        {
-          "title": "Plant Trait Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-trait-ontology/"
-        },
-        {
           "title": "Agronomy Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
         },
@@ -822,6 +814,14 @@
         {
           "title": "Dynamic Earth Sciences Ontologies: Process and Event Ontologies",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dynamic-earth-sciences-ontologies-process-and-event-ontologies/"
+        },
+        {
+          "title": "Plant Environment Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-environment-ontology/"
+        },
+        {
+          "title": "Plant Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-trait-ontology/"
         }
       ]
     },
@@ -995,10 +995,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Pathways",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/pathways/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -1013,6 +1009,10 @@
         {
           "title": "Archivio di Autorità del Museo Galileo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
+        },
+        {
+          "title": "Pathways",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/pathways/"
         }
       ]
     },
@@ -1918,24 +1918,24 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "Crop Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/crop-ontology/"
-        },
-        {
-          "title": "Solanaceae Phenotype Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
-        },
-        {
           "title": "Agronomy Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
+          "title": "Animals in Context Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
         },
         {
           "title": "Biological Collections Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-collections-ontology/"
         },
         {
-          "title": "Animals in Context Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
+          "title": "Crop Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/crop-ontology/"
+        },
+        {
+          "title": "Solanaceae Phenotype Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
         }
       ]
     },
@@ -2663,8 +2663,8 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "German Barcode of Life",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/german-barcode-of-life/"
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
         },
         {
           "title": "Animal Trait Ontology for Livestock",
@@ -2675,12 +2675,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/crop-ontology/"
         },
         {
-          "title": "Solanaceae Phenotype Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
+          "title": "German Barcode of Life",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/german-barcode-of-life/"
         },
         {
-          "title": "Agronomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+          "title": "Solanaceae Phenotype Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
         }
       ]
     },
@@ -2737,14 +2737,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Union List of Artist Names",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/union-list-of-artist-names/"
-        },
-        {
-          "title": "Cultural Objects Name Authority",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -2755,6 +2747,14 @@
         {
           "title": "ARCHER",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archer/"
+        },
+        {
+          "title": "Cultural Objects Name Authority",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
+        },
+        {
+          "title": "Union List of Artist Names",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/union-list-of-artist-names/"
         }
       ]
     },
@@ -3395,10 +3395,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Corporate body name authority list",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/corporate-body-name-authority-list/"
-        },
-        {
           "title": "Akoma Ntoso for European Union",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         },
@@ -3409,6 +3405,10 @@
         {
           "title": "Cadastre of Latvia",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cadastre-of-latvia/"
+        },
+        {
+          "title": "Corporate body name authority list",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/corporate-body-name-authority-list/"
         },
         {
           "title": "Criminological Thesaurus",
@@ -3850,10 +3850,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Costume Core",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/costume-core/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -3868,6 +3864,10 @@
         {
           "title": "Archivio di Autorità del Museo Galileo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
+        },
+        {
+          "title": "Costume Core",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/costume-core/"
         }
       ]
     },
@@ -4158,10 +4158,6 @@
       ],
       "relatedTools": [
         {
-          "title": "KBpedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
-        },
-        {
           "title": "Apollo Structured Vocabulary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495151/"
         },
@@ -4176,6 +4172,10 @@
         {
           "title": "Experimental Factor Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495237/"
+        },
+        {
+          "title": "KBpedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
         }
       ]
     },
@@ -4596,10 +4596,6 @@
       ],
       "relatedTools": [
         {
-          "title": "HERO - Ontology of Heraldry",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
-        },
-        {
           "title": "Bibliographic Reference Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographic-reference-ontology/"
         },
@@ -4614,6 +4610,10 @@
         {
           "title": "Curate Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/curate-ontology/"
+        },
+        {
+          "title": "HERO - Ontology of Heraldry",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
         }
       ]
     },
@@ -5409,10 +5409,6 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "DCAT",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/dcat/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -5427,6 +5423,10 @@
         {
           "title": "Arnetminer",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/arnetminer/"
+        },
+        {
+          "title": "DCAT",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/dcat/"
         }
       ]
     },
@@ -5548,6 +5548,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
           "title": "Animal Trait Ontology for Livestock",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/animal-trait-ontology-for-livestock/"
         },
@@ -5562,10 +5566,6 @@
         {
           "title": "Solanaceae Phenotype Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
-        },
-        {
-          "title": "Agronomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
         }
       ]
     },
@@ -6507,10 +6507,6 @@
       "homepage": "http://www.wikidata.org/.well-known/genid/d5df5af4d2ef8b6978365eef26696c26",
       "relatedTools": [
         {
-          "title": "IAB Content Taxonomy",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/iab-content-taxonomy/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -6525,6 +6521,10 @@
         {
           "title": "Arnetminer",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/arnetminer/"
+        },
+        {
+          "title": "IAB Content Taxonomy",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iab-content-taxonomy/"
         }
       ]
     },
@@ -7467,10 +7467,6 @@
       ],
       "relatedTools": [
         {
-          "title": "RealEstateCore",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/realestatecore/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -7485,6 +7481,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "RealEstateCore",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/realestatecore/"
         }
       ]
     },
@@ -8054,20 +8054,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
-          "title": "KANTO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
-        },
-        {
-          "title": "Yale LUX",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
           "title": "Film Club Knowledge Graph (FCKG)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         },
         {
           "title": "Integrated Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
+        },
+        {
+          "title": "KANTO",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
+        },
+        {
+          "title": "Yale LUX",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
         }
       ]
     },
@@ -9141,10 +9141,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Experimental Factor Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/"
-        },
-        {
           "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cpr-ontology-for-the-institute-of-medicine-s-computer-based-patient-record-ontology/"
         },
@@ -9159,6 +9155,10 @@
         {
           "title": "Amphibian taxonomy",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/amphibian-taxonomy/"
+        },
+        {
+          "title": "Experimental Factor Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/"
         }
       ]
     },
@@ -9446,14 +9446,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Virtual International Authority File",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/virtual-international-authority-file/"
-        },
-        {
-          "title": "Cultural Objects Name Authority",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -9464,6 +9456,14 @@
         {
           "title": "ARCHER",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archer/"
+        },
+        {
+          "title": "Cultural Objects Name Authority",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
+        },
+        {
+          "title": "Virtual International Authority File",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/virtual-international-authority-file/"
         }
       ]
     },
@@ -9851,6 +9851,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Clinical measurement ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
+        },
+        {
           "title": "Dictyostelium discoideum anatomy",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dictyostelium-discoideum-anatomy/"
         },
@@ -9865,10 +9869,6 @@
         {
           "title": "Human Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/human-disease-ontology/"
-        },
-        {
-          "title": "Clinical measurement ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
         }
       ]
     },
@@ -11037,10 +11037,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Systems Biology Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/systems-biology-ontology/"
-        },
-        {
           "title": "Addgene",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/addgene/"
         },
@@ -11055,6 +11051,10 @@
         {
           "title": "Bio2RDF::Goa",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bio2rdf-goa/"
+        },
+        {
+          "title": "Systems Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/systems-biology-ontology/"
         }
       ]
     },
@@ -12967,20 +12967,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
         },
         {
-          "title": "Ontology of units of Measure 2.0",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
-        },
-        {
-          "title": "Universal Open Game Theory Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
-        },
-        {
           "title": "General Finnish Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
         },
         {
           "title": "KBpedia",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
+        },
+        {
+          "title": "Ontology of units of Measure 2.0",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
+        },
+        {
+          "title": "Universal Open Game Theory Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
         }
       ]
     },
@@ -13154,16 +13154,16 @@
       ],
       "relatedTools": [
         {
-          "title": "Australian Governments' Interactive Functions Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-governments-interactive-functions-thesaurus/"
-        },
-        {
           "title": "Akoma Ntoso for European Union",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         },
         {
           "title": "Australian and New Zealand Standard Classification of Occupations identifier",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-and-new-zealand-standard-classification-of-occupations-identifier/"
+        },
+        {
+          "title": "Australian Governments' Interactive Functions Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-governments-interactive-functions-thesaurus/"
         },
         {
           "title": "Cadastre of Latvia",
@@ -13235,14 +13235,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Film Club Knowledge Graph (FCKG)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
-        },
-        {
-          "title": "Autores.uy",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/autores-uy/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -13253,6 +13245,14 @@
         {
           "title": "ARCHER",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archer/"
+        },
+        {
+          "title": "Autores.uy",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/autores-uy/"
+        },
+        {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         }
       ]
     },
@@ -13775,24 +13775,24 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
           "title": "Animal Trait Ontology for Livestock",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/animal-trait-ontology-for-livestock/"
         },
         {
-          "title": "Solanaceae Phenotype Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
-        },
-        {
-          "title": "Agronomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+          "title": "Animals in Context Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
         },
         {
           "title": "Biological Collections Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-collections-ontology/"
         },
         {
-          "title": "Animals in Context Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
+          "title": "Solanaceae Phenotype Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
         }
       ]
     },
@@ -14047,8 +14047,16 @@
       ],
       "relatedTools": [
         {
+          "title": "Adamlink",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
+        },
+        {
           "title": "Art & Architecture Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/art-architecture-thesaurus/"
+        },
+        {
+          "title": "CERL Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cerl-thesaurus/"
         },
         {
           "title": "Union List of Artist Names",
@@ -14057,14 +14065,6 @@
         {
           "title": "Virtual International Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/virtual-international-authority-file/"
-        },
-        {
-          "title": "CERL Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cerl-thesaurus/"
-        },
-        {
-          "title": "Adamlink",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         }
       ]
     },
@@ -14210,10 +14210,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Unified Cyber Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/unified-cyber-ontology/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -14228,6 +14224,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "Unified Cyber Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/unified-cyber-ontology/"
         }
       ]
     },
@@ -14390,10 +14390,6 @@
       ],
       "relatedTools": [
         {
-          "title": "IOF Core",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/iof-core/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -14408,6 +14404,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "IOF Core",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iof-core/"
         }
       ]
     },
@@ -14499,16 +14499,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/eviterbo/"
         },
         {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
+        },
+        {
           "title": "HERO - Ontology of Heraldry",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
         },
         {
           "title": "RDA track configuration",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/rda-track-configuration/"
-        },
-        {
-          "title": "Film Club Knowledge Graph (FCKG)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         }
       ]
     },
@@ -14747,10 +14747,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Wikibase TDKIV",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/wikibase-tdkiv/"
-        },
-        {
           "title": "data.biblissima.fr",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/data-biblissima-fr/"
         },
@@ -14765,6 +14761,10 @@
         {
           "title": "Knowledge Graph for Irish History",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/knowledge-graph-for-irish-history/"
+        },
+        {
+          "title": "Wikibase TDKIV",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/wikibase-tdkiv/"
         }
       ]
     },
@@ -14947,14 +14947,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Relations Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
-        },
-        {
-          "title": "Wikidata",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/wikidata/"
-        },
-        {
           "title": "3-Step Theory of suicide",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
         },
@@ -14965,6 +14957,14 @@
         {
           "title": "A formal representation of the knowledge within the domain of Isotopes for Food Science",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495110/"
+        },
+        {
+          "title": "Relations Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
+        },
+        {
+          "title": "Wikidata",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/wikidata/"
         }
       ]
     },
@@ -15084,10 +15084,6 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "Bioinformatics Web Service Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/bioinformatics-web-service-ontology/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -15102,6 +15098,10 @@
         {
           "title": "Arnetminer",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/arnetminer/"
+        },
+        {
+          "title": "Bioinformatics Web Service Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/bioinformatics-web-service-ontology/"
         }
       ]
     },
@@ -15347,6 +15347,14 @@
       "homepage": "https://democracyclub.org.uk/",
       "relatedTools": [
         {
+          "title": "Akoma Ntoso for European Union",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
+        },
+        {
+          "title": "Finnish Ontology for Judicial Administration",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
+        },
+        {
           "title": "Kohesio",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kohesio/"
         },
@@ -15357,14 +15365,6 @@
         {
           "title": "The EU knowledge graph",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/the-eu-knowledge-graph/"
-        },
-        {
-          "title": "Finnish Ontology for Judicial Administration",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
-        },
-        {
-          "title": "Akoma Ntoso for European Union",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         }
       ]
     },
@@ -15609,14 +15609,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Ontology of units of Measure 2.0",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
-        },
-        {
-          "title": "Universal Open Game Theory Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
-        },
-        {
           "title": "Core Emotion Framework",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
         },
@@ -15627,6 +15619,14 @@
         {
           "title": "KBpedia",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
+        },
+        {
+          "title": "Ontology of units of Measure 2.0",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
+        },
+        {
+          "title": "Universal Open Game Theory Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
         }
       ]
     },
@@ -16049,6 +16049,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
         },
         {
+          "title": "Clinical measurement ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
+        },
+        {
           "title": "Evidence and Conclusion Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/evidence-and-conclusion-ontology/"
         },
@@ -16059,10 +16063,6 @@
         {
           "title": "Human Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/human-disease-ontology/"
-        },
-        {
-          "title": "Clinical measurement ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
         }
       ]
     },
@@ -16710,10 +16710,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Lexicon Model for Ontologies - Decomp",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/lexicon-model-for-ontologies-decomp/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -16728,6 +16724,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "Lexicon Model for Ontologies - Decomp",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/lexicon-model-for-ontologies-decomp/"
         }
       ]
     },
@@ -17414,10 +17414,6 @@
       ],
       "relatedTools": [
         {
-          "title": "NORIA-O",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/noria-o/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -17432,6 +17428,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "NORIA-O",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/noria-o/"
         }
       ]
     },
@@ -17827,20 +17827,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/camp-list/"
         },
         {
-          "title": "KANTO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
-        },
-        {
-          "title": "Yale LUX",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
           "title": "Film Club Knowledge Graph (FCKG)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         },
         {
           "title": "Integrated Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
+        },
+        {
+          "title": "KANTO",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
+        },
+        {
+          "title": "Yale LUX",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
         }
       ]
     },
@@ -19082,12 +19082,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Biological Collections Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-collections-ontology/"
-        },
-        {
           "title": "Animals in Context Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
+        },
+        {
+          "title": "Biological Collections Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-collections-ontology/"
         },
         {
           "title": "Dynamic Earth Sciences Ontologies: Process and Event Ontologies",
@@ -20675,6 +20675,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
         },
         {
+          "title": "Clinical measurement ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
+        },
+        {
           "title": "Dictyostelium discoideum anatomy",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dictyostelium-discoideum-anatomy/"
         },
@@ -20685,10 +20689,6 @@
         {
           "title": "Human Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/human-disease-ontology/"
-        },
-        {
-          "title": "Clinical measurement ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
         }
       ]
     },
@@ -20755,6 +20755,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
         },
         {
+          "title": "Clinical measurement ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
+        },
+        {
           "title": "Dictyostelium discoideum anatomy",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dictyostelium-discoideum-anatomy/"
         },
@@ -20765,10 +20769,6 @@
         {
           "title": "Human Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/human-disease-ontology/"
-        },
-        {
-          "title": "Clinical measurement ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
         }
       ]
     },
@@ -21282,14 +21282,6 @@
       ],
       "relatedTools": [
         {
-          "title": "SuperPattern Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/superpattern-ontology/"
-        },
-        {
-          "title": "Relations Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
-        },
-        {
           "title": "AFO Foundational Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/afo-foundational-ontology/"
         },
@@ -21300,6 +21292,14 @@
         {
           "title": "Biomimetic Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/biomimetic-ontology/"
+        },
+        {
+          "title": "Relations Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
+        },
+        {
+          "title": "SuperPattern Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/superpattern-ontology/"
         }
       ]
     },
@@ -22374,16 +22374,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
+          "title": "Integrated Authority File",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
+        },
+        {
           "title": "KANTO",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
         },
         {
           "title": "Yale LUX",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
-          "title": "Integrated Authority File",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
         }
       ]
     },
@@ -22480,14 +22480,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Australian Governments' Interactive Functions Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-governments-interactive-functions-thesaurus/"
-        },
-        {
-          "title": "Corporate body name authority list",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/corporate-body-name-authority-list/"
-        },
-        {
           "title": "Akoma Ntoso for European Union",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         },
@@ -22496,8 +22488,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-and-new-zealand-standard-classification-of-occupations-identifier/"
         },
         {
+          "title": "Australian Governments' Interactive Functions Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-governments-interactive-functions-thesaurus/"
+        },
+        {
           "title": "Australian Standard Classification of Education",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-standard-classification-of-education/"
+        },
+        {
+          "title": "Corporate body name authority list",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/corporate-body-name-authority-list/"
         }
       ]
     },
@@ -22775,12 +22775,16 @@
       ],
       "relatedTools": [
         {
-          "title": "FISH Monument Types Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/fish-monument-types-thesaurus/"
+          "title": "Adamlink",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
         {
           "title": "FISH Archaeological Sciences Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/fish-archaeological-sciences-thesaurus/"
+        },
+        {
+          "title": "FISH Monument Types Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/fish-monument-types-thesaurus/"
         },
         {
           "title": "Library of Congress Demographic Group Terms",
@@ -22789,10 +22793,6 @@
         {
           "title": "Library of Congress Genre/Form Terms",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-genre-form-terms/"
-        },
-        {
-          "title": "Adamlink",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         }
       ]
     },
@@ -22848,12 +22848,16 @@
       ],
       "relatedTools": [
         {
-          "title": "FISH Evidence Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/fish-evidence-thesaurus/"
+          "title": "Adamlink",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
         {
           "title": "FISH Archaeological Sciences Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/fish-archaeological-sciences-thesaurus/"
+        },
+        {
+          "title": "FISH Evidence Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/fish-evidence-thesaurus/"
         },
         {
           "title": "Library of Congress Demographic Group Terms",
@@ -22862,10 +22866,6 @@
         {
           "title": "Library of Congress Genre/Form Terms",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-genre-form-terms/"
-        },
-        {
-          "title": "Adamlink",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         }
       ]
     },
@@ -23800,24 +23800,24 @@
       ],
       "relatedTools": [
         {
-          "title": "FRBR-aligned Bibliographic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology-q55806952/"
-        },
-        {
           "title": "Bibliographic Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographic-ontology/"
         },
         {
-          "title": "HERO - Ontology of Heraldry",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
+          "title": "Bibliographic Reference Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographic-reference-ontology/"
         },
         {
           "title": "DanNet",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dannet/"
         },
         {
-          "title": "Bibliographic Reference Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographic-reference-ontology/"
+          "title": "FRBR-aligned Bibliographic Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology-q55806952/"
+        },
+        {
+          "title": "HERO - Ontology of Heraldry",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
         }
       ]
     },
@@ -23853,16 +23853,8 @@
       ],
       "relatedTools": [
         {
-          "title": "FRBR-aligned Bibliographic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/"
-        },
-        {
           "title": "Bibliographic Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographic-ontology/"
-        },
-        {
-          "title": "HERO - Ontology of Heraldry",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
         },
         {
           "title": "Bibliographic Reference Ontology",
@@ -23871,6 +23863,14 @@
         {
           "title": "CIDOC Conceptual Reference Model",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cidoc-conceptual-reference-model/"
+        },
+        {
+          "title": "FRBR-aligned Bibliographic Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/"
+        },
+        {
+          "title": "HERO - Ontology of Heraldry",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/hero-ontology-of-heraldry/"
         }
       ]
     },
@@ -24220,24 +24220,24 @@
       ],
       "relatedTools": [
         {
-          "title": "GeoNames ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/geonames-ontology/"
-        },
-        {
-          "title": "Spatiotemporal Ontology for the Administrative Units of Switzerland",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/spatiotemporal-ontology-for-the-administrative-units-of-switzerland/"
-        },
-        {
-          "title": "GeoSPARQL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
-        },
-        {
           "title": "AIATSIS Place Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/"
         },
         {
           "title": "Basic Geo (WGS84 lat/long) Vocabulary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/"
+        },
+        {
+          "title": "GeoNames ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/geonames-ontology/"
+        },
+        {
+          "title": "GeoSPARQL",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
+        },
+        {
+          "title": "Spatiotemporal Ontology for the Administrative Units of Switzerland",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/spatiotemporal-ontology-for-the-administrative-units-of-switzerland/"
         }
       ]
     },
@@ -24265,6 +24265,14 @@
       "sourceRepo": "https://github.com/AndriesSHP/Gellish",
       "relatedTools": [
         {
+          "title": "3-Step Theory of suicide",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
+        },
+        {
+          "title": "A comprehensive ontology of flaps in reconstructive surgery",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
+        },
+        {
           "title": "Knowledge Interchange Format",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/knowledge-interchange-format/"
         },
@@ -24275,14 +24283,6 @@
         {
           "title": "R2ML",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/r2ml/"
-        },
-        {
-          "title": "3-Step Theory of suicide",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
-        },
-        {
-          "title": "A comprehensive ontology of flaps in reconstructive surgery",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
         }
       ]
     },
@@ -24310,10 +24310,6 @@
       ],
       "relatedTools": [
         {
-          "title": "General Finnish Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
           "title": "AFO Foundational Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/afo-foundational-ontology/"
         },
@@ -24328,6 +24324,10 @@
         {
           "title": "Australian Thesaurus of Education Descriptors",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-thesaurus-of-education-descriptors/"
+        },
+        {
+          "title": "General Finnish Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
         }
       ]
     },
@@ -24919,6 +24919,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Core Emotion Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
+        },
+        {
           "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
         },
@@ -24933,10 +24937,6 @@
         {
           "title": "Universal Open Game Theory Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
-        },
-        {
-          "title": "Core Emotion Framework",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
         }
       ]
     },
@@ -25519,8 +25519,12 @@
       "partOf": "GeoNames",
       "relatedTools": [
         {
-          "title": "Spatiotemporal Ontology for the Administrative Units of Switzerland",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/spatiotemporal-ontology-for-the-administrative-units-of-switzerland/"
+          "title": "AIATSIS Place Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/"
+        },
+        {
+          "title": "Basic Geo (WGS84 lat/long) Vocabulary",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/"
         },
         {
           "title": "Gazetteer",
@@ -25531,12 +25535,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
         },
         {
-          "title": "AIATSIS Place Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/"
-        },
-        {
-          "title": "Basic Geo (WGS84 lat/long) Vocabulary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/"
+          "title": "Spatiotemporal Ontology for the Administrative Units of Switzerland",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/spatiotemporal-ontology-for-the-administrative-units-of-switzerland/"
         }
       ]
     },
@@ -25575,6 +25575,10 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
+          "title": "Gazetteer",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gazetteer/"
+        },
+        {
           "title": "GeoNames ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/geonames-ontology/"
         },
@@ -25583,16 +25587,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-19115/"
         },
         {
-          "title": "Spatiotemporal Ontology for the Administrative Units of Switzerland",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/spatiotemporal-ontology-for-the-administrative-units-of-switzerland/"
-        },
-        {
-          "title": "Gazetteer",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/gazetteer/"
-        },
-        {
           "title": "KnowWhereGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/knowwheregraph/"
+        },
+        {
+          "title": "Spatiotemporal Ontology for the Administrative Units of Switzerland",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/spatiotemporal-ontology-for-the-administrative-units-of-switzerland/"
         }
       ]
     },
@@ -25652,12 +25652,16 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "Arctic Report Card",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/arctic-report-card/"
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
         },
         {
           "title": "Animal Trait Ontology for Livestock",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/animal-trait-ontology-for-livestock/"
+        },
+        {
+          "title": "Arctic Report Card",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/arctic-report-card/"
         },
         {
           "title": "Crop Ontology",
@@ -25666,10 +25670,6 @@
         {
           "title": "Solanaceae Phenotype Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
-        },
-        {
-          "title": "Agronomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
         }
       ]
     },
@@ -25767,10 +25767,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Thesaurus of Geographic Names LOD Dataset",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/"
-        },
-        {
           "title": "Basic Geo (WGS84 lat/long) Vocabulary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/"
         },
@@ -25785,6 +25781,10 @@
         {
           "title": "street list of Aachen",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/street-list-of-aachen/"
+        },
+        {
+          "title": "Thesaurus of Geographic Names LOD Dataset",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/"
         }
       ]
     },
@@ -30473,8 +30473,16 @@
       ],
       "relatedTools": [
         {
+          "title": "Core Emotion Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
+        },
+        {
           "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
+          "title": "General Finnish Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
         },
         {
           "title": "Ontology of units of Measure 2.0",
@@ -30483,14 +30491,6 @@
         {
           "title": "Universal Open Game Theory Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
-        },
-        {
-          "title": "Core Emotion Framework",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
-        },
-        {
-          "title": "General Finnish Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
         }
       ]
     },
@@ -33717,6 +33717,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
         },
         {
+          "title": "Clinical measurement ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
+        },
+        {
           "title": "Dictyostelium discoideum anatomy",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dictyostelium-discoideum-anatomy/"
         },
@@ -33727,10 +33731,6 @@
         {
           "title": "Evidence ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/evidence-ontology/"
-        },
-        {
-          "title": "Clinical measurement ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/clinical-measurement-ontology/"
         }
       ]
     },
@@ -34361,24 +34361,24 @@
       ],
       "relatedTools": [
         {
-          "title": "Blinding Identity Taxonomy (BIT)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/blinding-identity-taxonomy-bit/"
-        },
-        {
-          "title": "Semantic Wiki Vocabulary and Terminology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-wiki-vocabulary-and-terminology/"
-        },
-        {
-          "title": "Scholarlydata",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/scholarlydata/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
         {
           "title": "Algorithm-Implementation-Execution Ontology Design Pattern",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/"
+        },
+        {
+          "title": "Blinding Identity Taxonomy (BIT)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/blinding-identity-taxonomy-bit/"
+        },
+        {
+          "title": "Scholarlydata",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/scholarlydata/"
+        },
+        {
+          "title": "Semantic Wiki Vocabulary and Terminology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-wiki-vocabulary-and-terminology/"
         }
       ]
     },
@@ -34509,10 +34509,6 @@
       ],
       "relatedTools": [
         {
-          "title": "ICPSR Personal Names Authority List",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-personal-names-authority-list/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -34527,6 +34523,10 @@
         {
           "title": "Archivio di Autorità del Museo Galileo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
+        },
+        {
+          "title": "ICPSR Personal Names Authority List",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-personal-names-authority-list/"
         }
       ]
     },
@@ -34550,10 +34550,6 @@
       ],
       "relatedTools": [
         {
-          "title": "ICPSR Organization Names Authority List",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-organization-names-authority-list/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -34568,6 +34564,10 @@
         {
           "title": "Archivio di Autorità del Museo Galileo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
+        },
+        {
+          "title": "ICPSR Organization Names Authority List",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-organization-names-authority-list/"
         }
       ]
     },
@@ -34591,10 +34591,6 @@
       ],
       "relatedTools": [
         {
-          "title": "ICPSR Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-thesaurus/"
-        },
-        {
           "title": "Association football lexicon",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/association-football-lexicon/"
         },
@@ -34609,6 +34605,10 @@
         {
           "title": "Cadastre of France",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cadastre-of-france/"
+        },
+        {
+          "title": "ICPSR Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-thesaurus/"
         }
       ]
     },
@@ -34631,10 +34631,6 @@
       ],
       "relatedTools": [
         {
-          "title": "ICPSR Subject Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-subject-thesaurus/"
-        },
-        {
           "title": "Association football lexicon",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/association-football-lexicon/"
         },
@@ -34649,6 +34645,10 @@
         {
           "title": "Cadastre of France",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cadastre-of-france/"
+        },
+        {
+          "title": "ICPSR Subject Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icpsr-subject-thesaurus/"
         }
       ]
     },
@@ -35558,6 +35558,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Cell line Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
+        },
+        {
           "title": "Mass spectrometry ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/mass-spectrometry-ontology/"
         },
@@ -35572,10 +35576,6 @@
         {
           "title": "Zebrafish developmental stages ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-developmental-stages-ontology/"
-        },
-        {
-          "title": "Cell line Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
         }
       ]
     },
@@ -36130,16 +36130,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
+        },
+        {
           "title": "KANTO",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
         },
         {
           "title": "Yale LUX",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
-          "title": "Film Club Knowledge Graph (FCKG)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         }
       ]
     },
@@ -36959,10 +36959,6 @@
       ],
       "relatedTools": [
         {
-          "title": "D3FEND Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/d3fend-ontology/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -36977,6 +36973,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "D3FEND Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/d3fend-ontology/"
         }
       ]
     },
@@ -37030,14 +37030,6 @@
       ],
       "relatedTools": [
         {
-          "title": "General Finnish Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
-          "title": "Open Science Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-science-thesaurus/"
-        },
-        {
           "title": "Association football lexicon",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/association-football-lexicon/"
         },
@@ -37048,6 +37040,14 @@
         {
           "title": "Australian Thesaurus of Education Descriptors",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-thesaurus-of-education-descriptors/"
+        },
+        {
+          "title": "General Finnish Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
+        },
+        {
+          "title": "Open Science Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-science-thesaurus/"
         }
       ]
     },
@@ -37196,14 +37196,6 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "GeoSPARQL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
-        },
-        {
-          "title": "KnowWhereGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/knowwheregraph/"
-        },
-        {
           "title": "AIATSIS Place Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/"
         },
@@ -37214,6 +37206,14 @@
         {
           "title": "Gazetteer",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/gazetteer/"
+        },
+        {
+          "title": "GeoSPARQL",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
+        },
+        {
+          "title": "KnowWhereGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/knowwheregraph/"
         }
       ]
     },
@@ -38034,16 +38034,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
-          "title": "Yale LUX",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
           "title": "Film Club Knowledge Graph (FCKG)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         },
         {
           "title": "Integrated Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
+        },
+        {
+          "title": "Yale LUX",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
         }
       ]
     },
@@ -38108,12 +38108,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Basic Formal Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
           "title": "Apollo Structured Vocabulary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495151/"
+        },
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
         },
         {
           "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
@@ -38326,14 +38326,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Mathematical modeling ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/mathematical-modeling-ontology/"
-        },
-        {
-          "title": "Systems Biology Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/systems-biology-ontology/"
-        },
-        {
           "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cpr-ontology-for-the-institute-of-medicine-s-computer-based-patient-record-ontology/"
         },
@@ -38344,6 +38336,14 @@
         {
           "title": "Allotrope Foundation Ontologies",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/allotrope-foundation-ontologies/"
+        },
+        {
+          "title": "Mathematical modeling ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/mathematical-modeling-ontology/"
+        },
+        {
+          "title": "Systems Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/systems-biology-ontology/"
         }
       ]
     },
@@ -38501,6 +38501,14 @@
       "homepage": "http://www-ksl.stanford.edu/knowledge-sharing/kif/",
       "relatedTools": [
         {
+          "title": "3-Step Theory of suicide",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
+        },
+        {
+          "title": "A comprehensive ontology of flaps in reconstructive surgery",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
+        },
+        {
           "title": "Gellish",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/gellish/"
         },
@@ -38511,14 +38519,6 @@
         {
           "title": "R2ML",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/r2ml/"
-        },
-        {
-          "title": "3-Step Theory of suicide",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
-        },
-        {
-          "title": "A comprehensive ontology of flaps in reconstructive surgery",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
         }
       ]
     },
@@ -38608,14 +38608,6 @@
       ],
       "relatedTools": [
         {
-          "title": "ISO 19115",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-19115/"
-        },
-        {
-          "title": "GeoSPARQL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
-        },
-        {
           "title": "AIATSIS Place Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/"
         },
@@ -38626,6 +38618,14 @@
         {
           "title": "Gazetteer",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/gazetteer/"
+        },
+        {
+          "title": "GeoSPARQL",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
+        },
+        {
+          "title": "ISO 19115",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-19115/"
         }
       ]
     },
@@ -38641,8 +38641,16 @@
       "homepage": "https://kohesio.ec.europa.eu/",
       "relatedTools": [
         {
+          "title": "Akoma Ntoso for European Union",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
+        },
+        {
           "title": "Democracy Club",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/democracy-club/"
+        },
+        {
+          "title": "Finnish Ontology for Judicial Administration",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
         },
         {
           "title": "Ohio Bureau of Criminal Investigation",
@@ -38651,14 +38659,6 @@
         {
           "title": "The EU knowledge graph",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/the-eu-knowledge-graph/"
-        },
-        {
-          "title": "Finnish Ontology for Judicial Administration",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
-        },
-        {
-          "title": "Akoma Ntoso for European Union",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         }
       ]
     },
@@ -38797,10 +38797,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Online Mendelian Inheritance in Man",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/online-mendelian-inheritance-in-man/"
-        },
-        {
           "title": "Addgene",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/addgene/"
         },
@@ -38815,6 +38811,10 @@
         {
           "title": "Bio2RDF::Goa",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bio2rdf-goa/"
+        },
+        {
+          "title": "Online Mendelian Inheritance in Man",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/online-mendelian-inheritance-in-man/"
         }
       ]
     },
@@ -39242,10 +39242,6 @@
       ],
       "relatedTools": [
         {
-          "title": "dpp: namespace",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/dpp-namespace/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -39260,6 +39256,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "dpp: namespace",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/dpp-namespace/"
         }
       ]
     },
@@ -39750,6 +39750,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Library of Congress Demographic Group Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
+        },
+        {
           "title": "Library of Congress Medium of Performance Thesaurus for Music",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-medium-of-performance-thesaurus-for-music/"
         },
@@ -39764,10 +39768,6 @@
         {
           "title": "Thesaurus for Graphic Materials",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-for-graphic-materials/"
-        },
-        {
-          "title": "Library of Congress Demographic Group Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
         }
       ]
     },
@@ -39810,12 +39810,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Library of Congress Genre/Form Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-genre-form-terms/"
-        },
-        {
           "title": "Library of Congress Children's Subject Headings",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/"
+        },
+        {
+          "title": "Library of Congress Genre/Form Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-genre-form-terms/"
         },
         {
           "title": "Library of Congress Medium of Performance Thesaurus for Music",
@@ -39852,12 +39852,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Library of Congress Demographic Group Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
-        },
-        {
           "title": "Library of Congress Children's Subject Headings",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/"
+        },
+        {
+          "title": "Library of Congress Demographic Group Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
         },
         {
           "title": "Library of Congress Medium of Performance Thesaurus for Music",
@@ -39930,6 +39930,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/"
         },
         {
+          "title": "Library of Congress Demographic Group Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
+        },
+        {
           "title": "Library of Congress Name Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-name-authority-file/"
         },
@@ -39940,10 +39944,6 @@
         {
           "title": "Thesaurus for Graphic Materials",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-for-graphic-materials/"
-        },
-        {
-          "title": "Library of Congress Demographic Group Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
         }
       ]
     },
@@ -39971,6 +39971,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/"
         },
         {
+          "title": "Library of Congress Demographic Group Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
+        },
+        {
           "title": "Library of Congress Medium of Performance Thesaurus for Music",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-medium-of-performance-thesaurus-for-music/"
         },
@@ -39981,10 +39985,6 @@
         {
           "title": "Thesaurus for Graphic Materials",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-for-graphic-materials/"
-        },
-        {
-          "title": "Library of Congress Demographic Group Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
         }
       ]
     },
@@ -40012,6 +40012,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/"
         },
         {
+          "title": "Library of Congress Demographic Group Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
+        },
+        {
           "title": "Library of Congress Medium of Performance Thesaurus for Music",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-medium-of-performance-thesaurus-for-music/"
         },
@@ -40022,10 +40026,6 @@
         {
           "title": "Thesaurus for Graphic Materials",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-for-graphic-materials/"
-        },
-        {
-          "title": "Library of Congress Demographic Group Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
         }
       ]
     },
@@ -40158,14 +40158,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Bioinformatics Web Service Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/bioinformatics-web-service-ontology/"
-        },
-        {
-          "title": "DCAT",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/dcat/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -40176,6 +40168,14 @@
         {
           "title": "Application Portfolio Management",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/application-portfolio-management/"
+        },
+        {
+          "title": "Bioinformatics Web Service Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/bioinformatics-web-service-ontology/"
+        },
+        {
+          "title": "DCAT",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/dcat/"
         }
       ]
     },
@@ -40502,12 +40502,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Ontological Modeling Language",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontological-modeling-language/"
-        },
-        {
           "title": "FO(.)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/fo/"
+        },
+        {
+          "title": "Ontological Modeling Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontological-modeling-language/"
         },
         {
           "title": "OWL DL",
@@ -42418,6 +42418,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Cell line Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
+        },
+        {
           "title": "Infectious Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/infectious-disease-ontology/"
         },
@@ -42432,10 +42436,6 @@
         {
           "title": "Zebrafish developmental stages ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-developmental-stages-ontology/"
-        },
-        {
-          "title": "Cell line Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
         }
       ]
     },
@@ -42794,14 +42794,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Kinetic Simulation Algorithm Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kinetic-simulation-algorithm-ontology/"
-        },
-        {
-          "title": "Systems Biology Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/systems-biology-ontology/"
-        },
-        {
           "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cpr-ontology-for-the-institute-of-medicine-s-computer-based-patient-record-ontology/"
         },
@@ -42812,6 +42804,14 @@
         {
           "title": "Allotrope Foundation Ontologies",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/allotrope-foundation-ontologies/"
+        },
+        {
+          "title": "Kinetic Simulation Algorithm Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/kinetic-simulation-algorithm-ontology/"
+        },
+        {
+          "title": "Systems Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/systems-biology-ontology/"
         }
       ]
     },
@@ -47353,10 +47353,6 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
-          "title": "Cephalopod Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cephalopod-ontology/"
-        },
-        {
           "title": "Addiction Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/addiction-ontology-q138494181/"
         },
@@ -47371,6 +47367,10 @@
         {
           "title": "Autism-DSM-ADI-R Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/autism-dsm-adi-r-ontology/"
+        },
+        {
+          "title": "Cephalopod Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cephalopod-ontology/"
         }
       ]
     },
@@ -49125,10 +49125,6 @@
       ],
       "relatedTools": [
         {
-          "title": "RDA track configuration",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/rda-track-configuration/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -49143,6 +49139,10 @@
         {
           "title": "Archivio di Autorità del Museo Galileo",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archivio-di-autorita-del-museo-galileo/"
+        },
+        {
+          "title": "RDA track configuration",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/rda-track-configuration/"
         }
       ]
     },
@@ -49377,10 +49377,6 @@
       ],
       "relatedTools": [
         {
-          "title": "DSecO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/dseco/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -49395,6 +49391,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "DSecO",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/dseco/"
         }
       ]
     },
@@ -49458,16 +49458,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
+        },
+        {
           "title": "KANTO",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
         },
         {
           "title": "Yale LUX",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
-          "title": "Film Club Knowledge Graph (FCKG)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         }
       ]
     },
@@ -49911,6 +49911,14 @@
       "homepage": "https://www.iso.org/standard/84612.html",
       "relatedTools": [
         {
+          "title": "3-Step Theory of suicide",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
+        },
+        {
+          "title": "A comprehensive ontology of flaps in reconstructive surgery",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
+        },
+        {
           "title": "Gellish",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/gellish/"
         },
@@ -49921,14 +49929,6 @@
         {
           "title": "R2ML",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/r2ml/"
-        },
-        {
-          "title": "3-Step Theory of suicide",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
-        },
-        {
-          "title": "A comprehensive ontology of flaps in reconstructive surgery",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
         }
       ]
     },
@@ -50379,8 +50379,16 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
+          "title": "Akoma Ntoso for European Union",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
+        },
+        {
           "title": "Democracy Club",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/democracy-club/"
+        },
+        {
+          "title": "Finnish Ontology for Judicial Administration",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
         },
         {
           "title": "Kohesio",
@@ -50389,14 +50397,6 @@
         {
           "title": "The EU knowledge graph",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/the-eu-knowledge-graph/"
-        },
-        {
-          "title": "Finnish Ontology for Judicial Administration",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
-        },
-        {
-          "title": "Akoma Ntoso for European Union",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         }
       ]
     },
@@ -50559,10 +50559,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Kyoto Encyclopedia of Genes and Genomes",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kyoto-encyclopedia-of-genes-and-genomes/"
-        },
-        {
           "title": "Addgene",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/addgene/"
         },
@@ -50577,6 +50573,10 @@
         {
           "title": "Bio2RDF::Goa",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bio2rdf-goa/"
+        },
+        {
+          "title": "Kyoto Encyclopedia of Genes and Genomes",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/kyoto-encyclopedia-of-genes-and-genomes/"
         }
       ]
     },
@@ -53677,16 +53677,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
-        },
-        {
-          "title": "Universal Open Game Theory Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
-        },
-        {
           "title": "Core Emotion Framework",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
+        },
+        {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
         },
         {
           "title": "General Finnish Ontology",
@@ -53695,6 +53691,10 @@
         {
           "title": "KBpedia",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
+        },
+        {
+          "title": "Universal Open Game Theory Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/universal-open-game-theory-ontology/"
         }
       ]
     },
@@ -53757,6 +53757,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Cell line Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
+        },
+        {
           "title": "Infectious Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/infectious-disease-ontology/"
         },
@@ -53771,10 +53775,6 @@
         {
           "title": "Zebrafish developmental stages ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-developmental-stages-ontology/"
-        },
-        {
-          "title": "Cell line Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
         }
       ]
     },
@@ -54225,14 +54225,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Cyber-investigation Analysis Standard Expression Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyber-investigation-analysis-standard-expression-ontology/"
-        },
-        {
-          "title": "Unified Cyber Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/unified-cyber-ontology/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -54243,6 +54235,14 @@
         {
           "title": "auditory",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
+        },
+        {
+          "title": "Cyber-investigation Analysis Standard Expression Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyber-investigation-analysis-standard-expression-ontology/"
+        },
+        {
+          "title": "Unified Cyber Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/unified-cyber-ontology/"
         }
       ]
     },
@@ -54377,14 +54377,6 @@
       ],
       "relatedTools": [
         {
-          "title": "IPTC NewsCodes",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/iptc-newscodes/"
-        },
-        {
-          "title": "General Finnish Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
-        },
-        {
           "title": "Association football lexicon",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/association-football-lexicon/"
         },
@@ -54395,6 +54387,14 @@
         {
           "title": "Australian Thesaurus of Education Descriptors",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/australian-thesaurus-of-education-descriptors/"
+        },
+        {
+          "title": "General Finnish Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-finnish-ontology/"
+        },
+        {
+          "title": "IPTC NewsCodes",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iptc-newscodes/"
         }
       ]
     },
@@ -56002,12 +56002,12 @@
       ],
       "relatedTools": [
         {
-          "title": "AIATSIS Subject Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-subject-thesaurus/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
+        },
+        {
+          "title": "AIATSIS Subject Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-subject-thesaurus/"
         },
         {
           "title": "Archaeological Cadastre",
@@ -56283,16 +56283,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
+        },
+        {
           "title": "KANTO",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
         },
         {
           "title": "Yale LUX",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/yale-lux/"
-        },
-        {
-          "title": "Film Club Knowledge Graph (FCKG)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         }
       ]
     },
@@ -56399,6 +56399,10 @@
       ],
       "relatedTools": [
         {
+          "title": "data.biblissima.fr",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/data-biblissima-fr/"
+        },
+        {
           "title": "Database of Czech Librarians",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/database-of-czech-librarians/"
         },
@@ -56407,16 +56411,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/factgrid/"
         },
         {
-          "title": "Wikibase TDKIV",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/wikibase-tdkiv/"
-        },
-        {
-          "title": "data.biblissima.fr",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/data-biblissima-fr/"
-        },
-        {
           "title": "Historical Thesaurus of the Oxford English Dictionary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/historical-thesaurus-of-the-oxford-english-dictionary/"
+        },
+        {
+          "title": "Wikibase TDKIV",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/wikibase-tdkiv/"
         }
       ]
     },
@@ -57901,10 +57901,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Plant Trait Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-trait-ontology/"
-        },
-        {
           "title": "Agriculture Product Types Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/agriculture-product-types-ontology/"
         },
@@ -57919,6 +57915,10 @@
         {
           "title": "Dynamic Earth Sciences Ontologies: Process and Event Ontologies",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dynamic-earth-sciences-ontologies-process-and-event-ontologies/"
+        },
+        {
+          "title": "Plant Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-trait-ontology/"
         }
       ]
     },
@@ -58118,10 +58118,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Plant Environment Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-environment-ontology/"
-        },
-        {
           "title": "Agriculture Product Types Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/agriculture-product-types-ontology/"
         },
@@ -58136,6 +58132,10 @@
         {
           "title": "Dynamic Earth Sciences Ontologies: Process and Event Ontologies",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dynamic-earth-sciences-ontologies-process-and-event-ontologies/"
+        },
+        {
+          "title": "Plant Environment Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-environment-ontology/"
         }
       ]
     },
@@ -58279,14 +58279,6 @@
       ],
       "relatedTools": [
         {
-          "title": "NCI Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/nci-thesaurus/"
-        },
-        {
-          "title": "Cephalopod Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cephalopod-ontology/"
-        },
-        {
           "title": "Addgene",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/addgene/"
         },
@@ -58297,6 +58289,14 @@
         {
           "title": "Bibliographia Medica Čechoslovaca",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/bibliographia-medica-cechoslovaca/"
+        },
+        {
+          "title": "Cephalopod Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cephalopod-ontology/"
+        },
+        {
+          "title": "NCI Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/nci-thesaurus/"
         }
       ]
     },
@@ -60788,6 +60788,14 @@
       "homepage": "https://milan.milanovic.org/project/r2ml/",
       "relatedTools": [
         {
+          "title": "3-Step Theory of suicide",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
+        },
+        {
+          "title": "A comprehensive ontology of flaps in reconstructive surgery",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
+        },
+        {
           "title": "Gellish",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/gellish/"
         },
@@ -60798,14 +60806,6 @@
         {
           "title": "Object Process Methodology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/object-process-methodology/"
-        },
-        {
-          "title": "3-Step Theory of suicide",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
-        },
-        {
-          "title": "A comprehensive ontology of flaps in reconstructive surgery",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494477/"
         }
       ]
     },
@@ -63145,10 +63145,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Brick schema",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/brick-schema/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -63159,6 +63155,10 @@
         {
           "title": "auth/acl Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/auth-acl-ontology/"
+        },
+        {
+          "title": "Brick schema",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/brick-schema/"
         },
         {
           "title": "Communication Standards Ontology",
@@ -68162,24 +68162,24 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
           "title": "Animal Trait Ontology for Livestock",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/animal-trait-ontology-for-livestock/"
         },
         {
-          "title": "Crop Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/crop-ontology/"
-        },
-        {
-          "title": "Agronomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+          "title": "Animals in Context Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
         },
         {
           "title": "Biological Collections Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-collections-ontology/"
         },
         {
-          "title": "Animals in Context Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/animals-in-context-ontology/"
+          "title": "Crop Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/crop-ontology/"
         }
       ]
     },
@@ -68314,24 +68314,24 @@
       "homepage": "http://www.geo.uzh.ch/fileadmin/files/content/abteilungen/gis/research/msc_thesis/msc_felix_gantner_2011.pdf",
       "relatedTools": [
         {
-          "title": "GeoNames ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/geonames-ontology/"
-        },
-        {
-          "title": "Gazetteer",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/gazetteer/"
-        },
-        {
-          "title": "GeoSPARQL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
-        },
-        {
           "title": "AIATSIS Place Thesaurus",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/"
         },
         {
           "title": "Basic Geo (WGS84 lat/long) Vocabulary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/"
+        },
+        {
+          "title": "Gazetteer",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gazetteer/"
+        },
+        {
+          "title": "GeoNames ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/geonames-ontology/"
+        },
+        {
+          "title": "GeoSPARQL",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/geosparql/"
         }
       ]
     },
@@ -69360,14 +69360,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Extended Date/Time Format (EDTF) concepts",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/extended-date-time-format-edtf-concepts/"
-        },
-        {
-          "title": "Relations Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
-        },
-        {
           "title": "AFO Foundational Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/afo-foundational-ontology/"
         },
@@ -69378,6 +69370,14 @@
         {
           "title": "Biomimetic Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/biomimetic-ontology/"
+        },
+        {
+          "title": "Extended Date/Time Format (EDTF) concepts",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/extended-date-time-format-edtf-concepts/"
+        },
+        {
+          "title": "Relations Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
         }
       ]
     },
@@ -71697,10 +71697,6 @@
       ],
       "relatedTools": [
         {
-          "title": "The Statistical Methods Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/the-statistical-methods-ontology/"
-        },
-        {
           "title": "AFO Foundational Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/afo-foundational-ontology/"
         },
@@ -71715,6 +71711,10 @@
         {
           "title": "Common Core Ontologies",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/common-core-ontologies/"
+        },
+        {
+          "title": "The Statistical Methods Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/the-statistical-methods-ontology/"
         }
       ]
     },
@@ -71996,8 +71996,16 @@
       "homepage": "https://linkedopendata.eu",
       "relatedTools": [
         {
+          "title": "Akoma Ntoso for European Union",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
+        },
+        {
           "title": "Democracy Club",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/democracy-club/"
+        },
+        {
+          "title": "Finnish Ontology for Judicial Administration",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
         },
         {
           "title": "Kohesio",
@@ -72006,14 +72014,6 @@
         {
           "title": "Ohio Bureau of Criminal Investigation",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ohio-bureau-of-criminal-investigation/"
-        },
-        {
-          "title": "Finnish Ontology for Judicial Administration",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/"
-        },
-        {
-          "title": "Akoma Ntoso for European Union",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/akoma-ntoso-for-european-union/"
         }
       ]
     },
@@ -72775,6 +72775,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/"
         },
         {
+          "title": "Library of Congress Demographic Group Terms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
+        },
+        {
           "title": "Library of Congress Medium of Performance Thesaurus for Music",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-medium-of-performance-thesaurus-for-music/"
         },
@@ -72785,10 +72789,6 @@
         {
           "title": "Library of Congress Subject Headings",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-subject-headings/"
-        },
-        {
-          "title": "Library of Congress Demographic Group Terms",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/"
         }
       ]
     },
@@ -73062,12 +73062,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Getty Thesaurus of Geographic Names",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/"
-        },
-        {
           "title": "Basic Geo (WGS84 lat/long) Vocabulary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/"
+        },
+        {
+          "title": "Getty Thesaurus of Geographic Names",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/"
         },
         {
           "title": "Matrikkelen",
@@ -74360,10 +74360,6 @@
       ],
       "relatedTools": [
         {
-          "title": "SALDO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/saldo/"
-        },
-        {
           "title": "Association football lexicon",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/association-football-lexicon/"
         },
@@ -74378,6 +74374,10 @@
         {
           "title": "Cadastre of France",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cadastre-of-france/"
+        },
+        {
+          "title": "SALDO",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/saldo/"
         }
       ]
     },
@@ -74432,10 +74432,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Cyber-investigation Analysis Standard Expression Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyber-investigation-analysis-standard-expression-ontology/"
-        },
-        {
           "title": "Actionable Intelligence Retrieval System",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
         },
@@ -74450,6 +74446,10 @@
         {
           "title": "Communication Standards Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+        },
+        {
+          "title": "Cyber-investigation Analysis Standard Expression Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyber-investigation-analysis-standard-expression-ontology/"
         }
       ]
     },
@@ -75074,14 +75074,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Art & Architecture Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/art-architecture-thesaurus/"
-        },
-        {
-          "title": "Cultural Objects Name Authority",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -75092,6 +75084,14 @@
         {
           "title": "ARCHER",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archer/"
+        },
+        {
+          "title": "Art & Architecture Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/art-architecture-thesaurus/"
+        },
+        {
+          "title": "Cultural Objects Name Authority",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
         }
       ]
     },
@@ -75140,10 +75140,6 @@
       ],
       "relatedTools": [
         {
-          "title": "LIPID MAPS",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/lipid-maps/"
-        },
-        {
           "title": "Alzheimer's Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/alzheimer-s-disease-ontology/"
         },
@@ -75158,6 +75154,10 @@
         {
           "title": "Ascomycete phenotype ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ascomycete-phenotype-ontology/"
+        },
+        {
+          "title": "LIPID MAPS",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/lipid-maps/"
         }
       ]
     },
@@ -75449,16 +75449,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
-        },
-        {
-          "title": "Ontology of units of Measure 2.0",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
-        },
-        {
           "title": "Core Emotion Framework",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/core-emotion-framework/"
+        },
+        {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
         },
         {
           "title": "General Finnish Ontology",
@@ -75467,6 +75463,10 @@
         {
           "title": "KBpedia",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/kbpedia/"
+        },
+        {
+          "title": "Ontology of units of Measure 2.0",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/"
         }
       ]
     },
@@ -76322,14 +76322,6 @@
       ],
       "relatedTools": [
         {
-          "title": "CERL Thesaurus",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cerl-thesaurus/"
-        },
-        {
-          "title": "Cultural Objects Name Authority",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
-        },
-        {
           "title": "Adamlink",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/adamlink/"
         },
@@ -76340,6 +76332,14 @@
         {
           "title": "ARCHER",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/archer/"
+        },
+        {
+          "title": "CERL Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cerl-thesaurus/"
+        },
+        {
+          "title": "Cultural Objects Name Authority",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
         }
       ]
     },
@@ -77542,12 +77542,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Database of Czech Librarians",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/database-of-czech-librarians/"
-        },
-        {
           "title": "data.biblissima.fr",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/data-biblissima-fr/"
+        },
+        {
+          "title": "Database of Czech Librarians",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/database-of-czech-librarians/"
         },
         {
           "title": "Historical Thesaurus of the Oxford English Dictionary",
@@ -77598,14 +77598,6 @@
       ],
       "relatedTools": [
         {
-          "title": "DBpedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/dbpedia/"
-        },
-        {
-          "title": "Relations Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
-        },
-        {
           "title": "3-Step Theory of suicide",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494795/"
         },
@@ -77616,6 +77608,14 @@
         {
           "title": "A formal representation of the knowledge within the domain of Isotopes for Food Science",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495110/"
+        },
+        {
+          "title": "DBpedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/dbpedia/"
+        },
+        {
+          "title": "Relations Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
         }
       ]
     },
@@ -77985,16 +77985,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/dutch-national-thesaurus-for-author-names/"
         },
         {
-          "title": "KANTO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
-        },
-        {
           "title": "Film Club Knowledge Graph (FCKG)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
         },
         {
           "title": "Integrated Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/"
+        },
+        {
+          "title": "KANTO",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/kanto/"
         }
       ]
     },
@@ -78253,6 +78253,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Cell line Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
+        },
+        {
           "title": "Infectious Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/infectious-disease-ontology/"
         },
@@ -78267,10 +78271,6 @@
         {
           "title": "Zebrafish developmental stages ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-developmental-stages-ontology/"
-        },
-        {
-          "title": "Cell line Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
         }
       ]
     },
@@ -78291,6 +78291,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Cell line Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
+        },
+        {
           "title": "Infectious Disease Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/infectious-disease-ontology/"
         },
@@ -78305,10 +78309,6 @@
         {
           "title": "Zebrafish anatomy and development ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-anatomy-and-development-ontology/"
-        },
-        {
-          "title": "Cell line Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-line-ontology/"
         }
       ]
     },

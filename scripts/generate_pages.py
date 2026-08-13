@@ -16,6 +16,12 @@ import sys
 
 import aiohttp
 
+from semantic_config import (
+    CATEGORIES_VOCAB_PATH,
+    SOFTWARE_TYPES_VOCAB_PATH,
+    load_controlled_vocabulary,
+)
+
 SITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 BASE_URL = "https://openknowledgegraphs.com"
@@ -28,28 +34,13 @@ GENERIC_DESCRIPTIONS = {
 }
 
 CATEGORY_SLUGS = {
-    "Life Sciences & Healthcare": "life-sciences-healthcare",
-    "Geospatial": "geospatial",
-    "Government & Public Sector": "government-public-sector",
-    "International Development": "international-development",
-    "Finance & Business": "finance-business",
-    "Library & Cultural Heritage": "library-cultural-heritage",
-    "Technology & Web": "technology-web",
-    "Environment & Agriculture": "environment-agriculture",
-    "General / Cross-domain": "general-cross-domain",
+    concept.label: concept.slug
+    for concept in load_controlled_vocabulary(CATEGORIES_VOCAB_PATH).concepts
 }
 
 SOFTWARE_TYPE_SLUGS = {
-    "Graph Database": "graph-database",
-    "SPARQL Tooling": "sparql-tooling",
-    "Ontology Engineering": "ontology-engineering",
-    "Reasoning & Inference": "reasoning-inference",
-    "RDF Data Mapping / ETL": "data-mapping-etl",
-    "Developer Library": "developer-library",
-    "Knowledge Graph Construction": "knowledge-graph-construction",
-    "AI Agent Tooling": "ai-agent-tooling",
-    "Visualization": "visualization",
-    "Stream Processing": "stream-processing",
+    concept.label: concept.slug
+    for concept in load_controlled_vocabulary(SOFTWARE_TYPES_VOCAB_PATH).concepts
 }
 
 PARKED_SIGNALS = [
@@ -69,13 +60,13 @@ SOFT_404_SIGNALS = [
 
 def passes_content_filter(item):
     """Label + meaningful description + has homepage."""
-    title = item.get("title", "")
+    title = (item.get("title") or "").strip()
     if not title or title.startswith("Q"):
         return False
     desc = (item.get("description") or "").strip().lower()
     if not desc or desc in GENERIC_DESCRIPTIONS or len(desc) < 15:
         return False
-    if not item.get("homepage"):
+    if not (item.get("homepage") or "").strip():
         return False
     return True
 
@@ -151,48 +142,77 @@ def esc(text):
     return html.escape(text or "", quote=True)
 
 
+def is_non_empty_string(value):
+    return isinstance(value, str) and bool(value.strip())
+
+
+def require_json_ld_identity(item):
+    """Reject page records whose required content or identity is missing."""
+    required_fields = ("canonicalUrl", "title", "description", "homepage", "wikidataId")
+    missing = [field for field in required_fields if not is_non_empty_string(item.get(field))]
+    if missing:
+        raise ValueError(f"Cannot serialize JSON-LD without: {', '.join(missing)}")
+
+
 def make_json_ld(item, dataset):
+    require_json_ld_identity(item)
     schema_type = "SoftwareApplication" if dataset == "software" else "DefinedTermSet"
     ld = {
         "@context": "https://schema.org",
         "@type": schema_type,
-        "@id": item.get("canonicalUrl", ""),
+        "@id": item["canonicalUrl"],
         "name": item["title"],
-        "description": item.get("description", ""),
-        "url": item.get("homepage", ""),
-        "sameAs": item.get("wikidataId", ""),
-        "license": item["licenses"][0] if item.get("licenses") else "https://creativecommons.org/publicdomain/mark/1.0/",
-        "isPartOf": {
-            "@type": "DataCatalog",
-            "name": "Open Knowledge Graphs",
-            "url": BASE_URL,
-        },
+        "description": item["description"],
+        "url": item["homepage"],
+        "sameAs": item["wikidataId"],
     }
-    if item.get("latestVersion"):
+
+    licenses = item.get("licenses")
+    if isinstance(licenses, list):
+        known_licenses = [value for value in licenses if is_non_empty_string(value)]
+        if known_licenses:
+            ld["license"] = known_licenses[0]
+
+    ld["isPartOf"] = {
+        "@type": "DataCatalog",
+        "name": "Open Knowledge Graphs",
+        "url": BASE_URL,
+    }
+
+    if is_non_empty_string(item.get("latestVersion")):
         ld["softwareVersion"] = item["latestVersion"]
-    if item.get("releaseDate"):
+    if is_non_empty_string(item.get("releaseDate")):
         ld["datePublished"] = item["releaseDate"]
-    if item.get("sourceRepo"):
+    if is_non_empty_string(item.get("sourceRepo")):
         ld["codeRepository"] = item["sourceRepo"]
-    if item.get("softwareType"):
+    if is_non_empty_string(item.get("softwareType")):
         ld["applicationCategory"] = item["softwareType"]
-    if item.get("programmingLanguages"):
-        langs = item["programmingLanguages"]
-        ld["programmingLanguage"] = langs[0] if len(langs) == 1 else langs
-    creators = item.get("creators", [])
-    if creators:
+
+    programming_languages = item.get("programmingLanguages")
+    if isinstance(programming_languages, list):
+        known_languages = [value for value in programming_languages if is_non_empty_string(value)]
+        if known_languages:
+            ld["programmingLanguage"] = known_languages[0] if len(known_languages) == 1 else known_languages
+
+    creators = item.get("creators")
+    if isinstance(creators, list):
         creator_entries = []
         for c in creators:
+            if not isinstance(c, dict):
+                continue
+            if not is_non_empty_string(c.get("type")) or not is_non_empty_string(c.get("name")):
+                continue
             entry = {"@type": c["type"], "name": c["name"]}
             same_as = [
                 url
                 for url in (c.get("wikidataId"), c.get("githubProfile"), c.get("googleScholarProfile"))
-                if url
+                if is_non_empty_string(url)
             ]
             if same_as:
                 entry["sameAs"] = same_as[0] if len(same_as) == 1 else same_as
             creator_entries.append(entry)
-        ld["creator"] = creator_entries[0] if len(creator_entries) == 1 else creator_entries
+        if creator_entries:
+            ld["creator"] = creator_entries[0] if len(creator_entries) == 1 else creator_entries
     return json.dumps(ld, indent=2)
 
 
@@ -412,6 +432,10 @@ def generate_sitemap(pages):
         f'  <url>\n    <loc>{BASE_URL}/data/ontologies.ttl</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>',
         f'  <url>\n    <loc>{BASE_URL}/data/software.ttl</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>',
         f'  <url>\n    <loc>{BASE_URL}/ontology.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/vocabularies/categories.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/vocabularies/software-types.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/sources.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/curation/classifications.ttl</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.5</priority>\n  </url>',
         f'  <url>\n    <loc>{BASE_URL}/llms.txt</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>',
     ]
 

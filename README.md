@@ -7,6 +7,10 @@ Open Knowledge Graphs is a static, daily-refreshed catalog of ontology, semantic
 - Site: https://openknowledgegraphs.com/
 - Semantic Search API: https://api.openknowledgegraphs.com/
 - Ontology schema (Turtle): https://openknowledgegraphs.com/ontology.ttl
+- Domain categories (SKOS/Turtle): https://openknowledgegraphs.com/vocabularies/categories.ttl
+- Software types (SKOS/Turtle): https://openknowledgegraphs.com/vocabularies/software-types.ttl
+- Source registry and mappings (Turtle): https://openknowledgegraphs.com/sources.ttl
+- Curated classifications (Turtle): https://openknowledgegraphs.com/curation/classifications.ttl
 - Ontologies dataset (Turtle): https://openknowledgegraphs.com/data/ontologies.ttl
 - Ontologies dataset (JSON): https://openknowledgegraphs.com/data/ontologies.json
 - Software dataset (Turtle): https://openknowledgegraphs.com/data/software.ttl
@@ -64,25 +68,34 @@ Add to your MCP client config (e.g. `claude_desktop_config.json`):
 
 ## Architecture Overview
 
-1. `scripts/fetch_data.py` queries Wikidata (WDQS), normalizes records, and writes:
-   - `data/ontologies.ttl`
-   - `data/ontologies.json`
-   - `data/software.ttl`
-   - `data/software.json`
-2. Category enrichment is maintained in `data/categories.json`:
-   - one-time backfill: `scripts/classify_categories.py`
-   - incremental on daily refresh: `scripts/fetch_data.py`
-3. `site/index.html` + `site/app.js` + `site/style.css` render the client-side catalog UI.
-4. GitHub Actions refresh data daily and deploy the static site + datasets to GitHub Pages.
+OKG has three semantic layers. The layers are roles, not a requirement that each layer use one file.
+
+1. Structural ontology: `ontology.ttl` owns stable OKG classes and properties, external-vocabulary alignments, and SHACL policy.
+2. Controlled vocabulary and source registry:
+   - `vocabularies/categories.ttl` and `vocabularies/software-types.ttl` own the versioned SKOS concepts, classifier definitions, and stable filter slugs.
+   - `sources.ttl` describes Wikidata and the generated catalogs with DCAT/PROV, and owns Wikidata class/property/value-kind mappings.
+3. Catalog instances and curation:
+   - `curation/classifications.ttl` is the maintained RDF source for category and software-type assignments.
+   - `data/ontologies.ttl` and `data/software.ttl` are the generated authoritative catalog graphs.
+   - Catalog JSON, classification JSON, frontend vocabulary options, detail pages, and search records are derived compatibility projections.
+
+`scripts/fetch_data.py` reads the RDF vocabularies, source mappings, and curation graph before querying Wikidata. Python retains SPARQL mechanics such as subclass traversal, creator unions, and version-qualifier handling, while source identifiers and controlled values remain declarative RDF.
+
+Curated assignments persist independently of a refresh. An assignment is emitted into a generated catalog only when its QID is present in that run's eligible Wikidata query result; if a source record temporarily disappears, its assignment remains in `curation/classifications.ttl` and is applied again when the record returns. Detail-page eligibility is a separate content and link-quality filter.
+
+This lightweight architecture intentionally has no source mirrors, value-level crosswalk layer, Fuseki dependency, or Teacher workflow. Those remain out of scope until a concrete second-source normalization requirement exists.
 
 ## Repository Layout
 
-- `data/`: published datasets and category mappings
+- `curation/`: authoritative maintained classification assignments
+- `data/`: authoritative generated catalog RDF plus derived JSON projections
 - `mcp-server/`: MCP server for AI assistant integration
 - `scripts/`: data refresh and LLM classification scripts
 - `site/`: static frontend (HTML/CSS/JS + assets)
+- `vocabularies/`: independently versioned SKOS controlled vocabularies
 - `.github/workflows/`: CI/CD for data refresh and Pages deploy
 - `ontology.ttl`: ontology and SHACL shape definitions
+- `sources.ttl`: DCAT/PROV source registry and declarative source-schema mappings
 
 ## Local Setup
 
@@ -105,12 +118,14 @@ pip install -r requirements.txt
 python scripts/fetch_data.py
 ```
 
-Optional category backfill (Anthropic):
+Optional automated classification of previously unseen records uses Anthropic during the refresh:
 
 ```bash
 export ANTHROPIC_API_KEY=your_key_here
-python scripts/classify_categories.py
+python scripts/fetch_data.py
 ```
+
+Without the key, the refresh preserves and applies existing RDF curation but leaves newly discovered records unclassified.
 
 ### Run the Site Locally
 
@@ -176,6 +191,8 @@ Top-level object:
 
 Schema source: https://openknowledgegraphs.com/ontology.ttl
 
+The schema deliberately excludes controlled-term instances and dataset descriptions. Those live in the SKOS vocabulary files and `sources.ttl`, respectively. Existing `okg:*` catalog predicates remain the compatibility contract; selected exact relationships are aligned to Dublin Core and schema.org, while the architecture directly uses or references SKOS, DCAT, PROV-O, VANN, and DOAP where appropriate, without wholesale co-emission into catalog instances.
+
 ### Classes
 
 | Class | Description |
@@ -186,6 +203,10 @@ Schema source: https://openknowledgegraphs.com/ontology.ttl
 | `okg:Taxonomy` | Taxonomy resources |
 | `okg:Software` | Software/tooling resources |
 | `okg:License` | License nodes attached to resources |
+| `okg:Category` | Compatibility class for domain-category SKOS concepts |
+| `okg:SoftwareType` | Compatibility class for software-type SKOS concepts |
+| `okg:SourceClassMapping` | Declarative source-class mapping records |
+| `okg:SourcePropertyMapping` | Declarative source-property mapping records |
 
 ### Core Properties
 
@@ -220,11 +241,14 @@ File: `.github/workflows/update-data.yml`
 
 File: `.github/workflows/deploy.yml`
 
-- Trigger: pushes to `main` affecting `site/**`, `data/**`, `ontology.ttl`, or workflow file
+- Trigger: pushes to `main` affecting `site/**`, `data/**`, `curation/**`, `vocabularies/**`, `ontology.ttl`, `sources.ttl`, or the workflow file
 - Builds Pages artifact from:
   - `site/` (frontend)
   - `data/` (datasets)
+  - `curation/` (maintained classification RDF)
+  - `vocabularies/` (SKOS schemes)
   - `ontology.ttl` (schema)
+  - `sources.ttl` (source registry and mappings)
 - Deploys via GitHub Pages actions
 
 ## Fork and Deploy
@@ -237,7 +261,7 @@ File: `.github/workflows/deploy.yml`
    - enable HTTPS in Pages settings
 4. If using category classification, add `ANTHROPIC_API_KEY` as a repository secret or environment variable for the workflow runtime.
 5. Run `Update Catalog Data` manually once to generate/refresh data.
-6. Push any change to `site/`, `data/`, or `ontology.ttl` to trigger deploy.
+6. Push a change to any deployed artifact path listed above to trigger deploy.
 
 ## Migration from Streamlit
 
@@ -253,7 +277,7 @@ Legacy reference data model remains available in `dist/catalog.ttl` (ignored in 
   - rerun; the script has retry/backoff for WDQS throttling
 - No category assignments added:
   - confirm `ANTHROPIC_API_KEY` is set
-  - run `python scripts/classify_categories.py` manually
+  - confirm the relevant SKOS scheme contains definitions and the new record has no assignment in `curation/classifications.ttl`
 - Site loads but data is empty locally:
   - serve from repo root and open `http://localhost:8000/site/`
   - verify `data/*.json` exists and is valid JSON
@@ -268,7 +292,7 @@ No. The catalog includes both open and proprietary resources if they are represe
 
 ### Are records manually curated?
 
-Primary metadata is sourced from Wikidata queries. Category labels can be added via LLM classification and then frozen in `data/categories.json`.
+Primary metadata is sourced from Wikidata queries. Category and software-type assignments are maintained in `curation/classifications.ttl`; the JSON mapping files are regenerated compatibility projections and must not be edited as inputs.
 
 ### Why do some fields appear missing?
 

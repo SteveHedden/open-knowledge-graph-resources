@@ -7,7 +7,10 @@ on:
     paths:
       - "site/**"
       - "data/**"
+      - "curation/**"
+      - "vocabularies/**"
       - "ontology.ttl"
+      - "sources.ttl"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
@@ -37,10 +40,13 @@ jobs:
 
       - name: Build Pages artifact
         run: |
-          mkdir -p _site/data
+          mkdir -p _site/data _site/curation _site/vocabularies
           cp -R site/. _site/
           cp -R data/. _site/data/
+          cp -R curation/. _site/curation/
+          cp -R vocabularies/. _site/vocabularies/
           cp ontology.ttl _site/ontology.ttl
+          cp sources.ttl _site/sources.ttl
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

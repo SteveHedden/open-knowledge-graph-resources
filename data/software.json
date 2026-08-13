@@ -22,20 +22,20 @@
       ],
       "relatedTools": [
         {
-          "title": "RedStore",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/"
-        },
-        {
-          "title": "QuitStore",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/"
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         },
         {
           "title": "qEndpoint",
           "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
         },
         {
-          "title": "Neo4j",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
+          "title": "QuitStore",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/"
+        },
+        {
+          "title": "RedStore",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/"
         },
         {
           "title": "Virtuoso Universal Server",
@@ -112,24 +112,24 @@
       ],
       "relatedTools": [
         {
-          "title": "RDFox",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
-        },
-        {
-          "title": "Stardog",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
-        },
-        {
-          "title": "NitrosBase",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+          "title": "Blazegraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
         },
         {
           "title": "Corese",
           "canonicalUrl": "https://openknowledgegraphs.com/software/corese/"
         },
         {
-          "title": "Blazegraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "RDFox",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
+        },
+        {
+          "title": "Stardog",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
         }
       ]
     },
@@ -182,24 +182,24 @@
       ],
       "relatedTools": [
         {
-          "title": "SEPA",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
-        },
-        {
-          "title": "sparqlprog",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlprog/"
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "Semantic UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
         },
         {
+          "title": "SEPA",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
+        },
+        {
           "title": "SPARQL2Git",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sparql2git/"
         },
         {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
+          "title": "sparqlprog",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlprog/"
         }
       ]
     },
@@ -248,24 +248,24 @@
       ],
       "relatedTools": [
         {
-          "title": "TopBraid SHACL API",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
-        },
-        {
-          "title": "Sophia RDF toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
-        },
-        {
           "title": "LinkML-Scala",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
         },
         {
           "title": "RDFSharp",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdfsharp/"
         },
         {
-          "title": "RDF4J",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+          "title": "Sophia RDF toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
+        },
+        {
+          "title": "TopBraid SHACL API",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
         }
       ]
     },
@@ -297,16 +297,16 @@
       ],
       "relatedTools": [
         {
+          "title": "AutoSparql",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/autosparql/"
+        },
+        {
           "title": "HeFQUIN",
           "canonicalUrl": "https://openknowledgegraphs.com/software/hefquin/"
         },
         {
           "title": "Processor",
           "canonicalUrl": "https://openknowledgegraphs.com/software/processor/"
-        },
-        {
-          "title": "AutoSparql",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/autosparql/"
         },
         {
           "title": "Semagrow",
@@ -457,14 +457,6 @@
       ],
       "relatedTools": [
         {
-          "title": "TuringDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/"
-        },
-        {
-          "title": "Memgraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
-        },
-        {
           "title": "fluree",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/"
         },
@@ -475,6 +467,14 @@
         {
           "title": "KuzuDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
+        },
+        {
+          "title": "Memgraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
+        },
+        {
+          "title": "TuringDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/"
         }
       ]
     },
@@ -506,6 +506,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        },
+        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
@@ -520,10 +524,6 @@
         {
           "title": "Polypheny",
           "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
         }
       ]
     },
@@ -566,24 +566,24 @@
       ],
       "relatedTools": [
         {
-          "title": "Node Quadstore",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/node-quadstore/"
+          "title": "KuzuDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
         },
         {
           "title": "Linked Data Fragments Server",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
         },
         {
-          "title": "KuzuDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "Node Quadstore",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/node-quadstore/"
         },
         {
           "title": "Oxigraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/"
-        },
-        {
-          "title": "MarkLogic",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
         }
       ]
     },
@@ -606,6 +606,14 @@
       ],
       "relatedTools": [
         {
+          "title": "anapsid",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/anapsid/"
+        },
+        {
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
+        },
+        {
           "title": "HeFQUIN",
           "canonicalUrl": "https://openknowledgegraphs.com/software/hefquin/"
         },
@@ -616,14 +624,6 @@
         {
           "title": "SEPA",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
-        },
-        {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
-        },
-        {
-          "title": "anapsid",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/anapsid/"
         }
       ]
     },
@@ -673,20 +673,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/corese/"
         },
         {
-          "title": "Ontotext GraphDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/"
-        },
-        {
-          "title": "Virtuoso Universal Server",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/"
-        },
-        {
           "title": "InfiniteGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
         },
         {
+          "title": "Ontotext GraphDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/"
+        },
+        {
           "title": "RDFox",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
+        },
+        {
+          "title": "Virtuoso Universal Server",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/"
         }
       ]
     },
@@ -773,16 +773,8 @@
       ],
       "relatedTools": [
         {
-          "title": "jcel",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/"
-        },
-        {
           "title": "ELK",
           "canonicalUrl": "https://openknowledgegraphs.com/software/elk/"
-        },
-        {
-          "title": "HermiT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
         },
         {
           "title": "Euler Yet another proof Engine",
@@ -791,6 +783,14 @@
         {
           "title": "FaCT++",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fact/"
+        },
+        {
+          "title": "HermiT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
+        },
+        {
+          "title": "jcel",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/"
         }
       ]
     },
@@ -869,14 +869,6 @@
       ],
       "relatedTools": [
         {
-          "title": "OntopSpark",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
-        },
-        {
-          "title": "SPARQL Anything",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
-        },
-        {
           "title": "Karma semantic mapping platform",
           "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/"
         },
@@ -887,6 +879,14 @@
         {
           "title": "ontop",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "OntopSpark",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
+        },
+        {
+          "title": "SPARQL Anything",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
         }
       ]
     },
@@ -953,20 +953,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
         },
         {
-          "title": "TrustGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/"
-        },
-        {
-          "title": "Web-Algebra",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/"
-        },
-        {
           "title": "Mem0",
           "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
         },
         {
           "title": "ndoli",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/"
+        },
+        {
+          "title": "TrustGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/"
+        },
+        {
+          "title": "Web-Algebra",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/"
         }
       ]
     },
@@ -996,16 +996,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/"
         },
         {
-          "title": "Yasgui (Matdata)",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
-        },
-        {
           "title": "Traqula",
           "canonicalUrl": "https://openknowledgegraphs.com/software/traqula/"
         },
         {
           "title": "Yasgui",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        },
+        {
+          "title": "Yasgui (Matdata)",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
         }
       ]
     },
@@ -1035,12 +1035,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
         },
         {
-          "title": "Ontotext GraphDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/"
-        },
-        {
           "title": "InfiniteGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
+        },
+        {
+          "title": "Ontotext GraphDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/"
         },
         {
           "title": "RDFox",
@@ -1091,16 +1091,16 @@
       ],
       "relatedTools": [
         {
-          "title": "RMLStreamer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
-        },
-        {
           "title": "Morph-KGC",
           "canonicalUrl": "https://openknowledgegraphs.com/software/morph-kgc/"
         },
         {
           "title": "RMLMapper",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rmlmapper/"
+        },
+        {
+          "title": "RMLStreamer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
         },
         {
           "title": "SDM-RDFizer",
@@ -1165,6 +1165,10 @@
       ],
       "relatedTools": [
         {
+          "title": "cwm",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cwm/"
+        },
+        {
           "title": "EMMOntoPy",
           "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
         },
@@ -1173,16 +1177,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
         },
         {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
-        },
-        {
-          "title": "cwm",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/cwm/"
-        },
-        {
           "title": "pySHACL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pyshacl/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
       ]
     },
@@ -1247,12 +1247,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
         },
         {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
-        },
-        {
           "title": "pySHACL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pyshacl/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
       ]
     },
@@ -1389,20 +1389,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         },
         {
-          "title": "OnToology",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
+          "title": "LinkML",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         },
         {
           "title": "ontology-quality-suite",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         },
         {
-          "title": "SHACL Playground",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/"
+          "title": "OnToology",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
         {
-          "title": "LinkML",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
+          "title": "SHACL Playground",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/"
         }
       ]
     },
@@ -1427,10 +1427,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Tentris",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
-        },
-        {
           "title": "fluree",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/"
         },
@@ -1445,6 +1441,10 @@
         {
           "title": "OrientDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        },
+        {
+          "title": "Tentris",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
         }
       ]
     },
@@ -1485,16 +1485,16 @@
       ],
       "relatedTools": [
         {
-          "title": "rdf-ext",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
-        },
-        {
           "title": "duck_rdf",
           "canonicalUrl": "https://openknowledgegraphs.com/software/duck-rdf/"
         },
         {
           "title": "json-rql",
           "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
+        },
+        {
+          "title": "rdf-ext",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
         },
         {
           "title": "rdf-validate-shacl",
@@ -1543,16 +1543,16 @@
       ],
       "relatedTools": [
         {
-          "title": "rdf-ext",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
-        },
-        {
           "title": "dotNetRDF",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
         },
         {
           "title": "json-rql",
           "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
+        },
+        {
+          "title": "rdf-ext",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
         },
         {
           "title": "rdf-validate-shacl",
@@ -1631,16 +1631,8 @@
       ],
       "relatedTools": [
         {
-          "title": "jcel",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/"
-        },
-        {
           "title": "CEL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cel/"
-        },
-        {
-          "title": "HermiT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
         },
         {
           "title": "Euler Yet another proof Engine",
@@ -1649,6 +1641,14 @@
         {
           "title": "FaCT++",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fact/"
+        },
+        {
+          "title": "HermiT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
+        },
+        {
+          "title": "jcel",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/"
         }
       ]
     },
@@ -1673,12 +1673,12 @@
       ],
       "relatedTools": [
         {
-          "title": "KGX",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
         },
         {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+          "title": "KGX",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
         },
         {
           "title": "Prez Linked Data API",
@@ -1689,8 +1689,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
         },
         {
-          "title": "CubicWeb",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
       ]
     },
@@ -1712,10 +1712,6 @@
       "softwareType": "Reasoning & Inference",
       "relatedTools": [
         {
-          "title": "juliett",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/juliett/"
-        },
-        {
           "title": "CEL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cel/"
         },
@@ -1730,6 +1726,10 @@
         {
           "title": "Flora-2",
           "canonicalUrl": "https://openknowledgegraphs.com/software/flora-2/"
+        },
+        {
+          "title": "juliett",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/juliett/"
         }
       ]
     },
@@ -1761,16 +1761,16 @@
       ],
       "relatedTools": [
         {
-          "title": "RDF Transform",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/"
-        },
-        {
           "title": "Chimera",
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
           "title": "OntopSpark",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
+        },
+        {
+          "title": "RDF Transform",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/"
         },
         {
           "title": "RMLMapper",
@@ -1803,12 +1803,12 @@
       ],
       "relatedTools": [
         {
-          "title": "ontology-quality-suite",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
-        },
-        {
           "title": "NEOntometrics",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/"
+        },
+        {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         },
         {
           "title": "OnToology",
@@ -1864,10 +1864,6 @@
       ],
       "relatedTools": [
         {
-          "title": "HermiT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
-        },
-        {
           "title": "CEL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cel/"
         },
@@ -1882,6 +1878,10 @@
         {
           "title": "Flora-2",
           "canonicalUrl": "https://openknowledgegraphs.com/software/flora-2/"
+        },
+        {
+          "title": "HermiT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
         }
       ]
     },
@@ -2003,14 +2003,6 @@
       "softwareType": "Graph Database",
       "relatedTools": [
         {
-          "title": "Memgraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
-        },
-        {
-          "title": "Tentris",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
-        },
-        {
           "title": "Dgraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dgraph/"
         },
@@ -2019,8 +2011,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
         {
+          "title": "Memgraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
+        },
+        {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
+        },
+        {
+          "title": "Tentris",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
         }
       ]
     },
@@ -2045,14 +2045,6 @@
       ],
       "relatedTools": [
         {
-          "title": "RDFUnit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfunit/"
-        },
-        {
-          "title": "Widoco",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/"
-        },
-        {
           "title": "OnToology",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
@@ -2063,6 +2055,14 @@
         {
           "title": "O’FAIRE",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
+        },
+        {
+          "title": "RDFUnit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfunit/"
+        },
+        {
+          "title": "Widoco",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/"
         }
       ]
     },
@@ -2324,20 +2324,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
         },
         {
-          "title": "TrustGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/"
-        },
-        {
-          "title": "Web-Algebra",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/"
-        },
-        {
           "title": "Mem0",
           "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
         },
         {
           "title": "ndoli",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/"
+        },
+        {
+          "title": "TrustGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/"
+        },
+        {
+          "title": "Web-Algebra",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/"
         }
       ]
     },
@@ -2406,16 +2406,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/"
         },
         {
-          "title": "Yasgui (Matdata)",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
-        },
-        {
           "title": "Traqula",
           "canonicalUrl": "https://openknowledgegraphs.com/software/traqula/"
         },
         {
           "title": "Yasgui",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        },
+        {
+          "title": "Yasgui (Matdata)",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
         }
       ]
     },
@@ -2451,8 +2451,16 @@
       ],
       "relatedTools": [
         {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
           "title": "KuzuDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
+        },
+        {
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
         },
         {
           "title": "NitrosBase",
@@ -2461,14 +2469,6 @@
         {
           "title": "TuringDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/"
-        },
-        {
-          "title": "ArangoDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
-        },
-        {
-          "title": "MarkLogic",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
         }
       ]
     },
@@ -2491,6 +2491,14 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
         },
@@ -2501,14 +2509,6 @@
         {
           "title": "Polypheny",
           "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
-        },
-        {
-          "title": "ArcadeDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
         }
       ]
     },
@@ -2533,16 +2533,16 @@
       ],
       "relatedTools": [
         {
-          "title": "Processor",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/processor/"
-        },
-        {
           "title": "Apache Jena Fuseki",
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "AutoSparql",
           "canonicalUrl": "https://openknowledgegraphs.com/software/autosparql/"
+        },
+        {
+          "title": "Processor",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/processor/"
         },
         {
           "title": "Semagrow",
@@ -2609,10 +2609,6 @@
       ],
       "relatedTools": [
         {
-          "title": "jcel",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/"
-        },
-        {
           "title": "CEL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cel/"
         },
@@ -2621,12 +2617,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/elk/"
         },
         {
+          "title": "Euler Yet another proof Engine",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/"
+        },
+        {
           "title": "FaCT++",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fact/"
         },
         {
-          "title": "Euler Yet another proof Engine",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/"
+          "title": "jcel",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/"
         }
       ]
     },
@@ -2701,16 +2701,16 @@
       ],
       "relatedTools": [
         {
-          "title": "rdf-sketch",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
-        },
-        {
           "title": "Nodica",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
         },
         {
           "title": "Pubby",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
+        },
+        {
+          "title": "rdf-sketch",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
           "title": "Reactodia",
@@ -2760,16 +2760,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-rya/"
         },
         {
-          "title": "Tentris",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
-        },
-        {
           "title": "Dgraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dgraph/"
         },
         {
           "title": "fluree",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/"
+        },
+        {
+          "title": "Tentris",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
         }
       ]
     },
@@ -2872,16 +2872,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Titan",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/titan/"
+          "title": "Halyard",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
         {
           "title": "InfiniteGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
-        },
-        {
-          "title": "Halyard",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
         {
           "title": "NebulaGraph",
@@ -2890,6 +2886,10 @@
         {
           "title": "OrientDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        },
+        {
+          "title": "Titan",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/titan/"
         }
       ]
     },
@@ -2923,16 +2923,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/elk/"
         },
         {
-          "title": "HermiT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
-        },
-        {
           "title": "Euler Yet another proof Engine",
           "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/"
         },
         {
           "title": "FaCT++",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fact/"
+        },
+        {
+          "title": "HermiT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/"
         }
       ]
     },
@@ -2971,16 +2971,16 @@
       "softwareType": "Stream Processing",
       "relatedTools": [
         {
-          "title": "Triplewave",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/triplewave/"
-        },
-        {
           "title": "CQELS",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cqels/"
         },
         {
           "title": "Kolibrie SPARQL engine",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kolibrie-sparql-engine/"
+        },
+        {
+          "title": "Triplewave",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/triplewave/"
         }
       ]
     },
@@ -3002,14 +3002,6 @@
       ],
       "relatedTools": [
         {
-          "title": "json-rql",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
-        },
-        {
-          "title": "shacl-engine",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-engine/"
-        },
-        {
           "title": "Apache Jena",
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         },
@@ -3020,6 +3012,14 @@
         {
           "title": "cwm",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cwm/"
+        },
+        {
+          "title": "json-rql",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
+        },
+        {
+          "title": "shacl-engine",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-engine/"
         }
       ]
     },
@@ -3042,8 +3042,12 @@
       ],
       "relatedTools": [
         {
-          "title": "shacl-engine",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-engine/"
+          "title": "dotNetRDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
+          "title": "duck_rdf",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/duck-rdf/"
         },
         {
           "title": "JSON-LD Playground",
@@ -3054,12 +3058,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
         },
         {
-          "title": "dotNetRDF",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
-        },
-        {
-          "title": "duck_rdf",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/duck-rdf/"
+          "title": "shacl-engine",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-engine/"
         }
       ]
     },
@@ -3082,16 +3082,16 @@
       ],
       "relatedTools": [
         {
-          "title": "Euler Yet another proof Engine",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/"
-        },
-        {
           "title": "CEL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cel/"
         },
         {
           "title": "ELK",
           "canonicalUrl": "https://openknowledgegraphs.com/software/elk/"
+        },
+        {
+          "title": "Euler Yet another proof Engine",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/"
         },
         {
           "title": "FaCT++",
@@ -3119,12 +3119,12 @@
       "softwareType": "RDF Data Mapping / ETL",
       "relatedTools": [
         {
-          "title": "Mapeathor",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/"
-        },
-        {
           "title": "Chimera",
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
+        },
+        {
+          "title": "Mapeathor",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/"
         },
         {
           "title": "Morph-KGC",
@@ -3178,12 +3178,12 @@
       ],
       "relatedTools": [
         {
-          "title": "EMMOntoPy",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
         },
         {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+          "title": "EMMOntoPy",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
         },
         {
           "title": "Prez Linked Data API",
@@ -3194,8 +3194,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
         },
         {
-          "title": "CubicWeb",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
       ]
     },
@@ -3239,14 +3239,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Semantica",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/semantica/"
-        },
-        {
-          "title": "OntoGPT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
-        },
-        {
           "title": "BnF authorities",
           "canonicalUrl": "https://openknowledgegraphs.com/software/bnf-authorities/"
         },
@@ -3257,6 +3249,14 @@
         {
           "title": "Helio Ecosystem",
           "canonicalUrl": "https://openknowledgegraphs.com/software/helio-ecosystem/"
+        },
+        {
+          "title": "OntoGPT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
+        },
+        {
+          "title": "Semantica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/semantica/"
         }
       ]
     },
@@ -3345,12 +3345,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Linked Data Fragments Server",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
-        },
-        {
           "title": "gStore",
           "canonicalUrl": "https://openknowledgegraphs.com/software/gstore/"
+        },
+        {
+          "title": "Linked Data Fragments Server",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
         },
         {
           "title": "NitrosBase",
@@ -3416,6 +3416,14 @@
       "softwareType": "Graph Database",
       "relatedTools": [
         {
+          "title": "4store",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
+        },
+        {
+          "title": "AtomicServer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/atomicserver/"
+        },
+        {
           "title": "KuzuDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
         },
@@ -3424,16 +3432,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/node-quadstore/"
         },
         {
-          "title": "AtomicServer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/atomicserver/"
-        },
-        {
           "title": "Oxigraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/"
-        },
-        {
-          "title": "4store",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         }
       ]
     },
@@ -3553,24 +3553,24 @@
       ],
       "relatedTools": [
         {
-          "title": "RMLMapper",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlmapper/"
-        },
-        {
-          "title": "RDF Transform",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/"
-        },
-        {
-          "title": "RMLStreamer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
-        },
-        {
           "title": "Chimera",
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
           "title": "CoW",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
+        },
+        {
+          "title": "RDF Transform",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/"
+        },
+        {
+          "title": "RMLMapper",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlmapper/"
+        },
+        {
+          "title": "RMLStreamer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
         }
       ]
     },
@@ -3610,20 +3610,20 @@
       ],
       "relatedTools": [
         {
-          "title": "OnToology",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
-        },
-        {
-          "title": "ontology-quality-suite",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
-        },
-        {
           "title": "F-UJI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         },
         {
           "title": "FOOPS!",
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
+        },
+        {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
+          "title": "OnToology",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
         {
           "title": "Open Knowledge Graphs",
@@ -3652,6 +3652,14 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
+          "title": "RDFSharp",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfsharp/"
+        },
+        {
           "title": "SANSA",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sansa/"
         },
@@ -3660,16 +3668,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
         },
         {
-          "title": "RDFSharp",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfsharp/"
-        },
-        {
           "title": "TopBraid SHACL API",
           "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
-        },
-        {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         }
       ]
     },
@@ -3725,12 +3725,12 @@
       "softwareType": "RDF Data Mapping / ETL",
       "relatedTools": [
         {
-          "title": "Karma semantic mapping platform",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/"
-        },
-        {
           "title": "Chimera",
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
+        },
+        {
+          "title": "Karma semantic mapping platform",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/"
         },
         {
           "title": "Morph-KGC",
@@ -3944,24 +3944,24 @@
       "softwareType": "Graph Database",
       "relatedTools": [
         {
-          "title": "fluree",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/"
-        },
-        {
-          "title": "TuringDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/"
-        },
-        {
-          "title": "SurrealDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/surrealdb/"
+          "title": "4store",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         },
         {
           "title": "ArangoDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
         },
         {
-          "title": "4store",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
+          "title": "fluree",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/"
+        },
+        {
+          "title": "SurrealDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/surrealdb/"
+        },
+        {
+          "title": "TuringDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/"
         }
       ]
     },
@@ -4105,8 +4105,12 @@
       ],
       "relatedTools": [
         {
-          "title": "SDM-RDFizer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sdm-rdfizer/"
+          "title": "Chimera",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
+        },
+        {
+          "title": "CoW",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
         },
         {
           "title": "Karma semantic mapping platform",
@@ -4117,12 +4121,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/"
         },
         {
-          "title": "Chimera",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
-        },
-        {
-          "title": "CoW",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
+          "title": "SDM-RDFizer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sdm-rdfizer/"
         }
       ]
     },
@@ -4179,12 +4179,12 @@
       ],
       "relatedTools": [
         {
-          "title": "InfiniteGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
-        },
-        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
+        },
+        {
+          "title": "InfiniteGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
         },
         {
           "title": "NebulaGraph",
@@ -4318,6 +4318,14 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
@@ -4328,14 +4336,6 @@
         {
           "title": "Polypheny",
           "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
-        },
-        {
-          "title": "ArcadeDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
         }
       ]
     },
@@ -4362,14 +4362,6 @@
       ],
       "relatedTools": [
         {
-          "title": "qEndpoint",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
-        },
-        {
-          "title": "InfiniteGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
-        },
-        {
           "title": "4store",
           "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         },
@@ -4378,8 +4370,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
         {
+          "title": "InfiniteGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
+        },
+        {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
+        },
+        {
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
         }
       ]
     },
@@ -4404,8 +4404,16 @@
       ],
       "relatedTools": [
         {
+          "title": "DBPedia Archivo",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
+        },
+        {
           "title": "F-UJI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         },
         {
           "title": "OntoSpy",
@@ -4414,14 +4422,6 @@
         {
           "title": "O’FAIRE",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
-        },
-        {
-          "title": "ontology-quality-suite",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
-        },
-        {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         }
       ]
     },
@@ -4455,6 +4455,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        },
+        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
@@ -4469,10 +4473,6 @@
         {
           "title": "Polypheny",
           "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
         }
       ]
     },
@@ -4496,20 +4496,20 @@
       ],
       "relatedTools": [
         {
-          "title": "RDFox",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
-        },
-        {
-          "title": "Stardog",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
-        },
-        {
           "title": "gStore",
           "canonicalUrl": "https://openknowledgegraphs.com/software/gstore/"
         },
         {
           "title": "KuzuDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
+        },
+        {
+          "title": "RDFox",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
+        },
+        {
+          "title": "Stardog",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
         },
         {
           "title": "TuringDB",
@@ -4542,20 +4542,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/atomicserver/"
         },
         {
-          "title": "Linked Data Fragments Server",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
-        },
-        {
           "title": "KuzuDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
         },
         {
-          "title": "Oxigraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/"
+          "title": "Linked Data Fragments Server",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
         },
         {
           "title": "MarkLogic",
           "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "Oxigraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/"
         }
       ]
     },
@@ -4587,24 +4587,24 @@
       ],
       "relatedTools": [
         {
-          "title": "Sampo-UI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
-        },
-        {
-          "title": "WebVOWL",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
+          "title": "Sampo-UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
+        },
+        {
           "title": "Turtle Editor Viewer",
           "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         },
         {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
         }
       ]
     },
@@ -4647,14 +4647,6 @@
       ],
       "relatedTools": [
         {
-          "title": "OriginTrail DKG V10 node",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/origintrail-dkg-v10-node/"
-        },
-        {
-          "title": "Mem0",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
-        },
-        {
           "title": "Cognee",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
         },
@@ -4663,8 +4655,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
         },
         {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
           "title": "ndoli",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/"
+        },
+        {
+          "title": "OriginTrail DKG V10 node",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/origintrail-dkg-v10-node/"
         }
       ]
     },
@@ -4687,6 +4687,14 @@
       ],
       "relatedTools": [
         {
+          "title": "DBPedia Archivo",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
+        },
+        {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
           "title": "Linked Open Vocabularies",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linked-open-vocabularies/"
         },
@@ -4697,14 +4705,6 @@
         {
           "title": "SHACTOR",
           "canonicalUrl": "https://openknowledgegraphs.com/software/shactor/"
-        },
-        {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
-        },
-        {
-          "title": "F-UJI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         }
       ]
     },
@@ -4743,10 +4743,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Knwler",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/knwler/"
-        },
-        {
           "title": "BnF authorities",
           "canonicalUrl": "https://openknowledgegraphs.com/software/bnf-authorities/"
         },
@@ -4757,6 +4753,10 @@
         {
           "title": "Helio Ecosystem",
           "canonicalUrl": "https://openknowledgegraphs.com/software/helio-ecosystem/"
+        },
+        {
+          "title": "Knwler",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/knwler/"
         },
         {
           "title": "LinkedDataHub",
@@ -4803,24 +4803,24 @@
       "softwareType": "Ontology Engineering",
       "relatedTools": [
         {
-          "title": "ROBOT is an OBO Tool",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/robot-is-an-obo-tool/"
-        },
-        {
-          "title": "VocBench",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/vocbench/"
-        },
-        {
-          "title": "LinkML",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
-        },
-        {
           "title": "DBPedia Archivo",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         },
         {
           "title": "F-UJI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
+          "title": "LinkML",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
+        },
+        {
+          "title": "ROBOT is an OBO Tool",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/robot-is-an-obo-tool/"
+        },
+        {
+          "title": "VocBench",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/vocbench/"
         }
       ]
     },
@@ -4864,6 +4864,14 @@
       "softwareType": "Ontology Engineering",
       "relatedTools": [
         {
+          "title": "DBPedia Archivo",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
+        },
+        {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
           "title": "Linked Open Vocabularies",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linked-open-vocabularies/"
         },
@@ -4874,14 +4882,6 @@
         {
           "title": "SHACTOR",
           "canonicalUrl": "https://openknowledgegraphs.com/software/shactor/"
-        },
-        {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
-        },
-        {
-          "title": "F-UJI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         }
       ]
     },
@@ -4909,20 +4909,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         },
         {
-          "title": "OnToology",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
+          "title": "FOOPS!",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
         },
         {
           "title": "LinkML",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         },
         {
-          "title": "FOOPS!",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
-        },
-        {
           "title": "NEOntometrics",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/"
+        },
+        {
+          "title": "OnToology",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         }
       ]
     },
@@ -4964,20 +4964,20 @@
       ],
       "relatedTools": [
         {
-          "title": "ontology-quality-suite",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
-        },
-        {
-          "title": "LinkML",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
-        },
-        {
           "title": "F-UJI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         },
         {
           "title": "FOOPS!",
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
+        },
+        {
+          "title": "LinkML",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
+        },
+        {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         },
         {
           "title": "Open Knowledge Graphs",
@@ -5022,20 +5022,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
-          "title": "OntopSpark",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
-        },
-        {
-          "title": "SPARQL Anything",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
-        },
-        {
           "title": "Karma semantic mapping platform",
           "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/"
         },
         {
           "title": "Mapeathor",
           "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/"
+        },
+        {
+          "title": "OntopSpark",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
+        },
+        {
+          "title": "SPARQL Anything",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
         }
       ]
     },
@@ -5064,10 +5064,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
-          "title": "SPARQL Anything",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
-        },
-        {
           "title": "Karma semantic mapping platform",
           "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/"
         },
@@ -5078,6 +5074,10 @@
         {
           "title": "ontop",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "SPARQL Anything",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
         }
       ]
     },
@@ -5133,12 +5133,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/"
         },
         {
-          "title": "O’FAIRE",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
-        },
-        {
           "title": "ontology-quality-suite",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
+          "title": "O’FAIRE",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
         }
       ]
     },
@@ -5175,12 +5175,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Corese",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/corese/"
-        },
-        {
           "title": "Blazegraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
+        },
+        {
+          "title": "Corese",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/corese/"
         },
         {
           "title": "InfiniteGraph",
@@ -5259,12 +5259,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
         },
         {
-          "title": "OnToology",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
-        },
-        {
           "title": "ontology-quality-suite",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
+          "title": "OnToology",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
         {
           "title": "RDFUnit",
@@ -5345,6 +5345,14 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
@@ -5355,14 +5363,6 @@
         {
           "title": "Polypheny",
           "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
-        },
-        {
-          "title": "ArcadeDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
         }
       ]
     },
@@ -5388,14 +5388,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Ontofelia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontofelia/"
-        },
-        {
-          "title": "Mem0",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
-        },
-        {
           "title": "Cognee",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
         },
@@ -5404,8 +5396,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
         },
         {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
           "title": "ndoli",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/"
+        },
+        {
+          "title": "Ontofelia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontofelia/"
         }
       ]
     },
@@ -5573,14 +5573,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Linked Data Fragments Server",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
-        },
-        {
-          "title": "Tentris",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
-        },
-        {
           "title": "Dgraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dgraph/"
         },
@@ -5591,6 +5583,14 @@
         {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
+        },
+        {
+          "title": "Linked Data Fragments Server",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/"
+        },
+        {
+          "title": "Tentris",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
         }
       ]
     },
@@ -5627,12 +5627,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/"
         },
         {
-          "title": "OntoSpy",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontospy/"
-        },
-        {
           "title": "ontology-quality-suite",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
+          "title": "OntoSpy",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontospy/"
         }
       ]
     },
@@ -5703,6 +5703,14 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
@@ -5713,14 +5721,6 @@
         {
           "title": "OrientDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
-        },
-        {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
-        },
-        {
-          "title": "ArcadeDB",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
         }
       ]
     },
@@ -5742,16 +5742,16 @@
       "softwareType": "Developer Library",
       "relatedTools": [
         {
-          "title": "pyLDAPI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
-        },
-        {
           "title": "EMMOntoPy",
           "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
         },
         {
           "title": "KGX",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
+        },
+        {
+          "title": "pyLDAPI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
         },
         {
           "title": "RDF4J",
@@ -5784,16 +5784,16 @@
       ],
       "relatedTools": [
         {
-          "title": "HeFQUIN",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/hefquin/"
-        },
-        {
           "title": "Apache Jena Fuseki",
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "AutoSparql",
           "canonicalUrl": "https://openknowledgegraphs.com/software/autosparql/"
+        },
+        {
+          "title": "HeFQUIN",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/hefquin/"
         },
         {
           "title": "Semagrow",
@@ -5875,10 +5875,6 @@
       ],
       "relatedTools": [
         {
-          "title": "SKOS Play!",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/skos-play/"
-        },
-        {
           "title": "Holonet Galactic Encyclopedia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
@@ -5893,6 +5889,10 @@
         {
           "title": "Reactodia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
+        },
+        {
+          "title": "SKOS Play!",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/skos-play/"
         }
       ]
     },
@@ -5933,16 +5933,16 @@
       "softwareType": "Developer Library",
       "relatedTools": [
         {
-          "title": "Prez Linked Data API",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/"
-        },
-        {
           "title": "EMMOntoPy",
           "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
         },
         {
           "title": "KGX",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
+        },
+        {
+          "title": "Prez Linked Data API",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/"
         },
         {
           "title": "RDF4J",
@@ -6004,10 +6004,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Sophia RDF toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
-        },
-        {
           "title": "CubicWeb",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
         },
@@ -6022,6 +6018,10 @@
         {
           "title": "LinkML-Scala",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/"
+        },
+        {
+          "title": "Sophia RDF toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
         }
       ]
     },
@@ -6053,14 +6053,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Neo4j",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
-        },
-        {
-          "title": "InfiniteGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
-        },
-        {
           "title": "4store",
           "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         },
@@ -6069,8 +6061,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
         {
+          "title": "InfiniteGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
+        },
+        {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
+        },
+        {
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         }
       ]
     },
@@ -6121,6 +6121,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
+        },
+        {
           "title": "HeFQUIN",
           "canonicalUrl": "https://openknowledgegraphs.com/software/hefquin/"
         },
@@ -6135,10 +6139,6 @@
         {
           "title": "Sparql Transformer",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-transformer/"
-        },
-        {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         }
       ]
     },
@@ -6167,20 +6167,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         },
         {
-          "title": "RedStore",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/"
-        },
-        {
-          "title": "qEndpoint",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+          "title": "AllegroGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/"
         },
         {
           "title": "Neo4j",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         },
         {
-          "title": "AllegroGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/"
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+        },
+        {
+          "title": "RedStore",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/"
         }
       ]
     },
@@ -6321,6 +6321,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
+          "title": "Excel 2 RDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/excel-2-rdf/"
+        },
+        {
           "title": "OntopSpark",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
         },
@@ -6331,10 +6335,6 @@
         {
           "title": "SPARQL Anything",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
-        },
-        {
-          "title": "Excel 2 RDF",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/excel-2-rdf/"
         }
       ]
     },
@@ -6398,6 +6398,14 @@
       ],
       "relatedTools": [
         {
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+        },
+        {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "Sampo-UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         },
@@ -6408,14 +6416,6 @@
         {
           "title": "WebVOWL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
-        },
-        {
-          "title": "Nodica",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
-        },
-        {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         }
       ]
     },
@@ -6447,10 +6447,6 @@
       ],
       "relatedTools": [
         {
-          "title": "rdf-ext",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
-        },
-        {
           "title": "dotNetRDF",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
         },
@@ -6461,6 +6457,10 @@
         {
           "title": "json-rql",
           "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
+        },
+        {
+          "title": "rdf-ext",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
         },
         {
           "title": "shacl-engine",
@@ -6507,20 +6507,20 @@
       ],
       "relatedTools": [
         {
-          "title": "Prez Linked Data API",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/"
-        },
-        {
-          "title": "pyLDAPI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
-        },
-        {
           "title": "EMMOntoPy",
           "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
         },
         {
           "title": "KGX",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/"
+        },
+        {
+          "title": "Prez Linked Data API",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/"
+        },
+        {
+          "title": "pyLDAPI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
         },
         {
           "title": "RDFLib",
@@ -6569,6 +6569,10 @@
       ],
       "relatedTools": [
         {
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+        },
+        {
           "title": "EMMOntoPy",
           "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
         },
@@ -6583,10 +6587,6 @@
         {
           "title": "pyLDAPI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/"
-        },
-        {
-          "title": "CubicWeb",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
         }
       ]
     },
@@ -6605,24 +6605,24 @@
       "softwareType": "Graph Database",
       "relatedTools": [
         {
-          "title": "Stardog",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
-        },
-        {
-          "title": "NitrosBase",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
-        },
-        {
           "title": "AllegroGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/"
+        },
+        {
+          "title": "Blazegraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
         },
         {
           "title": "Corese",
           "canonicalUrl": "https://openknowledgegraphs.com/software/corese/"
         },
         {
-          "title": "Blazegraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "Stardog",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
         }
       ]
     },
@@ -6647,8 +6647,8 @@
       ],
       "relatedTools": [
         {
-          "title": "Sophia RDF toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         },
         {
           "title": "LinkML-Scala",
@@ -6659,12 +6659,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sansa/"
         },
         {
-          "title": "TopBraid SHACL API",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
+          "title": "Sophia RDF toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
         },
         {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+          "title": "TopBraid SHACL API",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
         }
       ]
     },
@@ -6702,10 +6702,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
         },
         {
-          "title": "Widoco",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/"
-        },
-        {
           "title": "OnToology",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
@@ -6716,6 +6712,10 @@
         {
           "title": "O’FAIRE",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
+        },
+        {
+          "title": "Widoco",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/"
         }
       ]
     },
@@ -6759,10 +6759,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Turtle Editor Viewer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
-        },
-        {
           "title": "Holonet Galactic Encyclopedia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
@@ -6777,6 +6773,10 @@
         {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
+        },
+        {
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         }
       ]
     },
@@ -6844,16 +6844,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
         },
         {
-          "title": "QuitStore",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/"
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
         },
         {
           "title": "qEndpoint",
           "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
         },
         {
-          "title": "Neo4j",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
+          "title": "QuitStore",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/"
         },
         {
           "title": "Virtuoso Universal Server",
@@ -6899,24 +6899,24 @@
       ],
       "relatedTools": [
         {
-          "title": "RDF Transform",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/"
-        },
-        {
-          "title": "RMLStreamer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
-        },
-        {
-          "title": "LinkedPipes ETL",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkedpipes-etl/"
-        },
-        {
           "title": "Chimera",
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
           "title": "CoW",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
+        },
+        {
+          "title": "LinkedPipes ETL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkedpipes-etl/"
+        },
+        {
+          "title": "RDF Transform",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/"
+        },
+        {
+          "title": "RMLStreamer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
         }
       ]
     },
@@ -6938,8 +6938,16 @@
       "softwareType": "RDF Data Mapping / ETL",
       "relatedTools": [
         {
+          "title": "Chimera",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
+        },
+        {
           "title": "CoW",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
+        },
+        {
+          "title": "LinkedPipes ETL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkedpipes-etl/"
         },
         {
           "title": "RMLMapper",
@@ -6948,14 +6956,6 @@
         {
           "title": "YARRRML Parser",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yarrrml-parser/"
-        },
-        {
-          "title": "LinkedPipes ETL",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkedpipes-etl/"
-        },
-        {
-          "title": "Chimera",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         }
       ]
     },
@@ -6977,14 +6977,6 @@
       "softwareType": "Ontology Engineering",
       "relatedTools": [
         {
-          "title": "VocBench",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/vocbench/"
-        },
-        {
-          "title": "Ontology Development Kit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
-        },
-        {
           "title": "DBPedia Archivo",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         },
@@ -6995,6 +6987,14 @@
         {
           "title": "FOOPS!",
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
+        },
+        {
+          "title": "Ontology Development Kit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
+        },
+        {
+          "title": "VocBench",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/vocbench/"
         }
       ]
     },
@@ -7081,16 +7081,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/grlc-sparql-api-constructor/"
         },
         {
-          "title": "Yasgui (Matdata)",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
-        },
-        {
           "title": "Traqula",
           "canonicalUrl": "https://openknowledgegraphs.com/software/traqula/"
         },
         {
           "title": "Yasgui",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        },
+        {
+          "title": "Yasgui (Matdata)",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
         }
       ]
     },
@@ -7113,8 +7113,8 @@
       ],
       "relatedTools": [
         {
-          "title": "WebVOWL",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
           "title": "Nodica",
@@ -7129,8 +7129,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         },
         {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
         }
       ]
     },
@@ -7162,24 +7162,24 @@
       ],
       "relatedTools": [
         {
-          "title": "LinkML-Scala",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/"
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         },
         {
-          "title": "Sophia RDF toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
+          "title": "LinkML-Scala",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/"
         },
         {
           "title": "RDFSharp",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdfsharp/"
         },
         {
-          "title": "TopBraid SHACL API",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
+          "title": "Sophia RDF toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
         },
         {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+          "title": "TopBraid SHACL API",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
         }
       ]
     },
@@ -7204,8 +7204,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Morph-KGC",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/morph-kgc/"
+          "title": "Chimera",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
+        },
+        {
+          "title": "CoW",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
         },
         {
           "title": "Karma semantic mapping platform",
@@ -7216,12 +7220,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/"
         },
         {
-          "title": "Chimera",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
-        },
-        {
-          "title": "CoW",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
+          "title": "Morph-KGC",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/morph-kgc/"
         }
       ]
     },
@@ -7246,8 +7246,8 @@
       ],
       "relatedTools": [
         {
-          "title": "Sparql Transformer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-transformer/"
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "HeFQUIN",
@@ -7258,12 +7258,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/processor/"
         },
         {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
-        },
-        {
           "title": "Semantic UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
+        },
+        {
+          "title": "Sparql Transformer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-transformer/"
         }
       ]
     },
@@ -7328,10 +7328,6 @@
       "softwareType": "Knowledge Graph Construction",
       "relatedTools": [
         {
-          "title": "Knwler",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/knwler/"
-        },
-        {
           "title": "BnF authorities",
           "canonicalUrl": "https://openknowledgegraphs.com/software/bnf-authorities/"
         },
@@ -7342,6 +7338,10 @@
         {
           "title": "Helio Ecosystem",
           "canonicalUrl": "https://openknowledgegraphs.com/software/helio-ecosystem/"
+        },
+        {
+          "title": "Knwler",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/knwler/"
         },
         {
           "title": "LinkedDataHub",
@@ -7569,6 +7569,14 @@
       ],
       "relatedTools": [
         {
+          "title": "DBPedia Archivo",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
+        },
+        {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
           "title": "Linked Open Vocabularies",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linked-open-vocabularies/"
         },
@@ -7577,16 +7585,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontospy/"
         },
         {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
-        },
-        {
           "title": "Widoco",
           "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/"
-        },
-        {
-          "title": "F-UJI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         }
       ]
     },
@@ -7618,24 +7618,24 @@
       ],
       "relatedTools": [
         {
-          "title": "json-rql",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
-        },
-        {
-          "title": "JSON-LD Playground",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/json-ld-playground/"
-        },
-        {
-          "title": "rdf-ext",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
-        },
-        {
           "title": "dotNetRDF",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
         },
         {
           "title": "duck_rdf",
           "canonicalUrl": "https://openknowledgegraphs.com/software/duck-rdf/"
+        },
+        {
+          "title": "JSON-LD Playground",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/json-ld-playground/"
+        },
+        {
+          "title": "json-rql",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/"
+        },
+        {
+          "title": "rdf-ext",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/"
         }
       ]
     },
@@ -7708,16 +7708,16 @@
       ],
       "relatedTools": [
         {
-          "title": "Pubby",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
-        },
-        {
           "title": "Holonet Galactic Encyclopedia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
           "title": "Nodica",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
+          "title": "Pubby",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
         },
         {
           "title": "rdf-sketch",
@@ -7837,6 +7837,10 @@
       "softwareType": "Developer Library",
       "relatedTools": [
         {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
           "title": "LinkML-Scala",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/"
         },
@@ -7851,10 +7855,6 @@
         {
           "title": "TopBraid SHACL API",
           "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/"
-        },
-        {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         }
       ]
     },
@@ -7971,10 +7971,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Yasgui",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
-        },
-        {
           "title": "anapsid",
           "canonicalUrl": "https://openknowledgegraphs.com/software/anapsid/"
         },
@@ -7989,6 +7985,10 @@
         {
           "title": "Comunica",
           "canonicalUrl": "https://openknowledgegraphs.com/software/comunica/"
+        },
+        {
+          "title": "Yasgui",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
         }
       ]
     },
@@ -8017,10 +8017,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
-          "title": "OntopSpark",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
-        },
-        {
           "title": "Karma semantic mapping platform",
           "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/"
         },
@@ -8031,6 +8027,10 @@
         {
           "title": "ontop",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "OntopSpark",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/"
         }
       ]
     },
@@ -8069,8 +8069,8 @@
       ],
       "relatedTools": [
         {
-          "title": "Semagrow",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/semagrow/"
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "HeFQUIN",
@@ -8081,8 +8081,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/processor/"
         },
         {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
+          "title": "Semagrow",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/semagrow/"
         },
         {
           "title": "Semantic UI",
@@ -8190,20 +8190,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/anapsid/"
         },
         {
-          "title": "SEPA",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
-        },
-        {
-          "title": "sparqlprog",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlprog/"
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "Semantic UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
         },
         {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
+          "title": "SEPA",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
+        },
+        {
+          "title": "sparqlprog",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlprog/"
         }
       ]
     },
@@ -8352,20 +8352,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/anapsid/"
         },
         {
-          "title": "SEPA",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
+          "title": "Apache Jena Fuseki",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
           "title": "Semantic UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
         },
         {
-          "title": "SPARQL2Git",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql2git/"
+          "title": "SEPA",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/"
         },
         {
-          "title": "Apache Jena Fuseki",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
+          "title": "SPARQL2Git",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql2git/"
         }
       ]
     },
@@ -8491,24 +8491,24 @@
       "softwareType": "Graph Database",
       "relatedTools": [
         {
-          "title": "RDFox",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
-        },
-        {
-          "title": "NitrosBase",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
-        },
-        {
           "title": "AllegroGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/"
+        },
+        {
+          "title": "Blazegraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
         },
         {
           "title": "Corese",
           "canonicalUrl": "https://openknowledgegraphs.com/software/corese/"
         },
         {
-          "title": "Blazegraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "RDFox",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/"
         }
       ]
     },
@@ -8531,12 +8531,12 @@
       ],
       "relatedTools": [
         {
-          "title": "InfiniteGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
-        },
-        {
           "title": "Halyard",
           "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
+        },
+        {
+          "title": "InfiniteGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
         },
         {
           "title": "NebulaGraph",
@@ -8617,12 +8617,16 @@
       ],
       "relatedTools": [
         {
-          "title": "Memgraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
-        },
-        {
           "title": "fluree",
           "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/"
+        },
+        {
+          "title": "JanusGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
+        },
+        {
+          "title": "Memgraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
         },
         {
           "title": "Titan",
@@ -8631,10 +8635,6 @@
         {
           "title": "TuringDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/"
-        },
-        {
-          "title": "JanusGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
         }
       ]
     },
@@ -8736,10 +8736,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Tentris",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
-        },
-        {
           "title": "Dgraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dgraph/"
         },
@@ -8754,6 +8750,10 @@
         {
           "title": "NebulaGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
+        },
+        {
+          "title": "Tentris",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/"
         }
       ]
     },
@@ -8814,16 +8814,16 @@
       ],
       "relatedTools": [
         {
-          "title": "JanusGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
+          "title": "Halyard",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
         },
         {
           "title": "InfiniteGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/"
         },
         {
-          "title": "Halyard",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/"
+          "title": "JanusGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
         },
         {
           "title": "NebulaGraph",
@@ -8897,20 +8897,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         },
         {
-          "title": "Sophia RDF toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
-        },
-        {
           "title": "LinkML-Scala",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
         },
         {
           "title": "RDFSharp",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdfsharp/"
         },
         {
-          "title": "RDF4J",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+          "title": "Sophia RDF toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/"
         }
       ]
     },
@@ -9003,12 +9003,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/"
         },
         {
-          "title": "Yasgui (Matdata)",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
-        },
-        {
           "title": "Yasgui",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        },
+        {
+          "title": "Yasgui (Matdata)",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
         }
       ]
     },
@@ -9033,12 +9033,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Jelly",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/jelly/"
-        },
-        {
           "title": "CQELS",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cqels/"
+        },
+        {
+          "title": "Jelly",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/jelly/"
         },
         {
           "title": "Kolibrie SPARQL engine",
@@ -9121,16 +9121,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
         },
         {
-          "title": "Web-Algebra",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/"
-        },
-        {
           "title": "Mem0",
           "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
         },
         {
           "title": "ndoli",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/"
+        },
+        {
+          "title": "Web-Algebra",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/"
         }
       ]
     },
@@ -9155,10 +9155,6 @@
       ],
       "relatedTools": [
         {
-          "title": "Memgraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
-        },
-        {
           "title": "ArangoDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
         },
@@ -9173,6 +9169,10 @@
         {
           "title": "KuzuDB",
           "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/"
+        },
+        {
+          "title": "Memgraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/"
         }
       ]
     },
@@ -9195,6 +9195,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        },
+        {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
@@ -9209,10 +9213,6 @@
         {
           "title": "WebVOWL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
-        },
-        {
-          "title": "Nodica",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
         }
       ]
     },
@@ -9317,8 +9317,16 @@
       ],
       "relatedTools": [
         {
+          "title": "4store",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
+        },
+        {
           "title": "Blazegraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
         },
         {
           "title": "RDFox",
@@ -9327,14 +9335,6 @@
         {
           "title": "Stardog",
           "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/"
-        },
-        {
-          "title": "4store",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/4store/"
-        },
-        {
-          "title": "NitrosBase",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
         }
       ]
     },
@@ -9422,14 +9422,6 @@
       "softwareType": "Ontology Engineering",
       "relatedTools": [
         {
-          "title": "ROBOT is an OBO Tool",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/robot-is-an-obo-tool/"
-        },
-        {
-          "title": "Ontology Development Kit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
-        },
-        {
           "title": "DBPedia Archivo",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         },
@@ -9440,6 +9432,14 @@
         {
           "title": "FOOPS!",
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
+        },
+        {
+          "title": "Ontology Development Kit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
+        },
+        {
+          "title": "ROBOT is an OBO Tool",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/robot-is-an-obo-tool/"
         }
       ]
     },
@@ -9514,16 +9514,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
         },
         {
-          "title": "TrustGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/"
-        },
-        {
           "title": "Mem0",
           "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
         },
         {
           "title": "ndoli",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/"
+        },
+        {
+          "title": "TrustGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/"
         }
       ]
     },
@@ -9548,8 +9548,8 @@
       ],
       "relatedTools": [
         {
-          "title": "Sampo-UI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
         {
           "title": "Nodica",
@@ -9560,12 +9560,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
-          "title": "Turtle Editor Viewer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
+          "title": "Sampo-UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         },
         {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         }
       ]
     },
@@ -9611,10 +9611,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
         },
         {
-          "title": "RDFUnit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfunit/"
-        },
-        {
           "title": "Linked Open Vocabularies",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linked-open-vocabularies/"
         },
@@ -9625,6 +9621,10 @@
         {
           "title": "OntoSpy",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontospy/"
+        },
+        {
+          "title": "RDFUnit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdfunit/"
         }
       ]
     },
@@ -9730,24 +9730,24 @@
       ],
       "relatedTools": [
         {
-          "title": "RMLStreamer",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
+          "title": "Chimera",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
         },
         {
           "title": "CoW",
           "canonicalUrl": "https://openknowledgegraphs.com/software/cow/"
         },
         {
-          "title": "RMLMapper",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlmapper/"
-        },
-        {
           "title": "LinkedPipes ETL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkedpipes-etl/"
         },
         {
-          "title": "Chimera",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/"
+          "title": "RMLMapper",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlmapper/"
+        },
+        {
+          "title": "RMLStreamer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/"
         }
       ]
     },
@@ -9831,12 +9831,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/"
         },
         {
-          "title": "Yasgui (Matdata)",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
-        },
-        {
           "title": "Semagrow",
           "canonicalUrl": "https://openknowledgegraphs.com/software/semagrow/"
+        },
+        {
+          "title": "Yasgui (Matdata)",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
         }
       ]
     },

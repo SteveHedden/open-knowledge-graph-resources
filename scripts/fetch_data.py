@@ -15,24 +15,36 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 import requests
-from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import RDF, RDFS, XSD
 
 from category_classifier import (
-    CATEGORY_SET,
     DEFAULT_BATCH_SIZE,
     DEFAULT_MODEL,
-    SOFTWARE_TYPE_DEFINITIONS,
-    SOFTWARE_TYPE_OPTIONS,
-    SOFTWARE_TYPE_SET,
     classify_items,
-    load_categories,
-    write_categories_atomic,
+)
+from semantic_config import (
+    BASE_URL,
+    CATEGORIES_VOCAB_PATH,
+    CURATION_PATH,
+    OKG,
+    ONTOLOGIES_DATASET,
+    SOFTWARE_DATASET,
+    SOFTWARE_TYPES_VOCAB_PATH,
+    SOURCES_PATH,
+    ControlledVocabulary,
+    SemanticConfigError,
+    SourceMappings,
+    classification_label_projection,
+    controlled_vocabulary_projection,
+    load_controlled_vocabulary,
+    load_curated_assignments,
+    load_source_mappings,
+    write_curated_assignments_atomic,
+    write_json_atomic as write_projection_json_atomic,
 )
 
 WDQS_URL = "https://query.wikidata.org/sparql"
-OKG = Namespace("https://openknowledgegraphs.com/ontology#")
-BASE_URL = "https://openknowledgegraphs.com"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT_DIR / "data"
@@ -42,6 +54,7 @@ ONTOLOGIES_JSON_OUT = DATA_DIR / "ontologies.json"
 SOFTWARE_JSON_OUT = DATA_DIR / "software.json"
 CATEGORIES_JSON_OUT = DATA_DIR / "categories.json"
 SOFTWARE_TYPES_JSON_OUT = DATA_DIR / "software_types.json"
+CONTROLLED_VOCABULARIES_JSON_OUT = DATA_DIR / "controlled_vocabularies.json"
 URI_REGISTRY_OUT = DATA_DIR / "uri_registry.json"
 PAGE_QIDS_LEGACY = DATA_DIR / "page_qids.json"
 
@@ -65,131 +78,6 @@ CATEGORY_CLASSIFICATION_BATCH_SIZE = int(
 )
 CATEGORY_CLASSIFICATION_MODEL = os.getenv("ANTHROPIC_MODEL", DEFAULT_MODEL)
 
-QID_TO_OSC_CLASS = {
-    "Q324254": OKG.Ontology,
-    "Q1469824": OKG.ControlledVocabulary,
-    "Q8269924": OKG.Taxonomy,
-    "Q33002955": OKG.KnowledgeGraph,
-    "Q7095059": OKG.OntologyLanguage,
-    "Q7247749": OKG.ControlledVocabulary,  # product classification
-}
-RESOURCE_TYPE_LABELS = {
-    OKG.Ontology: "Ontology",
-    OKG.ControlledVocabulary: "ControlledVocabulary",
-    OKG.Taxonomy: "Taxonomy",
-    OKG.KnowledgeGraph: "KnowledgeGraph",
-    OKG.OntologyLanguage: "OntologyLanguage",
-    OKG.Software: "Software",
-}
-
-CATEGORY_LABEL_TO_IRI: dict[str, URIRef] = {
-    "Life Sciences & Healthcare": OKG.LifeSciencesHealthcare,
-    "Geospatial": OKG.Geospatial,
-    "Government & Public Sector": OKG.GovernmentPublicSector,
-    "International Development": OKG.InternationalDevelopment,
-    "Finance & Business": OKG.FinanceBusiness,
-    "Library & Cultural Heritage": OKG.LibraryCulturalHeritage,
-    "Technology & Web": OKG.TechnologyWeb,
-    "Environment & Agriculture": OKG.EnvironmentAgriculture,
-    "General / Cross-domain": OKG.GeneralCrossDomain,
-}
-
-SOFTWARE_TYPE_LABEL_TO_IRI: dict[str, URIRef] = {
-    "Graph Database": OKG.GraphDatabase,
-    "SPARQL Tooling": OKG.SparqlTooling,
-    "Ontology Engineering": OKG.OntologyEngineering,
-    "Reasoning & Inference": OKG.ReasoningInference,
-    "RDF Data Mapping / ETL": OKG.DataMappingETL,
-    "Developer Library": OKG.DeveloperLibrary,
-    "Knowledge Graph Construction": OKG.KnowledgeGraphConstruction,
-    "AI Agent Tooling": OKG.AIAgentTooling,
-    "Visualization": OKG.Visualization,
-    "Stream Processing": OKG.StreamProcessing,
-}
-
-TYPE_BASE_QUERY_TEMPLATE = """
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?namespaceURI ?license ?partOfEntity ?creator
-WHERE {
-  ?item wdt:P31/wdt:P279* wd:__TYPE_QID__ .
-  OPTIONAL { ?item wdt:P856 ?officialWebsite . }
-  OPTIONAL { ?item wdt:P1324 ?sourceCodeRepo . }
-  OPTIONAL { ?item wdt:P7510 ?namespaceURI . }
-  OPTIONAL { ?item wdt:P275 ?license . }
-  OPTIONAL { ?item wdt:P361 ?partOfEntity . }
-  OPTIONAL {
-    { ?item wdt:P170 ?creator . } UNION
-    { ?item wdt:P50 ?creator . }
-  }
-}
-"""
-
-SOFTWARE_BASE_QUERY = """
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-
-SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?license ?partOfEntity ?creator ?programmingLanguage
-WHERE {
-  {
-    ?item wdt:P31/wdt:P279* wd:Q124653107 .  # semantic web software
-  }
-  UNION
-  {
-    ?item wdt:P31/wdt:P279* wd:Q140639670 .  # AI agent memory software
-  }
-  UNION
-  {
-    ?item wdt:P31/wdt:P279* wd:Q595971 .  # graph database
-  }
-  UNION
-  {
-    ?item wdt:P31/wdt:P279* wd:Q137916409 .  # graph database management system (current preferred class for most graph DB engines, incl. Neo4j/Wikibase; not a subclass of Q595971, so needs its own branch)
-  }
-  OPTIONAL { ?item wdt:P856 ?officialWebsite . }
-  OPTIONAL { ?item wdt:P1324 ?sourceCodeRepo . }
-  OPTIONAL { ?item wdt:P275 ?license . }
-  OPTIONAL { ?item wdt:P361 ?partOfEntity . }
-  OPTIONAL {
-    { ?item wdt:P178 ?creator . } UNION
-    { ?item wdt:P170 ?creator . } UNION
-    { ?item wdt:P50 ?creator . }
-  }
-  OPTIONAL { ?item wdt:P277 ?programmingLanguage . }
-}
-"""
-
-SOFTWARE_VERSION_QUERY = """
-PREFIX wd: <http://www.wikidata.org/entity/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX p: <http://www.wikidata.org/prop/>
-PREFIX ps: <http://www.wikidata.org/prop/statement/>
-PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
-
-SELECT ?item ?version ?pubDate
-WHERE {
-  {
-    ?item wdt:P31/wdt:P279* wd:Q124653107 .  # semantic web software
-  }
-  UNION
-  {
-    ?item wdt:P31/wdt:P279* wd:Q140639670 .  # AI agent memory software
-  }
-  UNION
-  {
-    ?item wdt:P31/wdt:P279* wd:Q595971 .  # graph database
-  }
-  UNION
-  {
-    ?item wdt:P31/wdt:P279* wd:Q137916409 .  # graph database management system (current preferred class for most graph DB engines, incl. Neo4j/Wikibase; not a subclass of Q595971, so needs its own branch)
-  }
-  ?item p:P348 ?verStmt .
-  ?verStmt ps:P348 ?version .
-  OPTIONAL { ?verStmt pq:P577 ?pubDate . }
-}
-"""
-
 LOCAL_NAME_CLEAN_RE = re.compile(r"[^A-Za-z0-9]+")
 QID_RE = re.compile(r"(Q\d+)$")
 REPO_HOST_RE = re.compile(r"^https?://(github\.com|gitlab\.com|bitbucket\.org|codeberg\.org)/", re.IGNORECASE)
@@ -199,13 +87,127 @@ class WDQSError(RuntimeError):
     """Raised when WDQS data cannot be fetched reliably."""
 
 
+def wikidata_property(
+    mappings: SourceMappings,
+    normalized_field: str,
+    catalog: URIRef | None = None,
+    value_kind: str | None = None,
+) -> str:
+    """Return a validated Wikidata property ID from the RDF source registry."""
+    return mappings.property_id_for(normalized_field, catalog, value_kind)
+
+
+def wikidata_class_path(mappings: SourceMappings, catalog: URIRef) -> str:
+    instance_of = wikidata_property(mappings, "instanceOf", catalog, "iri")
+    subclass_of = wikidata_property(mappings, "subclassOf", catalog, "iri")
+    return f"wdt:{instance_of}/wdt:{subclass_of}*"
+
+
+def optional_direct_clause(
+    mappings: SourceMappings,
+    normalized_field: str,
+    variable: str,
+    catalog: URIRef,
+    value_kind: str,
+) -> str:
+    property_id = wikidata_property(mappings, normalized_field, catalog, value_kind)
+    return f"  OPTIONAL {{ ?item wdt:{property_id} ?{variable} . }}"
+
+
+def optional_union_clause(
+    mappings: SourceMappings,
+    normalized_field: str,
+    variable: str,
+    catalog: URIRef,
+    value_kind: str,
+) -> str:
+    property_ids = mappings.property_ids_for(normalized_field, catalog, value_kind)
+    branches = " UNION\n    ".join(
+        f"{{ ?item wdt:{property_id} ?{variable} . }}" for property_id in property_ids
+    )
+    return f"  OPTIONAL {{\n    {branches}\n  }}"
+
+
+def class_union_clause(mappings: SourceMappings, catalog: URIRef) -> str:
+    path = wikidata_class_path(mappings, catalog)
+    return "\n  UNION\n".join(
+        f"  {{ ?item {path} wd:{class_id} . }}"
+        for class_id in mappings.class_ids_for(catalog)
+    )
+
+
+def build_type_base_query(type_qid: str, mappings: SourceMappings) -> str:
+    path = wikidata_class_path(mappings, ONTOLOGIES_DATASET)
+    clauses = [
+        optional_direct_clause(mappings, "officialWebsite", "officialWebsite", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "sourceCodeRepo", "sourceCodeRepo", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "namespaceURI", "namespaceURI", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "license", "license", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "partOfEntity", "partOfEntity", ONTOLOGIES_DATASET, "iri"),
+        optional_union_clause(mappings, "creator", "creator", ONTOLOGIES_DATASET, "iri"),
+    ]
+    return f"""
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?namespaceURI ?license ?partOfEntity ?creator
+WHERE {{
+  ?item {path} wd:{type_qid} .
+{chr(10).join(clauses)}
+}}
+"""
+
+
+def build_software_base_query(mappings: SourceMappings) -> str:
+    clauses = [
+        optional_direct_clause(mappings, "officialWebsite", "officialWebsite", SOFTWARE_DATASET, "iri"),
+        optional_direct_clause(mappings, "sourceCodeRepo", "sourceCodeRepo", SOFTWARE_DATASET, "iri"),
+        optional_direct_clause(mappings, "license", "license", SOFTWARE_DATASET, "iri"),
+        optional_direct_clause(mappings, "partOfEntity", "partOfEntity", SOFTWARE_DATASET, "iri"),
+        optional_union_clause(mappings, "creator", "creator", SOFTWARE_DATASET, "iri"),
+        optional_direct_clause(mappings, "programmingLanguage", "programmingLanguage", SOFTWARE_DATASET, "iri"),
+    ]
+    return f"""
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?license ?partOfEntity ?creator ?programmingLanguage
+WHERE {{
+{class_union_clause(mappings, SOFTWARE_DATASET)}
+{chr(10).join(clauses)}
+}}
+"""
+
+
+def build_software_version_query(mappings: SourceMappings) -> str:
+    version_property = wikidata_property(mappings, "version", SOFTWARE_DATASET, "string")
+    publication_date_property = wikidata_property(
+        mappings, "publicationDate", SOFTWARE_DATASET, "date-time"
+    )
+    return f"""
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+
+SELECT ?item ?version ?pubDate
+WHERE {{
+{class_union_clause(mappings, SOFTWARE_DATASET)}
+  ?item p:{version_property} ?verStmt .
+  ?verStmt ps:{version_property} ?version .
+  OPTIONAL {{ ?verStmt pq:{publication_date_property} ?pubDate . }}
+}}
+"""
+
+
 @dataclass
 class ResourceRecord:
     item_iri: str
     label: str
     description: str | None = None
-    category: str | None = None
-    software_type: str | None = None
+    category: URIRef | None = None
+    software_type: URIRef | None = None
     types: set[URIRef] = field(default_factory=set)
     homepages: set[str] = field(default_factory=set)
     source_repos: set[str] = field(default_factory=set)
@@ -482,8 +484,12 @@ WHERE {{
     return labels, descriptions
 
 
-def fetch_human_creators(session: requests.Session, creator_iris: set[str]) -> set[str]:
-    """Return the subset of creator_iris that are instance-of human (Q5) on Wikidata.
+def fetch_human_creators(
+    session: requests.Session,
+    creator_iris: set[str],
+    mappings: SourceMappings,
+) -> set[str]:
+    """Return the subset of creator IRIs mapped to OKG Person by Wikidata.
 
     schema.org's `creator` property only accepts Person or Organization
     (https://schema.org/creator); everything not identified as human here
@@ -494,6 +500,8 @@ def fetch_human_creators(session: requests.Session, creator_iris: set[str]) -> s
 
     humans: set[str] = set()
     sorted_entities = sorted(canonical_entity_iri(iri) for iri in creator_iris)
+    instance_of = wikidata_property(mappings, "instanceOf", value_kind="iri")
+    human_class = mappings.class_id_for_target(OKG.Person)
 
     for chunk in chunked(sorted_entities, LABEL_QUERY_BATCH_SIZE):
         values = " ".join(f"<{entity}>" for entity in chunk)
@@ -504,7 +512,7 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 SELECT DISTINCT ?entity
 WHERE {{
   VALUES ?entity {{ {values} }}
-  ?entity wdt:P31 wd:Q5 .
+  ?entity wdt:{instance_of} wd:{human_class} .
 }}
 """
         human_rows = run_wdqs_query(session, human_query, "creator human-check query")
@@ -517,7 +525,11 @@ WHERE {{
     return humans
 
 
-def fetch_person_identifiers(session: requests.Session, human_iris: set[str]) -> dict[str, dict[str, str]]:
+def fetch_person_identifiers(
+    session: requests.Session,
+    human_iris: set[str],
+    mappings: SourceMappings,
+) -> dict[str, dict[str, str]]:
     """Fetch person-specific identifiers (GitHub username, Google Scholar author ID)
     for creators already confirmed human. Organizations are deliberately excluded —
     these identifiers only make sense as claims about an individual.
@@ -527,6 +539,8 @@ def fetch_person_identifiers(session: requests.Session, human_iris: set[str]) ->
 
     identifiers: dict[str, dict[str, str]] = {}
     sorted_entities = sorted(canonical_entity_iri(iri) for iri in human_iris)
+    github_property = wikidata_property(mappings, "github", value_kind="external-identifier")
+    scholar_property = wikidata_property(mappings, "scholar", value_kind="external-identifier")
 
     for chunk in chunked(sorted_entities, LABEL_QUERY_BATCH_SIZE):
         values = " ".join(f"<{entity}>" for entity in chunk)
@@ -537,8 +551,8 @@ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 SELECT DISTINCT ?entity ?github ?scholar
 WHERE {{
   VALUES ?entity {{ {values} }}
-  OPTIONAL {{ ?entity wdt:P2037 ?github . }}
-  OPTIONAL {{ ?entity wdt:P1960 ?scholar . }}
+  OPTIONAL {{ ?entity wdt:{github_property} ?github . }}
+  OPTIONAL {{ ?entity wdt:{scholar_property} ?scholar . }}
 }}
 """
         rows = run_wdqs_query(session, identifier_query, "creator person-identifier query")
@@ -580,6 +594,7 @@ def parse_ontology_rows(
     rows: list[dict],
     labels: dict[str, str],
     descriptions: dict[str, str],
+    qid_to_okg_class: dict[str, URIRef],
 ) -> tuple[dict[str, ResourceRecord], dict[str, str], dict[str, str]]:
     records: dict[str, ResourceRecord] = {}
     license_labels: dict[str, str] = {}
@@ -597,7 +612,7 @@ def parse_ontology_rows(
 
         type_qid = binding_value(row, "matchedTypeQid")
         if type_qid:
-            osc_type = QID_TO_OSC_CLASS.get(type_qid)
+            osc_type = qid_to_okg_class.get(type_qid)
             if osc_type is not None:
                 record.types.add(osc_type)
 
@@ -733,7 +748,7 @@ def pick_latest_version_rows(rows: list[dict]) -> dict[str, tuple[str, date | No
             results[item_iri] = (version, dt_value.date() if dt_value else None)
             continue
 
-        # Fallback when no P577 qualifier exists on any P348 statement.
+        # Fallback when no publication-date qualifier exists on any version statement.
         version = sorted((candidate[0] for candidate in candidates), reverse=True)[0]
         results[item_iri] = (version, None)
 
@@ -742,13 +757,14 @@ def pick_latest_version_rows(rows: list[dict]) -> dict[str, tuple[str, date | No
 
 def apply_existing_categories(
     ontology_records: dict[str, ResourceRecord],
-    category_mapping: dict[str, str],
+    category_mapping: dict[str, URIRef],
+    vocabulary: ControlledVocabulary,
 ) -> list[dict[str, str]]:
     missing: list[dict[str, str]] = []
     for item_iri, record in ontology_records.items():
         qid = qid_from_wikidata_iri(item_iri)
         existing_category = category_mapping.get(qid)
-        if existing_category in CATEGORY_SET:
+        if existing_category in vocabulary.by_iri:
             record.category = existing_category
             continue
 
@@ -771,9 +787,10 @@ def apply_existing_categories(
 
 def classify_missing_ontology_categories(
     ontology_records: dict[str, ResourceRecord],
-    category_mapping: dict[str, str],
+    category_mapping: dict[str, URIRef],
+    vocabulary: ControlledVocabulary,
 ) -> tuple[int, int]:
-    missing_items = apply_existing_categories(ontology_records, category_mapping)
+    missing_items = apply_existing_categories(ontology_records, category_mapping, vocabulary)
     if not missing_items:
         return 0, 0
 
@@ -790,21 +807,18 @@ def classify_missing_ontology_categories(
         api_key=api_key,
         model=CATEGORY_CLASSIFICATION_MODEL,
         batch_size=CATEGORY_CLASSIFICATION_BATCH_SIZE,
+        category_options=vocabulary.labels,
+        category_set=vocabulary.label_set,
+        definitions=vocabulary.prompt_definitions,
     )
 
     for qid, category in classified.items():
-        category_mapping[qid] = category
-
-    if classified:
-        try:
-            write_categories_atomic(CATEGORIES_JSON_OUT, category_mapping)
-        except OSError as exc:
-            logging.warning("Unable to write category mapping %s: %s", CATEGORIES_JSON_OUT, exc)
+        category_mapping[qid] = vocabulary.by_label[category].iri
 
     for item_iri, record in ontology_records.items():
         qid = qid_from_wikidata_iri(item_iri)
         category = category_mapping.get(qid)
-        if category in CATEGORY_SET:
+        if category in vocabulary.by_iri:
             record.category = category
 
     if failed_qids:
@@ -818,13 +832,14 @@ def classify_missing_ontology_categories(
 
 def apply_existing_software_types(
     software_records: dict[str, ResourceRecord],
-    software_type_mapping: dict[str, str],
+    software_type_mapping: dict[str, URIRef],
+    vocabulary: ControlledVocabulary,
 ) -> list[dict[str, str]]:
     missing: list[dict[str, str]] = []
     for item_iri, record in software_records.items():
         qid = qid_from_wikidata_iri(item_iri)
         existing_type = software_type_mapping.get(qid)
-        if existing_type in SOFTWARE_TYPE_SET:
+        if existing_type in vocabulary.by_iri:
             record.software_type = existing_type
             continue
 
@@ -847,9 +862,10 @@ def apply_existing_software_types(
 
 def classify_missing_software_types(
     software_records: dict[str, ResourceRecord],
-    software_type_mapping: dict[str, str],
+    software_type_mapping: dict[str, URIRef],
+    vocabulary: ControlledVocabulary,
 ) -> tuple[int, int]:
-    missing_items = apply_existing_software_types(software_records, software_type_mapping)
+    missing_items = apply_existing_software_types(software_records, software_type_mapping, vocabulary)
     if not missing_items:
         return 0, 0
 
@@ -866,26 +882,20 @@ def classify_missing_software_types(
         api_key=api_key,
         model=CATEGORY_CLASSIFICATION_MODEL,
         batch_size=CATEGORY_CLASSIFICATION_BATCH_SIZE,
-        category_options=SOFTWARE_TYPE_OPTIONS,
-        category_set=SOFTWARE_TYPE_SET,
-        definitions=SOFTWARE_TYPE_DEFINITIONS,
+        category_options=vocabulary.labels,
+        category_set=vocabulary.label_set,
+        definitions=vocabulary.prompt_definitions,
         entity_label="knowledge graph or AI agent memory software resource",
         fallback_instruction="Pick the single closest match when unsure.",
     )
 
     for qid, software_type in classified.items():
-        software_type_mapping[qid] = software_type
-
-    if classified:
-        try:
-            write_categories_atomic(SOFTWARE_TYPES_JSON_OUT, software_type_mapping)
-        except OSError as exc:
-            logging.warning("Unable to write software type mapping %s: %s", SOFTWARE_TYPES_JSON_OUT, exc)
+        software_type_mapping[qid] = vocabulary.by_label[software_type].iri
 
     for item_iri, record in software_records.items():
         qid = qid_from_wikidata_iri(item_iri)
         software_type = software_type_mapping.get(qid)
-        if software_type in SOFTWARE_TYPE_SET:
+        if software_type in vocabulary.by_iri:
             record.software_type = software_type
 
     if failed_qids:
@@ -1030,9 +1040,11 @@ def add_related_tools(
 
 
 def related_tools_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, str]]:
-    """Returns related tools in the Jaccard-ranked order add_related_tools wrote
-    them in (best match first) — deliberately not re-sorted alphabetically,
-    unlike license/creator extraction, since rank here is meaningful.
+    """Return a deterministic projection of the resource's RDF related links.
+
+    RDF graphs do not retain insertion or ranking order, so the authoritative
+    relation set is projected alphabetically with the canonical URL as a stable
+    tie-breaker.
     """
     related: list[dict[str, str]] = []
     for node in graph.objects(subject, OKG.relatedTo):
@@ -1042,6 +1054,7 @@ def related_tools_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, 
         if not title:
             continue
         related.append({"title": title, "canonicalUrl": str(node)})
+    related.sort(key=lambda entry: (entry["title"].casefold(), entry["canonicalUrl"]))
     return related
 
 
@@ -1049,6 +1062,7 @@ def extract_items_from_graph(
     graph: Graph,
     allowed_types: set[URIRef],
     include_software_fields: bool,
+    resource_type_labels: dict[URIRef, str],
 ) -> list[dict[str, object]]:
     items: list[dict[str, object]] = []
     subjects = {subject for subject in graph.subjects(predicate=OKG.wikidataId)}
@@ -1059,9 +1073,9 @@ def extract_items_from_graph(
 
         type_labels = sorted(
             {
-                RESOURCE_TYPE_LABELS[rdf_type]
+                resource_type_labels[rdf_type]
                 for rdf_type in graph.objects(subject, RDF.type)
-                if rdf_type in allowed_types
+                if rdf_type in allowed_types and rdf_type in resource_type_labels
             }
         )
         if not type_labels:
@@ -1147,10 +1161,16 @@ def build_json_payload(
     allowed_types: set[URIRef],
     include_software_fields: bool,
     generated_at: str,
+    resource_type_labels: dict[URIRef, str],
 ) -> dict[str, object]:
     return {
         "generatedAt": generated_at,
-        "items": extract_items_from_graph(graph, allowed_types, include_software_fields),
+        "items": extract_items_from_graph(
+            graph,
+            allowed_types,
+            include_software_fields,
+            resource_type_labels,
+        ),
     }
 
 
@@ -1164,6 +1184,8 @@ def build_graph(
     dataset_path: str,
     slug_registry: dict[str, str],
     programming_language_labels: dict[str, str] | None = None,
+    category_vocabulary: ControlledVocabulary | None = None,
+    software_type_vocabulary: ControlledVocabulary | None = None,
 ) -> Graph:
     graph = Graph()
     graph.bind("okg", OKG)
@@ -1172,6 +1194,8 @@ def build_graph(
     graph.bind("xsd", XSD)
 
     for record in sorted(records.values(), key=lambda row: row.label.casefold()):
+        if not record.label or not record.label.strip():
+            raise ValueError(f"Cannot build RDF without a label for {record.item_iri}")
         qid = qid_from_wikidata_iri(record.item_iri)
         resource_iri = mint_resource_iri(dataset_path, slug_registry[qid])
 
@@ -1183,11 +1207,13 @@ def build_graph(
         graph.add((resource_iri, OKG.wikidataId, URIRef(wikidata_page_iri(record.item_iri))))
         if record.description:
             graph.add((resource_iri, OKG.description, Literal(record.description)))
-        if record.category and record.category in CATEGORY_LABEL_TO_IRI:
-            category_iri = CATEGORY_LABEL_TO_IRI[record.category]
-            graph.add((resource_iri, OKG.category, category_iri))
-            graph.add((category_iri, RDF.type, OKG.Category))
-            graph.add((category_iri, RDFS.label, Literal(record.category)))
+        if record.category:
+            if category_vocabulary is None or record.category not in category_vocabulary.by_iri:
+                raise ValueError(f"Unknown curated category for {record.item_iri}: {record.category}")
+            category = category_vocabulary.by_iri[record.category]
+            graph.add((resource_iri, OKG.category, category.iri))
+            graph.add((category.iri, RDF.type, OKG.Category))
+            graph.add((category.iri, RDFS.label, Literal(category.label)))
 
         if record.homepages:
             homepage = sorted(record.homepages)[0]
@@ -1242,11 +1268,18 @@ def build_graph(
                         Literal(record.release_date.isoformat(), datatype=XSD.date),
                     )
                 )
-            if record.software_type and record.software_type in SOFTWARE_TYPE_LABEL_TO_IRI:
-                software_type_iri = SOFTWARE_TYPE_LABEL_TO_IRI[record.software_type]
-                graph.add((resource_iri, OKG.softwareType, software_type_iri))
-                graph.add((software_type_iri, RDF.type, OKG.SoftwareType))
-                graph.add((software_type_iri, RDFS.label, Literal(record.software_type)))
+            if record.software_type:
+                if (
+                    software_type_vocabulary is None
+                    or record.software_type not in software_type_vocabulary.by_iri
+                ):
+                    raise ValueError(
+                        f"Unknown curated software type for {record.item_iri}: {record.software_type}"
+                    )
+                software_type = software_type_vocabulary.by_iri[record.software_type]
+                graph.add((resource_iri, OKG.softwareType, software_type.iri))
+                graph.add((software_type.iri, RDF.type, OKG.SoftwareType))
+                graph.add((software_type.iri, RDFS.label, Literal(software_type.label)))
 
             for language_iri in sorted(record.programming_languages):
                 language_label = (programming_language_labels or {}).get(language_iri)
@@ -1371,6 +1404,20 @@ def ensure_non_empty_results(
 def run() -> int:
     configure_logging()
 
+    try:
+        category_vocabulary = load_controlled_vocabulary(CATEGORIES_VOCAB_PATH)
+        software_type_vocabulary = load_controlled_vocabulary(SOFTWARE_TYPES_VOCAB_PATH)
+        source_mappings = load_source_mappings(SOURCES_PATH)
+        curated_assignments = load_curated_assignments(
+            CURATION_PATH,
+            category_vocabulary,
+            software_type_vocabulary,
+        )
+    except (OSError, SemanticConfigError) as exc:
+        logging.warning("Semantic configuration is invalid: %s", exc)
+        logging.warning("No data files were modified.")
+        return 1
+
     session = requests.Session()
     session.headers.update(
         {
@@ -1381,9 +1428,9 @@ def run() -> int:
 
     try:
         ontology_rows: list[dict] = []
-        for type_qid in QID_TO_OSC_CLASS:
+        for type_qid in source_mappings.class_ids_for(ONTOLOGIES_DATASET):
             logging.info("Querying Wikidata for class %s", type_qid)
-            query = TYPE_BASE_QUERY_TEMPLATE.replace("__TYPE_QID__", type_qid)
+            query = build_type_base_query(type_qid, source_mappings)
             typed_rows = run_wdqs_query(session, query, f"class {type_qid} query")
             for row in typed_rows:
                 row["matchedTypeQid"] = {"type": "literal", "value": type_qid}
@@ -1391,11 +1438,19 @@ def run() -> int:
             time.sleep(QUERY_PAUSE_SECONDS)
 
         logging.info("Querying Wikidata for software base fields")
-        software_base_rows = run_wdqs_query(session, SOFTWARE_BASE_QUERY, "software base query")
+        software_base_rows = run_wdqs_query(
+            session,
+            build_software_base_query(source_mappings),
+            "software base query",
+        )
 
         time.sleep(QUERY_PAUSE_SECONDS)
         logging.info("Querying Wikidata for software versions and release dates")
-        software_version_rows = run_wdqs_query(session, SOFTWARE_VERSION_QUERY, "software version query")
+        software_version_rows = run_wdqs_query(
+            session,
+            build_software_version_query(source_mappings),
+            "software version query",
+        )
 
         label_entities = set()
         label_entities.update(collect_entity_iris(ontology_rows, "item"))
@@ -1418,11 +1473,11 @@ def run() -> int:
 
         time.sleep(QUERY_PAUSE_SECONDS)
         logging.info("Checking creator type (Person vs Organization) for %d entities", len(creator_entities))
-        human_creators = fetch_human_creators(session, creator_entities)
+        human_creators = fetch_human_creators(session, creator_entities, source_mappings)
 
         time.sleep(QUERY_PAUSE_SECONDS)
         logging.info("Fetching person identifiers (GitHub, Google Scholar) for %d human creators", len(human_creators))
-        person_identifiers = fetch_person_identifiers(session, human_creators)
+        person_identifiers = fetch_person_identifiers(session, human_creators, source_mappings)
 
     except WDQSError as exc:
         logging.warning("Wikidata fetch failed: %s", exc)
@@ -1430,7 +1485,10 @@ def run() -> int:
         return 1
 
     ontology_records, ontology_license_labels, ontology_creator_labels = parse_ontology_rows(
-        ontology_rows, labels, descriptions
+        ontology_rows,
+        labels,
+        descriptions,
+        source_mappings.class_target_map(ONTOLOGIES_DATASET),
     )
     (
         software_records,
@@ -1458,10 +1516,11 @@ def run() -> int:
         assign_slugs(ontology_records, "resource", uri_registry)
         assign_slugs(software_records, "software", uri_registry)
 
-        category_mapping = load_categories(CATEGORIES_JSON_OUT)
+        category_mapping = curated_assignments.categories
         newly_classified_count, failed_classification_count = classify_missing_ontology_categories(
             ontology_records=ontology_records,
             category_mapping=category_mapping,
+            vocabulary=category_vocabulary,
         )
         if newly_classified_count:
             logging.info(
@@ -1474,10 +1533,11 @@ def run() -> int:
                 failed_classification_count,
             )
 
-        software_type_mapping = load_categories(SOFTWARE_TYPES_JSON_OUT, valid_set=SOFTWARE_TYPE_SET)
+        software_type_mapping = curated_assignments.software_types
         newly_typed_count, failed_typing_count = classify_missing_software_types(
             software_records=software_records,
             software_type_mapping=software_type_mapping,
+            vocabulary=software_type_vocabulary,
         )
         if newly_typed_count:
             logging.info(
@@ -1499,6 +1559,7 @@ def run() -> int:
             include_software_fields=False,
             dataset_path="resource",
             slug_registry=uri_registry["resource"],
+            category_vocabulary=category_vocabulary,
         )
         software_graph = build_graph(
             records=software_records,
@@ -1510,6 +1571,7 @@ def run() -> int:
             dataset_path="software",
             slug_registry=uri_registry["software"],
             programming_language_labels=software_programming_language_labels,
+            software_type_vocabulary=software_type_vocabulary,
         )
         add_related_tools(
             software_graph,
@@ -1523,17 +1585,20 @@ def run() -> int:
         )
 
         generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+        resource_type_labels = source_mappings.projection_type_labels
         ontologies_json = build_json_payload(
             graph=ontology_graph,
             allowed_types={OKG.Ontology, OKG.ControlledVocabulary, OKG.Taxonomy, OKG.KnowledgeGraph, OKG.OntologyLanguage},
             include_software_fields=False,
             generated_at=generated_at,
+            resource_type_labels=resource_type_labels,
         )
         software_json = build_json_payload(
             graph=software_graph,
             allowed_types={OKG.Software},
             include_software_fields=True,
             generated_at=generated_at,
+            resource_type_labels=resource_type_labels,
         )
 
         previous_ontologies_json = load_existing_payload(ONTOLOGIES_JSON_OUT)
@@ -1553,6 +1618,25 @@ def run() -> int:
         write_graph_atomic(software_graph, SOFTWARE_OUT)
         write_json_atomic(ontologies_json, ONTOLOGIES_JSON_OUT)
         write_json_atomic(software_json, SOFTWARE_JSON_OUT)
+        write_curated_assignments_atomic(
+            CURATION_PATH,
+            curated_assignments,
+            uri_registry,
+            category_vocabulary,
+            software_type_vocabulary,
+        )
+        write_projection_json_atomic(
+            classification_label_projection(category_mapping, category_vocabulary),
+            CATEGORIES_JSON_OUT,
+        )
+        write_projection_json_atomic(
+            classification_label_projection(software_type_mapping, software_type_vocabulary),
+            SOFTWARE_TYPES_JSON_OUT,
+        )
+        write_projection_json_atomic(
+            controlled_vocabulary_projection(category_vocabulary, software_type_vocabulary),
+            CONTROLLED_VOCABULARIES_JSON_OUT,
+        )
         save_uri_registry(uri_registry)
 
         logging.info("Wrote %s (%d triples)", ONTOLOGIES_OUT, len(ontology_graph))
@@ -1560,7 +1644,7 @@ def run() -> int:
         logging.info("Wrote %s (%d items)", ONTOLOGIES_JSON_OUT, len(ontologies_json["items"]))
         logging.info("Wrote %s (%d items)", SOFTWARE_JSON_OUT, len(software_json["items"]))
         return 0
-    except WDQSError as exc:
+    except (WDQSError, SemanticConfigError, OSError, ValueError) as exc:
         logging.warning("Data integrity guard triggered: %s", exc)
         logging.warning("No data files were modified.")
         return 1

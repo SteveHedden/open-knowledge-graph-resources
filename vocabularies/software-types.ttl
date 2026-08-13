@@ -1,0 +1,130 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix okg:     <https://openknowledgegraphs.com/ontology#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openknowledgegraphs.com/vocabularies/software-types>
+    a skos:ConceptScheme ;
+    dcterms:title "OKG Software Types"@en ;
+    dcterms:description "Functional categories used to classify semantic-web and knowledge-graph software in Open Knowledge Graphs."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    dcterms:modified "2026-08-13"^^xsd:date ;
+    owl:versionInfo "0.1.0" ;
+    vann:preferredNamespacePrefix "okg" ;
+    vann:preferredNamespaceUri "https://openknowledgegraphs.com/ontology#" ;
+    okg:conceptClass okg:SoftwareType ;
+    okg:classificationPredicate okg:softwareType ;
+    skos:hasTopConcept
+        okg:GraphDatabase,
+        okg:SparqlTooling,
+        okg:OntologyEngineering,
+        okg:ReasoningInference,
+        okg:DataMappingETL,
+        okg:DeveloperLibrary,
+        okg:KnowledgeGraphConstruction,
+        okg:AIAgentTooling,
+        okg:Visualization,
+        okg:StreamProcessing .
+
+okg:GraphDatabase
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Graph Database" ;
+    skos:prefLabel "Graph Database"@en ;
+    skos:definition "A storage engine for persisting and querying graph-structured data, including RDF triplestores, quadstores, and property-graph databases."@en ;
+    skos:scopeNote "Use when durable graph storage and query are primary. Exclude clients, visualization tools, mapping systems, and general libraries that merely connect to a graph database."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "graph-database" ;
+    okg:sortOrder 1 .
+
+okg:SparqlTooling
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "SPARQL Tooling" ;
+    skos:prefLabel "SPARQL Tooling"@en ;
+    skos:definition "Software whose primary purpose is running, constructing, managing, federating, or optimizing SPARQL queries."@en ;
+    skos:scopeNote "Use for SPARQL clients, GUIs, query builders, and federation or optimization engines. Exclude the data store itself."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "sparql-tooling" ;
+    okg:sortOrder 2 .
+
+okg:OntologyEngineering
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Ontology Engineering" ;
+    skos:prefLabel "Ontology Engineering"@en ;
+    skos:definition "Software for authoring, editing, validating, documenting, publishing, or aligning ontologies and controlled vocabularies."@en ;
+    skos:scopeNote "Use for editors, modeling environments, pitfall scanners, documentation generators, and alignment tools. Exclude standalone reasoning engines."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "ontology-engineering" ;
+    okg:sortOrder 3 .
+
+okg:ReasoningInference
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Reasoning & Inference" ;
+    skos:prefLabel "Reasoning & Inference"@en ;
+    skos:definition "Software that performs logical inference, entailment, consistency checking, or classification over RDF, RDFS, or OWL knowledge."@en ;
+    skos:scopeNote "Use when reasoning is the primary function. Exclude editors and general libraries that only invoke a separate reasoner."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "reasoning-inference" ;
+    okg:sortOrder 4 .
+
+okg:DataMappingETL
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "RDF Data Mapping / ETL" ;
+    skos:prefLabel "RDF Data Mapping / ETL"@en ;
+    skos:definition "Software that converts non-RDF data into RDF or virtualizes non-RDF sources as RDF."@en ;
+    skos:scopeNote "Use for relational, spreadsheet, CSV, XML, or other source-to-RDF conversion, including R2RML and ontology-based data access systems."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "data-mapping-etl" ;
+    okg:sortOrder 5 .
+
+okg:DeveloperLibrary
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Developer Library" ;
+    skos:prefLabel "Developer Library"@en ;
+    skos:definition "A programming-language library or SDK for developers building software that works with RDF, OWL, or graph data-model constructs."@en ;
+    skos:scopeNote "Use for reusable code libraries rather than end-user applications. Prefer a more specific type when storage, reasoning, mapping, or another function is the product's primary purpose."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "developer-library" ;
+    okg:sortOrder 6 .
+
+okg:KnowledgeGraphConstruction
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Knowledge Graph Construction" ;
+    skos:prefLabel "Knowledge Graph Construction"@en ;
+    skos:definition "Software that constructs a knowledge graph as a deliverable dataset from schemas, structured sources, or unstructured content."@en ;
+    skos:scopeNote "Use when producing an exportable or independently consumable graph is the point, including systems that use AI internally. Exclude graphs used only as an agent's runtime memory."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "knowledge-graph-construction" ;
+    okg:sortOrder 7 .
+
+okg:AIAgentTooling
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "AI Agent Tooling" ;
+    skos:prefLabel "AI Agent Tooling"@en ;
+    skos:definition "Software in which graph structures primarily support an AI agent's runtime memory, grounding, context, or execution interface."@en ;
+    skos:scopeNote "Use when the graph serves the agent's operation. Prefer Knowledge Graph Construction when the primary output is a standalone graph dataset."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "ai-agent-tooling" ;
+    okg:sortOrder 8 .
+
+okg:Visualization
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Visualization" ;
+    skos:prefLabel "Visualization"@en ;
+    skos:definition "Software for visually rendering or interactively exploring ontologies, graphs, or semantic query results."@en ;
+    skos:scopeNote "Use when visual presentation and exploration are primary, rather than incidental displays within an editor, database, or query client."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "visualization" ;
+    okg:sortOrder 9 .
+
+okg:StreamProcessing
+    a skos:Concept, okg:SoftwareType ;
+    rdfs:label "Stream Processing" ;
+    skos:prefLabel "Stream Processing"@en ;
+    skos:definition "Software for processing RDF or graph data as continuous streams rather than as static or batch datasets."@en ;
+    skos:scopeNote "Use for RDF stream processing and continuous semantic queries. Exclude conventional databases that support only stored-data queries."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/software-types> ;
+    okg:urlSlug "stream-processing" ;
+    okg:sortOrder 10 .

@@ -41,7 +41,7 @@ jobs:
       - name: Detect data changes
         id: changes
         run: |
-          git add data/ontologies.ttl data/software.ttl data/ontologies.json data/software.json data/categories.json data/software_types.json data/page_qids.json data/uri_registry.json site/resource site/software site/sitemap.xml
+          git add data/ontologies.ttl data/software.ttl data/ontologies.json data/software.json data/categories.json data/software_types.json data/controlled_vocabularies.json data/page_qids.json data/uri_registry.json curation/classifications.ttl site/resource site/software site/sitemap.xml
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
