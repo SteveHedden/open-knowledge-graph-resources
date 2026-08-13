@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T07:40:48Z",
+  "generatedAt": "2026-08-13T04:25:20Z",
   "items": [
     {
       "title": "4store",
@@ -449,8 +449,8 @@
       "licenses": [
         "Business Source License 1.1"
       ],
-      "latestVersion": "3.12.10",
-      "releaseDate": "2026-08-01",
+      "latestVersion": "3.12.10.1",
+      "releaseDate": "2026-08-12",
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "C++"
@@ -1393,16 +1393,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
         {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
           "title": "SHACL Playground",
           "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/"
         },
         {
           "title": "LinkML",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
-        },
-        {
-          "title": "FOOPS!",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
         }
       ]
     },
@@ -1803,6 +1803,10 @@
       ],
       "relatedTools": [
         {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
           "title": "NEOntometrics",
           "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/"
         },
@@ -1817,10 +1821,6 @@
         {
           "title": "O’FAIRE",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
-        },
-        {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         }
       ]
     },
@@ -3614,6 +3614,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
         {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
           "title": "F-UJI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         },
@@ -3624,10 +3628,6 @@
         {
           "title": "Open Knowledge Graphs",
           "canonicalUrl": "https://openknowledgegraphs.com/software/open-knowledge-graphs/"
-        },
-        {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         }
       ]
     },
@@ -4416,12 +4416,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
         },
         {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         },
         {
-          "title": "FOOPS!",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
+          "title": "DBPedia Archivo",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         }
       ]
     },
@@ -4599,12 +4599,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         },
         {
-          "title": "Pubby",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         }
       ]
     },
@@ -4825,6 +4825,23 @@
       ]
     },
     {
+      "title": "Ontology Development Suite",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141031253",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-suite/",
+      "description": "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks",
+      "sourceRepo": "https://github.com/pwin/consolidated-ontology-quality-suite-webapp",
+      "licenses": [
+        "MIT License"
+      ],
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "TypeScript"
+      ]
+    },
+    {
       "title": "OntOlogy Pitfall Scanner!",
       "wikidataId": "https://www.wikidata.org/wiki/Q124758427",
       "types": [
@@ -4869,6 +4886,47 @@
       ]
     },
     {
+      "title": "ontology-quality-suite",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141031254",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/",
+      "description": "Python package for assessing OWL2 ontology and RDF graph quality, including version-consistency and rename detection",
+      "homepage": "https://pypi.org/project/ontology-quality-suite/",
+      "sourceRepo": "https://github.com/pwin/consolidated-ontology-quality-suite-python",
+      "licenses": [
+        "Apache Software License 2.0",
+        "MIT License"
+      ],
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
+          "title": "OnToology",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
+        },
+        {
+          "title": "LinkML",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
+        },
+        {
+          "title": "FOOPS!",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/foops/"
+        },
+        {
+          "title": "NEOntometrics",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/"
+        }
+      ]
+    },
+    {
       "title": "Ontology2Graph",
       "wikidataId": "https://www.wikidata.org/wiki/Q138778759",
       "types": [
@@ -4906,6 +4964,10 @@
       ],
       "relatedTools": [
         {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
           "title": "LinkML",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         },
@@ -4920,10 +4982,6 @@
         {
           "title": "Open Knowledge Graphs",
           "canonicalUrl": "https://openknowledgegraphs.com/software/open-knowledge-graphs/"
-        },
-        {
-          "title": "DBPedia Archivo",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/"
         }
       ]
     },
@@ -5079,8 +5137,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/"
         },
         {
-          "title": "SHACL Playground",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/"
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         }
       ]
     },
@@ -5205,16 +5263,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/"
         },
         {
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
+        },
+        {
           "title": "RDFUnit",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdfunit/"
         },
         {
           "title": "Widoco",
           "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/"
-        },
-        {
-          "title": "LinkML",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         }
       ]
     },
@@ -5573,8 +5631,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontospy/"
         },
         {
-          "title": "Protégé",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/protege/"
+          "title": "ontology-quality-suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/"
         }
       ]
     },
@@ -6344,6 +6402,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         },
         {
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
+        },
+        {
           "title": "WebVOWL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
         },
@@ -6354,10 +6416,6 @@
         {
           "title": "Holonet Galactic Encyclopedia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
-        },
-        {
-          "title": "Pubby",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
         }
       ]
     },
@@ -6701,6 +6759,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
+        },
+        {
           "title": "Holonet Galactic Encyclopedia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         },
@@ -6715,10 +6777,6 @@
         {
           "title": "rdf-sketch",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
-        },
-        {
-          "title": "Sampo-UI",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         }
       ]
     },
@@ -7067,12 +7125,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         },
         {
-          "title": "Pubby",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         }
       ]
     },
@@ -7265,8 +7323,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "0.6.0",
-      "releaseDate": "2026-07-21",
+      "latestVersion": "0.6.5",
+      "releaseDate": "2026-08-11",
       "softwareType": "Knowledge Graph Construction",
       "relatedTools": [
         {
@@ -9119,6 +9177,46 @@
       ]
     },
     {
+      "title": "Turtle Editor Viewer",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141031252",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/",
+      "description": "browser-based editor and graph visualizer for RDF/Turtle data with SPARQL query support",
+      "homepage": "https://semantechs.co.uk/turtle-editor-viewer-new/",
+      "sourceRepo": "https://github.com/pwin/turtle-editor-viewer",
+      "licenses": [
+        "MIT License"
+      ],
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "TypeScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "rdf-sketch",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
+        },
+        {
+          "title": "Reactodia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
+        },
+        {
+          "title": "Sampo-UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
+        },
+        {
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
+        },
+        {
+          "title": "Nodica",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/"
+        }
+      ]
+    },
+    {
       "title": "UniProt",
       "wikidataId": "https://www.wikidata.org/wiki/Q905695",
       "types": [
@@ -9462,12 +9560,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/"
         },
         {
-          "title": "Holonet Galactic Encyclopedia",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
+          "title": "Turtle Editor Viewer",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/"
         },
         {
-          "title": "Pubby",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/"
+          "title": "Holonet Galactic Encyclopedia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/"
         }
       ]
     },

@@ -684,6 +684,16 @@
     okg:title "onto-tool" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653422> .
 
+<https://openknowledgegraphs.com/software/ontology-development-suite/> a okg:Software ;
+    rdfs:label "Ontology Development Suite" ;
+    okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:programmingLanguage "TypeScript" ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
+    okg:title "Ontology Development Suite" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141031253> .
+
 <https://openknowledgegraphs.com/software/ontology2graph/> a okg:Software ;
     rdfs:label "Ontology2Graph" ;
     okg:description "A tool/approach for generating synthetic knowledge graphs using generative AI and graph fusion, taking an RDFS/OWL ontology as input." ;
@@ -2091,18 +2101,37 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:title "OntoGPT" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q125352352> .
 
+<https://openknowledgegraphs.com/software/protege/> a okg:Software ;
+    rdfs:label "Protégé" ;
+    okg:creator okg:Creator_Stanford_University_School_of_Medicine_Q4115969 ;
+    okg:description "Ontology editor" ;
+    okg:hasLicense okg:License_Resource_2_clause_BSD_License_Q18517294 ;
+    okg:homepage <https://protege.stanford.edu> ;
+    okg:latestVersion "5.6.9" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/foops/>,
+        <https://openknowledgegraphs.com/software/ofaire/>,
+        <https://openknowledgegraphs.com/software/rdfunit/>,
+        <https://openknowledgegraphs.com/software/shacl-play/>,
+        <https://openknowledgegraphs.com/software/shactor/> ;
+    okg:releaseDate "2026-03-07"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/protegeproject/protege-distribution> ;
+    okg:title "Protégé" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q2066865> .
+
 <https://openknowledgegraphs.com/software/semantica/> a okg:Software ;
     rdfs:label "Semantica" ;
     okg:description "Open-source framework for building knowledge graphs from unstructured data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://hawksight-ai.github.io/semantica/> ;
-    okg:latestVersion "0.6.0" ;
+    okg:latestVersion "0.6.5" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/bnf-authorities/>,
         <https://openknowledgegraphs.com/software/framework/>,
         <https://openknowledgegraphs.com/software/helio-ecosystem/>,
         <https://openknowledgegraphs.com/software/knwler/>,
         <https://openknowledgegraphs.com/software/linkeddatahub/> ;
-    okg:releaseDate "2026-07-21"^^xsd:date ;
+    okg:releaseDate "2026-08-11"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/semantica-agi/semantica> ;
     okg:title "Semantica" ;
@@ -2309,25 +2338,6 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
     okg:title "Ontotext GraphDB" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q58425577> .
 
-<https://openknowledgegraphs.com/software/protege/> a okg:Software ;
-    rdfs:label "Protégé" ;
-    okg:creator okg:Creator_Stanford_University_School_of_Medicine_Q4115969 ;
-    okg:description "Ontology editor" ;
-    okg:hasLicense okg:License_Resource_2_clause_BSD_License_Q18517294 ;
-    okg:homepage <https://protege.stanford.edu> ;
-    okg:latestVersion "5.6.9" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/foops/>,
-        <https://openknowledgegraphs.com/software/ofaire/>,
-        <https://openknowledgegraphs.com/software/rdfunit/>,
-        <https://openknowledgegraphs.com/software/shacl-play/>,
-        <https://openknowledgegraphs.com/software/shactor/> ;
-    okg:releaseDate "2026-03-07"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/protegeproject/protege-distribution> ;
-    okg:title "Protégé" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q2066865> .
-
 <https://openknowledgegraphs.com/software/pyshacl/> a okg:Software ;
     rdfs:label "pySHACL" ;
     okg:creator okg:Creator_Ashley_Sommer_Q135051208,
@@ -2400,6 +2410,25 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
     okg:sourceRepo <https://github.com/ontodev/robot> ;
     okg:title "ROBOT is an OBO Tool" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q116908518> .
+
+<https://openknowledgegraphs.com/software/shacl-playground/> a okg:Software ;
+    rdfs:label "SHACL Playground" ;
+    okg:creator okg:Creator_Zazuko_Q93230157 ;
+    okg:description "client-side web application for validating RDF data with SHACL" ;
+    okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 ;
+    okg:homepage <https://shacl-playground.zazuko.com/> ;
+    okg:latestVersion "1.3.11" ;
+    okg:programmingLanguage "JavaScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
+        <https://openknowledgegraphs.com/software/f-uji/>,
+        <https://openknowledgegraphs.com/software/linked-open-vocabularies/>,
+        <https://openknowledgegraphs.com/software/ontospy/>,
+        <https://openknowledgegraphs.com/software/widoco/> ;
+    okg:releaseDate "2026-06-26"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/zazuko/shacl-playground> ;
+    okg:title "SHACL Playground" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140676266> .
 
 <https://openknowledgegraphs.com/software/sparql2git/> a okg:Software ;
     rdfs:label "SPARQL2Git" ;
@@ -2569,24 +2598,6 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:title "MarkLogic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29364583> .
 
-<https://openknowledgegraphs.com/software/neontometrics/> a okg:Software ;
-    rdfs:label "NEOntometrics" ;
-    okg:description "Calculate (evolutional) ontology metrics using a GUI or API" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <http://neontometrics.informatik.uni-rostock.de> ;
-    okg:latestVersion "1.0.0" ;
-    okg:programmingLanguage "Dart" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
-        <https://openknowledgegraphs.com/software/f-uji/>,
-        <https://openknowledgegraphs.com/software/foops/>,
-        <https://openknowledgegraphs.com/software/ofaire/>,
-        <https://openknowledgegraphs.com/software/ontospy/> ;
-    okg:releaseDate "2022-08-12"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/achiminator/NEOntometrics> ;
-    okg:title "NEOntometrics" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q124653457> .
-
 <https://openknowledgegraphs.com/software/ontofox/> a okg:Software ;
     rdfs:label "Ontofox" ;
     okg:description "Extract ontology terms and axioms: http://ontofox.hegroup.org" ;
@@ -2733,25 +2744,6 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:title "SANSA" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59422377> .
 
-<https://openknowledgegraphs.com/software/shacl-playground/> a okg:Software ;
-    rdfs:label "SHACL Playground" ;
-    okg:creator okg:Creator_Zazuko_Q93230157 ;
-    okg:description "client-side web application for validating RDF data with SHACL" ;
-    okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 ;
-    okg:homepage <https://shacl-playground.zazuko.com/> ;
-    okg:latestVersion "1.3.11" ;
-    okg:programmingLanguage "JavaScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
-        <https://openknowledgegraphs.com/software/f-uji/>,
-        <https://openknowledgegraphs.com/software/linked-open-vocabularies/>,
-        <https://openknowledgegraphs.com/software/ontospy/>,
-        <https://openknowledgegraphs.com/software/widoco/> ;
-    okg:releaseDate "2026-06-26"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/zazuko/shacl-playground> ;
-    okg:title "SHACL Playground" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140676266> .
-
 <https://openknowledgegraphs.com/software/sparql-transformer/> a okg:Software ;
     rdfs:label "Sparql Transformer" ;
     okg:description "more handy way to use SPARQL data in your web app" ;
@@ -2821,24 +2813,6 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:sourceRepo <https://github.com/AtomGraph/Web-Algebra> ;
     okg:title "Web-Algebra" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140422054> .
-
-<https://openknowledgegraphs.com/software/webvowl/> a okg:Software ;
-    rdfs:label "WebVOWL" ;
-    okg:description "web tool for visualizing ontologies" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://service.tib.eu/webvowl/> ;
-    okg:latestVersion "1.1.7" ;
-    okg:programmingLanguage "JavaScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/nodica/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/> ;
-    okg:releaseDate "2026-06-04"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/VisualDataWeb/WebVOWL> ;
-    okg:title "WebVOWL" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q56569953> .
 
 okg:Creator_Sparna_Q117319690 a okg:Organization ;
     rdfs:label "Sparna" ;
@@ -3011,6 +2985,24 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Neo4j" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1628290> .
 
+<https://openknowledgegraphs.com/software/neontometrics/> a okg:Software ;
+    rdfs:label "NEOntometrics" ;
+    okg:description "Calculate (evolutional) ontology metrics using a GUI or API" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <http://neontometrics.informatik.uni-rostock.de> ;
+    okg:latestVersion "1.0.0" ;
+    okg:programmingLanguage "Dart" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
+        <https://openknowledgegraphs.com/software/f-uji/>,
+        <https://openknowledgegraphs.com/software/ofaire/>,
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
+        <https://openknowledgegraphs.com/software/ontospy/> ;
+    okg:releaseDate "2022-08-12"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/achiminator/NEOntometrics> ;
+    okg:title "NEOntometrics" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q124653457> .
+
 <https://openknowledgegraphs.com/software/node-quadstore/> a okg:Software ;
     rdfs:label "Node Quadstore" ;
     okg:description "LevelDB-backed graph database engine for Node.js and the browser supporting SPARQL queries and the RDF/JS interface" ;
@@ -3054,7 +3046,7 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:homepage <https://openknowledgegraphs.com/> ;
     okg:latestVersion "0.1.0" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/foops/>,
-        <https://openknowledgegraphs.com/software/linkml/>,
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
         <https://openknowledgegraphs.com/software/ontoology/>,
         <https://openknowledgegraphs.com/software/rdfunit/>,
         <https://openknowledgegraphs.com/software/widoco/> ;
@@ -3063,6 +3055,24 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:sourceRepo <https://github.com/SteveHedden/open-knowledge-graphs> ;
     okg:title "Open Knowledge Graphs" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138639042> .
+
+<https://openknowledgegraphs.com/software/pubby/> a okg:Software ;
+    rdfs:label "Pubby" ;
+    okg:description "Linked Data frontend for SPARQL endpoints" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <http://www4.wiwiss.fu-berlin.de/pubby/> ;
+    okg:latestVersion "0.3.3" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/reactodia/>,
+        <https://openknowledgegraphs.com/software/skos-play/> ;
+    okg:releaseDate "2011-01-26"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/cygri/pubby> ;
+    okg:title "Pubby" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q124653441> .
 
 <https://openknowledgegraphs.com/software/qendpoint/> a okg:Software ;
     rdfs:label "qEndpoint" ;
@@ -3101,24 +3111,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:sourceRepo <https://github.com/eclipse-rdf4j/rdf4j> ;
     okg:title "RDF4J" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7455975> .
-
-<https://openknowledgegraphs.com/software/reactodia/> a okg:Software ;
-    rdfs:label "Reactodia" ;
-    okg:description "JavaScript library for visual interaction with graph data in a form of a diagram" ;
-    okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 ;
-    okg:homepage <https://reactodia.github.io> ;
-    okg:latestVersion "0.35.2" ;
-    okg:programmingLanguage "TypeScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/nodica/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/> ;
-    okg:releaseDate "2026-08-08"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/reactodia/reactodia-workspace> ;
-    okg:title "Reactodia" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q131278990> .
 
 <https://openknowledgegraphs.com/software/rmlstreamer/> a okg:Software ;
     rdfs:label "RMLStreamer" ;
@@ -3190,6 +3182,24 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:sourceRepo <https://github.com/comunica/traqula> ;
     okg:title "Traqula" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140764069> .
+
+<https://openknowledgegraphs.com/software/webvowl/> a okg:Software ;
+    rdfs:label "WebVOWL" ;
+    okg:description "web tool for visualizing ontologies" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://service.tib.eu/webvowl/> ;
+    okg:latestVersion "1.1.7" ;
+    okg:programmingLanguage "JavaScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/>,
+        <https://openknowledgegraphs.com/software/turtle-editor-viewer/> ;
+    okg:releaseDate "2026-06-04"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/VisualDataWeb/WebVOWL> ;
+    okg:title "WebVOWL" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q56569953> .
 
 <https://openknowledgegraphs.com/software/widoco/> a okg:Software ;
     rdfs:label "Widoco" ;
@@ -3326,9 +3336,9 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:homepage <https://linkml.io/> ;
     okg:latestVersion "1.11.1" ;
     okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
-        <https://openknowledgegraphs.com/software/f-uji/>,
+    okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
         <https://openknowledgegraphs.com/software/foops/>,
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
         <https://openknowledgegraphs.com/software/ontoology/>,
         <https://openknowledgegraphs.com/software/open-knowledge-graphs/> ;
     okg:releaseDate "2026-05-20"^^xsd:date ;
@@ -3425,6 +3435,24 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:title "RDFUnit" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140676265> .
 
+<https://openknowledgegraphs.com/software/reactodia/> a okg:Software ;
+    rdfs:label "Reactodia" ;
+    okg:description "JavaScript library for visual interaction with graph data in a form of a diagram" ;
+    okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 ;
+    okg:homepage <https://reactodia.github.io> ;
+    okg:latestVersion "0.35.2" ;
+    okg:programmingLanguage "TypeScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/pubby/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/turtle-editor-viewer/> ;
+    okg:releaseDate "2026-08-08"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/reactodia/reactodia-workspace> ;
+    okg:title "Reactodia" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q131278990> .
+
 <https://openknowledgegraphs.com/software/sage-sparql-query-engine/> a okg:Software ;
     rdfs:label "SaGe SPARQL query engine" ;
     okg:description "preemptive SPARQL query engine for Web-scale RDF datasets" ;
@@ -3450,8 +3478,8 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:programmingLanguage "JavaScript" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
         <https://openknowledgegraphs.com/software/nodica/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
         <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/turtle-editor-viewer/>,
         <https://openknowledgegraphs.com/software/webvowl/> ;
     okg:softwareType okg:Visualization ;
     okg:sourceRepo <https://github.com/SemanticComputing/dbpedia-sampo-ui-demo> ;
@@ -3566,6 +3594,22 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:title "TrustGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140432086> .
 
+<https://openknowledgegraphs.com/software/turtle-editor-viewer/> a okg:Software ;
+    rdfs:label "Turtle Editor Viewer" ;
+    okg:description "browser-based editor and graph visualizer for RDF/Turtle data with SPARQL query support" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://semantechs.co.uk/turtle-editor-viewer-new/> ;
+    okg:programmingLanguage "TypeScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/reactodia/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/>,
+        <https://openknowledgegraphs.com/software/webvowl/> ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/pwin/turtle-editor-viewer> ;
+    okg:title "Turtle Editor Viewer" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141031252> .
+
 <https://openknowledgegraphs.com/software/yasgui-matdata/> a okg:Software ;
     rdfs:label "Yasgui (Matdata)" ;
     okg:description "SPARQL query interface maintained by Matdata; fork of Triply's Yasgui" ;
@@ -3616,14 +3660,14 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:description "open-source multi-model database system" ;
     okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://www.arangodb.com> ;
-    okg:latestVersion "3.12.10" ;
+    okg:latestVersion "3.12.10.1" ;
     okg:programmingLanguage "C++" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/fluree/>,
         <https://openknowledgegraphs.com/software/gstore/>,
         <https://openknowledgegraphs.com/software/kuzudb/>,
         <https://openknowledgegraphs.com/software/memgraph/>,
         <https://openknowledgegraphs.com/software/turingdb/> ;
-    okg:releaseDate "2026-08-01"^^xsd:date ;
+    okg:releaseDate "2026-08-12"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/arangodb/arangodb> ;
     okg:title "ArangoDB" ;
@@ -3713,7 +3757,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
         <https://openknowledgegraphs.com/software/linked-open-vocabularies/>,
         <https://openknowledgegraphs.com/software/neontometrics/>,
         <https://openknowledgegraphs.com/software/ofaire/>,
-        <https://openknowledgegraphs.com/software/shacl-playground/> ;
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/> ;
     okg:releaseDate "2022-11-16"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/lambdamusic/Ontospy> ;
@@ -3959,24 +4003,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "NitrosBase" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56296429> .
 
-<https://openknowledgegraphs.com/software/ontoology/> a okg:Software ;
-    rdfs:label "OnToology" ;
-    okg:description "Online tool to automatically generate documentation and evaluation for Ontologies hosted on GitHub" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://ontoology.linkeddata.es/> ;
-    okg:latestVersion "1.7.0" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
-        <https://openknowledgegraphs.com/software/f-uji/>,
-        <https://openknowledgegraphs.com/software/foops/>,
-        <https://openknowledgegraphs.com/software/linkml/>,
-        <https://openknowledgegraphs.com/software/open-knowledge-graphs/> ;
-    okg:releaseDate "2021-06-21"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/OnToology/OnToology> ;
-    okg:title "OnToology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q124653423> .
-
 <https://openknowledgegraphs.com/software/ontopspark/> a okg:Software ;
     rdfs:label "OntopSpark" ;
     okg:description "OntopSpark is an Ontop's extension which supports Apache Spark as query processing engine. The Ontop platform allows to query relational databases as Virtual RDF Knowledge Graphs using SPARQL." ;
@@ -4098,6 +4124,23 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "Cognee" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639987> .
 
+<https://openknowledgegraphs.com/software/dbpedia-archivo/> a okg:Software ;
+    rdfs:label "DBPedia Archivo" ;
+    okg:description "DBpedia Archivo - Augmented Ontology Archive powered by Databus" ;
+    okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232,
+        okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 ;
+    okg:homepage <https://archivo.dbpedia.org/list> ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
+        <https://openknowledgegraphs.com/software/linkml/>,
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
+        <https://openknowledgegraphs.com/software/ontoology/>,
+        <https://openknowledgegraphs.com/software/shacl-playground/> ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/dbpedia/archivo> ;
+    okg:title "DBPedia Archivo" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q124653414> .
+
 <https://openknowledgegraphs.com/software/emmontopy/> a okg:Software ;
     rdfs:label "EMMOntoPy" ;
     okg:description "Library for representing and working with ontologies in Python" ;
@@ -4201,25 +4244,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:title "KuzuDB" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140900293> .
 
-<https://openknowledgegraphs.com/software/nodica/> a okg:Software ;
-    rdfs:label "Nodica" ;
-    okg:creator okg:Creator_Ivo_Velitchkov_Q110818830 ;
-    okg:description "Web-based tool for visualizing graphs with image-filled nodes, taken from SPARQL CONSTRUCT/DESCRIBE results or from a file." ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://kvistgaard.github.io/nodica/index.html> ;
-    okg:latestVersion "0.4.0" ;
-    okg:programmingLanguage "JavaScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/>,
-        <https://openknowledgegraphs.com/software/webvowl/> ;
-    okg:releaseDate "2026-08-08"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/kvistgaard/nodica> ;
-    okg:title "Nodica" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140937850> .
-
 <https://openknowledgegraphs.com/software/ofaire/> a okg:Software ;
     rdfs:label "O’FAIRE" ;
     okg:description "This project is a FAIRness assessment tool for ontologies, vocabularies and semantic resources." ;
@@ -4230,49 +4254,48 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
         <https://openknowledgegraphs.com/software/foops/>,
         <https://openknowledgegraphs.com/software/neontometrics/>,
-        <https://openknowledgegraphs.com/software/ontospy/>,
-        <https://openknowledgegraphs.com/software/protege/> ;
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
+        <https://openknowledgegraphs.com/software/ontospy/> ;
     okg:releaseDate "2024-06-02"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/agroportal/fairness> ;
     okg:title "O’FAIRE" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653420> .
 
-<https://openknowledgegraphs.com/software/pubby/> a okg:Software ;
-    rdfs:label "Pubby" ;
-    okg:description "Linked Data frontend for SPARQL endpoints" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://www4.wiwiss.fu-berlin.de/pubby/> ;
-    okg:latestVersion "0.3.3" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/nodica/>,
-        <https://openknowledgegraphs.com/software/rdf-sketch/>,
-        <https://openknowledgegraphs.com/software/reactodia/>,
-        <https://openknowledgegraphs.com/software/skos-play/> ;
-    okg:releaseDate "2011-01-26"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/cygri/pubby> ;
-    okg:title "Pubby" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q124653441> .
+<https://openknowledgegraphs.com/software/ontology-quality-suite/> a okg:Software ;
+    rdfs:label "ontology-quality-suite" ;
+    okg:description "Python package for assessing OWL2 ontology and RDF graph quality, including version-consistency and rename detection" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
+        okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
+        <https://openknowledgegraphs.com/software/foops/>,
+        <https://openknowledgegraphs.com/software/linkml/>,
+        <https://openknowledgegraphs.com/software/neontometrics/>,
+        <https://openknowledgegraphs.com/software/ontoology/> ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
+    okg:title "ontology-quality-suite" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141031254> .
 
-<https://openknowledgegraphs.com/software/rdf-sketch/> a okg:Software ;
-    rdfs:label "rdf-sketch" ;
-    okg:description "Sketch RDF in the web browser with immediate visualization" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://sketch.zazuko.com/> ;
-    okg:latestVersion "1.0.4" ;
-    okg:programmingLanguage "Vue.js" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
-        <https://openknowledgegraphs.com/software/nodica/>,
-        <https://openknowledgegraphs.com/software/pubby/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/>,
-        <https://openknowledgegraphs.com/software/webvowl/> ;
-    okg:releaseDate "2025-01-29"^^xsd:date ;
-    okg:softwareType okg:Visualization ;
-    okg:sourceRepo <https://github.com/zazuko/rdf-sketch> ;
-    okg:title "rdf-sketch" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q125506320> .
+<https://openknowledgegraphs.com/software/ontoology/> a okg:Software ;
+    rdfs:label "OnToology" ;
+    okg:description "Online tool to automatically generate documentation and evaluation for Ontologies hosted on GitHub" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <http://ontoology.linkeddata.es/> ;
+    okg:latestVersion "1.7.0" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
+        <https://openknowledgegraphs.com/software/foops/>,
+        <https://openknowledgegraphs.com/software/linkml/>,
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
+        <https://openknowledgegraphs.com/software/open-knowledge-graphs/> ;
+    okg:releaseDate "2021-06-21"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/OnToology/OnToology> ;
+    okg:title "OnToology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q124653423> .
 
 <https://openknowledgegraphs.com/software/sepa/> a okg:Software ;
     rdfs:label "SEPA" ;
@@ -4364,6 +4387,43 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:softwareType okg:GraphDatabase ;
     okg:title "InfiniteGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6029732> .
+
+<https://openknowledgegraphs.com/software/nodica/> a okg:Software ;
+    rdfs:label "Nodica" ;
+    okg:creator okg:Creator_Ivo_Velitchkov_Q110818830 ;
+    okg:description "Web-based tool for visualizing graphs with image-filled nodes, taken from SPARQL CONSTRUCT/DESCRIBE results or from a file." ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://kvistgaard.github.io/nodica/index.html> ;
+    okg:latestVersion "0.4.0" ;
+    okg:programmingLanguage "JavaScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/rdf-sketch/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/>,
+        <https://openknowledgegraphs.com/software/turtle-editor-viewer/>,
+        <https://openknowledgegraphs.com/software/webvowl/> ;
+    okg:releaseDate "2026-08-08"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/kvistgaard/nodica> ;
+    okg:title "Nodica" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140937850> .
+
+<https://openknowledgegraphs.com/software/rdf-sketch/> a okg:Software ;
+    rdfs:label "rdf-sketch" ;
+    okg:description "Sketch RDF in the web browser with immediate visualization" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://sketch.zazuko.com/> ;
+    okg:latestVersion "1.0.4" ;
+    okg:programmingLanguage "Vue.js" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/>,
+        <https://openknowledgegraphs.com/software/nodica/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/>,
+        <https://openknowledgegraphs.com/software/turtle-editor-viewer/>,
+        <https://openknowledgegraphs.com/software/webvowl/> ;
+    okg:releaseDate "2025-01-29"^^xsd:date ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/zazuko/rdf-sketch> ;
+    okg:title "rdf-sketch" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q125506320> .
 
 <https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
     rdfs:label "dotNetRDF" ;
@@ -4542,23 +4602,6 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
     okg:title "CubicWeb" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2839592> .
 
-<https://openknowledgegraphs.com/software/dbpedia-archivo/> a okg:Software ;
-    rdfs:label "DBPedia Archivo" ;
-    okg:description "DBpedia Archivo - Augmented Ontology Archive powered by Databus" ;
-    okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232,
-        okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 ;
-    okg:homepage <https://archivo.dbpedia.org/list> ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
-        <https://openknowledgegraphs.com/software/foops/>,
-        <https://openknowledgegraphs.com/software/linkml/>,
-        <https://openknowledgegraphs.com/software/ontoology/>,
-        <https://openknowledgegraphs.com/software/shacl-playground/> ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/dbpedia/archivo> ;
-    okg:title "DBPedia Archivo" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q124653414> .
-
 <https://openknowledgegraphs.com/software/framework/> a okg:Software ;
     rdfs:label "Framework" ;
     okg:description "Software-as-a-service Startup building all-in-one tool for project management & note-taking" ;
@@ -4606,9 +4649,6 @@ okg:License_GNU_General_Public_License_version_3_0_Q10513445 a okg:License ;
 
 okg:StreamProcessing a okg:SoftwareType ;
     rdfs:label "Stream Processing" .
-
-okg:Visualization a okg:SoftwareType ;
-    rdfs:label "Visualization" .
 
 <https://openknowledgegraphs.com/software/cel/> a okg:Software ;
     rdfs:label "CEL" ;
@@ -4700,6 +4740,9 @@ okg:Visualization a okg:SoftwareType ;
     okg:title "Karma semantic mapping platform" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140706222> .
 
+okg:Visualization a okg:SoftwareType ;
+    rdfs:label "Visualization" .
+
 <https://openknowledgegraphs.com/software/apache-jena-fuseki/> a okg:Software ;
     rdfs:label "Apache Jena Fuseki" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709 ;
@@ -4719,24 +4762,6 @@ okg:Visualization a okg:SoftwareType ;
     okg:title "Apache Jena Fuseki" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q109376461> .
 
-<https://openknowledgegraphs.com/software/f-uji/> a okg:Software ;
-    rdfs:label "F-UJI" ;
-    okg:description "FAIRsFAIR Research Data Object Assessment Service" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <https://www.f-uji.net/> ;
-    okg:latestVersion "3.5.1" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/dbpedia-archivo/>,
-        <https://openknowledgegraphs.com/software/neontometrics/>,
-        <https://openknowledgegraphs.com/software/ofaire/>,
-        <https://openknowledgegraphs.com/software/ontoology/>,
-        <https://openknowledgegraphs.com/software/ontospy/> ;
-    okg:releaseDate "2025-10-14"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/pangaea-data-publisher/fuji> ;
-    okg:title "F-UJI" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q123267667> .
-
 <https://openknowledgegraphs.com/software/foops/> a okg:Software ;
     rdfs:label "FOOPS!" ;
     okg:description "Code for FOOPS! the OEG FAIR ontologies validator" ;
@@ -4754,6 +4779,24 @@ okg:Visualization a okg:SoftwareType ;
     okg:sourceRepo <https://github.com/oeg-upm/fair_ontologies> ;
     okg:title "FOOPS!" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653416> .
+
+<https://openknowledgegraphs.com/software/f-uji/> a okg:Software ;
+    rdfs:label "F-UJI" ;
+    okg:description "FAIRsFAIR Research Data Object Assessment Service" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <https://www.f-uji.net/> ;
+    okg:latestVersion "3.5.1" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/neontometrics/>,
+        <https://openknowledgegraphs.com/software/ofaire/>,
+        <https://openknowledgegraphs.com/software/ontology-quality-suite/>,
+        <https://openknowledgegraphs.com/software/ontoology/>,
+        <https://openknowledgegraphs.com/software/ontospy/> ;
+    okg:releaseDate "2025-10-14"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/pangaea-data-publisher/fuji> ;
+    okg:title "F-UJI" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q123267667> .
 
 <https://openknowledgegraphs.com/software/orientdb/> a okg:Software ;
     rdfs:label "OrientDB" ;
@@ -4847,13 +4890,13 @@ okg:OntologyEngineering a okg:SoftwareType ;
 okg:SparqlTooling a okg:SoftwareType ;
     rdfs:label "SPARQL Tooling" .
 
-okg:License_MIT_License_Q334661 a okg:License ;
-    rdfs:label "MIT License" ;
-    okg:licenseName "MIT License" .
-
 okg:License_proprietary_license_Q3238057 a okg:License ;
     rdfs:label "proprietary license" ;
     okg:licenseName "proprietary license" .
+
+okg:License_MIT_License_Q334661 a okg:License ;
+    rdfs:label "MIT License" ;
+    okg:licenseName "MIT License" .
 
 okg:GraphDatabase a okg:SoftwareType ;
     rdfs:label "Graph Database" .
