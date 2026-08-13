@@ -25002,6 +25002,12 @@
     okg:title "Q140356112" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140356112> .
 
+<https://openknowledgegraphs.com/resource/q20076231/> a okg:ControlledVocabulary ;
+    rdfs:label "Q20076231" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:title "Q20076231" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q20076231> .
+
 <https://openknowledgegraphs.com/resource/q4139990/> a okg:ControlledVocabulary ;
     rdfs:label "Q4139990" ;
     okg:category okg:GeneralCrossDomain ;
@@ -26630,20 +26636,6 @@
     okg:title "Semantic Scholar" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q22908627> .
 
-<https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/> a okg:Ontology ;
-    rdfs:label "Semantic Sensor Network Ontology" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "area of research" ;
-    okg:homepage <https://www.w3.org/TR/vocab-ssn/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/>,
-        <https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/>,
-        <https://openknowledgegraphs.com/resource/auth-acl-ontology/>,
-        <https://openknowledgegraphs.com/resource/communication-standards-ontology/>,
-        <https://openknowledgegraphs.com/resource/computer-aided-engineering-modeling-language-ontology/> ;
-    okg:sourceRepo <https://github.com/w3c/sdw> ;
-    okg:title "Semantic Sensor Network Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q62211950> .
-
 <https://openknowledgegraphs.com/resource/semantic-web-conference-ontology/> a okg:Ontology ;
     rdfs:label "Semantic Web Conference Ontology" ;
     okg:category okg:TechnologyWeb ;
@@ -26811,6 +26803,23 @@
         <https://openknowledgegraphs.com/resource/bio2rdf-homologene/> ;
     okg:title "SGD" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3460832> .
+
+<https://openknowledgegraphs.com/resource/shacl/> a okg:Ontology ;
+    rdfs:label "SHACL" ;
+    okg:category okg:TechnologyWeb ;
+    okg:creator okg:Creator_Holger_Knublauch_Q98809810 ;
+    okg:description "W3C specification for validating graph-based data against a set of conditions" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/TR/shacl/> ;
+    okg:namespaceURI sh: ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/> ;
+    okg:sourceRepo <https://github.com/w3c/data-shapes> ;
+    okg:title "SHACL" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q29377821> .
 
 <https://openknowledgegraphs.com/resource/shahpuri-kangri-glossory/> a okg:ControlledVocabulary ;
     rdfs:label "Shahpuri Kangri Glossory" ;
@@ -29442,6 +29451,21 @@
     okg:title "Variation Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114677953> .
 
+<https://openknowledgegraphs.com/resource/vcard-ontology/> a okg:Ontology ;
+    rdfs:label "vCard Ontology" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "W3C RDF/OWL mapping of the vCard specification for describing people and organizations" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/TR/vcard-rdf/> ;
+    okg:namespaceURI <http://www.w3.org/2006/vcard/ns#> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/> ;
+    okg:title "vCard Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q139378265> .
+
 <https://openknowledgegraphs.com/resource/vehicle-sales-ontology/> a okg:Ontology ;
     rdfs:label "Vehicle Sales Ontology" ;
     okg:category okg:FinanceBusiness ;
@@ -29718,6 +29742,22 @@
     okg:description "Wikimedia glossary list article" ;
     okg:title "volleyball jargon" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q5969909> .
+
+<https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> a okg:Ontology ;
+    rdfs:label "VSSo: the Vehicle Signal Specification Ontology" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "W3C OWL ontology representing vehicle signals and properties, based on SOSA/SSN (discontinued draft)" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/TR/vsso/> ;
+    okg:namespaceURI <https://github.com/w3c/vsso#> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/> ;
+    okg:sourceRepo <https://github.com/w3c/vsso> ;
+    okg:title "VSSo: the Vehicle Signal Specification Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q139378268> .
 
 <https://openknowledgegraphs.com/resource/warenverzeichnis-fur-die-aussenhandelsstatistik/> a okg:ControlledVocabulary ;
     rdfs:label "Warenverzeichnis für die Außenhandelsstatistik" ;
@@ -33149,21 +33189,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "lhenguabase" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q131756013> .
 
-<https://openknowledgegraphs.com/resource/linked-data-platform/> a okg:Ontology ;
-    rdfs:label "Linked Data Platform" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "W3C Recommendation defining HTTP operations for read/write Linked Data on the web" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <https://www.w3.org/TR/ldp/> ;
-    okg:namespaceURI <http://www.w3.org/ns/ldp#> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/powder-s/>,
-        <https://openknowledgegraphs.com/resource/shacl/>,
-        <https://openknowledgegraphs.com/resource/skos/>,
-        <https://openknowledgegraphs.com/resource/vcard-ontology/>,
-        <https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> ;
-    okg:title "Linked Data Platform" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q139378264> .
-
 <https://openknowledgegraphs.com/resource/military-scenario-ontology/> a okg:Ontology ;
     rdfs:label "Military Scenario Ontology" ;
     okg:category okg:GovernmentPublicSector ;
@@ -33219,21 +33244,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "OpenAIRE Research Graph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q109498259> .
 
-<https://openknowledgegraphs.com/resource/powder-s/> a okg:Ontology ;
-    rdfs:label "POWDER-S" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "W3C OWL vocabulary for describing and grouping web resources" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <https://www.w3.org/TR/powder-dr/> ;
-    okg:namespaceURI <http://www.w3.org/2007/05/powder-s#> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
-        <https://openknowledgegraphs.com/resource/shacl/>,
-        <https://openknowledgegraphs.com/resource/skos/>,
-        <https://openknowledgegraphs.com/resource/vcard-ontology/>,
-        <https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> ;
-    okg:title "POWDER-S" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q139378214> .
-
 <https://openknowledgegraphs.com/resource/reasonable-ontology-templates-ottr/> a okg:OntologyLanguage ;
     rdfs:label "Reasonable Ontology Templates (OTTR)" ;
     okg:category okg:TechnologyWeb ;
@@ -33262,23 +33272,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "RuWordNet" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q65937068> .
 
-<https://openknowledgegraphs.com/resource/shacl/> a okg:Ontology ;
-    rdfs:label "SHACL" ;
-    okg:category okg:TechnologyWeb ;
-    okg:creator okg:Creator_Holger_Knublauch_Q98809810 ;
-    okg:description "W3C specification for validating graph-based data against a set of conditions" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <https://www.w3.org/TR/shacl/> ;
-    okg:namespaceURI sh: ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
-        <https://openknowledgegraphs.com/resource/powder-s/>,
-        <https://openknowledgegraphs.com/resource/skos/>,
-        <https://openknowledgegraphs.com/resource/vcard-ontology/>,
-        <https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> ;
-    okg:sourceRepo <https://github.com/w3c/data-shapes> ;
-    okg:title "SHACL" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q29377821> .
-
 <https://openknowledgegraphs.com/resource/skos/> a okg:Ontology ;
     rdfs:label "SKOS" ;
     okg:category okg:TechnologyWeb ;
@@ -33287,10 +33280,10 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:homepage <https://www.w3.org/2004/02/skos/> ;
     okg:namespaceURI skos: ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
         <https://openknowledgegraphs.com/resource/powder-s/>,
-        <https://openknowledgegraphs.com/resource/shacl/>,
-        <https://openknowledgegraphs.com/resource/vcard-ontology/>,
-        <https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> ;
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/> ;
     okg:title "SKOS" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2288360> .
 
@@ -33336,37 +33329,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:sourceRepo <https://github.com/edithatogo/UOGTO> ;
     okg:title "Universal Open Game Theory Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140323510> .
-
-<https://openknowledgegraphs.com/resource/vcard-ontology/> a okg:Ontology ;
-    rdfs:label "vCard Ontology" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "W3C RDF/OWL mapping of the vCard specification for describing people and organizations" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <https://www.w3.org/TR/vcard-rdf/> ;
-    okg:namespaceURI <http://www.w3.org/2006/vcard/ns#> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
-        <https://openknowledgegraphs.com/resource/powder-s/>,
-        <https://openknowledgegraphs.com/resource/shacl/>,
-        <https://openknowledgegraphs.com/resource/skos/>,
-        <https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> ;
-    okg:title "vCard Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q139378265> .
-
-<https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/> a okg:Ontology ;
-    rdfs:label "VSSo: the Vehicle Signal Specification Ontology" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "W3C OWL ontology representing vehicle signals and properties, based on SOSA/SSN (discontinued draft)" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <https://www.w3.org/TR/vsso/> ;
-    okg:namespaceURI <https://github.com/w3c/vsso#> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
-        <https://openknowledgegraphs.com/resource/powder-s/>,
-        <https://openknowledgegraphs.com/resource/shacl/>,
-        <https://openknowledgegraphs.com/resource/skos/>,
-        <https://openknowledgegraphs.com/resource/vcard-ontology/> ;
-    okg:sourceRepo <https://github.com/w3c/vsso> ;
-    okg:title "VSSo: the Vehicle Signal Specification Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q139378268> .
 
 okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     rdfs:label "Getty Research Institute" ;
@@ -33622,10 +33584,6 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     okg:title "Solanaceae Phenotype Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q99542996> .
 
-okg:License_W3C_Software_License_Q3564577 a okg:License ;
-    rdfs:label "W3C Software License" ;
-    okg:licenseName "W3C Software License" .
-
 <https://openknowledgegraphs.com/resource/camp-list/> a okg:ControlledVocabulary ;
     rdfs:label "Camp List" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -33785,6 +33743,21 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
     okg:title "Library of Congress Demographic Group Terms" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q100903833> .
 
+<https://openknowledgegraphs.com/resource/linked-data-platform/> a okg:Ontology ;
+    rdfs:label "Linked Data Platform" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "W3C Recommendation defining HTTP operations for read/write Linked Data on the web" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/TR/ldp/> ;
+    okg:namespaceURI <http://www.w3.org/ns/ldp#> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/>,
+        <https://openknowledgegraphs.com/resource/skos/> ;
+    okg:title "Linked Data Platform" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q139378264> .
+
 <https://openknowledgegraphs.com/resource/military-ontology/> a okg:Ontology ;
     rdfs:label "Military Ontology" ;
     okg:category okg:GovernmentPublicSector ;
@@ -33797,6 +33770,20 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
         <https://openknowledgegraphs.com/resource/military-scenario-ontology/> ;
     okg:title "Military Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118451> .
+
+<https://openknowledgegraphs.com/resource/open-digital-rights-language/> a okg:Ontology ;
+    rdfs:label "Open Digital Rights Language" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "rights expression language" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <http://www.w3.org/TR/odrl/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/>,
+        <https://openknowledgegraphs.com/resource/skos/> ;
+    okg:title "Open Digital Rights Language" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q3883056> .
 
 <https://openknowledgegraphs.com/resource/owl-rl/> a okg:OntologyLanguage ;
     rdfs:label "OWL RL" ;
@@ -33811,6 +33798,51 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
         <https://openknowledgegraphs.com/resource/reasonable-ontology-templates-ottr/> ;
     okg:title "OWL RL" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q120969821> .
+
+<https://openknowledgegraphs.com/resource/powder-s/> a okg:Ontology ;
+    rdfs:label "POWDER-S" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "W3C OWL vocabulary for describing and grouping web resources" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/TR/powder-dr/> ;
+    okg:namespaceURI <http://www.w3.org/2007/05/powder-s#> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/>,
+        <https://openknowledgegraphs.com/resource/skos/> ;
+    okg:title "POWDER-S" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q139378214> .
+
+<https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/> a okg:Ontology ;
+    rdfs:label "Semantic Sensor Network Ontology" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "area of research" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <https://www.w3.org/TR/vocab-ssn/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/>,
+        <https://openknowledgegraphs.com/resource/skos/> ;
+    okg:sourceRepo <https://github.com/w3c/sdw> ;
+    okg:title "Semantic Sensor Network Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q62211950> .
+
+<https://openknowledgegraphs.com/resource/shape-expressions/> a okg:Ontology ;
+    rdfs:label "Shape Expressions" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "language for validating, describing or transforming RDF graphs" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <http://shex.io/> ;
+    okg:namespaceURI <http://www.w3.org/ns/shex#> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/linked-data-platform/>,
+        <https://openknowledgegraphs.com/resource/open-digital-rights-language/>,
+        <https://openknowledgegraphs.com/resource/powder-s/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/skos/> ;
+    okg:title "Shape Expressions" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q29377880> .
 
 <https://openknowledgegraphs.com/resource/tengraph/> a okg:ControlledVocabulary ;
     rdfs:label "TENGRAPH" ;
@@ -33873,6 +33905,10 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
 okg:License_Creative_Commons_Attribution_Q6905323 a okg:License ;
     rdfs:label "Creative Commons Attribution" ;
     okg:licenseName "Creative Commons Attribution" .
+
+okg:License_W3C_Software_License_Q3564577 a okg:License ;
+    rdfs:label "W3C Software License" ;
+    okg:licenseName "W3C Software License" .
 
 <https://openknowledgegraphs.com/resource/brazilian-national-registry-of-health-facilities/> a okg:ControlledVocabulary ;
     rdfs:label "Brazilian National Registry of Health Facilities" ;
@@ -35214,19 +35250,6 @@ okg:FinanceBusiness a okg:Category ;
     okg:title "auth/acl Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q120489233> .
 
-<https://openknowledgegraphs.com/resource/calames/> a okg:ControlledVocabulary ;
-    rdfs:label "Calames" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "French union catalog of archives and manuscripts in higher education libraries" ;
-    okg:homepage <https://calames.abes.fr/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/association-football-lexicon/>,
-        <https://openknowledgegraphs.com/resource/australian-education-vocabularies/>,
-        <https://openknowledgegraphs.com/resource/australian-thesaurus-of-education-descriptors/>,
-        <https://openknowledgegraphs.com/resource/cadastre-of-france/>,
-        <https://openknowledgegraphs.com/resource/central-archive-module/> ;
-    okg:title "Calames" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q78524340> .
-
 <https://openknowledgegraphs.com/resource/communication-standards-ontology/> a okg:Ontology ;
     rdfs:label "Communication Standards Ontology" ;
     okg:category okg:TechnologyWeb ;
@@ -35239,6 +35262,19 @@ okg:FinanceBusiness a okg:Category ;
         <https://openknowledgegraphs.com/resource/core-data-integration-model/> ;
     okg:title "Communication Standards Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118326> .
+
+<https://openknowledgegraphs.com/resource/calames/> a okg:ControlledVocabulary ;
+    rdfs:label "Calames" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "French union catalog of archives and manuscripts in higher education libraries" ;
+    okg:homepage <https://calames.abes.fr/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/association-football-lexicon/>,
+        <https://openknowledgegraphs.com/resource/australian-education-vocabularies/>,
+        <https://openknowledgegraphs.com/resource/australian-thesaurus-of-education-descriptors/>,
+        <https://openknowledgegraphs.com/resource/cadastre-of-france/>,
+        <https://openknowledgegraphs.com/resource/central-archive-module/> ;
+    okg:title "Calames" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q78524340> .
 
 <https://openknowledgegraphs.com/resource/bio2rdf-homologene/> a okg:KnowledgeGraph ;
     rdfs:label "Bio2RDF::Homologene" ;
@@ -35293,6 +35329,19 @@ okg:FinanceBusiness a okg:Category ;
     okg:title "Bio2RDF::Goa" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138358776> .
 
+<https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/> a okg:Ontology ;
+    rdfs:label "Actionable Intelligence Retrieval System" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "ontology for actionable intelligence retrieval systems" ;
+    okg:homepage <http://ncor.buffalo.edu/ontologies/AIRS_Ontologies.pdf> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/>,
+        <https://openknowledgegraphs.com/resource/auth-acl-ontology/>,
+        <https://openknowledgegraphs.com/resource/communication-standards-ontology/>,
+        <https://openknowledgegraphs.com/resource/computer-aided-engineering-modeling-language-ontology/>,
+        <https://openknowledgegraphs.com/resource/core-data-integration-model/> ;
+    okg:title "Actionable Intelligence Retrieval System" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118238> .
+
 <https://openknowledgegraphs.com/resource/addgene/> a okg:KnowledgeGraph ;
     rdfs:label "Addgene" ;
     okg:category okg:LifeSciencesHealthcare ;
@@ -35320,19 +35369,6 @@ okg:FinanceBusiness a okg:Category ;
         <https://openknowledgegraphs.com/resource/bio2rdf-irefindex/> ;
     okg:title "Affymetrix" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2826104> .
-
-<https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/> a okg:Ontology ;
-    rdfs:label "Actionable Intelligence Retrieval System" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "ontology for actionable intelligence retrieval systems" ;
-    okg:homepage <http://ncor.buffalo.edu/ontologies/AIRS_Ontologies.pdf> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/>,
-        <https://openknowledgegraphs.com/resource/auth-acl-ontology/>,
-        <https://openknowledgegraphs.com/resource/communication-standards-ontology/>,
-        <https://openknowledgegraphs.com/resource/computer-aided-engineering-modeling-language-ontology/>,
-        <https://openknowledgegraphs.com/resource/core-data-integration-model/> ;
-    okg:title "Actionable Intelligence Retrieval System" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118238> .
 
 <https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/> a okg:Ontology ;
     rdfs:label "Algorithm-Implementation-Execution Ontology Design Pattern" ;

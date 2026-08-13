@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T07:42:28Z",
+  "generatedAt": "2026-08-13T13:42:27Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -40247,24 +40247,24 @@
       ],
       "relatedTools": [
         {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
           "title": "POWDER-S",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
         },
         {
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
+        },
+        {
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
+        },
+        {
           "title": "SKOS",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
-        },
-        {
-          "title": "vCard Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vcard-ontology/"
-        },
-        {
-          "title": "VSSo: the Vehicle Signal Specification Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/"
-        },
-        {
-          "title": "SHACL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/shacl/"
         }
       ]
     },
@@ -54130,6 +54130,42 @@
       ]
     },
     {
+      "title": "Open Digital Rights Language",
+      "wikidataId": "https://www.wikidata.org/wiki/Q3883056",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/",
+      "description": "rights expression language",
+      "category": "Technology & Web",
+      "homepage": "http://www.w3.org/TR/odrl/",
+      "licenses": [
+        "W3C Software License"
+      ],
+      "relatedTools": [
+        {
+          "title": "Linked Data Platform",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
+        },
+        {
+          "title": "POWDER-S",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
+        },
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
+        },
+        {
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
+        },
+        {
+          "title": "SKOS",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
+        }
+      ]
+    },
+    {
       "title": "Open Funder Registry",
       "wikidataId": "https://www.wikidata.org/wiki/Q19822542",
       "types": [
@@ -58661,20 +58697,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
         },
         {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
+        },
+        {
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
+        },
+        {
           "title": "SKOS",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
-        },
-        {
-          "title": "vCard Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vcard-ontology/"
-        },
-        {
-          "title": "VSSo: the Vehicle Signal Specification Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/"
-        },
-        {
-          "title": "SHACL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/shacl/"
         }
       ]
     },
@@ -60511,6 +60547,15 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/calames/"
         }
       ]
+    },
+    {
+      "title": "Q20076231",
+      "wikidataId": "https://www.wikidata.org/wiki/Q20076231",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/q20076231/",
+      "category": "General / Cross-domain"
     },
     {
       "title": "Q4139990",
@@ -66194,26 +66239,29 @@
       "category": "Technology & Web",
       "homepage": "https://www.w3.org/TR/vocab-ssn/",
       "sourceRepo": "https://github.com/w3c/sdw",
+      "licenses": [
+        "W3C Software License"
+      ],
       "relatedTools": [
         {
-          "title": "Actionable Intelligence Retrieval System",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/actionable-intelligence-retrieval-system/"
+          "title": "Linked Data Platform",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
         },
         {
-          "title": "Algorithm-Implementation-Execution Ontology Design Pattern",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/"
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
         },
         {
-          "title": "auth/acl Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auth-acl-ontology/"
+          "title": "POWDER-S",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
         },
         {
-          "title": "Communication Standards Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/communication-standards-ontology/"
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
         },
         {
-          "title": "Computer Aided Engineering Modeling Language Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/computer-aided-engineering-modeling-language-ontology/"
+          "title": "SKOS",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
         }
       ]
     },
@@ -66907,20 +66955,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
         },
         {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
           "title": "POWDER-S",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
         },
         {
-          "title": "SKOS",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
         },
         {
-          "title": "vCard Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vcard-ontology/"
-        },
-        {
-          "title": "VSSo: the Vehicle Signal Specification Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/"
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
         }
       ]
     },
@@ -66938,6 +66986,43 @@
           "name": "James Wilson",
           "type": "Person",
           "wikidataId": "https://www.wikidata.org/wiki/Q47541460"
+        }
+      ]
+    },
+    {
+      "title": "Shape Expressions",
+      "wikidataId": "https://www.wikidata.org/wiki/Q29377880",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/",
+      "description": "language for validating, describing or transforming RDF graphs",
+      "category": "Technology & Web",
+      "homepage": "http://shex.io/",
+      "namespaceURI": "http://www.w3.org/ns/shex#",
+      "licenses": [
+        "W3C Software License"
+      ],
+      "relatedTools": [
+        {
+          "title": "Linked Data Platform",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
+        },
+        {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
+          "title": "POWDER-S",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
+        },
+        {
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
+        },
+        {
+          "title": "SKOS",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
         }
       ]
     },
@@ -67256,20 +67341,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
         },
         {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
           "title": "POWDER-S",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
         },
         {
-          "title": "vCard Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vcard-ontology/"
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
         },
         {
-          "title": "VSSo: the Vehicle Signal Specification Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/"
-        },
-        {
-          "title": "SHACL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/shacl/"
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
         }
       ]
     },
@@ -75828,20 +75913,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
         },
         {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
           "title": "POWDER-S",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
         },
         {
-          "title": "SKOS",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
         },
         {
-          "title": "VSSo: the Vehicle Signal Specification Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vsso-the-vehicle-signal-specification-ontology/"
-        },
-        {
-          "title": "SHACL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/shacl/"
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
         }
       ]
     },
@@ -77057,20 +77142,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/linked-data-platform/"
         },
         {
+          "title": "Open Digital Rights Language",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/open-digital-rights-language/"
+        },
+        {
           "title": "POWDER-S",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/powder-s/"
         },
         {
-          "title": "SKOS",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/skos/"
+          "title": "Semantic Sensor Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/"
         },
         {
-          "title": "vCard Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/vcard-ontology/"
-        },
-        {
-          "title": "SHACL",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/shacl/"
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
         }
       ]
     },
