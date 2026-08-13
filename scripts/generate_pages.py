@@ -60,7 +60,8 @@ PARKED_SIGNALS = [
 SOFT_404_SIGNALS = [
     "page not found", "404 not found", "not found</",
     "page doesn't exist", "page does not exist",
-    "has been removed", "error 404",
+    "this page has been removed", "the page has been removed",
+    "error 404",
 ]
 
 
