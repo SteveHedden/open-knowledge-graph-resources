@@ -227,8 +227,8 @@
 <https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
     rdfs:label "FlexRML" ;
     okg:description "memory-efficient C++ RML interpreter" ;
-    okg:latestVersion "3.0.0" ;
-    okg:releaseDate "2026-05-15"^^xsd:date ;
+    okg:latestVersion "3.1.0" ;
+    okg:releaseDate "2026-08-12"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/wintechis/flex-rml> ;
     okg:title "FlexRML" ;
