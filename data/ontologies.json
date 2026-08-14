@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T07:40:11Z",
+  "generatedAt": "2026-08-14T16:19:07Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -3236,41 +3236,6 @@
       ]
     },
     {
-      "title": "auditory",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134874",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains information encoded in auditory form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#auditory",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        },
-        {
-          "title": "Controlled Vocabulary for Dublin Core format",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
-        }
-      ]
-    },
-    {
       "title": "AUSTLANG",
       "wikidataId": "https://www.wikidata.org/wiki/Q17315091",
       "types": [
@@ -6486,16 +6451,6 @@
       ]
     },
     {
-      "title": "Black bisexual people",
-      "wikidataId": "https://www.wikidata.org/wiki/Q116185807",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/black-bisexual-people/",
-      "description": "vocabulary term Homosaurus 2019",
-      "category": "Library & Cultural Heritage"
-    },
-    {
       "title": "Blinding Identity Taxonomy (BIT)",
       "wikidataId": "https://www.wikidata.org/wiki/Q60366494",
       "types": [
@@ -9512,41 +9467,6 @@
       "partOf": "Sibley-Ahlquist taxonomy of birds"
     },
     {
-      "title": "chartOnVisual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134880",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains charts encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#chartOnVisual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        },
-        {
-          "title": "Controlled Vocabulary for Dublin Core format",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
-        }
-      ]
-    },
-    {
       "title": "CHEBI",
       "wikidataId": "https://www.wikidata.org/wiki/Q138523433",
       "types": [
@@ -9918,41 +9838,6 @@
         {
           "title": "AdaLab ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495015/"
-        }
-      ]
-    },
-    {
-      "title": "chemOnVisual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134885",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains chemical equations encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#chemOnVisual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        },
-        {
-          "title": "Controlled Vocabulary for Dublin Core format",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
         }
       ]
     },
@@ -11487,24 +11372,24 @@
       "homepage": "https://cointegrity.io/glossary",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        },
-        {
           "title": "Controlled Vocabulary for Dublin Core format",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
+        },
+        {
+          "title": "NASA Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/nasa-thesaurus/"
         }
       ]
     },
@@ -11685,41 +11570,6 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/color-biology-ontology/",
       "description": "ontology for color biology",
       "category": "General / Cross-domain"
-    },
-    {
-      "title": "colorDependent",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124135010",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains information encoded such that color perception is necessary",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#colorDependent",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "Controlled Vocabulary for Dublin Core format",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
-        }
-      ]
     },
     {
       "title": "Combined Nomenclature",
@@ -12785,24 +12635,24 @@
       "homepage": "https://ac.tdwg.org/format/#acformat",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
+        },
+        {
+          "title": "NASA Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/nasa-thesaurus/"
         }
       ]
     },
@@ -13795,16 +13645,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/solanaceae-phenotype-ontology/"
         }
       ]
-    },
-    {
-      "title": "Crossdressers",
-      "wikidataId": "https://www.wikidata.org/wiki/Q116185838",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/crossdressers/",
-      "description": "vocabulary term Homosaurus 2019",
-      "category": "Library & Cultural Heritage"
     },
     {
       "title": "Cryo Electron Microscopy",
@@ -15933,41 +15773,6 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/diagnostic-ontology/",
       "description": "ontology containing the 91 elements required to conduct Systematic Review - Meta Analysis (SR-MA) for diagnostic studies",
       "category": "Life Sciences & Healthcare"
-    },
-    {
-      "title": "diagramOnVisual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124135003",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/diagramonvisual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains diagrams encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#diagramOnVisual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        }
-      ]
     },
     {
       "title": "DIAMOND",
@@ -20446,24 +20251,24 @@
       ],
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -24082,24 +23887,24 @@
       "homepage": "https://gamemetadata.soe.ucsc.edu/platform",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
+        },
+        {
+          "title": "NASA Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/nasa-thesaurus/"
         }
       ]
     },
@@ -24115,24 +23920,24 @@
       "homepage": "https://gamemetadata.soe.ucsc.edu/media",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
+        },
+        {
+          "title": "NASA Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/nasa-thesaurus/"
         }
       ]
     },
@@ -34806,24 +34611,24 @@
       ],
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -37096,24 +36901,24 @@
       "homepage": "https://www.datcatinfo.net",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "NASA Thesaurus",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/nasa-thesaurus/"
         }
       ]
     },
@@ -42849,41 +42654,6 @@
       ]
     },
     {
-      "title": "mathOnVisual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134971",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/mathonvisual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains mathematical notations encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#mathOnVisual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        }
-      ]
-    },
-    {
       "title": "Matrikkelen",
       "wikidataId": "https://www.wikidata.org/wiki/Q21884091",
       "types": [
@@ -44163,24 +43933,24 @@
       ],
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -46234,41 +46004,6 @@
       "category": "Life Sciences & Healthcare"
     },
     {
-      "title": "musicOnVisual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134998",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/musiconvisual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains musical notation encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#musicOnVisual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        }
-      ]
-    },
-    {
       "title": "MWS",
       "wikidataId": "https://www.wikidata.org/wiki/Q138494358",
       "types": [
@@ -46790,24 +46525,24 @@
       "partOf": "NASA Scientific and Technical Information (STI) Program",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -54108,24 +53843,24 @@
       "homepage": "http://vocabulary.semantic-web.at/PoolParty/wiki/OpenData",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -54233,8 +53968,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/algorithm-implementation-execution-ontology-design-pattern/"
         },
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
+          "title": "auth/acl Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/auth-acl-ontology/"
         },
         {
           "title": "Cyber-investigation Analysis Standard Expression Ontology",
@@ -62999,24 +62734,24 @@
       "namespaceURI": "http://www.w3.org/2000/01/rdf-schema#",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -70418,41 +70153,6 @@
       ]
     },
     {
-      "title": "tactile",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134995",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/tactile/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains information encoded in tactile form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#tactile",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        }
-      ]
-    },
-    {
       "title": "Taikō kenchi",
       "wikidataId": "https://www.wikidata.org/wiki/Q8193888",
       "types": [
@@ -70587,24 +70287,24 @@
       "sourceRepo": "https://github.com/dhtaxonomy/TaDiRAH",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -71347,76 +71047,6 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/tetsugaku-jii/",
       "description": "English-Japanese dictionary of philosophical vocabulary",
       "category": "General / Cross-domain"
-    },
-    {
-      "title": "textOnVisual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134989",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/textonvisual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains text encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#textOnVisual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        }
-      ]
-    },
-    {
-      "title": "textual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134976",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/textual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains information encoded in textual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#textual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
-        }
-      ]
     },
     {
       "title": "Thai Subject Headings by Cataloging Working Group of Thailand University Libraries",
@@ -73658,24 +73288,24 @@
       "homepage": "https://trt.trb.org/",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -74323,24 +73953,24 @@
       "homepage": "https://www.unicode.org./terminology",
       "relatedTools": [
         {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
           "title": "Cointegrity Web3 Glossary",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
+          "title": "Controlled Vocabulary for Dublin Core format",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/controlled-vocabulary-for-dublin-core-format/"
+        },
+        {
+          "title": "GAMECIP  - Computer  Game Platforms",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-computer-game-platforms/"
+        },
+        {
+          "title": "GAMECIP  - Media Formats",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gamecip-media-formats/"
+        },
+        {
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         }
       ]
     },
@@ -76340,41 +75970,6 @@
         {
           "title": "Cultural Objects Name Authority",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
-        }
-      ]
-    },
-    {
-      "title": "visual",
-      "wikidataId": "https://www.wikidata.org/wiki/Q124134779",
-      "types": [
-        "ControlledVocabulary"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/visual/",
-      "description": "term for use with the Schema.org Accessibility Properties for Discoverability Vocabulary accessMode property that indicates that a resource contains information encoded in visual form",
-      "category": "Technology & Web",
-      "homepage": "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20230718/#visual",
-      "sourceRepo": "https://github.com/w3c/a11y-discov-vocab",
-      "partOf": "Schema.org Accessibility Properties for Discoverability Vocabulary",
-      "relatedTools": [
-        {
-          "title": "auditory",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/auditory/"
-        },
-        {
-          "title": "chartOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chartonvisual/"
-        },
-        {
-          "title": "chemOnVisual",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemonvisual/"
-        },
-        {
-          "title": "Cointegrity Web3 Glossary",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
-        },
-        {
-          "title": "colorDependent",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/colordependent/"
         }
       ]
     },

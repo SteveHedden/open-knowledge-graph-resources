@@ -227,6 +227,7 @@
 <https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
     rdfs:label "FlexRML" ;
     okg:description "memory-efficient C++ RML interpreter" ;
+    okg:hasLicense okg:License_GNU_Affero_General_Public_License_Q1131681 ;
     okg:latestVersion "3.1.0" ;
     okg:releaseDate "2026-08-12"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
@@ -676,9 +677,9 @@
     rdfs:label "onto-tool" ;
     okg:description "Tools to update and export ontology RDF." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:latestVersion "1.8.0" ;
+    okg:latestVersion "1.9.0" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2023-10-17"^^xsd:date ;
+    okg:releaseDate "2026-08-13"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/semanticarts/ontology-toolkit> ;
     okg:title "onto-tool" ;
@@ -688,7 +689,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:latestVersion "0.10.1" ;
     okg:programmingLanguage "TypeScript" ;
+    okg:releaseDate "2026-08-14"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:title "Ontology Development Suite" ;
@@ -901,14 +904,14 @@
     okg:description "SPARQL engine" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://qlever.dev/> ;
-    okg:latestVersion "0.5.50" ;
+    okg:latestVersion "0.6.0" ;
     okg:programmingLanguage "C++" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
         <https://openknowledgegraphs.com/software/hefquin/>,
         <https://openknowledgegraphs.com/software/processor/>,
         <https://openknowledgegraphs.com/software/semagrow/>,
         <https://openknowledgegraphs.com/software/sparql-transformer/> ;
-    okg:releaseDate "2026-07-17"^^xsd:date ;
+    okg:releaseDate "2026-08-13"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/ad-freiburg/qlever> ;
     okg:title "QLever" ;
@@ -1978,10 +1981,6 @@ okg:License_Expat_license_Q18526198 a okg:License ;
     rdfs:label "Expat license" ;
     okg:licenseName "Expat license" .
 
-okg:License_GNU_Affero_General_Public_License_Q1131681 a okg:License ;
-    rdfs:label "GNU Affero General Public License" ;
-    okg:licenseName "GNU Affero General Public License" .
-
 okg:License_GNU_General_Public_License_version_2_0_or_later_Q27016752 a okg:License ;
     rdfs:label "GNU General Public License, version 2.0 or later" ;
     okg:licenseName "GNU General Public License, version 2.0 or later" .
@@ -2224,6 +2223,10 @@ okg:Creator_Steve_Hedden_Q140443546 a okg:Person ;
 okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 a okg:License ;
     rdfs:label "Creative Commons Attribution 4.0 International" ;
     okg:licenseName "Creative Commons Attribution 4.0 International" .
+
+okg:License_GNU_Affero_General_Public_License_Q1131681 a okg:License ;
+    rdfs:label "GNU Affero General Public License" ;
+    okg:licenseName "GNU Affero General Public License" .
 
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
@@ -4268,12 +4271,14 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
+    okg:latestVersion "0.3.4" ;
     okg:programmingLanguage "Python" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/f-uji/>,
         <https://openknowledgegraphs.com/software/foops/>,
         <https://openknowledgegraphs.com/software/linkml/>,
         <https://openknowledgegraphs.com/software/neontometrics/>,
         <https://openknowledgegraphs.com/software/ontoology/> ;
+    okg:releaseDate "2026-08-12"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
     okg:title "ontology-quality-suite" ;

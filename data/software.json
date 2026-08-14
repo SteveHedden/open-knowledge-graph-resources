@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-14T07:40:11Z",
+  "generatedAt": "2026-08-14T16:19:07Z",
   "items": [
     {
       "title": "4store",
@@ -1894,6 +1894,9 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/flexrml/",
       "description": "memory-efficient C++ RML interpreter",
       "sourceRepo": "https://github.com/wintechis/flex-rml",
+      "licenses": [
+        "GNU Affero General Public License"
+      ],
       "latestVersion": "3.1.0",
       "releaseDate": "2026-08-12",
       "softwareType": "RDF Data Mapping / ETL"
@@ -4620,8 +4623,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "1.8.0",
-      "releaseDate": "2023-10-17",
+      "latestVersion": "1.9.0",
+      "releaseDate": "2026-08-13",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "Python"
@@ -4836,6 +4839,8 @@
       "licenses": [
         "MIT License"
       ],
+      "latestVersion": "0.10.1",
+      "releaseDate": "2026-08-14",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "TypeScript"
@@ -4899,6 +4904,8 @@
         "Apache Software License 2.0",
         "MIT License"
       ],
+      "latestVersion": "0.3.4",
+      "releaseDate": "2026-08-12",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "Python"
@@ -6113,8 +6120,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "0.5.50",
-      "releaseDate": "2026-07-17",
+      "latestVersion": "0.6.0",
+      "releaseDate": "2026-08-13",
       "softwareType": "SPARQL Tooling",
       "programmingLanguages": [
         "C++"
