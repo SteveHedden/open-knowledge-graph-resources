@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T05:18:54Z",
+  "generatedAt": "2026-08-15T06:16:17Z",
   "items": [
     {
       "title": "4store",
@@ -190,12 +190,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
         },
         {
-          "title": "Apache Rya",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-rya/"
+          "title": "dotNetRDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
         },
         {
-          "title": "HugeGraph",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/"
+          "title": "OntoGPT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
       ]
     },
@@ -283,6 +287,10 @@
         {
           "title": "HugeGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/"
+        },
+        {
+          "title": "Sampo-UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/"
         }
       ]
     },
@@ -372,6 +380,28 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "C++"
+      ],
+      "relatedTools": [
+        {
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "OrientDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        },
+        {
+          "title": "SurrealDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/surrealdb/"
+        }
       ]
     },
     {
@@ -399,6 +429,28 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "OrientDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        }
       ]
     },
     {
@@ -496,6 +548,12 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "qEndpoint",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/"
+        }
       ]
     },
     {
@@ -515,7 +573,13 @@
           "wikidataId": "https://www.wikidata.org/wiki/Q193563"
         }
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "relatedTools": [
+        {
+          "title": "National Library of Korea Linked Open Data",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/national-library-of-korea-linked-open-data/"
+        }
+      ]
     },
     {
       "title": "CARML",
@@ -666,6 +730,24 @@
       "softwareType": "AI Agent Tooling",
       "programmingLanguages": [
         "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "Graphiti",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
+        },
+        {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
+          "title": "ontop",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        }
       ]
     },
     {
@@ -780,6 +862,20 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "JanusGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
+        },
+        {
+          "title": "QLever",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qlever/"
+        },
+        {
+          "title": "SPARQL Anything",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
+        }
       ]
     },
     {
@@ -968,6 +1064,20 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         ".NET Framework"
+      ],
+      "relatedTools": [
+        {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
+          "title": "OntoGPT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+        }
       ]
     },
     {
@@ -1146,6 +1256,16 @@
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
+        },
+        {
+          "title": "Yasgui",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        }
       ]
     },
     {
@@ -1346,7 +1466,21 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/framework/",
       "description": "Software-as-a-service Startup building all-in-one tool for project management & note-taking",
       "homepage": "https://framework.tools",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "relatedTools": [
+        {
+          "title": "NebulaGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
+        },
+        {
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
+        },
+        {
+          "title": "Wikibase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/wikibase/"
+        }
+      ]
     },
     {
       "title": "FS2KG",
@@ -1490,6 +1624,28 @@
       "softwareType": "AI Agent Tooling",
       "programmingLanguages": [
         "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "Cognee",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
+        },
+        {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
+          "title": "ontop",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        },
+        {
+          "title": "Zep",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/zep/"
+        }
       ]
     },
     {
@@ -1796,6 +1952,20 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+        },
+        {
+          "title": "QLever",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qlever/"
+        },
+        {
+          "title": "SPARQL Anything",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
+        }
       ]
     },
     {
@@ -2334,6 +2504,28 @@
         "C",
         "C++",
         "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "OrientDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        }
       ]
     },
     {
@@ -2371,6 +2563,24 @@
       "programmingLanguages": [
         "Python",
         "TypeScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Cognee",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
+        },
+        {
+          "title": "Graphiti",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
+        },
+        {
+          "title": "ontop",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        }
       ]
     },
     {
@@ -2421,7 +2631,13 @@
           "wikidataId": "https://www.wikidata.org/wiki/Q22132500"
         }
       ],
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "relatedTools": [
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        }
+      ]
     },
     {
       "title": "MillenniumDB",
@@ -2562,7 +2778,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/national-library-of-korea-linked-open-data/",
       "description": "National Library of Korea authority file for personal names and works",
       "homepage": "https://lod.nl.go.kr/home/",
-      "softwareType": "Knowledge Graph Construction"
+      "softwareType": "Knowledge Graph Construction",
+      "relatedTools": [
+        {
+          "title": "BnF authorities",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/bnf-authorities/"
+        }
+      ]
     },
     {
       "title": "ndoli",
@@ -2614,6 +2836,16 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/framework/"
+        },
+        {
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
+        }
       ]
     },
     {
@@ -2636,6 +2868,20 @@
       "programmingLanguages": [
         "Java",
         "Scala"
+      ],
+      "relatedTools": [
+        {
+          "title": "Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/framework/"
+        },
+        {
+          "title": "NebulaGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/"
+        },
+        {
+          "title": "neosemantics",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neosemantics/"
+        }
       ]
     },
     {
@@ -2685,6 +2931,12 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "Neo4j",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/"
+        }
       ]
     },
     {
@@ -2704,6 +2956,28 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "C++"
+      ],
+      "relatedTools": [
+        {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        },
+        {
+          "title": "SurrealDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/surrealdb/"
+        },
+        {
+          "title": "Virtuoso Universal Server",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/"
+        }
       ]
     },
     {
@@ -2724,6 +2998,12 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "QLever",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qlever/"
+        }
       ]
     },
     {
@@ -2844,12 +3124,24 @@
       ],
       "relatedTools": [
         {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
+          "title": "dotNetRDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
           "title": "LinkML",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         },
         {
           "title": "Ontology Development Kit",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
       ]
     },
@@ -3030,6 +3322,24 @@
       "softwareType": "RDF Data Mapping / ETL",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "Cognee",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
+        },
+        {
+          "title": "Graphiti",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
+        },
+        {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        }
       ]
     },
     {
@@ -3253,6 +3563,28 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        }
       ]
     },
     {
@@ -3501,6 +3833,28 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
+          "title": "MarkLogic",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "OrientDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        }
       ]
     },
     {
@@ -3697,6 +4051,12 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "Blazegraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/"
+        }
       ]
     },
     {
@@ -3743,6 +4103,24 @@
       "softwareType": "SPARQL Tooling",
       "programmingLanguages": [
         "C++"
+      ],
+      "relatedTools": [
+        {
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+        },
+        {
+          "title": "JanusGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
+        },
+        {
+          "title": "Node Quadstore",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/node-quadstore/"
+        },
+        {
+          "title": "SPARQL Anything",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/"
+        }
       ]
     },
     {
@@ -4003,6 +4381,28 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "Cognee",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
+        },
+        {
+          "title": "Graphiti",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
+        },
+        {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
+          "title": "metaphactory",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/metaphactory/"
+        },
+        {
+          "title": "ontop",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        }
       ]
     },
     {
@@ -4043,6 +4443,20 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
+          "title": "dotNetRDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
+          "title": "OntoGPT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
+        }
       ]
     },
     {
@@ -4145,6 +4559,12 @@
       "softwareType": "Visualization",
       "programmingLanguages": [
         "TypeScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Semantic UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
+        }
       ]
     },
     {
@@ -4345,6 +4765,12 @@
       "softwareType": "Visualization",
       "programmingLanguages": [
         "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
+        }
       ]
     },
     {
@@ -4433,6 +4859,12 @@
       "softwareType": "SPARQL Tooling",
       "programmingLanguages": [
         "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Reactodia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
+        }
       ]
     },
     {
@@ -4919,6 +5351,20 @@
       "softwareType": "RDF Data Mapping / ETL",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "CubicWeb",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/"
+        },
+        {
+          "title": "JanusGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/"
+        },
+        {
+          "title": "QLever",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/qlever/"
+        }
       ]
     },
     {
@@ -5347,6 +5793,28 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Rust"
+      ],
+      "relatedTools": [
+        {
+          "title": "ArangoDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/"
+        },
+        {
+          "title": "ArcadeDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/"
+        },
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "OrientDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        }
       ]
     },
     {
@@ -5769,6 +6237,20 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "C"
+      ],
+      "relatedTools": [
+        {
+          "title": "NitrosBase",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/"
+        },
+        {
+          "title": "Polypheny",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/"
+        },
+        {
+          "title": "SurrealDB",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/surrealdb/"
+        }
       ]
     },
     {
@@ -5912,6 +6394,16 @@
       "softwareType": "Visualization",
       "programmingLanguages": [
         "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
+          "title": "Yasgui",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        }
       ]
     },
     {
@@ -5975,6 +6467,12 @@
       "programmingLanguages": [
         "JavaScript",
         "PHP"
+      ],
+      "relatedTools": [
+        {
+          "title": "Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/framework/"
+        }
       ]
     },
     {
@@ -6054,12 +6552,20 @@
       ],
       "relatedTools": [
         {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
           "title": "rdf-validate-shacl",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-validate-shacl/"
         },
         {
           "title": "SHACL Playground",
           "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/"
+        },
+        {
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
         },
         {
           "title": "Yasgui (Matdata)",
@@ -6100,7 +6606,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/software/zep/",
       "description": "managed temporal knowledge graph and persistent memory service for artificial intelligence agents",
       "homepage": "https://www.getzep.com/",
-      "softwareType": "AI Agent Tooling"
+      "softwareType": "AI Agent Tooling",
+      "relatedTools": [
+        {
+          "title": "Graphiti",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
+        }
+      ]
     }
   ]
 }
