@@ -22,6 +22,16 @@ from semantic_config import (
     SOFTWARE_TYPES_VOCAB_PATH,
     load_controlled_vocabulary,
 )
+from recommendation_coverage import (
+    RecommendationCoverageError,
+    append_diagnostics,
+    baseline_generation_id,
+    baseline_survivors,
+    coverage_by_catalog,
+    evaluate_coverage,
+    load_policy,
+    qualifying_reasons_by_catalog,
+)
 
 ROOT_DIR = Path(
     os.environ.get("OKG_CATALOG_ROOT", Path(__file__).resolve().parent.parent)
@@ -29,6 +39,10 @@ ROOT_DIR = Path(
 SITE_DIR = str(ROOT_DIR / "site")
 DATA_DIR = str(ROOT_DIR / "data")
 BASE_URL = "https://openknowledgegraphs.com"
+COVERAGE_POLICY_PATH = ROOT_DIR / "validation" / "recommendation-coverage-policy.json"
+RELATED_DIAGNOSTICS_PATH = Path(
+    os.environ.get("OKG_RELATED_DIAGNOSTICS_PATH", ROOT_DIR / "build" / "related-resources.json")
+).resolve()
 
 GENERIC_DESCRIPTIONS = {
     "ontology", "wikimedia glossary list article", "wikimedia list article",
@@ -603,13 +617,7 @@ def main(argv=None):
         all_items = [item for _, item in candidates]
         good_urls = asyncio.run(check_links(all_items))
 
-    # Step 3: Clean old generated pages
-    for d in ["resource", "software"]:
-        dirpath = os.path.join(SITE_DIR, d)
-        if os.path.exists(dirpath):
-            shutil.rmtree(dirpath)
-
-    # Step 4: Determine the final page-worthy set (same checks as before), so we
+    # Step 3: Determine the final page-worthy set (same checks as before), so we
     # know which canonicalUrls will actually have a page before rendering any
     # of them — needed to prune relatedTools down to links that won't 404.
     survivors = []
@@ -640,7 +648,46 @@ def main(argv=None):
 
     survivor_urls = {item.get("canonicalUrl") for _, item, _, _ in survivors if item.get("canonicalUrl")}
 
-    # Step 5: Generate pages, using the slug already assigned by fetch_data.py
+    # Step 4: Gate the exact post-content-filter, post-link-check page set before
+    # deleting or publishing any generated page.
+    candidate_coverage = coverage_by_catalog(survivors)
+    existing_diagnostics = {}
+    if RELATED_DIAGNOSTICS_PATH.is_file():
+        existing_diagnostics = _read_json(RELATED_DIAGNOSTICS_PATH)
+    reason_distributions = qualifying_reasons_by_catalog(survivors, existing_diagnostics)
+    for dataset in ("resource", "software"):
+        candidate_coverage[dataset]["qualifyingReasonDistribution"] = reason_distributions[dataset]
+    baseline_coverage = None
+    baseline_id = None
+    if args.membership_baseline is not None:
+        baseline_coverage = coverage_by_catalog(
+            baseline_survivors(args.membership_baseline.resolve())
+        )
+        baseline_id = baseline_generation_id(args.membership_baseline.resolve())
+    coverage_report = evaluate_coverage(
+        candidate_coverage,
+        baseline_coverage,
+        load_policy(COVERAGE_POLICY_PATH),
+        baseline_id,
+    )
+    append_diagnostics(RELATED_DIAGNOSTICS_PATH, coverage_report)
+    for dataset in ("resource", "software"):
+        row = candidate_coverage[dataset]
+        print(
+            f"Recommendation coverage ({dataset}): "
+            f"{row['pagesWithRecommendations']}/{row['finalPageCount']} "
+            f"({float(row['coverageShare']):.1%})"
+        )
+    if not coverage_report["gate"]["passed"]:
+        raise RecommendationCoverageError(coverage_report)
+
+    # Step 5: The release gate passed; replace old generated pages.
+    for d in ["resource", "software"]:
+        dirpath = os.path.join(SITE_DIR, d)
+        if os.path.exists(dirpath):
+            shutil.rmtree(dirpath)
+
+    # Step 6: Generate pages, using the slug already assigned by fetch_data.py
     # (item["canonicalUrl"], e.g. https://openknowledgegraphs.com/software/foops/)
     # so a resource's URI never has to change once its page appears.
     generated = 0
@@ -665,13 +712,13 @@ def main(argv=None):
 
     print(f"Generated {generated} pages")
 
-    # Step 6: Generate sitemap
+    # Step 7: Generate sitemap
     sitemap = generate_sitemap(pages)
     with open(os.path.join(SITE_DIR, "sitemap.xml"), "w") as f:
         f.write(sitemap)
     print(f"Sitemap: {len(pages) + 7} URLs")
 
-    # Step 7: Save QID-to-slug mapping for frontend
+    # Step 8: Save QID-to-slug mapping for frontend
     with open(os.path.join(DATA_DIR, "page_qids.json"), "w") as f:
         json.dump(page_slugs, f)
     print(f"Saved page_qids.json ({len(page_slugs['resource'])} resource, {len(page_slugs['software'])} software)")

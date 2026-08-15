@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "maximumEmptyShare": 0.5,
+  "maximumUnreviewedCoverageDecline": 0.05,
+  "acceptedDeclines": [],
+  "acceptedShortfalls": [
+    {
+      "baselineGenerationId": "20260815T051936Z-6bd3dd44b912",
+      "catalog": "resource",
+      "minimumCoverageShare": 0.48,
+      "rationale": "User-approved one-generation interim release while Task 25 remains in progress; candidate coverage is 342 of 698 final pages (49.0%)."
+    },
+    {
+      "baselineGenerationId": "20260815T051936Z-6bd3dd44b912",
+      "catalog": "software",
+      "minimumCoverageShare": 0.28,
+      "rationale": "User-approved one-generation interim release while Task 25 remains in progress; candidate coverage is 49 of 170 final pages (28.8%)."
+    }
+  ]
+}

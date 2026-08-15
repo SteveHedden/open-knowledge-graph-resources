@@ -109,6 +109,11 @@ okg:SourceEligibilityException a rdfs:Class ;
     rdfs:label "Source eligibility exception" ;
     rdfs:comment "Reviewed decision allowing a source entity to override a general eligibility rule without overriding a confirmed exclusion." .
 
+okg:RecommendationExemplar a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "recommendation exemplar" ;
+    rdfs:comment "Reviewed source relationship that must remain an explainable recommendation when both records and the claim remain eligible." .
+
 okg:title a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range xsd:string ;
@@ -216,6 +221,19 @@ okg:relatedTo a rdf:Property ;
     rdfs:label "related to" ;
     rdfs:comment "Links a cataloged resource to another related cataloged resource." .
 
+okg:uses a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf dcterms:relation ;
+    rdfs:label "uses" ;
+    rdfs:comment "Directional link preserving a source Wikidata uses claim as an IRI." .
+
+okg:sourceType a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "source type" ;
+    rdfs:comment "Exact direct source type identity, kept distinct from normalized rdf:type." .
+
 okg:sourceRepo a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:subPropertyOf schema:codeRepository ;
@@ -322,6 +340,18 @@ okg:sourceEntity a rdf:Property ;
     rdfs:label "source entity" ;
     rdfs:comment "Public source entity governed by an exclusion or exception decision." .
 
+okg:sourceObject a rdf:Property ;
+    rdfs:domain okg:RecommendationExemplar ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "source object" ;
+    rdfs:comment "Object entity of a reviewed source relationship exemplar." .
+
+okg:sourcePropertyMapping a rdf:Property ;
+    rdfs:domain okg:RecommendationExemplar ;
+    rdfs:range okg:SourcePropertyMapping ;
+    rdfs:label "source property mapping" ;
+    rdfs:comment "Declared source predicate supporting a reviewed recommendation exemplar." .
+
 okg:ResourceShape a sh:NodeShape ;
     sh:targetClass okg:Resource ;
     sh:property [
@@ -367,6 +397,14 @@ okg:ResourceShape a sh:NodeShape ;
     ] ;
     sh:property [
         sh:path okg:relatedTo ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:uses ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:sourceType ;
         sh:nodeKind sh:IRI ;
     ] ;
     sh:property [

@@ -40,8 +40,11 @@ STAGING_SUPPORT_FILES = (
     "scripts/fetch_data.py",
     "scripts/category_classifier.py",
     "scripts/related_resources.py",
+    "scripts/recommendation_coverage.py",
+    "scripts/wikidata_relationship_audit.py",
     "validation/known_records.json",
     "validation/catalog-manifest.schema.json",
+    "validation/recommendation-coverage-policy.json",
 )
 CATALOG_JSON_PATHS = {"data/ontologies.json", "data/software.json"}
 IGNORED_PARTS = {".DS_Store", ".wrangler"}

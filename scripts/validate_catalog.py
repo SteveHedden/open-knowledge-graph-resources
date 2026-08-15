@@ -106,12 +106,16 @@ RDF_IRI_PREDICATES = {
     OKG.googleScholarProfile,
     OKG.namespaceURI,
     OKG.relatedTo,
+    OKG.uses,
+    OKG.sourceType,
     OKG.sourceRepo,
     OKG.conceptClass,
     OKG.classificationPredicate,
     OKG.sourceDataset,
     OKG.catalogDataset,
     OKG.targetTerm,
+    OKG.sourceObject,
+    OKG.sourcePropertyMapping,
     SKOS.inScheme,
 }
 

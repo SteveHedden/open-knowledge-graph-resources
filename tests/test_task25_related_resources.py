@@ -14,7 +14,9 @@ sys.path.insert(0, str(SCRIPTS))
 
 import fetch_data  # noqa: E402
 import generate_pages  # noqa: E402
+import recommendation_coverage  # noqa: E402
 import related_resources  # noqa: E402
+import wikidata_relationship_audit  # noqa: E402
 
 
 OKG = fetch_data.OKG
@@ -26,6 +28,8 @@ def add_resource(
     qid: str,
     *,
     parents=(),
+    uses=(),
+    source_types=(),
     creators=(),
     repository=None,
     namespace=None,
@@ -43,6 +47,10 @@ def add_resource(
     graph.add((subject, OKG.wikidataId, URIRef(f"https://www.wikidata.org/wiki/{qid}")))
     for parent in parents:
         graph.add((subject, DCTERMS.isPartOf, URIRef(parent)))
+    for used_entity in uses:
+        graph.add((subject, OKG.uses, URIRef(used_entity)))
+    for source_type in source_types:
+        graph.add((subject, OKG.sourceType, URIRef(source_type)))
     for creator in creators:
         graph.add((subject, OKG.creator, URIRef(creator)))
     if repository:
@@ -466,8 +474,352 @@ class ScoringTests(unittest.TestCase):
         related_resources.add_related_resources(graph, "resource")
         self.assertEqual(list(graph.objects(source, OKG.relatedTo)), [])
 
+    def test_directional_uses_claim_is_strong_in_both_recommendation_views(self):
+        graph = Graph()
+        target = add_resource(graph, "linkml", "Q108911530")
+        source = add_resource(
+            graph,
+            "ontogpt",
+            "Q125352352",
+            uses=["http://www.wikidata.org/entity/Q108911530"],
+        )
+        diagnostics = related_resources.add_related_resources(graph, "software")
+        self.assertIn((source, OKG.relatedTo, target), graph)
+        self.assertIn((target, OKG.relatedTo, source), graph)
+        rows = [row for row in diagnostics["relationships"] if row["subject"] == str(source)]
+        self.assertEqual(rows[0]["qualifyingReasons"], ["direct_uses"])
+        self.assertIn("okg:uses", rows[0]["components"][0]["evidence"][0])
+
+    def test_exact_source_type_degree_boundary_is_fixed_and_inclusive(self):
+        source_type = "http://www.wikidata.org/entity/Q9000"
+        for degree, expected in ((5, True), (6, True), (7, False)):
+            with self.subTest(degree=degree):
+                graph = Graph()
+                subjects = [
+                    add_resource(
+                        graph,
+                        f"typed-{degree}-{index}",
+                        f"Q{degree}{index}",
+                        source_types=[source_type],
+                    )
+                    for index in range(degree)
+                ]
+                context = related_resources.build_similarity_context((graph,))
+                pair = related_resources.score_pair(
+                    related_resources.features_for_resource(graph, subjects[0]),
+                    related_resources.features_for_resource(graph, subjects[1]),
+                    context=context,
+                )
+                self.assertEqual(pair.qualifies, expected)
+                self.assertEqual(
+                    "shared_source_type" in pair.qualifying_reasons,
+                    expected,
+                )
+
+    def test_broad_source_type_is_reported_as_suppressed(self):
+        graph = Graph()
+        broad = "http://www.wikidata.org/entity/Q124653107"
+        for index in range(7):
+            add_resource(graph, f"broad-type-{index}", f"Q88{index}", source_types=[broad])
+        diagnostics = related_resources.add_related_resources(graph, "software")
+        self.assertEqual(diagnostics["selectedRelationshipCount"], 0)
+        self.assertEqual(
+            diagnostics["suppressedSharedSourceTypes"],
+            [{"sourceType": broad, "memberCount": 7, "reasons": ["degree_exceeds_limit"]}],
+        )
+
 
 class ProjectionAndDiagnosticsTests(unittest.TestCase):
+    def test_two_software_exemplars_keep_exact_uses_predicate_and_qids(self):
+        mappings = fetch_data.load_source_mappings(fetch_data.SOURCES_PATH)
+        uses_pid = mappings.property_id_for("usesEntity", value_kind="iri")
+        pairs = (("Q125352352", "Q108911530"), ("Q140639972", "Q140639984"))
+        qids = {qid for pair in pairs for qid in pair}
+        records = {
+            f"http://www.wikidata.org/entity/{qid}": fetch_data.ResourceRecord(
+                item_iri=f"http://www.wikidata.org/entity/{qid}",
+                label=qid,
+                types={OKG.Software},
+                homepages={f"https://example.test/{qid.lower()}"},
+            )
+            for qid in qids
+        }
+        edges = tuple(
+            wikidata_relationship_audit.DirectIriEdge(subject, uses_pid, target)
+            for subject, target in pairs
+        )
+        fetch_data.apply_declared_relationships(records, edges, mappings)
+        slugs = {qid: qid.lower() for qid in qids}
+        graph = fetch_data.build_graph(
+            records=records,
+            license_labels={},
+            creator_labels={},
+            human_creators=set(),
+            person_identifiers={},
+            include_software_fields=True,
+            dataset_path="software",
+            slug_registry=slugs,
+        )
+        diagnostics = related_resources.add_related_resources(graph, "software")
+        selected = {
+            (row["subject"], row["candidate"]): row
+            for row in diagnostics["relationships"]
+        }
+        for subject_qid, target_qid in pairs:
+            self.assertEqual(uses_pid, "P2283")
+            source = f"https://openknowledgegraphs.com/software/{subject_qid.lower()}/"
+            target = f"https://openknowledgegraphs.com/software/{target_qid.lower()}/"
+            self.assertIn((source, target), selected)
+            self.assertEqual(selected[(source, target)]["qualifyingReasons"], ["direct_uses"])
+            self.assertIn(
+                wikidata_relationship_audit.DirectIriEdge(
+                    subject_qid, uses_pid, target_qid
+                ),
+                edges,
+            )
+
+    def test_declared_source_types_and_uses_are_preserved_as_distinct_iris(self):
+        mappings = fetch_data.load_source_mappings(fetch_data.SOURCES_PATH)
+        source_type_pid = mappings.property_id_for("sourceType", value_kind="iri")
+        uses_pid = mappings.property_id_for("usesEntity", value_kind="iri")
+        self.assertNotIn('"P2283"', Path(fetch_data.__file__).read_text(encoding="utf-8"))
+        record = fetch_data.ResourceRecord(
+            item_iri="http://www.wikidata.org/entity/Q4866972",
+            label="Basic Formal Ontology",
+            types={OKG.Ontology},
+        )
+        edges = (
+            wikidata_relationship_audit.DirectIriEdge("Q4866972", source_type_pid, "Q324254"),
+            wikidata_relationship_audit.DirectIriEdge("Q4866972", uses_pid, "Q28729320"),
+        )
+        fetch_data.apply_declared_relationships({record.item_iri: record}, edges, mappings)
+        graph = fetch_data.build_graph(
+            records={record.item_iri: record},
+            license_labels={},
+            creator_labels={},
+            human_creators=set(),
+            person_identifiers={},
+            include_software_fields=False,
+            dataset_path="resource",
+            slug_registry={"Q4866972": "basic-formal-ontology"},
+        )
+        subject = URIRef("https://openknowledgegraphs.com/resource/basic-formal-ontology/")
+        self.assertIn((subject, RDF.type, OKG.Ontology), graph)
+        self.assertIn(
+            (subject, OKG.sourceType, URIRef("http://www.wikidata.org/entity/Q324254")),
+            graph,
+        )
+        self.assertIn(
+            (subject, OKG.uses, URIRef("http://www.wikidata.org/entity/Q28729320")),
+            graph,
+        )
+
+    def test_relationship_audit_discovers_unreviewed_predicates_without_scoring_them(self):
+        Edge = wikidata_relationship_audit.DirectIriEdge
+        report = wikidata_relationship_audit.audit_document(
+            (
+                Edge("Q1", "P2283", "Q2"),
+                Edge("Q1", "P2283", "Q999"),
+                Edge("Q2", "P999999", "Q1"),
+                Edge("Q1", "P361", "Q3"),
+            ),
+            {
+                "Q1": frozenset({"resource"}),
+                "Q2": frozenset({"resource", "software"}),
+                "Q3": frozenset({"software"}),
+            },
+            {"P2283", "P361"},
+        )
+        predicates = {row["sourcePropertyId"]: row for row in report["predicates"]}
+        self.assertTrue(predicates["P2283"]["reviewedForScoring"])
+        self.assertFalse(predicates["P999999"]["reviewedForScoring"])
+        self.assertEqual(predicates["P361"]["sameCatalogEdgeCount"], 0)
+        self.assertEqual(predicates["P361"]["crossCatalogEdgeCount"], 1)
+        reviewed = {
+            row["sourcePropertyId"]: row
+            for row in report["reviewedPredicateAvailability"]
+        }
+        self.assertEqual(reviewed["P2283"]["edgeCount"], 2)
+        self.assertEqual(reviewed["P2283"]["uniqueObjectCount"], 2)
+
+    def test_truthy_claim_audit_uses_preferred_rank_and_all_item_predicates(self):
+        entities = {
+            "Q1": {
+                "claims": {
+                    "P1": [
+                        {"rank": "normal", "mainsnak": {"datatype": "wikibase-item", "datavalue": {"value": {"id": "Q2"}}}},
+                        {"rank": "preferred", "mainsnak": {"datatype": "wikibase-item", "datavalue": {"value": {"id": "Q3"}}}},
+                    ],
+                    "P2": [
+                        {"rank": "normal", "mainsnak": {"datatype": "string", "datavalue": {"value": "ignored"}}}
+                    ],
+                }
+            }
+        }
+        self.assertEqual(
+            wikidata_relationship_audit.truthy_item_edges(entities),
+            (wikidata_relationship_audit.DirectIriEdge("Q1", "P1", "Q3"),),
+        )
+
+    def test_final_page_coverage_gate_uses_surviving_targets_and_boundaries(self):
+        def page(qid, target=None):
+            value = {
+                "canonicalUrl": f"https://openknowledgegraphs.com/resource/{qid.lower()}/",
+                "wikidataId": f"https://www.wikidata.org/wiki/{qid}",
+            }
+            if target:
+                value["relatedTools"] = [{"canonicalUrl": target}]
+            return value
+
+        target_url = "https://openknowledgegraphs.com/resource/q2/"
+        survivors = [
+            ("resource", page("Q1", target_url), "Q1", "q1"),
+            ("resource", page("Q2", "https://openknowledgegraphs.com/resource/q1/"), "Q2", "q2"),
+            ("software", {**page("Q3", target_url), "canonicalUrl": "https://openknowledgegraphs.com/software/q3/"}, "Q3", "q3"),
+            ("software", {**page("Q4", "https://invalid.test/"), "canonicalUrl": "https://openknowledgegraphs.com/software/q4/"}, "Q4", "q4"),
+        ]
+        coverage = recommendation_coverage.coverage_by_catalog(survivors)
+        self.assertEqual(coverage["resource"]["coverageShare"], 1.0)
+        self.assertEqual(coverage["software"]["coverageShare"], 0.5)
+        policy = {
+            "maximumEmptyShare": 0.5,
+            "maximumUnreviewedCoverageDecline": 0.05,
+            "acceptedDeclines": [],
+            "acceptedShortfalls": [],
+        }
+        passed = recommendation_coverage.evaluate_coverage(coverage, coverage, policy, "generation")
+        self.assertTrue(passed["gate"]["passed"])
+        exact_boundary = {
+            **coverage,
+            "software": {**coverage["software"], "coverageShare": 0.55},
+        }
+        allowed = recommendation_coverage.evaluate_coverage(
+            coverage, exact_boundary, policy, "generation"
+        )
+        self.assertTrue(allowed["gate"]["passed"])
+        baseline = {**coverage, "software": {**coverage["software"], "coverageShare": 0.550001}}
+        failed = recommendation_coverage.evaluate_coverage(coverage, baseline, policy, "generation")
+        self.assertFalse(failed["gate"]["passed"])
+        reviewed_policy = {
+            **policy,
+            "acceptedDeclines": [
+                {
+                    "baselineGenerationId": "generation",
+                    "catalog": "software",
+                    "rationale": "Explicitly reviewed fixture decline.",
+                }
+            ],
+        }
+        reviewed = recommendation_coverage.evaluate_coverage(
+            coverage, baseline, reviewed_policy, "generation"
+        )
+        self.assertTrue(reviewed["gate"]["passed"])
+
+    def test_reviewed_coverage_shortfall_is_one_generation_and_catalog_specific(self):
+        candidate = {
+            "resource": {"coverageShare": 0.49, "emptyShare": 0.51},
+            "software": {"coverageShare": 0.288235, "emptyShare": 0.711765},
+        }
+        baseline = {
+            "resource": {"coverageShare": 0.182, "emptyShare": 0.818},
+            "software": {"coverageShare": 0.1, "emptyShare": 0.9},
+        }
+        policy = {
+            "maximumEmptyShare": 0.5,
+            "maximumUnreviewedCoverageDecline": 0.05,
+            "acceptedDeclines": [],
+            "acceptedShortfalls": [
+                {
+                    "baselineGenerationId": "approved-generation",
+                    "catalog": "resource",
+                    "minimumCoverageShare": 0.48,
+                    "rationale": "Reviewed interim resource floor.",
+                },
+                {
+                    "baselineGenerationId": "approved-generation",
+                    "catalog": "software",
+                    "minimumCoverageShare": 0.28,
+                    "rationale": "Reviewed interim software floor.",
+                },
+            ],
+        }
+        approved = recommendation_coverage.evaluate_coverage(
+            candidate, baseline, policy, "approved-generation"
+        )
+        self.assertTrue(approved["gate"]["passed"])
+        self.assertTrue(
+            approved["comparisons"]["software"]["reviewedShortfallApplied"]
+        )
+        wrong_generation = recommendation_coverage.evaluate_coverage(
+            candidate, baseline, policy, "new-generation"
+        )
+        self.assertFalse(wrong_generation["gate"]["passed"])
+        below_reviewed_floor = {
+            **candidate,
+            "software": {"coverageShare": 0.279999, "emptyShare": 0.720001},
+        }
+        below = recommendation_coverage.evaluate_coverage(
+            below_reviewed_floor, baseline, policy, "approved-generation"
+        )
+        self.assertFalse(below["gate"]["passed"])
+
+    def test_coverage_policy_rejects_unreviewable_shortfalls(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "policy.json"
+            base = {
+                "maximumEmptyShare": 0.5,
+                "maximumUnreviewedCoverageDecline": 0.05,
+                "acceptedDeclines": [],
+            }
+            for entry in (
+                {
+                    "baselineGenerationId": "generation",
+                    "catalog": "resource",
+                    "minimumCoverageShare": 0.48,
+                    "rationale": "",
+                },
+                {
+                    "baselineGenerationId": "generation",
+                    "catalog": "unknown",
+                    "minimumCoverageShare": 0.48,
+                    "rationale": "Reviewed.",
+                },
+            ):
+                with self.subTest(entry=entry):
+                    path.write_text(
+                        json.dumps({**base, "acceptedShortfalls": [entry]}),
+                        encoding="utf-8",
+                    )
+                    with self.assertRaises(ValueError):
+                        recommendation_coverage.load_policy(path)
+
+    def test_checked_in_interim_shortfall_is_scoped_to_current_baseline(self):
+        policy = recommendation_coverage.load_policy(
+            ROOT / "validation" / "recommendation-coverage-policy.json"
+        )
+        candidate = {
+            "resource": {"coverageShare": 342 / 698, "emptyShare": 1 - 342 / 698},
+            "software": {"coverageShare": 49 / 170, "emptyShare": 1 - 49 / 170},
+        }
+        baseline = {
+            "resource": {"coverageShare": 126 / 694, "emptyShare": 1 - 126 / 694},
+            "software": {"coverageShare": 17 / 170, "emptyShare": 1 - 17 / 170},
+        }
+        approved = recommendation_coverage.evaluate_coverage(
+            candidate,
+            baseline,
+            policy,
+            "20260815T051936Z-6bd3dd44b912",
+        )
+        self.assertTrue(approved["gate"]["passed"])
+        expired = recommendation_coverage.evaluate_coverage(
+            candidate,
+            baseline,
+            policy,
+            "next-successful-generation",
+        )
+        self.assertFalse(expired["gate"]["passed"])
+
     def test_every_source_parent_identity_survives_row_normalization(self):
         item = "http://www.wikidata.org/entity/Q79"
         rows = [

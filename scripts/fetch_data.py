@@ -53,8 +53,10 @@ from related_resources import (
     diagnostics_document,
     write_diagnostics_atomic,
 )
+from wikidata_relationship_audit import DirectIriEdge, audit_document, truthy_item_edges
 
 WDQS_URL = "https://query.wikidata.org/sparql"
+WIKIDATA_API_URL = "https://www.wikidata.org/w/api.php"
 
 ROOT_DIR = Path(
     os.environ.get("OKG_CATALOG_ROOT", Path(__file__).resolve().parent.parent)
@@ -233,6 +235,8 @@ class ResourceRecord:
     licenses: set[str] = field(default_factory=set)
     part_of_entities: set[str] = field(default_factory=set)
     part_of_labels: set[str] = field(default_factory=set)
+    source_types: set[str] = field(default_factory=set)
+    uses_entities: set[str] = field(default_factory=set)
     creators: set[str] = field(default_factory=set)
     programming_languages: set[str] = field(default_factory=set)
     latest_version: str | None = None
@@ -529,6 +533,115 @@ def run_wdqs_query(session: requests.Session, query: str, label: str) -> list[di
             raise WDQSError(f"{label}: malformed JSON response") from exc
 
     raise WDQSError(f"{label}: request attempts exhausted")
+
+
+def fetch_direct_iri_edges(
+    session: requests.Session,
+    qids: set[str],
+) -> tuple[DirectIriEdge, ...]:
+    """Fetch all direct/truthy item-valued claims for the captured cohort."""
+    edges: set[DirectIriEdge] = set()
+    for batch in chunked(sorted(qids), 50):
+        for attempt in range(1, MAX_REQUEST_ATTEMPTS + 1):
+            try:
+                response = session.get(
+                    WIKIDATA_API_URL,
+                    params={
+                        "action": "wbgetentities",
+                        "format": "json",
+                        "ids": "|".join(batch),
+                        "props": "claims",
+                    },
+                    timeout=REQUEST_TIMEOUT_SECONDS,
+                )
+            except requests.RequestException as exc:
+                if attempt == MAX_REQUEST_ATTEMPTS:
+                    raise WDQSError(f"direct relationship audit failed: {exc}") from exc
+                time.sleep(BASE_BACKOFF_SECONDS * (2 ** (attempt - 1)))
+                continue
+            if response.status_code == 429 or 500 <= response.status_code < 600:
+                if attempt == MAX_REQUEST_ATTEMPTS:
+                    raise WDQSError(
+                        f"direct relationship audit failed HTTP {response.status_code}"
+                    )
+                time.sleep(parse_retry_after_seconds(response.headers.get("Retry-After"), attempt))
+                continue
+            try:
+                response.raise_for_status()
+                entities = response.json()["entities"]
+            except (requests.HTTPError, ValueError, KeyError, TypeError) as exc:
+                raise WDQSError("direct relationship audit returned malformed data") from exc
+            edges.update(truthy_item_edges(entities))
+            break
+        time.sleep(QUERY_PAUSE_SECONDS)
+    return tuple(sorted(edges))
+
+
+def apply_declared_relationships(
+    records: dict[str, ResourceRecord],
+    edges: tuple[DirectIriEdge, ...],
+    mappings: SourceMappings,
+) -> None:
+    """Ingest only relationship predicates explicitly reviewed in sources.ttl."""
+    source_type_property = wikidata_property(mappings, "sourceType", value_kind="iri")
+    uses_property = wikidata_property(mappings, "usesEntity", value_kind="iri")
+    for edge in edges:
+        record = records.get(canonical_entity_iri(edge.subject_qid))
+        if record is None:
+            continue
+        target = canonical_entity_iri(edge.object_qid)
+        if edge.property_id == source_type_property:
+            record.source_types.add(target)
+        elif edge.property_id == uses_property:
+            record.uses_entities.add(target)
+
+
+def verify_recommendation_exemplars(
+    graph: Graph,
+    records: dict[str, ResourceRecord],
+    slug_registry: dict[str, str],
+    edges: tuple[DirectIriEdge, ...],
+    mappings: SourceMappings,
+) -> list[dict[str, str]]:
+    """Enforce declarative exemplars whenever their live source facts are eligible."""
+    source_claims = {
+        (edge.subject_qid, edge.property_id, edge.object_qid)
+        for edge in edges
+    }
+    verified: list[dict[str, str]] = []
+    for exemplar in mappings.recommendation_exemplars:
+        if exemplar.catalog != ONTOLOGIES_DATASET:
+            continue
+        subject_record = records.get(canonical_entity_iri(exemplar.subject_qid))
+        object_record = records.get(canonical_entity_iri(exemplar.object_qid))
+        if (
+            subject_record is None
+            or object_record is None
+            or not subject_record.homepages
+            or not object_record.homepages
+            or (
+                exemplar.subject_qid,
+                exemplar.source_property_id,
+                exemplar.object_qid,
+            ) not in source_claims
+        ):
+            continue
+        subject = mint_resource_iri("resource", slug_registry[exemplar.subject_qid])
+        target = mint_resource_iri("resource", slug_registry[exemplar.object_qid])
+        if (subject, OKG.relatedTo, target) not in graph:
+            raise WDQSError(
+                f"Pinned recommendation is missing: {exemplar.label}"
+            )
+        verified.append(
+            {
+                "subjectQid": exemplar.subject_qid,
+                "subjectLabel": exemplar.label,
+                "sourcePropertyId": exemplar.source_property_id,
+                "objectQid": exemplar.object_qid,
+                "selectedTarget": str(target),
+            }
+        )
+    return verified
 
 
 def chunked(items: list[str], size: int) -> list[list[str]]:
@@ -1296,6 +1409,12 @@ def build_graph(
         for parent_entity in sorted(record.part_of_entities):
             graph.add((resource_iri, DCTERMS.isPartOf, URIRef(parent_entity)))
 
+        for source_type in sorted(record.source_types):
+            graph.add((resource_iri, OKG.sourceType, URIRef(source_type)))
+
+        for used_entity in sorted(record.uses_entities):
+            graph.add((resource_iri, OKG.uses, URIRef(used_entity)))
+
         if record.part_of_labels:
             part_of = sorted(record.part_of_labels)[0]
             graph.add((resource_iri, OKG.partOf, Literal(part_of)))
@@ -1450,7 +1569,8 @@ def run() -> int:
             ontology_rows.extend(typed_rows)
             time.sleep(QUERY_PAUSE_SECONDS)
 
-        raw_ontology_count = len(ontology_candidate_facts(ontology_rows))
+        raw_ontology_qids = set(ontology_candidate_facts(ontology_rows))
+        raw_ontology_count = len(raw_ontology_qids)
         ontology_rows, eligibility = filter_ontology_rows(
             ontology_rows,
             source_mappings.eligibility_policy_for(ONTOLOGIES_DATASET),
@@ -1469,6 +1589,18 @@ def run() -> int:
             build_software_base_query(source_mappings),
             "software base query",
         )
+        raw_software_qids = {
+            qid_from_wikidata_iri(item)
+            for row in software_base_rows
+            if (item := binding_value(row, "item"))
+        }
+
+        captured_cohort = raw_ontology_qids | raw_software_qids
+        logging.info(
+            "Auditing direct IRI-valued Wikidata claims for %d captured records",
+            len(captured_cohort),
+        )
+        direct_iri_edges = fetch_direct_iri_edges(session, captured_cohort)
 
         time.sleep(QUERY_PAUSE_SECONDS)
         logging.info("Querying Wikidata for software versions and release dates")
@@ -1529,6 +1661,8 @@ def run() -> int:
         descriptions,
     )
     latest_versions = pick_latest_version_rows(software_version_rows)
+    apply_declared_relationships(ontology_records, direct_iri_edges, source_mappings)
+    apply_declared_relationships(software_records, direct_iri_edges, source_mappings)
 
     for item_iri, (version, release_dt) in latest_versions.items():
         record = software_records.get(item_iri)
@@ -1612,10 +1746,39 @@ def run() -> int:
             dataset="software",
             context=similarity_context,
         )
+        ontology_related_diagnostics["pinnedExemplars"] = verify_recommendation_exemplars(
+            ontology_graph,
+            ontology_records,
+            uri_registry["resource"],
+            direct_iri_edges,
+            source_mappings,
+        )
+        cohort_catalogs: dict[str, frozenset[str]] = {
+            qid: frozenset(
+                catalog
+                for catalog, members in (
+                    ("resource", raw_ontology_qids),
+                    ("software", raw_software_qids),
+                )
+                if qid in members
+            )
+            for qid in sorted(captured_cohort)
+        }
+        source_audit = audit_document(
+            direct_iri_edges,
+            cohort_catalogs,
+            reviewed_property_ids={
+                wikidata_property(source_mappings, "sourceType", value_kind="iri"),
+                wikidata_property(source_mappings, "usesEntity", value_kind="iri"),
+                wikidata_property(source_mappings, "partOfEntity", value_kind="iri"),
+            },
+            labels={qid_from_wikidata_iri(iri): label for iri, label in labels.items()},
+        )
         write_diagnostics_atomic(
             diagnostics_document(
                 (ontology_related_diagnostics, software_related_diagnostics),
                 RELATED_SIMILARITY_CONFIG,
+                source_audit=source_audit,
             ),
             RELATED_DIAGNOSTICS_OUT,
         )

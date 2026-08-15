@@ -39,6 +39,16 @@ class PageMembershipBaselineTests(unittest.TestCase):
         self.baseline = self.root / "baseline"
         (self.candidate / "data").mkdir(parents=True)
         (self.candidate / "site").mkdir()
+        self.coverage_policy = self.candidate / "coverage-policy.json"
+        write_json(
+            self.coverage_policy,
+            {
+                "maximumEmptyShare": 1.0,
+                "maximumUnreviewedCoverageDecline": 1.0,
+                "acceptedDeclines": [],
+                "acceptedShortfalls": [],
+            },
+        )
 
     def tearDown(self):
         self.temporary.cleanup()
@@ -62,6 +72,12 @@ class PageMembershipBaselineTests(unittest.TestCase):
         with (
             mock.patch.object(generate_pages, "DATA_DIR", str(self.candidate / "data")),
             mock.patch.object(generate_pages, "SITE_DIR", str(self.candidate / "site")),
+            mock.patch.object(generate_pages, "COVERAGE_POLICY_PATH", self.coverage_policy),
+            mock.patch.object(
+                generate_pages,
+                "RELATED_DIAGNOSTICS_PATH",
+                self.candidate / "related-resources.json",
+            ),
             mock.patch.object(generate_pages, "check_links", side_effect=fake_check_links) as checker,
         ):
             generate_pages.main(list(arguments))

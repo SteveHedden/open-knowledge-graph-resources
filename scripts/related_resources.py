@@ -5,7 +5,8 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import asdict, dataclass
+from collections import Counter
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Iterable, Mapping
 from urllib.parse import urlsplit, urlunsplit
@@ -48,13 +49,24 @@ TEXT_STOP_WORDS = frozenset(
     }
 )
 
+# The 2026-08-14 full-cohort audit found that degree <= 6 retains narrow exact
+# source types while the next large software class spans 154 comparable records.
+# This is intentionally a fixed corpus policy, not a per-run percentile.
+MAX_SHARED_SOURCE_TYPE_DEGREE = 6
+SOURCE_TYPE_DEGREE_RATIONALE = (
+    "The reviewed 2026-08-14 cohort audit retained exact source types shared by "
+    "at most six comparable records; broader classes were non-discriminating."
+)
+
 
 @dataclass(frozen=True)
 class SimilarityConfig:
     """Public scoring contract. Structural evidence is always mandatory."""
 
     direct_relationship: int = 120
+    direct_uses: int = 120
     shared_parent: int = 100
+    shared_source_type: int = 65
     same_repository: int = 90
     same_namespace_family: int = 70
     shared_creator: int = 55
@@ -68,6 +80,7 @@ class SimilarityConfig:
     score_threshold: int = 60
     max_related: int = 5
     max_shared_parent_degree: int = 6
+    max_shared_source_type_degree: int = MAX_SHARED_SOURCE_TYPE_DEGREE
 
     def __post_init__(self) -> None:
         if self.score_threshold <= 0:
@@ -76,6 +89,8 @@ class SimilarityConfig:
             raise ValueError("max_related must be between one and five")
         if self.max_shared_parent_degree < 2:
             raise ValueError("max_shared_parent_degree must be at least two")
+        if self.max_shared_source_type_degree < 2:
+            raise ValueError("max_shared_source_type_degree must be at least two")
         if not 0.0 <= self.text_similarity_floor <= 1.0:
             raise ValueError("text_similarity_floor must be between zero and one")
 
@@ -88,6 +103,8 @@ class ResourceFeatures:
     subject: URIRef
     source_entities: frozenset[str]
     parents: frozenset[str]
+    uses: frozenset[str]
+    source_types: frozenset[str]
     creators: frozenset[str]
     repositories: frozenset[str]
     namespace_families: frozenset[str]
@@ -105,6 +122,7 @@ class SimilarityContext:
 
     parent_degrees: Mapping[str, int]
     catalog_source_entities: frozenset[str]
+    source_type_degrees: Mapping[str, int] = field(default_factory=dict)
 
 
 @dataclass(frozen=True)
@@ -246,6 +264,8 @@ def features_for_resource(graph: Graph, subject: URIRef) -> ResourceFeatures:
         subject=subject,
         source_entities=source_entities,
         parents=_iri_values(graph, subject, DCTERMS.isPartOf),
+        uses=_iri_values(graph, subject, OKG.uses),
+        source_types=_iri_values(graph, subject, OKG.sourceType),
         creators=_iri_values(graph, subject, OKG.creator),
         repositories=repositories,
         namespace_families=namespace_families,
@@ -272,6 +292,7 @@ def _comparable_subjects(graph: Graph) -> list[URIRef]:
 def build_similarity_context(graphs: Iterable[Graph]) -> SimilarityContext:
     """Build global parent degree and catalog-identity context across catalogs."""
     parent_members: dict[str, set[str]] = {}
+    source_type_members: dict[str, set[str]] = {}
     catalog_source_entities: set[str] = set()
     for graph in graphs:
         for subject in _comparable_subjects(graph):
@@ -279,9 +300,14 @@ def build_similarity_context(graphs: Iterable[Graph]) -> SimilarityContext:
             catalog_source_entities.update(features.source_entities)
             for parent in features.parents:
                 parent_members.setdefault(parent, set()).add(str(subject))
+            for source_type in features.source_types:
+                source_type_members.setdefault(source_type, set()).add(str(subject))
     return SimilarityContext(
         parent_degrees={parent: len(members) for parent, members in parent_members.items()},
         catalog_source_entities=frozenset(catalog_source_entities),
+        source_type_degrees={
+            source_type: len(members) for source_type, members in source_type_members.items()
+        },
     )
 
 
@@ -316,6 +342,17 @@ def score_pair(
         )
         qualifying_reasons.append("direct_relationship")
 
+    uses_evidence = []
+    if left.uses & right.source_entities:
+        uses_evidence.append(f"{left.subject} okg:uses {right.subject}")
+    if right.uses & left.source_entities:
+        uses_evidence.append(f"{right.subject} okg:uses {left.subject}")
+    if uses_evidence:
+        components.append(
+            ScoreComponent("direct_uses", config.direct_uses, tuple(sorted(uses_evidence)))
+        )
+        qualifying_reasons.append("direct_uses")
+
     shared_parents = _intersection(left.parents, right.parents)
     if context is not None:
         shared_parents = tuple(
@@ -329,6 +366,22 @@ def score_pair(
             ScoreComponent("shared_parent", config.shared_parent, shared_parents)
         )
         qualifying_reasons.append("shared_parent")
+
+    shared_source_types: tuple[str, ...] = ()
+    if context is not None:
+        shared_source_types = tuple(
+            source_type
+            for source_type in _intersection(left.source_types, right.source_types)
+            if 2 <= context.source_type_degrees.get(source_type, 0)
+            <= config.max_shared_source_type_degree
+        )
+    if shared_source_types:
+        components.append(
+            ScoreComponent(
+                "shared_source_type", config.shared_source_type, shared_source_types
+            )
+        )
+        qualifying_reasons.append("shared_source_type")
 
     structural_specs = (
         ("same_repository", config.same_repository, left.repositories, right.repositories),
@@ -415,6 +468,8 @@ def add_related_resources(
         for attribute in (
             "source_entities",
             "parents",
+            "uses",
+            "source_types",
             "creators",
             "repositories",
             "namespace_families",
@@ -432,6 +487,19 @@ def add_related_resources(
         if reasons:
             suppressed_shared_parents.append(
                 {"parent": parent, "memberCount": degree, "reasons": reasons}
+            )
+    suppressed_shared_source_types = []
+    for source_type in sorted(indexes["source_types"]):
+        degree = context.source_type_degrees.get(
+            source_type, len(indexes["source_types"][source_type])
+        )
+        if degree > config.max_shared_source_type_degree:
+            suppressed_shared_source_types.append(
+                {
+                    "sourceType": source_type,
+                    "memberCount": degree,
+                    "reasons": ["degree_exceeds_limit"],
+                }
             )
 
     selected_scores: list[PairScore] = []
@@ -453,6 +521,15 @@ def add_related_resources(
             candidates.update(indexes["source_entities"].get(parent, set()))
         for source_entity in features.source_entities:
             candidates.update(indexes["parents"].get(source_entity, set()))
+            candidates.update(indexes["uses"].get(source_entity, set()))
+        for used_entity in features.uses:
+            candidates.update(indexes["source_entities"].get(used_entity, set()))
+        for source_type in features.source_types:
+            if (
+                2 <= context.source_type_degrees.get(source_type, 0)
+                <= config.max_shared_source_type_degree
+            ):
+                candidates.update(indexes["source_types"].get(source_type, set()))
         candidates.discard(subject)
 
         scored: list[PairScore] = []
@@ -474,6 +551,9 @@ def add_related_resources(
             selected_scores.append(result)
 
     selected_scores.sort(key=lambda result: (result.subject, -result.score, result.candidate))
+    reason_distribution = Counter(
+        reason for result in selected_scores for reason in result.qualifying_reasons
+    )
     return {
         "dataset": dataset,
         "candidateResourceCount": len(subjects),
@@ -481,7 +561,10 @@ def add_related_resources(
         "belowThresholdCount": below_threshold_count,
         "suppressedSharedParentCount": len(suppressed_shared_parents),
         "suppressedSharedParents": suppressed_shared_parents,
+        "suppressedSharedSourceTypeCount": len(suppressed_shared_source_types),
+        "suppressedSharedSourceTypes": suppressed_shared_source_types,
         "selectedRelationshipCount": len(selected_scores),
+        "qualifyingReasonDistribution": dict(sorted(reason_distribution.items())),
         "relationships": [result.as_dict() for result in selected_scores],
     }
 
@@ -489,12 +572,19 @@ def add_related_resources(
 def diagnostics_document(
     catalogs: Iterable[dict[str, object]],
     config: SimilarityConfig = DEFAULT_CONFIG,
+    source_audit: dict[str, object] | None = None,
 ) -> dict[str, object]:
-    return {
-        "schemaVersion": "1.0.0",
+    document = {
+        "schemaVersion": "2.0.0",
         "scoringConfig": asdict(config),
+        "scoringPolicyRationale": {
+            "maxSharedSourceTypeDegree": SOURCE_TYPE_DEGREE_RATIONALE,
+        },
         "catalogs": sorted(catalogs, key=lambda catalog: str(catalog["dataset"])),
     }
+    if source_audit is not None:
+        document["sourceRelationshipAudit"] = source_audit
+    return document
 
 
 def write_diagnostics_atomic(payload: dict[str, object], destination: Path) -> None:

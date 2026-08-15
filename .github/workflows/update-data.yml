@@ -75,6 +75,7 @@ jobs:
       - name: Generate staged detail pages
         env:
           OKG_CATALOG_ROOT: ${{ runner.temp }}/catalog-staging
+          OKG_RELATED_DIAGNOSTICS_PATH: ${{ runner.temp }}/related-resources.json
         run: >-
           python scripts/generate_pages.py
           --membership-baseline "${{ steps.published_baseline.outputs.path }}"

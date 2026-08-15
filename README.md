@@ -275,6 +275,8 @@ The schema deliberately excludes controlled-term instances and dataset descripti
 | `okg:hasLicense` | `okg:License` | optional; multi-valued |
 | `okg:partOf` | `xsd:string` | optional; max 1 |
 | `dcterms:isPartOf` | IRI | optional; multi-valued canonical parent identity |
+| `okg:uses` | IRI | optional; multi-valued source relationship |
+| `okg:sourceType` | IRI | exact source `P31` identity; multi-valued |
 | `okg:latestVersion` | `xsd:string` | software only; optional; max 1 |
 | `okg:releaseDate` | `xsd:date` | software only; optional; max 1 |
 | `okg:licenseName` | `xsd:string` | license node label |
@@ -288,9 +290,11 @@ SHACL constraints are defined in `okg:ResourceShape`, `okg:SoftwareShape`, and r
 | Signal | Weight | Qualification role |
 | --- | ---: | --- |
 | Direct `dcterms:isPartOf` relationship between records | 120 | structural |
+| Direct source `P2283` / `okg:uses` relationship between records | 120 | structural |
 | Exact shared parent/project IRI that resolves to a cataloged resource and has at most 6 members | 100 | structural |
 | Same canonical repository | 90 | structural |
 | Same specific namespace base | 70 | structural |
+| Exact shared source `P31` type with 2–6 catalog members | 65 | structural |
 | Exact shared creator or maintaining organization | 55 | structural; requires corroboration to reach 60 |
 | Shared category | 4 | corroborating only |
 | Shared software type | 4 | corroborating only |
@@ -299,7 +303,7 @@ SHACL constraints are defined in `okg:ResourceShape`, `okg:SoftwareShape`, and r
 | Shared license | 2 | corroborating only |
 | Text-token Jaccard similarity of at least 0.25 | 3 | corroborating only |
 
-Repository normalization ignores HTTP versus HTTPS, query/fragment suffixes, a trailing slash, and `.git`, but never equates different repositories merely because they share an owner. Namespace matching requires the same scheme, authority, and complete base path; a shared host alone is insufficient. Shared parent/project identity qualifies only when the parent resolves to an eligible catalog resource and has at most six members across both catalogs. This suppresses external registry, aggregator, topic, and collection buckets; the degree limit also prevents structurally indistinguishable siblings from being cut off by the five-result cap. Direct child-to-parent links remain structural regardless of parent degree. Exact creator identity is structural but needs corroboration to clear the score threshold. Missing values contribute no evidence, and broad or textual signals can never qualify a pair without structural evidence.
+Repository normalization ignores HTTP versus HTTPS, query/fragment suffixes, a trailing slash, and `.git`, but never equates different repositories merely because they share an owner. Namespace matching requires the same scheme, authority, and complete base path; a shared host alone is insufficient. Shared parent/project identity qualifies only when the parent resolves to an eligible catalog resource and has at most six members across both catalogs. Exact source types likewise qualify only when shared by two to six comparable records; broader types are non-discriminating and suppressed. These limits prevent external registry, aggregator, topic, collection, and broad type buckets from producing false similarity. Direct child-to-parent and `uses` links remain structural regardless of degree. Exact creator identity is structural but needs corroboration to clear the score threshold. Missing values contribute no evidence, and broad or textual signals can never qualify a pair without structural evidence.
 
 Each refresh writes deterministic component scores and qualifying reasons to `build/related-resources.json` by default. CI redirects that private diagnostic to the runner temporary directory and uploads it as a workflow artifact; scoring internals are not added to public RDF or catalog JSON.
 

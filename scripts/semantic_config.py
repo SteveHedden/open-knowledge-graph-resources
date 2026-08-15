@@ -212,11 +212,22 @@ class SourceEligibilityPolicy:
 
 
 @dataclass(frozen=True)
+class RecommendationExemplar:
+    iri: URIRef
+    catalog: URIRef
+    subject_qid: str
+    source_property_id: str
+    object_qid: str
+    label: str
+
+
+@dataclass(frozen=True)
 class SourceMappings:
     graph: Graph
     class_mappings: tuple[SourceClassMapping, ...]
     property_mappings: tuple[SourcePropertyMapping, ...]
     eligibility_policies: tuple[SourceEligibilityPolicy, ...]
+    recommendation_exemplars: tuple[RecommendationExemplar, ...]
 
     def class_mappings_for(self, catalog: URIRef) -> tuple[SourceClassMapping, ...]:
         return tuple(mapping for mapping in self.class_mappings if catalog in mapping.catalogs)
@@ -329,6 +340,7 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
     class_mappings: list[SourceClassMapping] = []
     property_mappings: list[SourcePropertyMapping] = []
     eligibility_policies: list[SourceEligibilityPolicy] = []
+    recommendation_exemplars: list[RecommendationExemplar] = []
 
     for subject in graph.subjects(RDF.type, OKG.SourceClassMapping):
         if not isinstance(subject, URIRef):
@@ -422,6 +434,32 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
             )
         )
 
+    property_ids_by_iri = {
+        mapping.iri: mapping.source_property_id for mapping in property_mappings
+    }
+    for subject in graph.subjects(RDF.type, OKG.RecommendationExemplar):
+        if not isinstance(subject, URIRef):
+            raise SemanticConfigError("Recommendation exemplars must have stable IRIs.")
+        property_mapping = _single_iri(graph, subject, OKG.sourcePropertyMapping)
+        if property_mapping not in property_ids_by_iri:
+            raise SemanticConfigError(
+                f"Recommendation exemplar {subject} uses an undeclared source mapping."
+            )
+        recommendation_exemplars.append(
+            RecommendationExemplar(
+                iri=subject,
+                catalog=_single_iri(graph, subject, OKG.catalogDataset),
+                subject_qid=_qid_from_source_entity(
+                    _single_iri(graph, subject, OKG.sourceEntity)
+                ),
+                source_property_id=property_ids_by_iri[property_mapping],
+                object_qid=_qid_from_source_entity(
+                    _single_iri(graph, subject, OKG.sourceObject)
+                ),
+                label=_single_literal(graph, subject, RDFS.label),
+            )
+        )
+
     class_mappings.sort(key=lambda mapping: (mapping.sort_order, mapping.source_class_id))
     property_mappings.sort(key=lambda mapping: (mapping.sort_order, mapping.source_property_id))
     if not class_mappings or not property_mappings:
@@ -432,6 +470,9 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
         class_mappings=tuple(class_mappings),
         property_mappings=tuple(property_mappings),
         eligibility_policies=tuple(eligibility_policies),
+        recommendation_exemplars=tuple(
+            sorted(recommendation_exemplars, key=lambda exemplar: str(exemplar.iri))
+        ),
     )
 
 
