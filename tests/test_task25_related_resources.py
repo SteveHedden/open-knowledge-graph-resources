@@ -798,18 +798,18 @@ class ProjectionAndDiagnosticsTests(unittest.TestCase):
             ROOT / "validation" / "recommendation-coverage-policy.json"
         )
         candidate = {
-            "resource": {"coverageShare": 342 / 698, "emptyShare": 1 - 342 / 698},
-            "software": {"coverageShare": 49 / 170, "emptyShare": 1 - 49 / 170},
+            "resource": {"coverageShare": 343 / 698, "emptyShare": 1 - 343 / 698},
+            "software": {"coverageShare": 50 / 171, "emptyShare": 1 - 50 / 171},
         }
         baseline = {
-            "resource": {"coverageShare": 126 / 694, "emptyShare": 1 - 126 / 694},
-            "software": {"coverageShare": 17 / 170, "emptyShare": 1 - 17 / 170},
+            "resource": {"coverageShare": 340 / 697, "emptyShare": 1 - 340 / 697},
+            "software": {"coverageShare": 49 / 170, "emptyShare": 1 - 49 / 170},
         }
         approved = recommendation_coverage.evaluate_coverage(
             candidate,
             baseline,
             policy,
-            "20260815T051936Z-6bd3dd44b912",
+            "20260815T061705Z-3eac2200a7f4",
         )
         self.assertTrue(approved["gate"]["passed"])
         expired = recommendation_coverage.evaluate_coverage(
