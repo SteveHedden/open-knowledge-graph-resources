@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openknowledgegraphs.com/validation/task-24-classification-audit.schema.json",
+  "title": "Task 24 Wikidata classification audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "taskId",
+    "mode",
+    "auditTimestamp",
+    "sourceSnapshot",
+    "cohortSize",
+    "markerQids",
+    "confirmedExclusionQids",
+    "ruleExcludedQids",
+    "liveEditsPerformed",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "taskId": {"const": "24"},
+    "mode": {"enum": ["review-first", "partially-executed", "executed"]},
+    "auditTimestamp": {"type": "string", "format": "date-time"},
+    "sourceSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "capturedAt", "endpoint", "sourceClasses"],
+      "properties": {
+        "path": {"const": "audits/wikidata/task-24-source-snapshot.json"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "capturedAt": {"type": "string", "format": "date-time"},
+        "endpoint": {"type": "string", "format": "uri"},
+        "sourceClasses": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^Q[0-9]+$"}
+        }
+      }
+    },
+    "cohortSize": {"type": "integer", "minimum": 1},
+    "markerQids": {"$ref": "#/$defs/qidArray"},
+    "confirmedExclusionQids": {"$ref": "#/$defs/qidArray"},
+    "ruleExcludedQids": {"$ref": "#/$defs/qidArray"},
+    "liveEditsPerformed": {"type": "boolean"},
+    "manualReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "completedAt", "recordCount", "method", "reviewedRanges"],
+      "properties": {
+        "status": {"enum": ["pending", "complete"]},
+        "completedAt": {"type": ["string", "null"], "format": "date-time"},
+        "recordCount": {"type": "integer", "minimum": 0},
+        "method": {"type": "string", "minLength": 1},
+        "reviewedRanges": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[0-9]+-[0-9]+$"}
+        }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "complete"}}},
+          "then": {
+            "properties": {
+              "completedAt": {"type": "string", "format": "date-time"},
+              "recordCount": {"minimum": 1},
+              "reviewedRanges": {"minItems": 1}
+            }
+          }
+        }
+      ]
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/auditRecord"}
+    }
+  },
+  "$defs": {
+    "qidArray": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^Q[0-9]+$"}
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["guid", "property", "value", "rank"],
+      "properties": {
+        "guid": {"type": ["string", "null"]},
+        "property": {"type": "string", "pattern": "^P[0-9]+$"},
+        "value": {"type": "string", "pattern": "^Q[0-9]+$"},
+        "rank": {"enum": ["preferred", "normal", "deprecated"]}
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action", "claimGuid", "property", "value"],
+      "properties": {
+        "action": {"enum": ["add", "remove"]},
+        "claimGuid": {"type": ["string", "null"]},
+        "property": {"type": "string", "pattern": "^P[0-9]+$"},
+        "value": {"type": "string", "pattern": "^Q[0-9]+$"}
+      }
+    },
+    "auditRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "qid",
+        "label",
+        "description",
+        "matchedSourceClasses",
+        "triggeringSignals",
+        "parentQids",
+        "decision",
+        "status",
+        "beforeClaims",
+        "proposedClaims",
+        "afterClaims",
+        "editOperations",
+        "evidenceUrls",
+        "rationale",
+        "oldRevisionId",
+        "newRevisionId",
+        "diffUrl"
+      ],
+      "properties": {
+        "qid": {"type": "string", "pattern": "^Q[0-9]+$"},
+        "label": {"type": "string", "minLength": 1},
+        "description": {"type": ["string", "null"]},
+        "matchedSourceClasses": {"$ref": "#/$defs/qidArray"},
+        "triggeringSignals": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "parentQids": {"$ref": "#/$defs/qidArray"},
+        "decision": {"enum": ["correct-wikidata-and-exclude-locally", "exclude-locally", "retain"]},
+        "status": {"enum": ["planned", "approved", "executed", "no-edit"]},
+        "beforeClaims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+        "proposedClaims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+        "afterClaims": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "array", "items": {"$ref": "#/$defs/claim"}}
+          ]
+        },
+        "editOperations": {"type": "array", "items": {"$ref": "#/$defs/operation"}},
+        "evidenceUrls": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "format": "uri"}
+        },
+        "rationale": {"type": "string", "minLength": 1},
+        "oldRevisionId": {"type": ["integer", "null"], "minimum": 1},
+        "newRevisionId": {"type": ["integer", "null"], "minimum": 1},
+        "diffUrl": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "string", "format": "uri"}
+          ]
+        }
+      }
+    }
+  }
+}

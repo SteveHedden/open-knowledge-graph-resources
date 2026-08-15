@@ -16,7 +16,7 @@ from pathlib import Path
 
 import requests
 from rdflib import Graph, Literal, URIRef
-from rdflib.namespace import RDF, RDFS, XSD
+from rdflib.namespace import DCTERMS, RDF, RDFS, XSD
 
 from category_classifier import (
     DEFAULT_BATCH_SIZE,
@@ -35,6 +35,7 @@ from semantic_config import (
     ControlledVocabulary,
     SemanticConfigError,
     SourceMappings,
+    SourceEligibilityPolicy,
     classification_label_projection,
     controlled_vocabulary_projection,
     load_controlled_vocabulary,
@@ -43,10 +44,21 @@ from semantic_config import (
     write_curated_assignments_atomic,
     write_json_atomic as write_projection_json_atomic,
 )
+from related_resources import (
+    DEFAULT_CONFIG as RELATED_SIMILARITY_CONFIG,
+    SimilarityContext,
+    SimilarityConfig,
+    add_related_resources,
+    build_similarity_context,
+    diagnostics_document,
+    write_diagnostics_atomic,
+)
 
 WDQS_URL = "https://query.wikidata.org/sparql"
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(
+    os.environ.get("OKG_CATALOG_ROOT", Path(__file__).resolve().parent.parent)
+).resolve()
 DATA_DIR = ROOT_DIR / "data"
 ONTOLOGIES_OUT = DATA_DIR / "ontologies.ttl"
 SOFTWARE_OUT = DATA_DIR / "software.ttl"
@@ -57,6 +69,12 @@ SOFTWARE_TYPES_JSON_OUT = DATA_DIR / "software_types.json"
 CONTROLLED_VOCABULARIES_JSON_OUT = DATA_DIR / "controlled_vocabularies.json"
 URI_REGISTRY_OUT = DATA_DIR / "uri_registry.json"
 PAGE_QIDS_LEGACY = DATA_DIR / "page_qids.json"
+RELATED_DIAGNOSTICS_OUT = Path(
+    os.environ.get(
+        "OKG_RELATED_DIAGNOSTICS_PATH",
+        ROOT_DIR / "build" / "related-resources.json",
+    )
+).resolve()
 
 USER_AGENT = os.getenv(
     "WDQS_USER_AGENT",
@@ -71,8 +89,6 @@ MAX_REQUEST_ATTEMPTS = 4
 BASE_BACKOFF_SECONDS = 5
 QUERY_PAUSE_SECONDS = float(os.getenv("WDQS_QUERY_PAUSE_SECONDS", "1.0"))
 LABEL_QUERY_BATCH_SIZE = int(os.getenv("WDQS_LABEL_QUERY_BATCH_SIZE", "100"))
-HOMEPAGE_COVERAGE_WARN_THRESHOLD = float(os.getenv("HOMEPAGE_COVERAGE_WARN_THRESHOLD", "0.30"))
-ITEM_COUNT_DROP_WARN_THRESHOLD = float(os.getenv("ITEM_COUNT_DROP_WARN_THRESHOLD", "0.50"))
 CATEGORY_CLASSIFICATION_BATCH_SIZE = int(
     os.getenv("CATEGORY_CLASSIFICATION_BATCH_SIZE", str(DEFAULT_BATCH_SIZE))
 )
@@ -138,6 +154,7 @@ def class_union_clause(mappings: SourceMappings, catalog: URIRef) -> str:
 
 def build_type_base_query(type_qid: str, mappings: SourceMappings) -> str:
     path = wikidata_class_path(mappings, ONTOLOGIES_DATASET)
+    direct_type_property = wikidata_property(mappings, "instanceOf", ONTOLOGIES_DATASET, "iri")
     clauses = [
         optional_direct_clause(mappings, "officialWebsite", "officialWebsite", ONTOLOGIES_DATASET, "iri"),
         optional_direct_clause(mappings, "sourceCodeRepo", "sourceCodeRepo", ONTOLOGIES_DATASET, "iri"),
@@ -150,9 +167,10 @@ def build_type_base_query(type_qid: str, mappings: SourceMappings) -> str:
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
 
-SELECT DISTINCT ?item ?officialWebsite ?sourceCodeRepo ?namespaceURI ?license ?partOfEntity ?creator
+SELECT DISTINCT ?item ?directType ?officialWebsite ?sourceCodeRepo ?namespaceURI ?license ?partOfEntity ?creator
 WHERE {{
   ?item {path} wd:{type_qid} .
+  OPTIONAL {{ ?item wdt:{direct_type_property} ?directType . }}
 {chr(10).join(clauses)}
 }}
 """
@@ -213,11 +231,115 @@ class ResourceRecord:
     source_repos: set[str] = field(default_factory=set)
     namespace_uris: set[str] = field(default_factory=set)
     licenses: set[str] = field(default_factory=set)
+    part_of_entities: set[str] = field(default_factory=set)
     part_of_labels: set[str] = field(default_factory=set)
     creators: set[str] = field(default_factory=set)
     programming_languages: set[str] = field(default_factory=set)
     latest_version: str | None = None
     release_date: date | None = None
+
+
+@dataclass(frozen=True)
+class OntologyCandidateFacts:
+    qid: str
+    direct_type_qids: frozenset[str]
+    direct_parent_qids: frozenset[str]
+
+
+@dataclass(frozen=True)
+class OntologyEligibilityResult:
+    eligible_qids: frozenset[str]
+    declared_exclusion_qids: frozenset[str]
+    rule_exclusion_qids: frozenset[str]
+
+
+def ontology_candidate_facts(rows: list[dict]) -> dict[str, OntologyCandidateFacts]:
+    collected: dict[str, dict[str, set[str]]] = {}
+    for row in rows:
+        item_iri = binding_value(row, "item")
+        if not item_iri:
+            continue
+        qid = qid_from_wikidata_iri(item_iri)
+        entry = collected.setdefault(qid, {"types": set(), "parents": set()})
+        direct_type = binding_value(row, "directType")
+        if direct_type:
+            entry["types"].add(qid_from_wikidata_iri(direct_type))
+        parent = binding_value(row, "partOfEntity")
+        if parent:
+            entry["parents"].add(qid_from_wikidata_iri(parent))
+    return {
+        qid: OntologyCandidateFacts(
+            qid=qid,
+            direct_type_qids=frozenset(values["types"]),
+            direct_parent_qids=frozenset(values["parents"]),
+        )
+        for qid, values in collected.items()
+    }
+
+
+def evaluate_ontology_eligibility(
+    facts: dict[str, OntologyCandidateFacts],
+    policy: SourceEligibilityPolicy,
+) -> OntologyEligibilityResult:
+    """Evaluate the narrow RDF-declared term/component-with-parent rule.
+
+    Confirmed exclusions take precedence over reviewed exceptions. A parent is
+    cataloged only when it is itself a raw candidate and recursively eligible
+    in this same snapshot. Cycles in policy-relevant direct part-of facts are rejected
+    rather than producing traversal-order-dependent publication decisions.
+    """
+
+    memo: dict[str, bool] = {}
+    rule_exclusions: set[str] = set()
+
+    def is_eligible(qid: str, visiting: tuple[str, ...] = ()) -> bool:
+        if qid in memo:
+            return memo[qid]
+        if qid in policy.exclusions:
+            memo[qid] = False
+            return False
+        if qid in policy.exceptions:
+            memo[qid] = True
+            return True
+        if qid in visiting:
+            cycle = " -> ".join((*visiting, qid))
+            raise SemanticConfigError(
+                f"Policy-relevant Wikidata part-of cycle requires review: {cycle}"
+            )
+
+        candidate = facts[qid]
+        has_marker = bool(candidate.direct_type_qids & policy.term_component_markers)
+        has_cataloged_parent = has_marker and any(
+            parent_qid in facts and is_eligible(parent_qid, (*visiting, qid))
+            for parent_qid in sorted(candidate.direct_parent_qids)
+        )
+        eligible = not has_cataloged_parent
+        memo[qid] = eligible
+        if not eligible:
+            rule_exclusions.add(qid)
+        return eligible
+
+    eligible = frozenset(qid for qid in sorted(facts) if is_eligible(qid))
+    return OntologyEligibilityResult(
+        eligible_qids=eligible,
+        declared_exclusion_qids=frozenset(set(facts) & set(policy.exclusions)),
+        rule_exclusion_qids=frozenset(rule_exclusions),
+    )
+
+
+def filter_ontology_rows(
+    rows: list[dict],
+    policy: SourceEligibilityPolicy,
+) -> tuple[list[dict], OntologyEligibilityResult]:
+    facts = ontology_candidate_facts(rows)
+    result = evaluate_ontology_eligibility(facts, policy)
+    filtered = [
+        row
+        for row in rows
+        if (item := binding_value(row, "item"))
+        and qid_from_wikidata_iri(item) in result.eligible_qids
+    ]
+    return filtered, result
 
 
 def configure_logging() -> None:
@@ -639,6 +761,7 @@ def parse_ontology_rows(
 
         part_of_iri_raw = binding_value(row, "partOfEntity")
         if part_of_iri_raw:
+            record.part_of_entities.add(canonical_entity_iri(part_of_iri_raw))
             part_of_label = label_for_entity(part_of_iri_raw, labels)
             record.part_of_labels.add(part_of_label)
 
@@ -691,6 +814,7 @@ def parse_software_rows(
 
         part_of_iri_raw = binding_value(row, "partOfEntity")
         if part_of_iri_raw:
+            record.part_of_entities.add(canonical_entity_iri(part_of_iri_raw))
             part_of_label = label_for_entity(part_of_iri_raw, labels)
             record.part_of_labels.add(part_of_label)
 
@@ -973,70 +1097,12 @@ def creators_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, str]]
 
 def add_related_tools(
     graph: Graph,
-    group_predicate: URIRef,
-    feature_predicates: list[URIRef],
-    max_related: int = 5,
-) -> None:
-    """Compute 'related' links between resources that share a value for
-    group_predicate (OKG.softwareType for software, OKG.category for
-    ontologies/vocabularies), ranked by Jaccard similarity over each
-    resource's neighbors along feature_predicates in the graph. Writes the
-    top matches back as OKG.relatedTo triples. Ties (including the common
-    case of two resources sharing zero neighbors, e.g. missing creator data)
-    fall back to alphabetical order by title.
-
-    Candidates are pre-filtered to resources that have a homepage — the
-    dominant reason a resource never gets a published page in generate_pages.py
-    (see passes_content_filter there) — so abandoned/thin entries don't crowd
-    out real matches in the top N. generate_pages.py still does a final prune
-    against the actual page-worthy set (its content filter also checks
-    description quality and does a live link check), so this is a quality
-    pre-filter, not a substitute for that.
-    """
-    subjects = sorted(
-        {
-            s
-            for s in graph.subjects(predicate=group_predicate)
-            if isinstance(s, URIRef) and (s, OKG.homepage, None) in graph
-        },
-        key=str,
-    )
-
-    group_value: dict[URIRef, URIRef] = {}
-    titles: dict[URIRef, str] = {}
-    features: dict[URIRef, set[tuple[str, str]]] = {}
-
-    for subject in subjects:
-        group_iri = first_iri_value(graph, subject, group_predicate)
-        if not group_iri:
-            continue
-        group_value[subject] = URIRef(group_iri)
-        titles[subject] = first_literal_value(graph, subject, OKG.title) or str(subject)
-
-        feature_set: set[tuple[str, str]] = set()
-        for predicate in feature_predicates:
-            for value in graph.objects(subject, predicate):
-                feature_set.add((str(predicate), str(value)))
-        features[subject] = feature_set
-
-    buckets: dict[URIRef, list[URIRef]] = {}
-    for subject, group_iri in group_value.items():
-        buckets.setdefault(group_iri, []).append(subject)
-
-    for members in buckets.values():
-        for subject in members:
-            subject_features = features.get(subject, set())
-            scored: list[tuple[float, str, URIRef]] = []
-            for other in members:
-                if other == subject:
-                    continue
-                other_features = features.get(other, set())
-                union = subject_features | other_features
-                score = len(subject_features & other_features) / len(union) if union else 0.0
-                scored.append((score, titles.get(other, str(other)), other))
-            scored.sort(key=lambda row: (-row[0], row[1].casefold()))
-            for _, _, related_subject in scored[:max_related]:
-                graph.add((subject, OKG.relatedTo, related_subject))
+    dataset: str,
+    config: SimilarityConfig = RELATED_SIMILARITY_CONFIG,
+    context: SimilarityContext | None = None,
+) -> dict[str, object]:
+    """Hardened compatibility entry point for KG-grounded similarity."""
+    return add_related_resources(graph, dataset=dataset, config=config, context=context)
 
 
 def related_tools_for_resource(graph: Graph, subject: URIRef) -> list[dict[str, str]]:
@@ -1227,6 +1293,9 @@ def build_graph(
             namespace_uri = sorted(record.namespace_uris)[0]
             graph.add((resource_iri, OKG.namespaceURI, URIRef(namespace_uri)))
 
+        for parent_entity in sorted(record.part_of_entities):
+            graph.add((resource_iri, DCTERMS.isPartOf, URIRef(parent_entity)))
+
         if record.part_of_labels:
             part_of = sorted(record.part_of_labels)[0]
             graph.add((resource_iri, OKG.partOf, Literal(part_of)))
@@ -1289,80 +1358,6 @@ def build_graph(
     return graph
 
 
-def load_existing_payload(path: Path) -> dict[str, object] | None:
-    if not path.exists():
-        return None
-    try:
-        content = path.read_text(encoding="utf-8")
-        loaded = json.loads(content)
-    except (OSError, json.JSONDecodeError) as exc:
-        logging.warning("Could not read previous payload %s: %s", path, exc)
-        return None
-    if not isinstance(loaded, dict):
-        logging.warning("Previous payload %s has unexpected format and will be ignored.", path)
-        return None
-    return loaded
-
-
-def payload_item_list(payload: dict[str, object] | None) -> list[dict[str, object]]:
-    if not payload:
-        return []
-    items = payload.get("items")
-    if not isinstance(items, list):
-        return []
-    return [item for item in items if isinstance(item, dict)]
-
-
-def item_count(items: list[dict[str, object]]) -> int:
-    return len(items)
-
-
-def homepage_coverage_ratio(items: list[dict[str, object]]) -> float:
-    total = len(items)
-    if total == 0:
-        return 0.0
-    with_homepage = 0
-    for item in items:
-        homepage = item.get("homepage")
-        if isinstance(homepage, str) and homepage.strip():
-            with_homepage += 1
-    return with_homepage / total
-
-
-def warn_on_quality_drift(
-    dataset_name: str,
-    new_payload: dict[str, object],
-    previous_payload: dict[str, object] | None,
-) -> None:
-    new_items = payload_item_list(new_payload)
-    new_count = item_count(new_items)
-    new_coverage = homepage_coverage_ratio(new_items)
-
-    if new_count > 0 and new_coverage < HOMEPAGE_COVERAGE_WARN_THRESHOLD:
-        logging.warning(
-            "%s: homepage coverage is low at %.1f%% (threshold %.1f%%).",
-            dataset_name,
-            new_coverage * 100.0,
-            HOMEPAGE_COVERAGE_WARN_THRESHOLD * 100.0,
-        )
-
-    previous_items = payload_item_list(previous_payload)
-    previous_count = item_count(previous_items)
-    if previous_count == 0:
-        return
-
-    drop_ratio = (previous_count - new_count) / previous_count
-    if drop_ratio > ITEM_COUNT_DROP_WARN_THRESHOLD:
-        logging.warning(
-            "%s: item count dropped by %.1f%% (%d -> %d), above %.1f%% warning threshold.",
-            dataset_name,
-            drop_ratio * 100.0,
-            previous_count,
-            new_count,
-            ITEM_COUNT_DROP_WARN_THRESHOLD * 100.0,
-        )
-
-
 def write_graph_atomic(graph: Graph, destination: Path) -> None:
     try:
         destination.parent.mkdir(parents=True, exist_ok=True)
@@ -1401,6 +1396,24 @@ def ensure_non_empty_results(
         raise WDQSError("Software query returned zero resources; refusing to overwrite data files.")
 
 
+def record_source_retrieved_at() -> None:
+    """Record when the complete Wikidata extraction finished, when requested."""
+    destination_value = os.getenv("OKG_SOURCE_RETRIEVED_AT_FILE")
+    if not destination_value:
+        return
+    destination = Path(destination_value)
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    timestamp = (
+        datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+    temporary = destination.with_suffix(destination.suffix + ".tmp")
+    temporary.write_text(timestamp + "\n", encoding="utf-8")
+    temporary.replace(destination)
+
+
 def run() -> int:
     configure_logging()
 
@@ -1436,6 +1449,19 @@ def run() -> int:
                 row["matchedTypeQid"] = {"type": "literal", "value": type_qid}
             ontology_rows.extend(typed_rows)
             time.sleep(QUERY_PAUSE_SECONDS)
+
+        raw_ontology_count = len(ontology_candidate_facts(ontology_rows))
+        ontology_rows, eligibility = filter_ontology_rows(
+            ontology_rows,
+            source_mappings.eligibility_policy_for(ONTOLOGIES_DATASET),
+        )
+        logging.info(
+            "Ontology eligibility retained %d of %d raw candidates; excluded %d declared and %d by rule",
+            len(eligibility.eligible_qids),
+            raw_ontology_count,
+            len(eligibility.declared_exclusion_qids),
+            len(eligibility.rule_exclusion_qids),
+        )
 
         logging.info("Querying Wikidata for software base fields")
         software_base_rows = run_wdqs_query(
@@ -1483,6 +1509,8 @@ def run() -> int:
         logging.warning("Wikidata fetch failed: %s", exc)
         logging.warning("No data files were modified.")
         return 1
+
+    record_source_retrieved_at()
 
     ontology_records, ontology_license_labels, ontology_creator_labels = parse_ontology_rows(
         ontology_rows,
@@ -1573,15 +1601,29 @@ def run() -> int:
             programming_language_labels=software_programming_language_labels,
             software_type_vocabulary=software_type_vocabulary,
         )
-        add_related_tools(
-            software_graph,
-            group_predicate=OKG.softwareType,
-            feature_predicates=[OKG.programmingLanguage, OKG.hasLicense, OKG.creator],
-        )
-        add_related_tools(
+        similarity_context = build_similarity_context((ontology_graph, software_graph))
+        ontology_related_diagnostics = add_related_tools(
             ontology_graph,
-            group_predicate=OKG.category,
-            feature_predicates=[RDF.type, OKG.hasLicense, OKG.creator],
+            dataset="resource",
+            context=similarity_context,
+        )
+        software_related_diagnostics = add_related_tools(
+            software_graph,
+            dataset="software",
+            context=similarity_context,
+        )
+        write_diagnostics_atomic(
+            diagnostics_document(
+                (ontology_related_diagnostics, software_related_diagnostics),
+                RELATED_SIMILARITY_CONFIG,
+            ),
+            RELATED_DIAGNOSTICS_OUT,
+        )
+        logging.info(
+            "Related-resource scoring selected %d resource and %d software links; diagnostics: %s",
+            ontology_related_diagnostics["selectedRelationshipCount"],
+            software_related_diagnostics["selectedRelationshipCount"],
+            RELATED_DIAGNOSTICS_OUT,
         )
 
         generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -1599,19 +1641,6 @@ def run() -> int:
             include_software_fields=True,
             generated_at=generated_at,
             resource_type_labels=resource_type_labels,
-        )
-
-        previous_ontologies_json = load_existing_payload(ONTOLOGIES_JSON_OUT)
-        previous_software_json = load_existing_payload(SOFTWARE_JSON_OUT)
-        warn_on_quality_drift(
-            dataset_name="ontologies",
-            new_payload=ontologies_json,
-            previous_payload=previous_ontologies_json,
-        )
-        warn_on_quality_drift(
-            dataset_name="software",
-            new_payload=software_json,
-            previous_payload=previous_software_json,
         )
 
         write_graph_atomic(ontology_graph, ONTOLOGIES_OUT)

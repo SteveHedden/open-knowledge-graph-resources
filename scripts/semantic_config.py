@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from dataclasses import dataclass
 from pathlib import Path
@@ -15,7 +16,9 @@ from rdflib.namespace import DCTERMS, RDF, RDFS, SKOS
 BASE_URL = "https://openknowledgegraphs.com"
 OKG = Namespace(f"{BASE_URL}/ontology#")
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(
+    os.environ.get("OKG_CATALOG_ROOT", Path(__file__).resolve().parent.parent)
+).resolve()
 CATEGORIES_VOCAB_PATH = ROOT_DIR / "vocabularies" / "categories.ttl"
 SOFTWARE_TYPES_VOCAB_PATH = ROOT_DIR / "vocabularies" / "software-types.ttl"
 SOURCES_PATH = ROOT_DIR / "sources.ttl"
@@ -192,10 +195,28 @@ class SourcePropertyMapping:
 
 
 @dataclass(frozen=True)
+class SourceEligibilityDecision:
+    iri: URIRef
+    source_qid: str
+    rationale: str
+    evidence_urls: tuple[str, ...]
+
+
+@dataclass(frozen=True)
+class SourceEligibilityPolicy:
+    iri: URIRef
+    catalog: URIRef
+    term_component_markers: frozenset[str]
+    exclusions: dict[str, SourceEligibilityDecision]
+    exceptions: dict[str, SourceEligibilityDecision]
+
+
+@dataclass(frozen=True)
 class SourceMappings:
     graph: Graph
     class_mappings: tuple[SourceClassMapping, ...]
     property_mappings: tuple[SourcePropertyMapping, ...]
+    eligibility_policies: tuple[SourceEligibilityPolicy, ...]
 
     def class_mappings_for(self, catalog: URIRef) -> tuple[SourceClassMapping, ...]:
         return tuple(mapping for mapping in self.class_mappings if catalog in mapping.catalogs)
@@ -265,11 +286,49 @@ class SourceMappings:
             )
         return matches[0]
 
+    def eligibility_policy_for(self, catalog: URIRef) -> SourceEligibilityPolicy:
+        matches = [policy for policy in self.eligibility_policies if policy.catalog == catalog]
+        if len(matches) != 1:
+            raise SemanticConfigError(
+                f"Expected one source eligibility policy for {catalog}, found {len(matches)}."
+            )
+        return matches[0]
+
+
+def _qid_from_source_entity(value: URIRef) -> str:
+    match = re.search(r"/(Q\d+)$", str(value))
+    if not match:
+        raise SemanticConfigError(f"Eligibility source entity is not a Wikidata QID IRI: {value}")
+    return match.group(1)
+
+
+def _load_eligibility_decision(
+    graph: Graph,
+    subject: URIRef,
+    expected_type: URIRef,
+) -> SourceEligibilityDecision:
+    if (subject, RDF.type, expected_type) not in graph:
+        raise SemanticConfigError(f"Eligibility decision {subject} must be typed as {expected_type}.")
+    source_qid = _qid_from_source_entity(_single_iri(graph, subject, OKG.sourceEntity))
+    rationale = _single_literal(graph, subject, DCTERMS.description)
+    evidence_urls = tuple(
+        sorted(str(value) for value in graph.objects(subject, DCTERMS.source) if isinstance(value, URIRef))
+    )
+    if not evidence_urls:
+        raise SemanticConfigError(f"Eligibility decision {subject} requires public evidence.")
+    return SourceEligibilityDecision(
+        iri=subject,
+        source_qid=source_qid,
+        rationale=rationale,
+        evidence_urls=evidence_urls,
+    )
+
 
 def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
     graph = Graph().parse(path, format="turtle")
     class_mappings: list[SourceClassMapping] = []
     property_mappings: list[SourcePropertyMapping] = []
+    eligibility_policies: list[SourceEligibilityPolicy] = []
 
     for subject in graph.subjects(RDF.type, OKG.SourceClassMapping):
         if not isinstance(subject, URIRef):
@@ -313,6 +372,56 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
             )
         )
 
+    for subject in graph.subjects(RDF.type, OKG.SourceEligibilityPolicy):
+        if not isinstance(subject, URIRef):
+            raise SemanticConfigError("Source eligibility policies must have stable IRIs.")
+        catalog = _single_iri(graph, subject, OKG.catalogDataset)
+        markers = frozenset(
+            _qid_from_source_entity(value)
+            for value in graph.objects(subject, OKG.termComponentMarker)
+            if isinstance(value, URIRef)
+        )
+        if not markers:
+            raise SemanticConfigError(f"Eligibility policy {subject} has no term/component markers.")
+
+        exclusions: dict[str, SourceEligibilityDecision] = {}
+        for decision_iri in graph.objects(subject, OKG.sourceExclusion):
+            if not isinstance(decision_iri, URIRef):
+                raise SemanticConfigError("Source exclusions must have stable IRIs.")
+            decision = _load_eligibility_decision(graph, decision_iri, OKG.SourceExclusion)
+            if decision.source_qid in exclusions:
+                raise SemanticConfigError(f"Duplicate source exclusion for {decision.source_qid}.")
+            exclusions[decision.source_qid] = decision
+
+        exceptions: dict[str, SourceEligibilityDecision] = {}
+        for decision_iri in graph.objects(subject, OKG.eligibilityException):
+            if not isinstance(decision_iri, URIRef):
+                raise SemanticConfigError("Eligibility exceptions must have stable IRIs.")
+            decision = _load_eligibility_decision(
+                graph, decision_iri, OKG.SourceEligibilityException
+            )
+            if decision.source_qid in exceptions:
+                raise SemanticConfigError(
+                    f"Duplicate source eligibility exception for {decision.source_qid}."
+                )
+            exceptions[decision.source_qid] = decision
+
+        overlap = set(exclusions) & set(exceptions)
+        if overlap:
+            raise SemanticConfigError(
+                "Confirmed exclusions cannot also be eligibility exceptions: "
+                + ", ".join(sorted(overlap))
+            )
+        eligibility_policies.append(
+            SourceEligibilityPolicy(
+                iri=subject,
+                catalog=catalog,
+                term_component_markers=markers,
+                exclusions=exclusions,
+                exceptions=exceptions,
+            )
+        )
+
     class_mappings.sort(key=lambda mapping: (mapping.sort_order, mapping.source_class_id))
     property_mappings.sort(key=lambda mapping: (mapping.sort_order, mapping.source_property_id))
     if not class_mappings or not property_mappings:
@@ -322,6 +431,7 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
         graph=graph,
         class_mappings=tuple(class_mappings),
         property_mappings=tuple(property_mappings),
+        eligibility_policies=tuple(eligibility_policies),
     )
 
 
@@ -417,7 +527,7 @@ def write_curated_assignments_atomic(
     temp_path = path.with_suffix(path.suffix + ".tmp")
     serialized = graph.serialize(format="turtle")
     Graph().parse(data=serialized, format="turtle")
-    temp_path.write_text(serialized, encoding="utf-8")
+    temp_path.write_text(serialized.rstrip() + "\n", encoding="utf-8")
     temp_path.replace(path)
 
 

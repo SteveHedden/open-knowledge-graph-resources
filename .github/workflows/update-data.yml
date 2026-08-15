@@ -1,4 +1,4 @@
-name: Update Catalog Data
+name: Publish Catalog Generation
 
 on:
   schedule:
@@ -7,15 +7,24 @@ on:
 
 permissions:
   contents: write
-  actions: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: catalog-publication
+  cancel-in-progress: false
+  queue: max
 
 jobs:
-  update-data:
+  publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
+    environment:
+      name: github-pages
+      url: ${{ steps.candidate_deploy.outputs.page_url }}
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository and successful-generation tags
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -30,47 +39,241 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip && pip install -r requirements.txt
 
-      - name: Refresh catalog data from Wikidata
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python scripts/fetch_data.py
-
-      - name: Generate detail pages
-        run: python scripts/generate_pages.py
-
-      - name: Detect data changes
-        id: changes
+      - name: Record run start and baseline
+        id: run
+        shell: bash
         run: |
-          git add data/ontologies.ttl data/software.ttl data/ontologies.json data/software.json data/categories.json data/software_types.json data/controlled_vocabularies.json data/page_qids.json data/uri_registry.json curation/classifications.ttl site/resource site/software site/sitemap.xml
-          if git diff --cached --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
+          echo "started_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
+          if git rev-parse --verify --quiet 'refs/tags/catalog-current^{commit}' >/dev/null; then
+            echo "baseline_ref=catalog-current" >> "$GITHUB_OUTPUT"
           else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "baseline_ref=HEAD" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Commit updated data
-        if: steps.changes.outputs.changed == 'true'
+      - name: Prepare isolated catalog staging tree
+        run: python scripts/catalog_snapshot.py prepare --repository . --destination "$RUNNER_TEMP/catalog-staging"
+
+      - name: Materialize last live-verified comparison baseline
+        id: published_baseline
+        shell: bash
         run: |
+          if [[ "${{ steps.run.outputs.baseline_ref }}" == "catalog-current" ]]; then
+            git worktree add --detach "$RUNNER_TEMP/published-baseline" catalog-current
+          else
+            git worktree add --detach "$RUNNER_TEMP/published-baseline" HEAD
+          fi
+          echo "path=$RUNNER_TEMP/published-baseline" >> "$GITHUB_OUTPUT"
+
+      - name: Refresh staged catalog from Wikidata
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OKG_CATALOG_ROOT: ${{ runner.temp }}/catalog-staging
+          OKG_RELATED_DIAGNOSTICS_PATH: ${{ runner.temp }}/related-resources.json
+          OKG_SOURCE_RETRIEVED_AT_FILE: ${{ runner.temp }}/source-retrieved-at.txt
+        run: python scripts/fetch_data.py
+
+      - name: Generate staged detail pages
+        env:
+          OKG_CATALOG_ROOT: ${{ runner.temp }}/catalog-staging
+        run: >-
+          python scripts/generate_pages.py
+          --membership-baseline "${{ steps.published_baseline.outputs.path }}"
+
+      - name: Validate complete staged catalog
+        run: >-
+          python scripts/validate_catalog.py
+          --root "$RUNNER_TEMP/catalog-staging"
+          --repository-root .
+          --baseline-ref "${{ steps.run.outputs.baseline_ref }}"
+
+      - name: Upload related-resource scoring diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: related-resource-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/related-resources.json
+          if-no-files-found: warn
+
+      - name: Detect substantive catalog changes
+        id: changes
+        run: >-
+          python scripts/catalog_snapshot.py changed
+          --candidate "$RUNNER_TEMP/catalog-staging"
+          --baseline "${{ steps.published_baseline.outputs.path }}"
+          --output-file "$GITHUB_OUTPUT"
+
+      - name: Finalize and verify generation manifest
+        if: steps.changes.outputs.changed == 'true'
+        id: manifest
+        shell: bash
+        run: |
+          source_retrieved_at="$(tr -d '\n' < "$RUNNER_TEMP/source-retrieved-at.txt")"
+          python scripts/catalog_snapshot.py finalize \
+            --root "$RUNNER_TEMP/catalog-staging" \
+            --started-at "${{ steps.run.outputs.started_at }}" \
+            --source-retrieved-at "$source_retrieved_at" \
+            --output-file "$GITHUB_OUTPUT"
+          python scripts/catalog_snapshot.py verify --root "$RUNNER_TEMP/catalog-staging"
+
+      - name: Promote complete generation into checkout
+        if: steps.changes.outputs.changed == 'true'
+        run: python scripts/catalog_snapshot.py promote --candidate "$RUNNER_TEMP/catalog-staging" --repository .
+
+      - name: Commit complete generated artifact set
+        if: steps.changes.outputs.changed == 'true'
+        id: commit
+        shell: bash
+        run: |
+          git add -A -- ontology.ttl sources.ttl data curation vocabularies site
+          if git diff --cached --quiet; then
+            echo "Expected a substantive staged change, but the promoted tree is unchanged." >&2
+            exit 1
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(data): refresh catalog from Wikidata"
+          git commit -m "chore(data): publish catalog generation ${{ steps.manifest.outputs.generation_id }}"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
 
-      - name: Push updated data
+      - name: Confirm candidate checkout is the exact committed tree
         if: steps.changes.outputs.changed == 'true'
-        run: git push origin "HEAD:${GITHUB_REF_NAME}"
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ steps.commit.outputs.sha }}"
+          git diff --exit-code
+          git diff --cached --exit-code
+          python scripts/catalog_snapshot.py verify --root .
 
-      - name: Trigger deploy
+      - name: Configure GitHub Pages
         if: steps.changes.outputs.changed == 'true'
-        uses: actions/github-script@v7
+        uses: actions/configure-pages@v5
+
+      - name: Build candidate Pages artifact from exact commit
+        if: steps.changes.outputs.changed == 'true'
+        run: python scripts/catalog_snapshot.py build-pages --root . --destination "$RUNNER_TEMP/candidate-pages"
+
+      - name: Upload candidate Pages artifact
+        if: steps.changes.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
         with:
-          script: |
-            await github.rest.actions.createWorkflowDispatch({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: 'deploy.yml',
-              ref: 'main',
-            });
+          name: candidate-pages
+          path: ${{ runner.temp }}/candidate-pages
 
-      - name: No changes detected
-        if: steps.changes.outputs.changed != 'true'
-        run: echo "No data changes to commit."
+      - name: Deploy candidate Pages artifact
+        if: steps.changes.outputs.changed == 'true'
+        id: candidate_deploy
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: candidate-pages
+
+      - name: Verify candidate generation live
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_deploy.outcome == 'success'
+        id: candidate_smoke
+        continue-on-error: true
+        run: >-
+          python scripts/catalog_snapshot.py smoke
+          --base-url "${{ steps.candidate_deploy.outputs.page_url }}"
+          --generation-id "${{ steps.manifest.outputs.generation_id }}"
+          --output-file "$GITHUB_OUTPUT"
+
+      - name: Advance successful-generation tags atomically
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_deploy.outcome == 'success' && steps.candidate_smoke.outcome == 'success'
+        run: >-
+          python scripts/catalog_snapshot.py advance-success
+          --repository .
+          --generation-id "${{ steps.manifest.outputs.generation_id }}"
+          --commit "${{ steps.commit.outputs.sha }}"
+
+      - name: Prepare automatic rollback to catalog-current
+        if: steps.changes.outputs.changed == 'true' && (steps.candidate_deploy.outcome == 'failure' || steps.candidate_smoke.outcome == 'failure')
+        id: rollback_prepare
+        shell: bash
+        run: |
+          if ! git rev-parse --verify --quiet 'refs/tags/catalog-current^{commit}' >/dev/null; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "No previously live-verified catalog-current generation exists." >&2
+            exit 0
+          fi
+          echo "available=true" >> "$GITHUB_OUTPUT"
+          git worktree add --detach "$RUNNER_TEMP/rollback-catalog" catalog-current
+          python -m pip install -r "$RUNNER_TEMP/rollback-catalog/requirements.txt"
+          python "$RUNNER_TEMP/rollback-catalog/scripts/validate_catalog.py" \
+            --root "$RUNNER_TEMP/rollback-catalog" \
+            --repository-root "$RUNNER_TEMP/rollback-catalog" \
+            --skip-baseline
+          python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" verify \
+            --root "$RUNNER_TEMP/rollback-catalog" \
+            --output-file "$GITHUB_OUTPUT"
+          python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" build-pages \
+            --root "$RUNNER_TEMP/rollback-catalog" \
+            --destination "$RUNNER_TEMP/rollback-pages"
+
+      - name: Upload automatic rollback Pages artifact
+        if: steps.rollback_prepare.outputs.available == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: rollback-pages
+          path: ${{ runner.temp }}/rollback-pages
+
+      - name: Redeploy catalog-current automatically
+        if: steps.rollback_prepare.outputs.available == 'true'
+        id: rollback_deploy
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: rollback-pages
+
+      - name: Verify automatic rollback live
+        if: steps.rollback_prepare.outputs.available == 'true' && steps.rollback_deploy.outcome == 'success'
+        id: rollback_smoke
+        continue-on-error: true
+        run: >-
+          python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" smoke
+          --base-url "${{ steps.rollback_deploy.outputs.page_url }}"
+          --generation-id "${{ steps.rollback_prepare.outputs.generation_id }}"
+
+      - name: Report publication outcome
+        if: always()
+        shell: bash
+        run: |
+          repository_changed="${{ steps.commit.outcome == 'success' }}"
+          pages_attempted="${{ steps.candidate_deploy.outcome != 'skipped' }}"
+          pages_changed="${{ steps.candidate_deploy.outcome == 'success' }}"
+          live_verified="${{ steps.candidate_smoke.outcome == 'success' }}"
+          rollback_attempted="${{ steps.rollback_deploy.outcome != 'skipped' }}"
+          rollback_succeeded="${{ steps.rollback_smoke.outcome == 'success' }}"
+          deployment_id="none"
+          rollback_deployment_id="none"
+          if [[ "$pages_attempted" == "true" ]]; then
+            deployment_id="candidate-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          fi
+          if [[ "$rollback_attempted" == "true" ]]; then
+            rollback_deployment_id="automatic-rollback-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          fi
+          {
+            echo "## Catalog publication"
+            echo
+            echo "- repositoryChanged: $repository_changed"
+            echo "- repositoryCommit: ${{ steps.commit.outputs.sha || 'none' }}"
+            echo "- generationId: ${{ steps.manifest.outputs.generation_id || 'reused' }}"
+            echo "- pagesDeploymentAttempted: $pages_attempted"
+            echo "- pagesDeploymentId: $deployment_id"
+            echo "- pagesChanged: $pages_changed"
+            echo "- liveVerified: $live_verified"
+            echo "- rollbackAttempted: $rollback_attempted"
+            echo "- rollbackDeploymentId: $rollback_deployment_id"
+            echo "- rollbackSucceeded: $rollback_succeeded"
+            if [[ "$live_verified" == "true" ]]; then
+              echo "- result: published successfully"
+            elif [[ "${{ steps.changes.outputs.changed }}" != "true" ]]; then
+              echo "- result: no substantive change; existing generation retained"
+            else
+              echo "- result: repository may be ahead of the live Pages generation"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail publication after candidate or rollback failure
+        if: steps.changes.outputs.changed == 'true' && (steps.candidate_deploy.outcome != 'success' || steps.candidate_smoke.outcome != 'success')
+        run: |
+          echo "Candidate publication did not pass live verification." >&2
+          exit 1

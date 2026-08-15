@@ -1,0 +1,40 @@
+name: Validate Catalog
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate catalog against the base branch
+        run: python scripts/validate_catalog.py --baseline-ref "${{ github.event.pull_request.base.sha }}"
+
+      - name: Validate Task 24 public Wikidata audit
+        run: python scripts/wikidata_classification_audit.py validate
+
+      - name: Verify transactional snapshot manifest
+        run: python scripts/catalog_snapshot.py verify --root .

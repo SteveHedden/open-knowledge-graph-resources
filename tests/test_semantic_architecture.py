@@ -6,7 +6,6 @@ import unittest
 from pathlib import Path
 
 from rdflib import Graph, Literal, Namespace, URIRef
-from rdflib.compare import to_isomorphic
 from rdflib.namespace import DCTERMS, OWL, PROV, RDF, RDFS, SKOS
 
 
@@ -24,11 +23,6 @@ DCAT = Namespace("http://www.w3.org/ns/dcat#")
 DOAP = Namespace("http://usefulinc.com/ns/doap#")
 SCHEMA = Namespace("https://schema.org/")
 SRC = Namespace("https://openknowledgegraphs.com/sources#")
-
-BASELINE_GRAPH_DIGESTS = {
-    "data/ontologies.ttl": 1882338036098033182651722989074669976539707224938463943281808381082516063770019424,
-    "data/software.ttl": 261156409476008061104821747219757563402333019904122719287678862359787723361058301,
-}
 
 BASELINE_JSON_FIELDS = {
     "ontologies": {
@@ -105,11 +99,35 @@ class SemanticArchitectureTests(unittest.TestCase):
                 merged += parsed
         self.assertGreater(len(merged), len(self.ontologies) + len(self.software))
 
-    def test_instance_graphs_are_the_pre_migration_graphs(self):
-        for relative_path, expected_digest in BASELINE_GRAPH_DIGESTS.items():
-            with self.subTest(path=relative_path):
-                graph = Graph().parse(ROOT / relative_path, format="turtle")
-                self.assertEqual(to_isomorphic(graph).graph_digest(), expected_digest)
+    def test_instance_graph_identity_matches_derived_json_after_source_refresh(self):
+        specifications = (
+            (
+                self.ontologies,
+                "ontologies.json",
+                {
+                    OKG.Ontology,
+                    OKG.ControlledVocabulary,
+                    OKG.Taxonomy,
+                    OKG.KnowledgeGraph,
+                    OKG.OntologyLanguage,
+                },
+            ),
+            (self.software, "software.json", {OKG.Software}),
+        )
+        for graph, json_name, catalog_types in specifications:
+            with self.subTest(dataset=json_name):
+                rdf_qids = {
+                    str(value).rsplit("/", 1)[-1]
+                    for catalog_type in catalog_types
+                    for subject in graph.subjects(RDF.type, catalog_type)
+                    for value in graph.objects(subject, OKG.wikidataId)
+                }
+                payload = json.loads((ROOT / "data" / json_name).read_text())
+                json_qids = {
+                    item["wikidataId"].rsplit("/", 1)[-1]
+                    for item in payload["items"]
+                }
+                self.assertTrue(json_qids <= rdf_qids)
 
     def test_instance_graphs_contain_no_dataset_or_provenance_metadata(self):
         allowed_predicate_namespaces = (
@@ -121,7 +139,11 @@ class SemanticArchitectureTests(unittest.TestCase):
             self.assertFalse(any(graph.subjects(RDF.type, DCAT.Dataset)))
             self.assertFalse(any(graph.triples((None, PROV.wasDerivedFrom, None))))
             self.assertTrue(
-                all(str(predicate).startswith(allowed_predicate_namespaces) for _, predicate, _ in graph)
+                all(
+                    predicate == DCTERMS.isPartOf
+                    or str(predicate).startswith(allowed_predicate_namespaces)
+                    for _, predicate, _ in graph
+                )
             )
 
     def test_source_registry_owns_dataset_level_provenance(self):
@@ -396,7 +418,14 @@ class SemanticArchitectureTests(unittest.TestCase):
                 self.assertEqual(actual, expected)
 
     def test_structural_mapping_terms_and_external_alignments_are_declared(self):
-        mapping_classes = (OKG.SourceMapping, OKG.SourceClassMapping, OKG.SourcePropertyMapping)
+        mapping_classes = (
+            OKG.SourceMapping,
+            OKG.SourceClassMapping,
+            OKG.SourcePropertyMapping,
+            OKG.SourceEligibilityPolicy,
+            OKG.SourceExclusion,
+            OKG.SourceEligibilityException,
+        )
         mapping_properties = (
             OKG.conceptClass,
             OKG.classificationPredicate,
@@ -411,6 +440,10 @@ class SemanticArchitectureTests(unittest.TestCase):
             OKG.normalizedField,
             OKG.valueKind,
             OKG.cardinality,
+            OKG.termComponentMarker,
+            OKG.sourceExclusion,
+            OKG.eligibilityException,
+            OKG.sourceEntity,
         )
         for class_iri in mapping_classes:
             self.assertIn((class_iri, RDF.type, RDFS.Class), self.ontology)
@@ -424,6 +457,12 @@ class SemanticArchitectureTests(unittest.TestCase):
         self.assertIn((OKG.relatedTo, RDFS.subPropertyOf, DCTERMS.relation), self.ontology)
         self.assertIn((OKG.sourceRepo, RDFS.subPropertyOf, SCHEMA.codeRepository), self.ontology)
         self.assertNotIn((OKG.sourceRepo, RDFS.subPropertyOf, DOAP.repository), self.ontology)
+        part_of_mapping = next(
+            mapping
+            for mapping in self.source_mappings.property_mappings
+            if mapping.normalized_field == "partOfEntity"
+        )
+        self.assertEqual(part_of_mapping.target_term, DCTERMS.isPartOf)
 
     def test_no_crosswalk_or_source_mirror_infrastructure_was_introduced(self):
         artifacts = self.ontology + self.sources + self.category_vocab.graph + self.software_vocab.graph

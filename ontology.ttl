@@ -17,7 +17,7 @@
     dcterms:title "Open Knowledge Graphs structural ontology"@en ;
     dcterms:description "Stable structural classes, properties, alignments, and SHACL policy for the Open Knowledge Graphs catalog."@en ;
     dcterms:issued "2026-08-13"^^xsd:date ;
-    dcterms:modified "2026-08-13"^^xsd:date ;
+    dcterms:modified "2026-08-14"^^xsd:date ;
     owl:versionInfo "0.1.0" ;
     vann:preferredNamespacePrefix "okg" ;
     vann:preferredNamespaceUri "https://openknowledgegraphs.com/ontology#" .
@@ -96,6 +96,19 @@ okg:SourcePropertyMapping a rdfs:Class ;
     rdfs:label "Source property mapping" ;
     rdfs:comment "Mapping from a source property identifier to an OKG term or normalized extraction field." .
 
+okg:SourceEligibilityPolicy a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "Source eligibility policy" ;
+    rdfs:comment "Declarative source-specific rules that determine which raw source candidates may enter an OKG catalog." .
+
+okg:SourceExclusion a rdfs:Class ;
+    rdfs:label "Source exclusion" ;
+    rdfs:comment "Reviewed decision that permanently excludes a source entity from automatic catalog eligibility." .
+
+okg:SourceEligibilityException a rdfs:Class ;
+    rdfs:label "Source eligibility exception" ;
+    rdfs:comment "Reviewed decision allowing a source entity to override a general eligibility rule without overriding a confirmed exclusion." .
+
 okg:title a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range xsd:string ;
@@ -140,7 +153,7 @@ okg:partOf a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range xsd:string ;
     rdfs:label "part of" ;
-    rdfs:comment "Parent project, collection, or family name." .
+    rdfs:comment "Single parent label retained as a compatibility projection; canonical parent identities use dcterms:isPartOf IRIs." .
 
 okg:wikidataId a rdf:Property ;
     rdfs:domain okg:Resource ;
@@ -286,6 +299,29 @@ okg:cardinality a rdf:Property ;
     rdfs:label "cardinality" ;
     rdfs:comment "Expected source cardinality used to document extraction assumptions." .
 
+okg:termComponentMarker a rdf:Property ;
+    rdfs:domain okg:SourceEligibilityPolicy ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "term or component marker" ;
+    rdfs:comment "Direct source class whose presence marks an entity as an individual term or ontology component for eligibility evaluation." .
+
+okg:sourceExclusion a rdf:Property ;
+    rdfs:domain okg:SourceEligibilityPolicy ;
+    rdfs:range okg:SourceExclusion ;
+    rdfs:label "source exclusion" ;
+    rdfs:comment "Connects an eligibility policy to a reviewed source-entity exclusion." .
+
+okg:eligibilityException a rdf:Property ;
+    rdfs:domain okg:SourceEligibilityPolicy ;
+    rdfs:range okg:SourceEligibilityException ;
+    rdfs:label "eligibility exception" ;
+    rdfs:comment "Connects an eligibility policy to a reviewed QID-specific exception." .
+
+okg:sourceEntity a rdf:Property ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "source entity" ;
+    rdfs:comment "Public source entity governed by an exclusion or exception decision." .
+
 okg:ResourceShape a sh:NodeShape ;
     sh:targetClass okg:Resource ;
     sh:property [
@@ -337,6 +373,10 @@ okg:ResourceShape a sh:NodeShape ;
         sh:path okg:partOf ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dcterms:isPartOf ;
+        sh:nodeKind sh:IRI ;
     ] ;
     sh:property [
         sh:path okg:wikidataId ;

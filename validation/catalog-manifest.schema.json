@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openknowledgegraphs.com/validation/catalog-manifest.schema.json",
+  "title": "Open Knowledge Graphs Catalog Generation Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generationId",
+    "startedAt",
+    "sourceRetrievedAt",
+    "completedAt",
+    "counts",
+    "versions",
+    "artifacts",
+    "directoryTrees"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generationId": {
+      "type": "string",
+      "pattern": "^[0-9]{8}T[0-9]{6}Z-[0-9a-f]{12}$"
+    },
+    "startedAt": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "sourceRetrievedAt": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "completedAt": {
+      "$ref": "#/$defs/utcTimestamp"
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["records", "triples"],
+      "properties": {
+        "records": {
+          "$ref": "#/$defs/countSet"
+        },
+        "triples": {
+          "$ref": "#/$defs/tripleCountSet"
+        }
+      }
+    },
+    "versions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ontology", "vocabularies"],
+      "properties": {
+        "ontology": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vocabularies": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["categories", "softwareTypes"],
+          "properties": {
+            "categories": {
+              "type": "string",
+              "minLength": 1
+            },
+            "softwareTypes": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/digestEntry"
+      }
+    },
+    "directoryTrees": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "fileCount"],
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^[^/][^\\\\]*$"
+          },
+          "sha256": {
+            "$ref": "#/$defs/sha256"
+          },
+          "fileCount": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "utcTimestamp": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "digestEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^[^/][^\\\\]*$"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "countSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["resources", "software", "total"],
+      "properties": {
+        "resources": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "software": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "tripleCountSet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ontologies", "software", "total"],
+      "properties": {
+        "ontologies": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "software": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

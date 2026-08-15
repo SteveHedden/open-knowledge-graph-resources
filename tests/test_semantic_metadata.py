@@ -1,11 +1,10 @@
 import json
-import subprocess
 import sys
 import unittest
 from pathlib import Path
 
 from rdflib import Graph, Literal, URIRef
-from rdflib.namespace import RDF, RDFS, SH, XSD
+from rdflib.namespace import DCTERMS, RDF, RDFS, SH, XSD
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -206,6 +205,7 @@ class OntologyTests(unittest.TestCase):
             OKG.googleScholarProfile,
             OKG.namespaceURI,
             OKG.sourceRepo,
+            DCTERMS.isPartOf,
         }
 
         for term, domain in expected_domains.items():
@@ -261,14 +261,12 @@ class OntologyTests(unittest.TestCase):
 class CommittedPageTests(unittest.TestCase):
     @staticmethod
     def committed_pages():
-        result = subprocess.run(
-            ["git", "ls-files", "site/resource/*/index.html", "site/software/*/index.html"],
-            cwd=ROOT,
-            check=True,
-            capture_output=True,
-            text=True,
+        return sorted(
+            [
+                *ROOT.glob("site/resource/*/index.html"),
+                *ROOT.glob("site/software/*/index.html"),
+            ]
         )
-        return [ROOT / path for path in result.stdout.splitlines()]
 
     def test_committed_pages_do_not_publish_fabricated_license(self):
         pages = self.committed_pages()

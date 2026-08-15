@@ -7,12 +7,13 @@ Also generates sitemap.xml and a QID-to-slug mapping for the frontend.
 """
 
 import asyncio
+import argparse
 import json
 import os
 import html
 import shutil
 import ssl
-import sys
+from pathlib import Path
 
 import aiohttp
 
@@ -22,8 +23,11 @@ from semantic_config import (
     load_controlled_vocabulary,
 )
 
-SITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+ROOT_DIR = Path(
+    os.environ.get("OKG_CATALOG_ROOT", Path(__file__).resolve().parent.parent)
+).resolve()
+SITE_DIR = str(ROOT_DIR / "site")
+DATA_DIR = str(ROOT_DIR / "data")
 BASE_URL = "https://openknowledgegraphs.com"
 
 GENERIC_DESCRIPTIONS = {
@@ -452,8 +456,110 @@ def generate_sitemap(pages):
 
 # --- Main ---
 
-def main():
-    skip_link_check = "--skip-link-check" in sys.argv
+CATALOG_FILES = {
+    "resource": "ontologies.json",
+    "software": "software.json",
+}
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--skip-link-check",
+        action="store_true",
+        help=(
+            "Skip homepage requests. Without a membership baseline this retains the "
+            "legacy admit-all behavior; with a baseline it admits only unchanged, "
+            "previously verified pages."
+        ),
+    )
+    parser.add_argument(
+        "--membership-baseline",
+        type=Path,
+        help=(
+            "Immutable catalog root whose page_qids.json and catalog JSON identify "
+            "previously verified page membership. New or homepage-changed candidates "
+            "still require a successful link check."
+        ),
+    )
+    return parser.parse_args(argv)
+
+
+def _read_json(path):
+    with path.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def load_verified_page_membership(baseline_root):
+    """Return verified baseline pages keyed by (dataset, QID).
+
+    An entirely empty baseline is valid for the first publication. Once a page
+    registry exists, both catalog projections are required so verification is
+    bound to the exact homepage that was previously published.
+    """
+    baseline_root = Path(baseline_root).resolve()
+    registry_path = baseline_root / "data" / "page_qids.json"
+    if not registry_path.is_file():
+        return {}
+
+    registry = _read_json(registry_path)
+    membership = {}
+    for dataset, catalog_filename in CATALOG_FILES.items():
+        entries = registry.get(dataset)
+        if not isinstance(entries, dict):
+            raise ValueError(f"Baseline page registry lacks a {dataset!r} mapping.")
+
+        catalog_path = baseline_root / "data" / catalog_filename
+        if not catalog_path.is_file():
+            raise ValueError(f"Baseline page registry requires {catalog_path}.")
+        payload = _read_json(catalog_path)
+        items = payload.get("items")
+        if not isinstance(items, list):
+            raise ValueError(f"Baseline catalog has no item list: {catalog_path}")
+
+        items_by_qid = {
+            extract_qid(item.get("wikidataId", "")): item
+            for item in items
+            if isinstance(item, dict) and extract_qid(item.get("wikidataId", ""))
+        }
+        for qid, slug in entries.items():
+            item = items_by_qid.get(qid)
+            if item is None:
+                raise ValueError(
+                    f"Baseline page registry contains {dataset} {qid}, but its catalog record is missing."
+                )
+            homepage = (item.get("homepage") or "").strip()
+            if not homepage:
+                raise ValueError(f"Baseline page {dataset} {qid} has no homepage.")
+            membership[(dataset, qid)] = {
+                "homepage": homepage,
+                "slug": str(slug),
+            }
+    return membership
+
+
+def split_membership_candidates(candidates, baseline_membership):
+    """Separate unchanged verified pages from candidates needing live checks."""
+    unchanged = set()
+    needs_check = []
+    for dataset, item in candidates:
+        qid = extract_qid(item.get("wikidataId", ""))
+        slug = slug_from_canonical_url(item.get("canonicalUrl", ""), dataset)
+        homepage = (item.get("homepage") or "").strip()
+        baseline = baseline_membership.get((dataset, qid))
+        if (
+            baseline is not None
+            and baseline["homepage"] == homepage
+            and baseline["slug"] == slug
+        ):
+            unchanged.add((dataset, qid))
+        else:
+            needs_check.append(item)
+    return unchanged, needs_check
+
+
+def main(argv=None):
+    args = parse_args(argv)
 
     with open(os.path.join(DATA_DIR, "ontologies.json")) as f:
         ont = json.load(f)["items"]
@@ -469,8 +575,28 @@ def main():
 
     print(f"Content filter: {len(candidates)} candidates")
 
-    # Step 2: Link check (unless skipped)
-    if skip_link_check:
+    # Step 2: Preserve unchanged pages from an immutable verified generation,
+    # and check only new pages or records whose homepage/slug changed.
+    baseline_membership = None
+    unchanged_verified = set()
+    if args.membership_baseline is not None:
+        baseline_membership = load_verified_page_membership(args.membership_baseline)
+        unchanged_verified, needs_check = split_membership_candidates(
+            candidates,
+            baseline_membership,
+        )
+        print(
+            f"Baseline membership: preserving {len(unchanged_verified)} unchanged "
+            f"verified pages; {len(needs_check)} require verification"
+        )
+        if args.skip_link_check:
+            print("Skipping new/changed link checks; no unverified pages will be admitted")
+            good_urls = set()
+        elif needs_check:
+            good_urls = asyncio.run(check_links(needs_check))
+        else:
+            good_urls = set()
+    elif args.skip_link_check:
         print("Skipping link check (--skip-link-check)")
         good_urls = None
     else:
@@ -489,9 +615,6 @@ def main():
     survivors = []
     skipped_no_canonical_url = 0
     for dataset, item in candidates:
-        if good_urls is not None and item["homepage"].strip() not in good_urls:
-            continue
-
         qid = extract_qid(item.get("wikidataId", ""))
         if not qid:
             continue
@@ -499,6 +622,15 @@ def main():
         slug = slug_from_canonical_url(item.get("canonicalUrl", ""), dataset)
         if not slug:
             skipped_no_canonical_url += 1
+            continue
+
+        if baseline_membership is not None:
+            if (
+                (dataset, qid) not in unchanged_verified
+                and item["homepage"].strip() not in good_urls
+            ):
+                continue
+        elif good_urls is not None and item["homepage"].strip() not in good_urls:
             continue
 
         survivors.append((dataset, item, qid, slug))
