@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T06:16:17Z",
+  "generatedAt": "2026-08-15T20:31:27Z",
   "items": [
     {
       "title": "4store",
@@ -186,12 +186,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
-          "title": "Apache Marmotta",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
-        },
-        {
           "title": "dotNetRDF",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
+          "title": "g3-toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
         },
         {
           "title": "OntoGPT",
@@ -1071,6 +1071,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
         },
         {
+          "title": "g3-toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
+        },
+        {
           "title": "OntoGPT",
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
         },
@@ -1510,6 +1514,42 @@
       "homepage": "https://pypi.org/project/fuxi/",
       "sourceRepo": "https://pypi.org/project/fuxi/",
       "softwareType": "Reasoning & Inference"
+    },
+    {
+      "title": "g3-toolkit",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141090682",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/",
+      "description": "TypeScript visualization toolkit for RDF, labeled property graphs, and virtualized graphs",
+      "homepage": "https://zwelz3.github.io/g3-toolkit/",
+      "sourceRepo": "https://github.com/zwelz3/g3-toolkit",
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "softwareType": "Visualization",
+      "programmingLanguages": [
+        "TypeScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        },
+        {
+          "title": "dotNetRDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
+          "title": "OntoGPT",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+        }
+      ]
     },
     {
       "title": "gdotv",
@@ -3132,12 +3172,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
         },
         {
-          "title": "LinkML",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
+          "title": "g3-toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
         },
         {
-          "title": "Ontology Development Kit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
+          "title": "LinkML",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         },
         {
           "title": "RDFLib",
@@ -3205,7 +3245,7 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "0.10.1",
+      "latestVersion": "0.10.3",
       "releaseDate": "2026-08-14",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
@@ -4452,6 +4492,10 @@
         {
           "title": "dotNetRDF",
           "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+        },
+        {
+          "title": "g3-toolkit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
         },
         {
           "title": "OntoGPT",

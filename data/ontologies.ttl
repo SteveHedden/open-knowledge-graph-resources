@@ -19439,15 +19439,6 @@
     okg:title "Liber Exoniensis" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q641716> .
 
-<https://openknowledgegraphs.com/resource/liber-glossarum/> a okg:ControlledVocabulary ;
-    rdfs:label "Liber glossarum" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:description "medieval Latin glossary" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q23622>,
-        <http://www.wikidata.org/entity/Q859161> ;
-    okg:title "Liber glossarum" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q3831593> .
-
 <https://openknowledgegraphs.com/resource/libraries-australia-authorities/> a okg:ControlledVocabulary ;
     rdfs:label "Libraries Australia Authorities" ;
     okg:category okg:LibraryCulturalHeritage ;

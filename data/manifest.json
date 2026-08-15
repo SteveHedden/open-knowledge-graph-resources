@@ -1,19 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260815T061705Z-3eac2200a7f4",
-  "startedAt": "2026-08-15T06:13:44Z",
-  "sourceRetrievedAt": "2026-08-15T06:16:16Z",
-  "completedAt": "2026-08-15T06:17:05Z",
+  "generationId": "20260815T203215Z-f68846f74321",
+  "startedAt": "2026-08-15T20:28:22Z",
+  "sourceRetrievedAt": "2026-08-15T20:31:25Z",
+  "completedAt": "2026-08-15T20:32:15Z",
   "counts": {
     "records": {
-      "resources": 3000,
-      "software": 299,
+      "resources": 2999,
+      "software": 300,
       "total": 3299
     },
     "triples": {
-      "ontologies": 29873,
-      "software": 4296,
-      "total": 34169
+      "ontologies": 29865,
+      "software": 4317,
+      "total": 34182
     }
   },
   "versions": {
@@ -26,7 +26,7 @@
   "artifacts": [
     {
       "path": "curation/classifications.ttl",
-      "sha256": "7c5242fcc4217a4a77de155dbe2f2ab03ea446732081702b15417623c1c29ac5"
+      "sha256": "a0cc3a1ea0d5f1920f2ee4573f223f90cbaf42e37fb4f6a9d8013883f45120fa"
     },
     {
       "path": "data/categories.json",
@@ -38,31 +38,31 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "302068c12db5e08e3e8e1d82ce4397f8204e94700041bcb2fa3a23160dba8a28"
+      "sha256": "a6f97bb1210f91a18e95d2990168a6a8e9af599be18de19583d2401f55ddb6c2"
     },
     {
       "path": "data/ontologies.ttl",
-      "sha256": "097739aca7a3cfcfed2a965f9fd01c2fe0e93ce0b8cab2e63fc2fee1286b7a52"
+      "sha256": "a8a819cfbad88486ad88a61090c3e4ae73f4f159386161a3d13760e363116198"
     },
     {
       "path": "data/page_qids.json",
-      "sha256": "eb785bd28abe976da34426db5e32a261758932c6c5825e81971c6f6e248e8e72"
+      "sha256": "dc11582239491760c7f1446929b3210f7568d5b0f391a12bd8930acca0b5e8db"
     },
     {
       "path": "data/software.json",
-      "sha256": "85fce52d643567809a6267a744b91d99b18387a63de66d79dacb80be142a2461"
+      "sha256": "64c546dae21cc0998e93787ab95b5e4581491620a31e1adcb0749e39284c675c"
     },
     {
       "path": "data/software.ttl",
-      "sha256": "bafe052005eda41d7bab3bd97afc8f6efe8ba0eb2839c87dfa475cb74a535345"
+      "sha256": "3c63a6b1b9e81e906ff8ab8e6eb2105ae51df3144c739cad23be475ad8736e82"
     },
     {
       "path": "data/software_types.json",
-      "sha256": "2864f59898d29f9ec23e68d81a1de3183f69ef54a76a1da6ca54c9f427e51c6e"
+      "sha256": "0197a83c619f2ca553a43b36ead06fee726482a6096abda2fd86726608edffbf"
     },
     {
       "path": "data/uri_registry.json",
-      "sha256": "bf0e5ca8a8cdd5dc306b06568f665c865121dc1c9df6d12fdc21806267c3018d"
+      "sha256": "0d057835dd3811cdd0e94699dd8e2c23d2bb3f4e21e76eedeaaca6fac5c5f435"
     },
     {
       "path": "ontology.ttl",
@@ -106,7 +106,7 @@
     },
     {
       "path": "site/sitemap.xml",
-      "sha256": "b0af05ba36ea54ebb69e34abd1d83d689b099610e8a17911d2fba14cfa8f5ad8"
+      "sha256": "512c7f75d7d619352a56e410bcc6c2e5789f5e01b4037992f49f39251c3e9c04"
     },
     {
       "path": "site/style.css",
@@ -128,13 +128,13 @@
   "directoryTrees": [
     {
       "path": "site/resource",
-      "sha256": "93d4b976c64b7df3466f69c28360e9a226eb81a79004547f0ef1e32b9a8f1171",
-      "fileCount": 697
+      "sha256": "05dc78a4e4c2cf5a3656e8118942afcadd61104fa287490c8550b3c139ec3f7d",
+      "fileCount": 698
     },
     {
       "path": "site/software",
-      "sha256": "d51f9c2b001fc01d22b666315eeeb212c1fbf2392b930995844be502999363aa",
-      "fileCount": 170
+      "sha256": "e42d15b6a0a4290d472371e6ee39972bf262c2e1aa04676732a4f8833ad35c90",
+      "fileCount": 171
     }
   ]
 }

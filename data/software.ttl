@@ -1449,7 +1449,7 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.10.1" ;
+    okg:latestVersion "0.10.3" ;
     okg:programmingLanguage "TypeScript" ;
     okg:releaseDate "2026-08-14"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
@@ -3612,6 +3612,26 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:title "Node Quadstore" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653372> .
 
+<https://openknowledgegraphs.com/software/ontology-development-kit/> a okg:Software ;
+    rdfs:label "Ontology Development Kit" ;
+    okg:creator okg:Creator_Christopher_J_Mungall_Q20746118,
+        okg:Creator_Damien_Goutte_Gattat_Q59702685,
+        okg:Creator_Nicolas_Matentzoglu_Q60972192 ;
+    okg:description "The Ontology Development Kit is a toolbox of various ontology related tools such as ROBOT and dosdp-tools, bundled as a docker image. It provides executable workflows for managing ontologies continuous integration, releases and dynamic imports." ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <http://incatools.github.io/ontology-development-kit/> ;
+    okg:latestVersion "1.6" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/linkml/>,
+        <https://openknowledgegraphs.com/software/ontogpt/> ;
+    okg:releaseDate "2025-05-29"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/INCATools/ontology-development-kit> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1130645>,
+        <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q341> ;
+    okg:title "Ontology Development Kit" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q112336713> .
+
 <https://openknowledgegraphs.com/software/open-knowledge-graphs/> a okg:Software ;
     rdfs:label "Open Knowledge Graphs" ;
     okg:creator okg:Creator_Steve_Hedden_Q140443546 ;
@@ -3890,26 +3910,6 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
     okg:title "NebulaGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q115925815> .
 
-<https://openknowledgegraphs.com/software/ontology-development-kit/> a okg:Software ;
-    rdfs:label "Ontology Development Kit" ;
-    okg:creator okg:Creator_Christopher_J_Mungall_Q20746118,
-        okg:Creator_Damien_Goutte_Gattat_Q59702685,
-        okg:Creator_Nicolas_Matentzoglu_Q60972192 ;
-    okg:description "The Ontology Development Kit is a toolbox of various ontology related tools such as ROBOT and dosdp-tools, bundled as a docker image. It provides executable workflows for managing ontologies continuous integration, releases and dynamic imports." ;
-    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
-    okg:homepage <http://incatools.github.io/ontology-development-kit/> ;
-    okg:latestVersion "1.6" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/linkml/>,
-        <https://openknowledgegraphs.com/software/ontogpt/> ;
-    okg:releaseDate "2025-05-29"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/INCATools/ontology-development-kit> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1130645>,
-        <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q341> ;
-    okg:title "Ontology Development Kit" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q112336713> .
-
 <https://openknowledgegraphs.com/software/webvowl/> a okg:Software ;
     rdfs:label "WebVOWL" ;
     okg:description "web tool for visualizing ontologies" ;
@@ -3988,25 +3988,6 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
         <http://www.wikidata.org/entity/Q56539593> ;
     okg:title "CubicWeb" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2839592> .
-
-<https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
-    rdfs:label "dotNetRDF" ;
-    okg:description "open source .NET library for RDF" ;
-    okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:homepage <http://dotnetrdf.org/> ;
-    okg:latestVersion "3.5.2" ;
-    okg:programmingLanguage ".NET Framework" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
-        <https://openknowledgegraphs.com/software/ontogpt/>,
-        <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:releaseDate "2026-07-03"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://github.com/dotnetrdf/dotnetrdf> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q188860> ;
-    okg:title "dotNetRDF" ;
-    okg:uses <http://www.wikidata.org/entity/Q29377821> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q56844056> .
 
 <https://openknowledgegraphs.com/software/excel-2-rdf/> a okg:Software ;
     rdfs:label "Excel 2 RDF" ;
@@ -4105,26 +4086,6 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:title "Neo4j" ;
     okg:uses <http://www.wikidata.org/entity/Q16834355> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1628290> .
-
-<https://openknowledgegraphs.com/software/rdflib/> a okg:Software ;
-    rdfs:label "RDFLib" ;
-    okg:description "Python library for working with RDF" ;
-    okg:hasLicense okg:License_BSD_licenses_Q191307,
-        okg:License_Resource_3_clause_BSD_License_Q18491847 ;
-    okg:homepage <https://rdflib.dev> ;
-    okg:latestVersion "7.6.0" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
-        <https://openknowledgegraphs.com/software/dotnetrdf/>,
-        <https://openknowledgegraphs.com/software/ontogpt/> ;
-    okg:releaseDate "2026-02-13"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://github.com/RDFLib/rdflib> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q188860>,
-        <http://www.wikidata.org/entity/Q29642950> ;
-    okg:title "RDFLib" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q7276224> .
 
 <https://openknowledgegraphs.com/software/shacl-play/> a okg:Software ;
     rdfs:label "SHACL Play!" ;
@@ -4257,6 +4218,25 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Apache Jena Fuseki" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q109376461> .
 
+<https://openknowledgegraphs.com/software/apache-marmotta/> a okg:Software ;
+    rdfs:label "Apache Marmotta" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709 ;
+    okg:description "open platform for linked data" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <http://marmotta.apache.org> ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
+        <https://openknowledgegraphs.com/software/apache-jena/>,
+        <https://openknowledgegraphs.com/software/apache-rya/>,
+        <https://openknowledgegraphs.com/software/hugegraph/>,
+        <https://openknowledgegraphs.com/software/sampo-ui/> ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceType <http://www.wikidata.org/entity/Q17624049>,
+        <http://www.wikidata.org/entity/Q341>,
+        <http://www.wikidata.org/entity/Q3539533> ;
+    okg:title "Apache Marmotta" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q16928009> .
+
 <https://openknowledgegraphs.com/software/arcadedb/> a okg:Software ;
     rdfs:label "ArcadeDB" ;
     okg:creator okg:Creator_Arcade_Data_Ltd_Q113997707 ;
@@ -4304,6 +4284,46 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:uses <http://www.wikidata.org/entity/Q54872>,
         <http://www.wikidata.org/entity/Q826165> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639987> .
+
+<https://openknowledgegraphs.com/software/dotnetrdf/> a okg:Software ;
+    rdfs:label "dotNetRDF" ;
+    okg:description "open source .NET library for RDF" ;
+    okg:hasLicense okg:License_MIT_License_Q334661 ;
+    okg:homepage <http://dotnetrdf.org/> ;
+    okg:latestVersion "3.5.2" ;
+    okg:programmingLanguage ".NET Framework" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
+        <https://openknowledgegraphs.com/software/g3-toolkit/>,
+        <https://openknowledgegraphs.com/software/ontogpt/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:releaseDate "2026-07-03"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/dotnetrdf/dotnetrdf> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q188860> ;
+    okg:title "dotNetRDF" ;
+    okg:uses <http://www.wikidata.org/entity/Q29377821> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q56844056> .
+
+<https://openknowledgegraphs.com/software/g3-toolkit/> a okg:Software ;
+    rdfs:label "g3-toolkit" ;
+    okg:description "TypeScript visualization toolkit for RDF, labeled property graphs, and virtualized graphs" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://zwelz3.github.io/g3-toolkit/> ;
+    okg:programmingLanguage "TypeScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
+        <https://openknowledgegraphs.com/software/dotnetrdf/>,
+        <https://openknowledgegraphs.com/software/ontogpt/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:softwareType okg:Visualization ;
+    okg:sourceRepo <https://github.com/zwelz3/g3-toolkit> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q188860> ;
+    okg:title "g3-toolkit" ;
+    okg:uses <http://www.wikidata.org/entity/Q29377821>,
+        <http://www.wikidata.org/entity/Q54871>,
+        <http://www.wikidata.org/entity/Q54872> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141090682> .
 
 <https://openknowledgegraphs.com/software/mem0/> a okg:Software ;
     rdfs:label "Mem0" ;
@@ -4380,6 +4400,27 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q116867178> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111016295> .
 
+<https://openknowledgegraphs.com/software/rdflib/> a okg:Software ;
+    rdfs:label "RDFLib" ;
+    okg:description "Python library for working with RDF" ;
+    okg:hasLicense okg:License_BSD_licenses_Q191307,
+        okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://rdflib.dev> ;
+    okg:latestVersion "7.6.0" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
+        <https://openknowledgegraphs.com/software/dotnetrdf/>,
+        <https://openknowledgegraphs.com/software/g3-toolkit/>,
+        <https://openknowledgegraphs.com/software/ontogpt/> ;
+    okg:releaseDate "2026-02-13"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/RDFLib/rdflib> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q188860>,
+        <http://www.wikidata.org/entity/Q29642950> ;
+    okg:title "RDFLib" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7276224> .
+
 okg:Creator_Apache_Software_Foundation_Q489709 a okg:Organization ;
     rdfs:label "Apache Software Foundation" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q489709> .
@@ -4396,25 +4437,6 @@ okg:License_Business_Source_License_1_1_Q121359688 a okg:License ;
 okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a okg:License ;
     rdfs:label "GNU Affero General Public License, version 3.0 or later" ;
     okg:licenseName "GNU Affero General Public License, version 3.0 or later" .
-
-<https://openknowledgegraphs.com/software/apache-marmotta/> a okg:Software ;
-    rdfs:label "Apache Marmotta" ;
-    okg:creator okg:Creator_Apache_Software_Foundation_Q489709 ;
-    okg:description "open platform for linked data" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://marmotta.apache.org> ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
-        <https://openknowledgegraphs.com/software/apache-jena/>,
-        <https://openknowledgegraphs.com/software/apache-rya/>,
-        <https://openknowledgegraphs.com/software/hugegraph/>,
-        <https://openknowledgegraphs.com/software/sampo-ui/> ;
-    okg:softwareType okg:GraphDatabase ;
-    okg:sourceType <http://www.wikidata.org/entity/Q17624049>,
-        <http://www.wikidata.org/entity/Q341>,
-        <http://www.wikidata.org/entity/Q3539533> ;
-    okg:title "Apache Marmotta" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q16928009> .
 
 <https://openknowledgegraphs.com/software/graphiti/> a okg:Software ;
     rdfs:label "Graphiti" ;
@@ -4456,33 +4478,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
         <http://www.wikidata.org/entity/Q7397> ;
     okg:title "MarkLogic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29364583> .
-
-<https://openknowledgegraphs.com/software/ontogpt/> a okg:Software ;
-    rdfs:label "OntoGPT" ;
-    okg:creator okg:Creator_Christopher_J_Mungall_Q20746118,
-        okg:Creator_J_Harry_Caufield_Q85945198 ;
-    okg:description "Python package for extracting structured knowledge and ontology terms from text using language models" ;
-    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
-    okg:homepage <https://monarch-initiative.github.io/ontogpt/> ;
-    okg:latestVersion "1.1.1" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
-        <https://openknowledgegraphs.com/software/dotnetrdf/>,
-        <https://openknowledgegraphs.com/software/linkml/>,
-        <https://openknowledgegraphs.com/software/ontology-development-kit/>,
-        <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:releaseDate "2026-04-07"^^xsd:date ;
-    okg:softwareType okg:KnowledgeGraphConstruction ;
-    okg:sourceRepo <https://github.com/monarch-initiative/ontogpt> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q188860> ;
-    okg:title "OntoGPT" ;
-    okg:uses <http://www.wikidata.org/entity/Q108911530>,
-        <http://www.wikidata.org/entity/Q109302681>,
-        <http://www.wikidata.org/entity/Q115305900>,
-        <http://www.wikidata.org/entity/Q54872>,
-        <http://www.wikidata.org/entity/Q96416030> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q125352352> .
 
 <https://openknowledgegraphs.com/software/orientdb/> a okg:Software ;
     rdfs:label "OrientDB" ;
@@ -4587,6 +4582,33 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:title "ArangoDB" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q20072115> .
 
+<https://openknowledgegraphs.com/software/ontogpt/> a okg:Software ;
+    rdfs:label "OntoGPT" ;
+    okg:creator okg:Creator_Christopher_J_Mungall_Q20746118,
+        okg:Creator_J_Harry_Caufield_Q85945198 ;
+    okg:description "Python package for extracting structured knowledge and ontology terms from text using language models" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://monarch-initiative.github.io/ontogpt/> ;
+    okg:latestVersion "1.1.1" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/>,
+        <https://openknowledgegraphs.com/software/dotnetrdf/>,
+        <https://openknowledgegraphs.com/software/g3-toolkit/>,
+        <https://openknowledgegraphs.com/software/linkml/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:releaseDate "2026-04-07"^^xsd:date ;
+    okg:softwareType okg:KnowledgeGraphConstruction ;
+    okg:sourceRepo <https://github.com/monarch-initiative/ontogpt> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q188860> ;
+    okg:title "OntoGPT" ;
+    okg:uses <http://www.wikidata.org/entity/Q108911530>,
+        <http://www.wikidata.org/entity/Q109302681>,
+        <http://www.wikidata.org/entity/Q115305900>,
+        <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q96416030> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q125352352> .
+
 okg:Creator_Yoan_Chabot_Q120918268 a okg:Person ;
     rdfs:label "Yoan Chabot" ;
     okg:githubProfile <https://github.com/yoanchabot> ;
@@ -4596,29 +4618,6 @@ okg:Creator_Yoan_Chabot_Q120918268 a okg:Person ;
 okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:License ;
     rdfs:label "GNU Affero General Public License, version 3.0" ;
     okg:licenseName "GNU Affero General Public License, version 3.0" .
-
-<https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
-    rdfs:label "Apache Jena" ;
-    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
-        okg:Creator_HP_Labs_Q266936 ;
-    okg:description "open source semantic web framework for Java" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://jena.apache.org/> ;
-    okg:latestVersion "5.6.0" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
-        <https://openknowledgegraphs.com/software/apache-marmotta/>,
-        <https://openknowledgegraphs.com/software/dotnetrdf/>,
-        <https://openknowledgegraphs.com/software/ontogpt/>,
-        <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:releaseDate "2025-10-15"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://git.apache.org/jena> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q188860>,
-        <http://www.wikidata.org/entity/Q341>,
-        <http://www.wikidata.org/entity/Q3539533> ;
-    okg:title "Apache Jena" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
 
 <https://openknowledgegraphs.com/software/nitrosbase/> a okg:Software ;
     rdfs:label "NitrosBase" ;
@@ -4665,6 +4664,29 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
         <http://www.wikidata.org/entity/Q7096350> ;
     okg:title "Polypheny" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q122920886> .
+
+<https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
+    rdfs:label "Apache Jena" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
+        okg:Creator_HP_Labs_Q266936 ;
+    okg:description "open source semantic web framework for Java" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://jena.apache.org/> ;
+    okg:latestVersion "5.6.0" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
+        <https://openknowledgegraphs.com/software/dotnetrdf/>,
+        <https://openknowledgegraphs.com/software/g3-toolkit/>,
+        <https://openknowledgegraphs.com/software/ontogpt/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:releaseDate "2025-10-15"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://git.apache.org/jena> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q188860>,
+        <http://www.wikidata.org/entity/Q341>,
+        <http://www.wikidata.org/entity/Q3539533> ;
+    okg:title "Apache Jena" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
 
 okg:AIAgentTooling a okg:SoftwareType ;
     rdfs:label "AI Agent Tooling" .
