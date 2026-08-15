@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "1.0.0",
+  "generationId": "20260815T051936Z-6bd3dd44b912",
+  "startedAt": "2026-08-15T05:17:43Z",
+  "sourceRetrievedAt": "2026-08-15T05:18:52Z",
+  "completedAt": "2026-08-15T05:19:36Z",
+  "counts": {
+    "records": {
+      "resources": 3000,
+      "software": 299,
+      "total": 3299
+    },
+    "triples": {
+      "ontologies": 24805,
+      "software": 3630,
+      "total": 28435
+    }
+  },
+  "versions": {
+    "ontology": "0.1.0",
+    "vocabularies": {
+      "categories": "0.1.0",
+      "softwareTypes": "0.1.0"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "curation/classifications.ttl",
+      "sha256": "7c5242fcc4217a4a77de155dbe2f2ab03ea446732081702b15417623c1c29ac5"
+    },
+    {
+      "path": "data/categories.json",
+      "sha256": "279be6be68b1d04fbc8dbbfedfea4418fb487fd811d666b0ba42095ae9d9eb01"
+    },
+    {
+      "path": "data/controlled_vocabularies.json",
+      "sha256": "ef9e01d7f1309e4dc0b17915860762db30ca3f5a735783056a6fc1b95ceea70f"
+    },
+    {
+      "path": "data/ontologies.json",
+      "sha256": "2144955835f894a5cb4826ffcb686f88a293e9b8f589797b993d881cc1940f82"
+    },
+    {
+      "path": "data/ontologies.ttl",
+      "sha256": "8928e8cd01aeebb066cdefa008b1ac835ed7b482b03a8fc6a2ff86dc0f030fb3"
+    },
+    {
+      "path": "data/page_qids.json",
+      "sha256": "a9c090df87ef313351bd810f177e8fe31ac6a1b50daedc948dec6b6861a6a25d"
+    },
+    {
+      "path": "data/software.json",
+      "sha256": "57223856393abfdd49f4ac15d33a70102282979bcba265bd4abe90318148c94a"
+    },
+    {
+      "path": "data/software.ttl",
+      "sha256": "b87a3167c6919b36ad707859f21bf2ed41d2195d0ddec647e1c548e3bdd50c33"
+    },
+    {
+      "path": "data/software_types.json",
+      "sha256": "2864f59898d29f9ec23e68d81a1de3183f69ef54a76a1da6ca54c9f427e51c6e"
+    },
+    {
+      "path": "data/uri_registry.json",
+      "sha256": "bf0e5ca8a8cdd5dc306b06568f665c865121dc1c9df6d12fdc21806267c3018d"
+    },
+    {
+      "path": "ontology.ttl",
+      "sha256": "b649193a628f2abe9e1debbcee4d78d8bc39d9f1aa474e86ef0a7f128b6f3946"
+    },
+    {
+      "path": "site/CNAME",
+      "sha256": "3fe3c3b081ac8d91a3982d186cd40b0c93a868e11c44d9cae541a76aa87e74d1"
+    },
+    {
+      "path": "site/app.js",
+      "sha256": "ada92c24e508e91acf92141ee69b9ae4471b7fefd5a05bad8402473f6e202935"
+    },
+    {
+      "path": "site/favicon.png",
+      "sha256": "25ff1cb23caf5d53660fe3aa8c8e0c1f97059b20387cc3cf077b8b8f281113b0"
+    },
+    {
+      "path": "site/favicon.svg",
+      "sha256": "5dc587438561361613540454cdc66834eff26c735a071f6b4d6dd06e532107e5"
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "0982ea262a64246af579fe2f892b515f6d3e9c33fdfbd2118ac81b9d00114437"
+    },
+    {
+      "path": "site/llms.txt",
+      "sha256": "d863ac2faa6adb9e2b698581d0eecec4eebf44a909c1f2240db5a3937f91797a"
+    },
+    {
+      "path": "site/og-image.png",
+      "sha256": "dc4b778a8408e0c94f54c4b3f4a6b5be6f49b9f2d5374965acd6777b51b23962"
+    },
+    {
+      "path": "site/og-image.svg",
+      "sha256": "b89432c3ad5d3d9ef0760c56f64ea6d018cbb56d33131f3fc873e26b736236a6"
+    },
+    {
+      "path": "site/robots.txt",
+      "sha256": "1c25c1ed512994ae204bff69e74d0f0a582d02ab02deca6d4f823256a1035eff"
+    },
+    {
+      "path": "site/sitemap.xml",
+      "sha256": "8817b3f1dff02986e11d50541e81ef4276f8460611f212969fe29a81c536bec8"
+    },
+    {
+      "path": "site/style.css",
+      "sha256": "c73deeb53a7f4d31ed733b49d5d2f7510846cb417c6fa0c26eb38c97fa7a4503"
+    },
+    {
+      "path": "sources.ttl",
+      "sha256": "365edaae464c7928b7722afb014a0840bc2ed4a3d65513b748284bf50a9f8900"
+    },
+    {
+      "path": "vocabularies/categories.ttl",
+      "sha256": "cace957c27dbc5e91a8d428b50a0b86f007bbdec9167ad8368a69ae75a6473d3"
+    },
+    {
+      "path": "vocabularies/software-types.ttl",
+      "sha256": "d87471e4e9da4bb8294ee66a22a498b0ae570987048f6f6592d7eb6fa4819a24"
+    }
+  ],
+  "directoryTrees": [
+    {
+      "path": "site/resource",
+      "sha256": "35b399c643a1c78fa4246efbff26368191b6eb0727e64d97fb62c12d892af5aa",
+      "fileCount": 694
+    },
+    {
+      "path": "site/software",
+      "sha256": "c825530cc71909931d67eadef80a4940ff95eb660b8c5101774d709e150c2a15",
+      "fileCount": 170
+    }
+  ]
+}
