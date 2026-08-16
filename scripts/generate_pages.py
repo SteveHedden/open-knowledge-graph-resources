@@ -172,6 +172,49 @@ def require_json_ld_identity(item):
         raise ValueError(f"Cannot serialize JSON-LD without: {', '.join(missing)}")
 
 
+def schema_type_for_canonical_page(url):
+    """Return the Schema.org type for a canonical generated detail-page URL."""
+    if not is_non_empty_string(url):
+        return None
+    for dataset, schema_type in (
+        ("resource", "DefinedTermSet"),
+        ("software", "SoftwareApplication"),
+    ):
+        slug = slug_from_canonical_url(url, dataset)
+        if slug and "/" not in slug and url == f"{BASE_URL}/{dataset}/{slug}/":
+            return schema_type
+    return None
+
+
+def project_related_tools(item):
+    """Return valid related-page entries in their authoritative projection order.
+
+    Full generation prunes this collection against the final survivor set before
+    rendering. This final defensive projection keeps malformed or non-canonical
+    values out of both visible HTML and embedded JSON-LD.
+    """
+    related_tools = item.get("relatedTools")
+    if not isinstance(related_tools, list):
+        return []
+    projected = []
+    for entry in related_tools:
+        if not isinstance(entry, dict):
+            continue
+        canonical_url = entry.get("canonicalUrl")
+        title = entry.get("title")
+        schema_type = schema_type_for_canonical_page(canonical_url)
+        if not schema_type or not is_non_empty_string(title):
+            continue
+        projected.append(
+            {
+                "canonicalUrl": canonical_url,
+                "title": title,
+                "schemaType": schema_type,
+            }
+        )
+    return projected
+
+
 def make_json_ld(item, dataset):
     require_json_ld_identity(item)
     schema_type = "SoftwareApplication" if dataset == "software" else "DefinedTermSet"
@@ -231,6 +274,17 @@ def make_json_ld(item, dataset):
             creator_entries.append(entry)
         if creator_entries:
             ld["creator"] = creator_entries[0] if len(creator_entries) == 1 else creator_entries
+
+    related_tools = project_related_tools(item)
+    if related_tools:
+        ld["mentions"] = [
+            {
+                "@type": entry["schemaType"],
+                "@id": entry["canonicalUrl"],
+                "name": entry["title"],
+            }
+            for entry in related_tools
+        ]
     return json.dumps(ld, indent=2)
 
 
@@ -282,7 +336,7 @@ def make_page(item, dataset, slug):
         version_html += "</p>"
 
     related_tools_html = ""
-    related_tools = item.get("relatedTools", [])
+    related_tools = project_related_tools(item)
     if related_tools:
         related_heading = "Related tools" if dataset == "software" else "Related resources"
         related_links = " ".join(

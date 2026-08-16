@@ -307,6 +307,18 @@ Repository normalization ignores HTTP versus HTTPS, query/fragment suffixes, a t
 
 Each refresh writes deterministic component scores and qualifying reasons to `build/related-resources.json` by default. CI redirects that private diagnostic to the runner temporary directory and uploads it as a workflow artifact; scoring internals are not added to public RDF or catalog JSON.
 
+### Related-resource page metadata
+
+Generated detail pages project their final, page-surviving `relatedTools` array as
+Schema.org `mentions` in the embedded JSON-LD. `okg:relatedTo` remains the
+authoritative catalog relationship; `mentions` is only its page-discovery
+projection. The value is always an array, including for one related entity, and
+preserves the same deterministic order used by catalog JSON and the visible
+Related resources or Related tools links. Each node contains the canonical OKG
+page as `@id`, the display title as `name`, and a type inferred from that generated
+page: `DefinedTermSet` for `/resource/` and `SoftwareApplication` for `/software/`.
+Targets pruned by page eligibility are absent from all page projections.
+
 ## CI/CD Pipeline
 
 ### Data Refresh Workflow

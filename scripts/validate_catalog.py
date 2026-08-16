@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import ast
+import html as html_module
 import json
 import os
 import re
@@ -39,6 +40,15 @@ PID_RE = re.compile(r"^P\d+$")
 WIKIDATA_PAGE_RE = re.compile(r"^https://www\.wikidata\.org/wiki/(Q\d+)$")
 GENERATED_AT_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 HARDCODED_SOURCE_ID_RE = re.compile(r"\b[QP]\d{2,}\b")
+JSON_LD_BLOCK_RE = re.compile(
+    r'<script type="application/ld\+json">\s*(.*?)\s*</script>',
+    re.DOTALL,
+)
+RELATED_LINKS_BLOCK_RE = re.compile(
+    r'<div class="detail-related-links">\s*(.*?)\s*</div>',
+    re.DOTALL,
+)
+HTML_LINK_RE = re.compile(r'<a href="([^"]+)">([^<]+)</a>')
 
 GRAPH_PATHS = (
     "ontology.ttl",
@@ -750,6 +760,7 @@ def validate_page_contracts(
         return
 
     expected_page_urls: set[str] = set()
+    page_records: list[tuple[str, dict[str, Any], Path]] = []
     for dataset in DATASET_SPECS:
         mapping = page_qids.get(dataset)
         if not isinstance(mapping, dict):
@@ -771,6 +782,8 @@ def validate_page_contracts(
             page_path = root / "site" / dataset / slug / "index.html"
             if not page_path.is_file():
                 report.error("page-contract", f"Generated page is missing: {page_path.relative_to(root)}")
+            elif item is not None:
+                page_records.append((dataset, item, page_path))
             expected_page_urls.add(expected_uri)
 
         actual_slugs = {
@@ -792,6 +805,78 @@ def validate_page_contracts(
                     "external-link",
                     f"{dataset} lost {len(flaky_candidates)} pages for surviving records; "
                     f"check external-link availability: {', '.join(sorted(flaky_candidates)[:20])}",
+                )
+
+    for dataset, item, page_path in page_records:
+        related_tools = item.get("relatedTools")
+        final_related = []
+        if isinstance(related_tools, list):
+            final_related = [
+                entry
+                for entry in related_tools
+                if isinstance(entry, dict)
+                and entry.get("canonicalUrl") in expected_page_urls
+                and isinstance(entry.get("title"), str)
+                and bool(entry["title"].strip())
+            ]
+        expected_mentions = [
+            {
+                "@type": (
+                    "SoftwareApplication"
+                    if entry["canonicalUrl"].startswith(f"{BASE_URL}/software/")
+                    else "DefinedTermSet"
+                ),
+                "@id": entry["canonicalUrl"],
+                "name": entry["title"],
+            }
+            for entry in final_related
+        ]
+        relative_page = page_path.relative_to(root)
+        try:
+            page_text = page_path.read_text(encoding="utf-8")
+            block = JSON_LD_BLOCK_RE.search(page_text)
+            if block is None:
+                raise ValueError("missing application/ld+json block")
+            embedded = json.loads(block.group(1))
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            report.error("page-json-ld", f"Could not parse JSON-LD in {relative_page}: {exc}")
+            continue
+
+        if expected_mentions:
+            if embedded.get("mentions") != expected_mentions:
+                report.error(
+                    "page-json-ld",
+                    f"{relative_page} schema:mentions differs from final relatedTools projection.",
+                )
+        elif "mentions" in embedded:
+            report.error(
+                "page-json-ld",
+                f"{relative_page} emits schema:mentions without a surviving related target.",
+            )
+
+        links_block = RELATED_LINKS_BLOCK_RE.search(page_text)
+        visible_links = []
+        if links_block is not None:
+            visible_links = [
+                {
+                    "canonicalUrl": html_module.unescape(url),
+                    "title": html_module.unescape(title),
+                }
+                for url, title in HTML_LINK_RE.findall(links_block.group(1))
+            ]
+        if visible_links != final_related:
+            report.error(
+                "page-json-ld",
+                f"{relative_page} visible related links differ from final relatedTools projection.",
+            )
+
+        related_urls = {entry["canonicalUrl"] for entry in final_related}
+        for property_name in ("sameAs", "isPartOf", "citation", "subjectOf", "relatedLink"):
+            rendered_value = json.dumps(embedded.get(property_name), ensure_ascii=False)
+            if any(url in rendered_value for url in related_urls):
+                report.error(
+                    "page-json-ld",
+                    f"{relative_page} misuses schema:{property_name} for a related resource.",
                 )
 
     try:

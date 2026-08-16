@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T20:31:27Z",
+  "generatedAt": "2026-08-16T01:55:52Z",
   "items": [
     {
       "title": "4store",
@@ -1954,6 +1954,27 @@
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
+      ]
+    },
+    {
+      "title": "Intentional Arrangement SKOS Editor",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141099623",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/intentional-arrangement-skos-editor/",
+      "description": "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies",
+      "homepage": "https://jesstalisman-ia.github.io/intentional-arrangement-skos/",
+      "sourceRepo": "https://github.com/jesstalisman-ia/intentional-arrangement-skos",
+      "licenses": [
+        "Creative Commons Attribution-NoDerivs 4.0 International"
+      ],
+      "latestVersion": "0.3.0",
+      "releaseDate": "2026-08-15",
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "JavaScript",
+        "Python"
       ]
     },
     {

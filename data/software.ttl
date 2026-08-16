@@ -883,6 +883,21 @@
     okg:title "InfiniteGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6029732> .
 
+<https://openknowledgegraphs.com/software/intentional-arrangement-skos-editor/> a okg:Software ;
+    rdfs:label "Intentional Arrangement SKOS Editor" ;
+    okg:description "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_NoDerivs_4_0_International_Q36795408 ;
+    okg:homepage <https://jesstalisman-ia.github.io/intentional-arrangement-skos/> ;
+    okg:latestVersion "0.3.0" ;
+    okg:programmingLanguage "JavaScript",
+        "Python" ;
+    okg:releaseDate "2026-08-15"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/jesstalisman-ia/intentional-arrangement-skos> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
+    okg:title "Intentional Arrangement SKOS Editor" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141099623> .
+
 <https://openknowledgegraphs.com/software/j2rm/> a okg:Software ;
     rdfs:label "J2RM" ;
     okg:description "ontology-based JSON-to-RDF mapping tool" ;
@@ -3415,6 +3430,10 @@ okg:License_CeCILL_C_Q125359628 a okg:License ;
 okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 a okg:License ;
     rdfs:label "Creative Commons Attribution-NoDerivs 3.0 Unported" ;
     okg:licenseName "Creative Commons Attribution-NoDerivs 3.0 Unported" .
+
+okg:License_Creative_Commons_Attribution_NoDerivs_4_0_International_Q36795408 a okg:License ;
+    rdfs:label "Creative Commons Attribution-NoDerivs 4.0 International" ;
+    okg:licenseName "Creative Commons Attribution-NoDerivs 4.0 International" .
 
 okg:License_Creative_Commons_Attribution_NonCommercial_NoDerivatives_Q6937225 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-NoDerivatives" ;
