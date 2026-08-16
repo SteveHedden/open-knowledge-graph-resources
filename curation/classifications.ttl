@@ -10710,6 +10710,9 @@
 <https://openknowledgegraphs.com/software/fact/> okg:softwareType okg:ReasoningInference ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394243> .
 
+<https://openknowledgegraphs.com/software/falkordb/> okg:softwareType okg:GraphDatabase ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141100595> .
+
 <https://openknowledgegraphs.com/software/flexrml/> okg:softwareType okg:DataMappingETL ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140706217> .
 

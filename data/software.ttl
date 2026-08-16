@@ -546,6 +546,19 @@
     okg:title "FaCT++" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394243> .
 
+<https://openknowledgegraphs.com/software/falkordb/> a okg:Software ;
+    rdfs:label "FalkorDB" ;
+    okg:description "graph database optimized for GraphRAG and LLM applications" ;
+    okg:hasLicense okg:License_Server_Side_Public_License_Q58531884 ;
+    okg:homepage <https://www.falkordb.com/> ;
+    okg:programmingLanguage "C",
+        "Rust" ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/FalkorDB/FalkorDB> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q595971> ;
+    okg:title "FalkorDB" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141100595> .
+
 <https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
     rdfs:label "FlexRML" ;
     okg:description "memory-efficient C++ RML interpreter" ;
@@ -1266,7 +1279,6 @@
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/memgraph/memgraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
-        <http://www.wikidata.org/entity/Q595971>,
         <http://www.wikidata.org/entity/Q7397> ;
     okg:title "Memgraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140897550> .
@@ -3499,6 +3511,10 @@ okg:License_Resource_2_clause_BSD_License_Q18517294 a okg:License ;
     rdfs:label "2-clause BSD License" ;
     okg:licenseName "2-clause BSD License" .
 
+okg:License_Server_Side_Public_License_Q58531884 a okg:License ;
+    rdfs:label "Server Side Public License" ;
+    okg:licenseName "Server Side Public License" .
+
 okg:License_Unlicense_Q21659044 a okg:License ;
     rdfs:label "Unlicense" ;
     okg:licenseName "Unlicense" .
@@ -4049,7 +4065,7 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     rdfs:label "HugeGraph" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
         okg:Creator_Baidu_Q14772 ;
-    okg:description "High-performance graph database supporting 100+ billion vertices and edges" ;
+    okg:description "High-performance graph database system supporting 100+ billion vertices and edges" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://hugegraph.apache.org> ;
     okg:latestVersion "1.7.0" ;
@@ -4287,13 +4303,13 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:description "open-source framework that builds ontology-grounded knowledge graphs as persistent memory for AI agents" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://www.cognee.ai/> ;
-    okg:latestVersion "1.2.2" ;
+    okg:latestVersion "1.5.0" ;
     okg:programmingLanguage "Python" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/graphiti/>,
         <https://openknowledgegraphs.com/software/mem0/>,
         <https://openknowledgegraphs.com/software/ontop/>,
         <https://openknowledgegraphs.com/software/rdf4j/> ;
-    okg:releaseDate "2026-06-26"^^xsd:date ;
+    okg:releaseDate "2026-08-15"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/topoteretes/cognee> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,

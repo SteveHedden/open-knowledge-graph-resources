@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T02:09:14Z",
+  "generatedAt": "2026-08-16T06:51:19Z",
   "items": [
     {
       "title": "4store",
@@ -725,8 +725,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "1.2.2",
-      "releaseDate": "2026-06-26",
+      "latestVersion": "1.5.0",
+      "releaseDate": "2026-08-15",
       "softwareType": "AI Agent Tooling",
       "programmingLanguages": [
         "Python"
@@ -1312,6 +1312,25 @@
       ]
     },
     {
+      "title": "FalkorDB",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141100595",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/falkordb/",
+      "description": "graph database optimized for GraphRAG and LLM applications",
+      "homepage": "https://www.falkordb.com/",
+      "sourceRepo": "https://github.com/FalkorDB/FalkorDB",
+      "licenses": [
+        "Server Side Public License"
+      ],
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "C",
+        "Rust"
+      ]
+    },
+    {
       "title": "FlexRML",
       "wikidataId": "https://www.wikidata.org/wiki/Q140706217",
       "types": [
@@ -1878,7 +1897,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/",
-      "description": "High-performance graph database supporting 100+ billion vertices and edges",
+      "description": "High-performance graph database system supporting 100+ billion vertices and edges",
       "homepage": "https://hugegraph.apache.org",
       "sourceRepo": "https://github.com/apache/hugegraph",
       "creators": [

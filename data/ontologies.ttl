@@ -21527,9 +21527,8 @@
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
     okg:category okg:GovernmentPublicSector ;
     okg:description "investigative law enforcement agency for the U.S. state of Ohio" ;
-    okg:homepage <https://www.ohioattorneygeneral.gov/Law-Enforcement/Bureau-of-Criminal-Investigation> ;
+    okg:homepage <https://ohioattorneygeneral.gov/bci> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceRepo <https://github.com/clinical-biomarkers/OBCI> ;
     okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
         <http://www.wikidata.org/entity/Q7603662> ;
     okg:title "Ohio Bureau of Criminal Investigation" ;
