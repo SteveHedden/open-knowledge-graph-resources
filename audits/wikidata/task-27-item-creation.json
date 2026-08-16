@@ -4,7 +4,7 @@
   "mode": "live",
   "recordedAt": "2026-08-16T01:30:39Z",
   "executionDate": "2026-08-16",
-  "status": "catalog-generated-publish-pending",
+  "status": "published-verified",
   "publicWritesPerformed": true,
   "duplicateGate": {
     "decision": "passed",
@@ -320,8 +320,10 @@
     "readbackVerified": true
   },
   "catalogRefresh": {
-    "generationId": "20260816T015757Z-c88767d74e0e",
-    "sourceRetrievedAt": "2026-08-16T01:55:49Z",
+    "generationId": "20260816T020959Z-61fc84834572",
+    "sourceRetrievedAt": "2026-08-16T02:09:12Z",
+    "publishedCommit": "5822db3cafc24505593ca1465e3679ca0239d915",
+    "publishedAt": "2026-08-16T02:09:59Z",
     "wikidataSourceIngestion": true,
     "softwareRdfOccurrences": 1,
     "softwareJsonOccurrences": 1,
@@ -330,6 +332,9 @@
     "catalogValidationErrors": 0,
     "catalogValidationWarnings": 0,
     "localManifestVerified": true,
-    "publishedVerified": false
+    "publishedManifestVerified": true,
+    "publishedRecordVerified": true,
+    "publishedDetailPageVerified": true,
+    "publishedVerified": true
   }
 }
