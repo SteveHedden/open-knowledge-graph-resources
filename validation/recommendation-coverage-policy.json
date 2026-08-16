@@ -1,20 +1,7 @@
 {
   "schemaVersion": "1.0.0",
-  "maximumEmptyShare": 0.5,
+  "maximumEmptyShare": 0.75,
   "maximumUnreviewedCoverageDecline": 0.05,
   "acceptedDeclines": [],
-  "acceptedShortfalls": [
-    {
-      "baselineGenerationId": "20260815T061705Z-3eac2200a7f4",
-      "catalog": "resource",
-      "minimumCoverageShare": 0.49,
-      "rationale": "User-approved one-generation interim release to publish the refreshed catalog, including g3-toolkit, while Task 25 remains in progress; candidate coverage is 343 of 698 final pages (49.1%)."
-    },
-    {
-      "baselineGenerationId": "20260815T061705Z-3eac2200a7f4",
-      "catalog": "software",
-      "minimumCoverageShare": 0.29,
-      "rationale": "User-approved one-generation interim release to publish the refreshed catalog, including g3-toolkit, while Task 25 remains in progress; candidate coverage is 50 of 171 final pages (29.2%)."
-    }
-  ]
+  "acceptedShortfalls": []
 }

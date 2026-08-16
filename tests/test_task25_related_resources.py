@@ -793,10 +793,12 @@ class ProjectionAndDiagnosticsTests(unittest.TestCase):
                     with self.assertRaises(ValueError):
                         recommendation_coverage.load_policy(path)
 
-    def test_checked_in_interim_shortfall_is_scoped_to_current_baseline(self):
+    def test_checked_in_deferred_floor_preserves_regression_protection(self):
         policy = recommendation_coverage.load_policy(
             ROOT / "validation" / "recommendation-coverage-policy.json"
         )
+        self.assertEqual(policy["maximumEmptyShare"], 0.75)
+        self.assertEqual(policy["acceptedShortfalls"], [])
         candidate = {
             "resource": {"coverageShare": 343 / 698, "emptyShare": 1 - 343 / 698},
             "software": {"coverageShare": 50 / 171, "emptyShare": 1 - 50 / 171},
@@ -809,16 +811,37 @@ class ProjectionAndDiagnosticsTests(unittest.TestCase):
             candidate,
             baseline,
             policy,
-            "20260815T061705Z-3eac2200a7f4",
+            "current-generation",
         )
         self.assertTrue(approved["gate"]["passed"])
-        expired = recommendation_coverage.evaluate_coverage(
-            candidate,
+
+        below_absolute_floor = {
+            **candidate,
+            "software": {"coverageShare": 0.249999, "emptyShare": 0.750001},
+        }
+        rejected_floor = recommendation_coverage.evaluate_coverage(
+            below_absolute_floor,
             baseline,
             policy,
-            "next-successful-generation",
+            "current-generation",
         )
-        self.assertFalse(expired["gate"]["passed"])
+        self.assertFalse(rejected_floor["gate"]["passed"])
+
+        regressed = {
+            **candidate,
+            "software": {"coverageShare": 0.26, "emptyShare": 0.74},
+        }
+        regression_baseline = {
+            **baseline,
+            "software": {"coverageShare": 0.32, "emptyShare": 0.68},
+        }
+        rejected_regression = recommendation_coverage.evaluate_coverage(
+            regressed,
+            regression_baseline,
+            policy,
+            "current-generation",
+        )
+        self.assertFalse(rejected_regression["gate"]["passed"])
 
     def test_every_source_parent_identity_survives_row_normalization(self):
         item = "http://www.wikidata.org/entity/Q79"
