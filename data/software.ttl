@@ -546,18 +546,19 @@
     okg:title "FaCT++" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394243> .
 
-<https://openknowledgegraphs.com/software/falkordb/> a okg:Software ;
+<https://openknowledgegraphs.com/software/falkordb-q141103185/> a okg:Software ;
     rdfs:label "FalkorDB" ;
-    okg:description "graph database optimized for GraphRAG and LLM applications" ;
+    okg:description "graph database management system implemented in C" ;
     okg:hasLicense okg:License_Server_Side_Public_License_Q58531884 ;
     okg:homepage <https://www.falkordb.com/> ;
-    okg:programmingLanguage "C",
-        "Rust" ;
+    okg:latestVersion "4.18.11" ;
+    okg:programmingLanguage "C" ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/FalkorDB/FalkorDB> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q595971> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q137916409> ;
     okg:title "FalkorDB" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q141100595> .
+    okg:uses <http://www.wikidata.org/entity/Q16834355> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141103185> .
 
 <https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
     rdfs:label "FlexRML" ;
@@ -1476,9 +1477,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.10.3" ;
+    okg:latestVersion "0.11.0" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-14"^^xsd:date ;
+    okg:releaseDate "2026-08-15"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1621,8 +1622,8 @@
     rdfs:label "open-ontologies" ;
     okg:description "Open-source ontology engine for RDF and OWL with SPARQL querying, SHACL validation, and OWL2-DL reasoning. Written in Rust and runs as a lightweight MCP server." ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "1.1.1" ;
-    okg:releaseDate "2026-08-05"^^xsd:date ;
+    okg:latestVersion "1.2.0" ;
+    okg:releaseDate "2026-08-15"^^xsd:date ;
     okg:softwareType okg:ReasoningInference ;
     okg:sourceRepo <https://github.com/fabio-rovai/open-ontologies> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -2986,6 +2987,19 @@
     okg:title "Turtle Editor Viewer" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q141031252> .
 
+<https://openknowledgegraphs.com/software/typedb/> a okg:Software ;
+    rdfs:label "TypeDB" ;
+    okg:description "Grakn is an open-source, distributed knowledge graph database for knowledge-oriented systems" ;
+    okg:hasLicense okg:License_Mozilla_Public_License_version_2_0_Q25428413 ;
+    okg:homepage <https://typedb.com/> ;
+    okg:programmingLanguage "Java" ;
+    okg:softwareType okg:GraphDatabase ;
+    okg:sourceRepo <https://github.com/typedb/typedb> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
+        <http://www.wikidata.org/entity/Q7397> ;
+    okg:title "TypeDB" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q42266763> .
+
 <https://openknowledgegraphs.com/software/uniprot/> a okg:Software ;
     rdfs:label "UniProt" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q109496594>,
@@ -3495,10 +3509,6 @@ okg:License_ISC_license_Q386474 a okg:License ;
     rdfs:label "ISC license" ;
     okg:licenseName "ISC license" .
 
-okg:License_Mozilla_Public_License_version_2_0_Q25428413 a okg:License ;
-    rdfs:label "Mozilla Public License, version 2.0" ;
-    okg:licenseName "Mozilla Public License, version 2.0" .
-
 okg:License_Open_Software_License_Q777520 a okg:License ;
     rdfs:label "Open Software License" ;
     okg:licenseName "Open Software License" .
@@ -3878,6 +3888,10 @@ okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 a okg:Licen
 okg:License_GNU_Affero_General_Public_License_Q1131681 a okg:License ;
     rdfs:label "GNU Affero General Public License" ;
     okg:licenseName "GNU Affero General Public License" .
+
+okg:License_Mozilla_Public_License_version_2_0_Q25428413 a okg:License ;
+    rdfs:label "Mozilla Public License, version 2.0" ;
+    okg:licenseName "Mozilla Public License, version 2.0" .
 
 okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;

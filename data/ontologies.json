@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T06:51:19Z",
+  "generatedAt": "2026-08-17T07:07:04Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -3993,6 +3993,16 @@
       "category": "General / Cross-domain",
       "homepage": "https://bioportal.bioontology.org/ontologies/CASE-BASE-ONTO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
+    },
+    {
+      "title": "CasinosBroker",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141106693",
+      "types": [
+        "KnowledgeGraph"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/casinosbroker/",
+      "description": "iGaming M&A marketplace and advisory platform for buying and selling online casino businesses",
+      "category": "Finance & Business"
     },
     {
       "title": "Catálogo de autoridades BNMM",
@@ -36189,24 +36199,6 @@
       "category": "General / Cross-domain",
       "homepage": "https://bioportal.bioontology.org/ontologies/CVAO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
-    },
-    {
-      "title": "Strategic Self-Advocacy Model",
-      "wikidataId": "https://www.wikidata.org/wiki/Q137343406",
-      "types": [
-        "Ontology"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/strategic-self-advocacy-model/",
-      "category": "General / Cross-domain",
-      "partOf": "Q137324266",
-      "creators": [
-        {
-          "name": "Sarah Ailish McLoughlin",
-          "type": "Person",
-          "wikidataId": "https://www.wikidata.org/wiki/Q137322933",
-          "googleScholarProfile": "https://scholar.google.com/citations?user=G0EXecYAAAAJ"
-        }
-      ]
     },
     {
       "title": "street cadastre of Bonn",

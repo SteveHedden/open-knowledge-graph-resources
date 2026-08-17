@@ -1778,6 +1778,15 @@
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118269> .
 
+<https://openknowledgegraphs.com/resource/casinosbroker/> a okg:KnowledgeGraph ;
+    rdfs:label "CasinosBroker" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "iGaming M&A marketplace and advisory platform for buying and selling online casino businesses" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q4830453> ;
+    okg:title "CasinosBroker" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141106693> .
+
 <https://openknowledgegraphs.com/resource/catalogo-de-autoridades-bnmm/> a okg:ControlledVocabulary ;
     rdfs:label "Catálogo de autoridades BNMM" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -25261,18 +25270,6 @@
     okg:title "STIX Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q123115257> .
 
-<https://openknowledgegraphs.com/resource/strategic-self-advocacy-model/> a okg:Ontology ;
-    rdfs:label "Strategic Self-Advocacy Model" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137324266> ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:creator okg:Creator_Sarah_Ailish_McLoughlin_Q137322933 ;
-    okg:partOf "Q137324266" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q221173>,
-        <http://www.wikidata.org/entity/Q2623243>,
-        <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Strategic Self-Advocacy Model" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q137343406> .
-
 <https://openknowledgegraphs.com/resource/street-cadastre-of-bonn/> a okg:ControlledVocabulary ;
     rdfs:label "street cadastre of Bonn" ;
     okg:category okg:Geospatial ;
@@ -28482,11 +28479,6 @@ okg:Creator_Sage_Publishing_Q251266 a okg:Organization ;
 okg:Creator_Sanni_Nimb_Q28524324 a okg:Person ;
     rdfs:label "Sanni Nimb" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q28524324> .
-
-okg:Creator_Sarah_Ailish_McLoughlin_Q137322933 a okg:Person ;
-    rdfs:label "Sarah Ailish McLoughlin" ;
-    okg:googleScholarProfile <https://scholar.google.com/citations?user=G0EXecYAAAAJ> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q137322933> .
 
 okg:Creator_Sean_Bechhofer_Q56513265 a okg:Person ;
     rdfs:label "Sean Bechhofer" ;

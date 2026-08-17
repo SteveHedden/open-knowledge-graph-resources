@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T06:51:19Z",
+  "generatedAt": "2026-08-17T07:07:04Z",
   "items": [
     {
       "title": "4store",
@@ -1313,21 +1313,21 @@
     },
     {
       "title": "FalkorDB",
-      "wikidataId": "https://www.wikidata.org/wiki/Q141100595",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141103185",
       "types": [
         "Software"
       ],
-      "canonicalUrl": "https://openknowledgegraphs.com/software/falkordb/",
-      "description": "graph database optimized for GraphRAG and LLM applications",
+      "canonicalUrl": "https://openknowledgegraphs.com/software/falkordb-q141103185/",
+      "description": "graph database management system implemented in C",
       "homepage": "https://www.falkordb.com/",
       "sourceRepo": "https://github.com/FalkorDB/FalkorDB",
       "licenses": [
         "Server Side Public License"
       ],
+      "latestVersion": "4.18.11",
       "softwareType": "Graph Database",
       "programmingLanguages": [
-        "C",
-        "Rust"
+        "C"
       ]
     },
     {
@@ -3285,8 +3285,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "0.10.3",
-      "releaseDate": "2026-08-14",
+      "latestVersion": "0.11.0",
+      "releaseDate": "2026-08-15",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "TypeScript"
@@ -3589,8 +3589,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "1.1.1",
-      "releaseDate": "2026-08-05",
+      "latestVersion": "1.2.0",
+      "releaseDate": "2026-08-15",
       "softwareType": "Reasoning & Inference"
     },
     {
@@ -6243,6 +6243,24 @@
       "softwareType": "Visualization",
       "programmingLanguages": [
         "TypeScript"
+      ]
+    },
+    {
+      "title": "TypeDB",
+      "wikidataId": "https://www.wikidata.org/wiki/Q42266763",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/typedb/",
+      "description": "Grakn is an open-source, distributed knowledge graph database for knowledge-oriented systems",
+      "homepage": "https://typedb.com/",
+      "sourceRepo": "https://github.com/typedb/typedb",
+      "licenses": [
+        "Mozilla Public License, version 2.0"
+      ],
+      "softwareType": "Graph Database",
+      "programmingLanguages": [
+        "Java"
       ]
     },
     {

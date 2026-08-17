@@ -612,6 +612,9 @@
 <https://openknowledgegraphs.com/resource/cardiovascular-disease-ontology/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118269> .
 
+<https://openknowledgegraphs.com/resource/casinosbroker/> okg:category okg:FinanceBusiness ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141106693> .
+
 <https://openknowledgegraphs.com/resource/catalogo-de-autoridades-bnmm/> okg:category okg:LibraryCulturalHeritage ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q105566566> .
 
@@ -10710,6 +10713,9 @@
 <https://openknowledgegraphs.com/software/fact/> okg:softwareType okg:ReasoningInference ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59394243> .
 
+<https://openknowledgegraphs.com/software/falkordb-q141103185/> okg:softwareType okg:GraphDatabase ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141103185> .
+
 <https://openknowledgegraphs.com/software/falkordb/> okg:softwareType okg:GraphDatabase ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q141100595> .
 
@@ -11387,6 +11393,9 @@
 
 <https://openknowledgegraphs.com/software/turtle-editor-viewer/> okg:softwareType okg:Visualization ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q141031252> .
+
+<https://openknowledgegraphs.com/software/typedb/> okg:softwareType okg:GraphDatabase ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q42266763> .
 
 <https://openknowledgegraphs.com/software/uniprot/> okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q905695> .
