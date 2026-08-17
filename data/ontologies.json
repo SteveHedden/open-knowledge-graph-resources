@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T17:17:06Z",
+  "generatedAt": "2026-08-17T17:45:25Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -438,7 +438,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/",
       "description": "Ontology of concepts relevant to agronomy experiments",
       "category": "Environment & Agriculture",
-      "homepage": "https://obofoundry.org/ontology/agro.html",
+      "homepage": "https://github.com/AgriculturalSemantics/agro",
       "sourceRepo": "https://github.com/AgriculturalSemantics/agro",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
@@ -724,7 +724,6 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/alzheimer-s-disease-ontology/",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/ADO",
-      "sourceRepo": "https://github.com/Fraunhofer-SCAI-Applied-Semantics/ADO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -769,7 +768,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/amphibian-gross-anatomy/",
       "description": "ontology part of OBOFoundry",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "http://github.com/seger/aao",
+      "homepage": "http://github.com/seger/aao",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies"
     },
     {
@@ -793,7 +792,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/amphioxus-development-and-anatomy-ontology/",
       "description": "The Amphioxus Development and Anatomy Ontology is to describe the anatomy and development of Amphioxus",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/EBISPOT/amphx_ontology"
+      "homepage": "https://github.com/EBISPOT/amphx_ontology"
     },
     {
       "title": "Amphioxus Development and Anatomy Ontology",
@@ -803,7 +802,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524218/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/EBISPOT/amphx_ontology",
+      "homepage": "https://github.com/EBISPOT/amphx_ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -859,7 +858,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/an-ontology-of-core-ecological-entities/",
       "description": "ontology for ecological entities",
       "category": "Environment & Agriculture",
-      "sourceRepo": "https://github.com/EcologicalSemantics/ecocore",
+      "homepage": "https://github.com/EcologicalSemantics/ecocore",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -909,7 +908,6 @@
       "description": "Ontology of anatomical structures that expand CARO, the Common Anatomy Reference Ontology.",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://bioportal.bioontology.org/ontologies/1568",
-      "sourceRepo": "https://github.com/obophenotype/human-developmental-anatomy-ontology/",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -1045,8 +1043,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/antibiotic-resistance-ontology/",
       "description": "Ontology for ntibiotic resistance genes and mutations",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/aro",
-      "sourceRepo": "https://github.com/arpcard/aro",
+      "homepage": "https://github.com/arpcard/aro",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -1150,8 +1147,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/apollo-structured-vocabulary/",
       "description": "Ontology for enabling interoperability of epidemic models and public health application software.",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/apollo_sv",
-      "sourceRepo": "https://github.com/ApolloDev/apollo-sv",
+      "homepage": "https://github.com/ApolloDev/apollo-sv",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -1797,7 +1793,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493752/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/lu-w/auto",
+      "homepage": "https://github.com/lu-w/auto",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -1808,7 +1804,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493819/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/dfdazac/autocoo",
+      "homepage": "https://github.com/dfdazac/autocoo",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -1916,7 +1912,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493832/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/Junjingw/bacteria-ontologia",
+      "homepage": "https://github.com/Junjingw/bacteria-ontologia",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -2020,8 +2016,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/common-core-ontologies/"
         },
         {
-          "title": "Conceptual Model Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/conceptual-model-ontology/"
+          "title": "Information Artifact Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology/"
         }
       ]
     },
@@ -2033,7 +2029,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493805/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/motin09/basic-Gene-Ontology",
+      "homepage": "https://github.com/motin09/basic-Gene-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -2092,7 +2088,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493803/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/nriddiford/gopher",
+      "homepage": "https://github.com/nriddiford/gopher",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -2103,7 +2099,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493757/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/galaxy-brain-ai/mcog-core",
+      "homepage": "https://github.com/galaxy-brain-ai/mcog-core",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -2196,7 +2192,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/beta-cell-genomics-ontology/",
       "description": "application ontology built for beta cell genomics studies",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obi-bcgo/bcgo",
+      "homepage": "https://github.com/obi-bcgo/bcgo",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -2338,7 +2334,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493823/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/bukharilab/BIM-Biomedical-Image-Ontology",
+      "homepage": "https://github.com/bukharilab/BIM-Biomedical-Image-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -2646,8 +2642,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-collections-ontology/",
       "description": "ontology for biodiversity data",
       "category": "Environment & Agriculture",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/bco",
-      "sourceRepo": "https://github.com/BiodiversityOntologies/bco",
+      "homepage": "https://github.com/BiodiversityOntologies/bco",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -2729,10 +2724,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-spatial-ontology/",
       "description": "ontology for respresenting spatial concepts used in biology",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/biological-spatial-ontology",
+      "homepage": "https://github.com/obophenotype/biological-spatial-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/"
+        }
       ]
     },
     {
@@ -3606,7 +3607,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/c-elegans-development-ontology/",
       "description": "ontology for the development of Caenorhabditis elegans",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/c-elegans-development-ontology",
+      "homepage": "https://github.com/obophenotype/c-elegans-development-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -3621,7 +3622,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/c-elegans-gross-anatomy-ontology/",
       "description": "ontology for the anatomy of Caenorhabditis elegans",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/c-elegans-gross-anatomy-ontology",
+      "homepage": "https://github.com/obophenotype/c-elegans-gross-anatomy-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -3638,7 +3639,6 @@
       "description": "ontology for the phenotypes of Caenorhabditis elegans",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://bioportal.bioontology.org/ontologies/1067",
-      "sourceRepo": "https://github.com/obophenotype/c-elegans-phenotype-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -3837,7 +3837,6 @@
       "description": "ontology for cancer cell types and characteristics",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://ceur-ws.org/Vol-1060/icbo2013_submission_75.pdf",
-      "sourceRepo": "https://github.com/mdolanme/oncocl",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -3938,7 +3937,6 @@
       "description": "ontology",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/CVDO",
-      "sourceRepo": "https://github.com/OpenLHS/CVDO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -4038,7 +4036,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493818/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/SNUBiKE/CDT-Ontology",
+      "homepage": "https://github.com/SNUBiKE/CDT-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -4499,16 +4497,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
         },
         {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
+        },
+        {
           "title": "Chemical Entities of Biological Interest",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-entities-of-biological-interest/"
         },
         {
           "title": "Compositional Dietary Nutrition Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/"
-        },
-        {
-          "title": "Kyoto Encyclopedia of Genes and Genomes",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/kyoto-encyclopedia-of-genes-and-genomes/"
         },
         {
           "title": "UniProt",
@@ -4526,10 +4524,32 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/",
       "description": "integrated ontology of chemical roles from ChEBI",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/chiro",
+      "homepage": "https://github.com/obophenotype/chiro",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
+      ],
+      "relatedTools": [
+        {
+          "title": "ChEBI",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi/"
+        },
+        {
+          "title": "Gene Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gene-ontology/"
+        },
+        {
+          "title": "Human Phenotype Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/human-phenotype-ontology/"
+        },
+        {
+          "title": "Mammalian Phenotype Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/mammalian-phenotype-ontology/"
+        },
+        {
+          "title": "NCBI organismal classification",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ncbi-organismal-classification/"
+        }
       ]
     },
     {
@@ -4632,7 +4652,6 @@
       "description": "Ontology for descriptors used in chemoinformatics database",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://code.google.com/p/semanticchemistry/",
-      "sourceRepo": "https://github.com/semanticchemistry/semanticchemistry",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -4658,10 +4677,20 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-methods-ontology/",
       "description": "ontology describing chemical methods and procedures",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/rsc-ontologies/rsc-cmo",
+      "homepage": "https://github.com/rsc-ontologies/rsc-cmo",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Radiation Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/"
+        }
       ]
     },
     {
@@ -4868,7 +4897,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523442/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/cido-ontology/cido",
+      "homepage": "https://github.com/cido-ontology/cido",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -5012,7 +5041,6 @@
       "description": "ontology of prescriptions and reports in clinical laboratories",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/LABO",
-      "sourceRepo": "https://github.com/OpenLHS/LABO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -5086,7 +5114,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493817/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/leonqli/clinical_trial_ontology",
+      "homepage": "https://github.com/leonqli/clinical_trial_ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -5153,7 +5181,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493780/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/ozborn/clinreason",
+      "homepage": "https://github.com/ozborn/clinreason",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -5165,8 +5193,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/clusterprofiler/",
       "description": "Bioconductor project",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.bioconductor.org/",
-      "sourceRepo": "https://github.com/BeverlyCh/Gene-Ontology",
+      "homepage": "https://github.com/BeverlyCh/Gene-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Artistic License 2.0"
@@ -5198,10 +5225,24 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/",
       "description": "Ontology that describes the anatomical and developmental features of the Clytia hemisphaerica life cycle.",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/EBISPOT/clyh_ontology",
+      "homepage": "https://github.com/EBISPOT/clyh_ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Information Artifact Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology/"
+        },
+        {
+          "title": "Relations Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/relations-ontology/"
+        },
+        {
+          "title": "Uberon",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/uberon/"
+        }
       ]
     },
     {
@@ -5273,7 +5314,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493814/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/mhxu1998/CoDMO",
+      "homepage": "https://github.com/mhxu1998/CoDMO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -5404,7 +5445,6 @@
       "description": "ontology part of OBOFoundry",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/COLAO",
-      "sourceRepo": "https://github.com/insect-morphology/colao",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -5456,7 +5496,6 @@
       "description": "collembola anatomy ontology includes anatomical terms to refer to sclerites, anatomical systems, cell components, and chaetotaxy",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/CLAO",
-      "sourceRepo": "https://github.com/luis-gonzalez-m/Collembola",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -5520,10 +5559,20 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/",
       "description": "reference ontology for common anatomical structures across species",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/caro/",
+      "homepage": "https://github.com/obophenotype/caro/",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/"
+        }
       ]
     },
     {
@@ -5656,10 +5705,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/comparative-data-analysis-ontology/",
       "description": "Ontology of concepts and relations relevant to evolutionary comparative analysis",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/evoinfo/cdao",
+      "homepage": "https://github.com/evoinfo/cdao",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -5701,6 +5756,10 @@
         {
           "title": "Environment Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/environment-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         },
         {
           "title": "Relations Ontology",
@@ -5902,7 +5961,6 @@
       "description": "ontology to describe confidence information in sequence annotations",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/CIO",
-      "sourceRepo": "https://github.com/BgeeDB/confidence-information-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -5977,7 +6035,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493766/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/pharmacome/conso",
+      "homepage": "https://github.com/pharmacome/conso",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -6022,6 +6080,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/contributor-role-ontology/",
       "description": "an ontology for the diverse roles behind a scientific research article",
       "category": "Library & Cultural Heritage",
+      "homepage": "https://github.com/data2health/contributor-role-ontology",
       "sourceRepo": "https://github.com/data2health/contributor-role-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
@@ -6190,7 +6249,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/coronavirus-infectious-disease-ontology/",
       "description": "ontology for coronavirus infectious diseases and related concepts",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/cido-ontology/cido",
+      "homepage": "https://github.com/cido-ontology/cido",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -6540,7 +6599,6 @@
       "description": "anatomical and developmental ontology for ctenophores (Comb Jellies)",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/CTENO",
-      "sourceRepo": "https://github.com/obophenotype/ctenophore-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -6555,7 +6613,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/cto-core-ontology-of-clinical-trials/",
       "description": "core ontology for clinical trial design and execution",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/ClinicalTrialOntology/CTO/",
+      "homepage": "https://github.com/ClinicalTrialOntology/CTO/",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -6960,7 +7018,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/data-use-ontology/",
       "description": "ontology for describing data use permissions and restrictions",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/EBISPOT/DUO",
+      "homepage": "https://github.com/EBISPOT/DUO",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -7057,7 +7115,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493791/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/multydoffer/dataset_Gene_ontology_term",
+      "homepage": "https://github.com/multydoffer/dataset_Gene_ontology_term",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7212,7 +7270,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493816/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/ProjectDebbie/Ontology_DEB",
+      "homepage": "https://github.com/ProjectDebbie/Ontology_DEB",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7223,7 +7281,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493824/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/biopragmatics/debio",
+      "homepage": "https://github.com/biopragmatics/debio",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7431,7 +7489,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493759/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/obophenotype/zebrafish-phenotype-ontology",
+      "homepage": "https://github.com/obophenotype/zebrafish-phenotype-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7514,7 +7572,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493770/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/RonaldoDev/diagnosis_support",
+      "homepage": "https://github.com/RonaldoDev/diagnosis_support",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7571,7 +7629,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493741/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/idaholab/DIAMOND",
+      "homepage": "https://github.com/idaholab/DIAMOND",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7750,7 +7808,7 @@
       "description": "formal ontology of human disease",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://disease-ontology.org/",
-      "sourceRepo": "https://github.com/20KD1A05C1/Disease-ontology",
+      "sourceRepo": "https://github.com/DiseaseOntology/HumanDiseaseOntology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -7807,7 +7865,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493789/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/cirillodavide/DO2GO_mouse",
+      "homepage": "https://github.com/cirillodavide/DO2GO_mouse",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -7819,6 +7877,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/doap/",
       "description": "RDF/OWL schema for describing software projects",
       "category": "Technology & Web",
+      "homepage": "https://github.com/ewilderj/doap/wiki",
       "sourceRepo": "https://github.com/ewilderj/doap",
       "namespaceURI": "http://usefulinc.com/ns/doap#",
       "licenses": [
@@ -8143,7 +8202,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/drug-repurposing-knowledge-graph/",
       "description": "DRKG dataset",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/gnn4dr/DRKG"
+      "homepage": "https://github.com/gnn4dr/DRKG"
     },
     {
       "title": "Drug Target Ontology",
@@ -8166,7 +8225,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/drug-drug-interaction-and-drug-drug-interaction-evidence-ontology/",
       "description": "Ontology for drug-drug interaction evidence.",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/DIDEO/DIDEO",
+      "homepage": "https://github.com/DIDEO/DIDEO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -8180,7 +8239,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495143/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/labda/DINTO",
+      "homepage": "https://github.com/labda/DINTO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -8541,7 +8600,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493820/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/reality/ECMO",
+      "homepage": "https://github.com/reality/ECMO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -8870,8 +8929,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/emotion-ontology/",
       "description": "ontology of emotions, moods, and other kinds of feelings",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/mfoem",
-      "sourceRepo": "https://github.com/jannahastings/emotion-ontology",
+      "homepage": "https://github.com/jannahastings/emotion-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -9016,6 +9074,10 @@
         {
           "title": "Compositional Dietary Nutrition Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/"
+        },
+        {
+          "title": "Radiation Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/"
         }
       ]
     },
@@ -9039,7 +9101,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/environmental-conditions-treatments-and-exposures-ontology/",
       "description": "ontology part of OBO Foundry",
       "category": "Environment & Agriculture",
-      "sourceRepo": "https://github.com/EnvironmentOntology/environmental-exposure-ontology",
+      "homepage": "https://github.com/EnvironmentOntology/environmental-exposure-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -9214,7 +9276,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/epilepsy-ontology/",
       "description": "ontology for epilepsy disorders and neurological conditions",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/SCAI-BIO/EpilepsyOntology",
+      "homepage": "https://github.com/SCAI-BIO/EpilepsyOntology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -9710,7 +9772,6 @@
       "description": "ontology for types evidence used to support scientific claims",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://jodischneider.com/pubs/dikr2014.pdf",
-      "sourceRepo": "https://github.com/evidenceontology/evidenceontology/",
       "partOf": "OBO Foundry",
       "relatedTools": [
         {
@@ -9950,7 +10011,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/exposure-ontology/",
       "description": "ontology for environmental and chemical exposure assessment",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/CTDbase/exposure-ontology",
+      "homepage": "https://github.com/CTDbase/exposure-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -10020,6 +10081,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/extensible-observation-ontology/",
       "description": "ontology for scientific observations and measurements",
       "category": "General / Cross-domain",
+      "homepage": "https://github.com/NCEAS/oboe/",
       "sourceRepo": "https://github.com/NCEAS/oboe",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -10829,7 +10891,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/flora-phenotype-ontology/",
       "description": "ontology for traits and phenotypes of flowering plants",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/flora-phenotype-ontology/flopoontology",
+      "homepage": "https://github.com/flora-phenotype-ontology/flopoontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -10898,7 +10960,6 @@
       "description": "ontology to support the FlyBase project",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://purl.obolibrary.org/obo/fbcv",
-      "sourceRepo": "https://github.com/Planteome/plant-experimental-conditions-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -11041,7 +11102,6 @@
       "description": "ontology for food categorization and processing",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://foodon.org/",
-      "sourceRepo": "https://github.com/FoodOntology/foodon",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -11067,7 +11127,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/food-biomarker-ontology/",
       "description": "ontology linking food components to biomarkers",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
+      "homepage": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -11081,7 +11141,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493753/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
+      "homepage": "https://github.com/pcastellanoescuder/FoodBiomarkerOntology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11345,7 +11405,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/fungal-gross-anatomy/",
       "description": "ontology for the anatomy of fungi",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/fungal-anatomy-ontology/",
+      "homepage": "https://github.com/obophenotype/fungal-anatomy-ontology/",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -11359,7 +11419,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493760/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/greenelab/hetontology",
+      "homepage": "https://github.com/greenelab/hetontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11385,7 +11445,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/futres-ontology-of-vertebrate-traits/",
       "description": "ontology for vertebrate morphological and functional traits",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/futres/fovt",
+      "homepage": "https://github.com/futres/fovt",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -11715,6 +11775,10 @@
         {
           "title": "Cell Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
         }
       ]
     },
@@ -11748,7 +11812,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493793/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/SafiaFatima/Gene-Ontology-Classification-of-Protein-Sequence",
+      "homepage": "https://github.com/SafiaFatima/Gene-Ontology-Classification-of-Protein-Sequence",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11759,7 +11823,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493804/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/xiaotiand/BayesGO2DO",
+      "homepage": "https://github.com/xiaotiand/BayesGO2DO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11770,7 +11834,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493809/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/Angelos-Gk/Gene-Pleiotropy",
+      "homepage": "https://github.com/Angelos-Gk/Gene-Pleiotropy",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11809,7 +11873,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493765/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/carze/disease-ontology",
+      "homepage": "https://github.com/carze/disease-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11831,7 +11895,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493833/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/QuanEvans/gene_onotology_obo_tools",
+      "homepage": "https://github.com/QuanEvans/gene_onotology_obo_tools",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11842,7 +11906,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493742/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/blokhin/genealogical-trees",
+      "homepage": "https://github.com/blokhin/genealogical-trees",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11853,7 +11917,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493830/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/bicycle1885/GeneOntology.jl",
+      "homepage": "https://github.com/bicycle1885/GeneOntology.jl",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11864,7 +11928,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493831/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/nachocab/geneOntologyGraphDB",
+      "homepage": "https://github.com/nachocab/geneOntologyGraphDB",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -11875,7 +11939,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493801/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/wkpalan/gograph",
+      "homepage": "https://github.com/wkpalan/gograph",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -12041,7 +12105,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493792/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/prozion/genes-data",
+      "homepage": "https://github.com/prozion/genes-data",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -12132,7 +12196,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/genomics-cohorts-knowledge-ontology/",
       "description": "ontology for genomics research cohort metadata",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IHCC-cohorts/GECKO",
+      "homepage": "https://github.com/IHCC-cohorts/GECKO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -12149,7 +12213,6 @@
       "description": "ontology for genotypes and their related phenotypes and diseases",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://gen-o.github.io/",
-      "sourceRepo": "https://github.com/monarch-initiative/GENO-ontology/",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -12164,7 +12227,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/geographical-entity-ontology/",
       "description": "ontology of geographical entities",
       "category": "Geospatial",
-      "sourceRepo": "https://github.com/ufbmi/geographical-entity-ontology/wiki",
+      "homepage": "https://github.com/ufbmi/geographical-entity-ontology/wiki",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -12476,7 +12539,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493777/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/yjcyxky/gliomarker",
+      "homepage": "https://github.com/yjcyxky/gliomarker",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -16620,7 +16683,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/glycan-naming-ontology/",
       "description": "ontology for glycans based on GlyTouCan",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/glygen-glycan-data/GNOme",
+      "homepage": "https://github.com/glygen-glycan-data/GNOme",
       "partOf": "OBO Foundry"
     },
     {
@@ -16737,7 +16800,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493790/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/jvfe/go2cell",
+      "homepage": "https://github.com/jvfe/go2cell",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -16748,7 +16811,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493795/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/movingpictures83/GOCluster",
+      "homepage": "https://github.com/movingpictures83/GOCluster",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -16759,7 +16822,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493800/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/stain/go-rdf",
+      "homepage": "https://github.com/stain/go-rdf",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -16836,7 +16899,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493802/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/mikel-egana-aranguren/GeneOntologyNextGeneration",
+      "homepage": "https://github.com/mikel-egana-aranguren/GeneOntologyNextGeneration",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -17239,7 +17302,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493767/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/mubashar-iqbal/HealthOnt",
+      "homepage": "https://github.com/mubashar-iqbal/HealthOnt",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -17366,7 +17429,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493768/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/ioannidou135/HERON-Ontology",
+      "homepage": "https://github.com/ioannidou135/HERON-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -17386,7 +17449,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493761/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/arpcard/mobio",
+      "homepage": "https://github.com/arpcard/mobio",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -17809,7 +17872,6 @@
       "description": "ontology for concepts related to homology",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bgee.org/",
-      "sourceRepo": "https://github.com/BgeeDB/homology-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -17904,7 +17966,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493739/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/IBM/hspo-ontology",
+      "homepage": "https://github.com/IBM/hspo-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -17951,7 +18013,6 @@
       "description": "ontology of ancestry concepts used in the NHGRI-EBI Catalog of published genome-wide association studies",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://ebispot.github.io/hancestro/",
-      "sourceRepo": "https://github.com/EBISPOT/ancestro",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -17988,7 +18049,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524168/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/obophenotype/human-developmental-anatomy-ontology",
+      "homepage": "https://github.com/obophenotype/human-developmental-anatomy-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -18000,7 +18061,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/human-developmental-anatomy-abstract/",
       "description": "inactive ontology describing human developmental anatomy structures",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/human-developmental-anatomy-ontology",
+      "homepage": "https://github.com/obophenotype/human-developmental-anatomy-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -18053,7 +18114,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/human-developmental-stages-q81661653/",
       "description": "ontology of stages of the human life",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/HsapDv",
+      "homepage": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/HsapDv",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -18160,8 +18221,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493749/",
       "category": "General / Cross-domain",
-      "homepage": "https://hpo.jax.org/app/",
-      "sourceRepo": "https://github.com/davetang/human_phenotype_ontology",
+      "homepage": "https://github.com/davetang/human_phenotype_ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -18188,6 +18248,12 @@
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "hpo license"
+      ],
+      "relatedTools": [
+        {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
+        }
       ]
     },
     {
@@ -18316,7 +18382,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/hypertension-ontology/",
       "description": "ontology for clinical data about hypertension",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/aellenhicks/htn_owl",
+      "homepage": "https://github.com/aellenhicks/htn_owl",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -18972,8 +19038,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523441/",
       "category": "General / Cross-domain",
-      "homepage": "https://obofoundry.org/ontology/ido.html",
-      "sourceRepo": "https://github.com/infectious-disease-ontology-extensions/VIDO",
+      "homepage": "https://github.com/infectious-disease-ontology-extensions/VIDO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -19049,10 +19114,24 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology/",
       "description": "ontology of information entities",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/information-artifact-ontology/IAO/",
+      "homepage": "https://github.com/information-artifact-ontology/IAO/",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
+      ],
+      "relatedTools": [
+        {
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Clytia hemisphaerica Development and Anatomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/"
+        }
       ]
     },
     {
@@ -19098,10 +19177,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/informed-consent-ontology/",
       "description": "ontology for informed consent processes and documentation in research",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/ICO-ontology/ICO",
+      "homepage": "https://github.com/ICO-ontology/ICO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -19313,7 +19398,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/integrative-and-conjugative-element-ontology/",
       "description": "ontology of bacterial integrative and conjugative elements (ICEs)",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/ontoice/ICEO",
+      "homepage": "https://github.com/ontoice/ICEO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -19349,7 +19434,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523447/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/INO-ontology/ino",
+      "homepage": "https://github.com/INO-ontology/ino",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -19361,10 +19446,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/interaction-network-ontology/",
       "description": "ontology for gene-gene interactions",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/INO-ontology/ino",
+      "homepage": "https://github.com/INO-ontology/ino",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -19497,7 +19588,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523430/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/icdo/ICDO",
+      "homepage": "https://github.com/icdo/ICDO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -20077,7 +20168,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493746/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/FoodOntology/joint-food-ontology-wg",
+      "homepage": "https://github.com/FoodOntology/joint-food-ontology-wg",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -20275,7 +20366,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523445/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/KPMP/KTAO",
+      "homepage": "https://github.com/KPMP/KTAO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -20652,7 +20743,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/lepidoptera-anatomy-ontology/",
       "description": "ontology describing anatomical structures of butterflies and moths",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/insect-morphology/lepao",
+      "homepage": "https://github.com/insect-morphology/lepao",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -22316,8 +22407,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/mammalian-feeding-muscle-ontology/",
       "description": "ontology for the mammalian muscles that play a role in feeding behavior",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/mfmo",
-      "sourceRepo": "https://github.com/rdruzinsky/feedontology",
+      "homepage": "https://github.com/rdruzinsky/feedontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -22338,6 +22428,12 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
+      ],
+      "relatedTools": [
+        {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
+        }
       ]
     },
     {
@@ -22677,7 +22773,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493758/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/FlyBase/flybase-controlled-vocabulary",
+      "homepage": "https://github.com/FlyBase/flybase-controlled-vocabulary",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -22861,7 +22957,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/medaka-developmental-stages/",
       "description": "ontology of life stages for the medaka fish",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/OlatDv",
+      "homepage": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/OlatDv",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -22910,7 +23006,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/medical-action-ontology/",
       "description": "ontology part of OBO Foundry",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/monarch-initiative/MAxO",
+      "homepage": "https://github.com/monarch-initiative/MAxO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -23061,7 +23157,6 @@
       "description": "ontology for mental diseases",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/MFOMD",
-      "sourceRepo": "https://github.com/jannahastings/mental-functioning-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -23070,10 +23165,6 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Mental Functioning Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/mental-functioning-ontology/"
         }
       ]
     },
@@ -23087,8 +23178,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/mental-functioning-ontology/",
       "description": "ontology for concepts related to mental functioning",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/mf",
-      "sourceRepo": "https://github.com/jannahastings/mental-functioning-ontology",
+      "homepage": "https://github.com/jannahastings/mental-functioning-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -23097,10 +23187,6 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Mental Disease Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/mental-disease-ontology/"
         }
       ]
     },
@@ -23376,7 +23462,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/mhc-restriction-ontology-q81661712/",
       "description": "ontology for Major Histocompatibility Complex (MHC) restriction in experiments",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IEDB/MRO",
+      "homepage": "https://github.com/IEDB/MRO",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -23390,7 +23476,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493815/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/SICASFoundation/miaf-ontology",
+      "homepage": "https://github.com/SICASFoundation/miaf-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -23413,7 +23499,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493736/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/robinschmid/microbe_masst",
+      "homepage": "https://github.com/robinschmid/microbe_masst",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -23426,7 +23512,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/microbial-conditions-ontology/",
       "description": "ontology for microbial growth conditions",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/microbial-conditions-ontology/microbial-conditions-ontology",
+      "homepage": "https://github.com/microbial-conditions-ontology/microbial-conditions-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -23672,7 +23758,6 @@
       "description": "ontology of the minimum information to describe drug-drug interactions",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/MPIO",
-      "sourceRepo": "https://github.com/MPIO-Developers/MPIO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -23797,7 +23882,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493762/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/soilfoodwebontology/sfwo",
+      "homepage": "https://github.com/soilfoodwebontology/sfwo",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -23850,7 +23935,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/molecular-interactions-controlled-vocabulary/",
       "description": "ontology for concepts related to the study of protein-protein interactions",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/HUPO-PSI/psi-mi-CV",
+      "homepage": "https://github.com/HUPO-PSI/psi-mi-CV",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -23866,7 +23951,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/molecular-process-ontology/",
       "description": "Ontology for processes at the molecular level",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/rsc-ontologies/rxno",
+      "homepage": "https://github.com/rsc-ontologies/rxno",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -23937,7 +24022,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493738/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/monarch-initiative/monarch-disease-ontology-RETIRED",
+      "homepage": "https://github.com/monarch-initiative/monarch-disease-ontology-RETIRED",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -24077,7 +24162,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/mouse-adult-gross-anatomy/",
       "description": "ontology for the adult anatomy of the mouse (Mus)",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/mouse-anatomy-ontology",
+      "homepage": "https://github.com/obophenotype/mouse-anatomy-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -24109,7 +24194,6 @@
       "description": "ontology of stages of the mouse (Mus) life",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/MMUSDV",
-      "sourceRepo": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/MmusDv",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -24758,7 +24842,6 @@
       "description": "ontology representation of the NCBI organismal taxonomy",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://bioportal.bioontology.org/ontologies/1132",
-      "sourceRepo": "https://github.com/obophenotype/ncbitaxon",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -24775,6 +24858,10 @@
         {
           "title": "Cell Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
         }
       ]
     },
@@ -24821,7 +24908,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/nci-thesaurus-obo-edition/",
       "description": "OBO edition of NCI Thesaurus cancer terminology",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/NCI-Thesaurus/thesaurus-obo-edition",
+      "homepage": "https://github.com/NCI-Thesaurus/thesaurus-obo-edition",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -25045,7 +25132,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/neuro-behavior-ontology/",
       "description": "ontology of behavioral phenotypes of animals",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obo-behavior/behavior-ontology/",
+      "homepage": "https://github.com/obo-behavior/behavior-ontology/",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -25194,16 +25281,11 @@
       "description": "Ontology to describe cell types in animals in general.",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://bioportal.bioontology.org/ontologies/NIFCELL?p=classes&amp;conceptid=root",
-      "sourceRepo": "https://github.com/obophenotype/cell-ontology",
       "partOf": "OBO Foundry",
       "relatedTools": [
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Cell Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
         }
       ]
     },
@@ -25332,7 +25414,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/next-generation-sequencing-ontology/",
       "description": "ontology for next generation sequencing technologies and workflows",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/lindenb/ngs-ontology"
+      "homepage": "https://github.com/lindenb/ngs-ontology",
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
+      ]
     },
     {
       "title": "Nfdi4plants_ontology",
@@ -25342,7 +25430,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493764/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/dhimmel/gene-ontology",
+      "homepage": "https://github.com/dhimmel/gene-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -25563,8 +25651,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/nomen-a-nomenclatural-ontology-for-biological-names/",
       "description": "ontology of the rules of nomenclature for biological names",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/nomen",
-      "sourceRepo": "https://github.com/SpeciesFileGroup/nomen",
+      "homepage": "https://github.com/SpeciesFileGroup/nomen",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -26061,7 +26148,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/obo-metadata-ontology/",
       "description": "metadata ontology for OBO Foundry ontologies",
       "category": "Technology & Web",
-      "sourceRepo": "https://github.com/information-artifact-ontology/ontology-metadata",
+      "homepage": "https://github.com/information-artifact-ontology/ontology-metadata",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -26108,7 +26195,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493755/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/obophenotype/obsolete-hdo",
+      "homepage": "https://github.com/obophenotype/obsolete-hdo",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -26160,7 +26247,6 @@
       "description": "ontology",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://www.unbsj.ca/sase/csas/data/ws/icbo2013/papers/posters/icbo2013_submission_67.pdf",
-      "sourceRepo": "https://github.com/Buffalo-Ontology-Group/Ocular-Disease-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -26235,7 +26321,6 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138456014/",
       "category": "General / Cross-domain",
       "homepage": "http://ogg-ontology.org",
-      "sourceRepo": "https://github.com/OGG-Ontology/OGG-Bacteria",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -26246,7 +26331,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493786/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/OGG-Ontology/OGG-core",
+      "homepage": "https://github.com/OGG-Ontology/OGG-core",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -26291,7 +26376,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524160/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/biomedontology/olobo",
+      "homepage": "https://github.com/biomedontology/olobo",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -26345,7 +26430,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493751/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/IEDB/ONTIE",
+      "homepage": "https://github.com/IEDB/ONTIE",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -26358,7 +26443,6 @@
       "description": "OntoExhibit is an innovative ontology that accurately and extensively models museums, exhibitions, and artworks.",
       "category": "Library & Cultural Heritage",
       "homepage": "https://complexhibit-project.github.io/OntoExhibit/index-es.html",
-      "sourceRepo": "https://github.com/Complexhibit-Project",
       "licenses": [
         "Creative Commons Attribution"
       ],
@@ -26403,7 +26487,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontoavida-ontology-for-avida-digital-evolution-platform/",
       "description": "ontology for the Avida digital evolution platform",
       "category": "Technology & Web",
-      "sourceRepo": "https://gitlab.com/fortunalab/ontoavida",
+      "homepage": "https://gitlab.com/fortunalab/ontoavida",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -26538,7 +26622,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontologized-miabis/",
       "description": "ontological version of MIABIS (Minimum Information About BIobank data Sharing)",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/OMIABIS/omiabis-dev",
+      "homepage": "https://github.com/OMIABIS/omiabis-dev",
       "partOf": "OBO Foundry"
     },
     {
@@ -26612,10 +26696,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-biobanking/",
       "description": "ontology for concepts related to biobanks",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/biobanking/biobanking",
+      "homepage": "https://github.com/biobanking/biobanking",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -26652,6 +26742,10 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Radiation Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/"
         }
       ]
     },
@@ -26663,7 +26757,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493774/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/RacimRgh/Ontology-Covid-Patients",
+      "homepage": "https://github.com/RacimRgh/Ontology-Covid-Patients",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -26757,8 +26851,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-general-medical-science/",
       "description": "ontology for general aspects of medicine, with a focus on cancer",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/ogms",
-      "sourceRepo": "https://github.com/OGMS/ogms",
+      "homepage": "https://github.com/OGMS/ogms",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -26987,7 +27080,6 @@
       "description": "ontology",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/NGSONTO",
-      "sourceRepo": "https://github.com/lindenb/ngs-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -27006,8 +27098,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-nutritional-epidemiology/",
       "description": "ontology for nutritional epidemiology studies and methods",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/one",
-      "sourceRepo": "https://github.com/cyang0128/Nutritional-epidemiologic-ontologies",
+      "homepage": "https://github.com/cyang0128/Nutritional-epidemiologic-ontologies",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27023,8 +27114,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-nutritional-studies/",
       "description": "ontology for nutritional research studies and dietary assessment",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/ons",
-      "sourceRepo": "https://github.com/enpadasi/Ontology-for-Nutritional-Studies",
+      "homepage": "https://github.com/enpadasi/Ontology-for-Nutritional-Studies",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27058,7 +27148,6 @@
       "description": "ontology",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/OMP",
-      "sourceRepo": "https://github.com/OPL-ontology/OPL",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27146,10 +27235,32 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/",
       "description": "ontology describing the anatomy of insect skeletal and muscular systems",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/insect-morphology/aism",
+      "homepage": "https://github.com/insect-morphology/aism",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Biological Spatial Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-spatial-ontology/"
+        },
+        {
+          "title": "Common Anatomy Reference Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
+        },
+        {
+          "title": "Uberon",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/uberon/"
+        }
       ]
     },
     {
@@ -27171,7 +27282,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524229/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/OAE-ontology/OAE/",
+      "homepage": "https://github.com/OAE-ontology/OAE/",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27183,7 +27294,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-adverse-events/",
       "description": "ontology for adverse events of drug regimens",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/OAE-ontology/OAE/",
+      "homepage": "https://github.com/OAE-ontology/OAE/",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -27221,7 +27332,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-arthropod-circulatory-systems/",
       "description": "ontology for the circulatory systems of arthropods",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/aszool/oarcs",
+      "homepage": "https://github.com/aszool/oarcs",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -27264,10 +27375,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-biological-and-clinical-statistics/",
       "description": "ontology to describe biomedical statistics",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obcs/obcs",
+      "homepage": "https://github.com/obcs/obcs",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -27280,8 +27397,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-biological-attributes/",
       "description": "ontology for biological traits",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/oba",
-      "sourceRepo": "https://github.com/obophenotype/bio-attribute-ontology",
+      "homepage": "https://github.com/obophenotype/bio-attribute-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -27306,7 +27422,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523435/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/ontologyofchemicalelements",
+      "homepage": "https://github.com/ontologyofchemicalelements",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27328,7 +27444,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524853/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/biomedontology/ocmr",
+      "homepage": "https://github.com/biomedontology/ocmr",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27342,7 +27458,6 @@
       "description": "ontology describing clinical research processes and methodology",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://code.google.com/p/ontology-of-clinical-research/source/browse/trunk/Archive/OCRe-with-BFO.owl",
-      "sourceRepo": "https://github.com/samsontu/ontology-of-clinical-research",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -27428,7 +27543,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524227/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/odnae",
+      "homepage": "https://github.com/odnae",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27477,7 +27592,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524848/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://bitbucket.org/hegroup/ogg",
+      "homepage": "https://bitbucket.org/hegroup/ogg",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27533,7 +27648,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-genetic-susceptibility-factor/",
       "description": "ontology describing genetic factors that influence disease susceptibility",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/linikujp/OGSF",
+      "homepage": "https://github.com/linikujp/OGSF",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -27547,7 +27662,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524857/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/linikujp/OGSF",
+      "homepage": "https://github.com/linikujp/OGSF",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27583,7 +27698,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-host-pathogen-interactions/",
       "description": "ontology describing interactions between hosts and pathogenic organisms",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/OHPI/ohpi",
+      "homepage": "https://github.com/OHPI/ohpi",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27598,7 +27713,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-host-microbiome-interactions/",
       "description": "ontology for host-microbiome interaction processes and relationships",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/ohmi-ontology/ohmi",
+      "homepage": "https://github.com/ohmi-ontology/ohmi",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27612,7 +27727,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524236/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/ohmi-ontology/ohmi",
+      "homepage": "https://github.com/ohmi-ontology/ohmi",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27690,10 +27805,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-medically-related-social-entities/",
       "description": "ontology for social entities relevant to medical and healthcare contexts",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/ufbmi/OMRSE/wiki/OMRSE-Overview",
+      "homepage": "https://github.com/ufbmi/OMRSE/wiki/OMRSE-Overview",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -27734,7 +27855,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-organizational-structures-of-trauma-centers-and-trauma-systems/",
       "description": "ontology for the organizational structures of trauma centers and trauma systems",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/OOSTT/OOSTT",
+      "homepage": "https://github.com/OOSTT/OOSTT",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27783,7 +27904,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-precision-medicine-and-investigation/",
       "description": "ontology for concepts related to precision medicine",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/OPMI/opmi",
+      "homepage": "https://github.com/OPMI/opmi",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -27799,7 +27920,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-of-prokaryotic-phenotypic-and-metabolic-characters/",
       "description": "ontology of prokaryotic phenotypic and metabolic characters",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/carrineblank/MicrO",
+      "homepage": "https://github.com/carrineblank/MicrO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 2.0 Generic"
@@ -27859,7 +27980,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493822/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/TomLundholm/Ontology-of-Traditional-Chinese-Medicine",
+      "homepage": "https://github.com/TomLundholm/Ontology-of-Traditional-Chinese-Medicine",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -27964,7 +28085,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493769/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/shramanpadhalni-web/OntologyAndQAHealth",
+      "homepage": "https://github.com/shramanpadhalni-web/OntologyAndQAHealth",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -28461,7 +28582,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493747/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/Accenture/OSDU-Ontology",
+      "homepage": "https://github.com/Accenture/OSDU-Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -28626,7 +28747,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493821/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/innovamol/PaCCO",
+      "homepage": "https://github.com/innovamol/PaCCO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -28765,7 +28886,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/pathogen-host-interaction-phenotype-ontology/",
       "description": "ontology of phenotypes that occur in pathogen-host interactions",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/PHI-base/phipo",
+      "homepage": "https://github.com/PHI-base/phipo",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -28781,8 +28902,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/pathogen-transmission-ontology/",
       "description": "OBO ontology of pathogen transmission processes",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.jstor.org/stable/27011166",
-      "sourceRepo": "https://github.com/DiseaseOntology/PathogenTransmissionOntology",
+      "homepage": "https://github.com/DiseaseOntology/PathogenTransmissionOntology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -28807,7 +28927,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493829/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/jhuapl-bio/pathogenesis-gene-ontology",
+      "homepage": "https://github.com/jhuapl-bio/pathogenesis-gene-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -28959,7 +29079,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493787/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/osamajomaa/PCPAnnotationAssessment",
+      "homepage": "https://github.com/osamajomaa/PCPAnnotationAssessment",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -28994,7 +29114,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/performance-summary-display-ontology-q81661788/",
       "description": "ontology for concepts related to clinical performance",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/Display-Lab/psdo",
+      "homepage": "https://github.com/Display-Lab/psdo",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -29319,10 +29439,33 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/",
       "description": "OBO Foundry ontology",
       "category": "Life Sciences & Healthcare",
+      "homepage": "https://github.com/pato-ontology/pato/",
       "sourceRepo": "https://github.com/pato-ontology/pato",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
+          "title": "Cell Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "Compositional Dietary Nutrition Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/"
+        },
+        {
+          "title": "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/"
+        },
+        {
+          "title": "Radiation Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/"
+        }
       ]
     },
     {
@@ -29684,7 +29827,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/planaria-ontology/",
       "description": "ontology for the anatomy and developmental stages of the planaria (Schmidtea mediterranea.)",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/planaria-ontology",
+      "homepage": "https://github.com/obophenotype/planaria-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -29698,7 +29841,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524842/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/obophenotype/planaria-ontology",
+      "homepage": "https://github.com/obophenotype/planaria-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -29711,8 +29854,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/planarian-phenotype-ontology/",
       "description": "ontology for phenotypes of the planaria (Schmidtea mediterranea.)",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/plana",
-      "sourceRepo": "https://github.com/obophenotype/planarian-phenotype-ontology",
+      "homepage": "https://github.com/obophenotype/planarian-phenotype-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -29782,7 +29924,6 @@
       "description": "ontology",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://bioportal.bioontology.org/ontologies/PEAO",
-      "sourceRepo": "https://bitbucket.org/PlantExpAssay/ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -29802,7 +29943,6 @@
       "description": "ontology for concepts related to plant biology experiments",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://planteome.org/",
-      "sourceRepo": "https://github.com/obophenotype/developmental-stage-ontologies",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -29837,7 +29977,6 @@
       "description": "database resource that links plant traits to genomics data.",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://browser.planteome.org/amigo",
-      "sourceRepo": "https://github.com/Planteome/plant-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -29862,7 +30001,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-phenology-ontology/",
       "description": "ontology for describing the cyclic phenomena of plants",
       "category": "Environment & Agriculture",
-      "sourceRepo": "https://github.com/PlantPhenoOntology/PPO",
+      "homepage": "https://github.com/PlantPhenoOntology/PPO",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -29878,7 +30017,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/plant-stress-ontology/",
       "description": "ontology describing plant stress responses and conditions",
       "category": "Environment & Agriculture",
-      "sourceRepo": "https://github.com/Planteome/plant-stress-ontology",
+      "homepage": "https://github.com/Planteome/plant-stress-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -29928,8 +30067,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/platynereis-developmental-stages/",
       "description": "ontology for life stages of Platynereis dumerilii",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/pcl",
-      "sourceRepo": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/PdumDv",
+      "homepage": "https://github.com/obophenotype/developmental-stage-ontologies/wiki/PdumDv",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -29969,7 +30107,6 @@
       "description": "controlled vocabulary of over 10,000 subject area terms covering the wide range of research topics included the PLOS (Public Library of Science) journals",
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/PLOSTHES",
-      "sourceRepo": "https://github.com/PLOS/plos-thesaurus",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "creators": [
         {
@@ -30068,8 +30205,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/population-and-community-ontology/",
       "description": "ontology for describing groups of interacting organisms",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/pco",
-      "sourceRepo": "https://github.com/PopulationAndCommunityOntology/pco",
+      "homepage": "https://github.com/PopulationAndCommunityOntology/pco",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -30108,8 +30244,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/porifera-ontology/",
       "description": "ontology for the anatomy of sponges (Porifera)",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/poro/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FPORO_0000015",
-      "sourceRepo": "https://github.com/obophenotype/porifera-ontology",
+      "homepage": "https://github.com/obophenotype/porifera-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -30183,7 +30318,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493798/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/jullendgatc/PPI-Research",
+      "homepage": "https://github.com/jullendgatc/PPI-Research",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -30336,7 +30471,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/process-chemistry-ontology/",
       "description": "ontology for process chemistry concepts and industrial procedures",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/proco-ontology/PROCO",
+      "homepage": "https://github.com/proco-ontology/PROCO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -30579,6 +30714,10 @@
         {
           "title": "Cell Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
         }
       ]
     },
@@ -30711,7 +30850,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/provisional-cell-ontology/",
       "description": "provisional ontology for cell types and cellular classifications",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/provisional_cell_ontology",
+      "homepage": "https://github.com/obophenotype/provisional_cell_ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -31115,10 +31254,32 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/",
       "description": "ontology for radiation biology concepts and radiobiological effects",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/Radiobiology-Informatics-Consortium/RBO",
+      "homepage": "https://github.com/Radiobiology-Informatics-Consortium/RBO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Chemical Methods Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-methods-ontology/"
+        },
+        {
+          "title": "Ontology for Biomedical Investigations",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-biomedical-investigations/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
+        },
+        {
+          "title": "Units of measurement ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/units-of-measurement-ontology/"
+        }
       ]
     },
     {
@@ -33074,7 +33235,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493797/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/mariahlee/Regeneration-in-Drosophila-melanogaster",
+      "homepage": "https://github.com/mariahlee/Regeneration-in-Drosophila-melanogaster",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -33174,12 +33335,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
         },
         {
-          "title": "Collembola Anatomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/collembola-anatomy-ontology/"
+          "title": "Clytia hemisphaerica Development and Anatomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/"
         },
         {
-          "title": "Compositional Dietary Nutrition Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/"
+          "title": "Collembola Anatomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/collembola-anatomy-ontology/"
         }
       ]
     },
@@ -34283,7 +34444,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493756/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/rsc-ontologies/rsc-cmo",
+      "homepage": "https://github.com/rsc-ontologies/rsc-cmo",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -34532,7 +34693,6 @@
       "description": "ontology modeling biological processes in schistosomiasis disease",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://ceur-ws.org/Vol-1747/IP01_ICBO2016.pdf",
-      "sourceRepo": "https://github.com/gaoussoucamara/idoschisto",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -34629,7 +34789,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524856/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/monarch-initiative/SEPIO-ontology",
+      "homepage": "https://github.com/monarch-initiative/SEPIO-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -34641,10 +34801,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/scientific-evidence-and-provenance-information-ontology/",
       "description": "ontology for the provenance of scientific claims and supporting evidence",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/monarch-initiative/SEPIO-ontology",
+      "homepage": "https://github.com/monarch-initiative/SEPIO-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
       ]
     },
     {
@@ -35158,7 +35324,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493794/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/yutao-data/Sepsis_Gene_KnowledgeGraph_Ontology",
+      "homepage": "https://github.com/yutao-data/Sepsis_Gene_KnowledgeGraph_Ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -35229,7 +35395,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493763/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/nfdi4plants/nfdi4plants_ontology",
+      "homepage": "https://github.com/nfdi4plants/nfdi4plants_ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -35766,8 +35932,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/social-insect-behavior-ontology/",
       "description": "orphaned ontology for social insect behavior classification and terminology",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/sibo",
-      "sourceRepo": "https://github.com/obophenotype/sibo",
+      "homepage": "https://github.com/obophenotype/sibo",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -35812,7 +35977,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/software-ontology-q113014439/",
       "description": "ontology for software engineering concepts, tools and methodologies",
       "category": "Technology & Web",
-      "sourceRepo": "https://github.com/allysonlister/swo",
+      "homepage": "https://github.com/allysonlister/swo",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -37263,7 +37428,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/taxonomic-rank-vocabulary/",
       "description": "ontology of taxonomic ranks in systematics",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/phenoscape/taxrank",
+      "homepage": "https://github.com/phenoscape/taxrank",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -37458,7 +37623,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/teleost-taxonomy-ontology/",
       "description": "ontology for the taxonomy of teleost fish",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/phenoscape/teleost-taxonomy-ontology",
+      "homepage": "https://github.com/phenoscape/teleost-taxonomy-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -37775,10 +37940,16 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-amphioxus-development-and-anatomy-ontology/",
       "description": "ontology for amphioxus development and anatomical structures",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/EBISPOT/amphx_ontology",
+      "homepage": "https://github.com/EBISPOT/amphx_ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Uberon",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/uberon/"
+        }
       ]
     },
     {
@@ -37946,7 +38117,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524175/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/infectious-disease-ontology-extensions/ido-covid-19",
+      "homepage": "https://github.com/infectious-disease-ontology-extensions/ido-covid-19",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -37969,7 +38140,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-data-use-ontology/",
       "description": "Ontology for conditions of data use.",
       "category": "Technology & Web",
-      "sourceRepo": "https://github.com/EBISPOT/DUO",
+      "homepage": "https://github.com/EBISPOT/DUO",
       "partOf": "OBO Foundry"
     },
     {
@@ -37992,8 +38163,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-drug-ontology/",
       "description": "ontology for drug products",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/dron",
-      "sourceRepo": "https://github.com/ufbmi/dron",
+      "homepage": "https://github.com/ufbmi/dron",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -38021,8 +38191,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-echinoderm-anatomy-and-development-ontology/",
       "description": "ontology for echinoderm anatomy and developmental biology",
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/ecao",
-      "sourceRepo": "https://github.com/echinoderm-ontology/ecao_ontology",
+      "homepage": "https://github.com/echinoderm-ontology/ecao_ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -38251,7 +38420,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/",
       "description": "The ontology for the Anatomy of the Insect SkeletoMuscular system",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/insect-morphology/aism",
+      "homepage": "https://github.com/insect-morphology/aism",
       "partOf": "OBO Foundry",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -38266,7 +38435,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-ontology-of-genes-and-genomes/",
       "description": "ontology of genes and genomes of biological organisms",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://bitbucket.org/hegroup/ogg",
+      "homepage": "https://bitbucket.org/hegroup/ogg",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -38316,7 +38485,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/the-prescription-of-drugs-ontology/",
       "description": "ontology for concepts related to prescription of drugs",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/OpenLHS/PDRO",
+      "homepage": "https://github.com/OpenLHS/PDRO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -38740,7 +38909,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493775/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/mimi02/Tibb-Nabawi",
+      "homepage": "https://github.com/mimi02/Tibb-Nabawi",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -38834,7 +39003,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493776/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/mac389/toxicology-ontology",
+      "homepage": "https://github.com/mac389/toxicology-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -39036,6 +39205,18 @@
         {
           "title": "Cell Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "CHEBI Integrated Role Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
+        },
+        {
+          "title": "Clytia hemisphaerica Development and Anatomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/"
+        },
+        {
+          "title": "The Amphioxus Development and Anatomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/the-amphioxus-development-and-anatomy-ontology/"
         }
       ]
     },
@@ -39081,7 +39262,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/uc-eating-an-ontology-for-the-characterization-of-eating-drinking-and-otherwise-consuming-foods/",
       "description": "ontology for characterizing eating, drinking and food consumption behaviors",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IC-FOODS/uc_Eating"
+      "homepage": "https://github.com/IC-FOODS/uc_Eating",
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
+      ]
     },
     {
       "title": "uc_FoodDrugInteractionOntology: An ontology for the characterization of interactions between foods and drugs",
@@ -39092,7 +39279,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/uc-fooddruginteractionontology-an-ontology-for-the-characterization-of-interactions-between-foods-and-drugs/",
       "description": "ontology for characterizing interactions between foods and pharmaceutical drugs",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IC-FOODS/uc_FoodDrugInteractionOntology"
+      "homepage": "https://github.com/IC-FOODS/uc_FoodDrugInteractionOntology",
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
+      ]
     },
     {
       "title": "uc_Milk: An ontology for the characterization of mammalian milks",
@@ -39103,7 +39296,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/uc-milk-an-ontology-for-the-characterization-of-mammalian-milks/",
       "description": "ontology for characterizing mammalian milk composition and properties",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IC-FOODS/uc_Milk"
+      "homepage": "https://github.com/IC-FOODS/uc_Milk",
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
+      ]
     },
     {
       "title": "uc_Processing: An ontology for the characterization of processing methods and the products they engender",
@@ -39114,7 +39313,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/uc-processing-an-ontology-for-the-characterization-of-processing-methods-and-the-products-they-engender/",
       "description": "ontology for characterizing food processing methods and their resulting products",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IC-FOODS/uc_Processing"
+      "homepage": "https://github.com/IC-FOODS/uc_Processing",
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
+      ]
     },
     {
       "title": "uc_Sense: An ontology for the characterization of sensory perception; qualities; and attributes",
@@ -39125,7 +39330,13 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/uc-sense-an-ontology-for-the-characterization-of-sensory-perception-qualities-and-attributes/",
       "description": "ontology for characterizing sensory perception, qualities and attributes",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/IC-FOODS/uc_Sense"
+      "homepage": "https://github.com/IC-FOODS/uc_Sense",
+      "relatedTools": [
+        {
+          "title": "Basic Formal Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        }
+      ]
     },
     {
       "title": "UETK",
@@ -39379,7 +39590,6 @@
       "description": "ontology for unified phenotypical descriptictions",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://upheno.org/",
-      "sourceRepo": "https://github.com/obophenotype/upheno",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
@@ -39665,7 +39875,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/unipathway/",
       "description": "UniPathway is a manually curated resource of metabolic pathways for the UniProtKB/Swiss-Prot knowledgebase. It provides a structured controlled vocabulary to describe the role of a protein in a metabolic pathway.",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/geneontology/unipathway"
+      "homepage": "https://github.com/geneontology/unipathway"
     },
     {
       "title": "UniProt",
@@ -39819,10 +40029,20 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/units-of-measurement-ontology/",
       "description": "ontology of metrical units, couplet to the PATO ontology",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/bio-ontology-research-group/unit-ontology",
+      "homepage": "https://github.com/bio-ontology-research-group/unit-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Agronomy Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+        },
+        {
+          "title": "Radiation Biology Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/"
+        }
       ]
     },
     {
@@ -39974,7 +40194,6 @@
       "description": "ontology of clinical informed consents",
       "category": "Life Sciences & Healthcare",
       "homepage": "http://jbiomedsem.biomedcentral.com/articles/10.1186/s13326-016-0062-4",
-      "sourceRepo": "https://github.com/ICO-ontology/ICO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
         {
@@ -40164,7 +40383,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/vertebrate-breed-ontology/",
       "description": "ontology for vertebrate breed classification and characteristics",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/monarch-initiative/vertebrate-breed-ontology",
+      "homepage": "https://github.com/monarch-initiative/vertebrate-breed-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -40204,7 +40423,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/vertebrate-taxonomy-ontology/",
       "description": "ontology for the taxonomy of vertebrates",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/phenoscape/vertebrate-taxonomy-ontology",
+      "homepage": "https://github.com/phenoscape/vertebrate-taxonomy-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons CC0 License"
@@ -40220,7 +40439,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/vertebrate-trait-ontology/",
       "description": "ontology for traits covering vertebrates",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/AnimalGenome/vertebrate-trait-ontology",
+      "homepage": "https://github.com/AnimalGenome/vertebrate-trait-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -40236,7 +40455,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/veupathdb-ontology/",
       "description": "Bioinformatic Resource Center (BRCs) focused on eukaryotic pathogens and invertebrate vectors of infectious diseases",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/VEuPathDB-ontology/VEuPathDB-ontology",
+      "homepage": "https://github.com/VEuPathDB-ontology/VEuPathDB-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -40708,7 +40927,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493808/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/moozeq/wbo-gene-ontology",
+      "homepage": "https://github.com/moozeq/wbo-gene-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -41120,7 +41339,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/xenopus-phenotype-ontology/",
       "description": "ontology for anatomical, cellular, and gene function phenotypes in Xenopus, the African clawed frogs",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/xenopus-phenotype-ontology",
+      "homepage": "https://github.com/obophenotype/xenopus-phenotype-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -41242,7 +41461,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493826/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/JDRomano2/yggdrasil",
+      "homepage": "https://github.com/JDRomano2/yggdrasil",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
@@ -41399,7 +41618,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-experimental-conditions-ontology/",
       "description": "ontology for experimental conditions used in zebrafish research and described in ZFIN",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/ybradford/zebrafish-experimental-conditions-ontology",
+      "homepage": "https://github.com/ybradford/zebrafish-experimental-conditions-ontology",
       "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -41415,7 +41634,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/zebrafish-phenotype-ontology/",
       "description": "ontology for the phenotypes of the Zebrafish",
       "category": "Life Sciences & Healthcare",
-      "sourceRepo": "https://github.com/obophenotype/fungal-anatomy-ontology",
+      "homepage": "https://github.com/obophenotype/fungal-anatomy-ontology",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
@@ -41439,7 +41658,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493785/",
       "category": "General / Cross-domain",
-      "sourceRepo": "https://github.com/SergeyPry/ZEOGS_GitHub",
+      "homepage": "https://github.com/SergeyPry/ZEOGS_GitHub",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
