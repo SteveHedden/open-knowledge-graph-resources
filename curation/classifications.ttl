@@ -10668,6 +10668,9 @@
 <https://openknowledgegraphs.com/software/darq-sparql-federation-engine/> okg:softwareType okg:SparqlTooling ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140706152> .
 
+<https://openknowledgegraphs.com/software/data-world-data-catalog-platform/> okg:softwareType okg:KnowledgeGraphConstruction ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141112432> .
+
 <https://openknowledgegraphs.com/software/dbpedia-archivo/> okg:softwareType okg:OntologyEngineering ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653414> .
 
@@ -10838,6 +10841,9 @@
 
 <https://openknowledgegraphs.com/software/json-rql/> okg:softwareType okg:DeveloperLibrary ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653438> .
+
+<https://openknowledgegraphs.com/software/jsonld-js/> okg:softwareType okg:DeveloperLibrary ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q117026453> .
 
 <https://openknowledgegraphs.com/software/juliett/> okg:softwareType okg:ReasoningInference ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140514553> .
@@ -11013,6 +11019,9 @@
 <https://openknowledgegraphs.com/software/ontop/> okg:softwareType okg:DataMappingETL ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56861590> .
 
+<https://openknowledgegraphs.com/software/ontopic-suite/> okg:softwareType okg:DataMappingETL ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141112435> .
+
 <https://openknowledgegraphs.com/software/ontopspark/> okg:softwareType okg:DataMappingETL ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q125490971> .
 
@@ -11079,6 +11088,9 @@
 <https://openknowledgegraphs.com/software/polypheny/> okg:softwareType okg:GraphDatabase ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q122920886> .
 
+<https://openknowledgegraphs.com/software/poolparty-semantic-suite/> okg:softwareType okg:OntologyEngineering ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q28136436> .
+
 <https://openknowledgegraphs.com/software/prez-linked-data-api/> okg:softwareType okg:DeveloperLibrary ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140705560> .
 
@@ -11120,6 +11132,9 @@
 
 <https://openknowledgegraphs.com/software/radar-station/> okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q126363886> .
+
+<https://openknowledgegraphs.com/software/raptor-rdf-syntax-library/> okg:softwareType okg:DeveloperLibrary ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141112433> .
 
 <https://openknowledgegraphs.com/software/rdf-ext/> okg:softwareType okg:DeveloperLibrary ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q137777350> .
@@ -11367,6 +11382,9 @@
 <https://openknowledgegraphs.com/software/topbraid-composer/> okg:softwareType okg:OntologyEngineering ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653426> .
 
+<https://openknowledgegraphs.com/software/topbraid-edg/> okg:softwareType okg:OntologyEngineering ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141112436> .
+
 <https://openknowledgegraphs.com/software/topbraid-shacl-api/> okg:softwareType okg:DeveloperLibrary ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140676799> .
 
@@ -11433,6 +11451,9 @@
 <https://openknowledgegraphs.com/software/web-algebra/> okg:softwareType okg:AIAgentTooling ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140422054> .
 
+<https://openknowledgegraphs.com/software/webprotege/> okg:softwareType okg:OntologyEngineering ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q50308925> .
+
 <https://openknowledgegraphs.com/software/webvowl/> okg:softwareType okg:Visualization ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56569953> .
 
@@ -11459,6 +11480,9 @@
 
 <https://openknowledgegraphs.com/software/yasgui/> okg:softwareType okg:SparqlTooling ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114893193> .
+
+<https://openknowledgegraphs.com/software/zazuko-trifid/> okg:softwareType okg:SparqlTooling ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141112434> .
 
 <https://openknowledgegraphs.com/software/zep/> okg:softwareType okg:AIAgentTooling ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140639984> .

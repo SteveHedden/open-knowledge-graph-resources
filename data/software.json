@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T18:58:20Z",
+  "generatedAt": "2026-08-17T23:00:39Z",
   "items": [
     {
       "title": "4store",
@@ -186,20 +186,16 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/"
         },
         {
-          "title": "dotNetRDF",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
+          "title": "Apache Marmotta",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/"
         },
         {
-          "title": "g3-toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
+          "title": "Apache Rya",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-rya/"
         },
         {
-          "title": "OntoGPT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
-        },
-        {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+          "title": "HugeGraph",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/"
         }
       ]
     },
@@ -992,6 +988,27 @@
       "softwareType": "SPARQL Tooling"
     },
     {
+      "title": "data.world Data Catalog Platform",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141112432",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/data-world-data-catalog-platform/",
+      "description": "knowledge-graph-powered enterprise data catalog and data governance software platform",
+      "homepage": "https://data.world/product/",
+      "creators": [
+        {
+          "name": "data.world",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q91143628"
+        }
+      ],
+      "licenses": [
+        "proprietary license"
+      ],
+      "softwareType": "Knowledge Graph Construction"
+    },
+    {
       "title": "DBPedia Archivo",
       "wikidataId": "https://www.wikidata.org/wiki/Q124653414",
       "types": [
@@ -1065,24 +1082,6 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         ".NET Framework"
-      ],
-      "relatedTools": [
-        {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
-        },
-        {
-          "title": "g3-toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
-        },
-        {
-          "title": "OntoGPT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
-        },
-        {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
-        }
       ]
     },
     {
@@ -1264,6 +1263,10 @@
         "Python"
       ],
       "relatedTools": [
+        {
+          "title": "WebProtégé",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webprotege/"
+        },
         {
           "title": "WebVOWL",
           "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
@@ -1573,24 +1576,6 @@
       "softwareType": "Visualization",
       "programmingLanguages": [
         "TypeScript"
-      ],
-      "relatedTools": [
-        {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
-        },
-        {
-          "title": "dotNetRDF",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
-        },
-        {
-          "title": "OntoGPT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
-        },
-        {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
-        }
       ]
     },
     {
@@ -2171,6 +2156,36 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         "JavaScript"
+      ]
+    },
+    {
+      "title": "jsonld.js",
+      "wikidataId": "https://www.wikidata.org/wiki/Q117026453",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/jsonld-js/",
+      "description": "JavaScript library implementing the JSON-LD processing algorithms and API",
+      "homepage": "https://github.com/digitalbazaar/jsonld.js",
+      "sourceRepo": "https://github.com/digitalbazaar/jsonld.js",
+      "licenses": [
+        "3-clause BSD License"
+      ],
+      "latestVersion": "9.0.0",
+      "releaseDate": "2025-11-21",
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "JavaScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "Reactodia",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
+        },
+        {
+          "title": "Semantic UI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
+        }
       ]
     },
     {
@@ -3269,24 +3284,12 @@
       ],
       "relatedTools": [
         {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
-        },
-        {
-          "title": "dotNetRDF",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
-        },
-        {
-          "title": "g3-toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
-        },
-        {
           "title": "LinkML",
           "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/"
         },
         {
-          "title": "RDFLib",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+          "title": "Ontology Development Kit",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/"
         }
       ]
     },
@@ -3483,8 +3486,40 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
         },
         {
+          "title": "Ontopic Suite",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopic-suite/"
+        },
+        {
           "title": "RDF4J",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        }
+      ]
+    },
+    {
+      "title": "Ontopic Suite",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141112435",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/ontopic-suite/",
+      "description": "no-code software platform for building and deploying virtual or materialized knowledge graphs from enterprise data",
+      "homepage": "https://ontopic.ai/en/ontopic-suite/",
+      "creators": [
+        {
+          "name": "Ontopic",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q115740336"
+        }
+      ],
+      "licenses": [
+        "proprietary license"
+      ],
+      "latestVersion": "2026.2",
+      "softwareType": "RDF Data Mapping / ETL",
+      "relatedTools": [
+        {
+          "title": "ontop",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
         }
       ]
     },
@@ -4014,6 +4049,29 @@
       ]
     },
     {
+      "title": "PoolParty Semantic Suite",
+      "wikidataId": "https://www.wikidata.org/wiki/Q28136436",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/poolparty-semantic-suite/",
+      "description": "semantic middleware and software suite for taxonomy, ontology, knowledge graph and text-mining management",
+      "homepage": "https://www.poolparty.biz/",
+      "creators": [
+        {
+          "name": "Semantic Web Company",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q30291990"
+        }
+      ],
+      "licenses": [
+        "proprietary license"
+      ],
+      "latestVersion": "9.7.1",
+      "releaseDate": "2025-08-31",
+      "softwareType": "Ontology Engineering"
+    },
+    {
       "title": "Prez Linked Data API",
       "wikidataId": "https://www.wikidata.org/wiki/Q140705560",
       "types": [
@@ -4075,6 +4133,12 @@
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "WebProtégé",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webprotege/"
+        }
       ]
     },
     {
@@ -4384,6 +4448,35 @@
       ]
     },
     {
+      "title": "Raptor RDF Syntax Library",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141112433",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/raptor-rdf-syntax-library/",
+      "description": "C library for parsing and serializing RDF syntaxes",
+      "homepage": "https://librdf.org/raptor/",
+      "sourceRepo": "https://github.com/dajobe/raptor",
+      "creators": [
+        {
+          "name": "Dave Beckett",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q131565249"
+        }
+      ],
+      "licenses": [
+        "Apache Software License 2.0",
+        "GNU General Public License, version 2.0 or later",
+        "GNU Lesser General Public License, version 2.1 or later"
+      ],
+      "latestVersion": "2.0.16",
+      "releaseDate": "2023-03-01",
+      "softwareType": "Developer Library",
+      "programmingLanguages": [
+        "C"
+      ]
+    },
+    {
       "title": "RDF Glance",
       "wikidataId": "https://www.wikidata.org/wiki/Q140705421",
       "types": [
@@ -4501,6 +4594,10 @@
         {
           "title": "Yasgui",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        },
+        {
+          "title": "Zazuko Trifid",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/zazuko-trifid/"
         }
       ]
     },
@@ -4605,22 +4702,6 @@
         "Python"
       ],
       "relatedTools": [
-        {
-          "title": "Apache Jena",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
-        },
-        {
-          "title": "dotNetRDF",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/"
-        },
-        {
-          "title": "g3-toolkit",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/"
-        },
-        {
-          "title": "OntoGPT",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/"
-        },
         {
           "title": "Owlready2",
           "canonicalUrl": "https://openknowledgegraphs.com/software/owlready2/"
@@ -4729,6 +4810,10 @@
         "TypeScript"
       ],
       "relatedTools": [
+        {
+          "title": "jsonld.js",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/jsonld-js/"
+        },
         {
           "title": "Semantic UI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/"
@@ -5029,6 +5114,10 @@
         "JavaScript"
       ],
       "relatedTools": [
+        {
+          "title": "jsonld.js",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/jsonld-js/"
+        },
         {
           "title": "Reactodia",
           "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/"
@@ -6149,6 +6238,22 @@
       "softwareType": "Ontology Engineering"
     },
     {
+      "title": "TopBraid EDG",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141112436",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-edg/",
+      "description": "enterprise data governance and knowledge graph management software platform",
+      "homepage": "https://www.topquadrant.com/topbraid-edg/",
+      "licenses": [
+        "proprietary license"
+      ],
+      "latestVersion": "9.2.2",
+      "releaseDate": "2026-06-29",
+      "softwareType": "Ontology Engineering"
+    },
+    {
       "title": "TopBraid SHACL API",
       "wikidataId": "https://www.wikidata.org/wiki/Q140676799",
       "types": [
@@ -6589,6 +6694,51 @@
       ]
     },
     {
+      "title": "WebProtégé",
+      "wikidataId": "https://www.wikidata.org/wiki/Q50308925",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/webprotege/",
+      "description": "collaborative web application for editing and sharing OWL ontologies",
+      "homepage": "https://webprotege.stanford.edu/",
+      "sourceRepo": "https://github.com/protegeproject/webprotege",
+      "creators": [
+        {
+          "name": "Stanford University School of Medicine",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q4115969"
+        }
+      ],
+      "licenses": [
+        "2-clause BSD License"
+      ],
+      "latestVersion": "4.0.2",
+      "releaseDate": "2020-07-31",
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "F-UJI",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
+          "title": "Protégé",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/protege/"
+        },
+        {
+          "title": "WebVOWL",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/"
+        },
+        {
+          "title": "Yasgui",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        }
+      ]
+    },
+    {
       "title": "WebVOWL",
       "wikidataId": "https://www.wikidata.org/wiki/Q56569953",
       "types": [
@@ -6611,6 +6761,10 @@
         {
           "title": "F-UJI",
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
+        },
+        {
+          "title": "WebProtégé",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webprotege/"
         },
         {
           "title": "Yasgui",
@@ -6769,12 +6923,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/"
         },
         {
-          "title": "rdf-validate-shacl",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-validate-shacl/"
-        },
-        {
-          "title": "SHACL Playground",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/"
+          "title": "WebProtégé",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/webprotege/"
         },
         {
           "title": "WebVOWL",
@@ -6783,6 +6933,10 @@
         {
           "title": "Yasgui (Matdata)",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/"
+        },
+        {
+          "title": "Zazuko Trifid",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/zazuko-trifid/"
         }
       ]
     },
@@ -6804,6 +6958,43 @@
       "releaseDate": "2026-06-25",
       "softwareType": "SPARQL Tooling",
       "relatedTools": [
+        {
+          "title": "Yasgui",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
+        }
+      ]
+    },
+    {
+      "title": "Zazuko Trifid",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141112434",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/zazuko-trifid/",
+      "description": "Linked Data server and web interface for publishing RDF from SPARQL endpoints",
+      "homepage": "https://zazuko.com/products/trifid/",
+      "sourceRepo": "https://github.com/zazuko/trifid",
+      "creators": [
+        {
+          "name": "Zazuko",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q93230157"
+        }
+      ],
+      "licenses": [
+        "Apache Software License 2.0"
+      ],
+      "latestVersion": "6.0.3",
+      "releaseDate": "2026-07-22",
+      "softwareType": "SPARQL Tooling",
+      "programmingLanguages": [
+        "TypeScript"
+      ],
+      "relatedTools": [
+        {
+          "title": "rdf-validate-shacl",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-validate-shacl/"
+        },
         {
           "title": "Yasgui",
           "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/"
