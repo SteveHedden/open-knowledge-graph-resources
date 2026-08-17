@@ -206,7 +206,7 @@ jobs:
         shell: bash
         run: |
           status_file="$RUNNER_TEMP/pre-publication-worker-deployment.json"
-          npm --prefix api exec -- wrangler deployments status --json > "$status_file"
+          npm --prefix api exec -- wrangler deployments status --config api/wrangler.toml --json > "$status_file"
           python .github/workflows/scripts/worker_deployment.py validate \
             --status-file "$status_file"
           echo "status_file=$status_file" >> "$GITHUB_OUTPUT"
@@ -265,6 +265,7 @@ jobs:
             --status-file "${{ steps.worker_baseline.outputs.status_file }}")
           test "${#version_specs[@]}" -gt 0
           npm --prefix api exec -- wrangler versions deploy "${version_specs[@]}" -y \
+            --config api/wrangler.toml \
             --message "Restore API before failed semantic bootstrap ${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}"
 
       - name: Bootstrap retained live vector generations before Worker upgrade
@@ -406,6 +407,7 @@ jobs:
             --status-file "${{ steps.worker_baseline.outputs.status_file }}")
           test "${#version_specs[@]}" -gt 0
           npm --prefix api exec -- wrangler versions deploy "${version_specs[@]}" -y \
+            --config api/wrangler.toml \
             --message "Restore API before failed catalog publication ${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}"
 
       - name: Prepare automatic rollback to pre-publication baseline

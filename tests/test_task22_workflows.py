@@ -109,6 +109,7 @@ class Task22WorkflowContractTests(unittest.TestCase):
         self.assertEqual(offsets, sorted(offsets))
         restore = step_block(self.publish, ordered_steps[1])
         self.assertIn("wrangler versions deploy", restore)
+        self.assertIn("--config api/wrangler.toml", restore)
         self.assertIn("worker_deployment.py specs", restore)
         self.assertNotIn("npm --prefix api run deploy", restore)
         self.assertIn("steps.successful_tags.outcome == 'failure'", restore)
@@ -136,11 +137,18 @@ class Task22WorkflowContractTests(unittest.TestCase):
         self.assertIn("steps.changes.outputs.changed != 'true'", restore)
         self.assertIn("inputs.initialize_semantic_search == true", restore)
         self.assertIn("wrangler versions deploy", restore)
+        self.assertIn("--config api/wrangler.toml", restore)
         self.assertNotIn("deploy-pages", restore)
         verify = step_block(
             self.publish, "Verify explicit semantic bootstrap across API and MCP tools"
         )
         self.assertIn("steps.bootstrap_manifest.outputs.generation_id", verify)
+
+        baseline = step_block(
+            self.publish, "Capture pre-publication API Worker deployment"
+        )
+        self.assertIn("wrangler deployments status", baseline)
+        self.assertIn("--config api/wrangler.toml", baseline)
 
     def test_manual_rollback_rebuilds_before_exact_api_and_pages_cutover(self) -> None:
         ordered_steps = (
