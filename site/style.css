@@ -173,6 +173,14 @@ h1 {
   border-color: color-mix(in srgb, var(--brand) 45%, white);
 }
 
+.category-filters.is-disabled {
+  opacity: 0.58;
+}
+
+.category-pill:disabled {
+  cursor: not-allowed;
+}
+
 .tabs {
   display: inline-grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -356,6 +364,42 @@ h1 {
   color: var(--text-muted);
   font-style: italic;
   font-weight: 500;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 1.15rem 0 0;
+}
+
+.pagination[hidden] {
+  display: none;
+}
+
+.pagination button {
+  min-width: 6.5rem;
+  border: 1px solid #b9c6d0;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--brand-strong);
+  padding: 0.52rem 0.85rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  color: var(--text-muted);
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.pagination span {
+  min-width: 7rem;
+  color: var(--text-muted);
+  text-align: center;
 }
 
 .site-footer {
