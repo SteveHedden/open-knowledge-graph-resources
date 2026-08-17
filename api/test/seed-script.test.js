@@ -3,10 +3,12 @@ import test from "node:test";
 
 process.env.CLOUDFLARE_ACCOUNT_ID = "account";
 process.env.CLOUDFLARE_API_TOKEN = "token";
+process.env.VECTOR_LIST_INTERVAL_MS = "0";
 
 const {
   ensureMetadataIndexes,
   fetchAndValidateAllVectors,
+  listAllVectorIds,
   upsertBatch,
   validateExpectedVectors,
   verifyExistingGeneration,
@@ -219,6 +221,50 @@ test("full-vector verification respects Cloudflare's 20-ID lookup limit", async 
   const vectors = await fetchAndValidateAllVectors("G1", expectedIds);
   assert.equal(vectors.length, 45);
   assert.deepEqual(batchSizes, [20, 20, 5]);
+});
+
+test("vector listing restarts from a fresh snapshot when Cloudflare rejects a cursor", async (t) => {
+  const original = globalThis.fetch;
+  const cursors = [];
+  let initialRequests = 0;
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    const cursor = url.searchParams.get("cursor");
+    cursors.push(cursor);
+    assert.equal(url.searchParams.get("count"), "500");
+    if (!cursor) {
+      initialRequests += 1;
+      return cloudflareResponse({
+        vectors: [{ id: "G1:software:Q1" }],
+        isTruncated: true,
+        nextCursor: initialRequests === 1 ? "bad-cursor" : "good-cursor",
+      });
+    }
+    if (cursor === "bad-cursor") {
+      return Response.json(
+        {
+          success: false,
+          errors: [{ message: "List vectors cursor appears to be corrupted" }],
+          result: null,
+        },
+        { status: 400 }
+      );
+    }
+    if (cursor === "good-cursor") {
+      return cloudflareResponse({
+        vectors: [{ id: "G1:software:Q2" }],
+        isTruncated: false,
+        nextCursor: null,
+      });
+    }
+    throw new Error(`Unexpected cursor: ${cursor}`);
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  assert.deepEqual(await listAllVectorIds(), ["G1:software:Q1", "G1:software:Q2"]);
+  assert.deepEqual(cursors, [null, "bad-cursor", null, "good-cursor"]);
 });
 
 test("REST upsert fails closed on any unparsable vector", async (t) => {

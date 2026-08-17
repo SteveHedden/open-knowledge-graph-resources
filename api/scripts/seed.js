@@ -18,6 +18,9 @@ const INDEX_NAME = process.env.VECTORIZE_INDEX_NAME || "okg-catalog";
 const EMBED_MODEL = "@cf/baai/bge-base-en-v1.5";
 const BATCH_SIZE = Number.parseInt(process.env.VECTOR_BATCH_SIZE || "100", 10);
 const GET_BY_IDS_BATCH_SIZE = 20;
+const LIST_PAGE_SIZE = Number.parseInt(process.env.VECTOR_LIST_PAGE_SIZE || "500", 10);
+const LIST_INTERVAL_MS = Number.parseInt(process.env.VECTOR_LIST_INTERVAL_MS || "1000", 10);
+const LIST_CURSOR_RESTARTS = Number.parseInt(process.env.VECTOR_LIST_CURSOR_RESTARTS || "3", 10);
 const VERIFY_TIMEOUT_MS = Number.parseInt(process.env.VECTOR_VERIFY_TIMEOUT_MS || "300000", 10);
 const VERIFY_INTERVAL_MS = Number.parseInt(process.env.VECTOR_VERIFY_INTERVAL_MS || "5000", 10);
 const API_BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}`;
@@ -257,17 +260,37 @@ export async function upsertBatch(vectors) {
 }
 
 export async function listAllVectorIds() {
-  const ids = [];
-  let cursor = null;
-  do {
-    const url = new URL(`${API_BASE}/vectorize/v2/indexes/${INDEX_NAME}/list`);
-    url.searchParams.set("count", "1000");
-    if (cursor) url.searchParams.set("cursor", cursor);
-    const page = await cloudflareJson(url.toString());
-    ids.push(...(page.vectors || []).map(({ id }) => id));
-    cursor = page.isTruncated ? page.nextCursor : null;
-  } while (cursor);
-  return ids.sort();
+  let lastError;
+  for (let attempt = 0; attempt <= LIST_CURSOR_RESTARTS; attempt += 1) {
+    const ids = [];
+    let cursor = null;
+    try {
+      do {
+        const url = new URL(`${API_BASE}/vectorize/v2/indexes/${INDEX_NAME}/list`);
+        url.searchParams.set("count", String(LIST_PAGE_SIZE));
+        if (cursor) url.searchParams.set("cursor", cursor);
+        const page = await cloudflareJson(url.toString());
+        ids.push(...(page.vectors || []).map(({ id }) => id));
+        if (page.isTruncated && !page.nextCursor) {
+          throw new Error("Vectorize list response is truncated but has no next cursor");
+        }
+        cursor = page.isTruncated ? page.nextCursor : null;
+        if (cursor && LIST_INTERVAL_MS > 0) {
+          await new Promise((resolve) => setTimeout(resolve, LIST_INTERVAL_MS));
+        }
+      } while (cursor);
+      return ids.sort();
+    } catch (error) {
+      const recoverable =
+        cursor && /cursor.*(?:corrupt|expir)/i.test(error instanceof Error ? error.message : String(error));
+      if (!recoverable || attempt === LIST_CURSOR_RESTARTS) throw error;
+      lastError = error;
+      if (LIST_INTERVAL_MS > 0) {
+        await new Promise((resolve) => setTimeout(resolve, LIST_INTERVAL_MS));
+      }
+    }
+  }
+  throw lastError || new Error("Vectorize list traversal failed");
 }
 
 export async function listGenerationIds(generationId) {
