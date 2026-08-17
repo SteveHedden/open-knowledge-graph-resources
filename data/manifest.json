@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260817T174616Z-8c4e6421414a",
-  "startedAt": "2026-08-17T17:42:28Z",
-  "sourceRetrievedAt": "2026-08-17T17:45:23Z",
-  "completedAt": "2026-08-17T17:46:16Z",
+  "generationId": "20260817T185902Z-311bfdd4010d",
+  "startedAt": "2026-08-17T18:55:29Z",
+  "sourceRetrievedAt": "2026-08-17T18:58:19Z",
+  "completedAt": "2026-08-17T18:59:02Z",
   "counts": {
     "records": {
       "resources": 2999,
@@ -38,7 +38,7 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "7b7622eff5374318bba9cc3e1f23d9488e3c0c56be2824c032bd99b5ce7bb1b0"
+      "sha256": "bae305669b69bf084cd7f301beb3229534ed3e5d734f7ed529d920bff628a690"
     },
     {
       "path": "data/ontologies.ttl",
@@ -50,7 +50,7 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "ab0a90b6ca03d80b64834eb5ebe33d6dcbfd101fa79992871d4918d93e05eea3"
+      "sha256": "33d99f04656b7769bfabe5cb0e7c15be51a3e4984d4db7c2447dfa29dace255a"
     },
     {
       "path": "data/software.ttl",
@@ -74,7 +74,7 @@
     },
     {
       "path": "site/app.js",
-      "sha256": "ada92c24e508e91acf92141ee69b9ae4471b7fefd5a05bad8402473f6e202935"
+      "sha256": "d1bbdcbb905327fb4922ff712d961057bbce15b8584b197eac6275e315a8691f"
     },
     {
       "path": "site/favicon.png",
@@ -86,7 +86,7 @@
     },
     {
       "path": "site/index.html",
-      "sha256": "0982ea262a64246af579fe2f892b515f6d3e9c33fdfbd2118ac81b9d00114437"
+      "sha256": "0c9480c71d774bb6de9dfb715d27993aa9029ce413c83ff40e03339e658bda07"
     },
     {
       "path": "site/llms.txt",
@@ -110,7 +110,7 @@
     },
     {
       "path": "site/style.css",
-      "sha256": "c73deeb53a7f4d31ed733b49d5d2f7510846cb417c6fa0c26eb38c97fa7a4503"
+      "sha256": "584b93ae0d4d2ceeda080ad39cea8bc686218c50333b0059470c203692cf2a26"
     },
     {
       "path": "sources.ttl",
