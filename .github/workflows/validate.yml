@@ -24,11 +24,28 @@ jobs:
           cache: "pip"
           cache-dependency-path: requirements.txt
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
       - name: Install dependencies
-        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e mcp-server
+          npm --prefix api ci
 
       - name: Run regression tests
         run: python -m unittest discover -s tests -v
+
+      - name: Run generation-aware API and Vectorize tests
+        run: npm --prefix api test
+
+      - name: Run local MCP generation and fallback tests
+        run: python -m unittest discover -s mcp-server/tests -v
 
       - name: Validate catalog against the base branch
         run: python scripts/validate_catalog.py --baseline-ref "${{ github.event.pull_request.base.sha }}"

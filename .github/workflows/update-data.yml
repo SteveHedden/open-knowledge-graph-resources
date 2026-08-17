@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "0 6 * * *"
   workflow_dispatch:
+    inputs:
+      initialize_semantic_search:
+        description: Initialize or repair semantic search without changing catalog content
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -46,14 +52,23 @@ jobs:
           echo "started_at=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> "$GITHUB_OUTPUT"
           if git rev-parse --verify --quiet 'refs/tags/catalog-current^{commit}' >/dev/null; then
             echo "baseline_ref=catalog-current" >> "$GITHUB_OUTPUT"
+            echo "baseline_commit=$(git rev-parse 'catalog-current^{commit}')" >> "$GITHUB_OUTPUT"
           else
             echo "baseline_ref=HEAD" >> "$GITHUB_OUTPUT"
+            echo "baseline_commit=$(git rev-parse 'HEAD^{commit}')" >> "$GITHUB_OUTPUT"
+          fi
+          if git rev-parse --verify --quiet 'refs/tags/catalog-previous^{commit}' >/dev/null; then
+            echo "previous_commit=$(git rev-parse 'catalog-previous^{commit}')" >> "$GITHUB_OUTPUT"
+          else
+            echo "previous_commit=" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Prepare isolated catalog staging tree
+        if: github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true
         run: python scripts/catalog_snapshot.py prepare --repository . --destination "$RUNNER_TEMP/catalog-staging"
 
       - name: Materialize last live-verified comparison baseline
+        if: github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true
         id: published_baseline
         shell: bash
         run: |
@@ -65,6 +80,7 @@ jobs:
           echo "path=$RUNNER_TEMP/published-baseline" >> "$GITHUB_OUTPUT"
 
       - name: Refresh staged catalog from Wikidata
+        if: github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OKG_CATALOG_ROOT: ${{ runner.temp }}/catalog-staging
@@ -73,6 +89,7 @@ jobs:
         run: python scripts/fetch_data.py
 
       - name: Generate staged detail pages
+        if: github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true
         env:
           OKG_CATALOG_ROOT: ${{ runner.temp }}/catalog-staging
           OKG_RELATED_DIAGNOSTICS_PATH: ${{ runner.temp }}/related-resources.json
@@ -81,6 +98,7 @@ jobs:
           --membership-baseline "${{ steps.published_baseline.outputs.path }}"
 
       - name: Validate complete staged catalog
+        if: github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true
         run: >-
           python scripts/validate_catalog.py
           --root "$RUNNER_TEMP/catalog-staging"
@@ -88,7 +106,7 @@ jobs:
           --baseline-ref "${{ steps.run.outputs.baseline_ref }}"
 
       - name: Upload related-resource scoring diagnostics
-        if: always()
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true)
         uses: actions/upload-artifact@v4
         with:
           name: related-resource-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
@@ -96,12 +114,26 @@ jobs:
           if-no-files-found: warn
 
       - name: Detect substantive catalog changes
+        if: github.event_name != 'workflow_dispatch' || inputs.initialize_semantic_search != true
         id: changes
         run: >-
           python scripts/catalog_snapshot.py changed
           --candidate "$RUNNER_TEMP/catalog-staging"
           --baseline "${{ steps.published_baseline.outputs.path }}"
           --output-file "$GITHUB_OUTPUT"
+
+      - name: Require semantic-publication credentials before any catalog commit
+        if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true)
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          if [[ -z "$CLOUDFLARE_ACCOUNT_ID" || -z "$CLOUDFLARE_API_TOKEN" ]]; then
+            echo "Task 22 publication requires CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN." >&2
+            echo "No catalog commit has been created." >&2
+            exit 1
+          fi
 
       - name: Finalize and verify generation manifest
         if: steps.changes.outputs.changed == 'true'
@@ -144,23 +176,170 @@ jobs:
           git diff --cached --exit-code
           python scripts/catalog_snapshot.py verify --root .
 
-      - name: Configure GitHub Pages
+      - name: Set up Node for exact-generation semantic publication
+        if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
+      - name: Install exact-commit API and local MCP packages
+        if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true)
+        run: |
+          npm --prefix api ci
+          python -m pip install -e mcp-server
+
+      - name: Apply semantic-readiness migration
+        if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true)
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npm --prefix api run d1:migrate
+
+      - name: Capture pre-publication API Worker deployment
+        if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true)
+        id: worker_baseline
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          status_file="$RUNNER_TEMP/pre-publication-worker-deployment.json"
+          npm --prefix api exec -- wrangler deployments status --json > "$status_file"
+          python .github/workflows/scripts/worker_deployment.py validate \
+            --status-file "$status_file"
+          echo "status_file=$status_file" >> "$GITHUB_OUTPUT"
+
+      - name: Verify unchanged catalog for explicit semantic bootstrap
+        if: steps.changes.outputs.changed != 'true' && github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true
+        id: bootstrap_manifest
+        shell: bash
+        run: |
+          python scripts/catalog_snapshot.py verify --root .
+          generation_id="$(python -c 'import json; print(json.load(open("data/manifest.json"))["generationId"])')"
+          echo "generation_id=$generation_id" >> "$GITHUB_OUTPUT"
+
+      - name: Initialize and verify unchanged semantic generation explicitly
+        if: steps.changes.outputs.changed != 'true' && github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true
+        id: bootstrap_vectors
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          OKG_DATA_DIR: ${{ github.workspace }}/data
+        run: |
+          npm --prefix api run vectors:provision
+          npm --prefix api run vectors:ensure
+          npm --prefix api run vectors:verify
+
+      - name: Deploy generation-aware API Worker for explicit semantic bootstrap
+        if: steps.bootstrap_vectors.outcome == 'success'
+        id: bootstrap_api
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npm --prefix api run deploy
+
+      - name: Verify explicit semantic bootstrap across API and MCP tools
+        if: steps.bootstrap_api.outcome == 'success'
+        id: bootstrap_semantic
+        continue-on-error: true
+        run: >-
+          python .github/workflows/scripts/verify_task22_surfaces.py
+          --pages-base-url "https://openknowledgegraphs.com"
+          --api-base-url "https://api.openknowledgegraphs.com"
+          --generation-id "${{ steps.bootstrap_manifest.outputs.generation_id }}"
+
+      - name: Restore pre-bootstrap API Worker deployment after failure
+        if: always() && steps.changes.outputs.changed != 'true' && github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true && (steps.bootstrap_api.outcome == 'failure' || steps.bootstrap_semantic.outcome == 'failure')
+        id: bootstrap_worker_restore
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          mapfile -t version_specs < <(python .github/workflows/scripts/worker_deployment.py specs \
+            --status-file "${{ steps.worker_baseline.outputs.status_file }}")
+          test "${#version_specs[@]}" -gt 0
+          npm --prefix api exec -- wrangler versions deploy "${version_specs[@]}" -y \
+            --message "Restore API before failed semantic bootstrap ${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}"
+
+      - name: Bootstrap retained live vector generations before Worker upgrade
         if: steps.changes.outputs.changed == 'true'
+        id: baseline_vectors
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          PUBLISHED_BASELINE: ${{ steps.published_baseline.outputs.path }}
+        shell: bash
+        run: |
+          baseline_generation="$(python -c 'import json,os; print(json.load(open(os.path.join(os.environ["PUBLISHED_BASELINE"], "data", "manifest.json")))["generationId"])')"
+          echo "generation_id=$baseline_generation" >> "$GITHUB_OUTPUT"
+          OKG_DATA_DIR="$PUBLISHED_BASELINE/data" npm --prefix api run vectors:ensure
+          OKG_DATA_DIR="$PUBLISHED_BASELINE/data" npm --prefix api run vectors:verify
+          if git rev-parse --verify --quiet 'refs/tags/catalog-previous^{commit}' >/dev/null; then
+            git worktree add --detach "$RUNNER_TEMP/previous-catalog" catalog-previous
+            OKG_DATA_DIR="$RUNNER_TEMP/previous-catalog/data" npm --prefix api run vectors:ensure
+            OKG_DATA_DIR="$RUNNER_TEMP/previous-catalog/data" npm --prefix api run vectors:verify
+          fi
+
+      - name: Deploy generation-aware API Worker from exact candidate commit
+        if: steps.changes.outputs.changed == 'true'
+        id: candidate_api
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npm --prefix api run deploy
+
+      - name: Verify upgraded API remains pinned to the live baseline
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_api.outcome == 'success'
+        id: baseline_semantic
+        continue-on-error: true
+        run: >-
+          python .github/workflows/scripts/verify_task22_surfaces.py
+          --pages-base-url "https://openknowledgegraphs.com"
+          --api-base-url "https://api.openknowledgegraphs.com"
+          --generation-id "${{ steps.baseline_vectors.outputs.generation_id }}"
+
+      - name: Seed and verify candidate vector generation from exact commit
+        if: steps.changes.outputs.changed == 'true' && steps.baseline_semantic.outcome == 'success'
+        id: candidate_vectors
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          OKG_DATA_DIR: ${{ github.workspace }}/data
+        run: |
+          npm --prefix api run vectors:ensure
+          npm --prefix api run vectors:verify
+
+      - name: Configure GitHub Pages
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_vectors.outcome == 'success'
+        id: candidate_pages_config
+        continue-on-error: true
         uses: actions/configure-pages@v5
 
       - name: Build candidate Pages artifact from exact commit
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_pages_config.outcome == 'success'
+        id: candidate_pages_build
+        continue-on-error: true
         run: python scripts/catalog_snapshot.py build-pages --root . --destination "$RUNNER_TEMP/candidate-pages"
 
       - name: Upload candidate Pages artifact
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_pages_build.outcome == 'success'
+        id: candidate_pages_upload
+        continue-on-error: true
         uses: actions/upload-pages-artifact@v3
         with:
           name: candidate-pages
           path: ${{ runner.temp }}/candidate-pages
 
       - name: Deploy candidate Pages artifact
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_pages_upload.outcome == 'success'
         id: candidate_deploy
         continue-on-error: true
         uses: actions/deploy-pages@v4
@@ -177,26 +356,69 @@ jobs:
           --generation-id "${{ steps.manifest.outputs.generation_id }}"
           --output-file "$GITHUB_OUTPUT"
 
+      - name: Verify live API, vector generation, and all local MCP search tools
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_smoke.outcome == 'success'
+        id: candidate_semantic
+        continue-on-error: true
+        run: >-
+          python .github/workflows/scripts/verify_task22_surfaces.py
+          --pages-base-url "${{ steps.candidate_deploy.outputs.page_url }}"
+          --api-base-url "https://api.openknowledgegraphs.com"
+          --generation-id "${{ steps.manifest.outputs.generation_id }}"
+
       - name: Advance successful-generation tags atomically
-        if: steps.changes.outputs.changed == 'true' && steps.candidate_deploy.outcome == 'success' && steps.candidate_smoke.outcome == 'success'
+        if: steps.changes.outputs.changed == 'true' && steps.candidate_api.outcome == 'success' && steps.baseline_semantic.outcome == 'success' && steps.candidate_vectors.outcome == 'success' && steps.candidate_deploy.outcome == 'success' && steps.candidate_smoke.outcome == 'success' && steps.candidate_semantic.outcome == 'success'
+        id: successful_tags
+        continue-on-error: true
         run: >-
           python scripts/catalog_snapshot.py advance-success
           --repository .
           --generation-id "${{ steps.manifest.outputs.generation_id }}"
           --commit "${{ steps.commit.outputs.sha }}"
 
-      - name: Prepare automatic rollback to catalog-current
-        if: steps.changes.outputs.changed == 'true' && (steps.candidate_deploy.outcome == 'failure' || steps.candidate_smoke.outcome == 'failure')
-        id: rollback_prepare
+      - name: Prune vector generations older than catalog-current and catalog-previous
+        if: steps.successful_tags.outcome == 'success'
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         shell: bash
         run: |
-          if ! git rev-parse --verify --quiet 'refs/tags/catalog-current^{commit}' >/dev/null; then
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "No previously live-verified catalog-current generation exists." >&2
-            exit 0
-          fi
+          retain_args=()
+          for tag in catalog-current catalog-previous; do
+            if git rev-parse --verify --quiet "refs/tags/${tag}^{commit}" >/dev/null; then
+              generation_id="$(git show "${tag}:data/manifest.json" | python -c 'import json,sys; print(json.load(sys.stdin)["generationId"])')"
+              retain_args+=("$generation_id")
+            fi
+          done
+          RETAIN_GENERATIONS="$(IFS=,; echo "${retain_args[*]}")" \
+            npm --prefix api run vectors:prune
+
+      - name: Restore pre-publication API Worker deployment automatically
+        if: always() && steps.changes.outputs.changed == 'true' && (steps.candidate_api.outcome == 'failure' || steps.baseline_semantic.outcome == 'failure' || steps.candidate_vectors.outcome == 'failure' || steps.candidate_pages_config.outcome == 'failure' || steps.candidate_pages_build.outcome == 'failure' || steps.candidate_pages_upload.outcome == 'failure' || steps.candidate_deploy.outcome == 'failure' || steps.candidate_smoke.outcome == 'failure' || steps.candidate_semantic.outcome == 'failure' || steps.successful_tags.outcome == 'failure')
+        id: rollback_worker
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          mapfile -t version_specs < <(python .github/workflows/scripts/worker_deployment.py specs \
+            --status-file "${{ steps.worker_baseline.outputs.status_file }}")
+          test "${#version_specs[@]}" -gt 0
+          npm --prefix api exec -- wrangler versions deploy "${version_specs[@]}" -y \
+            --message "Restore API before failed catalog publication ${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}"
+
+      - name: Prepare automatic rollback to pre-publication baseline
+        if: always() && steps.changes.outputs.changed == 'true' && (steps.candidate_api.outcome == 'failure' || steps.baseline_semantic.outcome == 'failure' || steps.candidate_vectors.outcome == 'failure' || steps.candidate_pages_config.outcome == 'failure' || steps.candidate_pages_build.outcome == 'failure' || steps.candidate_pages_upload.outcome == 'failure' || steps.candidate_deploy.outcome == 'failure' || steps.candidate_smoke.outcome == 'failure' || steps.candidate_semantic.outcome == 'failure' || steps.successful_tags.outcome == 'failure')
+        id: rollback_prepare
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
           echo "available=true" >> "$GITHUB_OUTPUT"
-          git worktree add --detach "$RUNNER_TEMP/rollback-catalog" catalog-current
+          git worktree add --detach "$RUNNER_TEMP/rollback-catalog" "${{ steps.run.outputs.baseline_commit }}"
+          test "$(git -C "$RUNNER_TEMP/rollback-catalog" rev-parse HEAD)" = "${{ steps.run.outputs.baseline_commit }}"
           python -m pip install -r "$RUNNER_TEMP/rollback-catalog/requirements.txt"
           python "$RUNNER_TEMP/rollback-catalog/scripts/validate_catalog.py" \
             --root "$RUNNER_TEMP/rollback-catalog" \
@@ -205,6 +427,10 @@ jobs:
           python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" verify \
             --root "$RUNNER_TEMP/rollback-catalog" \
             --output-file "$GITHUB_OUTPUT"
+          OKG_DATA_DIR="$RUNNER_TEMP/rollback-catalog/data" \
+            npm --prefix api run vectors:ensure
+          OKG_DATA_DIR="$RUNNER_TEMP/rollback-catalog/data" \
+            npm --prefix api run vectors:verify
           python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" build-pages \
             --root "$RUNNER_TEMP/rollback-catalog" \
             --destination "$RUNNER_TEMP/rollback-pages"
@@ -216,7 +442,7 @@ jobs:
           name: rollback-pages
           path: ${{ runner.temp }}/rollback-pages
 
-      - name: Redeploy catalog-current automatically
+      - name: Redeploy catalog-current automatically — Redeploy pre-publication Pages baseline automatically
         if: steps.rollback_prepare.outputs.available == 'true'
         id: rollback_deploy
         continue-on-error: true
@@ -233,6 +459,32 @@ jobs:
           --base-url "${{ steps.rollback_deploy.outputs.page_url }}"
           --generation-id "${{ steps.rollback_prepare.outputs.generation_id }}"
 
+      - name: Verify automatic rollback API, vector generation, and MCP tools
+        if: steps.rollback_prepare.outputs.available == 'true' && steps.rollback_worker.outcome == 'success' && steps.rollback_smoke.outcome == 'success'
+        id: rollback_semantic
+        continue-on-error: true
+        run: >-
+          python .github/workflows/scripts/verify_task22_surfaces.py
+          --pages-base-url "${{ steps.rollback_deploy.outputs.page_url }}"
+          --api-base-url "https://api.openknowledgegraphs.com"
+          --generation-id "${{ steps.rollback_prepare.outputs.generation_id }}"
+
+      - name: Remove failed candidate vectors after verified automatic rollback
+        if: steps.rollback_semantic.outcome == 'success'
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          retain_generations=("${{ steps.rollback_prepare.outputs.generation_id }}")
+          previous_commit="${{ steps.run.outputs.previous_commit }}"
+          if [[ -n "$previous_commit" ]]; then
+            previous_generation="$(git show "${previous_commit}:data/manifest.json" | python -c 'import json,sys; print(json.load(sys.stdin)["generationId"])')"
+            retain_generations+=("$previous_generation")
+          fi
+          RETAIN_GENERATIONS="$(IFS=,; echo "${retain_generations[*]}")" \
+            npm --prefix api run vectors:prune
+
       - name: Report publication outcome
         if: always()
         shell: bash
@@ -240,9 +492,12 @@ jobs:
           repository_changed="${{ steps.commit.outcome == 'success' }}"
           pages_attempted="${{ steps.candidate_deploy.outcome != 'skipped' }}"
           pages_changed="${{ steps.candidate_deploy.outcome == 'success' }}"
-          live_verified="${{ steps.candidate_smoke.outcome == 'success' }}"
+          live_verified="${{ steps.candidate_semantic.outcome == 'success' }}"
           rollback_attempted="${{ steps.rollback_deploy.outcome != 'skipped' }}"
-          rollback_succeeded="${{ steps.rollback_smoke.outcome == 'success' }}"
+          rollback_succeeded="${{ steps.rollback_semantic.outcome == 'success' }}"
+          worker_rollback_succeeded="${{ steps.rollback_worker.outcome == 'success' }}"
+          bootstrap_requested="${{ github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true }}"
+          bootstrap_verified="${{ steps.bootstrap_semantic.outcome == 'success' }}"
           deployment_id="none"
           rollback_deployment_id="none"
           if [[ "$pages_attempted" == "true" ]]; then
@@ -263,7 +518,10 @@ jobs:
             echo "- liveVerified: $live_verified"
             echo "- rollbackAttempted: $rollback_attempted"
             echo "- rollbackDeploymentId: $rollback_deployment_id"
+            echo "- workerRollbackSucceeded: $worker_rollback_succeeded"
             echo "- rollbackSucceeded: $rollback_succeeded"
+            echo "- semanticBootstrapRequested: $bootstrap_requested"
+            echo "- semanticBootstrapVerified: $bootstrap_verified"
             if [[ "$live_verified" == "true" ]]; then
               echo "- result: published successfully"
             elif [[ "${{ steps.changes.outputs.changed }}" != "true" ]]; then
@@ -274,7 +532,13 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Fail publication after candidate or rollback failure
-        if: steps.changes.outputs.changed == 'true' && (steps.candidate_deploy.outcome != 'success' || steps.candidate_smoke.outcome != 'success')
+        if: always() && steps.changes.outputs.changed == 'true' && (steps.candidate_api.outcome != 'success' || steps.baseline_semantic.outcome != 'success' || steps.candidate_vectors.outcome != 'success' || steps.candidate_pages_config.outcome != 'success' || steps.candidate_pages_build.outcome != 'success' || steps.candidate_pages_upload.outcome != 'success' || steps.candidate_deploy.outcome != 'success' || steps.candidate_smoke.outcome != 'success' || steps.candidate_semantic.outcome != 'success' || steps.successful_tags.outcome != 'success' || (steps.rollback_prepare.outputs.available == 'true' && (steps.rollback_worker.outcome != 'success' || steps.rollback_semantic.outcome != 'success')))
         run: |
-          echo "Candidate publication did not pass live verification." >&2
+          echo "Candidate publication did not pass static, API, vector, and MCP live verification." >&2
+          exit 1
+
+      - name: Fail explicit semantic bootstrap after verification or restoration failure
+        if: always() && steps.changes.outputs.changed != 'true' && github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true && (steps.bootstrap_vectors.outcome != 'success' || steps.bootstrap_api.outcome != 'success' || steps.bootstrap_semantic.outcome != 'success' || (steps.bootstrap_worker_restore.outcome != 'skipped' && steps.bootstrap_worker_restore.outcome != 'success'))
+        run: |
+          echo "Explicit semantic initialization did not reach one verified generation across API and MCP." >&2
           exit 1

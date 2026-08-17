@@ -21,7 +21,7 @@ concurrency:
 jobs:
   rollback:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -32,6 +32,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Require semantic-rollback credentials
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          if [[ -z "$CLOUDFLARE_ACCOUNT_ID" || -z "$CLOUDFLARE_API_TOKEN" ]]; then
+            echo "Task 22 rollback requires CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN." >&2
+            exit 1
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -39,8 +50,18 @@ jobs:
           cache: "pip"
           cache-dependency-path: requirements.txt
 
+      - name: Set up Node for exact-generation semantic rollback
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: api/package-lock.json
+
       - name: Install dependencies
-        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -e mcp-server
 
       - name: Resolve immutable rollback target
         id: target
@@ -63,6 +84,24 @@ jobs:
             --skip-baseline
           python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" verify \
             --root "$RUNNER_TEMP/rollback-catalog"
+
+      - name: Ensure and verify target vector generation from exact rollback worktree
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          OKG_DATA_DIR: ${{ runner.temp }}/rollback-catalog/data
+        run: |
+          npm --prefix api ci
+          npm --prefix api run d1:migrate
+          npm --prefix api run vectors:ensure
+          npm --prefix api run vectors:verify
+
+      - name: Deploy generation-aware API Worker for exact rollback data
+        id: api_deployment
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npm --prefix api run deploy
 
       - name: Build exact rollback Pages artifact
         run: |
@@ -92,12 +131,36 @@ jobs:
           --base-url "${{ steps.deployment.outputs.page_url }}"
           --generation-id "${{ steps.target.outputs.generation_id }}"
 
+      - name: Verify rollback API, vector generation, and all local MCP search tools
+        id: semantic
+        run: >-
+          python .github/workflows/scripts/verify_task22_surfaces.py
+          --pages-base-url "${{ steps.deployment.outputs.page_url }}"
+          --api-base-url "https://api.openknowledgegraphs.com"
+          --generation-id "${{ steps.target.outputs.generation_id }}"
+
       - name: Advance moving pointers after verified rollback
         id: pointers
         run: >-
           python scripts/catalog_snapshot.py advance-rollback
           --repository .
           --target "${{ steps.target.outputs.commit }}"
+
+      - name: Prune vector generations older than catalog-current and catalog-previous
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          retain_generations=()
+          for tag in catalog-current catalog-previous; do
+            if git rev-parse --verify --quiet "refs/tags/${tag}^{commit}" >/dev/null; then
+              generation_id="$(git show "${tag}:data/manifest.json" | python -c 'import json,sys; print(json.load(sys.stdin)["generationId"])')"
+              retain_generations+=("$generation_id")
+            fi
+          done
+          RETAIN_GENERATIONS="$(IFS=,; echo "${retain_generations[*]}")" \
+            npm --prefix api run vectors:prune
 
       - name: Report rollback outcome
         if: always()
@@ -117,7 +180,8 @@ jobs:
             echo "- pagesDeploymentAttempted: $deployment_attempted"
             echo "- pagesDeploymentId: $deployment_id"
             echo "- pagesChanged: ${{ steps.deployment.outcome == 'success' }}"
-            echo "- liveVerified: ${{ steps.smoke.outcome == 'success' }}"
+            echo "- apiChanged: ${{ steps.api_deployment.outcome == 'success' }}"
+            echo "- liveVerified: ${{ steps.semantic.outcome == 'success' }}"
             echo "- rollbackAttempted: true"
             echo "- rollbackSucceeded: ${{ steps.pointers.outcome == 'success' }}"
             echo "- repositoryAheadOfPages: ${{ steps.target.outputs.commit != github.sha }}"
