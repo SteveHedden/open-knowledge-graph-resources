@@ -98,7 +98,6 @@ CATEGORY_CLASSIFICATION_MODEL = os.getenv("ANTHROPIC_MODEL", DEFAULT_MODEL)
 
 LOCAL_NAME_CLEAN_RE = re.compile(r"[^A-Za-z0-9]+")
 QID_RE = re.compile(r"(Q\d+)$")
-REPO_HOST_RE = re.compile(r"^https?://(github\.com|gitlab\.com|bitbucket\.org|codeberg\.org)/", re.IGNORECASE)
 
 
 class WDQSError(RuntimeError):
@@ -377,10 +376,6 @@ def canonical_entity_iri(iri: str) -> str:
 def wikidata_page_iri(iri: str) -> str:
     qid = qid_from_wikidata_iri(iri)
     return f"https://www.wikidata.org/wiki/{qid}"
-
-
-def is_repo_url(url: str) -> bool:
-    return bool(REPO_HOST_RE.search(url))
 
 
 def sanitize_label(value: str) -> str:
@@ -853,10 +848,7 @@ def parse_ontology_rows(
 
         homepage = binding_value(row, "officialWebsite")
         if homepage:
-            if is_repo_url(homepage):
-                record.source_repos.add(homepage)
-            else:
-                record.homepages.add(homepage)
+            record.homepages.add(homepage)
 
         source_repo = binding_value(row, "sourceCodeRepo")
         if source_repo:
@@ -910,10 +902,7 @@ def parse_software_rows(
 
         homepage = binding_value(row, "officialWebsite")
         if homepage:
-            if is_repo_url(homepage):
-                record.source_repos.add(homepage)
-            else:
-                record.homepages.add(homepage)
+            record.homepages.add(homepage)
 
         source_repo = binding_value(row, "sourceCodeRepo")
         if source_repo:

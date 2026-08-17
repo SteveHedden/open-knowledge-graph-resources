@@ -107,6 +107,48 @@ class JsonLdTests(unittest.TestCase):
         self.assertFalse(generate_pages.passes_content_filter(page_fixture(homepage="   ")))
 
 
+class SourceRowParsingTests(unittest.TestCase):
+    official_website = (
+        "https://github.com/databrickslabs/ontobricks/tree/master/documentation"
+    )
+    source_repository = "https://github.com/databrickslabs/ontobricks"
+
+    @staticmethod
+    def binding(value):
+        return {"type": "uri", "value": value}
+
+    def source_row(self, qid):
+        return {
+            "item": self.binding(f"http://www.wikidata.org/entity/{qid}"),
+            "matchedTypeQid": {"type": "literal", "value": "Q324254"},
+            "officialWebsite": self.binding(self.official_website),
+            "sourceCodeRepo": self.binding(self.source_repository),
+        }
+
+    def test_github_hosted_p856_remains_software_homepage(self):
+        item_iri = "http://www.wikidata.org/entity/Q141108893"
+        records, _, _, _ = fetch_data.parse_software_rows(
+            [self.source_row("Q141108893")],
+            {item_iri: "OntoBricks"},
+            {},
+        )
+
+        self.assertEqual(records[item_iri].homepages, {self.official_website})
+        self.assertEqual(records[item_iri].source_repos, {self.source_repository})
+
+    def test_github_hosted_p856_remains_ontology_homepage(self):
+        item_iri = "http://www.wikidata.org/entity/Q123"
+        records, _, _ = fetch_data.parse_ontology_rows(
+            [self.source_row("Q123")],
+            {item_iri: "Example ontology"},
+            {},
+            {"Q324254": OKG.Ontology},
+        )
+
+        self.assertEqual(records[item_iri].homepages, {self.official_website})
+        self.assertEqual(records[item_iri].source_repos, {self.source_repository})
+
+
 class RdfEmissionTests(unittest.TestCase):
     def build_graph(self, record, **kwargs):
         qid = fetch_data.qid_from_wikidata_iri(record.item_iri)
