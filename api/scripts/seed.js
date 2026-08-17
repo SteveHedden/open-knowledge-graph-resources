@@ -27,6 +27,10 @@ export const REQUIRED_METADATA_INDEXES = Object.freeze([
   Object.freeze({ propertyName: "category", indexType: "string" }),
 ]);
 
+function canonicalMetadataIndexType(indexType) {
+  return typeof indexType === "string" ? indexType.toLowerCase() : indexType;
+}
+
 const READINESS_SCHEMA = `
 CREATE TABLE IF NOT EXISTS vector_generations (
   generation_id TEXT PRIMARY KEY,
@@ -105,7 +109,7 @@ export function assertRequiredMetadataIndexes(indexes) {
     if (!actual) {
       throw new Error(`Vectorize metadata index is missing: ${required.propertyName}`);
     }
-    if (actual.indexType !== required.indexType) {
+    if (canonicalMetadataIndexType(actual.indexType) !== required.indexType) {
       throw new Error(
         `Vectorize metadata index ${required.propertyName} has type ${actual.indexType}; expected ${required.indexType}`
       );
@@ -155,7 +159,7 @@ export async function ensureMetadataIndexes() {
     const required = REQUIRED_METADATA_INDEXES.find(
       ({ propertyName }) => propertyName === current.propertyName
     );
-    if (required && current.indexType !== required.indexType) {
+    if (required && canonicalMetadataIndexType(current.indexType) !== required.indexType) {
       throw new Error(
         `Vectorize metadata index ${current.propertyName} has type ${current.indexType}; expected ${required.indexType}`
       );

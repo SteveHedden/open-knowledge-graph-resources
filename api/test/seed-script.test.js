@@ -162,6 +162,31 @@ test("metadata filters are provisioned and verified before seeding can proceed",
   await verifyMetadataIndexes();
 });
 
+test("Cloudflare metadata-index type casing is normalized during verification", async (t) => {
+  const original = globalThis.fetch;
+  const calls = [];
+  globalThis.fetch = async (input, init = {}) => {
+    const url = new URL(String(input));
+    calls.push([url.pathname, init.method || "GET"]);
+    if (url.pathname.endsWith("/metadata_index/list")) {
+      return cloudflareResponse({
+        metadataIndexes: [
+          { propertyName: "dataset", indexType: "String" },
+          { propertyName: "category", indexType: "String" },
+        ],
+      });
+    }
+    throw new Error(`Unexpected API call: ${url}`);
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  assert.deepEqual(await ensureMetadataIndexes(), []);
+  await verifyMetadataIndexes();
+  assert.equal(calls.every(([, method]) => method === "GET"), true);
+});
+
 test("REST upsert fails closed on any unparsable vector", async (t) => {
   const original = globalThis.fetch;
   let requestedUrl;
