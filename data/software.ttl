@@ -49,7 +49,7 @@
     okg:creator okg:Creator_Franz_Inc_Q11333728 ;
     okg:description "horizontally distributed, multi-model (document and graph), entity-event knowledge graph database system" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
-    okg:homepage <http://www.franz.com/agraph/allegrograph> ;
+    okg:homepage <https://allegrograph.com/> ;
     okg:programmingLanguage "Common Lisp" ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -555,9 +555,11 @@
     okg:programmingLanguage "C" ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/FalkorDB/FalkorDB> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q137916409> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
+        <http://www.wikidata.org/entity/Q595971> ;
     okg:title "FalkorDB" ;
-    okg:uses <http://www.wikidata.org/entity/Q16834355> ;
+    okg:uses <http://www.wikidata.org/entity/Q16834355>,
+        <http://www.wikidata.org/entity/Q96379864> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q141103185> .
 
 <https://openknowledgegraphs.com/software/flexrml/> a okg:Software ;
@@ -1190,9 +1192,9 @@
     okg:description "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://linkml.neverblink.eu/> ;
-    okg:latestVersion "0.12.2" ;
+    okg:latestVersion "0.13.1" ;
     okg:programmingLanguage "Scala" ;
-    okg:releaseDate "2026-08-11"^^xsd:date ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/NeverBlink-OSS/linkml-scala> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -1446,6 +1448,20 @@
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
     okg:title "onto-tool" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653422> .
+
+<https://openknowledgegraphs.com/software/ontobricks/> a okg:Software ;
+    rdfs:label "OntoBricks" ;
+    okg:creator okg:Creator_Databricks_Q18350420 ;
+    okg:description "web application for designing ontologies and constructing knowledge graphs on Databricks" ;
+    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
+    okg:latestVersion "0.7.0" ;
+    okg:programmingLanguage "Python" ;
+    okg:releaseDate "2026-08-08"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/databrickslabs/ontobricks> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
+    okg:title "OntoBricks" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141108893> .
 
 <https://openknowledgegraphs.com/software/ontofelia/> a okg:Software ;
     rdfs:label "Ontofelia" ;
@@ -3234,6 +3250,10 @@ okg:Creator_Dan_Connolly_Q3013037 a okg:Person ;
     rdfs:label "Dan Connolly" ;
     okg:githubProfile <https://github.com/dckc> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3013037> .
+
+okg:Creator_Databricks_Q18350420 a okg:Organization ;
+    rdfs:label "Databricks" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q18350420> .
 
 okg:Creator_Dimitris_Kontokostas_Q47543874 a okg:Person ;
     rdfs:label "Dimitris Kontokostas" ;

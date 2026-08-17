@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T07:07:04Z",
+  "generatedAt": "2026-08-17T15:12:00Z",
   "items": [
     {
       "title": "4store",
@@ -73,7 +73,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/",
       "description": "horizontally distributed, multi-model (document and graph), entity-event knowledge graph database system",
-      "homepage": "http://www.franz.com/agraph/allegrograph",
+      "homepage": "https://allegrograph.com/",
       "creators": [
         {
           "name": "Franz Inc.",
@@ -2473,8 +2473,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "0.12.2",
-      "releaseDate": "2026-08-11",
+      "latestVersion": "0.13.1",
+      "releaseDate": "2026-08-17",
       "softwareType": "Developer Library",
       "programmingLanguages": [
         "Scala"
@@ -3127,6 +3127,32 @@
       ],
       "latestVersion": "1.9.0",
       "releaseDate": "2026-08-13",
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Python"
+      ]
+    },
+    {
+      "title": "OntoBricks",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141108893",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/ontobricks/",
+      "description": "web application for designing ontologies and constructing knowledge graphs on Databricks",
+      "sourceRepo": "https://github.com/databrickslabs/ontobricks",
+      "creators": [
+        {
+          "name": "Databricks",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q18350420"
+        }
+      ],
+      "licenses": [
+        "proprietary license"
+      ],
+      "latestVersion": "0.7.0",
+      "releaseDate": "2026-08-08",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "Python"
