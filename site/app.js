@@ -8,6 +8,8 @@
       "./data/controlled_vocabularies.json",
       "../data/controlled_vocabularies.json",
     ],
+    pageQids: ["./data/page_qids.json", "../data/page_qids.json"],
+    manifest: ["./data/manifest.json", "../data/manifest.json"],
   };
 
   const DEFAULT_STATE = {
@@ -15,17 +17,16 @@
     q: "",
     category: "all",
     softwareType: "all",
+    page: 1,
   };
 
   let CATEGORY_OPTIONS = [{ id: "all", label: "All" }];
   let CATEGORY_IDS = new Set(["all"]);
   let CATEGORY_ID_TO_LABEL = new Map([["all", "All"]]);
-  let CATEGORY_LABEL_TO_ID = new Map();
 
   let SOFTWARE_TYPE_OPTIONS = [{ id: "all", label: "All" }];
   let SOFTWARE_TYPE_IDS = new Set(["all"]);
   let SOFTWARE_TYPE_ID_TO_LABEL = new Map([["all", "All"]]);
-  let SOFTWARE_TYPE_LABEL_TO_ID = new Map();
 
   const TAB_DEFAULT_SORT = {
     ontologies: { sort: "documentationScore", order: "desc" },
@@ -58,12 +59,20 @@
   };
 
   const TAB_ORDER = ["ontologies", "software"];
+  const PAGE_SIZE = 50;
+  const RESPONSIVE_QUERY = "(max-width: 760px)";
   const SEARCH_DEBOUNCE_MS = 180;
   const MAX_TRACKED_QUERY_LENGTH = 64;
 
   const dom = {
     searchInput: document.getElementById("catalog-search"),
     resultsMeta: document.getElementById("results-meta"),
+    pagination: document.getElementById("catalog-pagination"),
+    previousPage: document.getElementById("previous-page"),
+    nextPage: document.getElementById("next-page"),
+    pageStatus: document.getElementById("page-status"),
+    freshness: document.getElementById("catalog-freshness"),
+    generationId: document.getElementById("generation-id"),
     lastUpdated: document.getElementById("last-updated"),
     tabs: Array.from(document.querySelectorAll('[role="tab"]')),
     panels: Array.from(document.querySelectorAll('[role="tabpanel"]')),
@@ -83,12 +92,15 @@
   const store = {
     ontologies: [],
     software: [],
-    generatedAt: {
-      ontologies: null,
-      software: null,
-    },
+    loadStatus: { ontologies: "loading", software: "loading" },
     pageSlugs: { resource: {}, software: {} },
+    manifest: null,
   };
+
+  const responsiveMedia =
+    typeof window.matchMedia === "function"
+      ? window.matchMedia(RESPONSIVE_QUERY)
+      : { matches: false };
 
   function normalizeVocabularyOptions(rawEntries) {
     const options = [{ id: "all", label: "All" }];
@@ -134,17 +146,9 @@
 
     CATEGORY_IDS = new Set(CATEGORY_OPTIONS.map((entry) => entry.id));
     CATEGORY_ID_TO_LABEL = new Map(CATEGORY_OPTIONS.map((entry) => [entry.id, entry.label]));
-    CATEGORY_LABEL_TO_ID = new Map(
-      CATEGORY_OPTIONS.filter((entry) => entry.id !== "all").map((entry) => [entry.label, entry.id])
-    );
     SOFTWARE_TYPE_IDS = new Set(SOFTWARE_TYPE_OPTIONS.map((entry) => entry.id));
     SOFTWARE_TYPE_ID_TO_LABEL = new Map(
       SOFTWARE_TYPE_OPTIONS.map((entry) => [entry.id, entry.label])
-    );
-    SOFTWARE_TYPE_LABEL_TO_ID = new Map(
-      SOFTWARE_TYPE_OPTIONS.filter((entry) => entry.id !== "all").map(
-        (entry) => [entry.label, entry.id]
-      )
     );
 
     dom.categoryButtons = renderVocabularyButtons(
@@ -157,6 +161,20 @@
       SOFTWARE_TYPE_OPTIONS,
       "softwareType"
     );
+  }
+
+  function setFilterAvailability(available) {
+    [dom.categoryFilters, dom.softwareTypeFilters].forEach((container) => {
+      if (!container) {
+        return;
+      }
+      container.classList.toggle("is-disabled", !available);
+      container.setAttribute("aria-disabled", available ? "false" : "true");
+      container.title = available ? "" : "Filters are unavailable for this catalog generation.";
+    });
+    [...dom.categoryButtons, ...dom.softwareTypeButtons].forEach((button) => {
+      button.disabled = !available;
+    });
   }
 
   let state = normalizeState(parseStateFromUrl());
@@ -274,6 +292,7 @@
       softwareType: params.get("softwareType"),
       sort: params.get("sort"),
       order: params.get("order"),
+      page: params.get("page"),
     };
   }
 
@@ -282,6 +301,7 @@
     const tabDefaults = TAB_DEFAULT_SORT[normalizedTab];
     const requestedSort = typeof rawState.sort === "string" ? rawState.sort : "";
     const requestedOrder = typeof rawState.order === "string" ? rawState.order : "";
+    const requestedPage = Number.parseInt(String(rawState.page || ""), 10);
 
     const normalized = {
       tab: normalizedTab,
@@ -294,6 +314,7 @@
         : DEFAULT_STATE.softwareType,
       sort: requestedSort,
       order: requestedOrder,
+      page: Number.isInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1,
     };
 
     if (!normalized.sort || !isSortAllowed(normalized.tab, normalized.sort)) {
@@ -306,33 +327,22 @@
     return normalized;
   }
 
-  function updateUrlFromState() {
+  function updateUrlFromState(historyAction = "replace") {
     const params = new URLSearchParams();
-    const tabDefaults = TAB_DEFAULT_SORT[state.tab];
-    if (state.tab !== DEFAULT_STATE.tab) {
-      params.set("tab", state.tab);
-    }
-    if (state.sort !== tabDefaults.sort) {
-      params.set("sort", state.sort);
-    }
-    if (state.order !== tabDefaults.order) {
-      params.set("order", state.order);
-    }
-    if (state.q) {
-      params.set("q", state.q);
-    }
-    if (state.category !== DEFAULT_STATE.category) {
-      params.set("category", state.category);
-    }
-    if (state.softwareType !== DEFAULT_STATE.softwareType) {
-      params.set("softwareType", state.softwareType);
-    }
+    params.set("tab", state.tab);
+    params.set("q", state.q);
+    params.set("category", state.category);
+    params.set("softwareType", state.softwareType);
+    params.set("sort", state.sort);
+    params.set("order", state.order);
+    params.set("page", String(state.page));
 
     const nextQuery = params.toString();
     const nextUrl = nextQuery
       ? `${window.location.pathname}?${nextQuery}`
       : window.location.pathname;
-    window.history.replaceState({}, "", nextUrl);
+    const method = historyAction === "push" ? "pushState" : "replaceState";
+    window.history[method]({}, "", nextUrl);
   }
 
   async function fetchJsonWithFallback(paths) {
@@ -371,10 +381,14 @@
     const safeItem = { ...item };
     safeItem.types = Array.isArray(item.types) ? item.types : [];
     safeItem.licenses = Array.isArray(item.licenses) ? item.licenses : [];
-    const categoryLabel = typeof item.category === "string" ? item.category.trim() : "";
-    safeItem.category = CATEGORY_LABEL_TO_ID.has(categoryLabel) ? categoryLabel : "";
-    const softwareTypeLabel = typeof item.softwareType === "string" ? item.softwareType.trim() : "";
-    safeItem.softwareType = SOFTWARE_TYPE_LABEL_TO_ID.has(softwareTypeLabel) ? softwareTypeLabel : "";
+    safeItem.programmingLanguages = Array.isArray(item.programmingLanguages)
+      ? item.programmingLanguages
+      : [];
+    safeItem.creators = Array.isArray(item.creators) ? item.creators : [];
+    safeItem.relatedTools = Array.isArray(item.relatedTools) ? item.relatedTools : [];
+    safeItem.category = typeof item.category === "string" ? item.category.trim() : "";
+    safeItem.softwareType =
+      typeof item.softwareType === "string" ? item.softwareType.trim() : "";
     safeItem._searchText = buildSearchText(safeItem);
     return safeItem;
   }
@@ -388,11 +402,24 @@
   }
 
   function buildSearchText(item) {
+    const creatorValues = item.creators.flatMap((creator) =>
+      creator && typeof creator === "object"
+        ? [creator.name, creator.wikidataId]
+        : [creator]
+    );
+    const relatedValues = item.relatedTools.flatMap((related) =>
+      related && typeof related === "object"
+        ? [related.title, related.canonicalUrl]
+        : [related]
+    );
     const parts = [
       item.title,
       item.description,
       item.wikidataId,
+      item.canonicalUrl,
       item.homepage,
+      item.sourceRepo,
+      item.namespaceURI,
       item.partOf,
       item.category,
       item.softwareType,
@@ -400,35 +427,14 @@
       item.releaseDate,
       ...(Array.isArray(item.types) ? item.types : []),
       ...(Array.isArray(item.licenses) ? item.licenses : []),
+      ...item.programmingLanguages,
+      ...creatorValues,
+      ...relatedValues,
     ];
     return parts
       .filter((value) => typeof value === "string" && value.trim())
       .join(" ")
       .toLowerCase();
-  }
-
-  function parseGeneratedAt(value) {
-    if (typeof value !== "string") {
-      return null;
-    }
-    const time = Date.parse(value);
-    if (Number.isNaN(time)) {
-      return null;
-    }
-    return new Date(time);
-  }
-
-  function chooseNewestDate(a, b) {
-    if (!a && !b) {
-      return null;
-    }
-    if (!a) {
-      return b;
-    }
-    if (!b) {
-      return a;
-    }
-    return a.getTime() >= b.getTime() ? a : b;
   }
 
   function formatDate(dateInput) {
@@ -460,16 +466,28 @@
     });
   }
 
-  function setFooterTimestamp() {
-    const newest = chooseNewestDate(
-      store.generatedAt.ontologies,
-      store.generatedAt.software
-    );
-    if (!newest) {
-      dom.lastUpdated.textContent = "Not available";
+  function setFreshnessMetadata(manifest) {
+    const generationId = typeof manifest?.generationId === "string" ? manifest.generationId : "";
+    const sourceRetrievedAt =
+      typeof manifest?.sourceRetrievedAt === "string" ? manifest.sourceRetrievedAt : "";
+    if (!generationId || !sourceRetrievedAt || Number.isNaN(Date.parse(sourceRetrievedAt))) {
+      store.manifest = null;
+      if (dom.freshness) {
+        dom.freshness.hidden = true;
+      }
       return;
     }
-    dom.lastUpdated.textContent = formatDateTime(newest);
+    store.manifest = { generationId, sourceRetrievedAt };
+    if (dom.generationId) {
+      dom.generationId.textContent = generationId;
+    }
+    if (dom.lastUpdated) {
+      dom.lastUpdated.textContent = formatDateTime(sourceRetrievedAt);
+      dom.lastUpdated.setAttribute("datetime", sourceRetrievedAt);
+    }
+    if (dom.freshness) {
+      dom.freshness.hidden = false;
+    }
   }
 
   function itemSortValue(item, key) {
@@ -572,51 +590,29 @@
     );
   }
 
-  function searchRelevance(item, tokens) {
-    let score = 0;
-    const title = (item.title || "").toLowerCase();
-    const desc = (item.description || "").toLowerCase();
-    const phrase = tokens.join(" ");
-
-    // Exact title match
-    if (title === phrase) {
-      score += 100;
-    }
-    // Title contains the full phrase
-    else if (title.includes(phrase)) {
-      score += 50;
-    }
-
-    // Per-token title matches
-    for (const token of tokens) {
-      if (title.includes(token)) {
-        score += 10;
-      }
-      // Title starts with token
-      if (title.startsWith(token) || title.includes(" " + token)) {
-        score += 5;
-      }
-    }
-
-    // Description contains full phrase
-    if (desc.includes(phrase)) {
-      score += 8;
-    }
-
-    return score;
-  }
-
   function getActiveItems() {
     const active = store[state.tab] || [];
-    const filtered = filterItems(active);
-    if (state.q) {
-      const tokens = state.q.toLowerCase().split(/\s+/).filter(Boolean);
-      if (tokens.length) {
-        filtered.sort((a, b) => searchRelevance(b, tokens) - searchRelevance(a, tokens));
-        return filtered;
-      }
+    return sortItems(filterItems(active));
+  }
+
+  function paginateItems(items) {
+    const totalPages = Math.max(1, Math.ceil(items.length / PAGE_SIZE));
+    const page = Math.min(state.page, totalPages);
+    if (page !== state.page) {
+      state.page = page;
+      updateUrlFromState("replace");
     }
-    return sortItems(filtered);
+    const start = (page - 1) * PAGE_SIZE;
+    return {
+      items: items.slice(start, start + PAGE_SIZE),
+      page,
+      totalPages,
+      start,
+    };
+  }
+
+  function isCardView() {
+    return Boolean(responsiveMedia.matches);
   }
 
   function hasActiveCategoryFilter() {
@@ -669,6 +665,7 @@
 
   function renderOntologyRow(item) {
     const row = document.createElement("tr");
+    row.dataset.record = "true";
 
     const titleCell = document.createElement("td");
     const detailUrl = getDetailPageUrl(item, "ontologies");
@@ -739,6 +736,7 @@
 
   function renderSoftwareRow(item) {
     const row = document.createElement("tr");
+    row.dataset.record = "true";
 
     const titleCell = document.createElement("td");
     const detailUrl = getDetailPageUrl(item, "software");
@@ -833,6 +831,7 @@
   function renderOntologyCard(item) {
     const card = document.createElement("article");
     card.className = "card";
+    card.dataset.record = "true";
 
     const title = document.createElement("h3");
     const detailUrl = getDetailPageUrl(item, "ontologies");
@@ -892,6 +891,7 @@
   function renderSoftwareCard(item) {
     const card = document.createElement("article");
     card.className = "card";
+    card.dataset.record = "true";
 
     const title = document.createElement("h3");
     const detailUrl = getDetailPageUrl(item, "software");
@@ -1006,9 +1006,28 @@
     });
   }
 
-  function updateResultsMeta(shownCount, totalCount) {
+  function clearAllPresentations() {
+    TAB_ORDER.forEach((tabName) => {
+      const tableBody = document.getElementById(TABLE_BODY_IDS[tabName]);
+      const cardContainer = document.getElementById(CARD_CONTAINER_IDS[tabName]);
+      if (tableBody) {
+        clearChildren(tableBody);
+      }
+      if (cardContainer) {
+        clearChildren(cardContainer);
+      }
+    });
+  }
+
+  function updateResultsMeta(pageInfo, matchingCount, totalCount) {
     const label = state.tab === "ontologies" ? "resources" : "software entries";
-    const shownText = shownCount.toLocaleString();
+    const firstShown = matchingCount ? pageInfo.start + 1 : 0;
+    const lastShown = pageInfo.start + pageInfo.items.length;
+    const rangeText =
+      firstShown === lastShown
+        ? firstShown.toLocaleString()
+        : `${firstShown.toLocaleString()}–${lastShown.toLocaleString()}`;
+    const matchingText = matchingCount.toLocaleString();
     const totalText = totalCount.toLocaleString();
     const queryText = state.q ? ` for "${state.q}"` : "";
     const categoryText =
@@ -1017,7 +1036,18 @@
         : hasActiveSoftwareTypeFilter() && SOFTWARE_TYPE_ID_TO_LABEL.has(state.softwareType)
         ? ` in ${SOFTWARE_TYPE_ID_TO_LABEL.get(state.softwareType)}`
         : "";
-    dom.resultsMeta.textContent = `Showing ${shownText} of ${totalText} ${label}${categoryText}${queryText}.`;
+    const catalogText = matchingCount === totalCount ? "" : ` (${totalText} total)`;
+    dom.resultsMeta.textContent = `Showing ${rangeText} of ${matchingText} ${label}${categoryText}${queryText}${catalogText}.`;
+  }
+
+  function updatePagination(pageInfo, matchingCount) {
+    if (!dom.pagination || !dom.previousPage || !dom.nextPage || !dom.pageStatus) {
+      return;
+    }
+    dom.pagination.hidden = matchingCount === 0;
+    dom.previousPage.disabled = pageInfo.page <= 1;
+    dom.nextPage.disabled = pageInfo.page >= pageInfo.totalPages;
+    dom.pageStatus.textContent = `Page ${pageInfo.page.toLocaleString()} of ${pageInfo.totalPages.toLocaleString()}`;
   }
 
   function updateTabUi() {
@@ -1095,61 +1125,62 @@
   }
 
   function render() {
+    clearAllPresentations();
     updateTabUi();
     updateCategoryUi();
     updateSoftwareTypeUi();
     updateSortUi();
 
     const allItems = store[state.tab] || [];
-    const visibleItems = getActiveItems();
-    renderTable(visibleItems);
-    renderCards(visibleItems);
-    updateResultsMeta(visibleItems.length, allItems.length);
+    if (store.loadStatus[state.tab] === "error") {
+      const message =
+        state.tab === "ontologies"
+          ? "Unable to load ontologies and vocabularies. The software catalog remains available."
+          : "Unable to load software. The ontology catalog remains available.";
+      if (isCardView()) {
+        renderCards([]);
+      } else {
+        renderTable([]);
+      }
+      dom.resultsMeta.textContent = message;
+      if (dom.pagination) {
+        dom.pagination.hidden = true;
+      }
+      return;
+    }
+
+    const matchingItems = getActiveItems();
+    const pageInfo = paginateItems(matchingItems);
+    if (isCardView()) {
+      renderCards(pageInfo.items);
+    } else {
+      renderTable(pageInfo.items);
+    }
+    updateResultsMeta(pageInfo, matchingItems.length, allItems.length);
+    updatePagination(pageInfo, matchingItems.length);
   }
 
   function setLoadingState() {
     dom.resultsMeta.textContent = "Loading catalog data...";
   }
 
-  function setErrorState(message) {
-    dom.resultsMeta.textContent = message;
-    dom.lastUpdated.textContent = "Not available";
-
-    ["ontologies", "software"].forEach((tabName) => {
-      const tableBody = document.getElementById(TABLE_BODY_IDS[tabName]);
-      const cardContainer = document.getElementById(CARD_CONTAINER_IDS[tabName]);
-
-      if (tableBody) {
-        clearChildren(tableBody);
-        tableBody.appendChild(renderNoResultsTableRow(6, "Unable to load data."));
-      }
-      if (cardContainer) {
-        clearChildren(cardContainer);
-        const card = document.createElement("article");
-        card.className = "card card-placeholder";
-        const heading = document.createElement("h3");
-        heading.textContent = "Unable to load data.";
-        card.appendChild(heading);
-        cardContainer.appendChild(card);
-      }
-    });
-  }
-
   function syncSearchInput() {
-    if (dom.searchInput && document.activeElement !== dom.searchInput) {
+    if (dom.searchInput) {
       dom.searchInput.value = state.q;
     }
   }
 
-  function applyState(nextState) {
+  function applyState(nextState, historyAction = "push") {
     state = normalizeState(nextState);
     syncSearchInput();
-    updateUrlFromState();
+    if (historyAction !== "none") {
+      updateUrlFromState(historyAction);
+    }
     render();
   }
 
   function toggleSort(sortKey) {
-    const nextState = { ...state };
+    const nextState = { ...state, page: 1 };
     const previousSort = state.sort;
     const previousOrder = state.order;
     if (nextState.sort === sortKey) {
@@ -1174,7 +1205,7 @@
       return;
     }
     const previousTab = state.tab;
-    const nextState = { ...state, tab: nextTab };
+    const nextState = { ...state, tab: nextTab, page: 1 };
     if (!isSortAllowed(nextState.tab, nextState.sort)) {
       nextState.sort = TAB_DEFAULT_SORT[nextState.tab].sort;
       nextState.order = TAB_DEFAULT_SORT[nextState.tab].order;
@@ -1273,7 +1304,7 @@
         if (categoryId === state.category) {
           return;
         }
-        applyState({ ...state, category: categoryId });
+        applyState({ ...state, category: categoryId, page: 1 });
         trackAnalyticsEvent("category_filter", {
           tab: state.tab,
           category: categoryId,
@@ -1291,7 +1322,7 @@
         if (softwareTypeId === state.softwareType) {
           return;
         }
-        applyState({ ...state, softwareType: softwareTypeId });
+        applyState({ ...state, softwareType: softwareTypeId, page: 1 });
         trackAnalyticsEvent("software_type_filter", {
           tab: state.tab,
           softwareType: softwareTypeId,
@@ -1302,13 +1333,31 @@
 
     if (dom.searchInput) {
       const debounced = debounce((rawValue) => {
-        applyState({ ...state, q: rawValue });
+        applyState({ ...state, q: rawValue, page: 1 });
         trackSearchQuery(rawValue);
       }, SEARCH_DEBOUNCE_MS);
 
       dom.searchInput.addEventListener("input", (event) => {
         const target = event.target;
         debounced(target.value);
+      });
+    }
+
+    if (dom.previousPage) {
+      dom.previousPage.addEventListener("click", () => {
+        if (state.page > 1) {
+          applyState({ ...state, page: state.page - 1 });
+        }
+      });
+    }
+
+    if (dom.nextPage) {
+      dom.nextPage.addEventListener("click", () => {
+        const matchingCount = getActiveItems().length;
+        const totalPages = Math.max(1, Math.ceil(matchingCount / PAGE_SIZE));
+        if (state.page < totalPages) {
+          applyState({ ...state, page: state.page + 1 });
+        }
       });
     }
 
@@ -1337,58 +1386,80 @@
     });
 
     window.addEventListener("popstate", () => {
-      applyState(parseStateFromUrl());
+      applyState(parseStateFromUrl(), "none");
     });
+
+    const rebuildResponsivePresentation = () => render();
+    if (typeof responsiveMedia.addEventListener === "function") {
+      responsiveMedia.addEventListener("change", rebuildResponsivePresentation);
+    } else if (typeof responsiveMedia.addListener === "function") {
+      responsiveMedia.addListener(rebuildResponsivePresentation);
+    }
   }
 
   async function init() {
     setLoadingState();
 
-    try {
-      const [ontologyResult, softwareResult, vocabularyResult] = await Promise.all([
+    const [ontologyResult, softwareResult, vocabularyResult, qidResult, manifestResult] =
+      await Promise.allSettled([
         fetchJsonWithFallback(DATA_PATHS.ontologies),
         fetchJsonWithFallback(DATA_PATHS.software),
         fetchJsonWithFallback(DATA_PATHS.controlledVocabularies),
+        fetchJsonWithFallback(DATA_PATHS.pageQids),
+        fetchJsonWithFallback(DATA_PATHS.manifest),
       ]);
 
-      const ontologyPayload = ontologyResult.payload;
-      const softwarePayload = softwareResult.payload;
-      configureControlledVocabularies(vocabularyResult.payload);
-      state = normalizeState(parseStateFromUrl());
-      updateTabUi();
-      updateCategoryUi();
-      updateSoftwareTypeUi();
-      syncSearchInput();
-      bindEvents();
-      updateTtlLinksFromJsonPath(ontologyResult.path);
-
-      store.ontologies = Array.isArray(ontologyPayload.items)
-        ? ontologyPayload.items.map(normalizeItem)
-        : [];
-      store.software = Array.isArray(softwarePayload.items)
-        ? softwarePayload.items.map(normalizeItem)
-        : [];
-
-      store.generatedAt.ontologies = parseGeneratedAt(ontologyPayload.generatedAt);
-      store.generatedAt.software = parseGeneratedAt(softwarePayload.generatedAt);
-      setFooterTimestamp();
-
-      // Load QID-to-slug mapping for detail page links (non-blocking)
-      try {
-        const qidPaths = ["./data/page_qids.json", "../data/page_qids.json"];
-        const qidResult = await fetchJsonWithFallback(qidPaths);
-        const slugs = qidResult.payload;
-        store.pageSlugs.resource = slugs.resource || {};
-        store.pageSlugs.software = slugs.software || {};
-      } catch (_) {
-        // page_qids.json may not exist yet — title links just won't appear
-      }
-
-      applyState(state);
-    } catch (error) {
-      console.error("Failed to initialize app", error);
-      setErrorState("Unable to load catalog data.");
+    if (vocabularyResult.status === "fulfilled") {
+      configureControlledVocabularies(vocabularyResult.value.payload);
+      setFilterAvailability(true);
+    } else {
+      configureControlledVocabularies({ categories: [], softwareTypes: [] });
+      setFilterAvailability(false);
+      console.warn("Controlled vocabularies unavailable", vocabularyResult.reason);
     }
+
+    for (const [tabName, result] of [
+      ["ontologies", ontologyResult],
+      ["software", softwareResult],
+    ]) {
+      if (result.status === "fulfilled" && Array.isArray(result.value.payload?.items)) {
+        store[tabName] = result.value.payload.items.map(normalizeItem);
+        store.loadStatus[tabName] = "ready";
+      } else {
+        store[tabName] = [];
+        store.loadStatus[tabName] = "error";
+        console.warn(`${tabName} catalog unavailable`, result.reason || "Invalid payload");
+      }
+    }
+
+    const pathSource =
+      ontologyResult.status === "fulfilled"
+        ? ontologyResult.value.path
+        : softwareResult.status === "fulfilled"
+        ? softwareResult.value.path
+        : null;
+    if (pathSource) {
+      updateTtlLinksFromJsonPath(pathSource);
+    }
+
+    if (qidResult.status === "fulfilled") {
+      const slugs = qidResult.value.payload;
+      store.pageSlugs.resource = slugs?.resource || {};
+      store.pageSlugs.software = slugs?.software || {};
+    } else {
+      console.warn("Detail-page registry unavailable", qidResult.reason);
+    }
+
+    if (manifestResult.status === "fulfilled") {
+      setFreshnessMetadata(manifestResult.value.payload);
+    } else {
+      setFreshnessMetadata(null);
+      console.warn("Catalog freshness metadata unavailable", manifestResult.reason);
+    }
+
+    state = normalizeState(parseStateFromUrl());
+    bindEvents();
+    applyState(state, "replace");
   }
 
   init();
