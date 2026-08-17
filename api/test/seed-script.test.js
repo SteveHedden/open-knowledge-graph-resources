@@ -6,6 +6,7 @@ process.env.CLOUDFLARE_API_TOKEN = "token";
 
 const {
   ensureMetadataIndexes,
+  fetchAndValidateAllVectors,
   upsertBatch,
   validateExpectedVectors,
   verifyExistingGeneration,
@@ -185,6 +186,39 @@ test("Cloudflare metadata-index type casing is normalized during verification", 
   assert.deepEqual(await ensureMetadataIndexes(), []);
   await verifyMetadataIndexes();
   assert.equal(calls.every(([, method]) => method === "GET"), true);
+});
+
+test("full-vector verification respects Cloudflare's 20-ID lookup limit", async (t) => {
+  const original = globalThis.fetch;
+  const batchSizes = [];
+  const expectedIds = Array.from(
+    { length: 45 },
+    (_, index) => `G1:software:Q${index + 1}`
+  );
+  globalThis.fetch = async (input, init = {}) => {
+    const url = new URL(String(input));
+    if (!url.pathname.endsWith("/get_by_ids")) {
+      throw new Error(`Unexpected API call: ${url}`);
+    }
+    const { ids } = JSON.parse(init.body);
+    batchSizes.push(ids.length);
+    assert.ok(ids.length <= 20);
+    return cloudflareResponse(
+      ids.map((id) => ({
+        id,
+        namespace: "G1",
+        values: [1],
+        metadata: { generationId: "G1", dataset: "software" },
+      }))
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  const vectors = await fetchAndValidateAllVectors("G1", expectedIds);
+  assert.equal(vectors.length, 45);
+  assert.deepEqual(batchSizes, [20, 20, 5]);
 });
 
 test("REST upsert fails closed on any unparsable vector", async (t) => {

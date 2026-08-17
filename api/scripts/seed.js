@@ -17,6 +17,7 @@ const DATABASE_ID =
 const INDEX_NAME = process.env.VECTORIZE_INDEX_NAME || "okg-catalog";
 const EMBED_MODEL = "@cf/baai/bge-base-en-v1.5";
 const BATCH_SIZE = Number.parseInt(process.env.VECTOR_BATCH_SIZE || "100", 10);
+const GET_BY_IDS_BATCH_SIZE = 20;
 const VERIFY_TIMEOUT_MS = Number.parseInt(process.env.VECTOR_VERIFY_TIMEOUT_MS || "300000", 10);
 const VERIFY_INTERVAL_MS = Number.parseInt(process.env.VECTOR_VERIFY_INTERVAL_MS || "5000", 10);
 const API_BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}`;
@@ -310,8 +311,8 @@ export function validateExpectedVectors(generationId, expectedIds, vectors) {
 
 export async function fetchAndValidateAllVectors(generationId, expectedIds) {
   const vectors = [];
-  for (let offset = 0; offset < expectedIds.length; offset += BATCH_SIZE) {
-    const ids = expectedIds.slice(offset, offset + BATCH_SIZE);
+  for (let offset = 0; offset < expectedIds.length; offset += GET_BY_IDS_BATCH_SIZE) {
+    const ids = expectedIds.slice(offset, offset + GET_BY_IDS_BATCH_SIZE);
     const result = await cloudflareJson(
       `${API_BASE}/vectorize/v2/indexes/${INDEX_NAME}/get_by_ids`,
       {
