@@ -189,6 +189,7 @@ jobs:
         run: |
           npm --prefix api ci
           python -m pip install -e mcp-server
+          python -c 'from mcp.server.fastmcp import FastMCP'
 
       - name: Apply semantic-readiness migration
         if: steps.changes.outputs.changed == 'true' || (github.event_name == 'workflow_dispatch' && inputs.initialize_semantic_search == true)
