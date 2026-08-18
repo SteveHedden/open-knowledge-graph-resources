@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>KG Jobs Prototype Review</title>
+<style>
+  :root {
+    --qualified: #1a7f37;
+    --review: #9a6700;
+    --not_match: #6e7781;
+    --bg: #ffffff;
+    --fg: #1f2328;
+    --border: #d0d7de;
+    --card-bg: #f6f8fa;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+         max-width: 960px; margin: 0 auto; padding: 24px; color: var(--fg); background: var(--bg); }
+  .banner { background: #fff8c5; border: 1px solid #d4a72c; border-radius: 6px;
+            padding: 10px 14px; font-weight: 600; margin-bottom: 20px; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .subtitle { color: #57606a; margin-bottom: 20px; }
+  .filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filters button { border: 1px solid var(--border); background: var(--card-bg); border-radius: 20px;
+                     padding: 6px 14px; cursor: pointer; font-size: 0.9rem; }
+  .filters button.active { background: var(--fg); color: white; border-color: var(--fg); }
+  .record { border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
+  .record-header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .record-title { font-weight: 600; }
+  .record-org { color: #57606a; font-size: 0.9rem; }
+  .badge { display: inline-block; border-radius: 20px; padding: 2px 10px; font-size: 0.78rem;
+           font-weight: 600; color: white; text-transform: uppercase; letter-spacing: 0.02em; }
+  .badge.qualified { background: var(--qualified); }
+  .badge.review { background: var(--review); }
+  .badge.not_match { background: var(--not_match); }
+  .evidence { margin-top: 10px; font-size: 0.88rem; }
+  .evidence-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px;
+                    padding: 6px 10px; margin-top: 6px; }
+  .evidence-item.negated { opacity: 0.55; text-decoration: line-through; }
+  .evidence-empty { color: #57606a; font-style: italic; font-size: 0.88rem; margin-top: 8px; }
+  .meta { color: #57606a; font-size: 0.85rem; margin-top: 4px; }
+  #status { color: #57606a; font-size: 0.85rem; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+  <div class="banner">Local synthetic prototype — not live jobs. All records below are invented test fixtures.</div>
+  <h1>KG Jobs Discovery Prototype</h1>
+  <div class="subtitle">Reviewer view of prototypes/kg-jobs/data/jobs.json — posting-first classification, not employer-first.</div>
+
+  <div class="filters">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="qualified">Qualified</button>
+    <button data-filter="review">Review</button>
+    <button data-filter="not_match">Not match</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="records"></div>
+
+<script>
+(function () {
+  const recordsEl = document.getElementById("records");
+  const statusEl = document.getElementById("status");
+  const buttons = Array.from(document.querySelectorAll(".filters button"));
+  let currentFilter = "all";
+  let allRecords = [];
+
+  function fieldLabel(field) {
+    return { title: "title", description: "description", qualifications: "qualifications",
+             responsibilities: "responsibilities" }[field] || field;
+  }
+
+  function render() {
+    const filtered = currentFilter === "all"
+      ? allRecords
+      : allRecords.filter((r) => r.classification === currentFilter);
+
+    recordsEl.innerHTML = filtered.map((r) => {
+      const positiveEvidence = (r.evidence || []).filter((e) => !e.negated);
+      const negatedEvidence = (r.evidence || []).filter((e) => e.negated);
+
+      const evidenceHtml = positiveEvidence.length
+        ? positiveEvidence.map((e) => `
+            <div class="evidence-item">
+              <strong>${e.concept_label}</strong> (${e.concept_scheme} · ${e.strength})
+              — matched "${e.matched_phrase}" in <em>${fieldLabel(e.source_field)}</em>
+            </div>`).join("")
+        : `<div class="evidence-empty">No positive evidence.</div>`;
+
+      const negatedHtml = negatedEvidence.length
+        ? negatedEvidence.map((e) => `
+            <div class="evidence-item negated">
+              <strong>${e.concept_label}</strong> — matched "${e.matched_phrase}" in
+              <em>${fieldLabel(e.source_field)}</em> but negated in context (excluded)
+            </div>`).join("")
+        : "";
+
+      return `
+        <div class="record">
+          <div class="record-header">
+            <div>
+              <div class="record-title">${r.title}</div>
+              <div class="record-org">${r.hiringOrganization}${r.location ? " · " + r.location : ""}</div>
+            </div>
+            <span class="badge ${r.classification}">${r.classification.replace("_", " ")}</span>
+          </div>
+          <div class="meta">${r.id} · ${r.test_url}</div>
+          <div class="evidence">${evidenceHtml}${negatedHtml}</div>
+        </div>`;
+    }).join("");
+
+    statusEl.textContent = `${filtered.length} of ${allRecords.length} records shown`;
+  }
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      render();
+    });
+  });
+
+  fetch("../data/jobs.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then((data) => {
+      allRecords = data;
+      render();
+    })
+    .catch((err) => {
+      statusEl.textContent = "Could not load ../data/jobs.json: " + err.message +
+        " — run scripts/generate.py first, then serve this directory with a local HTTP server.";
+    });
+})();
+</script>
+</body>
+</html>

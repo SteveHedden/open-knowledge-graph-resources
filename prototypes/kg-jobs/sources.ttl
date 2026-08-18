@@ -1,0 +1,53 @@
+@prefix kgjs:    <https://openknowledgegraphs.com/prototypes/kg-jobs/source/> .
+@prefix kgjobs:  <https://openknowledgegraphs.com/prototypes/kg-jobs/ontology#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# KG Jobs prototype source registry
+#
+# Describes the ONE synthetic fixture dataset this prototype reads.
+# Establishes the future source-registry pattern (DCAT dataset +
+# PROV-O provenance) without pretending the fixtures are a real
+# external source: they are hand-authored test data, retrieved from
+# a local file, never fetched over the network.
+#################################################################
+
+kgjs:synthetic-fixtures a dcat:Dataset ;
+    dcterms:title "KG Jobs Synthetic Fixture Corpus"@en ;
+    dcterms:description "20 invented job-posting records used only to exercise and test the kg-jobs prototype classifier. Not live vacancies, not scraped, not sourced from any employer or job board."@en ;
+    dcterms:type "synthetic-test-data"@en ;
+    dcterms:identifier "kg-jobs-fixtures-v1" ;
+    dcterms:created "2026-08-17"^^xsd:date ;
+    dcterms:creator [ a foaf:Agent ; foaf:name "OKG kg-jobs prototype" ] ;
+    dcat:distribution kgjs:synthetic-fixtures-distribution ;
+    kgjobs:retrievalMode "local-file" ;
+    kgjobs:networkFree true .
+
+kgjs:synthetic-fixtures-distribution a dcat:Distribution ;
+    dcterms:title "Fixture JSON file"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/prototypes/kg-jobs/fixtures/jobs.json> ;
+    dcat:mediaType "application/json" ;
+    dcterms:conformsTo kgjs:fixture-schema .
+
+kgjs:fixture-schema a dcterms:Standard ;
+    dcterms:title "KG Jobs fixture record schema"@en ;
+    dcterms:description "Each fixture record has: id (string, stable fixture identifier), test_url (string, a test:// scheme canonical URL -- never a real URL), title, hiringOrganization, location (nullable), datePosted (nullable, ISO date), description, qualifications (nullable), responsibilities (nullable), expected_classification (one of qualified, review, not_match), and expected_concepts (array of kg-jobs.ttl concept local names, e.g. skill-rdf)."@en .
+
+kgjs:generated-data a dcat:Dataset ;
+    dcterms:title "KG Jobs Generated RDF and JSON Projection"@en ;
+    dcterms:description "The classifier's deterministic output: schema:JobPosting instances with kgjobs:classification and kgjobs:hasEvidence, generated from the synthetic fixture corpus. Regenerating against unchanged fixtures and vocabulary must produce semantically identical RDF and byte-identical JSON."@en ;
+    prov:wasGeneratedBy kgjs:generation-activity ;
+    prov:wasDerivedFrom kgjs:synthetic-fixtures ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcterms:title "Generated RDF"@en ; dcat:downloadURL <https://openknowledgegraphs.com/prototypes/kg-jobs/data/jobs.ttl> ; dcat:mediaType "text/turtle" ] ,
+        [ a dcat:Distribution ; dcterms:title "Generated JSON projection"@en ; dcat:downloadURL <https://openknowledgegraphs.com/prototypes/kg-jobs/data/jobs.json> ; dcat:mediaType "application/json" ] .
+
+kgjs:generation-activity a prov:Activity ;
+    dcterms:title "kg-jobs classification run"@en ;
+    prov:used kgjs:synthetic-fixtures ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab> ;
+    dcterms:description "Deterministic, network-free run of scripts/generate.py: loads match terms and strengths from vocabularies/kg-jobs.ttl, classifies each fixture, and writes data/jobs.ttl and data/jobs.json."@en .
