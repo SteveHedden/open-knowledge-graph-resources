@@ -157,6 +157,11 @@ kgjobs:networkFree a rdf:Property ;
     rdfs:comment "True if this dataset requires no network access to read."@en ;
     rdfs:range xsd:boolean .
 
+kgjobs:maxPostingAgeDays a rdf:Property ;
+    rdfs:label "maximum posting age in days"@en ;
+    rdfs:comment "Optional per-source freshness cutoff. Postings older than this many days, per the source's own age signal (not this prototype's own retrievedAt/firstSeenAt bookkeeping), are dropped before classification. Added for Jooble: its API returns postings up to hundreds of days old with no reliable open/closed field, and its own 'updated' field does not track true posting age (verified: a posting with updated within the last 8 days carried a 206-day true age in its own tracking-link metadata)."@en ;
+    rdfs:range xsd:integer .
+
 #################################################################
 # Properties for explicit, local-only live ingestion
 #################################################################

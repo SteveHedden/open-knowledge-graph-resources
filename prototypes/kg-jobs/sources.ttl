@@ -294,6 +294,7 @@ kgjs:jooble a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:maxRecordsPerRun 240 ;
     kgjobs:maxRequestsPerRun 8 ;
+    kgjobs:maxPostingAgeDays 45 ;
     kgjobs:attributionText "Jooble" ;
     kgjobs:attributionURL <https://jooble.org/> ;
     kgjobs:termsURL <https://jooble.org/api/about> .
