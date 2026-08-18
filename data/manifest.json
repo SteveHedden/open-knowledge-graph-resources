@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260817T230120Z-d3b9df7ca1af",
-  "startedAt": "2026-08-17T22:58:01Z",
-  "sourceRetrievedAt": "2026-08-17T23:00:36Z",
-  "completedAt": "2026-08-17T23:01:20Z",
+  "generationId": "20260818T014621Z-b796d62fd904",
+  "startedAt": "2026-08-18T01:40:57Z",
+  "sourceRetrievedAt": "2026-08-18T01:45:33Z",
+  "completedAt": "2026-08-18T01:46:21Z",
   "counts": {
     "records": {
       "resources": 2999,
@@ -38,7 +38,7 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "06d0e11b0723aa1e7043dd1994bb18848e59bae3b79eb30ad24d759dbe112efa"
+      "sha256": "690882c1c75d6f1660d1fb4a0a3221d5f6d09f4b66d80556a52b13a7f4bf4bcf"
     },
     {
       "path": "data/ontologies.ttl",
@@ -50,7 +50,7 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "683fcadfc82f8ed755a9b7985615720347e1079574321567a3e6e04e5cbedd49"
+      "sha256": "f6688c721e98c9a2be160903cc44c50decdf818897ff2073d61a32f4fa908bd6"
     },
     {
       "path": "data/software.ttl",
