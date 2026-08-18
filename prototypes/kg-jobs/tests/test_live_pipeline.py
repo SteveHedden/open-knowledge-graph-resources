@@ -177,7 +177,7 @@ def test_default_himalayas_pipeline_runs_four_query_families_and_deduplicates(tm
     }
     assert len(list(graph.triples((None, schema.validThrough, None)))) == 2
     assert len(list(graph.triples((None, schema.experienceRequirements, None)))) == 2
-    assert not list(graph.triples((None, schema.jobLocation, None)))
+    assert len(list(graph.triples((None, schema.jobLocation, None)))) == 2
     applicant_areas = list(
         graph.objects(None, schema.applicantLocationRequirements)
     )

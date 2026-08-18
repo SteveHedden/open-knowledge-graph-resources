@@ -175,7 +175,7 @@ h1 {
 
 .tabs {
   display: inline-grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border: 1px solid var(--line-soft);
   border-radius: 999px;
   background: #eff2f6;
@@ -444,6 +444,14 @@ a:hover {
   .cards {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  /* Jobs has no mobile card layout in this first pass, so its table stays
+     visible (horizontally scrollable via .table-shell) instead of the panel
+     going blank the way it would if it inherited the table-hiding rule
+     above meant for tabs that do have a card fallback. */
+  [data-panel="jobs"] .table-shell {
+    display: block;
   }
 }
 

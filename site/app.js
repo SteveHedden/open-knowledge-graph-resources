@@ -4,6 +4,7 @@
   const DATA_PATHS = {
     ontologies: ["./data/ontologies.json", "../data/ontologies.json"],
     software: ["./data/software.json", "../data/software.json"],
+    jobs: ["./data/jobs/jobs.json", "../data/jobs/jobs.json"],
   };
 
   const DEFAULT_STATE = {
@@ -57,34 +58,47 @@
   const TAB_DEFAULT_SORT = {
     ontologies: { sort: "documentationScore", order: "desc" },
     software: { sort: "releaseDate", order: "desc" },
+    jobs: { sort: "datePosted", order: "desc" },
   };
 
   const SORT_FIELDS = {
     ontologies: new Set(["title", "types", "licenses", "partOf", "documentationScore"]),
     software: new Set(["title", "licenses", "latestVersion", "releaseDate"]),
+    jobs: new Set(["title", "employer", "location", "remote", "datePosted", "salary"]),
   };
 
   const TABLE_BODY_IDS = {
     ontologies: "ontologies-table-body",
     software: "software-table-body",
+    jobs: "jobs-table-body",
+  };
+
+  const COLUMN_COUNTS = {
+    ontologies: 6,
+    software: 6,
+    jobs: 7,
   };
 
   const CARD_CONTAINER_IDS = {
     ontologies: "ontologies-cards",
     software: "software-cards",
+    // Jobs deliberately has no mobile card layout in this first pass --
+    // renderCards() no-ops when it can't find a container for the tab.
   };
 
   const PANEL_IDS = {
     ontologies: "panel-ontologies",
     software: "panel-software",
+    jobs: "panel-jobs",
   };
 
   const TAB_IDS = {
     ontologies: "tab-ontologies",
     software: "tab-software",
+    jobs: "tab-jobs",
   };
 
-  const TAB_ORDER = ["ontologies", "software"];
+  const TAB_ORDER = ["ontologies", "software", "jobs"];
   const SEARCH_DEBOUNCE_MS = 180;
   const MAX_TRACKED_QUERY_LENGTH = 64;
 
@@ -110,9 +124,11 @@
   const store = {
     ontologies: [],
     software: [],
+    jobs: [],
     generatedAt: {
       ontologies: null,
       software: null,
+      jobs: null,
     },
     pageSlugs: { resource: {}, software: {} },
   };
@@ -203,7 +219,7 @@
   }
 
   function isValidTab(tab) {
-    return tab === "ontologies" || tab === "software";
+    return tab === "ontologies" || tab === "software" || tab === "jobs";
   }
 
   function isValidOrder(order) {
@@ -337,6 +353,78 @@
     return safeItem;
   }
 
+  // remote is true / false / undefined and each means something different --
+  // Himalayas/Jobicy/Remotive are remote-only boards (always true), Arbeitnow
+  // reports a real remote/on-site flag, and Jooble only ever sets remote:true
+  // when its location field literally says "Remote" and otherwise leaves it
+  // unset. Never collapse false and undefined into one label.
+  function jobRemoteLabel(item) {
+    if (item.remote === true) return "Remote available";
+    if (item.remote === false) return "On-site";
+    return "Not reported";
+  }
+
+  // true (Remote available) sorts before false (On-site), which sorts before
+  // undefined (not reported) -- an explicit "no" is still more informative
+  // than no answer at all.
+  function jobRemoteRank(item) {
+    if (item.remote === true) return 0;
+    if (item.remote === false) return 1;
+    return 2;
+  }
+
+  // Normalizes a structured baseSalary to an annual-equivalent midpoint so
+  // postings quoted on different cadences (annual vs monthly, etc.) rank
+  // sensibly against each other. Does not attempt currency conversion --
+  // every source observed so far reports USD only; a mixed-currency ranking
+  // would need live FX rates, which is out of scope here.
+  const SALARY_ANNUALIZE_MULTIPLIER = {
+    annual: 1,
+    yearly: 1,
+    monthly: 12,
+    weekly: 52,
+    daily: 260,
+    hourly: 2080,
+  };
+
+  function jobSalaryRank(item) {
+    const baseSalary = item.baseSalary;
+    if (!baseSalary || typeof baseSalary !== "object") {
+      return null;
+    }
+    const min = Number(baseSalary.minValue);
+    const max = Number(baseSalary.maxValue);
+    const values = [min, max].filter((value) => Number.isFinite(value));
+    if (!values.length) {
+      return null;
+    }
+    const midpoint = values.reduce((sum, value) => sum + value, 0) / values.length;
+    const unit = typeof baseSalary.unitText === "string" ? baseSalary.unitText.toLowerCase() : "";
+    const multiplier = SALARY_ANNUALIZE_MULTIPLIER[unit] ?? 1;
+    return midpoint * multiplier;
+  }
+
+  function normalizeJobItem(record) {
+    const safeItem = { ...record };
+    safeItem._searchText = buildJobSearchText(safeItem);
+    return safeItem;
+  }
+
+  function buildJobSearchText(item) {
+    const parts = [
+      item.title,
+      item.description,
+      item.hiringOrganization,
+      item.location,
+      item.sourceName,
+      item.salary,
+    ];
+    return parts
+      .filter((value) => typeof value === "string" && value.trim())
+      .join(" ")
+      .toLowerCase();
+  }
+
   function getDetailPageUrl(item, tab) {
     const dataset = tab === "software" ? "software" : "resource";
     const qid = (item.wikidataId || "").split("/").pop();
@@ -420,8 +508,8 @@
 
   function setFooterTimestamp() {
     const newest = chooseNewestDate(
-      store.generatedAt.ontologies,
-      store.generatedAt.software
+      chooseNewestDate(store.generatedAt.ontologies, store.generatedAt.software),
+      store.generatedAt.jobs
     );
     if (!newest) {
       dom.lastUpdated.textContent = "Not available";
@@ -443,6 +531,16 @@
     if (key === "licenses") {
       return Array.isArray(item.licenses) && item.licenses.length ? item.licenses.join(", ") : "";
     }
+    if (key === "employer") {
+      return item.hiringOrganization || "";
+    }
+    if (key === "remote") {
+      return jobRemoteRank(item);
+    }
+    if (key === "salary") {
+      const rank = jobSalaryRank(item);
+      return rank === null ? "" : rank;
+    }
     return item[key] || "";
   }
 
@@ -454,10 +552,10 @@
   }
 
   function compareValues(aValue, bValue, key) {
-    if (key === "documentationScore") {
+    if (key === "documentationScore" || key === "remote" || key === "salary") {
       return Number(aValue) - Number(bValue);
     }
-    if (key === "releaseDate") {
+    if (key === "releaseDate" || key === "datePosted") {
       const aTime = Date.parse(String(aValue));
       const bTime = Date.parse(String(bValue));
       return aTime - bTime;
@@ -765,6 +863,56 @@
     return row;
   }
 
+  function renderJobRow(item) {
+    const row = document.createElement("tr");
+
+    const titleCell = document.createElement("td");
+    titleCell.textContent = item.title;
+    row.appendChild(titleCell);
+
+    const employerCell = document.createElement("td");
+    employerCell.textContent = item.hiringOrganization || "—";
+    row.appendChild(employerCell);
+
+    const locationCell = document.createElement("td");
+    locationCell.textContent = item.location || "—";
+    row.appendChild(locationCell);
+
+    const remoteCell = document.createElement("td");
+    remoteCell.textContent = jobRemoteLabel(item);
+    row.appendChild(remoteCell);
+
+    const postedCell = document.createElement("td");
+    postedCell.textContent = item.datePosted ? formatDate(item.datePosted) : "—";
+    row.appendChild(postedCell);
+
+    const salaryCell = document.createElement("td");
+    salaryCell.textContent = item.salary || "—";
+    row.appendChild(salaryCell);
+
+    const linksCell = document.createElement("td");
+    linksCell.className = "link-cell";
+    // canonicalUrl is always validated against the source's own allowed
+    // host (see canonicalize_url / sources.ttl kgjobs:allowedHost), so this
+    // single link already lands the reader on the source's own site -- a
+    // separate, second attribution link is redundant and was dropped per
+    // feedback.
+    if (item.canonicalUrl) {
+      linksCell.appendChild(
+        createLink(item.canonicalUrl, "View posting", {
+          linkType: "job_posting",
+          resourceTitle: item.title,
+          tab: "jobs",
+        })
+      );
+    } else {
+      linksCell.textContent = "—";
+    }
+    row.appendChild(linksCell);
+
+    return row;
+  }
+
   function appendCardMetaLine(card, label, value) {
     if (!value) {
       return;
@@ -921,17 +1069,24 @@
       const noResultsMessage =
         state.q || hasActiveCategoryFilter()
           ? "No matching resources for the current filters."
+          : state.tab === "jobs"
+          ? "No KG job postings are available right now."
           : "No resources available.";
       tableBody.appendChild(
         renderNoResultsTableRow(
-          6,
+          COLUMN_COUNTS[state.tab] || 6,
           noResultsMessage
         )
       );
       return;
     }
 
-    const rowRenderer = state.tab === "ontologies" ? renderOntologyRow : renderSoftwareRow;
+    const rowRenderer =
+      state.tab === "ontologies"
+        ? renderOntologyRow
+        : state.tab === "jobs"
+        ? renderJobRow
+        : renderSoftwareRow;
     items.forEach((item) => {
       tableBody.appendChild(rowRenderer(item));
     });
@@ -965,7 +1120,12 @@
   }
 
   function updateResultsMeta(shownCount, totalCount) {
-    const label = state.tab === "ontologies" ? "resources" : "software entries";
+    const label =
+      state.tab === "ontologies"
+        ? "resources"
+        : state.tab === "jobs"
+        ? "job postings"
+        : "software entries";
     const shownText = shownCount.toLocaleString();
     const totalText = totalCount.toLocaleString();
     const queryText = state.q ? ` for "${state.q}"` : "";
@@ -1073,13 +1233,15 @@
     dom.resultsMeta.textContent = message;
     dom.lastUpdated.textContent = "Not available";
 
-    ["ontologies", "software"].forEach((tabName) => {
+    ["ontologies", "software", "jobs"].forEach((tabName) => {
       const tableBody = document.getElementById(TABLE_BODY_IDS[tabName]);
       const cardContainer = document.getElementById(CARD_CONTAINER_IDS[tabName]);
 
       if (tableBody) {
         clearChildren(tableBody);
-        tableBody.appendChild(renderNoResultsTableRow(6, "Unable to load data."));
+        tableBody.appendChild(
+          renderNoResultsTableRow(COLUMN_COUNTS[tabName] || 6, "Unable to load data.")
+        );
       }
       if (cardContainer) {
         clearChildren(cardContainer);
@@ -1326,6 +1488,30 @@
 
       store.generatedAt.ontologies = parseGeneratedAt(ontologyPayload.generatedAt);
       store.generatedAt.software = parseGeneratedAt(softwarePayload.generatedAt);
+
+      // Jobs is fetched separately and non-blocking: the scheduled kg-jobs
+      // workflow (Task 31) may not have published data/jobs/jobs.json yet
+      // (e.g. right after this tab first ships), and a missing/unreachable
+      // jobs snapshot must never break the Ontologies/Software tabs.
+      try {
+        const jobsResult = await fetchJsonWithFallback(DATA_PATHS.jobs);
+        const jobsPayload = jobsResult.payload;
+        const jobRecords = Array.isArray(jobsPayload) ? jobsPayload : [];
+        store.jobs = jobRecords
+          .filter((record) => record.classification === "qualified" || record.classification === "review")
+          .map(normalizeJobItem);
+        const retrievalTimes = jobRecords
+          .map((record) => parseGeneratedAt(record.retrievedAt))
+          .filter(Boolean);
+        store.generatedAt.jobs = retrievalTimes.length
+          ? new Date(Math.max(...retrievalTimes.map((date) => date.getTime())))
+          : null;
+      } catch (error) {
+        console.warn("KG jobs snapshot not available yet", error);
+        store.jobs = [];
+        store.generatedAt.jobs = null;
+      }
+
       setFooterTimestamp();
 
       // Load QID-to-slug mapping for detail page links (non-blocking)
