@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260818T211459Z-ddc8658eb777",
+  "generationId": "20260818T211459Z-d63a60b27bee",
   "startedAt": "2026-08-18T21:08:32Z",
   "sourceRetrievedAt": "2026-08-18T21:14:14Z",
   "completedAt": "2026-08-18T21:14:59Z",
@@ -35,34 +35,6 @@
     {
       "path": "data/controlled_vocabularies.json",
       "sha256": "ef9e01d7f1309e4dc0b17915860762db30ca3f5a735783056a6fc1b95ceea70f"
-    },
-    {
-      "path": "data/jobs/jobs.json",
-      "sha256": "8ef2b763c0138fe9b549d0497e6d733ebc1e772ace237d6e7efcfb42354dc600"
-    },
-    {
-      "path": "data/jobs/jobs.ttl",
-      "sha256": "6e1576ea2f012294f5abbb47ae05ae6d0bfaf36a374e34bd8c9121c1afc63471"
-    },
-    {
-      "path": "data/jobs/raw/arbeitnow.json",
-      "sha256": "37601a0f27999d339dcefc8891adde6d99d8d0ecdcef733e1258f5e481346f76"
-    },
-    {
-      "path": "data/jobs/raw/himalayas.json",
-      "sha256": "2e2bbca365933670842803c26923492a472260fef3196da224816909fc798098"
-    },
-    {
-      "path": "data/jobs/raw/jobicy.json",
-      "sha256": "bb640231fe09215de4997abb71ba1a2ede5d54486fdd04f25cabe264fe1f1487"
-    },
-    {
-      "path": "data/jobs/raw/jooble.json",
-      "sha256": "6fcf6c4dd1c9c3abacef2852d6e9d0a53342cbbcd1a855a9a787518e4eaa4da4"
-    },
-    {
-      "path": "data/jobs/run.json",
-      "sha256": "de0670d757966334d7449c9e52002f86560ea2548abd23b90653bcfaa019ce01"
     },
     {
       "path": "data/ontologies.json",
