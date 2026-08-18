@@ -144,7 +144,7 @@ class PromotionSafetyTests(unittest.TestCase):
 class JobsManifestIsolationTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
-        self.root = Path(self.temporary.name)
+        self.root = Path(self.temporary.name) / "root"
         make_catalog(self.root)
         write(self.root / "data/jobs/jobs.json", '{"items": []}\n')
         write(self.root / "data/jobs/jobs.ttl", "@prefix ex: <https://example.test/> . ex:job ex:name \"Job\" .\n")
@@ -207,6 +207,13 @@ class JobsManifestIsolationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as destination:
             with self.assertRaises(catalog_snapshot.SnapshotError):
                 catalog_snapshot.build_pages_artifact(self.root, Path(destination) / "out")
+
+    def test_substantive_changes_ignores_jobs_files(self):
+        finalize(self.root)
+        candidate = self.root.parent / "candidate"
+        shutil.copytree(self.root, candidate)
+        write(candidate / "data/jobs/jobs.ttl", "@prefix ex: <https://example.test/> . ex:job ex:name \"Changed\" .\n")
+        self.assertEqual(catalog_snapshot.substantive_changes(candidate, self.root), [])
 
     def test_build_pages_includes_jobs_files_once_both_manifests_are_valid(self):
         finalize(self.root)

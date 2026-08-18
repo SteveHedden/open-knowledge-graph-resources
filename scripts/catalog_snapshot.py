@@ -669,8 +669,14 @@ def normalized_artifact_fingerprint(root: Path, relative: str) -> str:
 def substantive_changes(candidate: Path, baseline: Path) -> list[str]:
     if not (baseline / MANIFEST_PATH).is_file():
         return [MANIFEST_PATH]
-    candidate_files = set(deployed_files(candidate, include_manifest=False))
-    baseline_files = set(deployed_files(baseline, include_manifest=False))
+    # data/jobs/ has its own independent manifest/refresh cadence (see
+    # CORE_MANIFEST_EXCLUDED_PREFIX) and is never regenerated as part of a
+    # catalog generation, so it is excluded here too -- diffing it pulls in
+    # normalized_artifact_fingerprint's RDF isomorphism check on jobs.ttl,
+    # which is pathologically slow (verified: hung 24+ minutes live, and
+    # locally, on a graph with 937 blank nodes from ~450 job postings).
+    candidate_files = set(core_deployed_files(candidate))
+    baseline_files = set(core_deployed_files(baseline))
     changed = sorted(candidate_files ^ baseline_files)
     for relative in sorted(candidate_files & baseline_files):
         if normalized_artifact_fingerprint(candidate, relative) != normalized_artifact_fingerprint(
