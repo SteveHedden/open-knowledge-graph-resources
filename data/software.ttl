@@ -822,9 +822,9 @@
     okg:description "HeFQUIN is a query federation engine for heterogeneous federations of graph data sources, including federations of knowledge graphs." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://liusemweb.github.io/HeFQUIN/> ;
-    okg:latestVersion "0.0.2" ;
+    okg:latestVersion "0.0.12" ;
     okg:programmingLanguage "Java" ;
-    okg:releaseDate "2023-12-28"^^xsd:date ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/LiUSemWeb/HeFQUIN> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
