@@ -93,7 +93,7 @@ def test_himalayas_normalizes_official_search_results_with_attribution():
     assert first["sourceName"] == "Himalayas"
     assert first["sourceAttributionUrl"] == "https://himalayas.app/"
     assert first["discoveredBy"] == ["ontology"]
-    assert "location" not in first
+    assert first["location"] == "Americas, Europe"
     assert first["applicantLocationRequirements"] == ["Americas", "Europe"]
     assert first["datePosted"] == "2026-08-17"
     assert first["validThrough"] == "2026-09-16"

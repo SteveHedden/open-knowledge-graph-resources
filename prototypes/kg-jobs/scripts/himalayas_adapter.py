@@ -124,6 +124,11 @@ def normalize_himalayas_job(
     locations = _strings(item.get("locationRestrictions"))
     if locations:
         record["applicantLocationRequirements"] = locations
+        # Himalayas has no separate city/place field -- locationRestrictions
+        # (eligible remote regions, e.g. "United States") is the only
+        # location-ish data it provides, so it also doubles as the display
+        # location rather than leaving the UI's Location column empty.
+        record["location"] = ", ".join(locations)
     date_posted = _unix_date(item.get("pubDate"))
     if date_posted:
         record["datePosted"] = date_posted
