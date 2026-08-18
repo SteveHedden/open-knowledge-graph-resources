@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "taskId": 27,
+  "mode": "live",
+  "recordedAt": "2026-08-16T01:30:39Z",
+  "executionDate": "2026-08-16",
+  "status": "published-verified",
+  "publicWritesPerformed": true,
+  "duplicateGate": {
+    "decision": "passed",
+    "checkedAt": "2026-08-16T01:30:39Z",
+    "existingQid": null,
+    "checks": [
+      {
+        "kind": "exact-name",
+        "query": "Intentional Arrangement SKOS Editor",
+        "searchUrl": "https://www.wikidata.org/w/index.php?search=Intentional%20Arrangement%20SKOS%20Editor&title=Special%3ASearch&ns0=1",
+        "resultCount": 0
+      },
+      {
+        "kind": "short-name",
+        "query": "Intentional Arrangement SKOS",
+        "searchUrl": "https://www.wikidata.org/w/index.php?search=Intentional%20Arrangement%20SKOS&title=Special%3ASearch&ns0=1",
+        "resultCount": 0
+      },
+      {
+        "kind": "official-website",
+        "query": "\"https://jesstalisman-ia.github.io/intentional-arrangement-skos/\"",
+        "searchUrl": "https://www.wikidata.org/w/index.php?search=%22https%3A%2F%2Fjesstalisman-ia.github.io%2Fintentional-arrangement-skos%2F%22&title=Special%3ASearch&ns0=1",
+        "resultCount": 0
+      },
+      {
+        "kind": "source-repository",
+        "query": "\"https://github.com/jesstalisman-ia/intentional-arrangement-skos\"",
+        "searchUrl": "https://www.wikidata.org/w/index.php?search=%22https%3A%2F%2Fgithub.com%2Fjesstalisman-ia%2Fintentional-arrangement-skos%22&title=Special%3ASearch&ns0=1",
+        "resultCount": 0
+      }
+    ]
+  },
+  "notabilityGate": {
+    "decision": "passed-comparable-evidence",
+    "directIndependentProductCoverageFound": false,
+    "reviewerDecision": "The user explicitly confirmed that Jessica Talisman's well-known standing in the field satisfies Task 27's comparable-evidence route.",
+    "rationale": "Independent sources recognize Jessica Talisman as a prominent graph-technology and ontology practitioner, an expert on the W3C SKOS standard, and an invited presenter on thesauri and shared vocabularies. This is comparable evidence based on the creator's independently documented standing and subject-matter work; it is not represented as independent coverage of this specific software product. Project-controlled sources were excluded from this gate.",
+    "evidence": [
+      {
+        "url": "https://gdotv.com/blog/weekly-edge-graphframes-kuzu-neo4j-hydra-8-august-2025/",
+        "publisher": "gdotv",
+        "finding": "Independent graph-technology coverage characterizes Talisman as a prominent figure in graph technology and ontology and discusses her SKOS-focused Knowledge Graph Lite work."
+      },
+      {
+        "url": "https://www.knowledge-graph-guys.com/academy",
+        "publisher": "The Knowledge Graph Guys",
+        "finding": "The academy identifies Talisman as a senior knowledge-graph consultant and an expert on the W3C SKOS standard with more than 25 years of relevant experience."
+      },
+      {
+        "url": "https://senzing.com/library-science-ai-systems-thesaurus/",
+        "publisher": "Senzing",
+        "finding": "Senzing features Talisman as an invited Graph Power Hour guest guiding an industry audience through thesauri and shared vocabularies for knowledge graphs and AI."
+      }
+    ]
+  },
+  "versionGate": {
+    "decision": "passed-use-v0.3.0",
+    "repositoryDescription": "Intentional Arrangement SKOS Concept Graph Editor Version 1.0",
+    "authoritativeReleaseUrl": "https://github.com/jesstalisman-ia/intentional-arrangement-skos/releases/tag/v0.3.0",
+    "releasePublishedAt": "2026-08-15T16:47:43Z",
+    "rationale": "The official v0.3.0 release is real, is marked Latest rather than prerelease, calls itself the first tagged release, and explicitly describes the tool as Pre-1.0 but stable and in daily use. That release-specific evidence controls over the conflicting repository description, so 0.3.0 is the supported Wikidata version and 1.0 is omitted."
+  },
+  "references": {
+    "readme": {
+      "snaks": [
+        {
+          "property": "P854",
+          "datatype": "url",
+          "value": "https://github.com/jesstalisman-ia/intentional-arrangement-skos/blob/main/README.md"
+        },
+        {
+          "property": "P813",
+          "datatype": "time",
+          "value": "+2026-08-16T00:00:00Z",
+          "precision": 11
+        }
+      ]
+    },
+    "official-repository": {
+      "snaks": [
+        {
+          "property": "P854",
+          "datatype": "url",
+          "value": "https://github.com/jesstalisman-ia/intentional-arrangement-skos"
+        },
+        {
+          "property": "P813",
+          "datatype": "time",
+          "value": "+2026-08-16T00:00:00Z",
+          "precision": 11
+        }
+      ]
+    },
+    "license": {
+      "snaks": [
+        {
+          "property": "P854",
+          "datatype": "url",
+          "value": "https://github.com/jesstalisman-ia/intentional-arrangement-skos/blob/main/LICENSE"
+        },
+        {
+          "property": "P813",
+          "datatype": "time",
+          "value": "+2026-08-16T00:00:00Z",
+          "precision": 11
+        }
+      ]
+    },
+    "javascript-source": {
+      "snaks": [
+        {
+          "property": "P854",
+          "datatype": "url",
+          "value": "https://github.com/jesstalisman-ia/intentional-arrangement-skos/blob/main/app/index.html"
+        },
+        {
+          "property": "P813",
+          "datatype": "time",
+          "value": "+2026-08-16T00:00:00Z",
+          "precision": 11
+        }
+      ]
+    },
+    "repository-metadata": {
+      "snaks": [
+        {
+          "property": "P854",
+          "datatype": "url",
+          "value": "https://api.github.com/repos/jesstalisman-ia/intentional-arrangement-skos"
+        },
+        {
+          "property": "P813",
+          "datatype": "time",
+          "value": "+2026-08-16T00:00:00Z",
+          "precision": 11
+        }
+      ]
+    },
+    "v0.3.0-release": {
+      "snaks": [
+        {
+          "property": "P854",
+          "datatype": "url",
+          "value": "https://github.com/jesstalisman-ia/intentional-arrangement-skos/releases/tag/v0.3.0"
+        },
+        {
+          "property": "P1476",
+          "datatype": "monolingualtext",
+          "value": "v0.3.0 — Glossary, SKOS-XL build mode, per-section colors",
+          "language": "en"
+        },
+        {
+          "property": "P813",
+          "datatype": "time",
+          "value": "+2026-08-16T00:00:00Z",
+          "precision": 11
+        }
+      ]
+    }
+  },
+  "proposedEntity": {
+    "labels": {
+      "en": "Intentional Arrangement SKOS Editor"
+    },
+    "descriptions": {
+      "en": "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies"
+    },
+    "aliases": {
+      "en": [
+        "Intentional Arrangement SKOS"
+      ]
+    },
+    "statements": [
+      {
+        "property": "P31",
+        "propertyLabel": "instance of",
+        "datatype": "wikibase-item",
+        "value": "Q124653107",
+        "valueLabel": "semantic web software",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "readme"
+      },
+      {
+        "property": "P4428",
+        "propertyLabel": "implementation of",
+        "datatype": "wikibase-item",
+        "value": "Q2288360",
+        "valueLabel": "SKOS",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "readme"
+      },
+      {
+        "property": "P856",
+        "propertyLabel": "official website",
+        "datatype": "url",
+        "value": "https://jesstalisman-ia.github.io/intentional-arrangement-skos/",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "readme"
+      },
+      {
+        "property": "P1324",
+        "propertyLabel": "source code repository URL",
+        "datatype": "url",
+        "value": "https://github.com/jesstalisman-ia/intentional-arrangement-skos",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "official-repository"
+      },
+      {
+        "property": "P275",
+        "propertyLabel": "copyright license",
+        "datatype": "wikibase-item",
+        "value": "Q36795408",
+        "valueLabel": "Creative Commons Attribution-NoDerivatives 4.0 International",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "license"
+      },
+      {
+        "property": "P277",
+        "propertyLabel": "programmed in",
+        "datatype": "wikibase-item",
+        "value": "Q2005",
+        "valueLabel": "JavaScript",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "javascript-source"
+      },
+      {
+        "property": "P277",
+        "propertyLabel": "programmed in",
+        "datatype": "wikibase-item",
+        "value": "Q28865",
+        "valueLabel": "Python",
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "readme"
+      },
+      {
+        "property": "P571",
+        "propertyLabel": "inception",
+        "datatype": "time",
+        "value": "+2026-00-00T00:00:00Z",
+        "precision": 9,
+        "rank": "normal",
+        "qualifiers": [],
+        "reference": "repository-metadata"
+      },
+      {
+        "property": "P348",
+        "propertyLabel": "software version identifier",
+        "datatype": "string",
+        "value": "0.3.0",
+        "rank": "preferred",
+        "qualifiers": [
+          {
+            "property": "P577",
+            "propertyLabel": "publication date",
+            "datatype": "time",
+            "value": "+2026-08-15T00:00:00Z",
+            "precision": 11
+          },
+          {
+            "property": "P548",
+            "propertyLabel": "version type",
+            "datatype": "wikibase-item",
+            "value": "Q2804309",
+            "valueLabel": "stable version"
+          }
+        ],
+        "reference": "v0.3.0-release"
+      }
+    ]
+  },
+  "omittedStatements": [
+    {
+      "property": "P178",
+      "reason": "No authoritative project source explicitly identifies a developer; repository ownership and the copyright line are insufficient."
+    },
+    {
+      "concept": "open-source software or free software classification",
+      "reason": "CC BY-ND 4.0 prohibits redistribution of derivatives."
+    },
+    {
+      "concept": "version 1.0",
+      "reason": "The authoritative first tagged release is v0.3.0 and explicitly Pre-1.0."
+    },
+    {
+      "concept": "exact inception date and popularity metrics",
+      "reason": "Task 27 permits only year-precision inception and forbids popularity metrics."
+    }
+  ],
+  "editPlan": {
+    "apiAction": "wbeditentity",
+    "atomic": true,
+    "summary": "Create Intentional Arrangement SKOS Editor with sourced software metadata for OKG (Task 27)"
+  },
+  "approval": {
+    "status": "approved",
+    "payloadSha256": "c27ce5ac862de0c0a0edd0d893793af8189574bdac37f6c786df61b9e1305078",
+    "approvedAt": "2026-08-16T01:37:17Z",
+    "approvedBy": "project owner via Codex conversation"
+  },
+  "execution": {
+    "qid": "Q141099623",
+    "revisionId": 2531821078,
+    "executedAt": "2026-08-16T01:38:48Z",
+    "duplicateChecksRepeated": true,
+    "duplicateMatchCount": 0,
+    "readbackVerified": true
+  },
+  "catalogRefresh": {
+    "generationId": "20260816T020959Z-61fc84834572",
+    "sourceRetrievedAt": "2026-08-16T02:09:12Z",
+    "publishedCommit": "5822db3cafc24505593ca1465e3679ca0239d915",
+    "publishedAt": "2026-08-16T02:09:59Z",
+    "wikidataSourceIngestion": true,
+    "softwareRdfOccurrences": 1,
+    "softwareJsonOccurrences": 1,
+    "detailPage": "https://openknowledgegraphs.com/software/intentional-arrangement-skos-editor/",
+    "detailPageGenerated": true,
+    "catalogValidationErrors": 0,
+    "catalogValidationWarnings": 0,
+    "localManifestVerified": true,
+    "publishedManifestVerified": true,
+    "publishedRecordVerified": true,
+    "publishedDetailPageVerified": true,
+    "publishedVerified": true
+  }
+}

@@ -7,18 +7,42 @@ Also generates sitemap.xml and a QID-to-slug mapping for the frontend.
 """
 
 import asyncio
+import argparse
 import json
 import os
 import html
 import shutil
 import ssl
-import sys
+from pathlib import Path
 
 import aiohttp
 
-SITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
+from semantic_config import (
+    CATEGORIES_VOCAB_PATH,
+    SOFTWARE_TYPES_VOCAB_PATH,
+    load_controlled_vocabulary,
+)
+from recommendation_coverage import (
+    RecommendationCoverageError,
+    append_diagnostics,
+    baseline_generation_id,
+    baseline_survivors,
+    coverage_by_catalog,
+    evaluate_coverage,
+    load_policy,
+    qualifying_reasons_by_catalog,
+)
+
+ROOT_DIR = Path(
+    os.environ.get("OKG_CATALOG_ROOT", Path(__file__).resolve().parent.parent)
+).resolve()
+SITE_DIR = str(ROOT_DIR / "site")
+DATA_DIR = str(ROOT_DIR / "data")
 BASE_URL = "https://openknowledgegraphs.com"
+COVERAGE_POLICY_PATH = ROOT_DIR / "validation" / "recommendation-coverage-policy.json"
+RELATED_DIAGNOSTICS_PATH = Path(
+    os.environ.get("OKG_RELATED_DIAGNOSTICS_PATH", ROOT_DIR / "build" / "related-resources.json")
+).resolve()
 
 GENERIC_DESCRIPTIONS = {
     "ontology", "wikimedia glossary list article", "wikimedia list article",
@@ -28,28 +52,13 @@ GENERIC_DESCRIPTIONS = {
 }
 
 CATEGORY_SLUGS = {
-    "Life Sciences & Healthcare": "life-sciences-healthcare",
-    "Geospatial": "geospatial",
-    "Government & Public Sector": "government-public-sector",
-    "International Development": "international-development",
-    "Finance & Business": "finance-business",
-    "Library & Cultural Heritage": "library-cultural-heritage",
-    "Technology & Web": "technology-web",
-    "Environment & Agriculture": "environment-agriculture",
-    "General / Cross-domain": "general-cross-domain",
+    concept.label: concept.slug
+    for concept in load_controlled_vocabulary(CATEGORIES_VOCAB_PATH).concepts
 }
 
 SOFTWARE_TYPE_SLUGS = {
-    "Graph Database": "graph-database",
-    "SPARQL Tooling": "sparql-tooling",
-    "Ontology Engineering": "ontology-engineering",
-    "Reasoning & Inference": "reasoning-inference",
-    "RDF Data Mapping / ETL": "data-mapping-etl",
-    "Developer Library": "developer-library",
-    "Knowledge Graph Construction": "knowledge-graph-construction",
-    "AI Agent Tooling": "ai-agent-tooling",
-    "Visualization": "visualization",
-    "Stream Processing": "stream-processing",
+    concept.label: concept.slug
+    for concept in load_controlled_vocabulary(SOFTWARE_TYPES_VOCAB_PATH).concepts
 }
 
 PARKED_SIGNALS = [
@@ -69,13 +78,13 @@ SOFT_404_SIGNALS = [
 
 def passes_content_filter(item):
     """Label + meaningful description + has homepage."""
-    title = item.get("title", "")
+    title = (item.get("title") or "").strip()
     if not title or title.startswith("Q"):
         return False
     desc = (item.get("description") or "").strip().lower()
     if not desc or desc in GENERIC_DESCRIPTIONS or len(desc) < 15:
         return False
-    if not item.get("homepage"):
+    if not (item.get("homepage") or "").strip():
         return False
     return True
 
@@ -151,48 +160,131 @@ def esc(text):
     return html.escape(text or "", quote=True)
 
 
+def is_non_empty_string(value):
+    return isinstance(value, str) and bool(value.strip())
+
+
+def require_json_ld_identity(item):
+    """Reject page records whose required content or identity is missing."""
+    required_fields = ("canonicalUrl", "title", "description", "homepage", "wikidataId")
+    missing = [field for field in required_fields if not is_non_empty_string(item.get(field))]
+    if missing:
+        raise ValueError(f"Cannot serialize JSON-LD without: {', '.join(missing)}")
+
+
+def schema_type_for_canonical_page(url):
+    """Return the Schema.org type for a canonical generated detail-page URL."""
+    if not is_non_empty_string(url):
+        return None
+    for dataset, schema_type in (
+        ("resource", "DefinedTermSet"),
+        ("software", "SoftwareApplication"),
+    ):
+        slug = slug_from_canonical_url(url, dataset)
+        if slug and "/" not in slug and url == f"{BASE_URL}/{dataset}/{slug}/":
+            return schema_type
+    return None
+
+
+def project_related_tools(item):
+    """Return valid related-page entries in their authoritative projection order.
+
+    Full generation prunes this collection against the final survivor set before
+    rendering. This final defensive projection keeps malformed or non-canonical
+    values out of both visible HTML and embedded JSON-LD.
+    """
+    related_tools = item.get("relatedTools")
+    if not isinstance(related_tools, list):
+        return []
+    projected = []
+    for entry in related_tools:
+        if not isinstance(entry, dict):
+            continue
+        canonical_url = entry.get("canonicalUrl")
+        title = entry.get("title")
+        schema_type = schema_type_for_canonical_page(canonical_url)
+        if not schema_type or not is_non_empty_string(title):
+            continue
+        projected.append(
+            {
+                "canonicalUrl": canonical_url,
+                "title": title,
+                "schemaType": schema_type,
+            }
+        )
+    return projected
+
+
 def make_json_ld(item, dataset):
+    require_json_ld_identity(item)
     schema_type = "SoftwareApplication" if dataset == "software" else "DefinedTermSet"
     ld = {
         "@context": "https://schema.org",
         "@type": schema_type,
-        "@id": item.get("canonicalUrl", ""),
+        "@id": item["canonicalUrl"],
         "name": item["title"],
-        "description": item.get("description", ""),
-        "url": item.get("homepage", ""),
-        "sameAs": item.get("wikidataId", ""),
-        "license": item["licenses"][0] if item.get("licenses") else "https://creativecommons.org/publicdomain/mark/1.0/",
-        "isPartOf": {
-            "@type": "DataCatalog",
-            "name": "Open Knowledge Graphs",
-            "url": BASE_URL,
-        },
+        "description": item["description"],
+        "url": item["homepage"],
+        "sameAs": item["wikidataId"],
     }
-    if item.get("latestVersion"):
+
+    licenses = item.get("licenses")
+    if isinstance(licenses, list):
+        known_licenses = [value for value in licenses if is_non_empty_string(value)]
+        if known_licenses:
+            ld["license"] = known_licenses[0]
+
+    ld["isPartOf"] = {
+        "@type": "DataCatalog",
+        "name": "Open Knowledge Graphs",
+        "url": BASE_URL,
+    }
+
+    if is_non_empty_string(item.get("latestVersion")):
         ld["softwareVersion"] = item["latestVersion"]
-    if item.get("releaseDate"):
+    if is_non_empty_string(item.get("releaseDate")):
         ld["datePublished"] = item["releaseDate"]
-    if item.get("sourceRepo"):
+    if is_non_empty_string(item.get("sourceRepo")):
         ld["codeRepository"] = item["sourceRepo"]
-    if item.get("softwareType"):
+    if is_non_empty_string(item.get("softwareType")):
         ld["applicationCategory"] = item["softwareType"]
-    if item.get("programmingLanguages"):
-        langs = item["programmingLanguages"]
-        ld["programmingLanguage"] = langs[0] if len(langs) == 1 else langs
-    creators = item.get("creators", [])
-    if creators:
+
+    programming_languages = item.get("programmingLanguages")
+    if isinstance(programming_languages, list):
+        known_languages = [value for value in programming_languages if is_non_empty_string(value)]
+        if known_languages:
+            ld["programmingLanguage"] = known_languages[0] if len(known_languages) == 1 else known_languages
+
+    creators = item.get("creators")
+    if isinstance(creators, list):
         creator_entries = []
         for c in creators:
+            if not isinstance(c, dict):
+                continue
+            if not is_non_empty_string(c.get("type")) or not is_non_empty_string(c.get("name")):
+                continue
             entry = {"@type": c["type"], "name": c["name"]}
             same_as = [
                 url
                 for url in (c.get("wikidataId"), c.get("githubProfile"), c.get("googleScholarProfile"))
-                if url
+                if is_non_empty_string(url)
             ]
             if same_as:
                 entry["sameAs"] = same_as[0] if len(same_as) == 1 else same_as
             creator_entries.append(entry)
-        ld["creator"] = creator_entries[0] if len(creator_entries) == 1 else creator_entries
+        if creator_entries:
+            ld["creator"] = creator_entries[0] if len(creator_entries) == 1 else creator_entries
+
+    related_tools = project_related_tools(item)
+    if related_tools:
+        ld["mentions"] = [
+            {
+                "@type": entry["schemaType"],
+                "@id": entry["canonicalUrl"],
+                "name": entry["title"],
+            }
+            for entry in related_tools
+        ]
     return json.dumps(ld, indent=2)
 
 
@@ -244,7 +336,7 @@ def make_page(item, dataset, slug):
         version_html += "</p>"
 
     related_tools_html = ""
-    related_tools = item.get("relatedTools", [])
+    related_tools = project_related_tools(item)
     if related_tools:
         related_heading = "Related tools" if dataset == "software" else "Related resources"
         related_links = " ".join(
@@ -412,6 +504,10 @@ def generate_sitemap(pages):
         f'  <url>\n    <loc>{BASE_URL}/data/ontologies.ttl</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>',
         f'  <url>\n    <loc>{BASE_URL}/data/software.ttl</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>',
         f'  <url>\n    <loc>{BASE_URL}/ontology.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/vocabularies/categories.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/vocabularies/software-types.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/sources.ttl</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.5</priority>\n  </url>',
+        f'  <url>\n    <loc>{BASE_URL}/curation/classifications.ttl</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.5</priority>\n  </url>',
         f'  <url>\n    <loc>{BASE_URL}/llms.txt</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.7</priority>\n  </url>',
     ]
 
@@ -428,8 +524,110 @@ def generate_sitemap(pages):
 
 # --- Main ---
 
-def main():
-    skip_link_check = "--skip-link-check" in sys.argv
+CATALOG_FILES = {
+    "resource": "ontologies.json",
+    "software": "software.json",
+}
+
+
+def parse_args(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--skip-link-check",
+        action="store_true",
+        help=(
+            "Skip homepage requests. Without a membership baseline this retains the "
+            "legacy admit-all behavior; with a baseline it admits only unchanged, "
+            "previously verified pages."
+        ),
+    )
+    parser.add_argument(
+        "--membership-baseline",
+        type=Path,
+        help=(
+            "Immutable catalog root whose page_qids.json and catalog JSON identify "
+            "previously verified page membership. New or homepage-changed candidates "
+            "still require a successful link check."
+        ),
+    )
+    return parser.parse_args(argv)
+
+
+def _read_json(path):
+    with path.open(encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def load_verified_page_membership(baseline_root):
+    """Return verified baseline pages keyed by (dataset, QID).
+
+    An entirely empty baseline is valid for the first publication. Once a page
+    registry exists, both catalog projections are required so verification is
+    bound to the exact homepage that was previously published.
+    """
+    baseline_root = Path(baseline_root).resolve()
+    registry_path = baseline_root / "data" / "page_qids.json"
+    if not registry_path.is_file():
+        return {}
+
+    registry = _read_json(registry_path)
+    membership = {}
+    for dataset, catalog_filename in CATALOG_FILES.items():
+        entries = registry.get(dataset)
+        if not isinstance(entries, dict):
+            raise ValueError(f"Baseline page registry lacks a {dataset!r} mapping.")
+
+        catalog_path = baseline_root / "data" / catalog_filename
+        if not catalog_path.is_file():
+            raise ValueError(f"Baseline page registry requires {catalog_path}.")
+        payload = _read_json(catalog_path)
+        items = payload.get("items")
+        if not isinstance(items, list):
+            raise ValueError(f"Baseline catalog has no item list: {catalog_path}")
+
+        items_by_qid = {
+            extract_qid(item.get("wikidataId", "")): item
+            for item in items
+            if isinstance(item, dict) and extract_qid(item.get("wikidataId", ""))
+        }
+        for qid, slug in entries.items():
+            item = items_by_qid.get(qid)
+            if item is None:
+                raise ValueError(
+                    f"Baseline page registry contains {dataset} {qid}, but its catalog record is missing."
+                )
+            homepage = (item.get("homepage") or "").strip()
+            if not homepage:
+                raise ValueError(f"Baseline page {dataset} {qid} has no homepage.")
+            membership[(dataset, qid)] = {
+                "homepage": homepage,
+                "slug": str(slug),
+            }
+    return membership
+
+
+def split_membership_candidates(candidates, baseline_membership):
+    """Separate unchanged verified pages from candidates needing live checks."""
+    unchanged = set()
+    needs_check = []
+    for dataset, item in candidates:
+        qid = extract_qid(item.get("wikidataId", ""))
+        slug = slug_from_canonical_url(item.get("canonicalUrl", ""), dataset)
+        homepage = (item.get("homepage") or "").strip()
+        baseline = baseline_membership.get((dataset, qid))
+        if (
+            baseline is not None
+            and baseline["homepage"] == homepage
+            and baseline["slug"] == slug
+        ):
+            unchanged.add((dataset, qid))
+        else:
+            needs_check.append(item)
+    return unchanged, needs_check
+
+
+def main(argv=None):
+    args = parse_args(argv)
 
     with open(os.path.join(DATA_DIR, "ontologies.json")) as f:
         ont = json.load(f)["items"]
@@ -445,29 +643,40 @@ def main():
 
     print(f"Content filter: {len(candidates)} candidates")
 
-    # Step 2: Link check (unless skipped)
-    if skip_link_check:
+    # Step 2: Preserve unchanged pages from an immutable verified generation,
+    # and check only new pages or records whose homepage/slug changed.
+    baseline_membership = None
+    unchanged_verified = set()
+    if args.membership_baseline is not None:
+        baseline_membership = load_verified_page_membership(args.membership_baseline)
+        unchanged_verified, needs_check = split_membership_candidates(
+            candidates,
+            baseline_membership,
+        )
+        print(
+            f"Baseline membership: preserving {len(unchanged_verified)} unchanged "
+            f"verified pages; {len(needs_check)} require verification"
+        )
+        if args.skip_link_check:
+            print("Skipping new/changed link checks; no unverified pages will be admitted")
+            good_urls = set()
+        elif needs_check:
+            good_urls = asyncio.run(check_links(needs_check))
+        else:
+            good_urls = set()
+    elif args.skip_link_check:
         print("Skipping link check (--skip-link-check)")
         good_urls = None
     else:
         all_items = [item for _, item in candidates]
         good_urls = asyncio.run(check_links(all_items))
 
-    # Step 3: Clean old generated pages
-    for d in ["resource", "software"]:
-        dirpath = os.path.join(SITE_DIR, d)
-        if os.path.exists(dirpath):
-            shutil.rmtree(dirpath)
-
-    # Step 4: Determine the final page-worthy set (same checks as before), so we
+    # Step 3: Determine the final page-worthy set (same checks as before), so we
     # know which canonicalUrls will actually have a page before rendering any
     # of them — needed to prune relatedTools down to links that won't 404.
     survivors = []
     skipped_no_canonical_url = 0
     for dataset, item in candidates:
-        if good_urls is not None and item["homepage"].strip() not in good_urls:
-            continue
-
         qid = extract_qid(item.get("wikidataId", ""))
         if not qid:
             continue
@@ -477,6 +686,15 @@ def main():
             skipped_no_canonical_url += 1
             continue
 
+        if baseline_membership is not None:
+            if (
+                (dataset, qid) not in unchanged_verified
+                and item["homepage"].strip() not in good_urls
+            ):
+                continue
+        elif good_urls is not None and item["homepage"].strip() not in good_urls:
+            continue
+
         survivors.append((dataset, item, qid, slug))
 
     if skipped_no_canonical_url:
@@ -484,7 +702,46 @@ def main():
 
     survivor_urls = {item.get("canonicalUrl") for _, item, _, _ in survivors if item.get("canonicalUrl")}
 
-    # Step 5: Generate pages, using the slug already assigned by fetch_data.py
+    # Step 4: Gate the exact post-content-filter, post-link-check page set before
+    # deleting or publishing any generated page.
+    candidate_coverage = coverage_by_catalog(survivors)
+    existing_diagnostics = {}
+    if RELATED_DIAGNOSTICS_PATH.is_file():
+        existing_diagnostics = _read_json(RELATED_DIAGNOSTICS_PATH)
+    reason_distributions = qualifying_reasons_by_catalog(survivors, existing_diagnostics)
+    for dataset in ("resource", "software"):
+        candidate_coverage[dataset]["qualifyingReasonDistribution"] = reason_distributions[dataset]
+    baseline_coverage = None
+    baseline_id = None
+    if args.membership_baseline is not None:
+        baseline_coverage = coverage_by_catalog(
+            baseline_survivors(args.membership_baseline.resolve())
+        )
+        baseline_id = baseline_generation_id(args.membership_baseline.resolve())
+    coverage_report = evaluate_coverage(
+        candidate_coverage,
+        baseline_coverage,
+        load_policy(COVERAGE_POLICY_PATH),
+        baseline_id,
+    )
+    append_diagnostics(RELATED_DIAGNOSTICS_PATH, coverage_report)
+    for dataset in ("resource", "software"):
+        row = candidate_coverage[dataset]
+        print(
+            f"Recommendation coverage ({dataset}): "
+            f"{row['pagesWithRecommendations']}/{row['finalPageCount']} "
+            f"({float(row['coverageShare']):.1%})"
+        )
+    if not coverage_report["gate"]["passed"]:
+        raise RecommendationCoverageError(coverage_report)
+
+    # Step 5: The release gate passed; replace old generated pages.
+    for d in ["resource", "software"]:
+        dirpath = os.path.join(SITE_DIR, d)
+        if os.path.exists(dirpath):
+            shutil.rmtree(dirpath)
+
+    # Step 6: Generate pages, using the slug already assigned by fetch_data.py
     # (item["canonicalUrl"], e.g. https://openknowledgegraphs.com/software/foops/)
     # so a resource's URI never has to change once its page appears.
     generated = 0
@@ -509,13 +766,13 @@ def main():
 
     print(f"Generated {generated} pages")
 
-    # Step 6: Generate sitemap
+    # Step 7: Generate sitemap
     sitemap = generate_sitemap(pages)
     with open(os.path.join(SITE_DIR, "sitemap.xml"), "w") as f:
         f.write(sitemap)
     print(f"Sitemap: {len(pages) + 7} URLs")
 
-    # Step 7: Save QID-to-slug mapping for frontend
+    # Step 8: Save QID-to-slug mapping for frontend
     with open(os.path.join(DATA_DIR, "page_qids.json"), "w") as f:
         json.dump(page_slugs, f)
     print(f"Saved page_qids.json ({len(page_slugs['resource'])} resource, {len(page_slugs['software'])} software)")

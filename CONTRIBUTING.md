@@ -61,6 +61,7 @@ and use the "Resource batch" issue template to propose and track a batch of cand
 - Link related issues/tasks where relevant.
 - Add or update docs when behavior, workflows, or schema changes.
 - Preserve optional-field behavior in JSON output (omit missing keys).
+- Treat Wikidata edits as public external mutations: commit and review an evidence-backed dry-run audit first, and never execute live edits without separate explicit approval.
 
 ## Data and Schema Guidelines
 
@@ -68,11 +69,14 @@ and use the "Resource batch" issue template to propose and track a batch of cand
 - Preserve current SHACL constraints unless the task requires updates.
 - Keep `wikidataId` as an IRI-valued field.
 - Prefer deterministic output ordering where possible.
+- Declare source eligibility markers, exclusions, and reviewed exceptions in `sources.ttl`; do not duplicate their QIDs in Python or turn labels, descriptions, or URL shapes into automatic exclusions.
 
 ## Workflow and Deployment Notes
 
 - Data refresh workflow (`update-data.yml`) runs daily at 06:00 UTC.
-- Deployment workflow (`deploy.yml`) publishes `site/`, `data/`, and `ontology.ttl`.
+- The refresh workflow stages, validates, manifests, commits, deploys, and live-verifies one complete generation under the shared publication concurrency group.
+- `deploy.yml` is a manual rollback path accepting a generation ID or Git ref; successful rollback moves catalog pointers without reverting repository history.
+- Do not move `catalog-generation/*` tags. They are immutable successful-publication records.
 - Use `openknowledgegraphs.com` URLs in docs and public references.
 
 ## Reporting Problems

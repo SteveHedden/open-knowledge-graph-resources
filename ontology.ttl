@@ -1,8 +1,26 @@
-@prefix okg:  <https://openknowledgegraphs.com/ontology#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap:    <http://usefulinc.com/ns/doap#> .
+@prefix okg:     <https://openknowledgegraphs.com/ontology#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <https://schema.org/> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openknowledgegraphs.com/ontology>
+    a owl:Ontology ;
+    dcterms:title "Open Knowledge Graphs structural ontology"@en ;
+    dcterms:description "Stable structural classes, properties, alignments, and SHACL policy for the Open Knowledge Graphs catalog."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    dcterms:modified "2026-08-14"^^xsd:date ;
+    owl:versionInfo "0.1.0" ;
+    vann:preferredNamespacePrefix "okg" ;
+    vann:preferredNamespaceUri "https://openknowledgegraphs.com/ontology#" .
 
 okg:Resource a rdfs:Class ;
     rdfs:label "Resource" ;
@@ -28,103 +46,92 @@ okg:KnowledgeGraph a rdfs:Class ;
     rdfs:label "Knowledge Graph" ;
     rdfs:comment "Knowledge graph resource." .
 
+okg:OntologyLanguage a rdfs:Class ;
+    rdfs:subClassOf okg:Resource ;
+    rdfs:label "Ontology Language" ;
+    rdfs:comment "A formal language used to define and represent ontologies." .
+
 okg:Software a rdfs:Class ;
     rdfs:subClassOf okg:Resource ;
     rdfs:label "Software" ;
-    rdfs:comment "Semantic or knowledge graph software/tooling resource." .
+    rdfs:comment "Semantic or knowledge graph software/tooling resource." ;
+    rdfs:seeAlso doap:Project, schema:SoftwareApplication .
 
 okg:License a rdfs:Class ;
+    rdfs:subClassOf dcterms:LicenseDocument ;
     rdfs:label "License" ;
     rdfs:comment "License associated with cataloged resources." .
 
 okg:Category a rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:label "Category" ;
     rdfs:comment "Domain category for classifying ontologies and vocabularies." .
 
 okg:SoftwareType a rdfs:Class ;
+    rdfs:subClassOf skos:Concept ;
     rdfs:label "Software Type" ;
     rdfs:comment "Functional category for classifying semantic web software (e.g. graph database, ontology editor, AI agent tooling)." .
 
 okg:Person a rdfs:Class ;
+    rdfs:subClassOf schema:Person, prov:Person ;
     rdfs:label "Person" ;
     rdfs:comment "An individual credited as creator/author/developer of a cataloged resource. Maps to schema:Person in generated JSON-LD." .
 
 okg:Organization a rdfs:Class ;
+    rdfs:subClassOf schema:Organization, prov:Organization ;
     rdfs:label "Organization" ;
     rdfs:comment "An organization credited as creator/developer of a cataloged resource. Maps to schema:Organization in generated JSON-LD." .
 
-okg:LifeSciencesHealthcare a okg:Category ;
-    rdfs:label "Life Sciences & Healthcare" .
+okg:SourceMapping a rdfs:Class ;
+    rdfs:label "Source mapping" ;
+    rdfs:comment "Declarative mapping between a source schema and OKG's normalized model." .
 
-okg:Geospatial a okg:Category ;
-    rdfs:label "Geospatial" .
+okg:SourceClassMapping a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "Source class mapping" ;
+    rdfs:comment "Mapping from a source class identifier to an OKG class." .
 
-okg:GovernmentPublicSector a okg:Category ;
-    rdfs:label "Government & Public Sector" .
+okg:SourcePropertyMapping a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "Source property mapping" ;
+    rdfs:comment "Mapping from a source property identifier to an OKG term or normalized extraction field." .
 
-okg:InternationalDevelopment a okg:Category ;
-    rdfs:label "International Development" .
+okg:SourceEligibilityPolicy a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "Source eligibility policy" ;
+    rdfs:comment "Declarative source-specific rules that determine which raw source candidates may enter an OKG catalog." .
 
-okg:FinanceBusiness a okg:Category ;
-    rdfs:label "Finance & Business" .
+okg:SourceExclusion a rdfs:Class ;
+    rdfs:label "Source exclusion" ;
+    rdfs:comment "Reviewed decision that permanently excludes a source entity from automatic catalog eligibility." .
 
-okg:LibraryCulturalHeritage a okg:Category ;
-    rdfs:label "Library & Cultural Heritage" .
+okg:SourceEligibilityException a rdfs:Class ;
+    rdfs:label "Source eligibility exception" ;
+    rdfs:comment "Reviewed decision allowing a source entity to override a general eligibility rule without overriding a confirmed exclusion." .
 
-okg:TechnologyWeb a okg:Category ;
-    rdfs:label "Technology & Web" .
-
-okg:EnvironmentAgriculture a okg:Category ;
-    rdfs:label "Environment & Agriculture" .
-
-okg:GeneralCrossDomain a okg:Category ;
-    rdfs:label "General / Cross-domain" .
-
-okg:GraphDatabase a okg:SoftwareType ;
-    rdfs:label "Graph Database" .
-
-okg:SparqlTooling a okg:SoftwareType ;
-    rdfs:label "SPARQL Tooling" .
-
-okg:OntologyEngineering a okg:SoftwareType ;
-    rdfs:label "Ontology Engineering" .
-
-okg:ReasoningInference a okg:SoftwareType ;
-    rdfs:label "Reasoning & Inference" .
-
-okg:DataMappingETL a okg:SoftwareType ;
-    rdfs:label "RDF Data Mapping / ETL" .
-
-okg:DeveloperLibrary a okg:SoftwareType ;
-    rdfs:label "Developer Library" .
-
-okg:KnowledgeGraphConstruction a okg:SoftwareType ;
-    rdfs:label "Knowledge Graph Construction" .
-
-okg:AIAgentTooling a okg:SoftwareType ;
-    rdfs:label "AI Agent Tooling" .
-
-okg:Visualization a okg:SoftwareType ;
-    rdfs:label "Visualization" .
-
-okg:StreamProcessing a okg:SoftwareType ;
-    rdfs:label "Stream Processing" .
+okg:RecommendationExemplar a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "recommendation exemplar" ;
+    rdfs:comment "Reviewed source relationship that must remain an explainable recommendation when both records and the claim remain eligible." .
 
 okg:title a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range xsd:string ;
+    rdfs:subPropertyOf dcterms:title, schema:name ;
     rdfs:label "title" ;
     rdfs:comment "Display name of a resource." .
 
 okg:description a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range xsd:string ;
+    rdfs:subPropertyOf dcterms:description, schema:description ;
     rdfs:label "description" ;
     rdfs:comment "Short human-readable description of a resource." .
 
 okg:category a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range okg:Category ;
+    rdfs:subPropertyOf dcterms:subject ;
     rdfs:label "category" ;
     rdfs:comment "Domain category for an ontology or vocabulary." .
 
@@ -136,12 +143,14 @@ okg:softwareType a rdf:Property ;
 
 okg:homepage a rdf:Property ;
     rdfs:domain okg:Resource ;
+    rdfs:subPropertyOf schema:url ;
     rdfs:label "homepage" ;
     rdfs:comment "Official website URL for a resource." .
 
 okg:hasLicense a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range okg:License ;
+    rdfs:subPropertyOf dcterms:license ;
     rdfs:label "has license" ;
     rdfs:comment "Links a resource to one or more license instances." .
 
@@ -149,22 +158,25 @@ okg:partOf a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range xsd:string ;
     rdfs:label "part of" ;
-    rdfs:comment "Parent project, collection, or family name." .
+    rdfs:comment "Single parent label retained as a compatibility projection; canonical parent identities use dcterms:isPartOf IRIs." .
 
 okg:wikidataId a rdf:Property ;
     rdfs:domain okg:Resource ;
+    rdfs:subPropertyOf schema:sameAs ;
     rdfs:label "wikidata id" ;
     rdfs:comment "IRI of the corresponding Wikidata entity page." .
 
 okg:latestVersion a rdf:Property ;
     rdfs:domain okg:Software ;
     rdfs:range xsd:string ;
+    rdfs:subPropertyOf schema:softwareVersion ;
     rdfs:label "latest version" ;
     rdfs:comment "Most recent known software version string." .
 
 okg:releaseDate a rdf:Property ;
     rdfs:domain okg:Software ;
     rdfs:range xsd:date ;
+    rdfs:subPropertyOf schema:datePublished ;
     rdfs:label "release date" ;
     rdfs:comment "Date of the latest software release." .
 
@@ -173,6 +185,172 @@ okg:licenseName a rdf:Property ;
     rdfs:range xsd:string ;
     rdfs:label "license name" ;
     rdfs:comment "Display name of a license." .
+
+okg:creator a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:subPropertyOf dcterms:creator, schema:creator ;
+    rdfs:label "creator" ;
+    rdfs:comment "Links a cataloged resource to a person or organization credited with creating it." .
+
+okg:githubProfile a rdf:Property ;
+    rdfs:domain okg:Person ;
+    rdfs:label "GitHub profile" ;
+    rdfs:comment "Links a person to their GitHub profile IRI." .
+
+okg:googleScholarProfile a rdf:Property ;
+    rdfs:domain okg:Person ;
+    rdfs:label "Google Scholar profile" ;
+    rdfs:comment "Links a person to their Google Scholar profile IRI." .
+
+okg:namespaceURI a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:label "namespace URI" ;
+    rdfs:comment "Namespace IRI associated with a semantic resource." .
+
+okg:programmingLanguage a rdf:Property ;
+    rdfs:domain okg:Software ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf schema:programmingLanguage ;
+    rdfs:label "programming language" ;
+    rdfs:comment "Programming language in which a software resource is implemented." .
+
+okg:relatedTo a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:range okg:Resource ;
+    rdfs:subPropertyOf dcterms:relation ;
+    rdfs:label "related to" ;
+    rdfs:comment "Links a cataloged resource to another related cataloged resource." .
+
+okg:uses a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf dcterms:relation ;
+    rdfs:label "uses" ;
+    rdfs:comment "Directional link preserving a source Wikidata uses claim as an IRI." .
+
+okg:sourceType a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "source type" ;
+    rdfs:comment "Exact direct source type identity, kept distinct from normalized rdf:type." .
+
+okg:sourceRepo a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:subPropertyOf schema:codeRepository ;
+    rdfs:label "source repository" ;
+    rdfs:comment "Source-code repository IRI for a cataloged resource." .
+
+okg:conceptClass a rdf:Property ;
+    rdfs:domain skos:ConceptScheme ;
+    rdfs:range rdfs:Class ;
+    rdfs:label "concept class" ;
+    rdfs:comment "OKG compatibility class used for concepts in a controlled scheme." .
+
+okg:classificationPredicate a rdf:Property ;
+    rdfs:domain skos:ConceptScheme ;
+    rdfs:range rdf:Property ;
+    rdfs:label "classification predicate" ;
+    rdfs:comment "OKG predicate used to assign a concept from a controlled scheme." .
+
+okg:urlSlug a rdf:Property ;
+    rdfs:domain skos:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:label "URL slug" ;
+    rdfs:comment "Stable URL-filter value used by derived web projections." .
+
+okg:sortOrder a rdf:Property ;
+    rdfs:range xsd:integer ;
+    rdfs:label "sort order" ;
+    rdfs:comment "Stable presentation and processing order for declarative configuration entries." .
+
+okg:sourceDataset a rdf:Property ;
+    rdfs:domain okg:SourceMapping ;
+    rdfs:range dcat:Dataset ;
+    rdfs:label "source dataset" ;
+    rdfs:comment "Dataset whose schema identifier is described by a mapping." .
+
+okg:catalogDataset a rdf:Property ;
+    rdfs:domain okg:SourceMapping ;
+    rdfs:range dcat:Dataset ;
+    rdfs:label "catalog dataset" ;
+    rdfs:comment "Generated OKG dataset to which a source mapping applies." .
+
+okg:sourceClassId a rdf:Property ;
+    rdfs:domain okg:SourceClassMapping ;
+    rdfs:range xsd:string ;
+    rdfs:label "source class identifier" ;
+    rdfs:comment "Identifier of a class in the source dataset." .
+
+okg:sourcePropertyId a rdf:Property ;
+    rdfs:domain okg:SourcePropertyMapping ;
+    rdfs:range xsd:string ;
+    rdfs:label "source property identifier" ;
+    rdfs:comment "Identifier of a property in the source dataset." .
+
+okg:targetTerm a rdf:Property ;
+    rdfs:domain okg:SourceMapping ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "target term" ;
+    rdfs:comment "OKG or external semantic term targeted by a source mapping." .
+
+okg:projectionValue a rdf:Property ;
+    rdfs:domain okg:SourceClassMapping ;
+    rdfs:range xsd:string ;
+    rdfs:label "projection value" ;
+    rdfs:comment "Stable compatibility value emitted for a mapped class in derived JSON." .
+
+okg:normalizedField a rdf:Property ;
+    rdfs:domain okg:SourcePropertyMapping ;
+    rdfs:range xsd:string ;
+    rdfs:label "normalized field" ;
+    rdfs:comment "Source-independent extraction field populated by a source property." .
+
+okg:valueKind a rdf:Property ;
+    rdfs:domain okg:SourcePropertyMapping ;
+    rdfs:range xsd:string ;
+    rdfs:label "value kind" ;
+    rdfs:comment "Expected structural kind of values supplied by a source property." .
+
+okg:cardinality a rdf:Property ;
+    rdfs:domain okg:SourcePropertyMapping ;
+    rdfs:range xsd:string ;
+    rdfs:label "cardinality" ;
+    rdfs:comment "Expected source cardinality used to document extraction assumptions." .
+
+okg:termComponentMarker a rdf:Property ;
+    rdfs:domain okg:SourceEligibilityPolicy ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "term or component marker" ;
+    rdfs:comment "Direct source class whose presence marks an entity as an individual term or ontology component for eligibility evaluation." .
+
+okg:sourceExclusion a rdf:Property ;
+    rdfs:domain okg:SourceEligibilityPolicy ;
+    rdfs:range okg:SourceExclusion ;
+    rdfs:label "source exclusion" ;
+    rdfs:comment "Connects an eligibility policy to a reviewed source-entity exclusion." .
+
+okg:eligibilityException a rdf:Property ;
+    rdfs:domain okg:SourceEligibilityPolicy ;
+    rdfs:range okg:SourceEligibilityException ;
+    rdfs:label "eligibility exception" ;
+    rdfs:comment "Connects an eligibility policy to a reviewed QID-specific exception." .
+
+okg:sourceEntity a rdf:Property ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "source entity" ;
+    rdfs:comment "Public source entity governed by an exclusion or exception decision." .
+
+okg:sourceObject a rdf:Property ;
+    rdfs:domain okg:RecommendationExemplar ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "source object" ;
+    rdfs:comment "Object entity of a reviewed source relationship exemplar." .
+
+okg:sourcePropertyMapping a rdf:Property ;
+    rdfs:domain okg:RecommendationExemplar ;
+    rdfs:range okg:SourcePropertyMapping ;
+    rdfs:label "source property mapping" ;
+    rdfs:comment "Declared source predicate supporting a reviewed recommendation exemplar." .
 
 okg:ResourceShape a sh:NodeShape ;
     sh:targetClass okg:Resource ;
@@ -184,6 +362,16 @@ okg:ResourceShape a sh:NodeShape ;
     ] ;
     sh:property [
         sh:path okg:homepage ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:sourceRepo ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:namespaceURI ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
     ] ;
@@ -204,9 +392,29 @@ okg:ResourceShape a sh:NodeShape ;
         sh:class okg:License ;
     ] ;
     sh:property [
+        sh:path okg:creator ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:relatedTo ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:uses ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:sourceType ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
         sh:path okg:partOf ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path dcterms:isPartOf ;
+        sh:nodeKind sh:IRI ;
     ] ;
     sh:property [
         sh:path okg:wikidataId ;
@@ -231,6 +439,10 @@ okg:KnowledgeGraphShape a sh:NodeShape ;
     sh:targetClass okg:KnowledgeGraph ;
     sh:node okg:ResourceShape .
 
+okg:OntologyLanguageShape a sh:NodeShape ;
+    sh:targetClass okg:OntologyLanguage ;
+    sh:node okg:ResourceShape .
+
 okg:SoftwareShape a sh:NodeShape ;
     sh:targetClass okg:Software ;
     sh:node okg:ResourceShape ;
@@ -249,6 +461,23 @@ okg:SoftwareShape a sh:NodeShape ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
         sh:class okg:SoftwareType ;
+    ] ;
+    sh:property [
+        sh:path okg:programmingLanguage ;
+        sh:datatype xsd:string ;
+    ] .
+
+okg:PersonShape a sh:NodeShape ;
+    sh:targetClass okg:Person ;
+    sh:property [
+        sh:path okg:githubProfile ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path okg:googleScholarProfile ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
     ] .
 
 okg:LicenseShape a sh:NodeShape ;

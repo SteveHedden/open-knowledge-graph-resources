@@ -4,7 +4,7 @@ version = "1.0.0"
 description = "MCP server for the Open Knowledge Graphs semantic search API"
 requires-python = ">=3.11"
 dependencies = [
-    "mcp[cli]>=1.6.0",
+    "mcp[cli]==1.26.0",
     "httpx>=0.27.0",
     "pydantic>=2.0.0",
 ]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Utilities for classifying ontology resources into predefined categories."""
+"""Generic utilities for classifying records against an RDF-supplied vocabulary."""
 
 from __future__ import annotations
 
@@ -8,70 +8,8 @@ import logging
 import os
 import re
 import time
-from pathlib import Path
 
 import requests
-
-CATEGORY_OPTIONS: tuple[str, ...] = (
-    "Life Sciences & Healthcare",
-    "Geospatial",
-    "Government & Public Sector",
-    "International Development",
-    "Finance & Business",
-    "Library & Cultural Heritage",
-    "Technology & Web",
-    "Environment & Agriculture",
-    "General / Cross-domain",
-)
-CATEGORY_SET = set(CATEGORY_OPTIONS)
-
-SOFTWARE_TYPE_DEFINITIONS: dict[str, str] = {
-    "Graph Database": (
-        "A storage engine for persisting and querying graph-structured data "
-        "(RDF triplestore, quadstore, or property-graph database)."
-    ),
-    "SPARQL Tooling": (
-        "Clients, GUIs, query builders, or federation/optimization engines whose "
-        "primary purpose is running or managing SPARQL queries — not the data store itself."
-    ),
-    "Ontology Engineering": (
-        "Tools for authoring, editing, validating, documenting, or aligning "
-        "ontologies/vocabularies (editors, pitfall scanners, doc generators, alignment tools)."
-    ),
-    "Reasoning & Inference": (
-        "Engines that perform logical inference over OWL/RDFS (entailment, consistency "
-        "checking, classification) — the reasoning step itself, not an editor or library "
-        "that happens to call one."
-    ),
-    "RDF Data Mapping / ETL": (
-        "Tools converting other data formats (relational DBs, spreadsheets, CSV) into "
-        "RDF, or virtualizing non-RDF sources as queryable RDF (R2RML, OBDA)."
-    ),
-    "Developer Library": (
-        "A general-purpose programming language library/SDK for working with RDF/OWL "
-        "data model constructs — used by developers writing their own tools, not an "
-        "end-user application itself."
-    ),
-    "Knowledge Graph Construction": (
-        "Tools whose output is a knowledge graph as a deliverable dataset — built from "
-        "unstructured data, a schema, or other sources, meant to be exported/consumed "
-        "elsewhere (may use AI/LLMs internally, but the graph itself is the point)."
-    ),
-    "AI Agent Tooling": (
-        "Tools where the graph exists to serve an AI agent's own runtime operation — "
-        "memory, grounding/context, or an execution interface an agent calls — not a "
-        "standalone deliverable dataset."
-    ),
-    "Visualization": (
-        "Tools for visually rendering/exploring ontologies, graphs, or query results."
-    ),
-    "Stream Processing": (
-        "Tools for processing RDF as continuous streams (RDF Stream Processing, "
-        "continuous SPARQL queries) rather than static/batch data."
-    ),
-}
-SOFTWARE_TYPE_OPTIONS: tuple[str, ...] = tuple(SOFTWARE_TYPE_DEFINITIONS.keys())
-SOFTWARE_TYPE_SET = set(SOFTWARE_TYPE_OPTIONS)
 
 ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_VERSION = "2023-06-01"
@@ -104,46 +42,13 @@ def qid_from_wikidata_id(value: str | None) -> str | None:
     return match.group(1)
 
 
-def load_categories(path: Path, valid_set: set[str] = CATEGORY_SET) -> dict[str, str]:
-    """Load and validate categories mapping from JSON."""
-    if not path.exists():
-        return {}
-    try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as exc:
-        logging.warning("Could not read categories file %s: %s", path, exc)
-        return {}
-
-    if not isinstance(payload, dict):
-        logging.warning("Categories file %s has unexpected format; expected object.", path)
-        return {}
-
-    valid: dict[str, str] = {}
-    for raw_qid, raw_category in payload.items():
-        qid = qid_from_wikidata_id(raw_qid)
-        if not qid:
-            continue
-        if isinstance(raw_category, str) and raw_category in valid_set:
-            valid[qid] = raw_category
-    return valid
-
-
-def write_categories_atomic(path: Path, mapping: dict[str, str]) -> None:
-    """Write categories mapping atomically."""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    payload = {qid: mapping[qid] for qid in sorted(mapping)}
-    temp_path = path.with_suffix(path.suffix + ".tmp")
-    temp_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    temp_path.replace(path)
-
-
 def _chunked(items: list[dict[str, str]], size: int) -> list[list[dict[str, str]]]:
     return [items[index : index + size] for index in range(0, len(items), size)]
 
 
 def _build_prompt(
     items: list[dict[str, str]],
-    category_options: tuple[str, ...] = CATEGORY_OPTIONS,
+    category_options: tuple[str, ...],
     definitions: dict[str, str] | None = None,
     entity_label: str = "ontology resource",
     fallback_instruction: str = 'Use "General / Cross-domain" when unsure.',
@@ -214,7 +119,7 @@ def _request_classification_batch(
     items: list[dict[str, str]],
     model: str,
     timeout_seconds: int,
-    category_options: tuple[str, ...] = CATEGORY_OPTIONS,
+    category_options: tuple[str, ...],
     definitions: dict[str, str] | None = None,
     entity_label: str = "ontology resource",
     fallback_instruction: str = 'Use "General / Cross-domain" when unsure.',
@@ -296,11 +201,11 @@ def _request_classification_batch(
 def classify_items(
     items: list[dict[str, str]],
     api_key: str,
+    category_options: tuple[str, ...],
+    category_set: set[str],
     model: str = DEFAULT_MODEL,
     batch_size: int = DEFAULT_BATCH_SIZE,
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS,
-    category_options: tuple[str, ...] = CATEGORY_OPTIONS,
-    category_set: set[str] = CATEGORY_SET,
     definitions: dict[str, str] | None = None,
     entity_label: str = "ontology resource",
     fallback_instruction: str = 'Use "General / Cross-domain" when unsure.',

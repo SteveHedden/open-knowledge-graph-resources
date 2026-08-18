@@ -1,0 +1,171 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix okg:     <https://openknowledgegraphs.com/ontology#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix src:     <https://openknowledgegraphs.com/sources#> .
+@prefix wd:      <http://www.wikidata.org/entity/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+src:WikidataDataset
+    a dcat:Dataset, prov:Entity ;
+    dcterms:title "Wikidata"@en ;
+    dcterms:description "The collaboratively edited knowledge base queried by OKG for catalog source facts."@en ;
+    dcterms:identifier "Wikidata" ;
+    dcat:landingPage <https://www.wikidata.org/> .
+
+<https://openknowledgegraphs.com/datasets/ontologies>
+    a dcat:Dataset, prov:Entity ;
+    dcterms:title "Open Knowledge Graphs ontology and vocabulary catalog"@en ;
+    dcterms:description "Authoritative RDF catalog of ontologies, controlled vocabularies, taxonomies, knowledge graphs, and ontology languages published by OKG."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    prov:wasDerivedFrom src:WikidataDataset ;
+    dcat:distribution src:OntologiesTurtleDistribution, src:OntologiesJsonDistribution .
+
+src:OntologiesTurtleDistribution
+    a dcat:Distribution ;
+    dcterms:title "OKG ontology catalog in Turtle"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/ontologies.ttl> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+
+src:OntologiesJsonDistribution
+    a dcat:Distribution ;
+    dcterms:title "Derived OKG ontology catalog JSON projection"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/ontologies.json> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> .
+
+<https://openknowledgegraphs.com/datasets/software>
+    a dcat:Dataset, prov:Entity ;
+    dcterms:title "Open Knowledge Graphs software catalog"@en ;
+    dcterms:description "Authoritative RDF catalog of semantic-web and knowledge-graph software published by OKG."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    prov:wasDerivedFrom src:WikidataDataset ;
+    dcat:distribution src:SoftwareTurtleDistribution, src:SoftwareJsonDistribution .
+
+src:SoftwareTurtleDistribution
+    a dcat:Distribution ;
+    dcterms:title "OKG software catalog in Turtle"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/software.ttl> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+
+src:SoftwareJsonDistribution
+    a dcat:Distribution ;
+    dcterms:title "Derived OKG software catalog JSON projection"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/software.json> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> .
+
+# Source class mappings. Python owns traversal mechanics; these records own source IDs,
+# target OKG classes, and the stable JSON type values used by compatibility projections.
+
+src:class-Q324254 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q324254" ; okg:targetTerm okg:Ontology ; okg:projectionValue "Ontology" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 1 .
+src:class-Q1469824 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q1469824" ; okg:targetTerm okg:ControlledVocabulary ; okg:projectionValue "ControlledVocabulary" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 2 .
+src:class-Q8269924 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q8269924" ; okg:targetTerm okg:Taxonomy ; okg:projectionValue "Taxonomy" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 3 .
+src:class-Q33002955 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q33002955" ; okg:targetTerm okg:KnowledgeGraph ; okg:projectionValue "KnowledgeGraph" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 4 .
+src:class-Q7095059 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q7095059" ; okg:targetTerm okg:OntologyLanguage ; okg:projectionValue "OntologyLanguage" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 5 .
+src:class-Q7247749 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q7247749" ; okg:targetTerm okg:ControlledVocabulary ; okg:projectionValue "ControlledVocabulary" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 6 .
+
+src:class-Q124653107 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q124653107" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 10 .
+src:class-Q140639670 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q140639670" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 11 .
+src:class-Q595971 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q595971" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 12 .
+src:class-Q137916409 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q137916409" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 13 .
+
+src:class-Q5 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q5" ; okg:targetTerm okg:Person ; okg:projectionValue "Person" ; okg:sortOrder 20 .
+
+# Narrow ontology-catalog eligibility policy. These are direct Wikidata P31
+# markers only; generic components, subclass inference, labels, descriptions,
+# and URL shapes remain audit signals and never trigger automatic exclusion.
+
+src:WikidataOntologyEligibilityPolicy
+    a okg:SourceEligibilityPolicy ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:termComponentMarker wd:Q1969448, wd:Q137426747, wd:Q7095057 ;
+    okg:sourceExclusion
+        src:exclude-Q124134874,
+        src:exclude-Q124134880,
+        src:exclude-Q124134885,
+        src:exclude-Q124135010,
+        src:exclude-Q124135003,
+        src:exclude-Q124134971,
+        src:exclude-Q124134998,
+        src:exclude-Q124134995,
+        src:exclude-Q124134989,
+        src:exclude-Q124134976,
+        src:exclude-Q124134779,
+        src:exclude-Q116185807,
+        src:exclude-Q116185838,
+        src:exclude-Q16511225,
+        src:exclude-Q17005183,
+        src:exclude-Q24024806,
+        src:exclude-Q2957606,
+        src:exclude-Q2972287,
+        src:exclude-Q3546270,
+        src:exclude-Q5571732,
+        src:exclude-Q5571794,
+        src:exclude-Q5571796,
+        src:exclude-Q5571798,
+        src:exclude-Q5571799,
+        src:exclude-Q5571800,
+        src:exclude-Q5571802,
+        src:exclude-Q63254594,
+        src:exclude-Q63254622,
+        src:exclude-Q70789890 .
+
+src:exclude-Q124134874 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134874 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134880 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134880 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134885 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134885 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124135010 a okg:SourceExclusion ; okg:sourceEntity wd:Q124135010 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124135003 a okg:SourceExclusion ; okg:sourceEntity wd:Q124135003 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134971 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134971 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134998 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134998 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134995 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134995 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134989 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134989 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134976 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134976 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q124134779 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134779 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
+src:exclude-Q116185807 a okg:SourceExclusion ; okg:sourceEntity wd:Q116185807 ; dcterms:description "Individual Homosaurus term, not a standalone controlled vocabulary."@en ; dcterms:source <https://homosaurus.org/> .
+src:exclude-Q116185838 a okg:SourceExclusion ; okg:sourceEntity wd:Q116185838 ; dcterms:description "Individual Homosaurus term, not a standalone controlled vocabulary."@en ; dcterms:source <https://homosaurus.org/> .
+src:exclude-Q16511225 a okg:SourceExclusion ; okg:sourceEntity wd:Q16511225 ; dcterms:description "N-Z section of the German nautical terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q16511225> .
+src:exclude-Q17005183 a okg:SourceExclusion ; okg:sourceEntity wd:Q17005183 ; dcterms:description "D-F section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q17005183> .
+src:exclude-Q24024806 a okg:SourceExclusion ; okg:sourceEntity wd:Q24024806 ; dcterms:description "Appendix abbreviation table, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q24024806> .
+src:exclude-Q2957606 a okg:SourceExclusion ; okg:sourceEntity wd:Q2957606 ; dcterms:description "Charadriidae classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ; dcterms:source <https://www.wikidata.org/wiki/Q2957606> .
+src:exclude-Q2972287 a okg:SourceExclusion ; okg:sourceEntity wd:Q2972287 ; dcterms:description "Ciconiiformes classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ; dcterms:source <https://www.wikidata.org/wiki/Q2972287> .
+src:exclude-Q3546270 a okg:SourceExclusion ; okg:sourceEntity wd:Q3546270 ; dcterms:description "Tyrannidae classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ; dcterms:source <https://www.wikidata.org/wiki/Q3546270> .
+src:exclude-Q5571732 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571732 ; dcterms:description "A section of the baseball glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571732> .
+src:exclude-Q5571794 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571794 ; dcterms:description "A-C section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571794> .
+src:exclude-Q5571796 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571796 ; dcterms:description "G-L section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571796> .
+src:exclude-Q5571798 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571798 ; dcterms:description "M-O section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571798> .
+src:exclude-Q5571799 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571799 ; dcterms:description "P-R section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571799> .
+src:exclude-Q5571800 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571800 ; dcterms:description "S section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571800> .
+src:exclude-Q5571802 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571802 ; dcterms:description "T-Z section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571802> .
+src:exclude-Q63254594 a okg:SourceExclusion ; okg:sourceEntity wd:Q63254594 ; dcterms:description "French- and Italian-origin terms section of the music glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q63254594> .
+src:exclude-Q63254622 a okg:SourceExclusion ; okg:sourceEntity wd:Q63254622 ; dcterms:description "German-origin terms section of the music glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q63254622> .
+src:exclude-Q70789890 a okg:SourceExclusion ; okg:sourceEntity wd:Q70789890 ; dcterms:description "A-M section of the German nautical terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q70789890> .
+
+# Source property mappings. normalizedField is the stable internal extraction name;
+# valueKind and cardinality make source assumptions inspectable without encoding query syntax.
+
+src:property-P31 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P31" ; okg:normalizedField "instanceOf" ; okg:targetTerm rdf:type ; okg:valueKind "iri" ; okg:cardinality "required-many" ; okg:sortOrder 1 .
+src:property-P31-source-type a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P31" ; okg:normalizedField "sourceType" ; okg:targetTerm okg:sourceType ; okg:valueKind "iri" ; okg:cardinality "required-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 2 .
+src:property-P279 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P279" ; okg:normalizedField "subclassOf" ; okg:targetTerm rdfs:subClassOf ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:sortOrder 2 .
+src:property-P856 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P856" ; okg:normalizedField "officialWebsite" ; okg:targetTerm okg:homepage ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 10 .
+src:property-P1324 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P1324" ; okg:normalizedField "sourceCodeRepo" ; okg:targetTerm okg:sourceRepo ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 11 .
+src:property-P7510 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P7510" ; okg:normalizedField "namespaceURI" ; okg:targetTerm okg:namespaceURI ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 12 .
+src:property-P275 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P275" ; okg:normalizedField "license" ; okg:targetTerm okg:hasLicense ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 13 .
+src:property-P361 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P361" ; okg:normalizedField "partOfEntity" ; okg:targetTerm dcterms:isPartOf ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 14 .
+src:property-P2283 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P2283" ; okg:normalizedField "usesEntity" ; okg:targetTerm okg:uses ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 15 .
+src:property-P170 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P170" ; okg:normalizedField "creator" ; okg:targetTerm okg:creator ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 20 .
+src:property-P50 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P50" ; okg:normalizedField "creator" ; okg:targetTerm okg:creator ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 21 .
+src:property-P178 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P178" ; okg:normalizedField "creator" ; okg:targetTerm okg:creator ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 22 .
+src:property-P277 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P277" ; okg:normalizedField "programmingLanguage" ; okg:targetTerm okg:programmingLanguage ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 30 .
+src:property-P348 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P348" ; okg:normalizedField "version" ; okg:targetTerm okg:latestVersion ; okg:valueKind "string" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 31 .
+src:property-P577 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P577" ; okg:normalizedField "publicationDate" ; okg:targetTerm okg:releaseDate ; okg:valueKind "date-time" ; okg:cardinality "optional-one-per-version" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 32 .
+src:property-P2037 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P2037" ; okg:normalizedField "github" ; okg:targetTerm okg:githubProfile ; okg:valueKind "external-identifier" ; okg:cardinality "optional-one" ; okg:sortOrder 40 .
+src:property-P1960 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P1960" ; okg:normalizedField "scholar" ; okg:targetTerm okg:googleScholarProfile ; okg:valueKind "external-identifier" ; okg:cardinality "optional-one" ; okg:sortOrder 41 .
+
+# Reviewed recommendation exemplars. They are enforced only while both records,
+# the exact source claim, and page-independent similarity eligibility remain present.
+src:recommendation-relations-ontology-bfo a okg:RecommendationExemplar ; rdfs:label "Relations Ontology uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q28729320 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
+src:recommendation-chemical-information-ontology-bfo a okg:RecommendationExemplar ; rdfs:label "Chemical Information Ontology uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q55118298 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
+src:recommendation-foodon-bfo a okg:RecommendationExemplar ; rdfs:label "FoodOn uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q55118395 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
+src:recommendation-environment-ontology-bfo a okg:RecommendationExemplar ; rdfs:label "Environment Ontology uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q31110555 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
