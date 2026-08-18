@@ -1,0 +1,37 @@
+{
+  "artifacts": [
+    {
+      "path": "data/jobs/jobs.json",
+      "sha256": "3cc73e7a82280178c85f413bd509cced25cdb488b63bee2756900ce851a9ecf0"
+    },
+    {
+      "path": "data/jobs/jobs.ttl",
+      "sha256": "d5198ff9f91b738fe6418b4ce482d84bb354436891a80214edb66a0ad244bf2e"
+    },
+    {
+      "path": "data/jobs/raw/arbeitnow.json",
+      "sha256": "15c8a2e52e4e8d55995b0a9e7239e70ffa37c2beeccf60669b873f8677cf8096"
+    },
+    {
+      "path": "data/jobs/raw/himalayas.json",
+      "sha256": "2e2bbca365933670842803c26923492a472260fef3196da224816909fc798098"
+    },
+    {
+      "path": "data/jobs/raw/jobicy.json",
+      "sha256": "f8f0bb616f5443c3a3ec50cbc70cf6ac70f6d0776586726386e186091cb287ce"
+    },
+    {
+      "path": "data/jobs/raw/jooble.json",
+      "sha256": "6fcf6c4dd1c9c3abacef2852d6e9d0a53342cbbcd1a855a9a787518e4eaa4da4"
+    },
+    {
+      "path": "data/jobs/run.json",
+      "sha256": "9b5d4481a95fbb929b098ec7b2f4af615888948a6ea4e61e97435a03440591de"
+    }
+  ],
+  "completedAt": "2026-08-18T22:32:01Z",
+  "generationId": "20260818T223201Z-ecb3779bed6e",
+  "schemaVersion": "1.0.0",
+  "sourceRetrievedAt": "2026-08-18T22:28:45Z",
+  "startedAt": "2026-08-18T22:28:45Z"
+}

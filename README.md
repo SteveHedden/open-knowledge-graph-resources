@@ -180,6 +180,8 @@ The first tracked manifest is a retrospective bootstrap around the catalog retri
 
 Catalog JSON and instance RDF retain their existing contracts; generation metadata lives only in the manifest. Refreshes whose normalized RDF, JSON items, registries, sitemap membership, and page content are unchanged retain the existing generation and its original timestamps.
 
+`data/jobs/` (the kg-jobs prototype's live snapshot) is deployed alongside the core catalog but tracked by its own colocated `data/jobs/manifest.json` instead of `data/manifest.json`. It refreshes hourly, on a schedule independent of catalog generations; folding it into the core manifest would break `verify` every time the jobs workflow ran between catalog generations. `catalog_snapshot.py verify` checks both manifests and confirms every deployed file belongs to exactly one of them (`finalize-jobs` / `verify-jobs` mirror `finalize` / `verify` for the jobs manifest alone). Because rollback checks out an old commit wholesale, `deploy.yml` explicitly restores the latest verified `data/jobs/` snapshot into the rollback worktree before building the Pages artifact, so rolling back the core catalog never regresses job listings to a stale historical snapshot.
+
 ### Run the Site Locally
 
 ```bash
