@@ -50,6 +50,40 @@ test("retirement is audited before deletion and marked retired only after visibi
   assert.equal(events.at(-1)[2], "retired");
 });
 
+test("retirement caps default delete requests at Cloudflare's 100-ID limit", async () => {
+  const obsolete = Array.from(
+    { length: 205 },
+    (_, index) => `G1:software:Q${index + 1}`
+  );
+  const batches = [];
+  await retireObsoleteGenerations({
+    vectorIds: obsolete,
+    retainedGenerations: ["G2"],
+    markStatus: async () => {},
+    deleteBatch: async (ids) => {
+      batches.push([...ids]);
+      return `mutation-${batches.length}`;
+    },
+    waitUntilAbsent: async () => {},
+  });
+
+  assert.deepEqual(batches.map((ids) => ids.length), [100, 100, 5]);
+});
+
+test("retirement rejects delete batch sizes above the Cloudflare limit", async () => {
+  await assert.rejects(
+    retireObsoleteGenerations({
+      vectorIds,
+      retainedGenerations: ["G3", "G2"],
+      batchSize: 101,
+      markStatus: async () => assert.fail("invalid configuration must fail before mutation"),
+      deleteBatch: async () => assert.fail("invalid configuration must not delete"),
+      waitUntilAbsent: async () => assert.fail("invalid configuration must not poll"),
+    }),
+    /between 1 and 100/
+  );
+});
+
 test("failed deletion remains retiring and is never marked retired", async () => {
   const statuses = [];
   await assert.rejects(
@@ -66,4 +100,30 @@ test("failed deletion remains retiring and is never marked retired", async () =>
   );
   assert.deepEqual(statuses.map(({ status }) => status), ["retiring", "retiring"]);
   assert.equal(statuses.at(-1).failureReason, "delete failed");
+});
+
+test("a later delete failure preserves earlier mutation IDs in the retiring audit", async () => {
+  const statuses = [];
+  let deletes = 0;
+  await assert.rejects(
+    retireObsoleteGenerations({
+      vectorIds: Array.from(
+        { length: 101 },
+        (_, index) => `G1:ontologies:Q${index + 1}`
+      ),
+      retainedGenerations: ["G2"],
+      markStatus: async (state) =>
+        statuses.push({ ...state, mutationIds: [...state.mutationIds] }),
+      deleteBatch: async () => {
+        deletes += 1;
+        if (deletes === 2) throw new Error("second delete failed");
+        return "mutation-1";
+      },
+      waitUntilAbsent: async () => assert.fail("failed deletion must not poll"),
+    }),
+    /second delete failed/
+  );
+
+  assert.deepEqual(statuses.map(({ status }) => status), ["retiring", "retiring"]);
+  assert.deepEqual(statuses.at(-1).mutationIds, ["mutation-1"]);
 });

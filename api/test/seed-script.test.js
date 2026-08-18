@@ -4,15 +4,19 @@ import test from "node:test";
 process.env.CLOUDFLARE_ACCOUNT_ID = "account";
 process.env.CLOUDFLARE_API_TOKEN = "token";
 process.env.VECTOR_LIST_INTERVAL_MS = "0";
+process.env.VECTOR_VERIFY_INTERVAL_MS = "0";
 
 const {
+  anyVectorsByIds,
   ensureMetadataIndexes,
   fetchAndValidateAllVectors,
+  getVectorsByIds,
   listAllVectorIds,
   upsertBatch,
   validateExpectedVectors,
   verifyExistingGeneration,
   verifyMetadataIndexes,
+  waitForExpectedVectors,
 } = await import("../scripts/seed.js");
 
 const datasets = {
@@ -27,7 +31,7 @@ function cloudflareResponse(result) {
   return Response.json({ success: true, errors: [], result });
 }
 
-test("existing-generation verification is read-only and checks inventory plus both datasets", async (t) => {
+test("existing-generation verification is read-only and checks exact vectors and inventory", async (t) => {
   const original = globalThis.fetch;
   const calls = [];
   globalThis.fetch = async (input, init = {}) => {
@@ -116,6 +120,7 @@ test("existing-generation verification is read-only and checks inventory plus bo
   );
   assert.equal(calls.some((path) => path.includes("/ai/run/")), false);
   assert.equal(calls.some((path) => path.endsWith("/upsert")), false);
+  assert.equal(calls.some((path) => path.endsWith("/list")), true);
 });
 
 test("metadata filters are provisioned and verified before seeding can proceed", async (t) => {
@@ -162,6 +167,7 @@ test("metadata filters are provisioned and verified before seeding can proceed",
     ]
   );
   assert.equal(calls.some(([path]) => path.endsWith("/upsert")), false);
+  assert.equal(calls.some(([path]) => path.endsWith("/info")), false);
   await verifyMetadataIndexes();
 });
 
@@ -223,15 +229,228 @@ test("full-vector verification respects Cloudflare's 20-ID lookup limit", async 
   assert.deepEqual(batchSizes, [20, 20, 5]);
 });
 
+test("expected-vector polling resolves only missing IDs before exact inventory", async (t) => {
+  const original = globalThis.fetch;
+  const expectedIds = ["G1:software:Q1", "G1:software:Q2"];
+  let lookups = 0;
+  const events = [];
+  const batchSizes = [];
+  globalThis.fetch = async (input, init = {}) => {
+    const url = new URL(String(input));
+    if (url.pathname.endsWith("/list")) {
+      events.push("list");
+      return cloudflareResponse({
+        vectors: expectedIds.map((id) => ({ id })),
+        isTruncated: false,
+      });
+    }
+    if (!url.pathname.endsWith("/get_by_ids")) {
+      throw new Error(`Unexpected API call: ${url}`);
+    }
+    events.push("get");
+    lookups += 1;
+    const { ids } = JSON.parse(init.body);
+    batchSizes.push(ids.length);
+    const visibleIds = lookups === 1 ? ids.slice(0, 1) : ids;
+    return cloudflareResponse(
+      visibleIds.map((id) => ({
+        id,
+        namespace: "G1",
+        values: [1],
+        metadata: { generationId: "G1", dataset: "software" },
+      }))
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  const vectors = await waitForExpectedVectors("G1", expectedIds);
+  assert.equal(vectors.length, 2);
+  assert.equal(lookups, 2);
+  assert.deepEqual(batchSizes, [2, 1]);
+  assert.deepEqual(events, ["get", "get", "list"]);
+});
+
+test("inventory lag retries listing without repeating exact-ID retrieval", async (t) => {
+  const original = globalThis.fetch;
+  const expectedIds = ["G1:software:Q1", "G1:software:Q2"];
+  const events = [];
+  let listings = 0;
+  globalThis.fetch = async (input, init = {}) => {
+    const url = new URL(String(input));
+    if (url.pathname.endsWith("/get_by_ids")) {
+      events.push("get");
+      const { ids } = JSON.parse(init.body);
+      return cloudflareResponse(
+        ids.map((id) => ({
+          id,
+          namespace: "G1",
+          values: [1],
+          metadata: { generationId: "G1", dataset: "software" },
+        }))
+      );
+    }
+    if (url.pathname.endsWith("/list")) {
+      events.push("list");
+      listings += 1;
+      const visibleIds = listings === 1 ? expectedIds.slice(0, 1) : expectedIds;
+      return cloudflareResponse({
+        vectors: visibleIds.map((id) => ({ id })),
+        isTruncated: false,
+      });
+    }
+    throw new Error(`Unexpected API call: ${url}`);
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  const vectors = await waitForExpectedVectors("G1", expectedIds);
+  assert.equal(vectors.length, 2);
+  assert.deepEqual(events, ["get", "list", "list"]);
+});
+
+test("get-by-IDs honors retryable rate limits without restarting completed batches", async (t) => {
+  const original = globalThis.fetch;
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    if (calls === 1) {
+      return Response.json(
+        {
+          success: false,
+          errors: [{ message: "Rate limited" }],
+          result: null,
+        },
+        { status: 429, headers: { "Retry-After": "0" } }
+      );
+    }
+    return cloudflareResponse([]);
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  assert.deepEqual(await getVectorsByIds(["G1:software:Q1"]), []);
+  assert.equal(calls, 2);
+});
+
+test("absence probing stops as soon as a remaining vector is found", async (t) => {
+  const original = globalThis.fetch;
+  const batchSizes = [];
+  globalThis.fetch = async (_input, init = {}) => {
+    const { ids } = JSON.parse(init.body);
+    batchSizes.push(ids.length);
+    return cloudflareResponse(
+      batchSizes.length === 2
+        ? [
+            {
+              id: ids[0],
+              namespace: "G1",
+              metadata: { generationId: "G1", dataset: "software" },
+            },
+          ]
+        : []
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  const ids = Array.from({ length: 45 }, (_, index) => `G1:software:Q${index + 1}`);
+  assert.equal(await anyVectorsByIds(ids), true);
+  assert.deepEqual(batchSizes, [20, 20]);
+});
+
+test("expected-vector polling fails immediately on permanent Cloudflare errors", async (t) => {
+  const original = globalThis.fetch;
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    return Response.json(
+      {
+        success: false,
+        errors: [{ message: "Forbidden" }],
+        result: null,
+      },
+      { status: 403 }
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    waitForExpectedVectors("G1", ["G1:software:Q1"]),
+    /Cloudflare API error \(403\): Forbidden/
+  );
+  assert.equal(calls, 1);
+});
+
+test("expected-vector polling fails immediately on malformed successful responses", async (t) => {
+  const original = globalThis.fetch;
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    return Response.json(null);
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    waitForExpectedVectors("G1", ["G1:software:Q1"]),
+    /invalid JSON response/
+  );
+  assert.equal(calls, 1);
+});
+
+test("expected-vector verification rejects ghost IDs after visibility stabilizes", async (t) => {
+  const original = globalThis.fetch;
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    if (url.pathname.endsWith("/get_by_ids")) {
+      return cloudflareResponse([
+        {
+          id: "G1:software:Q1",
+          namespace: "G1",
+          values: [1],
+          metadata: { generationId: "G1", dataset: "software" },
+        },
+      ]);
+    }
+    if (url.pathname.endsWith("/list")) {
+      return cloudflareResponse({
+        vectors: [
+          { id: "G1:software:Q1" },
+          { id: "G1:software:Q999" },
+        ],
+        isTruncated: false,
+      });
+    }
+    throw new Error(`Unexpected API call: ${url}`);
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    waitForExpectedVectors("G1", ["G1:software:Q1"]),
+    /inventory mismatch:.*unexpected=1/
+  );
+});
+
 test("vector listing restarts from a fresh snapshot when Cloudflare rejects a cursor", async (t) => {
   const original = globalThis.fetch;
   const cursors = [];
+  const delays = [];
   let initialRequests = 0;
   globalThis.fetch = async (input) => {
     const url = new URL(String(input));
     const cursor = url.searchParams.get("cursor");
     cursors.push(cursor);
-    assert.equal(url.searchParams.get("count"), "500");
+    assert.equal(url.searchParams.get("count"), "1000");
     if (!cursor) {
       initialRequests += 1;
       return cloudflareResponse({
@@ -263,8 +482,12 @@ test("vector listing restarts from a fresh snapshot when Cloudflare rejects a cu
     globalThis.fetch = original;
   });
 
-  assert.deepEqual(await listAllVectorIds(), ["G1:software:Q1", "G1:software:Q2"]);
+  assert.deepEqual(
+    await listAllVectorIds({ sleepFn: async (milliseconds) => delays.push(milliseconds) }),
+    ["G1:software:Q1", "G1:software:Q2"]
+  );
   assert.deepEqual(cursors, [null, "bad-cursor", null, "good-cursor"]);
+  assert.deepEqual(delays, [1000]);
 });
 
 test("REST upsert fails closed on any unparsable vector", async (t) => {

@@ -1,11 +1,16 @@
 #!/usr/bin/env node
 
 import { fileURLToPath } from "node:url";
-import { retireObsoleteGenerations } from "../src/retention.js";
 import {
+  MAX_DELETE_BATCH_SIZE,
+  retireObsoleteGenerations,
+} from "../src/retention.js";
+import {
+  anyVectorsByIds,
   cloudflareJson,
   d1Query,
   ensureReadinessTable,
+  isRetryableCloudflareError,
   listAllVectorIds,
   readinessFor,
   requireConfiguration,
@@ -64,6 +69,11 @@ async function markStatus({ generationId, status, mutationIds, failureReason }) 
 }
 
 async function deleteBatch(ids) {
+  if (!ids.length || ids.length > MAX_DELETE_BATCH_SIZE) {
+    throw new Error(
+      `Vectorize delete accepts between 1 and ${MAX_DELETE_BATCH_SIZE} IDs; received ${ids.length}`
+    );
+  }
   const result = await cloudflareJson(
     `${API_BASE}/vectorize/v2/indexes/${INDEX_NAME}/delete_by_ids`,
     {
@@ -78,14 +88,25 @@ async function deleteBatch(ids) {
 }
 
 async function waitUntilAbsent(ids) {
-  const target = new Set(ids);
+  // Deletion is asynchronous. Poll the exact retired IDs so index mutations
+  // cannot invalidate a full-index listing cursor during the absence check.
   const deadline = Date.now() + VERIFY_TIMEOUT_MS;
+  let lastError = null;
   while (Date.now() <= deadline) {
-    const remaining = (await listAllVectorIds()).filter((id) => target.has(id));
-    if (!remaining.length) return;
+    try {
+      if (!(await anyVectorsByIds(ids))) return;
+      lastError = null;
+    } catch (error) {
+      if (!isRetryableCloudflareError(error)) throw error;
+      lastError = error;
+    }
     await new Promise((resolve) => setTimeout(resolve, VERIFY_INTERVAL_MS));
   }
-  throw new Error(`Timed out waiting for ${ids.length} retired vector IDs to disappear`);
+  throw new Error(
+    `Timed out waiting for ${ids.length} retired vector IDs to disappear${
+      lastError ? `: ${lastError.message}` : ""
+    }`
+  );
 }
 
 export async function main() {

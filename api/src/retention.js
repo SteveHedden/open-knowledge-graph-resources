@@ -2,6 +2,8 @@ function compareStrings(a, b) {
   return a < b ? -1 : a > b ? 1 : 0;
 }
 
+export const MAX_DELETE_BATCH_SIZE = 100;
+
 export function generationFromVectorId(id) {
   const match = String(id).match(/^(.+):(ontologies|software):(Q\d+)$/);
   return match ? match[1] : null;
@@ -24,11 +26,16 @@ export function obsoleteGenerationGroups(vectorIds, retainedGenerations) {
 export async function retireObsoleteGenerations({
   vectorIds,
   retainedGenerations,
-  batchSize = 1000,
+  batchSize = MAX_DELETE_BATCH_SIZE,
   markStatus,
   deleteBatch,
   waitUntilAbsent,
 }) {
+  if (!Number.isInteger(batchSize) || batchSize < 1 || batchSize > MAX_DELETE_BATCH_SIZE) {
+    throw new Error(
+      `Vector deletion batch size must be an integer between 1 and ${MAX_DELETE_BATCH_SIZE}`
+    );
+  }
   const groups = obsoleteGenerationGroups(vectorIds, retainedGenerations);
   const retired = [];
 

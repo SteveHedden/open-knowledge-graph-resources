@@ -45,9 +45,7 @@ export async function seedVerifiedGeneration({
   batchSize = 100,
   embedBatch,
   upsertBatch,
-  waitForMutation,
-  waitForInventory,
-  verifyAllVectors,
+  waitForVectors,
   verifyRepresentatives,
   writeReadiness,
 }) {
@@ -93,9 +91,7 @@ export async function seedVerifiedGeneration({
       }
     }
 
-    if (mutations.length) await waitForMutation(mutations.at(-1));
-    await waitForInventory(expectedIds);
-    await verifyAllVectors(expectedIds);
+    await waitForVectors(expectedIds);
     await verifyRepresentatives(representativeVectors);
     await writeReadiness({
       generationId,

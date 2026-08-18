@@ -49,8 +49,8 @@ The seeder:
 2. writes a `seeding` readiness row;
 3. embeds the deterministic labeled projection in `src/semantic.js`;
 4. upserts generation-qualified vectors into an isolated namespace;
-5. waits for the final Vectorize mutation and complete expected ID inventory;
-6. retrieves every expected vector and verifies its namespace, generation, and dataset metadata;
+5. polls every generation-qualified expected ID until its vector and provenance are visible;
+6. after visibility stabilizes, verifies the generation's complete, exact ID inventory;
 7. verifies representative ontology and software namespace queries; and
 8. only then marks the D1 row `ready`.
 

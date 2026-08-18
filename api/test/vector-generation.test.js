@@ -7,7 +7,7 @@ const datasets = {
   software: [{ title: "Software", wikidataId: "https://www.wikidata.org/wiki/Q1" }],
 };
 
-test("candidate is marked ready only after complete inventory and representative verification", async () => {
+test("candidate is marked ready only after exact vector and representative verification", async () => {
   const states = [];
   const calls = [];
   const result = await seedVerifiedGeneration({
@@ -19,9 +19,7 @@ test("candidate is marked ready only after complete inventory and representative
       calls.push(["upsert", vectors[0].id, vectors[0].namespace]);
       return `mutation-${calls.length}`;
     },
-    waitForMutation: async (mutationId) => calls.push(["mutation", mutationId]),
-    waitForInventory: async (ids) => calls.push(["inventory", ...ids]),
-    verifyAllVectors: async (ids) => calls.push(["all-vectors", ...ids]),
+    waitForVectors: async (ids) => calls.push(["all-vectors", ...ids]),
     verifyRepresentatives: async (vectors) =>
       calls.push(["representatives", ...vectors.map((vector) => vector.id)]),
     writeReadiness: async (state) => states.push(state),
@@ -29,9 +27,8 @@ test("candidate is marked ready only after complete inventory and representative
 
   assert.deepEqual(result.expectedIds, ["G1:ontologies:Q1", "G1:software:Q1"]);
   assert.deepEqual(states.map(({ status }) => status), ["seeding", "ready"]);
-  assert.deepEqual(calls.slice(-4).map(([name]) => name), [
-    "mutation",
-    "inventory",
+  assert.deepEqual(calls.slice(-3).map(([name]) => name), [
+    "upsert",
     "all-vectors",
     "representatives",
   ]);
@@ -53,13 +50,7 @@ test("partial batch failure records failed state and never verifies or marks rea
         if (upserts === 2) throw new Error("batch failed");
         return "mutation-1";
       },
-      waitForMutation: async () => {
-        verified = true;
-      },
-      waitForInventory: async () => {
-        verified = true;
-      },
-      verifyAllVectors: async () => {
+      waitForVectors: async () => {
         verified = true;
       },
       verifyRepresentatives: async () => {
@@ -76,7 +67,7 @@ test("partial batch failure records failed state and never verifies or marks rea
   assert.deepEqual(states.at(-1).mutationIds, ["mutation-1"]);
 });
 
-test("failed visibility verification cannot create a readiness record", async () => {
+test("failed exact-vector verification cannot create a readiness record", async () => {
   const states = [];
   await assert.rejects(
     seedVerifiedGeneration({
@@ -84,11 +75,9 @@ test("failed visibility verification cannot create a readiness record", async ()
       datasets,
       embedBatch: async (texts) => texts.map(() => [0.1]),
       upsertBatch: async () => "mutation",
-      waitForMutation: async () => {},
-      waitForInventory: async () => {
+      waitForVectors: async () => {
         throw new Error("not query-visible");
       },
-      verifyAllVectors: async () => {},
       verifyRepresentatives: async () => {},
       writeReadiness: async (state) => states.push(state),
     }),
