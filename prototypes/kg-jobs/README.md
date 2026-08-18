@@ -11,8 +11,11 @@ own code. There is no production jobs category on the site and no Wikidata
 editing — that boundary still holds. What *has* changed from the prototype's
 original, purely local design: the live command now also runs unattended, on
 a schedule, in CI (`.github/workflows/update-jobs.yml`), and its output is
-committed to repo-root `data/jobs.json` / `data/jobs.ttl` so the production
-OKG site can read it (see "Scheduled production ingestion" below). Running it
+committed to repo-root `data/jobs/jobs.json` / `data/jobs/jobs.ttl` so the
+production OKG site can read it (see "Scheduled production ingestion" below)
+— kept in its own `data/jobs/` subpath, separate from the authoritative
+catalog's own `data/*.json` files, since nothing consumes this data yet
+(Task 32 is the actual site surface). Running it
 by hand, locally, exactly as before, is still fully supported and still the
 only way to get a live snapshot for `prototypes/kg-jobs/site/`. The live
 command still makes a strictly bounded, attributed public-API pull only when
@@ -49,11 +52,13 @@ prototypes/kg-jobs/
 ├── site/index.html           Local jobs page (live by default; fixtures explicit)
 └── tests/                    pytest suite (SHACL, fixtures, determinism)
 
-# repo root (outside prototypes/kg-jobs/)
-.github/workflows/update-jobs.yml   Hourly schedule: calls live_pipeline.py per production source
-data/jobs.json, data/jobs.ttl       Committed snapshot the production OKG site reads
-data/jobs-run.json                  Committed per-source last-refresh history (continuity across CI runs)
-data/jobs-raw/<source>.json         Committed raw payload per source, for provenance
+# repo root (outside prototypes/kg-jobs/) -- kept separate from the
+# authoritative catalog's own data/*.json files (see "Scheduled production
+# ingestion" below)
+.github/workflows/update-jobs.yml        Hourly schedule: calls live_pipeline.py per production source
+data/jobs/jobs.json, data/jobs/jobs.ttl  Committed snapshot the production OKG site reads
+data/jobs/run.json                       Committed per-source last-refresh history (continuity across CI runs)
+data/jobs/raw/<source>.json              Committed raw payload per source, for provenance
 ```
 
 RDF reuses `schema:JobPosting` (Schema.org), `skos:Concept`/`ConceptScheme`
@@ -310,12 +315,17 @@ before calling the pipeline (so `enforce_refresh_interval` and
 `preserve_first_seen`/`other_source_records` see continuous history across
 runs, not a blank slate every hour), then copies the resulting
 `runtime/jobs.json` / `runtime/jobs.ttl` / `runtime/run.json` / `runtime/raw/`
-back out to a committed path at repo root — `data/jobs.json`, `data/jobs.ttl`,
-`data/jobs-run.json`, `data/jobs-raw/` — and commits only if that output
-actually changed. Pages serves from the repository tree, so this is what
-lets the production OKG site read the snapshot; publishing only as a
-GitHub Actions build artifact would not be fetchable by a static Pages
-build without extra plumbing, and it would expire.
+back out to a committed path at repo root — `data/jobs/jobs.json`,
+`data/jobs/jobs.ttl`, `data/jobs/run.json`, `data/jobs/raw/` — and commits
+only if that output actually changed. Pages serves from the repository
+tree, so this is what lets the production OKG site read the snapshot;
+publishing only as a GitHub Actions build artifact would not be fetchable
+by a static Pages build without extra plumbing, and it would expire. This
+output is deliberately kept under its own `data/jobs/` subpath rather than
+flat inside `data/` alongside the authoritative catalog's own
+`software.json` / `ontologies.json` / etc. — nothing reads `data/jobs/`
+yet (the actual Jobs tab is Task 32), so it stays out of the catalog
+directory that `generate_pages.py` reads from until something does.
 
 Because `enforce_refresh_interval` raises the dedicated
 `RefreshNotDueError` (a `LivePipelineError` subclass) rather than a generic
@@ -325,13 +335,20 @@ hourly run legitimately "doing nothing" for Himalayas (24h) or Jooble (6h)
 on most invocations is expected and is not a workflow failure. Only a
 genuine fetch or SHACL-validation failure exits non-zero — and because
 `publish_snapshot` only replaces `runtime/` atomically after validation
-succeeds, and the workflow only copies `runtime/` out to `data/` after every
-source has been attempted, a failure on one source can never overwrite the
-last good committed snapshot with partial or missing data.
+succeeds, and the workflow only copies `runtime/` out to `data/jobs/` after
+every source has been attempted, a failure on one source can never
+overwrite the last good committed snapshot with partial or missing data.
 
 Jooble's API key is provisioned as the `JOOBLE_API_KEY` GitHub Actions
 secret on the repository and is passed to that one step's environment only —
 never written to a file, logged, or committed.
+
+A manual dispatch (Actions tab -> "Run workflow") accepts an optional
+`dry_run` input: when true, the pipeline still runs and its logs are still
+useful, but the "Publish snapshot" and "Commit and push" steps are both
+skipped entirely, so nothing under `data/jobs/` is touched and nothing is
+committed or pushed. This is the safe way to test a single source (via the
+`source` input) without risk to the published snapshot.
 
 ## Known limitations / deliberately deferred
 

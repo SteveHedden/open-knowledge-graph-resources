@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: Refresh only this source (dry-run); default refreshes all four
+        description: Refresh only this source; default refreshes all four
         required: false
         default: all
         type: choice
@@ -16,6 +16,11 @@ on:
           - jobicy
           - jooble
           - arbeitnow
+      dry_run:
+        description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -49,12 +54,12 @@ jobs:
       - name: Restore last committed snapshot into runtime/
         run: |
           mkdir -p runtime/raw
-          [ -f ../../data/jobs.json ] && cp ../../data/jobs.json runtime/jobs.json
-          [ -f ../../data/jobs.ttl ] && cp ../../data/jobs.ttl runtime/jobs.ttl
-          [ -f ../../data/jobs-run.json ] && cp ../../data/jobs-run.json runtime/run.json
-          if [ -d ../../data/jobs-raw ]; then
+          [ -f ../../data/jobs/jobs.json ] && cp ../../data/jobs/jobs.json runtime/jobs.json
+          [ -f ../../data/jobs/jobs.ttl ] && cp ../../data/jobs/jobs.ttl runtime/jobs.ttl
+          [ -f ../../data/jobs/run.json ] && cp ../../data/jobs/run.json runtime/run.json
+          if [ -d ../../data/jobs/raw ]; then
             shopt -s nullglob
-            for f in ../../data/jobs-raw/*.json; do cp "$f" runtime/raw/; done
+            for f in ../../data/jobs/raw/*.json; do cp "$f" runtime/raw/; done
           fi
           exit 0
 
@@ -87,21 +92,23 @@ jobs:
           echo "failures=$failures" >> "$GITHUB_OUTPUT"
 
       - name: Publish snapshot to the committed data path
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         run: |
-          mkdir -p ../../data/jobs-raw
-          cp runtime/jobs.json ../../data/jobs.json
-          cp runtime/jobs.ttl ../../data/jobs.ttl
-          cp runtime/run.json ../../data/jobs-run.json
-          rm -f ../../data/jobs-raw/*.json
+          mkdir -p ../../data/jobs/raw
+          cp runtime/jobs.json ../../data/jobs/jobs.json
+          cp runtime/jobs.ttl ../../data/jobs/jobs.ttl
+          cp runtime/run.json ../../data/jobs/run.json
+          rm -f ../../data/jobs/raw/*.json
           shopt -s nullglob
-          for f in runtime/raw/*.json; do cp "$f" ../../data/jobs-raw/; done
+          for f in runtime/raw/*.json; do cp "$f" ../../data/jobs/raw/; done
 
       - name: Commit and push if the published snapshot changed
         id: commit
+        if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         shell: bash
         run: |
           cd ../..
-          git add data/jobs.json data/jobs.ttl data/jobs-run.json data/jobs-raw
+          git add data/jobs
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No change to the published kg-jobs snapshot."
@@ -119,7 +126,8 @@ jobs:
           {
             echo "## KG jobs live refresh"
             echo
-            echo "- snapshotChanged: ${{ steps.commit.outputs.changed || 'unknown' }}"
+            echo "- dryRun: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}"
+            echo "- snapshotChanged: ${{ steps.commit.outputs.changed || 'skipped (dry run)' }}"
             echo "- sourcesWithHardFailures: ${{ steps.refresh.outputs.failures || 'unknown' }}"
           } >> "$GITHUB_STEP_SUMMARY"
 

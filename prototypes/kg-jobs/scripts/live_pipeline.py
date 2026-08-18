@@ -6,8 +6,10 @@ production this script runs on an hourly schedule (see
 ``.github/workflows/update-jobs.yml``), once per registered source; each
 source's own registry-declared refresh interval (``sources.ttl``) still
 governs how often it is actually fetched, and the resulting snapshot is
-committed to ``data/jobs.json`` / ``data/jobs.ttl`` for the live OKG site to
-read. It can also still be run locally exactly as before for manual review.
+committed to repo-root ``data/jobs/jobs.json`` / ``data/jobs/jobs.ttl`` (kept
+separate from the authoritative catalog's own ``data/`` files) for the live
+OKG site to read. It can also still be run locally exactly as before for
+manual review.
 """
 
 from __future__ import annotations
