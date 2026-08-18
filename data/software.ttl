@@ -2234,20 +2234,6 @@
     okg:title "RMLStreamer" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140706215> .
 
-<https://openknowledgegraphs.com/software/robot-is-an-obo-tool/> a okg:Software ;
-    rdfs:label "ROBOT is an OBO Tool" ;
-    okg:description "high-level tool for working with OBO ontologies" ;
-    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
-    okg:homepage <https://robot.obolibrary.org/> ;
-    okg:latestVersion "1.9.9" ;
-    okg:releaseDate "2026-02-18"^^xsd:date ;
-    okg:softwareType okg:OntologyEngineering ;
-    okg:sourceRepo <https://github.com/ontodev/robot> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q21127166> ;
-    okg:title "ROBOT is an OBO Tool" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q116908518> .
-
 <https://openknowledgegraphs.com/software/rocketrml/> a okg:Software ;
     rdfs:label "RocketRML" ;
     okg:description "JavaScript engine for generating RDF by executing RML mappings" ;
@@ -3818,6 +3804,22 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:title "RDFLib" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7276224> .
 
+<https://openknowledgegraphs.com/software/robot-is-an-obo-tool/> a okg:Software ;
+    rdfs:label "ROBOT is an OBO Tool" ;
+    okg:description "high-level tool for working with OBO ontologies" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://robot.obolibrary.org/> ;
+    okg:latestVersion "1.9.9" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena/> ;
+    okg:releaseDate "2026-02-18"^^xsd:date ;
+    okg:softwareType okg:OntologyEngineering ;
+    okg:sourceRepo <https://github.com/ontodev/robot> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q21127166> ;
+    okg:title "ROBOT is an OBO Tool" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q116908518> .
+
 <https://openknowledgegraphs.com/software/sampo-ui/> a okg:Software ;
     rdfs:label "Sampo-UI" ;
     okg:description "Sampo-UI is a framework for developing user interfaces for semantic portals to publish Linked Open Data." ;
@@ -4450,28 +4452,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Apache Jena Fuseki" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q109376461> .
 
-<https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
-    rdfs:label "Apache Jena" ;
-    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
-        okg:Creator_HP_Labs_Q266936 ;
-    okg:description "open source semantic web framework for Java" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://jena.apache.org/> ;
-    okg:latestVersion "5.6.0" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
-        <https://openknowledgegraphs.com/software/apache-marmotta/>,
-        <https://openknowledgegraphs.com/software/apache-rya/>,
-        <https://openknowledgegraphs.com/software/hugegraph/> ;
-    okg:releaseDate "2025-10-15"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://git.apache.org/jena> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q188860>,
-        <http://www.wikidata.org/entity/Q341>,
-        <http://www.wikidata.org/entity/Q3539533> ;
-    okg:title "Apache Jena" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
-
 <https://openknowledgegraphs.com/software/apache-rya/> a okg:Software ;
     rdfs:label "Apache Rya" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
@@ -4649,6 +4629,30 @@ okg:License_Business_Source_License_1_1_Q121359688 a okg:License ;
 okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a okg:License ;
     rdfs:label "GNU Affero General Public License, version 3.0 or later" ;
     okg:licenseName "GNU Affero General Public License, version 3.0 or later" .
+
+<https://openknowledgegraphs.com/software/apache-jena/> a okg:Software ;
+    rdfs:label "Apache Jena" ;
+    okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
+        okg:Creator_HP_Labs_Q266936 ;
+    okg:description "open source semantic web framework for Java" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://jena.apache.org/> ;
+    okg:latestVersion "5.6.0" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
+        <https://openknowledgegraphs.com/software/apache-marmotta/>,
+        <https://openknowledgegraphs.com/software/apache-rya/>,
+        <https://openknowledgegraphs.com/software/hugegraph/>,
+        <https://openknowledgegraphs.com/software/robot-is-an-obo-tool/> ;
+    okg:releaseDate "2025-10-15"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://git.apache.org/jena> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q188860>,
+        <http://www.wikidata.org/entity/Q21127166>,
+        <http://www.wikidata.org/entity/Q341>,
+        <http://www.wikidata.org/entity/Q3539533> ;
+    okg:title "Apache Jena" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1686799> .
 
 <https://openknowledgegraphs.com/software/apache-marmotta/> a okg:Software ;
     rdfs:label "Apache Marmotta" ;

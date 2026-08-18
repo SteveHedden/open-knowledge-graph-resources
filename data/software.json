@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T01:45:34Z",
+  "generatedAt": "2026-08-18T02:42:13Z",
   "items": [
     {
       "title": "4store",
@@ -196,6 +196,10 @@
         {
           "title": "HugeGraph",
           "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/"
+        },
+        {
+          "title": "ROBOT is an OBO Tool",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/robot-is-an-obo-tool/"
         }
       ]
     },
@@ -4926,7 +4930,16 @@
       ],
       "latestVersion": "1.9.9",
       "releaseDate": "2026-02-18",
-      "softwareType": "Ontology Engineering"
+      "softwareType": "Ontology Engineering",
+      "programmingLanguages": [
+        "Java"
+      ],
+      "relatedTools": [
+        {
+          "title": "Apache Jena",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/"
+        }
+      ]
     },
     {
       "title": "RocketRML",
