@@ -143,7 +143,7 @@
 
 <https://openknowledgegraphs.com/software/aws-neptune/> a okg:Software ;
     rdfs:label "AWS Neptune" ;
-    okg:description "AWS Graph Database" ;
+    okg:description "AWS graph database service" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -220,7 +220,7 @@
 
 <https://openknowledgegraphs.com/software/chowlk/> a okg:Software ;
     rdfs:label "Chowlk" ;
-    okg:description "Tool to transform an ontology diagram into OWL code." ;
+    okg:description "tool to transform an ontology diagram into OWL code" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:latestVersion "0.0.1" ;
     okg:programmingLanguage "HTML" ;
@@ -259,7 +259,7 @@
 
 <https://openknowledgegraphs.com/software/corese/> a okg:Software ;
     rdfs:label "Corese" ;
-    okg:description "Software platform implementing and extending the standards of the Semantic Web." ;
+    okg:description "semantic web software" ;
     okg:hasLicense okg:License_CeCILL_C_Q125359628,
         okg:License_proprietary_license_Q3238057 ;
     okg:homepage <https://project.inria.fr/corese/> ;
@@ -518,20 +518,6 @@
     okg:title "ELK" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59505721> .
 
-<https://openknowledgegraphs.com/software/emmontopy/> a okg:Software ;
-    rdfs:label "EMMOntoPy" ;
-    okg:description "Library for representing and working with ontologies in Python" ;
-    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
-    okg:homepage <https://emmo-repo.github.io/EMMOntoPy/> ;
-    okg:latestVersion "0.11.4" ;
-    okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-05-13"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://github.com/emmo-repo/EMMOntoPy> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
-    okg:title "EMMOntoPy" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q124653415> .
-
 <https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/> a okg:Software ;
     rdfs:label "Euler Yet another proof Engine" ;
     okg:description "Euler Yet another proof Engine (EYE), a Semantic Web reasoning engine for N3 and RDF rules" ;
@@ -654,7 +640,7 @@
 
 <https://openknowledgegraphs.com/software/foops/> a okg:Software ;
     rdfs:label "FOOPS!" ;
-    okg:description "Code for FOOPS! the OEG FAIR ontologies validator" ;
+    okg:description "OEG FAIR ontologies validator" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://foops.linkeddata.es/FAIR_validator.html> ;
     okg:latestVersion "0.4.0" ;
@@ -736,7 +722,7 @@
 
 <https://openknowledgegraphs.com/software/gh-rdf3x/> a okg:Software ;
     rdfs:label "GH-RDF3X" ;
-    okg:description "Extension of the rdf3x engine and the translatesparql tool" ;
+    okg:description "extension of the rdf3x engine and the translatesparql tool" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:programmingLanguage "C++" ;
     okg:softwareType okg:GraphDatabase ;
@@ -786,7 +772,7 @@
 
 <https://openknowledgegraphs.com/software/gruff/> a okg:Software ;
     rdfs:label "GRUFF" ;
-    okg:description "Commercial graph database" ;
+    okg:description "commercial graph database software" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:softwareType okg:Visualization ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1176,9 +1162,9 @@
     okg:description "The low-code Knowledge Graph application platform. Apache license." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://atomgraph.github.io/LinkedDataHub/> ;
-    okg:latestVersion "5.7.1" ;
+    okg:latestVersion "5.8.0" ;
     okg:programmingLanguage "XSLT" ;
-    okg:releaseDate "2026-08-06"^^xsd:date ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/AtomGraph/LinkedDataHub> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1318,7 +1304,9 @@
     rdfs:label "MillenniumDB" ;
     okg:description "graph database system implemented in C++" ;
     okg:hasLicense okg:License_GNU_General_Public_License_version_2_0_Q10513450 ;
+    okg:latestVersion "1.0.0" ;
     okg:programmingLanguage "C++" ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/MillenniumDB/MillenniumDB> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1130645>,
@@ -1443,7 +1431,7 @@
 
 <https://openknowledgegraphs.com/software/ofaire/> a okg:Software ;
     rdfs:label "O’FAIRE" ;
-    okg:description "This project is a FAIRness assessment tool for ontologies, vocabularies and semantic resources." ;
+    okg:description "FAIRness assessment tool for ontologies, vocabularies and semantic resources" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://services.stageportal.lirmm.fr/fairness/v2/> ;
     okg:latestVersion "2.2.0" ;
@@ -1457,7 +1445,7 @@
 
 <https://openknowledgegraphs.com/software/onto-tool/> a okg:Software ;
     rdfs:label "onto-tool" ;
-    okg:description "Tools to update and export ontology RDF." ;
+    okg:description "toolkit for updating and exporting ontologies in RDF" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:latestVersion "1.9.0" ;
     okg:programmingLanguage "Python" ;
@@ -1499,7 +1487,7 @@
 
 <https://openknowledgegraphs.com/software/ontofox/> a okg:Software ;
     rdfs:label "Ontofox" ;
-    okg:description "Extract ontology terms and axioms: http://ontofox.hegroup.org" ;
+    okg:description "tool for extracting ontology terms and axioms" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:homepage <https://ontofox.hegroup.org/> ;
     okg:programmingLanguage "Web Ontology Language" ;
@@ -1513,9 +1501,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.11.0" ;
+    okg:latestVersion "0.11.2" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-15"^^xsd:date ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1562,7 +1550,7 @@
 
 <https://openknowledgegraphs.com/software/ontoology/> a okg:Software ;
     rdfs:label "OnToology" ;
-    okg:description "Online tool to automatically generate documentation and evaluation for Ontologies hosted on GitHub" ;
+    okg:description "online tool for automatically generating documentation and evaluating Ontologies hosted on GitHub" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <http://ontoology.linkeddata.es/> ;
     okg:latestVersion "1.7.0" ;
@@ -2183,7 +2171,7 @@
 
 <https://openknowledgegraphs.com/software/redstore/> a okg:Software ;
     rdfs:label "RedStore" ;
-    okg:description "RedStore is a lightweight RDF triplestore written in C using the Redland library." ;
+    okg:description "lightweight RDF triplestore written in C using the Redland library" ;
     okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
     okg:homepage <https://www.aelius.com/njh/redstore/> ;
     okg:latestVersion "0.5.4" ;
@@ -2197,7 +2185,7 @@
 
 <https://openknowledgegraphs.com/software/riq/> a okg:Software ;
     rdfs:label "RIQ" ;
-    okg:description "RIQ is a new software tool for fast processing of SPARQL queries on RDF quadruples. (Funding source: National Science Foundation Grant Nos. 1115871 and 1620023)" ;
+    okg:description "software tool for fast processing of SPARQL queries on RDF quadruples, funded by National Science Foundation Grant Nos. 1115871 and 1620023" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:programmingLanguage "C" ;
     okg:softwareType okg:SparqlTooling ;
@@ -2505,8 +2493,8 @@
     okg:description "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/souslesens/souslesensVocables> ;
-    okg:latestVersion "3.13.0" ;
-    okg:releaseDate "2026-07-31"^^xsd:date ;
+    okg:latestVersion "3.14.1" ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/souslesens/souslesensVocables> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -3717,21 +3705,6 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:title "Open Knowledge Graphs" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138639042> .
 
-<https://openknowledgegraphs.com/software/owlready2/> a okg:Software ;
-    rdfs:label "Owlready2" ;
-    okg:description "Owlready2 is a package for ontology-oriented programming in Python" ;
-    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
-    okg:homepage <https://bitbucket.org/jibalamy/owlready2> ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/rdflib/> ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://bitbucket.org/jibalamy/owlready2> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q29642950>,
-        <http://www.wikidata.org/entity/Q7397> ;
-    okg:title "Owlready2" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q116924857> .
-
 <https://openknowledgegraphs.com/software/protege/> a okg:Software ;
     rdfs:label "Protégé" ;
     okg:creator okg:Creator_Stanford_University_School_of_Medicine_Q4115969 ;
@@ -3785,24 +3758,6 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:title "rdf-validate-shacl" ;
     okg:uses <http://www.wikidata.org/entity/Q29377821> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140676343> .
-
-<https://openknowledgegraphs.com/software/rdflib/> a okg:Software ;
-    rdfs:label "RDFLib" ;
-    okg:description "Python library for working with RDF" ;
-    okg:hasLicense okg:License_BSD_licenses_Q191307,
-        okg:License_Resource_3_clause_BSD_License_Q18491847 ;
-    okg:homepage <https://rdflib.dev> ;
-    okg:latestVersion "7.6.0" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/owlready2/> ;
-    okg:releaseDate "2026-02-13"^^xsd:date ;
-    okg:softwareType okg:DeveloperLibrary ;
-    okg:sourceRepo <https://github.com/RDFLib/rdflib> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q188860>,
-        <http://www.wikidata.org/entity/Q29642950> ;
-    okg:title "RDFLib" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q7276224> .
 
 <https://openknowledgegraphs.com/software/robot-is-an-obo-tool/> a okg:Software ;
     rdfs:label "ROBOT is an OBO Tool" ;
@@ -3953,6 +3908,23 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
     rdfs:label "W3C Software License" ;
     okg:licenseName "W3C Software License" .
 
+<https://openknowledgegraphs.com/software/emmontopy/> a okg:Software ;
+    rdfs:label "EMMOntoPy" ;
+    okg:description "Python library for representing and working with ontologies" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://emmo-repo.github.io/EMMOntoPy/> ;
+    okg:latestVersion "0.11.4" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/owlready2/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:releaseDate "2026-05-13"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/emmo-repo/EMMOntoPy> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q29642950> ;
+    okg:title "EMMOntoPy" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q124653415> .
+
 <https://openknowledgegraphs.com/software/graphameleon-web-extension/> a okg:Software ;
     rdfs:label "Graphameleon Web extension" ;
     okg:creator okg:Creator_Benjamin_Stach_Q130811256,
@@ -4075,6 +4047,41 @@ okg:License_W3C_Software_License_Q3564577 a okg:License ;
         <http://www.wikidata.org/entity/Q341> ;
     okg:title "Ontology Development Kit" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q112336713> .
+
+<https://openknowledgegraphs.com/software/owlready2/> a okg:Software ;
+    rdfs:label "Owlready2" ;
+    okg:description "Owlready2 is a package for ontology-oriented programming in Python" ;
+    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
+    okg:homepage <https://bitbucket.org/jibalamy/owlready2> ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/emmontopy/>,
+        <https://openknowledgegraphs.com/software/rdflib/> ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://bitbucket.org/jibalamy/owlready2> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q29642950>,
+        <http://www.wikidata.org/entity/Q7397> ;
+    okg:title "Owlready2" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q116924857> .
+
+<https://openknowledgegraphs.com/software/rdflib/> a okg:Software ;
+    rdfs:label "RDFLib" ;
+    okg:description "Python library for working with RDF" ;
+    okg:hasLicense okg:License_BSD_licenses_Q191307,
+        okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://rdflib.dev> ;
+    okg:latestVersion "7.6.0" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/emmontopy/>,
+        <https://openknowledgegraphs.com/software/owlready2/> ;
+    okg:releaseDate "2026-02-13"^^xsd:date ;
+    okg:softwareType okg:DeveloperLibrary ;
+    okg:sourceRepo <https://github.com/RDFLib/rdflib> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q188860>,
+        <http://www.wikidata.org/entity/Q29642950> ;
+    okg:title "RDFLib" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7276224> .
 
 <https://openknowledgegraphs.com/software/reactodia/> a okg:Software ;
     rdfs:label "Reactodia" ;
@@ -4572,14 +4579,14 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:hasLicense okg:License_Apache_License_Q616526,
         okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://surrealdb.com> ;
-    okg:latestVersion "3.2.0" ;
+    okg:latestVersion "3.2.4" ;
     okg:programmingLanguage "Rust" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/arangodb/>,
         <https://openknowledgegraphs.com/software/arcadedb/>,
         <https://openknowledgegraphs.com/software/flockdb/>,
         <https://openknowledgegraphs.com/software/nitrosbase/>,
         <https://openknowledgegraphs.com/software/orientdb/> ;
-    okg:releaseDate "2026-07-06"^^xsd:date ;
+    okg:releaseDate "2026-08-17"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/surrealdb/surrealdb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,

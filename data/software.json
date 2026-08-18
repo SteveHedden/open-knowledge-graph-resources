@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T07:02:24Z",
+  "generatedAt": "2026-08-18T21:14:15Z",
   "items": [
     {
       "title": "4store",
@@ -516,7 +516,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/aws-neptune/",
-      "description": "AWS Graph Database",
+      "description": "AWS graph database service",
       "licenses": [
         "proprietary license"
       ],
@@ -681,7 +681,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/chowlk/",
-      "description": "Tool to transform an ontology diagram into OWL code.",
+      "description": "tool to transform an ontology diagram into OWL code",
       "sourceRepo": "https://github.com/oeg-upm/Chowlk",
       "licenses": [
         "Apache Software License 2.0"
@@ -774,7 +774,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/corese/",
-      "description": "Software platform implementing and extending the standards of the Semantic Web.",
+      "description": "semantic web software",
       "homepage": "https://project.inria.fr/corese/",
       "sourceRepo": "https://github.com/Wimmics/corese",
       "licenses": [
@@ -1176,7 +1176,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/",
-      "description": "Library for representing and working with ontologies in Python",
+      "description": "Python library for representing and working with ontologies",
       "homepage": "https://emmo-repo.github.io/EMMOntoPy/",
       "sourceRepo": "https://github.com/emmo-repo/EMMOntoPy",
       "licenses": [
@@ -1187,6 +1187,16 @@
       "softwareType": "Developer Library",
       "programmingLanguages": [
         "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "Owlready2",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/owlready2/"
+        },
+        {
+          "title": "RDFLib",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
+        }
       ]
     },
     {
@@ -1465,7 +1475,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/foops/",
-      "description": "Code for FOOPS! the OEG FAIR ontologies validator",
+      "description": "OEG FAIR ontologies validator",
       "homepage": "https://foops.linkeddata.es/FAIR_validator.html",
       "sourceRepo": "https://github.com/oeg-upm/fair_ontologies",
       "licenses": [
@@ -1600,7 +1610,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/gh-rdf3x/",
-      "description": "Extension of the rdf3x engine and the translatesparql tool",
+      "description": "extension of the rdf3x engine and the translatesparql tool",
       "sourceRepo": "https://github.com/gh-rdf3x/gh-rdf3x",
       "licenses": [
         "proprietary license"
@@ -1771,7 +1781,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/gruff/",
-      "description": "Commercial graph database",
+      "description": "commercial graph database software",
       "licenses": [
         "proprietary license"
       ],
@@ -2429,8 +2439,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "5.7.1",
-      "releaseDate": "2026-08-06",
+      "latestVersion": "5.8.0",
+      "releaseDate": "2026-08-17",
       "softwareType": "Knowledge Graph Construction",
       "programmingLanguages": [
         "XSLT"
@@ -2786,6 +2796,8 @@
       "licenses": [
         "GNU General Public License, version 2.0"
       ],
+      "latestVersion": "1.0.0",
+      "releaseDate": "2026-08-17",
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "C++"
@@ -3177,7 +3189,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/onto-tool/",
-      "description": "Tools to update and export ontology RDF.",
+      "description": "toolkit for updating and exporting ontologies in RDF",
       "sourceRepo": "https://github.com/semanticarts/ontology-toolkit",
       "licenses": [
         "Apache Software License 2.0"
@@ -3242,7 +3254,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontofox/",
-      "description": "Extract ontology terms and axioms: http://ontofox.hegroup.org",
+      "description": "tool for extracting ontology terms and axioms",
       "homepage": "https://ontofox.hegroup.org/",
       "sourceRepo": "https://github.com/OntoZoo/ontofox",
       "licenses": [
@@ -3357,8 +3369,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "0.11.0",
-      "releaseDate": "2026-08-15",
+      "latestVersion": "0.11.2",
+      "releaseDate": "2026-08-17",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "TypeScript"
@@ -3432,7 +3444,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/",
-      "description": "Online tool to automatically generate documentation and evaluation for Ontologies hosted on GitHub",
+      "description": "online tool for automatically generating documentation and evaluating Ontologies hosted on GitHub",
       "homepage": "http://ontoology.linkeddata.es/",
       "sourceRepo": "https://github.com/OnToology/OnToology",
       "licenses": [
@@ -3909,6 +3921,10 @@
       ],
       "relatedTools": [
         {
+          "title": "EMMOntoPy",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
+        },
+        {
           "title": "RDFLib",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/"
         }
@@ -3951,7 +3967,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/",
-      "description": "This project is a FAIRness assessment tool for ontologies, vocabularies and semantic resources.",
+      "description": "FAIRness assessment tool for ontologies, vocabularies and semantic resources",
       "homepage": "https://services.stageportal.lirmm.fr/fairness/v2/",
       "sourceRepo": "https://github.com/agroportal/fairness",
       "licenses": [
@@ -4707,6 +4723,10 @@
       ],
       "relatedTools": [
         {
+          "title": "EMMOntoPy",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/"
+        },
+        {
           "title": "Owlready2",
           "canonicalUrl": "https://openknowledgegraphs.com/software/owlready2/"
         }
@@ -4848,7 +4868,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/",
-      "description": "RedStore is a lightweight RDF triplestore written in C using the Redland library.",
+      "description": "lightweight RDF triplestore written in C using the Redland library",
       "homepage": "https://www.aelius.com/njh/redstore/",
       "sourceRepo": "https://github.com/njh/redstore",
       "licenses": [
@@ -4868,7 +4888,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/riq/",
-      "description": "RIQ is a new software tool for fast processing of SPARQL queries on RDF quadruples. (Funding source: National Science Foundation Grant Nos. 1115871 and 1620023)",
+      "description": "software tool for fast processing of SPARQL queries on RDF quadruples, funded by National Science Foundation Grant Nos. 1115871 and 1620023",
       "sourceRepo": "https://github.com/UMKC-BigDataLab/RIQ",
       "licenses": [
         "proprietary license"
@@ -5524,8 +5544,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "3.13.0",
-      "releaseDate": "2026-07-31",
+      "latestVersion": "3.14.1",
+      "releaseDate": "2026-08-17",
       "softwareType": "Ontology Engineering"
     },
     {
@@ -6082,8 +6102,8 @@
         "Apache License",
         "Business Source License 1.1"
       ],
-      "latestVersion": "3.2.0",
-      "releaseDate": "2026-07-06",
+      "latestVersion": "3.2.4",
+      "releaseDate": "2026-08-17",
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Rust"
