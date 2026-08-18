@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260818T070307Z-759d6af4260c",
+  "generationId": "20260818T210022Z-f18cc626448d",
   "startedAt": "2026-08-18T06:51:29Z",
   "sourceRetrievedAt": "2026-08-18T07:02:22Z",
-  "completedAt": "2026-08-18T07:03:07Z",
+  "completedAt": "2026-08-18T21:00:22Z",
   "counts": {
     "records": {
       "resources": 2999,
@@ -35,6 +35,34 @@
     {
       "path": "data/controlled_vocabularies.json",
       "sha256": "ef9e01d7f1309e4dc0b17915860762db30ca3f5a735783056a6fc1b95ceea70f"
+    },
+    {
+      "path": "data/jobs/jobs.json",
+      "sha256": "8ef2b763c0138fe9b549d0497e6d733ebc1e772ace237d6e7efcfb42354dc600"
+    },
+    {
+      "path": "data/jobs/jobs.ttl",
+      "sha256": "6e1576ea2f012294f5abbb47ae05ae6d0bfaf36a374e34bd8c9121c1afc63471"
+    },
+    {
+      "path": "data/jobs/raw/arbeitnow.json",
+      "sha256": "37601a0f27999d339dcefc8891adde6d99d8d0ecdcef733e1258f5e481346f76"
+    },
+    {
+      "path": "data/jobs/raw/himalayas.json",
+      "sha256": "2e2bbca365933670842803c26923492a472260fef3196da224816909fc798098"
+    },
+    {
+      "path": "data/jobs/raw/jobicy.json",
+      "sha256": "bb640231fe09215de4997abb71ba1a2ede5d54486fdd04f25cabe264fe1f1487"
+    },
+    {
+      "path": "data/jobs/raw/jooble.json",
+      "sha256": "6fcf6c4dd1c9c3abacef2852d6e9d0a53342cbbcd1a855a9a787518e4eaa4da4"
+    },
+    {
+      "path": "data/jobs/run.json",
+      "sha256": "de0670d757966334d7449c9e52002f86560ea2548abd23b90653bcfaa019ce01"
     },
     {
       "path": "data/ontologies.json",
@@ -74,7 +102,7 @@
     },
     {
       "path": "site/app.js",
-      "sha256": "d1bbdcbb905327fb4922ff712d961057bbce15b8584b197eac6275e315a8691f"
+      "sha256": "8d96b863e57c6f10c30d908d9dd284308d6a222d26853d044df9750bd8791788"
     },
     {
       "path": "site/favicon.png",
@@ -86,7 +114,7 @@
     },
     {
       "path": "site/index.html",
-      "sha256": "0c9480c71d774bb6de9dfb715d27993aa9029ce413c83ff40e03339e658bda07"
+      "sha256": "54c30bdd9557794348bf2279eb6fd8a75caaaa6fd656b68040d5c0b041d3849c"
     },
     {
       "path": "site/llms.txt",
@@ -110,7 +138,7 @@
     },
     {
       "path": "site/style.css",
-      "sha256": "584b93ae0d4d2ceeda080ad39cea8bc686218c50333b0059470c203692cf2a26"
+      "sha256": "ca1849e6d6f2aa9ea745913b5ef3966bd82677f214ed05a5c09394088f0fee77"
     },
     {
       "path": "sources.ttl",

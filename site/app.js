@@ -10,6 +10,7 @@
     ],
     pageQids: ["./data/page_qids.json", "../data/page_qids.json"],
     manifest: ["./data/manifest.json", "../data/manifest.json"],
+    jobs: ["./data/jobs/jobs.json", "../data/jobs/jobs.json"],
   };
 
   const DEFAULT_STATE = {
@@ -31,34 +32,48 @@
   const TAB_DEFAULT_SORT = {
     ontologies: { sort: "documentationScore", order: "desc" },
     software: { sort: "releaseDate", order: "desc" },
+    jobs: { sort: "datePosted", order: "desc" },
   };
 
   const SORT_FIELDS = {
     ontologies: new Set(["title", "types", "licenses", "partOf", "documentationScore"]),
     software: new Set(["title", "licenses", "latestVersion", "releaseDate"]),
+    jobs: new Set(["title", "employer", "location", "remote", "datePosted", "salary"]),
   };
 
   const TABLE_BODY_IDS = {
     ontologies: "ontologies-table-body",
     software: "software-table-body",
+    jobs: "jobs-table-body",
   };
 
   const CARD_CONTAINER_IDS = {
     ontologies: "ontologies-cards",
     software: "software-cards",
+    // Jobs deliberately has no mobile card layout in this first pass --
+    // renderCards() no-ops when it can't find a container for the tab, and
+    // render() forces the table view for jobs regardless of viewport.
+  };
+
+  const COLUMN_COUNTS = {
+    ontologies: 6,
+    software: 6,
+    jobs: 7,
   };
 
   const PANEL_IDS = {
     ontologies: "panel-ontologies",
     software: "panel-software",
+    jobs: "panel-jobs",
   };
 
   const TAB_IDS = {
     ontologies: "tab-ontologies",
     software: "tab-software",
+    jobs: "tab-jobs",
   };
 
-  const TAB_ORDER = ["ontologies", "software"];
+  const TAB_ORDER = ["ontologies", "software", "jobs"];
   const PAGE_SIZE = 50;
   const RESPONSIVE_QUERY = "(max-width: 760px)";
   const SEARCH_DEBOUNCE_MS = 180;
@@ -92,7 +107,8 @@
   const store = {
     ontologies: [],
     software: [],
-    loadStatus: { ontologies: "loading", software: "loading" },
+    jobs: [],
+    loadStatus: { ontologies: "loading", software: "loading", jobs: "loading" },
     pageSlugs: { resource: {}, software: {} },
     manifest: null,
   };
@@ -263,7 +279,7 @@
   }
 
   function isValidTab(tab) {
-    return tab === "ontologies" || tab === "software";
+    return tab === "ontologies" || tab === "software" || tab === "jobs";
   }
 
   function isValidOrder(order) {
@@ -437,6 +453,78 @@
       .toLowerCase();
   }
 
+  // remote is true / false / undefined and each means something different --
+  // Himalayas/Jobicy/Remotive are remote-only boards (always true), Arbeitnow
+  // reports a real remote/on-site flag, and Jooble only ever sets remote:true
+  // when its location field literally says "Remote" and otherwise leaves it
+  // unset. Never collapse false and undefined into one label.
+  function jobRemoteLabel(item) {
+    if (item.remote === true) return "Remote available";
+    if (item.remote === false) return "On-site";
+    return "Not reported";
+  }
+
+  // true (Remote available) sorts before false (On-site), which sorts before
+  // undefined (not reported) -- an explicit "no" is still more informative
+  // than no answer at all.
+  function jobRemoteRank(item) {
+    if (item.remote === true) return 0;
+    if (item.remote === false) return 1;
+    return 2;
+  }
+
+  // Normalizes a structured baseSalary to an annual-equivalent midpoint so
+  // postings quoted on different cadences (annual vs monthly, etc.) rank
+  // sensibly against each other. Does not attempt currency conversion --
+  // every source observed so far reports USD only; a mixed-currency ranking
+  // would need live FX rates, which is out of scope here.
+  const SALARY_ANNUALIZE_MULTIPLIER = {
+    annual: 1,
+    yearly: 1,
+    monthly: 12,
+    weekly: 52,
+    daily: 260,
+    hourly: 2080,
+  };
+
+  function jobSalaryRank(item) {
+    const baseSalary = item.baseSalary;
+    if (!baseSalary || typeof baseSalary !== "object") {
+      return null;
+    }
+    const min = Number(baseSalary.minValue);
+    const max = Number(baseSalary.maxValue);
+    const values = [min, max].filter((value) => Number.isFinite(value));
+    if (!values.length) {
+      return null;
+    }
+    const midpoint = values.reduce((sum, value) => sum + value, 0) / values.length;
+    const unit = typeof baseSalary.unitText === "string" ? baseSalary.unitText.toLowerCase() : "";
+    const multiplier = SALARY_ANNUALIZE_MULTIPLIER[unit] ?? 1;
+    return midpoint * multiplier;
+  }
+
+  function normalizeJobItem(record) {
+    const safeItem = { ...record };
+    safeItem._searchText = buildJobSearchText(safeItem);
+    return safeItem;
+  }
+
+  function buildJobSearchText(item) {
+    const parts = [
+      item.title,
+      item.description,
+      item.hiringOrganization,
+      item.location,
+      item.sourceName,
+      item.salary,
+    ];
+    return parts
+      .filter((value) => typeof value === "string" && value.trim())
+      .join(" ")
+      .toLowerCase();
+  }
+
   function formatDate(dateInput) {
     if (!dateInput) {
       return "";
@@ -503,6 +591,16 @@
     if (key === "licenses") {
       return Array.isArray(item.licenses) && item.licenses.length ? item.licenses.join(", ") : "";
     }
+    if (key === "employer") {
+      return item.hiringOrganization || "";
+    }
+    if (key === "remote") {
+      return jobRemoteRank(item);
+    }
+    if (key === "salary") {
+      const rank = jobSalaryRank(item);
+      return rank === null ? "" : rank;
+    }
     return item[key] || "";
   }
 
@@ -514,10 +612,10 @@
   }
 
   function compareValues(aValue, bValue, key) {
-    if (key === "documentationScore") {
+    if (key === "documentationScore" || key === "remote" || key === "salary") {
       return Number(aValue) - Number(bValue);
     }
-    if (key === "releaseDate") {
+    if (key === "releaseDate" || key === "datePosted") {
       const aTime = Date.parse(String(aValue));
       const bTime = Date.parse(String(bValue));
       return aTime - bTime;
@@ -805,6 +903,85 @@
     return row;
   }
 
+  function renderJobRow(item) {
+    const row = document.createElement("tr");
+
+    const titleCell = document.createElement("td");
+    titleCell.textContent = item.title;
+    row.appendChild(titleCell);
+
+    const employerCell = document.createElement("td");
+    employerCell.textContent = item.hiringOrganization || "—";
+    row.appendChild(employerCell);
+
+    const locationCell = document.createElement("td");
+    locationCell.textContent = item.location || "—";
+    row.appendChild(locationCell);
+
+    const remoteCell = document.createElement("td");
+    remoteCell.textContent = jobRemoteLabel(item);
+    row.appendChild(remoteCell);
+
+    const postedCell = document.createElement("td");
+    postedCell.textContent = item.datePosted ? formatDate(item.datePosted) : "—";
+    row.appendChild(postedCell);
+
+    const salaryCell = document.createElement("td");
+    salaryCell.textContent = item.salary || "—";
+    row.appendChild(salaryCell);
+
+    const linksCell = document.createElement("td");
+    linksCell.className = "link-cell";
+    if (item.canonicalUrl) {
+      linksCell.appendChild(
+        createLink(item.canonicalUrl, "View posting", {
+          linkType: "job_posting",
+          resourceTitle: item.title,
+          tab: "jobs",
+        })
+      );
+      // For most sources canonicalUrl is always validated against the
+      // source's own allowed host, so a separate attribution link would be
+      // redundant. Arbeitnow is the one exception: its feed sometimes
+      // supplies the employer's own listing URL instead of an arbeitnow.com
+      // one (see the comment on canonical_url in arbeitnow_adapter.py), and
+      // Arbeitnow's API terms require a link back to arbeitnow.com
+      // regardless of where the posting itself links. Show a fallback
+      // attribution link whenever the posting link doesn't already satisfy
+      // that -- verified against real data: this affects roughly 1 in 300
+      // current Arbeitnow postings, but it is a real per-source contractual
+      // requirement, not a hypothetical.
+      const canonicalHost = extractHost(item.canonicalUrl);
+      const attributionHost = extractHost(item.sourceAttributionUrl);
+      if (
+        item.sourceAttributionUrl &&
+        canonicalHost &&
+        attributionHost &&
+        canonicalHost !== attributionHost
+      ) {
+        const separator = document.createElement("span");
+        separator.textContent = " | ";
+        linksCell.appendChild(separator);
+        linksCell.appendChild(
+          createLink(
+            item.sourceAttributionUrl,
+            `Source: ${item.sourceName || "original board"}`,
+            {
+              linkType: "source_attribution",
+              resourceTitle: item.title,
+              tab: "jobs",
+            }
+          )
+        );
+      }
+    } else {
+      linksCell.textContent = "—";
+    }
+    row.appendChild(linksCell);
+
+    return row;
+  }
+
   function appendCardMetaLine(card, label, value) {
     if (!value) {
       return;
@@ -963,17 +1140,24 @@
       const noResultsMessage =
         state.q || hasActiveCategoryFilter()
           ? "No matching resources for the current filters."
+          : state.tab === "jobs"
+          ? "No KG job postings are available right now."
           : "No resources available.";
       tableBody.appendChild(
         renderNoResultsTableRow(
-          6,
+          COLUMN_COUNTS[state.tab] || 6,
           noResultsMessage
         )
       );
       return;
     }
 
-    const rowRenderer = state.tab === "ontologies" ? renderOntologyRow : renderSoftwareRow;
+    const rowRenderer =
+      state.tab === "ontologies"
+        ? renderOntologyRow
+        : state.tab === "jobs"
+        ? renderJobRow
+        : renderSoftwareRow;
     items.forEach((item) => {
       tableBody.appendChild(rowRenderer(item));
     });
@@ -1020,7 +1204,12 @@
   }
 
   function updateResultsMeta(pageInfo, matchingCount, totalCount) {
-    const label = state.tab === "ontologies" ? "resources" : "software entries";
+    const label =
+      state.tab === "ontologies"
+        ? "resources"
+        : state.tab === "jobs"
+        ? "job postings"
+        : "software entries";
     const firstShown = matchingCount ? pageInfo.start + 1 : 0;
     const lastShown = pageInfo.start + pageInfo.items.length;
     const rangeText =
@@ -1124,6 +1313,13 @@
     });
   }
 
+  // Jobs has no mobile card layout in this first pass (see CARD_CONTAINER_IDS),
+  // so it always renders as a table -- renderCards() would silently no-op
+  // for it and leave the panel blank on narrow viewports otherwise.
+  function shouldRenderCards() {
+    return isCardView() && state.tab !== "jobs";
+  }
+
   function render() {
     clearAllPresentations();
     updateTabUi();
@@ -1135,9 +1331,11 @@
     if (store.loadStatus[state.tab] === "error") {
       const message =
         state.tab === "ontologies"
-          ? "Unable to load ontologies and vocabularies. The software catalog remains available."
-          : "Unable to load software. The ontology catalog remains available.";
-      if (isCardView()) {
+          ? "Unable to load ontologies and vocabularies. The rest of the catalog remains available."
+          : state.tab === "jobs"
+          ? "Unable to load KG job postings. The rest of the catalog remains available."
+          : "Unable to load software. The rest of the catalog remains available.";
+      if (shouldRenderCards()) {
         renderCards([]);
       } else {
         renderTable([]);
@@ -1151,7 +1349,7 @@
 
     const matchingItems = getActiveItems();
     const pageInfo = paginateItems(matchingItems);
-    if (isCardView()) {
+    if (shouldRenderCards()) {
       renderCards(pageInfo.items);
     } else {
       renderTable(pageInfo.items);
@@ -1400,13 +1598,14 @@
   async function init() {
     setLoadingState();
 
-    const [ontologyResult, softwareResult, vocabularyResult, qidResult, manifestResult] =
+    const [ontologyResult, softwareResult, vocabularyResult, qidResult, manifestResult, jobsResult] =
       await Promise.allSettled([
         fetchJsonWithFallback(DATA_PATHS.ontologies),
         fetchJsonWithFallback(DATA_PATHS.software),
         fetchJsonWithFallback(DATA_PATHS.controlledVocabularies),
         fetchJsonWithFallback(DATA_PATHS.pageQids),
         fetchJsonWithFallback(DATA_PATHS.manifest),
+        fetchJsonWithFallback(DATA_PATHS.jobs),
       ]);
 
     if (vocabularyResult.status === "fulfilled") {
@@ -1455,6 +1654,20 @@
     } else {
       setFreshnessMetadata(null);
       console.warn("Catalog freshness metadata unavailable", manifestResult.reason);
+    }
+
+    // jobs.json is a bare array of records (all classifications), not the
+    // {items, generatedAt} shape ontologies/software use, so it needs its
+    // own handling rather than joining the generic per-tab loop above.
+    if (jobsResult.status === "fulfilled" && Array.isArray(jobsResult.value.payload)) {
+      store.jobs = jobsResult.value.payload
+        .filter((record) => record.classification === "qualified" || record.classification === "review")
+        .map(normalizeJobItem);
+      store.loadStatus.jobs = "ready";
+    } else {
+      store.jobs = [];
+      store.loadStatus.jobs = "error";
+      console.warn("jobs catalog unavailable", jobsResult.reason || "Invalid payload");
     }
 
     state = normalizeState(parseStateFromUrl());

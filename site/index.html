@@ -121,6 +121,18 @@
             >
               Software
             </button>
+            <button
+              id="tab-jobs"
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-jobs"
+              tabindex="-1"
+              data-tab="jobs"
+              type="button"
+            >
+              Jobs
+            </button>
           </div>
           <div class="search-wrap">
             <label for="catalog-search">Search</label>
@@ -254,6 +266,60 @@
         <div id="software-cards" class="cards" aria-label="Software cards"></div>
       </section>
 
+      <section
+        id="panel-jobs"
+        class="panel"
+        role="tabpanel"
+        aria-labelledby="tab-jobs"
+        data-panel="jobs"
+        hidden
+      >
+        <h2 class="sr-only">Jobs</h2>
+        <div class="table-shell">
+          <table class="resource-table">
+            <caption class="sr-only">
+              Knowledge-graph-related job postings, aggregated from public job boards.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <button class="sort-button" data-sort="title" aria-label="Sort by job title" type="button">
+                    Job Title
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="employer" aria-label="Sort by employer" type="button">
+                    Employer
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="location" aria-label="Sort by location" type="button">
+                    Location
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="remote" aria-label="Sort by remote status" type="button">
+                    Remote
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="datePosted" aria-label="Sort by date posted" type="button">
+                    Posted
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="salary" aria-label="Sort by salary" type="button">
+                    Salary
+                  </button>
+                </th>
+                <th scope="col">Links</th>
+              </tr>
+            </thead>
+            <tbody id="jobs-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+
       <nav id="catalog-pagination" class="pagination" aria-label="Catalog pages" hidden>
         <button id="previous-page" type="button" aria-label="Go to previous catalog page">
           Previous
@@ -274,6 +340,7 @@
       <nav class="footer-links" aria-label="Metadata links">
         <a href="./data/ontologies.ttl" target="_blank" rel="noopener noreferrer">ontologies.ttl</a>
         <a href="./data/software.ttl" target="_blank" rel="noopener noreferrer">software.ttl</a>
+        <a href="./data/jobs/jobs.ttl" target="_blank" rel="noopener noreferrer">jobs.ttl</a>
         <a href="https://github.com/SteveHedden/open-knowledge-graphs" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://api.openknowledgegraphs.com/" target="_blank" rel="noopener noreferrer">API</a>
       </nav>
