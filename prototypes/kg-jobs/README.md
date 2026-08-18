@@ -238,6 +238,17 @@ source's local classification is the sole eligibility decision regardless of
 how well or poorly its own search filtered candidates — this is a defense
 against exactly that kind of source-side unreliability.
 
+Jooble's JSON response has no open/closed or reliable age field — its
+`updated` field tracks when Jooble last touched its index entry, not when the
+job was actually posted (verified directly: a posting with `updated` only 8
+days old carried a true age of 206 days in its own tracking-link metadata; the
+median true age across a live pull was 62 days, with some postings over 600
+days old). The only trustworthy age signal is `jobAge`, a query parameter
+Jooble stamps onto its outbound tracking link. `scripts/jooble_adapter.py`
+parses it and drops postings older than `kgjobs:maxPostingAgeDays` in
+`sources.ttl` (45 days by default) before they ever reach the classifier —
+configurable per source, currently only set for Jooble.
+
 **Running `jooble` requires a real, approved API key**, obtained instantly
 and for free at <https://jooble.org/api/about> (fill in your name, position,
 email, and a real website — the request form's own language is aimed at

@@ -13,6 +13,7 @@ from himalayas_adapter import records_from_payload as himalayas_records  # noqa:
 from live_records import classify_records, deduplicate  # noqa: E402
 from live_sources import LivePipelineError, load_source_registry  # noqa: E402
 from remotive_adapter import records_from_payload  # noqa: E402
+from jooble_adapter import job_age_days, records_from_payload as jooble_records  # noqa: E402
 
 import pytest
 
@@ -238,3 +239,43 @@ def test_visible_field_fallback_only_collapses_records_without_stable_identity()
     assert result == reversed_result
     assert len(result) == 1
     assert result[0]["discoveredBy"] == ["knowledge graph", "ontology"]
+
+
+def test_job_age_days_parses_the_tracking_link_and_defaults_to_none():
+    assert job_age_days("https://jooble.org/away/123?p=1&jobAge=206&rgn=-1") == 206
+    assert job_age_days("https://jooble.org/away/123?jobAge=0") == 0
+    assert job_age_days("https://jooble.org/away/123?p=1&rgn=-1") is None
+    assert job_age_days("") is None
+    assert job_age_days(None) is None
+
+
+def test_jooble_filters_postings_older_than_the_registry_cutoff():
+    source = load_source_registry(ROOT / "sources.ttl")["jooble"]
+    assert source.max_posting_age_days == 45
+    payload = {
+        "totalCount": 2,
+        "jobs": [
+            {
+                "id": 1,
+                "title": "Fresh Ontology Engineer",
+                "company": "Fresh Co",
+                "snippet": "Recently posted role.",
+                "link": "https://jooble.org/away/1?p=1&jobAge=10&rgn=-1",
+                "updated": "2026-08-17T00:00:00.0000000",
+            },
+            {
+                "id": 2,
+                "title": "Stale Ontology Engineer",
+                "company": "Stale Co",
+                # "updated" looks recent even though the true age (jobAge)
+                # is 206 days -- this is the real, verified discrepancy
+                # that motivated the filter, reproduced here directly.
+                "snippet": "This looks recent but is not.",
+                "link": "https://jooble.org/away/2?p=1&jobAge=206&rgn=-1",
+                "updated": "2026-08-10T00:00:00.0000000",
+            },
+        ],
+    }
+    records, fetched, complete = jooble_records(payload, source, NOW, "ontology")
+    assert fetched == 2  # both counted as fetched -- filtering is not a fetch failure
+    assert [record["title"] for record in records] == ["Fresh Ontology Engineer"]

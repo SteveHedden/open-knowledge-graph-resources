@@ -69,6 +69,7 @@ class SourceConfig:
     max_response_bytes: int
     max_records_per_run: int
     max_requests_per_run: int
+    max_posting_age_days: int | None = None
 
     @property
     def source_queries(self) -> tuple[str, ...]:
@@ -98,6 +99,13 @@ def _positive_int(value, label: str) -> int:
     if parsed <= 0:
         raise LivePipelineError(f"source registry {label} must be positive")
     return parsed
+
+
+def _optional_positive_int(value, label: str) -> int | None:
+    """Like _positive_int, but the registry property may simply be absent."""
+    if value is None:
+        return None
+    return _positive_int(value, label)
 
 
 def load_source_registry(path: Path) -> dict[str, SourceConfig]:
@@ -240,6 +248,9 @@ def load_source_registry(path: Path) -> dict[str, SourceConfig]:
             max_requests_per_run=_positive_int(
                 _one(graph, dataset, KGJOBS.maxRequestsPerRun, "maximum requests per run"),
                 "maximum requests per run",
+            ),
+            max_posting_age_days=_optional_positive_int(
+                graph.value(dataset, KGJOBS.maxPostingAgeDays), "maximum posting age in days"
             ),
         )
         if config.adapter in {"himalayas", "jobicy", "jooble"}:

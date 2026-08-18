@@ -12,9 +12,26 @@ live_sources.fetch_json_http, which also builds the real endpoint URL
 from __future__ import annotations
 
 import hashlib
+import re
 
 from live_sources import LivePipelineError, SourceConfig
 from remotive_adapter import canonicalize_url, html_to_text, _date_only
+
+_JOB_AGE_RE = re.compile(r"[?&]jobAge=(\d+)\b")
+
+
+def job_age_days(link: str) -> int | None:
+    """Extract Jooble's true posting age from its tracking link.
+
+    Jooble's JSON response has no open/closed or reliable age field --
+    "updated" tracks when Jooble last touched its index entry, not when the
+    job was actually posted (verified directly: a posting with "updated"
+    only 8 days old carried jobAge=206 in this same field). jobAge, a query
+    parameter on the outbound tracking link, is the only trustworthy signal
+    available.
+    """
+    match = _JOB_AGE_RE.search(link or "")
+    return int(match.group(1)) if match else None
 
 
 def normalize_jooble_job(
@@ -99,6 +116,14 @@ def records_from_payload(
     bounded = jobs[:effective_limit]
     records = []
     for index, item in enumerate(bounded):
+        # A posting older than the registry's freshness cutoff is a normal,
+        # expected skip -- not a normalization failure -- so it is checked
+        # before normalize_jooble_job, whose None return is reserved for
+        # genuinely malformed input.
+        if source.max_posting_age_days is not None and isinstance(item, dict):
+            age = job_age_days(str(item.get("link") or ""))
+            if age is not None and age > source.max_posting_age_days:
+                continue
         normalized = normalize_jooble_job(item, source, retrieved_at, query)
         if normalized is None:
             raise LivePipelineError(
