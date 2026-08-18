@@ -1,0 +1,507 @@
+@prefix kgjobs: <https://openknowledgegraphs.com/prototypes/kg-jobs/ontology#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# KG Jobs prototype ontology
+#
+# Minimal structural model for a local, network-free proof of concept
+# that classifies synthetic job postings (schema:JobPosting) as
+# qualified / review / not_match based on posting content, and records
+# an explainable evidence trail for every decision. This ontology mints
+# local terms only where Schema.org, SKOS, DCAT, PROV-O, and Dublin Core
+# Terms have no suitable existing term (evidence modeling, match terms,
+# classification outcome). Everything else reuses those vocabularies
+# directly.
+#
+# Scope: prototypes/kg-jobs/ only. Not part of the production OKG
+# ontology or catalog pipeline.
+#################################################################
+
+<https://openknowledgegraphs.com/prototypes/kg-jobs/ontology> a owl:Ontology ;
+    rdfs:label "KG Jobs Prototype Ontology"@en ;
+    rdfs:comment "Local structural model and SHACL shapes for the kg-jobs discovery prototype. Not part of the production OKG ontology."@en .
+
+#################################################################
+# Classes
+#################################################################
+
+kgjobs:Evidence a rdfs:Class ;
+    rdfs:label "Evidence"@en ;
+    rdfs:comment "A single explainable match between a job posting field and a controlled-vocabulary concept, including whether the match was negated in context."@en .
+
+kgjobs:MatchTerm a rdfs:Class ;
+    rdfs:label "Match Term"@en ;
+    rdfs:comment "One literal surface form (a preferred or alternate label) that the classifier searches for, together with whether matching is case-sensitive."@en .
+
+kgjobs:Employer a rdfs:Class ;
+    rdfs:subClassOf schema:Organization ;
+    rdfs:label "Employer"@en ;
+    rdfs:comment "A hiring organization referenced by one or more job postings, identified by a single stable URI (scripts/entities.py mints one per distinct employer name) rather than a fresh blank node per posting. Intended as an attachment point for a human-verified owl:sameAs link to the employer's Wikidata item; no such link is ever added automatically, and QIDs are never guessed."@en .
+
+kgjobs:QueryFamily a rdfs:Class ;
+    rdfs:label "Query Family"@en ;
+    rdfs:comment "A stable, RDF-declared candidate-discovery query with ordered text and links to the controlled concepts that motivate it. A query family retrieves candidates but never determines KG-job classification."@en .
+
+kgjobs:QueryExecution a rdfs:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:label "Query Execution"@en ;
+    rdfs:comment "One execution of a declared query family during a live-ingestion activity, with the exact executed text and bounded result counts."@en .
+
+#################################################################
+# Properties on schema:JobPosting
+#################################################################
+
+kgjobs:classification a rdf:Property ;
+    rdfs:label "classification"@en ;
+    rdfs:comment "The classifier's outcome for a job posting: qualified, review, or not_match."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range xsd:string .
+
+kgjobs:hasEvidence a rdf:Property ;
+    rdfs:label "has evidence"@en ;
+    rdfs:comment "Links a job posting to one piece of explainable match evidence."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range kgjobs:Evidence .
+
+#################################################################
+# Properties on kgjobs:Evidence
+#################################################################
+
+kgjobs:matchedConcept a rdf:Property ;
+    rdfs:label "matched concept"@en ;
+    rdfs:comment "The skos:Concept this evidence matched against."@en ;
+    rdfs:domain kgjobs:Evidence ;
+    rdfs:range skos:Concept .
+
+kgjobs:conceptLabel a rdf:Property ;
+    rdfs:label "concept label"@en ;
+    rdfs:comment "Denormalized skos:prefLabel of the matched concept, carried on the evidence node for a self-contained explanation."@en ;
+    rdfs:domain kgjobs:Evidence ;
+    rdfs:range xsd:string .
+
+kgjobs:conceptScheme a rdf:Property ;
+    rdfs:label "concept scheme"@en ;
+    rdfs:comment "Denormalized rdfs:label of the skos:ConceptScheme the matched concept belongs to (Job Roles, KG Skills and Technologies, or KG Activities)."@en ;
+    rdfs:domain kgjobs:Evidence ;
+    rdfs:range xsd:string .
+
+kgjobs:matchStrength a rdf:Property ;
+    rdfs:label "match strength"@en ;
+    rdfs:comment "Local match strength: 'strong' or 'contextual'. Used both on skos:Concept (its default strength) and denormalized on kgjobs:Evidence (the strength applied for this match)."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:matchedPhrase a rdf:Property ;
+    rdfs:label "matched phrase"@en ;
+    rdfs:comment "The exact phrase found in the source field."@en ;
+    rdfs:domain kgjobs:Evidence ;
+    rdfs:range xsd:string .
+
+kgjobs:sourceField a rdf:Property ;
+    rdfs:label "source field"@en ;
+    rdfs:comment "Which posting field the match was found in: title, description, qualifications, or responsibilities."@en ;
+    rdfs:domain kgjobs:Evidence ;
+    rdfs:range xsd:string .
+
+kgjobs:negated a rdf:Property ;
+    rdfs:label "negated"@en ;
+    rdfs:comment "True if a local negation cue (e.g. 'no', 'not', 'without') was detected immediately preceding the matched phrase, meaning this match does not count as positive evidence."@en ;
+    rdfs:domain kgjobs:Evidence ;
+    rdfs:range xsd:boolean .
+
+#################################################################
+# Properties on skos:Concept (vocabulary-side)
+#################################################################
+
+kgjobs:hasMatchTerm a rdf:Property ;
+    rdfs:label "has match term"@en ;
+    rdfs:comment "Links a skos:Concept to one kgjobs:MatchTerm the classifier should search for."@en ;
+    rdfs:domain skos:Concept ;
+    rdfs:range kgjobs:MatchTerm .
+
+#################################################################
+# Properties on kgjobs:MatchTerm
+#################################################################
+
+kgjobs:termText a rdf:Property ;
+    rdfs:label "term text"@en ;
+    rdfs:comment "The literal surface form to search for."@en ;
+    rdfs:domain kgjobs:MatchTerm ;
+    rdfs:range xsd:string .
+
+kgjobs:caseSensitive a rdf:Property ;
+    rdfs:label "case sensitive"@en ;
+    rdfs:comment "True if this term must match with exact case (used for short acronyms and stylized brand names to avoid ordinary-word collisions); false for case-insensitive phrase matching."@en ;
+    rdfs:domain kgjobs:MatchTerm ;
+    rdfs:range xsd:boolean .
+
+#################################################################
+# Properties on the source registry (sources.ttl)
+#################################################################
+
+kgjobs:retrievalMode a rdf:Property ;
+    rdfs:label "retrieval mode"@en ;
+    rdfs:comment "How this dataset is retrieved, e.g. 'local-file'. Used to record that the prototype's fixtures are never fetched over the network."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:networkFree a rdf:Property ;
+    rdfs:label "network free"@en ;
+    rdfs:comment "True if this dataset requires no network access to read."@en ;
+    rdfs:range xsd:boolean .
+
+#################################################################
+# Properties for explicit, local-only live ingestion
+#################################################################
+
+kgjobs:adapter a rdf:Property ;
+    rdfs:label "adapter"@en ;
+    rdfs:comment "The reviewed source adapter used to interpret a source distribution. This is a registry key, never an executable class name."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:searchEnabled a rdf:Property ;
+    rdfs:label "search enabled"@en ;
+    rdfs:comment "True when a source may be queried by an explicitly enabled local live-ingestion run."@en ;
+    rdfs:range xsd:boolean .
+
+kgjobs:sourceQuery a rdf:Property ;
+    rdfs:label "source query"@en ;
+    rdfs:comment "Links a search source to one or more stable, bounded candidate-retrieval query families. Query families are provenance, not classification evidence; the RDF vocabulary remains the classifier authority."@en ;
+    rdfs:domain dcat:Dataset ;
+    rdfs:range kgjobs:QueryFamily .
+
+kgjobs:queryText a rdf:Property ;
+    rdfs:label "query text"@en ;
+    rdfs:comment "The exact source query text declared for a query family."@en ;
+    rdfs:domain kgjobs:QueryFamily ;
+    rdfs:range xsd:string .
+
+kgjobs:queryOrder a rdf:Property ;
+    rdfs:label "query order"@en ;
+    rdfs:comment "The stable one-based request order of a query family within its source."@en ;
+    rdfs:domain kgjobs:QueryFamily ;
+    rdfs:range xsd:integer .
+
+kgjobs:hasQueryExecution a rdf:Property ;
+    rdfs:label "has query execution"@en ;
+    rdfs:comment "Links a live-ingestion activity to one query-family execution made during that run."@en ;
+    rdfs:domain prov:Activity ;
+    rdfs:range kgjobs:QueryExecution .
+
+kgjobs:queryFamily a rdf:Property ;
+    rdfs:label "query family"@en ;
+    rdfs:comment "Links an execution back to the stable RDF query-family definition that authorized it."@en ;
+    rdfs:domain kgjobs:QueryExecution ;
+    rdfs:range kgjobs:QueryFamily .
+
+kgjobs:executedQueryText a rdf:Property ;
+    rdfs:label "executed query text"@en ;
+    rdfs:comment "The exact query text sent to the source for this execution, copied into run provenance so the run remains self-describing."@en ;
+    rdfs:domain kgjobs:QueryExecution ;
+    rdfs:range xsd:string .
+
+kgjobs:returnedCount a rdf:Property ;
+    rdfs:label "returned count"@en ;
+    rdfs:comment "Number of candidate records returned and accepted from this query response before cross-query deduplication."@en ;
+    rdfs:domain kgjobs:QueryExecution ;
+    rdfs:range xsd:nonNegativeInteger .
+
+kgjobs:totalCount a rdf:Property ;
+    rdfs:label "total count"@en ;
+    rdfs:comment "Source-reported total candidate count for this query at execution time."@en ;
+    rdfs:domain kgjobs:QueryExecution ;
+    rdfs:range xsd:nonNegativeInteger .
+
+kgjobs:queryComplete a rdf:Property ;
+    rdfs:label "query complete"@en ;
+    rdfs:comment "True when this bounded response covered every source-reported result for the executed query."@en ;
+    rdfs:domain kgjobs:QueryExecution ;
+    rdfs:range xsd:boolean .
+
+kgjobs:allowedHost a rdf:Property ;
+    rdfs:label "allowed host"@en ;
+    rdfs:comment "Exact HTTPS hostname permitted for requests to this source."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:minRefreshIntervalSeconds a rdf:Property ;
+    rdfs:label "minimum refresh interval in seconds"@en ;
+    rdfs:comment "Minimum time between successful local refresh attempts for this source."@en ;
+    rdfs:range xsd:decimal .
+
+kgjobs:requestTimeoutSeconds a rdf:Property ;
+    rdfs:label "request timeout in seconds"@en ;
+    rdfs:comment "Per-request network timeout for this source."@en ;
+    rdfs:range xsd:integer .
+
+kgjobs:maxResponseBytes a rdf:Property ;
+    rdfs:label "maximum response bytes"@en ;
+    rdfs:comment "Maximum accepted response body size for one request."@en ;
+    rdfs:range xsd:integer .
+
+kgjobs:maxRecordsPerRun a rdf:Property ;
+    rdfs:label "maximum records per run"@en ;
+    rdfs:comment "Maximum source records accepted across all bounded requests in one run."@en ;
+    rdfs:range xsd:integer .
+
+kgjobs:maxRequestsPerRun a rdf:Property ;
+    rdfs:label "maximum requests per run"@en ;
+    rdfs:comment "Hard upper bound on paginated API requests made by one explicitly invoked local run."@en ;
+    rdfs:range xsd:integer .
+
+kgjobs:attributionText a rdf:Property ;
+    rdfs:label "attribution text"@en ;
+    rdfs:comment "Human-readable source attribution that must accompany locally displayed jobs."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:attributionURL a rdf:Property ;
+    rdfs:label "attribution URL"@en ;
+    rdfs:comment "Provider URL that the local reviewer links from its attribution."@en .
+
+kgjobs:termsURL a rdf:Property ;
+    rdfs:label "terms URL"@en ;
+    rdfs:comment "Official documentation and terms page governing use of the registered source."@en .
+
+kgjobs:sourceRecordId a rdf:Property ;
+    rdfs:label "source record identifier"@en ;
+    rdfs:comment "The record identifier supplied by the registered source."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range xsd:string .
+
+kgjobs:canonicalFingerprint a rdf:Property ;
+    rdfs:label "canonical fingerprint"@en ;
+    rdfs:comment "Deterministic SHA-256 fingerprint used to deduplicate canonical job URLs."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range xsd:string .
+
+kgjobs:firstSeenAt a rdf:Property ;
+    rdfs:label "first seen at"@en ;
+    rdfs:comment "UTC time at which this local pipeline first observed the posting."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range xsd:dateTime .
+
+kgjobs:lastSeenAt a rdf:Property ;
+    rdfs:label "last seen at"@en ;
+    rdfs:comment "Most recent successful source run in which this posting appeared."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range xsd:dateTime .
+
+kgjobs:active a rdf:Property ;
+    rdfs:label "active"@en ;
+    rdfs:comment "Whether the local snapshot currently treats this posting as active."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range xsd:boolean .
+
+#################################################################
+# SHACL shapes
+#################################################################
+
+kgjobs:JobPostingShape a sh:NodeShape ;
+    sh:targetClass schema:JobPosting ;
+    sh:property [
+        sh:path schema:title ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:description ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path schema:hiringOrganization ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class kgjobs:Employer ;
+    ] ;
+    sh:property [
+        sh:path schema:url ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:classification ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "qualified" "review" "not_match" ) ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:hasEvidence ;
+        sh:node kgjobs:EvidenceShape ;
+    ] .
+
+kgjobs:EvidenceShape a sh:NodeShape ;
+    sh:property [
+        sh:path kgjobs:matchedConcept ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class skos:Concept ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:conceptLabel ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:conceptScheme ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:matchStrength ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "strong" "contextual" ) ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:matchedPhrase ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:sourceField ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "title" "description" "qualifications" "responsibilities" ) ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:negated ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] .
+
+kgjobs:ConceptMatchTermShape a sh:NodeShape ;
+    sh:targetSubjectsOf kgjobs:hasMatchTerm ;
+    sh:property [
+        sh:path kgjobs:matchStrength ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "strong" "contextual" ) ;
+    ] ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+    ] .
+
+kgjobs:MatchTermShape a sh:NodeShape ;
+    sh:targetClass kgjobs:MatchTerm ;
+    sh:property [
+        sh:path kgjobs:termText ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:caseSensitive ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] .
+
+kgjobs:EmployerShape a sh:NodeShape ;
+    sh:targetClass kgjobs:Employer ;
+    sh:property [
+        sh:path schema:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path owl:sameAs ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] .
+
+kgjobs:LiveJobPostingShape a sh:NodeShape ;
+    sh:targetSubjectsOf kgjobs:sourceRecordId ;
+    sh:property [
+        sh:path schema:url ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path dcterms:source ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:canonicalFingerprint ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9a-f]{64}$" ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:firstSeenAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:lastSeenAt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:dateTime ;
+    ] ;
+    sh:property [
+        sh:path kgjobs:active ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:boolean ;
+    ] .
+
+kgjobs:SearchSourceShape a sh:NodeShape ;
+    sh:targetSubjectsOf kgjobs:searchEnabled ;
+    sh:class dcat:Dataset ;
+    sh:property [ sh:path kgjobs:searchEnabled ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path dcterms:identifier ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dcat:distribution ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path kgjobs:adapter ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:sourceQuery ; sh:minCount 1 ; sh:class kgjobs:QueryFamily ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:allowedHost ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:attributionText ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:attributionURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:termsURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:minRefreshIntervalSeconds ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path kgjobs:requestTimeoutSeconds ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxResponseBytes ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxRecordsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxRequestsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] .
+
+kgjobs:QueryFamilyShape a sh:NodeShape ;
+    sh:targetClass kgjobs:QueryFamily ;
+    sh:property [ sh:path kgjobs:queryText ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:property [ sh:path kgjobs:queryOrder ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
+    sh:property [ sh:path dcterms:subject ; sh:nodeKind sh:IRI ; sh:class skos:Concept ] .
+
+kgjobs:QueryExecutionShape a sh:NodeShape ;
+    sh:targetClass kgjobs:QueryExecution ;
+    sh:class prov:Activity ;
+    sh:property [ sh:path kgjobs:queryFamily ; sh:minCount 1 ; sh:maxCount 1 ; sh:class kgjobs:QueryFamily ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:executedQueryText ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ; sh:minLength 1 ] ;
+    sh:property [ sh:path kgjobs:returnedCount ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:nonNegativeInteger ] ;
+    sh:property [ sh:path kgjobs:totalCount ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:nonNegativeInteger ] ;
+    sh:property [ sh:path kgjobs:queryComplete ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] .

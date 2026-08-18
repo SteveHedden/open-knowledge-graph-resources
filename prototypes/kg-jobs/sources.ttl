@@ -1,0 +1,354 @@
+@prefix kgjs:    <https://openknowledgegraphs.com/prototypes/kg-jobs/source/> .
+@prefix kgjobs:  <https://openknowledgegraphs.com/prototypes/kg-jobs/ontology#> .
+@prefix kgjv:    <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# KG Jobs prototype source registry
+#
+# Describes the ONE synthetic fixture dataset this prototype reads.
+# Establishes the future source-registry pattern (DCAT dataset +
+# PROV-O provenance) without pretending the fixtures are a real
+# external source: they are hand-authored test data, retrieved from
+# a local file, never fetched over the network.
+#################################################################
+
+kgjs:synthetic-fixtures a dcat:Dataset ;
+    dcterms:title "KG Jobs Synthetic Fixture Corpus"@en ;
+    dcterms:description "20 invented job-posting records used only to exercise and test the kg-jobs prototype classifier. Not live vacancies, not scraped, not sourced from any employer or job board."@en ;
+    dcterms:type "synthetic-test-data"@en ;
+    dcterms:identifier "kg-jobs-fixtures-v1" ;
+    dcterms:created "2026-08-17"^^xsd:date ;
+    dcterms:creator [ a foaf:Agent ; foaf:name "OKG kg-jobs prototype" ] ;
+    dcat:distribution kgjs:synthetic-fixtures-distribution ;
+    kgjobs:retrievalMode "local-file" ;
+    kgjobs:networkFree true .
+
+kgjs:synthetic-fixtures-distribution a dcat:Distribution ;
+    dcterms:title "Fixture JSON file"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/prototypes/kg-jobs/fixtures/jobs.json> ;
+    dcat:mediaType "application/json" ;
+    dcterms:conformsTo kgjs:fixture-schema .
+
+kgjs:fixture-schema a dcterms:Standard ;
+    dcterms:title "KG Jobs fixture record schema"@en ;
+    dcterms:description "Each fixture record has: id (string, stable fixture identifier), test_url (string, a test:// scheme canonical URL -- never a real URL), title, hiringOrganization, location (nullable), datePosted (nullable, ISO date), description, qualifications (nullable), responsibilities (nullable), expected_classification (one of qualified, review, not_match), and expected_concepts (array of kg-jobs.ttl concept local names, e.g. skill-rdf)."@en .
+
+kgjs:generated-data a dcat:Dataset ;
+    dcterms:title "KG Jobs Generated RDF and JSON Projection"@en ;
+    dcterms:description "The classifier's deterministic output: schema:JobPosting instances with kgjobs:classification and kgjobs:hasEvidence, generated from the synthetic fixture corpus. Regenerating against unchanged fixtures and vocabulary must produce semantically identical RDF and byte-identical JSON."@en ;
+    prov:wasGeneratedBy kgjs:generation-activity ;
+    prov:wasDerivedFrom kgjs:synthetic-fixtures ;
+    dcat:distribution
+        [ a dcat:Distribution ; dcterms:title "Generated RDF"@en ; dcat:downloadURL <https://openknowledgegraphs.com/prototypes/kg-jobs/data/jobs.ttl> ; dcat:mediaType "text/turtle" ] ,
+        [ a dcat:Distribution ; dcterms:title "Generated JSON projection"@en ; dcat:downloadURL <https://openknowledgegraphs.com/prototypes/kg-jobs/data/jobs.json> ; dcat:mediaType "application/json" ] .
+
+kgjs:generation-activity a prov:Activity ;
+    dcterms:title "kg-jobs classification run"@en ;
+    prov:used kgjs:synthetic-fixtures ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab> ;
+    dcterms:description "Deterministic, network-free run of scripts/generate.py: loads match terms and strengths from vocabularies/kg-jobs.ttl, classifies each fixture, and writes data/jobs.ttl and data/jobs.json."@en .
+
+#################################################################
+# Explicitly enabled local live sources
+#
+# This registry entry is inert unless scripts/live_pipeline.py is
+# invoked with --live. It is not referenced by production workflows.
+#################################################################
+
+kgjs:himalayas a dcat:Dataset ;
+    dcterms:title "Himalayas Remote Jobs API"@en ;
+    dcterms:description "Official no-authentication keyword-search API used as the preferred source for explicit local-only KG-job discovery. A small reviewed family of high-precision queries is declared here rather than issuing one request for every taxonomy term."@en ;
+    dcterms:identifier "himalayas" ;
+    dcterms:publisher [ a foaf:Agent ; foaf:name "Himalayas" ] ;
+    dcat:landingPage <https://himalayas.app/jobs/api> ;
+    dcat:distribution kgjs:himalayas-api-distribution ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:networkFree false ;
+    kgjobs:searchEnabled true ;
+    kgjobs:adapter "himalayas" ;
+    kgjobs:sourceQuery
+        kgjs:himalayas-query-knowledge-graph ,
+        kgjs:himalayas-query-ontology ,
+        kgjs:himalayas-query-semantic-web ,
+        kgjs:himalayas-query-sparql ;
+    kgjobs:allowedHost "himalayas.app" ;
+    kgjobs:minRefreshIntervalSeconds 86400.0 ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:maxRecordsPerRun 80 ;
+    kgjobs:maxRequestsPerRun 4 ;
+    kgjobs:attributionText "Himalayas" ;
+    kgjobs:attributionURL <https://himalayas.app/> ;
+    kgjobs:termsURL <https://himalayas.app/docs/remote-jobs-api> .
+
+kgjs:himalayas-api-distribution a dcat:Distribution ;
+    dcterms:title "Himalayas official keyword-search JSON endpoint"@en ;
+    dcat:accessURL <https://himalayas.app/jobs/api/search> ;
+    dcat:mediaType "application/json" .
+
+kgjs:himalayas-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryText "knowledge graph" ;
+    kgjobs:queryOrder 1 ;
+    dcterms:subject kgjv:skill-knowledge-graph .
+
+kgjs:himalayas-query-ontology a kgjobs:QueryFamily ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryText "ontology" ;
+    kgjobs:queryOrder 2 ;
+    dcterms:subject
+        kgjv:role-ontologist ,
+        kgjv:role-ontology-engineer .
+
+kgjs:himalayas-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryText "semantic web" ;
+    kgjobs:queryOrder 3 ;
+    dcterms:subject kgjv:skill-semantic-web .
+
+kgjs:himalayas-query-sparql a kgjobs:QueryFamily ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryText "SPARQL" ;
+    kgjobs:queryOrder 4 ;
+    dcterms:subject kgjv:skill-sparql .
+
+kgjs:arbeitnow a dcat:Dataset ;
+    dcterms:title "Arbeitnow Job Board API"@en ;
+    dcterms:description "Public job-board feed retained as an optional local-only comparison source. Original Arbeitnow listing links and visible attribution are retained."@en ;
+    dcterms:identifier "arbeitnow" ;
+    dcterms:publisher [ a foaf:Agent ; foaf:name "Arbeitnow" ] ;
+    dcat:landingPage <https://www.arbeitnow.com/blog/job-board-api> ;
+    dcat:distribution kgjs:arbeitnow-api-distribution ;
+    kgjobs:retrievalMode "paginated-feed-api" ;
+    kgjobs:networkFree false ;
+    kgjobs:searchEnabled true ;
+    kgjobs:adapter "arbeitnow" ;
+    kgjobs:sourceQuery kgjs:arbeitnow-query-all-active ;
+    kgjobs:allowedHost "www.arbeitnow.com" ;
+    kgjobs:minRefreshIntervalSeconds 3600.0 ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:maxRecordsPerRun 300 ;
+    kgjobs:maxRequestsPerRun 3 ;
+    kgjobs:attributionText "Arbeitnow" ;
+    kgjobs:attributionURL <https://www.arbeitnow.com/> ;
+    kgjobs:termsURL <https://www.arbeitnow.com/terms> .
+
+kgjs:arbeitnow-api-distribution a dcat:Distribution ;
+    dcterms:title "Arbeitnow public job-board JSON endpoint"@en ;
+    dcat:accessURL <https://www.arbeitnow.com/api/job-board-api> ;
+    dcat:mediaType "application/json" .
+
+kgjs:arbeitnow-query-all-active a kgjobs:QueryFamily ;
+    dcterms:title "All active postings feed scope"@en ;
+    dcterms:description "The Arbeitnow adapter retrieves a bounded active-posting feed; the RDF vocabulary, not this retrieval scope, determines KG relevance."@en ;
+    kgjobs:queryText "all active postings; KG relevance classified locally" ;
+    kgjobs:queryOrder 1 .
+
+kgjs:remotive a dcat:Dataset ;
+    dcterms:title "Remotive Public Remote Jobs API"@en ;
+    dcterms:description "Public remote-job search API used only by the explicit, local kg-jobs ingestion prototype. Remotive attribution and original listing links must be retained."@en ;
+    dcterms:identifier "remotive" ;
+    dcterms:publisher [ a foaf:Agent ; foaf:name "Remotive" ] ;
+    dcat:landingPage <https://remotive.com/remote-jobs/api> ;
+    dcat:distribution kgjs:remotive-api-distribution ;
+    kgjobs:retrievalMode "search-api" ;
+    kgjobs:networkFree false ;
+    kgjobs:searchEnabled true ;
+    kgjobs:adapter "remotive" ;
+    kgjobs:sourceQuery kgjs:remotive-query-knowledge-graph ;
+    kgjobs:allowedHost "remotive.com" ;
+    kgjobs:minRefreshIntervalSeconds 21600.0 ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:attributionText "Remotive" ;
+    kgjobs:attributionURL <https://remotive.com/> ;
+    kgjobs:termsURL <https://remotive.com/remote-jobs/api> .
+
+kgjs:remotive-api-distribution a dcat:Distribution ;
+    dcterms:title "Remotive public jobs JSON endpoint"@en ;
+    dcat:accessURL <https://remotive.com/api/remote-jobs> ;
+    dcat:mediaType "application/json" .
+
+kgjs:remotive-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryText "knowledge graph" ;
+    kgjobs:queryOrder 1 ;
+    dcterms:subject kgjv:skill-knowledge-graph .
+
+kgjs:jobicy a dcat:Dataset ;
+    dcterms:title "Jobicy Remote Jobs API"@en ;
+    dcterms:description "Official no-authentication remote-jobs JSON API. Its `tag` parameter is a genuine keyword search, verified against the live API with a true-negative control query (a nonsense term correctly returned zero results). A small reviewed family of high-precision queries is declared here, the same pattern as Himalayas -- except the bare single words 'knowledge' and 'owl', which were found to silently fall back to an unfiltered result set rather than actually filtering, so 'knowledge graph' and 'ontology' are queried instead. Local RDF vocabulary classification remains the sole eligibility decision regardless."@en ;
+    dcterms:identifier "jobicy" ;
+    dcterms:publisher [ a foaf:Agent ; foaf:name "Jobicy" ] ;
+    dcat:landingPage <https://jobi.cy/apidocs> ;
+    dcat:distribution kgjs:jobicy-api-distribution ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:networkFree false ;
+    kgjobs:searchEnabled true ;
+    kgjobs:adapter "jobicy" ;
+    kgjobs:sourceQuery
+        kgjs:jobicy-query-rdf ,
+        kgjs:jobicy-query-ontology ,
+        kgjs:jobicy-query-sparql ,
+        kgjs:jobicy-query-skos ,
+        kgjs:jobicy-query-shacl ,
+        kgjs:jobicy-query-linkml ,
+        kgjs:jobicy-query-semantic-web ,
+        kgjs:jobicy-query-knowledge-graph ;
+    kgjobs:allowedHost "jobicy.com" ;
+    kgjobs:minRefreshIntervalSeconds 3600.0 ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:maxRecordsPerRun 160 ;
+    kgjobs:maxRequestsPerRun 8 ;
+    kgjobs:attributionText "Jobicy" ;
+    kgjobs:attributionURL <https://jobicy.com/> ;
+    kgjobs:termsURL <https://jobi.cy/apidocs> .
+
+kgjs:jobicy-api-distribution a dcat:Distribution ;
+    dcterms:title "Jobicy public remote-jobs JSON endpoint"@en ;
+    dcat:accessURL <https://jobicy.com/api/v2/remote-jobs> ;
+    dcat:mediaType "application/json" .
+
+kgjs:jobicy-query-rdf a kgjobs:QueryFamily ;
+    dcterms:title "RDF jobs query"@en ;
+    kgjobs:queryText "rdf" ;
+    kgjobs:queryOrder 1 ;
+    dcterms:subject kgjv:skill-rdf .
+
+kgjs:jobicy-query-ontology a kgjobs:QueryFamily ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryText "ontology" ;
+    kgjobs:queryOrder 2 ;
+    dcterms:subject
+        kgjv:role-ontologist ,
+        kgjv:role-ontology-engineer .
+
+kgjs:jobicy-query-sparql a kgjobs:QueryFamily ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryText "sparql" ;
+    kgjobs:queryOrder 3 ;
+    dcterms:subject kgjv:skill-sparql .
+
+kgjs:jobicy-query-skos a kgjobs:QueryFamily ;
+    dcterms:title "SKOS jobs query"@en ;
+    kgjobs:queryText "skos" ;
+    kgjobs:queryOrder 4 ;
+    dcterms:subject kgjv:skill-skos .
+
+kgjs:jobicy-query-shacl a kgjobs:QueryFamily ;
+    dcterms:title "SHACL jobs query"@en ;
+    kgjobs:queryText "shacl" ;
+    kgjobs:queryOrder 5 ;
+    dcterms:subject kgjv:skill-shacl .
+
+kgjs:jobicy-query-linkml a kgjobs:QueryFamily ;
+    dcterms:title "LinkML jobs query"@en ;
+    kgjobs:queryText "linkml" ;
+    kgjobs:queryOrder 6 ;
+    dcterms:subject kgjv:skill-linkml .
+
+kgjs:jobicy-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryText "semantic web" ;
+    kgjobs:queryOrder 7 ;
+    dcterms:subject kgjv:skill-semantic-web .
+
+kgjs:jobicy-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryText "knowledge graph" ;
+    kgjobs:queryOrder 8 ;
+    dcterms:subject kgjv:skill-knowledge-graph .
+
+kgjs:jooble a dcat:Dataset ;
+    dcterms:title "Jooble Job Search API"@en ;
+    dcterms:description "Keyed job-search aggregator API (500 requests on the free tier). The API key is issued instantly on request but is a real per-account credential, never stored in this registry -- scripts/live_pipeline.py reads it from the JOOBLE_API_KEY environment variable at request time. Jooble requires a POST request with a JSON body (verified directly: a GET with the same parameters returns nothing), so it is fetched through a dedicated code path in scripts/live_sources.py rather than the shared GET fetcher."@en ;
+    dcterms:identifier "jooble" ;
+    dcterms:publisher [ a foaf:Agent ; foaf:name "Jooble" ] ;
+    dcat:landingPage <https://jooble.org/api/about> ;
+    dcat:distribution kgjs:jooble-api-distribution ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:networkFree false ;
+    kgjobs:searchEnabled true ;
+    kgjobs:adapter "jooble" ;
+    kgjobs:sourceQuery
+        kgjs:jooble-query-rdf ,
+        kgjs:jooble-query-ontology ,
+        kgjs:jooble-query-sparql ,
+        kgjs:jooble-query-skos ,
+        kgjs:jooble-query-shacl ,
+        kgjs:jooble-query-linkml ,
+        kgjs:jooble-query-semantic-web ,
+        kgjs:jooble-query-knowledge-graph ;
+    kgjobs:allowedHost "jooble.org" ;
+    kgjobs:minRefreshIntervalSeconds 21600.0 ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:maxRecordsPerRun 240 ;
+    kgjobs:maxRequestsPerRun 8 ;
+    kgjobs:attributionText "Jooble" ;
+    kgjobs:attributionURL <https://jooble.org/> ;
+    kgjobs:termsURL <https://jooble.org/api/about> .
+
+kgjs:jooble-api-distribution a dcat:Distribution ;
+    dcterms:title "Jooble keyed job-search JSON endpoint"@en ;
+    dcat:accessURL <https://jooble.org/api/> ;
+    dcat:mediaType "application/json" .
+
+kgjs:jooble-query-rdf a kgjobs:QueryFamily ;
+    dcterms:title "RDF jobs query"@en ;
+    kgjobs:queryText "rdf" ;
+    kgjobs:queryOrder 1 ;
+    dcterms:subject kgjv:skill-rdf .
+
+kgjs:jooble-query-ontology a kgjobs:QueryFamily ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryText "ontology" ;
+    kgjobs:queryOrder 2 ;
+    dcterms:subject
+        kgjv:role-ontologist ,
+        kgjv:role-ontology-engineer .
+
+kgjs:jooble-query-sparql a kgjobs:QueryFamily ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryText "sparql" ;
+    kgjobs:queryOrder 3 ;
+    dcterms:subject kgjv:skill-sparql .
+
+kgjs:jooble-query-skos a kgjobs:QueryFamily ;
+    dcterms:title "SKOS jobs query"@en ;
+    kgjobs:queryText "skos" ;
+    kgjobs:queryOrder 4 ;
+    dcterms:subject kgjv:skill-skos .
+
+kgjs:jooble-query-shacl a kgjobs:QueryFamily ;
+    dcterms:title "SHACL jobs query"@en ;
+    kgjobs:queryText "shacl" ;
+    kgjobs:queryOrder 5 ;
+    dcterms:subject kgjv:skill-shacl .
+
+kgjs:jooble-query-linkml a kgjobs:QueryFamily ;
+    dcterms:title "LinkML jobs query"@en ;
+    kgjobs:queryText "linkml" ;
+    kgjobs:queryOrder 6 ;
+    dcterms:subject kgjv:skill-linkml .
+
+kgjs:jooble-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryText "semantic web" ;
+    kgjobs:queryOrder 7 ;
+    dcterms:subject kgjv:skill-semantic-web .
+
+kgjs:jooble-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryText "knowledge graph" ;
+    kgjobs:queryOrder 8 ;
+    dcterms:subject kgjv:skill-knowledge-graph .

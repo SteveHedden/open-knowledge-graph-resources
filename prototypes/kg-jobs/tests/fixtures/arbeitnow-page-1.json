@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "slug": "mock-knowledge-graph-engineer-8001",
+      "company_name": "Example Bank",
+      "title": "Knowledge Graph Engineer",
+      "description": "<p>Build a <strong>knowledge graph</strong> using RDF and SPARQL.</p>",
+      "remote": true,
+      "url": "https://www.arbeitnow.com/view/mock-knowledge-graph-engineer-8001?utm_source=test",
+      "tags": ["SPARQL", "RDF"],
+      "job_types": ["Full-time"],
+      "location": "Berlin, Germany",
+      "created_at": "2026-08-17T10:00:00Z",
+      "salary": "EUR 90,000–110,000"
+    },
+    {
+      "slug": "mock-backend-engineer-8002",
+      "company_name": "Example Retailer",
+      "title": "Backend Engineer",
+      "description": "Build ordinary payment APIs and relational database services.",
+      "remote": false,
+      "url": "https://www.arbeitnow.com/view/mock-backend-engineer-8002",
+      "tags": ["Python"],
+      "job_types": ["Full-time"],
+      "location": "Hamburg, Germany",
+      "created_at": 1786934400
+    },
+    {
+      "slug": "mock-semantic-modeler-8003",
+      "company_name": "Example Pharma",
+      "title": "Semantic Data Modeler",
+      "description": "Lead taxonomy management for research metadata.",
+      "remote": "true",
+      "url": "https://www.arbeitnow.com/view/mock-semantic-modeler-8003",
+      "tags": ["Taxonomy"],
+      "job_types": ["Contract"],
+      "location": "Basel, Switzerland",
+      "created_at": "2026-02-30"
+    }
+  ],
+  "links": {
+    "next": "https://www.arbeitnow.com/api/job-board-api?page=2"
+  },
+  "meta": {
+    "current_page": 1,
+    "last_page": 2,
+    "per_page": 3,
+    "total": 5
+  }
+}
