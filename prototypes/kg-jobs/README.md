@@ -387,3 +387,13 @@ jobs as a public OKG catalog:
   fixture set before any production use.
 - **English-only**: normalization and negation-cue detection assume English
   postings.
+- **Cross-linking to software/ontology pages (Task 32, deliberately deferred)**:
+  showing a matching job posting on the entity page it relates to (e.g. a
+  Neo4j-related posting surfaced on the Neo4j software page) is a deliberate
+  non-goal of the production Jobs tab shipped in Task 32. It would require a
+  posting-to-entity matching step that does not exist yet (today's classifier
+  only ever asks "is this posting KG-related," never "which catalog entity is
+  this posting about"), and touching every existing entity page template is a
+  materially larger, separately-scoped change. Revisit only as its own task,
+  with its own matching-accuracy review, once the Jobs tab itself has run in
+  production and proven out.

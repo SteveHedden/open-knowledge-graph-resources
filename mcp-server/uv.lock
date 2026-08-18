@@ -348,7 +348,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.27.0" },
-    { name = "mcp", extras = ["cli"], specifier = ">=1.6.0" },
+    { name = "mcp", extras = ["cli"], specifier = "==1.26.0" },
     { name = "pydantic", specifier = ">=2.0.0" },
 ]
 

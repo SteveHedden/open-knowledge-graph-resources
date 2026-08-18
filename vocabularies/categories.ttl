@@ -1,0 +1,119 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix okg:     <https://openknowledgegraphs.com/ontology#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<https://openknowledgegraphs.com/vocabularies/categories>
+    a skos:ConceptScheme ;
+    dcterms:title "OKG Domain Categories"@en ;
+    dcterms:description "Domain categories used to classify ontology, vocabulary, taxonomy, knowledge graph, and ontology-language resources in Open Knowledge Graphs."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    dcterms:modified "2026-08-13"^^xsd:date ;
+    owl:versionInfo "0.1.0" ;
+    vann:preferredNamespacePrefix "okg" ;
+    vann:preferredNamespaceUri "https://openknowledgegraphs.com/ontology#" ;
+    okg:conceptClass okg:Category ;
+    okg:classificationPredicate okg:category ;
+    skos:hasTopConcept
+        okg:LifeSciencesHealthcare,
+        okg:Geospatial,
+        okg:GovernmentPublicSector,
+        okg:InternationalDevelopment,
+        okg:FinanceBusiness,
+        okg:LibraryCulturalHeritage,
+        okg:TechnologyWeb,
+        okg:EnvironmentAgriculture,
+        okg:GeneralCrossDomain .
+
+okg:LifeSciencesHealthcare
+    a skos:Concept, okg:Category ;
+    rdfs:label "Life Sciences & Healthcare" ;
+    skos:prefLabel "Life Sciences & Healthcare"@en ;
+    skos:definition "Resources whose principal subject is biology, medicine, health, clinical care, biomedical research, or pharmaceuticals."@en ;
+    skos:scopeNote "Use for biological and biomedical subject matter, anatomy, disease, clinical practice, health services, and related life-science data. Prefer Environment & Agriculture when environmental or farming concerns are primary."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "life-sciences-healthcare" ;
+    okg:sortOrder 1 .
+
+okg:Geospatial
+    a skos:Concept, okg:Category ;
+    rdfs:label "Geospatial" ;
+    skos:prefLabel "Geospatial"@en ;
+    skos:definition "Resources centered on geographic location, spatial relationships, mapping, geodesy, or Earth observation."@en ;
+    skos:scopeNote "Use for GIS, cartography, cadastral data, place identifiers, coordinate systems, and explicitly spatial datasets. Do not use solely because a domain can contain locations."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "geospatial" ;
+    okg:sortOrder 2 .
+
+okg:GovernmentPublicSector
+    a skos:Concept, okg:Category ;
+    rdfs:label "Government & Public Sector" ;
+    skos:prefLabel "Government & Public Sector"@en ;
+    skos:definition "Resources for government, law, public administration, public services, civic institutions, or defense."@en ;
+    skos:scopeNote "Use when national, regional, or local public-sector operations and legal or civic information are primary. Prefer International Development for aid, humanitarian, and cross-country development programs."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "government-public-sector" ;
+    okg:sortOrder 3 .
+
+okg:InternationalDevelopment
+    a skos:Concept, okg:Category ;
+    rdfs:label "International Development" ;
+    skos:prefLabel "International Development"@en ;
+    skos:definition "Resources for international aid, humanitarian action, sustainable development, and cross-country social or economic development."@en ;
+    skos:scopeNote "Use for development programs, global development indicators, humanitarian response, and aid organizations. Prefer Government & Public Sector for domestic administration and public services."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "international-development" ;
+    okg:sortOrder 4 .
+
+okg:FinanceBusiness
+    a skos:Concept, okg:Category ;
+    rdfs:label "Finance & Business" ;
+    skos:prefLabel "Finance & Business"@en ;
+    skos:definition "Resources for finance, accounting, markets, commerce, enterprise operations, industry, or business transactions."@en ;
+    skos:scopeNote "Use for financial instruments and institutions, corporate information, products and services, supply chains, and commercial processes."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "finance-business" ;
+    okg:sortOrder 5 .
+
+okg:LibraryCulturalHeritage
+    a skos:Concept, okg:Category ;
+    rdfs:label "Library & Cultural Heritage" ;
+    skos:prefLabel "Library & Cultural Heritage"@en ;
+    skos:definition "Resources for libraries, archives, museums, bibliography, language, the arts, history, or cultural heritage collections."@en ;
+    skos:scopeNote "Use for cataloging and authority data, archival description, museum collections, historical and artistic subjects, linguistic vocabularies, and cultural memory."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "library-cultural-heritage" ;
+    okg:sortOrder 6 .
+
+okg:TechnologyWeb
+    a skos:Concept, okg:Category ;
+    rdfs:label "Technology & Web" ;
+    skos:prefLabel "Technology & Web"@en ;
+    skos:definition "Resources whose principal subject is computing, data technology, telecommunications, the internet, or web standards."@en ;
+    skos:scopeNote "Use for domain-specific computing and web concepts. Prefer General / Cross-domain for foundational semantic models designed to apply across subject domains."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "technology-web" ;
+    okg:sortOrder 7 .
+
+okg:EnvironmentAgriculture
+    a skos:Concept, okg:Category ;
+    rdfs:label "Environment & Agriculture" ;
+    skos:prefLabel "Environment & Agriculture"@en ;
+    skos:definition "Resources for the environment, climate, ecology, natural resources, agriculture, forestry, food production, or fisheries."@en ;
+    skos:scopeNote "Use when environmental systems, conservation, land and water management, farming, crops, livestock, or food production are primary."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "environment-agriculture" ;
+    okg:sortOrder 8 .
+
+okg:GeneralCrossDomain
+    a skos:Concept, okg:Category ;
+    rdfs:label "General / Cross-domain" ;
+    skos:prefLabel "General / Cross-domain"@en ;
+    skos:definition "Foundational, upper-level, broadly reusable, or genuinely multi-domain resources without one dominant subject domain."@en ;
+    skos:scopeNote "Use as the fallback when no more specific category is supported, and for general metadata, modeling, and cross-domain conceptual resources."@en ;
+    skos:inScheme <https://openknowledgegraphs.com/vocabularies/categories> ;
+    okg:urlSlug "general-cross-domain" ;
+    okg:sortOrder 9 .

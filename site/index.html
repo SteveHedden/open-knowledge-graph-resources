@@ -121,6 +121,18 @@
             >
               Software
             </button>
+            <button
+              id="tab-jobs"
+              class="tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-jobs"
+              tabindex="-1"
+              data-tab="jobs"
+              type="button"
+            >
+              Jobs
+            </button>
           </div>
           <div class="search-wrap">
             <label for="catalog-search">Search</label>
@@ -128,7 +140,7 @@
               id="catalog-search"
               name="q"
               type="search"
-              placeholder="Search title, description, type, license, part of"
+              placeholder="Search catalog metadata, identifiers, and URLs"
               autocomplete="off"
             >
           </div>
@@ -144,33 +156,6 @@
             <button class="category-pill is-active" data-category="all" type="button" aria-pressed="true">
               All
             </button>
-            <button class="category-pill" data-category="life-sciences-healthcare" type="button" aria-pressed="false">
-              Life Sciences &amp; Healthcare
-            </button>
-            <button class="category-pill" data-category="geospatial" type="button" aria-pressed="false">
-              Geospatial
-            </button>
-            <button class="category-pill" data-category="government-public-sector" type="button" aria-pressed="false">
-              Government &amp; Public Sector
-            </button>
-            <button class="category-pill" data-category="international-development" type="button" aria-pressed="false">
-              International Development
-            </button>
-            <button class="category-pill" data-category="finance-business" type="button" aria-pressed="false">
-              Finance &amp; Business
-            </button>
-            <button class="category-pill" data-category="library-cultural-heritage" type="button" aria-pressed="false">
-              Library &amp; Cultural Heritage
-            </button>
-            <button class="category-pill" data-category="technology-web" type="button" aria-pressed="false">
-              Technology &amp; Web
-            </button>
-            <button class="category-pill" data-category="environment-agriculture" type="button" aria-pressed="false">
-              Environment &amp; Agriculture
-            </button>
-            <button class="category-pill" data-category="general-cross-domain" type="button" aria-pressed="false">
-              General / Cross-domain
-            </button>
           </div>
         </div>
         <div
@@ -184,36 +169,6 @@
           <div class="category-pill-list">
             <button class="category-pill is-active" data-software-type="all" type="button" aria-pressed="true">
               All
-            </button>
-            <button class="category-pill" data-software-type="graph-database" type="button" aria-pressed="false">
-              Graph Database
-            </button>
-            <button class="category-pill" data-software-type="sparql-tooling" type="button" aria-pressed="false">
-              SPARQL Tooling
-            </button>
-            <button class="category-pill" data-software-type="ontology-engineering" type="button" aria-pressed="false">
-              Ontology Engineering
-            </button>
-            <button class="category-pill" data-software-type="reasoning-inference" type="button" aria-pressed="false">
-              Reasoning &amp; Inference
-            </button>
-            <button class="category-pill" data-software-type="data-mapping-etl" type="button" aria-pressed="false">
-              RDF Data Mapping / ETL
-            </button>
-            <button class="category-pill" data-software-type="developer-library" type="button" aria-pressed="false">
-              Developer Library
-            </button>
-            <button class="category-pill" data-software-type="knowledge-graph-construction" type="button" aria-pressed="false">
-              Knowledge Graph Construction
-            </button>
-            <button class="category-pill" data-software-type="ai-agent-tooling" type="button" aria-pressed="false">
-              AI Agent Tooling
-            </button>
-            <button class="category-pill" data-software-type="visualization" type="button" aria-pressed="false">
-              Visualization
-            </button>
-            <button class="category-pill" data-software-type="stream-processing" type="button" aria-pressed="false">
-              Stream Processing
             </button>
           </div>
         </div>
@@ -259,18 +214,10 @@
                 <th scope="col">Links</th>
               </tr>
             </thead>
-            <tbody id="ontologies-table-body">
-              <tr>
-                <td class="placeholder-cell" colspan="6">Data will appear here after app initialization.</td>
-              </tr>
-            </tbody>
+            <tbody id="ontologies-table-body"></tbody>
           </table>
         </div>
-        <div id="ontologies-cards" class="cards" aria-label="Ontology cards">
-          <article class="card card-placeholder">
-            <h3>Data will appear here after app initialization.</h3>
-          </article>
-        </div>
+        <div id="ontologies-cards" class="cards" aria-label="Ontology cards"></div>
       </section>
 
       <section
@@ -313,26 +260,87 @@
                 <th scope="col">Links</th>
               </tr>
             </thead>
-            <tbody id="software-table-body">
-              <tr>
-                <td class="placeholder-cell" colspan="6">Data will appear here after app initialization.</td>
-              </tr>
-            </tbody>
+            <tbody id="software-table-body"></tbody>
           </table>
         </div>
-        <div id="software-cards" class="cards" aria-label="Software cards">
-          <article class="card card-placeholder">
-            <h3>Data will appear here after app initialization.</h3>
-          </article>
+        <div id="software-cards" class="cards" aria-label="Software cards"></div>
+      </section>
+
+      <section
+        id="panel-jobs"
+        class="panel"
+        role="tabpanel"
+        aria-labelledby="tab-jobs"
+        data-panel="jobs"
+        hidden
+      >
+        <h2 class="sr-only">Jobs</h2>
+        <div class="table-shell">
+          <table class="resource-table">
+            <caption class="sr-only">
+              Knowledge-graph-related job postings, aggregated from public job boards.
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <button class="sort-button" data-sort="title" aria-label="Sort by job title" type="button">
+                    Job Title
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="employer" aria-label="Sort by employer" type="button">
+                    Employer
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="location" aria-label="Sort by location" type="button">
+                    Location
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="remote" aria-label="Sort by remote status" type="button">
+                    Remote
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="datePosted" aria-label="Sort by date posted" type="button">
+                    Posted
+                  </button>
+                </th>
+                <th scope="col">
+                  <button class="sort-button" data-sort="salary" aria-label="Sort by salary" type="button">
+                    Salary
+                  </button>
+                </th>
+                <th scope="col">Links</th>
+              </tr>
+            </thead>
+            <tbody id="jobs-table-body"></tbody>
+          </table>
         </div>
       </section>
+
+      <nav id="catalog-pagination" class="pagination" aria-label="Catalog pages" hidden>
+        <button id="previous-page" type="button" aria-label="Go to previous catalog page">
+          Previous
+        </button>
+        <span id="page-status" role="status" aria-live="polite">Page 1 of 1</span>
+        <button id="next-page" type="button" aria-label="Go to next catalog page">
+          Next
+        </button>
+      </nav>
     </main>
 
     <footer class="site-footer">
-      <p><strong>Last updated:</strong> <span id="last-updated">Not available</span></p>
+      <p id="catalog-freshness" hidden>
+        <strong>Generation:</strong> <code id="generation-id"></code>
+        <span aria-hidden="true">·</span>
+        <strong>Source retrieved:</strong> <time id="last-updated"></time>
+      </p>
       <nav class="footer-links" aria-label="Metadata links">
         <a href="./data/ontologies.ttl" target="_blank" rel="noopener noreferrer">ontologies.ttl</a>
         <a href="./data/software.ttl" target="_blank" rel="noopener noreferrer">software.ttl</a>
+        <a href="./data/jobs/jobs.ttl" target="_blank" rel="noopener noreferrer">jobs.ttl</a>
         <a href="https://github.com/SteveHedden/open-knowledge-graphs" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://api.openknowledgegraphs.com/" target="_blank" rel="noopener noreferrer">API</a>
       </nav>

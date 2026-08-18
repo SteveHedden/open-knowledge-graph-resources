@@ -5,18 +5,37 @@ from typing import Any
 
 def format_catalog(data: dict[str, Any]) -> str:
     """Format catalog metadata as markdown."""
+    search_mode = data.get("searchMode")
+    catalog_generation_id = data.get("catalogGenerationId")
+    vector_generation_id = data.get("vectorGenerationId")
+    fallback_reason = data.get("fallbackReason")
     lines = [
         f"# {data['name']}",
         "",
         data.get("description", ""),
         "",
+    ]
+
+    metadata = []
+    if search_mode:
+        metadata.append(f"- **Search mode**: `{search_mode}`")
+    if catalog_generation_id:
+        metadata.append(f"- **Catalog generation**: `{catalog_generation_id}`")
+    if "vectorGenerationId" in data:
+        metadata.append(f"- **Vector generation**: `{vector_generation_id or 'none'}`")
+    if fallback_reason:
+        metadata.append(f"- **Fallback reason**: `{fallback_reason}`")
+    if metadata:
+        lines.extend(["## Search status", "", *metadata, ""])
+
+    lines.extend([
         f"**Ontologies**: {data.get('total_ontologies', '?')}  ",
         f"**Software tools**: {data.get('total_software', '?')}  ",
         f"**Source**: {data.get('source', '')}",
         "",
         "## Categories",
         "",
-    ]
+    ])
     for cat in data.get("categories", []):
         lines.append(f"- {cat}")
 
@@ -33,16 +52,34 @@ def format_search_results(data: dict[str, Any]) -> str:
     total = data.get("total", 0)
     results = data.get("results", [])
     category = data.get("category")
+    search_mode = data.get("searchMode")
+    catalog_generation_id = data.get("catalogGenerationId")
+    vector_generation_id = data.get("vectorGenerationId")
+    fallback_reason = data.get("fallbackReason")
 
     header = f"## Search: \"{query}\""
     if category:
         header += f" (category: {category})"
     header += f" — {total} result{'s' if total != 1 else ''}"
 
-    if not results:
-        return f"{header}\n\nNo results found."
-
     lines = [header, ""]
+
+    metadata = []
+    if search_mode:
+        metadata.append(f"- **Search mode**: `{search_mode}`")
+    if catalog_generation_id:
+        metadata.append(f"- **Catalog generation**: `{catalog_generation_id}`")
+    if "vectorGenerationId" in data:
+        vector_display = vector_generation_id or "none"
+        metadata.append(f"- **Vector generation**: `{vector_display}`")
+    if fallback_reason:
+        metadata.append(f"- **Fallback reason**: `{fallback_reason}`")
+    if metadata:
+        lines.extend(["### Search metadata", "", *metadata, ""])
+
+    if not results:
+        lines.append("No results found.")
+        return "\n".join(lines)
 
     for i, r in enumerate(results, 1):
         score = r.get("score")

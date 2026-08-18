@@ -1,0 +1,64 @@
+{
+  "resource": {
+    "Q4866972": {
+      "title": "Basic Formal Ontology",
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/",
+      "types": [
+        "KnowledgeGraph",
+        "Ontology"
+      ],
+      "category": "General / Cross-domain"
+    },
+    "Q124134540": {
+      "title": "Schema.org Accessibility Properties for Discoverability Vocabulary",
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/schema-org-accessibility-properties-for-discoverability-vocabulary/",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "category": "Technology & Web"
+    },
+    "Q26936735": {
+      "title": "Homosaurus",
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/homosaurus/",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "category": "General / Cross-domain"
+    },
+    "Q2013": {
+      "title": "Wikidata",
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/wikidata/",
+      "types": [
+        "KnowledgeGraph"
+      ],
+      "category": "General / Cross-domain"
+    },
+    "Q138639042": {
+      "title": "Open Knowledge Graphs",
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/open-knowledge-graphs/",
+      "types": [
+        "ControlledVocabulary",
+        "Ontology"
+      ],
+      "category": "Technology & Web"
+    }
+  },
+  "software": {
+    "Q138639042": {
+      "title": "Open Knowledge Graphs",
+      "canonicalUrl": "https://openknowledgegraphs.com/software/open-knowledge-graphs/",
+      "types": [
+        "Software"
+      ],
+      "softwareType": "Ontology Engineering"
+    },
+    "Q7276224": {
+      "title": "RDFLib",
+      "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/",
+      "types": [
+        "Software"
+      ],
+      "softwareType": "Developer Library"
+    }
+  }
+}

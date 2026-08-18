@@ -5,7 +5,14 @@
   "private": true,
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "test": "node --test",
+    "vectors:seed": "node scripts/seed.js",
+    "vectors:provision": "node scripts/provision-vectorize.js",
+    "vectors:ensure": "node scripts/ensure-generation.js",
+    "vectors:verify": "node scripts/verify-generation.js",
+    "vectors:prune": "node scripts/prune-generations.js",
+    "d1:migrate": "wrangler d1 migrations apply okg-logs --remote"
   },
   "devDependencies": {
     "wrangler": "^4"
