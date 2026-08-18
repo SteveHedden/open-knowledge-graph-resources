@@ -1,139 +1,1053 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>KG Jobs Prototype Review</title>
-<style>
-  :root {
-    --qualified: #1a7f37;
-    --review: #9a6700;
-    --not_match: #6e7781;
-    --bg: #ffffff;
-    --fg: #1f2328;
-    --border: #d0d7de;
-    --card-bg: #f6f8fa;
-  }
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-         max-width: 960px; margin: 0 auto; padding: 24px; color: var(--fg); background: var(--bg); }
-  .banner { background: #fff8c5; border: 1px solid #d4a72c; border-radius: 6px;
-            padding: 10px 14px; font-weight: 600; margin-bottom: 20px; }
-  h1 { font-size: 1.4rem; margin-bottom: 4px; }
-  .subtitle { color: #57606a; margin-bottom: 20px; }
-  .filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
-  .filters button { border: 1px solid var(--border); background: var(--card-bg); border-radius: 20px;
-                     padding: 6px 14px; cursor: pointer; font-size: 0.9rem; }
-  .filters button.active { background: var(--fg); color: white; border-color: var(--fg); }
-  .record { border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 14px; }
-  .record-header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-  .record-title { font-weight: 600; }
-  .record-org { color: #57606a; font-size: 0.9rem; }
-  .badge { display: inline-block; border-radius: 20px; padding: 2px 10px; font-size: 0.78rem;
-           font-weight: 600; color: white; text-transform: uppercase; letter-spacing: 0.02em; }
-  .badge.qualified { background: var(--qualified); }
-  .badge.review { background: var(--review); }
-  .badge.not_match { background: var(--not_match); }
-  .evidence { margin-top: 10px; font-size: 0.88rem; }
-  .evidence-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px;
-                    padding: 6px 10px; margin-top: 6px; }
-  .evidence-item.negated { opacity: 0.55; text-decoration: line-through; }
-  .evidence-empty { color: #57606a; font-style: italic; font-size: 0.88rem; margin-top: 8px; }
-  .meta { color: #57606a; font-size: 0.85rem; margin-top: 4px; }
-  #status { color: #57606a; font-size: 0.85rem; margin-bottom: 10px; }
-</style>
-</head>
-<body>
-  <div class="banner">Local synthetic prototype — not live jobs. All records below are invented test fixtures.</div>
-  <h1>KG Jobs Discovery Prototype</h1>
-  <div class="subtitle">Reviewer view of prototypes/kg-jobs/data/jobs.json — posting-first classification, not employer-first.</div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Knowledge Graph Jobs — Open Knowledge Graphs</title>
+    <meta
+      name="description"
+      content="A local Open Knowledge Graphs prototype for discovering current knowledge-graph jobs."
+    >
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;700&family=Work+Sans:wght@400;500;600&display=swap");
 
-  <div class="filters">
-    <button data-filter="all" class="active">All</button>
-    <button data-filter="qualified">Qualified</button>
-    <button data-filter="review">Review</button>
-    <button data-filter="not_match">Not match</button>
-  </div>
+      :root {
+        --bg-base: #f6f7f4;
+        --bg-accent: #dbe4ed;
+        --surface: rgba(255, 255, 255, 0.88);
+        --surface-strong: #ffffff;
+        --text-main: #1f2b2d;
+        --text-muted: #51656a;
+        --line-soft: #d2dce6;
+        --brand: #6a89a7;
+        --brand-strong: #4a6e8a;
+        --highlight: #f6ca67;
+        --radius: 14px;
+        --shadow-soft: 0 10px 28px rgba(40, 60, 80, 0.09);
+        --max-width: 1120px;
+      }
 
-  <div id="status"></div>
-  <div id="records"></div>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-<script>
-(function () {
-  const recordsEl = document.getElementById("records");
-  const statusEl = document.getElementById("status");
-  const buttons = Array.from(document.querySelectorAll(".filters button"));
-  let currentFilter = "all";
-  let allRecords = [];
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-  function fieldLabel(field) {
-    return { title: "title", description: "description", qualifications: "qualifications",
-             responsibilities: "responsibilities" }[field] || field;
-  }
+      body {
+        min-height: 100vh;
+        font-family: "Work Sans", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--text-main);
+        background:
+          radial-gradient(1200px 600px at 92% -8%, rgba(106, 137, 167, 0.18), transparent 65%),
+          radial-gradient(850px 500px at 8% 0%, rgba(246, 202, 103, 0.18), transparent 60%),
+          linear-gradient(180deg, var(--bg-base), #eef1ee);
+        line-height: 1.45;
+      }
 
-  function render() {
-    const filtered = currentFilter === "all"
-      ? allRecords
-      : allRecords.filter((r) => r.classification === currentFilter);
+      a {
+        color: var(--brand-strong);
+      }
 
-    recordsEl.innerHTML = filtered.map((r) => {
-      const positiveEvidence = (r.evidence || []).filter((e) => !e.negated);
-      const negatedEvidence = (r.evidence || []).filter((e) => e.negated);
+      a:hover {
+        color: var(--brand);
+      }
 
-      const evidenceHtml = positiveEvidence.length
-        ? positiveEvidence.map((e) => `
-            <div class="evidence-item">
-              <strong>${e.concept_label}</strong> (${e.concept_scheme} · ${e.strength})
-              — matched "${e.matched_phrase}" in <em>${fieldLabel(e.source_field)}</em>
-            </div>`).join("")
-        : `<div class="evidence-empty">No positive evidence.</div>`;
+      button,
+      input {
+        font: inherit;
+      }
 
-      const negatedHtml = negatedEvidence.length
-        ? negatedEvidence.map((e) => `
-            <div class="evidence-item negated">
-              <strong>${e.concept_label}</strong> — matched "${e.matched_phrase}" in
-              <em>${fieldLabel(e.source_field)}</em> but negated in context (excluded)
-            </div>`).join("")
-        : "";
+      :focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--highlight) 72%, #000 0%);
+        outline-offset: 2px;
+      }
 
-      return `
-        <div class="record">
-          <div class="record-header">
-            <div>
-              <div class="record-title">${r.title}</div>
-              <div class="record-org">${r.hiringOrganization}${r.location ? " · " + r.location : ""}</div>
-            </div>
-            <span class="badge ${r.classification}">${r.classification.replace("_", " ")}</span>
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 1000;
+        padding: 0.6rem 0.85rem;
+        border-radius: 0 0 10px 10px;
+        background: var(--brand-strong);
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .skip-link:focus {
+        left: 1rem;
+      }
+
+      .site-header,
+      .site-main,
+      .site-footer {
+        width: min(100% - 2rem, var(--max-width));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        padding-top: 2.9rem;
+      }
+
+      .brand-title {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.4em;
+        font-family: "Fraunces", "Palatino Linotype", serif;
+        font-size: clamp(2rem, 1.45rem + 2.2vw, 3.25rem);
+        line-height: 1.08;
+      }
+
+      .site-logo {
+        height: 0.85em;
+        width: auto;
+        border-radius: 6px;
+      }
+
+      .site-subtitle {
+        margin: 1rem 0 0;
+        max-width: 70ch;
+        color: var(--text-muted);
+      }
+
+      .site-main {
+        padding: 1.9rem 0 2rem;
+        animation: fade-in 0.45s ease-out;
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .page-heading {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      .page-heading h2 {
+        margin: 0;
+        font-family: "Fraunces", "Palatino Linotype", serif;
+        font-size: clamp(1.65rem, 1.35rem + 1vw, 2.2rem);
+        line-height: 1.15;
+      }
+
+      .prototype-label {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 0.3rem 0.62rem;
+        background: color-mix(in srgb, var(--highlight) 58%, #fff);
+        color: #66500f;
+        font-size: 0.76rem;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .page-description {
+        flex-basis: 100%;
+        margin: -0.15rem 0 0;
+        max-width: 75ch;
+        color: var(--text-muted);
+      }
+
+      .controls {
+        margin-bottom: 1.35rem;
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: var(--shadow-soft);
+        backdrop-filter: blur(4px);
+      }
+
+      .controls-row {
+        display: grid;
+        gap: 1rem;
+        padding: 1rem;
+        grid-template-columns: 1fr minmax(17rem, 24rem);
+        align-items: end;
+      }
+
+      .tabs {
+        display: grid;
+        grid-template-columns: 1.45fr 0.75fr 0.75fr;
+        border: 1px solid var(--line-soft);
+        border-radius: 999px;
+        background: #eff2f6;
+        overflow: hidden;
+      }
+
+      .tab {
+        display: grid;
+        place-items: center;
+        min-height: 2.75rem;
+        padding: 0.62rem 0.85rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color 120ms ease, color 120ms ease;
+      }
+
+      .tab:hover {
+        color: var(--text-main);
+      }
+
+      .tab.is-active {
+        background: var(--surface-strong);
+        color: var(--brand-strong);
+      }
+
+      .search-wrap {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .search-wrap label {
+        color: var(--text-muted);
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .search-wrap input {
+        width: 100%;
+        border: 1px solid #bfcbc7;
+        border-radius: 12px;
+        background: #fff;
+        padding: 0.68rem 0.75rem;
+        color: var(--text-main);
+      }
+
+      .search-wrap input::placeholder {
+        color: #819396;
+      }
+
+      .prototype-note {
+        margin: 0 1rem 0.95rem;
+        border-top: 1px solid var(--line-soft);
+        border-left: 4px solid var(--highlight);
+        padding: 0.85rem 0.75rem 0.65rem;
+        background: color-mix(in srgb, var(--highlight) 18%, #fff);
+        color: #665b39;
+        font-size: 0.88rem;
+      }
+
+      .prototype-note strong {
+        color: var(--text-main);
+      }
+
+      .prototype-note a {
+        white-space: nowrap;
+      }
+
+      .results-meta {
+        margin: 0;
+        padding: 0 1rem 0.95rem;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+      }
+
+      .panel {
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius);
+        overflow: hidden;
+        background: var(--surface-strong);
+        box-shadow: var(--shadow-soft);
+      }
+
+      .table-shell {
+        overflow-x: auto;
+      }
+
+      .jobs-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .jobs-table th,
+      .jobs-table td {
+        border-bottom: 1px solid #e3e8ec;
+        padding: 0.78rem 0.75rem;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .jobs-table tbody tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .jobs-table th {
+        background: #f2f5f8;
+        color: var(--text-muted);
+        font-size: 0.84rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+
+      /* Matches openknowledgegraphs.com's .sort-button exactly: a plain
+         inline-flex button, arrow via ::after keyed off data-order rather
+         than a separate indicator element. */
+      .sort-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        font-weight: inherit;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .sort-button::after {
+        content: "↕";
+        font-size: 0.82rem;
+        color: #7b8b98;
+      }
+
+      .sort-button:hover {
+        color: var(--brand-strong);
+      }
+
+      .sort-button.is-active {
+        color: var(--brand-strong);
+        font-weight: 600;
+      }
+
+      .sort-button.is-active[data-order="asc"]::after {
+        content: "↑";
+      }
+
+      .sort-button.is-active[data-order="desc"]::after {
+        content: "↓";
+      }
+
+      .job-title {
+        margin: 0;
+        font-size: 0.98rem;
+        font-weight: 600;
+      }
+
+      .job-description {
+        margin: 0.35rem 0 0;
+        max-width: 46ch;
+        color: var(--text-muted);
+        font-size: 0.87rem;
+      }
+
+      .job-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4rem 0.75rem;
+        margin-top: 0.62rem;
+        font-size: 0.82rem;
+      }
+
+      .view-job {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid var(--brand);
+        border-radius: 9px;
+        padding: 0.36rem 0.58rem;
+        color: var(--brand-strong);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .source-credit {
+        color: var(--text-muted);
+      }
+
+      .organization,
+      .location,
+      .remote,
+      .posted {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .location strong,
+      .organization strong {
+        display: block;
+        color: var(--text-main);
+        font-weight: 500;
+      }
+
+      .posted-date {
+        display: block;
+      }
+
+      .salary {
+        display: block;
+        margin-top: 0.3rem;
+        color: var(--text-main);
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+
+      .concept-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.32rem;
+        margin-top: 0.55rem;
+      }
+
+      .concept-chip {
+        display: inline-flex;
+        border: 1px solid #d8e0e6;
+        border-radius: 999px;
+        padding: 0.22rem 0.52rem;
+        background: #f4f7f9;
+        color: var(--text-muted);
+        font-size: 0.74rem;
+        line-height: 1.25;
+      }
+
+      .concept-chip.role {
+        border-color: #cbd9e5;
+        color: var(--brand-strong);
+      }
+
+      .concept-chip.activity {
+        border-color: #ead9a8;
+        background: #fff9e8;
+        color: #766129;
+      }
+
+      .evidence-details {
+        margin-top: 0.55rem;
+        min-width: 10rem;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      }
+
+      .evidence-details summary {
+        color: var(--brand-strong);
+        cursor: pointer;
+        font-weight: 500;
+      }
+
+      .evidence-list {
+        margin: 0.55rem 0 0;
+        padding: 0 0 0 1rem;
+      }
+
+      .evidence-list li {
+        margin-top: 0.42rem;
+      }
+
+      .evidence-list li.negated {
+        color: #849194;
+        text-decoration: line-through;
+      }
+
+      .empty-state {
+        padding: 2rem 1rem;
+        color: var(--text-muted);
+        font-style: italic;
+        text-align: center;
+      }
+
+      .cards {
+        display: none;
+        padding: 0.85rem;
+        gap: 0.75rem;
+      }
+
+      .job-card {
+        border: 1px solid #dde4ea;
+        border-radius: 11px;
+        background: #fff;
+        padding: 0.9rem;
+        box-shadow: 0 5px 18px rgba(40, 60, 80, 0.06);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0.75rem;
+      }
+
+      .card-meta {
+        display: grid;
+        gap: 0.25rem;
+        margin-top: 0.65rem;
+        color: var(--text-muted);
+        font-size: 0.86rem;
+      }
+
+      .site-footer {
+        margin: 1.5rem auto 2rem;
+        border-top: 1px solid var(--line-soft);
+        padding-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem 1rem;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      .site-footer p {
+        margin: 0;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 930px) {
+        .controls-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .site-header {
+          padding-top: 2.1rem;
+        }
+
+        .site-main {
+          padding-top: 1.2rem;
+        }
+
+        .tabs {
+          grid-template-columns: 1.35fr 0.8fr 0.7fr;
+          width: 100%;
+        }
+
+        .tab {
+          padding: 0.58rem 0.42rem;
+          font-size: 0.78rem;
+        }
+
+        .table-shell {
+          display: none;
+        }
+
+        .cards {
+          display: grid;
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <h1 class="brand-title">
+        <img src="./favicon.svg" alt="" class="site-logo">
+        Open Knowledge Graphs
+      </h1>
+      <p class="site-subtitle">
+        Browse ontologies, controlled vocabularies, taxonomies, semantic software, and knowledge graph jobs from RDF-first catalogs.
+      </p>
+    </header>
+
+    <main id="main-content" class="site-main">
+      <div class="page-heading">
+        <h2>Knowledge Graph Jobs</h2>
+        <span id="prototype-label" class="prototype-label">Local live prototype</span>
+        <p id="page-description" class="page-description">
+          Current postings discovered from a declared public source and classified from their content using the KG jobs vocabulary.
+        </p>
+      </div>
+
+      <section class="controls" aria-label="Job catalog controls">
+        <div class="controls-row">
+          <nav class="tabs" aria-label="Catalog sections">
+            <a class="tab" href="https://openknowledgegraphs.com/">Ontologies &amp; Vocabularies</a>
+            <a class="tab" href="https://openknowledgegraphs.com/?tab=software">Software</a>
+            <a class="tab is-active" href="./" aria-current="page">Jobs</a>
+          </nav>
+          <div class="search-wrap">
+            <label for="job-search">Search</label>
+            <input
+              id="job-search"
+              name="q"
+              type="search"
+              placeholder="Search jobs, employers, locations, and KG concepts"
+              autocomplete="off"
+            >
           </div>
-          <div class="meta">${r.id} · ${r.test_url}</div>
-          <div class="evidence">${evidenceHtml}${negatedHtml}</div>
-        </div>`;
-    }).join("");
+        </div>
 
-    statusEl.textContent = `${filtered.length} of ${allRecords.length} records shown`;
-  }
+        <p id="data-note" class="prototype-note">
+          <strong>Local live data:</strong> this page reads an ignored runtime snapshot created on this computer. Nothing here is deployed or published in OKG.
+          <a href="?mode=fixtures">View synthetic test fixtures</a>.
+        </p>
+        <p id="results-meta" class="results-meta" aria-live="polite">Loading prototype data…</p>
+      </section>
 
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentFilter = btn.dataset.filter;
-      render();
-    });
-  });
+      <section class="panel" aria-labelledby="jobs-heading">
+        <h2 id="jobs-heading" class="sr-only">Job posting review results</h2>
+        <div class="table-shell">
+          <table class="jobs-table">
+            <caption id="jobs-caption" class="sr-only">Current knowledge graph job postings discovered by the local prototype.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Job</th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="employer" aria-label="Sort by employer">Employer</button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="location" aria-label="Sort by location">Location</button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="remote" aria-label="Sort by remote status">Remote</button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="datePosted" aria-label="Sort by date posted">Posted</button></th>
+              </tr>
+            </thead>
+            <tbody id="jobs-table-body"></tbody>
+          </table>
+        </div>
+        <div id="job-cards" class="cards"></div>
+        <div id="empty-state" class="empty-state" hidden>No jobs match the current search.</div>
+      </section>
+    </main>
 
-  fetch("../data/jobs.json")
-    .then((res) => {
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      return res.json();
-    })
-    .then((data) => {
-      allRecords = data;
-      render();
-    })
-    .catch((err) => {
-      statusEl.textContent = "Could not load ../data/jobs.json: " + err.message +
-        " — run scripts/generate.py first, then serve this directory with a local HTTP server.";
-    });
-})();
-</script>
-</body>
+    <footer class="site-footer">
+      <p id="footer-summary">KG Jobs discovery prototype · RDF-first · local only</p>
+      <div class="footer-links">
+        <a id="jobs-ttl-link" href="../runtime/jobs.ttl">jobs.ttl</a>
+        <a id="jobs-json-link" href="../runtime/jobs.json">jobs.json</a>
+        <a href="../vocabularies/kg-jobs.ttl">KG jobs vocabulary</a>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const tableBodyEl = document.getElementById("jobs-table-body");
+        const cardsEl = document.getElementById("job-cards");
+        const emptyStateEl = document.getElementById("empty-state");
+        const resultsMetaEl = document.getElementById("results-meta");
+        const searchEl = document.getElementById("job-search");
+        const prototypeLabelEl = document.getElementById("prototype-label");
+        const pageDescriptionEl = document.getElementById("page-description");
+        const dataNoteEl = document.getElementById("data-note");
+        const jobsCaptionEl = document.getElementById("jobs-caption");
+        const footerSummaryEl = document.getElementById("footer-summary");
+        const jobsTtlLinkEl = document.getElementById("jobs-ttl-link");
+        const jobsJsonLinkEl = document.getElementById("jobs-json-link");
+        const params = new URLSearchParams(window.location.search);
+        const fixtureMode = params.get("mode") === "fixtures";
+        const dataUrl = fixtureMode ? "../data/jobs.json" : "../runtime/jobs.json";
+        const runUrl = fixtureMode ? null : "../runtime/run.json";
+        let currentQuery = "";
+        let allRecords = [];
+        let runMetadata = null;
+        // Matches openknowledgegraphs.com's own sort toggle rule exactly:
+        // switching to a new column always starts ascending; clicking the
+        // active column flips direction. No per-column default direction.
+        let currentSort = { key: "datePosted", direction: "desc" };
+
+        function escapeHtml(value) {
+          return String(value == null ? "" : value)
+            .replaceAll("&", "&amp;")
+            .replaceAll("<", "&lt;")
+            .replaceAll(">", "&gt;")
+            .replaceAll('"', "&quot;")
+            .replaceAll("'", "&#039;");
+        }
+
+        function fieldLabel(field) {
+          return {
+            title: "title",
+            description: "description",
+            qualifications: "qualifications",
+            responsibilities: "responsibilities"
+          }[field] || field;
+        }
+
+        // Sources vary in what they actually report: Himalayas/Jobicy/
+        // Remotive are remote-only boards (always true), Arbeitnow has a
+        // real remote/on-site flag (true or false), and Jooble has no
+        // dedicated flag at all -- it only ever sets remote:true when its
+        // location field literally says "Remote", and otherwise leaves the
+        // field unset rather than implying on-site. record.remote is
+        // therefore true / false / undefined, and each means something
+        // different -- never collapse false and undefined into one label.
+        function remoteLabel(record) {
+          if (record.remote === true) return "Remote available";
+          if (record.remote === false) return "On-site";
+          return "Remote status not reported";
+        }
+
+        function formatDate(value) {
+          if (!value) return "—";
+          const date = new Date(/^\d{4}-\d{2}-\d{2}$/.test(value) ? value + "T00:00:00Z" : value);
+          if (Number.isNaN(date.getTime())) return value;
+          return new Intl.DateTimeFormat("en", {
+            month: "short",
+            day: "numeric",
+            year: "numeric",
+            timeZone: "UTC"
+          }).format(date);
+        }
+
+        // Consistent across every source, regardless of whether its
+        // "description" is a full job description (Himalayas, Jobicy,
+        // Arbeitnow) or a source-truncated match snippet (Jooble): center
+        // the shown excerpt on the strongest unnegated evidence match found
+        // in the description text, so the reader always sees *why* this
+        // posting matched rather than an arbitrary truncation point. Falls
+        // back to a plain leading truncation only when no matched phrase
+        // can be located in the description (e.g. the match was in the
+        // title instead).
+        function summaryText(record, limit = 260) {
+          const text = String(record.description == null ? "" : record.description)
+            .replace(/\s+/g, " ")
+            .trim();
+          if (text.length <= limit) return text;
+
+          const lowerText = text.toLowerCase();
+          const candidates = (record.evidence || [])
+            .filter((item) => !item.negated && item.source_field === "description" && item.matched_phrase)
+            .sort((a, b) => (a.strength === b.strength ? 0 : a.strength === "strong" ? -1 : 1));
+
+          let center = -1;
+          for (const item of candidates) {
+            const idx = lowerText.indexOf(item.matched_phrase.toLowerCase());
+            if (idx !== -1) {
+              center = idx;
+              break;
+            }
+          }
+
+          if (center === -1) {
+            return text.slice(0, limit).replace(/\s+\S*$/, "") + "…";
+          }
+
+          const half = Math.floor(limit / 2);
+          let start = Math.max(0, center - half);
+          let end = Math.min(text.length, start + limit);
+          start = Math.max(0, end - limit);
+          let excerpt = text.slice(start, end);
+          if (start > 0) excerpt = excerpt.replace(/^\S*\s+/, "");
+          if (end < text.length) excerpt = excerpt.replace(/\s+\S*$/, "");
+          return (start > 0 ? "…" : "") + excerpt + (end < text.length ? "…" : "");
+        }
+
+        function canonicalUrl(record) {
+          return record.url || record.canonicalUrl || record.sourceUrl || "";
+        }
+
+        function sourceName(record) {
+          return record.sourceName || record.source || (runMetadata && (runMetadata.sourceName || runMetadata.source)) || "Source";
+        }
+
+        function attributionUrl(record) {
+          return record.sourceAttributionUrl || record.attributionUrl || (runMetadata && (runMetadata.attributionUrl || runMetadata.sourceUrl)) || canonicalUrl(record);
+        }
+
+        function sourceActions(record) {
+          if (fixtureMode) return "";
+          const jobUrl = canonicalUrl(record);
+          const creditUrl = attributionUrl(record);
+          return `
+            <div class="job-actions">
+              ${jobUrl ? `<a class="view-job" href="${escapeHtml(jobUrl)}" target="_blank" rel="noopener noreferrer">View job ↗</a>` : ""}
+              <span class="source-credit">Source: ${creditUrl ? `<a href="${escapeHtml(creditUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceName(record))}</a>` : escapeHtml(sourceName(record))}</span>
+            </div>
+          `;
+        }
+
+        function uniqueConcepts(record) {
+          const seen = new Set();
+          return (record.evidence || []).filter((evidence) => {
+            if (evidence.negated || seen.has(evidence.concept_uri)) return false;
+            seen.add(evidence.concept_uri);
+            return true;
+          });
+        }
+
+        function conceptClass(scheme) {
+          if (scheme === "Job Roles") return "role";
+          if (scheme === "KG Activities") return "activity";
+          return "skill";
+        }
+
+        function conceptChips(record) {
+          const concepts = uniqueConcepts(record);
+          if (!concepts.length) return "";
+          return `<div class="concept-list" aria-label="Matched KG concepts">${concepts.map((concept) => `
+            <span class="concept-chip ${conceptClass(concept.concept_scheme)}" title="${escapeHtml(concept.concept_scheme)}">
+              ${escapeHtml(concept.concept_label)}
+            </span>
+          `).join("")}</div>`;
+        }
+
+        function evidenceDetails(record) {
+          const evidence = record.evidence || [];
+          const positiveCount = evidence.filter((item) => !item.negated).length;
+          const summary = positiveCount
+            ? `Why this job · ${positiveCount} ${positiveCount === 1 ? "KG signal" : "KG signals"}`
+            : evidence.length
+              ? `Why this was excluded · ${evidence.length} signal`
+              : "No qualifying evidence";
+
+          if (!evidence.length) {
+            return `<span class="fixture-id">No matched vocabulary concepts</span>`;
+          }
+
+          return `
+            <details class="evidence-details">
+              <summary>${summary}</summary>
+              <ul class="evidence-list">
+                ${evidence.map((item) => `
+                  <li class="${item.negated ? "negated" : ""}">
+                    <strong>${escapeHtml(item.concept_label)}</strong>
+                    · ${escapeHtml(item.concept_scheme)}
+                    · “${escapeHtml(item.matched_phrase)}” in ${escapeHtml(fieldLabel(item.source_field))}
+                    ${item.negated ? " · negated, so excluded" : ""}
+                  </li>
+                `).join("")}
+              </ul>
+            </details>
+          `;
+        }
+
+        function tableRow(record) {
+          return `
+            <tr>
+              <td>
+                <h3 class="job-title">${escapeHtml(record.title)}</h3>
+                <p class="job-description">${escapeHtml(summaryText(record))}</p>
+                ${conceptChips(record)}
+                ${evidenceDetails(record)}
+                ${sourceActions(record)}
+              </td>
+              <td class="organization"><strong>${escapeHtml(record.hiringOrganization)}</strong></td>
+              <td class="location">
+                <strong>${escapeHtml(record.location || "Location not supplied")}</strong>
+              </td>
+              <td class="remote">${remoteLabel(record)}</td>
+              <td class="posted">
+                <span class="posted-date">${escapeHtml(formatDate(record.datePosted))}</span>
+                ${record.salary ? `<span class="salary">${escapeHtml(record.salary)}</span>` : ""}
+              </td>
+            </tr>
+          `;
+        }
+
+        function card(record) {
+          return `
+            <article class="job-card">
+              <div class="card-header">
+                <h3 class="job-title">${escapeHtml(record.title)}</h3>
+              </div>
+              <div class="card-meta">
+                <span><strong>${escapeHtml(record.hiringOrganization)}</strong></span>
+                <span>${escapeHtml(record.location || "Location not supplied")} · ${remoteLabel(record)}</span>
+                <span>Posted ${escapeHtml(formatDate(record.datePosted))}</span>
+                ${record.salary ? `<span class="salary">${escapeHtml(record.salary)}</span>` : ""}
+              </div>
+              <p class="job-description">${escapeHtml(summaryText(record))}</p>
+              ${conceptChips(record)}
+              ${evidenceDetails(record)}
+              ${sourceActions(record)}
+            </article>
+          `;
+        }
+
+        function searchableText(record) {
+          return [
+            record.title,
+            record.description,
+            record.hiringOrganization,
+            record.location,
+            record.salary,
+            record.qualifications,
+            record.responsibilities,
+            ...(record.evidence || []).flatMap((item) => [item.concept_label, item.concept_scheme])
+          ].join(" ").toLocaleLowerCase();
+        }
+
+        // "qualified" vs "review" is an internal classifier confidence
+        // distinction, not something meaningful to a reader here -- both are
+        // shown together as "current KG jobs". Default sort is newest-first
+        // with strong-signal count as a tiebreaker; the Employer, Location,
+        // Remote, and Posted column headers let a reader pick any of the
+        // four instead.
+        function strongSignalCount(record) {
+          return (record.evidence || []).filter(
+            (item) => !item.negated && item.strength === "strong"
+          ).length;
+        }
+
+        function rankDate(record) {
+          const parsed = record.datePosted ? Date.parse(record.datePosted) : NaN;
+          return Number.isNaN(parsed) ? -Infinity : parsed;
+        }
+
+        // true (Remote available) sorts before false (On-site), which sorts
+        // before undefined (not reported) -- an explicit "no" is still more
+        // informative than no answer at all.
+        function remoteRank(record) {
+          if (record.remote === true) return 0;
+          if (record.remote === false) return 1;
+          return 2;
+        }
+
+        function compareRecords(a, b) {
+          const direction = currentSort.direction === "asc" ? 1 : -1;
+          let primary = 0;
+          if (currentSort.key === "employer") {
+            primary = (a.hiringOrganization || "").localeCompare(b.hiringOrganization || "", "en", { sensitivity: "base" });
+          } else if (currentSort.key === "location") {
+            const aHas = Boolean(a.location);
+            const bHas = Boolean(b.location);
+            if (aHas !== bHas) return aHas ? -1 : 1; // missing locations always sink to the bottom
+            primary = (a.location || "").localeCompare(b.location || "", "en", { sensitivity: "base" });
+          } else if (currentSort.key === "remote") {
+            primary = remoteRank(a) - remoteRank(b);
+          } else {
+            primary = rankDate(a) - rankDate(b);
+          }
+          if (primary !== 0) return primary * direction;
+          return rankDate(b) - rankDate(a) || strongSignalCount(b) - strongSignalCount(a);
+        }
+
+        function updateSortUi() {
+          document.querySelectorAll(".sort-button").forEach((button) => {
+            const isActive = button.dataset.sort === currentSort.key;
+            button.classList.toggle("is-active", isActive);
+            const header = button.closest("th");
+            if (isActive) {
+              button.dataset.order = currentSort.direction;
+              if (header) header.setAttribute("aria-sort", currentSort.direction === "asc" ? "ascending" : "descending");
+            } else {
+              button.removeAttribute("data-order");
+              if (header) header.setAttribute("aria-sort", "none");
+            }
+          });
+        }
+
+        function render() {
+          const acceptedRecords = allRecords
+            .filter((record) => record.classification === "qualified" || record.classification === "review")
+            .sort(compareRecords);
+          const filtered = acceptedRecords.filter((record) =>
+            !currentQuery || searchableText(record).includes(currentQuery)
+          );
+          updateSortUi();
+
+          tableBodyEl.innerHTML = filtered.map(tableRow).join("");
+          cardsEl.innerHTML = filtered.map(card).join("");
+          emptyStateEl.hidden = filtered.length !== 0;
+          if (!filtered.length) {
+            emptyStateEl.textContent = currentQuery
+              ? "No jobs match the current search."
+              : (!fixtureMode && !acceptedRecords.length)
+                ? "No KG jobs were found in this live snapshot."
+                : "No jobs are available in this dataset.";
+          }
+          if (fixtureMode) {
+            resultsMetaEl.textContent = `Showing ${filtered.length} of ${acceptedRecords.length} matching fixture jobs`;
+          } else {
+            const retrieved = runMetadata && (runMetadata.retrievedAt || runMetadata.retrieved_at || runMetadata.completedAt);
+            const retrievalText = retrieved ? ` · retrieved ${new Intl.DateTimeFormat("en", {dateStyle: "medium", timeStyle: "short"}).format(new Date(retrieved))}` : "";
+            resultsMetaEl.textContent = `Showing ${filtered.length} of ${acceptedRecords.length} current KG jobs${retrievalText}`;
+          }
+        }
+
+        searchEl.addEventListener("input", () => {
+          currentQuery = searchEl.value.trim().toLocaleLowerCase();
+          render();
+        });
+
+        document.querySelectorAll(".sort-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const key = button.dataset.sort;
+            if (currentSort.key === key) {
+              currentSort = { key, direction: currentSort.direction === "asc" ? "desc" : "asc" };
+            } else {
+              currentSort = { key, direction: "asc" };
+            }
+            render();
+          });
+        });
+
+        if (fixtureMode) {
+          prototypeLabelEl.textContent = "Synthetic test mode";
+          pageDescriptionEl.textContent = "Invented postings used to test the RDF-vocabulary-driven classifier and its explainable evidence.";
+          dataNoteEl.innerHTML = '<strong>Synthetic test data:</strong> these 20 invented postings validate the classifier. They are not live jobs and are not published in OKG. <a href="./">Return to local live data</a>.';
+          jobsCaptionEl.textContent = "Synthetic knowledge graph job postings accepted by the classifier.";
+          footerSummaryEl.textContent = "KG Jobs discovery prototype · RDF-first · synthetic fixtures";
+          jobsTtlLinkEl.href = "../data/jobs.ttl";
+          jobsJsonLinkEl.href = "../data/jobs.json";
+        }
+
+        const dataRequest = fetch(dataUrl).then((response) => {
+          if (!response.ok) throw new Error("HTTP " + response.status);
+          return response.json();
+        });
+        const runRequest = runUrl
+          ? fetch(runUrl).then((response) => {
+              if (!response.ok) throw new Error("HTTP " + response.status);
+              return response.json();
+            })
+          : Promise.resolve(null);
+
+        Promise.all([dataRequest, runRequest])
+          .then(([data, run]) => {
+            allRecords = Array.isArray(data) ? data : (data.jobs || []);
+            runMetadata = run;
+            render();
+          })
+          .catch((error) => {
+            resultsMetaEl.textContent = fixtureMode
+              ? "Could not load the generated fixture data: " + error.message
+              : "No local live snapshot is available yet.";
+            emptyStateEl.hidden = false;
+            emptyStateEl.innerHTML = fixtureMode
+              ? "Run <code>scripts/generate.py</code>, then serve <code>prototypes/kg-jobs</code> with a local HTTP server."
+              : "Run <code>python scripts/live_pipeline.py --live</code>, then reload this page. A failed pull will leave any previous good snapshot untouched.";
+          });
+      })();
+    </script>
+  </body>
 </html>

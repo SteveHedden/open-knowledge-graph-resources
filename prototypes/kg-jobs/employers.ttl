@@ -1,0 +1,39 @@
+@prefix kgjd: <https://openknowledgegraphs.com/prototypes/kg-jobs/data/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+#################################################################
+# Confirmed employer -> Wikidata matches
+#
+# Hand-maintained, NOT regenerated. Every entry here was proposed by
+# scripts/match_employer_wikidata.py and reviewed against Wikidata's P31
+# (instance of) values before being added -- a candidate is only recorded
+# when Wikidata's item is actually typed as an organization/company/business
+# and clearly is the employer itself, not a related product, subsidiary, or
+# service. scripts/generate.py and scripts/live_records.py merge these
+# owl:sameAs links onto matching kgjobs:Employer resources at build time,
+# but only for employers actually present in that run's data.
+#
+# Do not add an entry here without running the match script and checking
+# its ORG-TYPED output first. See README.md for the full workflow.
+#################################################################
+
+kgjd:employer-openai owl:sameAs <http://www.wikidata.org/entity/Q21708200> .
+# Q21708200 "OpenAI" -- instance of: enterprise. Official website matches
+# (https://openai.com/) exactly.
+
+kgjd:employer-accenture owl:sameAs <http://www.wikidata.org/entity/Q338825> .
+# Q338825 "Accenture" -- instance of: business, public company. Official
+# website matches (https://www.accenture.com/) exactly.
+
+kgjd:employer-oclc owl:sameAs <http://www.wikidata.org/entity/Q190593> .
+# Q190593 "OCLC, Inc." -- instance of: cooperative, nonprofit organization.
+# Official website matches (https://www.oclc.org/) exactly. Note: Wikidata's
+# search also surfaces Q846596 "WorldCat" (OCLC's catalog product) typed
+# generically as "organization" -- that is a different entity from the
+# employer and was deliberately not used here.
+
+# Neo4j (kgjd:employer-neo4j) deliberately has NO entry: Wikidata has no
+# item for the Neo4j company, only for the software product (Q1628290,
+# typed as proprietary software / graph database / free software, never as
+# an organization). Recording owl:sameAs to the product item would wrongly
+# assert the employer and the software are the same entity.

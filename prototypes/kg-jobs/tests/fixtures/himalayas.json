@@ -1,0 +1,51 @@
+{
+  "comments": "Network-free fixture modeled on the documented Himalayas search response.",
+  "jobs": [
+    {
+      "title": "Ontology Engineer",
+      "excerpt": "Build semantic systems for scientific data.",
+      "companyName": "Northstar Research",
+      "companySlug": "northstar-research",
+      "companyLogo": "https://himalayas.app/example-logo.png",
+      "employmentType": "Full-time",
+      "minSalary": 120000,
+      "maxSalary": 150000,
+      "salaryPeriod": "year",
+      "seniority": ["Staff", "Senior"],
+      "currency": "USD",
+      "locationRestrictions": ["Americas", "Europe"],
+      "timezoneRestrictions": ["UTC-8", "UTC+2"],
+      "categories": ["Data", "Engineering"],
+      "description": "<p>Design production ontologies and build knowledge graphs with <strong>RDF</strong>, OWL, and SPARQL.</p>",
+      "pubDate": 1786924800,
+      "expiryDate": 1789516800,
+      "applicationLink": "https://himalayas.app/companies/northstar-research/jobs/ontology-engineer",
+      "guid": "https://himalayas.app/companies/northstar-research/jobs/ontology-engineer"
+    },
+    {
+      "title": "Backend Engineer",
+      "excerpt": "Build reliable product APIs.",
+      "companyName": "Acme Systems",
+      "companySlug": "acme-systems",
+      "companyLogo": "https://himalayas.app/acme-logo.png",
+      "employmentType": "Contract",
+      "minSalary": null,
+      "maxSalary": null,
+      "salaryPeriod": null,
+      "seniority": ["Mid-level"],
+      "currency": null,
+      "locationRestrictions": ["Worldwide"],
+      "timezoneRestrictions": [],
+      "categories": ["Engineering"],
+      "description": "<p>Build and maintain HTTP APIs for a consumer application.</p>",
+      "pubDate": 1786924800,
+      "expiryDate": 1789516800,
+      "applicationLink": "https://himalayas.app/companies/acme-systems/jobs/backend-engineer",
+      "guid": "https://himalayas.app/companies/acme-systems/jobs/backend-engineer"
+    }
+  ],
+  "limit": 20,
+  "offset": 0,
+  "totalCount": 2,
+  "updatedAt": 1786924800
+}

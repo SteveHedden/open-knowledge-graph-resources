@@ -19,6 +19,7 @@ from rdflib.namespace import RDF, XSD
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from classifier import classify, find_evidence, load_match_terms, normalize  # noqa: E402
+from entities import apply_confirmed_wikidata_matches, employer_uri  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 VOCAB_PATH = ROOT / "vocabularies" / "kg-jobs.ttl"
@@ -50,9 +51,15 @@ def build_graph(records_with_results: list[tuple[dict, str, list]]) -> Graph:
         g.add((job, SCHEMA.title, Literal(normalize(record["title"]))))
         g.add((job, SCHEMA.description, Literal(normalize(record["description"]))))
 
-        org = BNode()
-        g.add((org, RDF.type, SCHEMA.Organization))
-        g.add((org, SCHEMA.name, Literal(record["hiringOrganization"])))
+        org = employer_uri(record["hiringOrganization"])
+        if (org, RDF.type, SCHEMA.Organization) not in g:
+            # First record seen for this employer slug sets the canonical
+            # display name; later records reusing the same slug (e.g. minor
+            # whitespace/case variants from different sources) just link to
+            # the existing resource, keeping schema:name single-valued.
+            g.add((org, RDF.type, SCHEMA.Organization))
+            g.add((org, RDF.type, KGJOBS.Employer))
+            g.add((org, SCHEMA.name, Literal(record["hiringOrganization"])))
         g.add((job, SCHEMA.hiringOrganization, org))
 
         if record.get("location"):
@@ -83,6 +90,7 @@ def build_graph(records_with_results: list[tuple[dict, str, list]]) -> Graph:
             g.add((node, KGJOBS.negated, Literal(ev.negated, datatype=XSD.boolean)))
             g.add((job, KGJOBS.hasEvidence, node))
 
+    apply_confirmed_wikidata_matches(g)
     return g
 
 

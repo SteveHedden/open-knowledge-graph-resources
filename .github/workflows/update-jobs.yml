@@ -1,0 +1,132 @@
+name: Update KG Jobs Data
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Refresh only this source (dry-run); default refreshes all four
+        required: false
+        default: all
+        type: choice
+        options:
+          - all
+          - himalayas
+          - jobicy
+          - jooble
+          - arbeitnow
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kg-jobs-publication
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: prototypes/kg-jobs
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: prototypes/kg-jobs/requirements.txt
+
+      - name: Install kg-jobs prototype dependencies
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Restore last committed snapshot into runtime/
+        run: |
+          mkdir -p runtime/raw
+          [ -f ../../data/jobs.json ] && cp ../../data/jobs.json runtime/jobs.json
+          [ -f ../../data/jobs.ttl ] && cp ../../data/jobs.ttl runtime/jobs.ttl
+          [ -f ../../data/jobs-run.json ] && cp ../../data/jobs-run.json runtime/run.json
+          if [ -d ../../data/jobs-raw ]; then
+            shopt -s nullglob
+            for f in ../../data/jobs-raw/*.json; do cp "$f" runtime/raw/; done
+          fi
+          exit 0
+
+      - name: Refresh each production-cleared source
+        id: refresh
+        shell: bash
+        run: |
+          set +e
+          requested="${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
+          if [ "$requested" = "all" ]; then
+            sources=(himalayas jobicy jooble arbeitnow)
+          else
+            sources=("$requested")
+          fi
+          failures=0
+          for source in "${sources[@]}"; do
+            echo "::group::Refreshing $source"
+            if [ "$source" = "jooble" ]; then
+              JOOBLE_API_KEY="${{ secrets.JOOBLE_API_KEY }}" python scripts/live_pipeline.py --live --source jooble
+            else
+              python scripts/live_pipeline.py --live --source "$source"
+            fi
+            status=$?
+            echo "::endgroup::"
+            if [ "$status" -ne 0 ]; then
+              echo "::error::$source refresh failed (exit $status) -- see log above"
+              failures=$((failures + 1))
+            fi
+          done
+          echo "failures=$failures" >> "$GITHUB_OUTPUT"
+
+      - name: Publish snapshot to the committed data path
+        run: |
+          mkdir -p ../../data/jobs-raw
+          cp runtime/jobs.json ../../data/jobs.json
+          cp runtime/jobs.ttl ../../data/jobs.ttl
+          cp runtime/run.json ../../data/jobs-run.json
+          rm -f ../../data/jobs-raw/*.json
+          shopt -s nullglob
+          for f in runtime/raw/*.json; do cp "$f" ../../data/jobs-raw/; done
+
+      - name: Commit and push if the published snapshot changed
+        id: commit
+        shell: bash
+        run: |
+          cd ../..
+          git add data/jobs.json data/jobs.ttl data/jobs-run.json data/jobs-raw
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No change to the published kg-jobs snapshot."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(data): refresh kg-jobs live snapshot"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Report run outcome
+        if: always()
+        run: |
+          {
+            echo "## KG jobs live refresh"
+            echo
+            echo "- snapshotChanged: ${{ steps.commit.outputs.changed || 'unknown' }}"
+            echo "- sourcesWithHardFailures: ${{ steps.refresh.outputs.failures || 'unknown' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Fail the run if any source hard-failed
+        if: always()
+        run: |
+          if [ "${{ steps.refresh.outputs.failures }}" != "0" ]; then
+            echo "One or more sources failed to refresh (not a refresh-interval skip); see logs above." >&2
+            exit 1
+          fi

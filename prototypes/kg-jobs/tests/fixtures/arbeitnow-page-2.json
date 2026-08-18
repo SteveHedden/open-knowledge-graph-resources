@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "slug": "mock-knowledge-graph-engineer-duplicate-8004",
+      "company_name": "  EXAMPLE   BANK ",
+      "title": "knowledge graph engineer",
+      "description": "Duplicate syndication record for the same role.",
+      "remote": true,
+      "url": "https://www.arbeitnow.com/view/mock-knowledge-graph-engineer-duplicate-8004",
+      "tags": ["RDF"],
+      "job_types": ["Full-time"],
+      "location": " berlin,   germany ",
+      "created_at": "2026-08-17"
+    },
+    {
+      "slug": "mock-ontology-engineer-8005",
+      "company_name": "Example Research Lab",
+      "title": "Ontology Engineer",
+      "description": "Develop OWL models and validate them with SHACL.",
+      "remote": true,
+      "url": "https://www.arbeitnow.com/view/mock-ontology-engineer-8005",
+      "tags": ["OWL", "SHACL"],
+      "job_types": ["Part-time", "Contract"],
+      "location": "Remote",
+      "created_at": "2026-08-16T12:00:00Z",
+      "salary_min": 70000,
+      "salary_max": 90000,
+      "currency": "EUR"
+    }
+  ],
+  "links": {
+    "next": null
+  },
+  "meta": {
+    "current_page": 2,
+    "last_page": 2,
+    "per_page": 3,
+    "total": 5
+  }
+}

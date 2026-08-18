@@ -1,12 +1,25 @@
 # KG Jobs Discovery Prototype
 
-A contained, network-free proof of concept for identifying knowledge-graph-related
-job postings **from posting content**, not from a preselected employer list.
+A contained RDF-first prototype for identifying knowledge-graph-related job
+postings **from posting content**, not from a preselected employer list. It has
+both a network-free synthetic regression corpus and a live ingestion path that
+now also runs on a recurring, unattended schedule in production (Task 31).
 
-Scope: everything lives under `prototypes/kg-jobs/`. Nothing outside this directory
-is touched. There is no production jobs category, no live job APIs, no scraping, no
-Wikidata edits, and no commits/pushes/deploys performed by this prototype's own
-code. Synthetic fixtures are plainly labeled as test data everywhere they appear.
+Scope: all prototype code, vocabulary, and ontology live under
+`prototypes/kg-jobs/`; nothing else in the repo is touched by this prototype's
+own code. There is no production jobs category on the site and no Wikidata
+editing — that boundary still holds. What *has* changed from the prototype's
+original, purely local design: the live command now also runs unattended, on
+a schedule, in CI (`.github/workflows/update-jobs.yml`), and its output is
+committed to repo-root `data/jobs.json` / `data/jobs.ttl` so the production
+OKG site can read it (see "Scheduled production ingestion" below). Running it
+by hand, locally, exactly as before, is still fully supported and still the
+only way to get a live snapshot for `prototypes/kg-jobs/site/`. The live
+command still makes a strictly bounded, attributed public-API pull only when
+`--live` is supplied, and its own working directory (`prototypes/kg-jobs/runtime/`)
+remains Git-ignored regardless of whether it was invoked by a human or by the
+schedule. Synthetic fixtures are plainly labeled as test data everywhere they
+appear.
 
 ## Why posting-first, not employer-first
 
@@ -28,10 +41,19 @@ prototypes/kg-jobs/
 ├── fixtures/jobs.json        20 hand-authored, reviewed test postings
 ├── data/jobs.ttl             Generated RDF (schema:JobPosting + evidence)
 ├── data/jobs.json            Generated deterministic JSON projection
+├── runtime/                  Git-ignored live snapshot (local runs and scheduled CI both use this)
 ├── scripts/classifier.py     Reusable, vocabulary-driven classifier
 ├── scripts/generate.py       Fixtures -> RDF + JSON
-├── site/index.html           Static reviewer page (reads data/jobs.json)
+├── scripts/live_pipeline.py  Live API -> RDF + JSON snapshot (run by hand or by the hourly schedule)
+├── requirements.txt          Standalone prototype/test dependencies
+├── site/index.html           Local jobs page (live by default; fixtures explicit)
 └── tests/                    pytest suite (SHACL, fixtures, determinism)
+
+# repo root (outside prototypes/kg-jobs/)
+.github/workflows/update-jobs.yml   Hourly schedule: calls live_pipeline.py per production source
+data/jobs.json, data/jobs.ttl       Committed snapshot the production OKG site reads
+data/jobs-run.json                  Committed per-source last-refresh history (continuity across CI runs)
+data/jobs-raw/<source>.json         Committed raw payload per source, for provenance
 ```
 
 RDF reuses `schema:JobPosting` (Schema.org), `skos:Concept`/`ConceptScheme`
@@ -43,6 +65,40 @@ of those vocabularies has a suitable term: the evidence model
 classification outcome (`kgjobs:classification`), and the match-term model
 (`kgjobs:MatchTerm`, `kgjobs:termText`, `kgjobs:caseSensitive`) that lets the
 vocabulary drive the classifier without duplicating it in code.
+
+## Employer identity and Wikidata matching
+
+Every job posting's `hiringOrganization` resolves to one stable, reused URI
+per distinct employer name (`kgjd:employer-<slug>`, minted by
+`scripts/entities.py`) rather than a fresh blank node per posting — the same
+company appearing across many postings is one `kgjobs:Employer` resource.
+This is deliberately *not* automatically linked to Wikidata: employer
+identity remains optional and never a scoring input, per Task 28's original
+design.
+
+To propose a Wikidata match for review:
+
+```bash
+.venv/bin/python scripts/match_employer_wikidata.py "Neo4j" "OpenAI"
+```
+
+It searches Wikidata's public API and, for every candidate, checks whether
+its `P31` (instance of) values include a real organization/company/business
+type before proposing it — a top search hit alone is not enough, since
+Wikidata frequently has an item only for a company's flagship *product*, not
+the company itself. Neo4j is the concrete example: Wikidata's top hit for
+"Neo4j" is the graph database software (typed `proprietary software` /
+`graph database` / `free software`), with no separate item for the company
+at all — the script flags that clearly (`NOT ORG-TYPED`) rather than
+proposing a false match.
+
+A confirmed match is recorded by hand in `employers.ttl` (a small,
+git-tracked, human-reviewed registry — never regenerated, never
+auto-written) as one `owl:sameAs` triple. `scripts/generate.py` and
+`scripts/live_records.py` both merge in any confirmed match at build time,
+but only for an employer actually present in that run's data — so
+`employers.ttl` can accumulate more entries than any single run needs
+without polluting the output.
 
 ## Controlled vocabulary
 
@@ -144,25 +200,153 @@ python3 -m http.server 8008
 # open http://localhost:8008/site/
 ```
 
-The page fetches `../data/jobs.json`, shows the "Local synthetic prototype —
-not live jobs" banner, and lets a reviewer filter Qualified / Review / Not
-match, with the matched phrase, concept, scheme, and source field shown for
-every piece of evidence (negated matches are shown struck through, so a
-reviewer can see what was found but excluded). It is not linked from the
-production OKG site.
+The default page reads the ignored `runtime/` live snapshot and presents only
+qualified postings inside the existing OKG visual language. Search covers job
+metadata and KG concepts; deduplicated concept chips summarize why each job
+belongs, and the complete matched phrase, concept, scheme, source field, and
+negation evidence remains behind an expandable "Why this job" disclosure. Each
+live job links to the canonical source posting and visibly credits its provider.
+Internal `review`/`not_match` outcomes remain in local RDF/JSON for audit but are
+not product-facing statuses. Use `http://localhost:8008/site/?mode=fixtures` to
+view the explicitly labeled synthetic corpus. The prototype is not linked from
+the production OKG site.
+
+## Pulling a live local snapshot
+
+Five sources are registered in `sources.ttl`, each independently refreshable
+with its own registry-declared query families, request cap, and refresh
+interval:
+
+| `--source` | Query model | Refresh interval | Auth |
+|---|---|---|---|
+| `himalayas` (default) | 4 reviewed queries (`knowledge graph`, `ontology`, `semantic web`, `SPARQL`), ≤20 results each | 24h | none |
+| `jobicy` | 8 reviewed queries (`rdf`, `ontology`, `sparql`, `skos`, `shacl`, `linkml`, `semantic web`, `knowledge graph`), ≤20 results each | 1h | none |
+| `jooble` | Same 8 queries, ≤30 results each (their fixed page size) | 6h | `JOOBLE_API_KEY` env var |
+| `arbeitnow` | Broad, unfiltered feed pull; KG relevance decided entirely by local classification | 1h | none |
+| `remotive` | Broad, unfiltered feed pull (their own `search` param was verified live to not filter at all) | 6h | none |
+
+Jobicy's own `tag` search was verified against the live API to be genuine for
+most terms but to silently fall back to an unfiltered result set for the bare
+words `knowledge` and `owl` specifically — those two are deliberately not
+queried; `knowledge graph` and `ontology` cover the same ground. Every
+source's local classification is the sole eligibility decision regardless of
+how well or poorly its own search filtered candidates — this is a defense
+against exactly that kind of source-side unreliability.
+
+**Running `jooble` requires a real, approved API key**, obtained instantly
+and for free at <https://jooble.org/api/about> (fill in your name, position,
+email, and a real website — the request form's own language is aimed at
+"webmasters," so an honest answer like the OKG catalog site works). The key
+is never written to `sources.ttl` or any other file in this repo — export it
+as an environment variable before running the pipeline:
+
+```bash
+export JOOBLE_API_KEY="your-key-here"
+```
+
+Jooble is also the only source that requires a POST request with a JSON body
+(verified directly: an equivalent GET request returns nothing at all), so it
+is fetched through a dedicated code path in `scripts/live_sources.py` rather
+than the shared GET fetcher used by the other four sources.
+
+Four of these five sources — Himalayas, Jobicy, Jooble, and Arbeitnow — are
+cleared under their own published terms for public, repeatedly-refreshed
+display and are the ones the production schedule below actually runs.
+Remotive is **not** in production scope: it remains local-evaluation-only,
+run by hand with `--source remotive` exactly as before.
+
+```bash
+cd prototypes/kg-jobs
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python scripts/live_pipeline.py --live               # himalayas (default)
+.venv/bin/python scripts/live_pipeline.py --live --source jobicy
+JOOBLE_API_KEY=... .venv/bin/python scripts/live_pipeline.py --live --source jooble
+.venv/bin/python -m http.server 8008
+# open http://localhost:8008/site/
+```
+
+There is no rate-limit bypass flag; a successful run must age past that
+source's registry interval before it can be fetched again. The ignored run
+manifest keeps the last successful retrieval time for every source
+independently, so refreshing one source never resets another's interval —
+**and refreshing one source never discards another's most recently published
+records**: `runtime/jobs.json` accumulates the latest snapshot from every
+source you've run, not just the one you just refreshed. `runtime/raw/`
+carries forward every source's last raw payload the same way.
+
+The command fetches a bounded current feed, strips source HTML to plain text,
+normalizes and deduplicates records, applies the existing RDF vocabulary-driven
+classifier, validates RDF/SHACL, and atomically promotes a complete merged
+snapshot to `runtime/`. A failed request or validation never replaces the
+previous good snapshot.
+
+The reviewer page (`site/index.html`) shows `qualified` and `review` postings
+together — that split is an internal classifier-confidence signal, not
+something meaningful to an end user — ranked newest-`datePosted`-first, with
+number of matched strong signals as a tiebreaker.
+
+Generated local artifacts:
+
+- `runtime/raw/<source-key>.json` — parsed JSON payloads paired with their declared queries, one file per source you've run at least once
+- `runtime/jobs.ttl` — `schema:JobPosting` records plus evidence and PROV links, across all sources
+- `runtime/jobs.json` — deterministic browser projection containing all outcomes, across all sources
+- `runtime/run.json` — the most recent run's source, retrieval time, discovery queries, and counts (see `sourceRefreshes` for every source's last retrieval time)
+
+## Scheduled production ingestion
+
+`.github/workflows/update-jobs.yml` runs hourly and calls this same
+`scripts/live_pipeline.py --live --source <key>`, unmodified, once for each
+of the four production-cleared sources (Himalayas, Jobicy, Jooble,
+Arbeitnow). It is a separate, purpose-built workflow, not an extension of
+the main catalog's `update-data.yml` publication pipeline — that pipeline's
+Cloudflare/vectors/rollback sequence runs once a day for the Wikidata
+catalog, on a completely different cadence and failure model than an hourly
+per-source jobs refresh.
+
+Because each GitHub Actions run starts from a clean checkout, the workflow
+restores the last committed snapshot into `prototypes/kg-jobs/runtime/`
+before calling the pipeline (so `enforce_refresh_interval` and
+`preserve_first_seen`/`other_source_records` see continuous history across
+runs, not a blank slate every hour), then copies the resulting
+`runtime/jobs.json` / `runtime/jobs.ttl` / `runtime/run.json` / `runtime/raw/`
+back out to a committed path at repo root — `data/jobs.json`, `data/jobs.ttl`,
+`data/jobs-run.json`, `data/jobs-raw/` — and commits only if that output
+actually changed. Pages serves from the repository tree, so this is what
+lets the production OKG site read the snapshot; publishing only as a
+GitHub Actions build artifact would not be fetchable by a static Pages
+build without extra plumbing, and it would expire.
+
+Because `enforce_refresh_interval` raises the dedicated
+`RefreshNotDueError` (a `LivePipelineError` subclass) rather than a generic
+one when a source's `minRefreshIntervalSeconds` has not elapsed yet, and
+`scripts/live_pipeline.py`'s `main()` exits `0` for that specific case, an
+hourly run legitimately "doing nothing" for Himalayas (24h) or Jooble (6h)
+on most invocations is expected and is not a workflow failure. Only a
+genuine fetch or SHACL-validation failure exits non-zero — and because
+`publish_snapshot` only replaces `runtime/` atomically after validation
+succeeds, and the workflow only copies `runtime/` out to `data/` after every
+source has been attempted, a failure on one source can never overwrite the
+last good committed snapshot with partial or missing data.
+
+Jooble's API key is provisioned as the `JOOBLE_API_KEY` GitHub Actions
+secret on the repository and is passed to that one step's environment only —
+never written to a file, logged, or committed.
 
 ## Known limitations / deliberately deferred
 
-This prototype answers one question only — *can KG relevance be detected from
-posting content alone* — and defers everything about running this in
-production:
+This prototype answers two bounded questions—*can KG relevance be detected from
+posting content alone, and can that classification run over a real attributed
+feed without touching production?* It still defers everything required to run
+jobs as a public OKG catalog:
 
-- **Live source discovery**: which job boards or ATSs to read from, and how.
-- **Source terms and access rules**: API vs. scraping, rate limits, ToS.
-- **Crawling or APIs**: no fetcher exists; `sources.ttl` only models the
-  *pattern* for a future real source registry.
+- **Production source portfolio**: direct Greenhouse/Lever employer feeds and
+  other sources need separate registry entries, review, and coverage work.
+- **Publication rights**: local API access is not permission to republish a
+  source's listings in a public job catalog.
 - **Deduplication**: the same posting appearing across multiple boards.
-- **Expiry**: postings going stale or being pulled.
+- **History and expiry**: the local feed is a current snapshot, not a durable
+  first-seen/last-seen job history.
 - **Employer reconciliation**: linking `hiringOrganization` strings to
   Wikidata QIDs — deliberately optional and never a scoring input.
 - **Wikidata enrichment**: no Wikidata reads or writes happen anywhere in this

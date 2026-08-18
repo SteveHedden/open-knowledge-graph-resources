@@ -1,0 +1,56 @@
+{
+  "0-legal-notice": "Mock response shaped like the Remotive public API; invented records for network-free tests.",
+  "job-count": 4,
+  "jobs": [
+    {
+      "id": 7001,
+      "url": "https://remotive.com/remote-jobs/software-dev/mock-knowledge-graph-engineer-7001?utm_source=test",
+      "title": "Knowledge Graph Engineer",
+      "company_name": "Example Bank",
+      "category": "Software Development",
+      "tags": ["RDF", "SPARQL"],
+      "job_type": "full_time",
+      "publication_date": "2026-08-17T10:00:00Z",
+      "candidate_required_location": "Worldwide",
+      "salary": "$140,000 - $180,000",
+      "description": "<p>Build a <strong>knowledge graph</strong> using RDF and SPARQL.</p>"
+    },
+    {
+      "id": 7001,
+      "url": "https://remotive.com/remote-jobs/software-dev/mock-knowledge-graph-engineer-7001?utm_source=test",
+      "title": "Knowledge Graph Engineer",
+      "company_name": "Example Bank",
+      "category": "Software Development",
+      "tags": ["SPARQL", "RDF"],
+      "job_type": "full_time",
+      "publication_date": "2026-08-17T10:00:00Z",
+      "candidate_required_location": "Worldwide",
+      "salary": "$140,000 - $180,000",
+      "description": "<p>Build a <strong>knowledge graph</strong> using RDF and SPARQL.</p>"
+    },
+    {
+      "id": 7002,
+      "url": "https://remotive.com/remote-jobs/data/mock-taxonomist-7002",
+      "title": "Taxonomist",
+      "company_name": "Example Pharma",
+      "category": "Data and Analytics",
+      "tags": ["Taxonomy"],
+      "job_type": "contract",
+      "publication_date": "2026-08-16T12:00:00Z",
+      "candidate_required_location": "Europe",
+      "description": "Lead taxonomy management for a research information platform."
+    },
+    {
+      "id": 7003,
+      "url": "https://remotive.com/remote-jobs/software-dev/mock-backend-engineer-7003",
+      "title": "Backend Engineer",
+      "company_name": "Example Retailer",
+      "category": "Software Development",
+      "tags": ["Python"],
+      "job_type": "full_time",
+      "publication_date": "2026-08-15T09:00:00Z",
+      "candidate_required_location": "USA",
+      "description": "Build ordinary payment APIs and relational database services."
+    }
+  ]
+}
