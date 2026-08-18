@@ -85,6 +85,14 @@ jobs:
           python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" verify \
             --root "$RUNNER_TEMP/rollback-catalog"
 
+      - name: Restore latest verified kg-jobs snapshot into the rollback worktree
+        run: |
+          python scripts/catalog_snapshot.py verify-jobs --root .
+          rm -rf "$RUNNER_TEMP/rollback-catalog/data/jobs"
+          cp -R data/jobs "$RUNNER_TEMP/rollback-catalog/data/jobs"
+          python "$RUNNER_TEMP/rollback-catalog/scripts/catalog_snapshot.py" verify-jobs \
+            --root "$RUNNER_TEMP/rollback-catalog"
+
       - name: Ensure and verify target vector generation from exact rollback worktree
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

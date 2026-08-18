@@ -29,6 +29,14 @@ from rdflib.namespace import OWL
 ROOT_DIR = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = "data/manifest.json"
 MANIFEST_SCHEMA_VERSION = "1.0.0"
+JOBS_MANIFEST_PATH = "data/jobs/manifest.json"
+JOBS_MANIFEST_SCHEMA_VERSION = "1.0.0"
+# data/jobs/ is deployed (see DEPLOYED_DIRECTORIES) but refreshes hourly on
+# its own schedule, independent of catalog generations -- folding it into
+# the core manifest's content-addressed digest would break verify_manifest
+# every time the jobs workflow ran between catalog generations. It gets its
+# own manifest at JOBS_MANIFEST_PATH instead.
+CORE_MANIFEST_EXCLUDED_PREFIX = "data/jobs/"
 GENERATION_ID_RE = re.compile(r"^\d{8}T\d{6}Z-[0-9a-f]{12}$")
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
@@ -223,8 +231,32 @@ def _is_in_tree(relative_path: str) -> bool:
     )
 
 
+def core_deployed_files(root: Path) -> list[str]:
+    """Deployed files tracked by the core catalog manifest.
+
+    Excludes data/jobs/, which has its own manifest -- see
+    CORE_MANIFEST_EXCLUDED_PREFIX.
+    """
+    return [
+        relative
+        for relative in deployed_files(root, include_manifest=False)
+        if not relative.startswith(CORE_MANIFEST_EXCLUDED_PREFIX)
+    ]
+
+
+def jobs_deployed_files(root: Path, include_manifest: bool = True) -> list[str]:
+    files = [
+        relative
+        for relative in deployed_files(root, include_manifest=True)
+        if relative.startswith(CORE_MANIFEST_EXCLUDED_PREFIX)
+    ]
+    if not include_manifest:
+        files = [relative for relative in files if relative != JOBS_MANIFEST_PATH]
+    return files
+
+
 def artifact_coverage(root: Path) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
-    files = deployed_files(root, include_manifest=False)
+    files = core_deployed_files(root)
     artifacts = [
         {"path": relative, "sha256": sha256_file(root / relative)}
         for relative in files
@@ -421,14 +453,126 @@ def verify_manifest(root: Path) -> dict[str, Any]:
         covered[str(entry["path"])] = covered.get(str(entry["path"]), 0) + 1
     for tree in manifest["directoryTrees"]:
         prefix = str(tree["path"]) + "/"
-        for relative in deployed_files(root, include_manifest=False):
+        for relative in core_deployed_files(root):
             if relative.startswith(prefix):
                 covered[relative] = covered.get(relative, 0) + 1
-    actual = set(deployed_files(root, include_manifest=False))
+    actual = set(core_deployed_files(root))
     if set(covered) != actual or any(count != 1 for count in covered.values()):
         raise SnapshotError("Every deployed file must be covered exactly once by the manifest.")
     if MANIFEST_PATH in covered:
         raise SnapshotError("The manifest may not include itself in its digest coverage.")
+    return manifest
+
+
+def jobs_artifact_coverage(root: Path) -> list[dict[str, Any]]:
+    return [
+        {"path": relative, "sha256": sha256_file(root / relative)}
+        for relative in jobs_deployed_files(root, include_manifest=False)
+    ]
+
+
+def make_jobs_manifest(
+    root: Path,
+    started_at: str,
+    source_retrieved_at: str,
+    completed_at: str,
+) -> dict[str, Any]:
+    started = parse_timestamp(started_at, "startedAt")
+    retrieved = parse_timestamp(source_retrieved_at, "sourceRetrievedAt")
+    completed = parse_timestamp(completed_at, "completedAt")
+    if not started <= retrieved <= completed:
+        raise SnapshotError("Manifest timestamps must satisfy startedAt <= sourceRetrievedAt <= completedAt.")
+    artifacts = jobs_artifact_coverage(root)
+    digest = generation_digest(artifacts, [])
+    generation_timestamp = completed.strftime("%Y%m%dT%H%M%SZ")
+    return {
+        "schemaVersion": JOBS_MANIFEST_SCHEMA_VERSION,
+        "generationId": f"{generation_timestamp}-{digest[:12]}",
+        "startedAt": started_at,
+        "sourceRetrievedAt": source_retrieved_at,
+        "completedAt": completed_at,
+        "artifacts": artifacts,
+    }
+
+
+def write_jobs_manifest(
+    root: Path,
+    started_at: str,
+    source_retrieved_at: str,
+    completed_at: str | None = None,
+) -> dict[str, Any]:
+    completed_at = completed_at or utc_now()
+    manifest = make_jobs_manifest(root, started_at, source_retrieved_at, completed_at)
+    path = root / JOBS_MANIFEST_PATH
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = path.with_name(path.name + ".tmp")
+    tmp_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    tmp_path.replace(path)
+    return manifest
+
+
+def read_jobs_manifest(root: Path) -> dict[str, Any]:
+    path = root / JOBS_MANIFEST_PATH
+    if not path.is_file():
+        raise SnapshotError(f"{JOBS_MANIFEST_PATH} is missing.")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def verify_jobs_manifest(root: Path) -> dict[str, Any]:
+    manifest = read_jobs_manifest(root)
+    required_keys = {
+        "schemaVersion",
+        "generationId",
+        "startedAt",
+        "sourceRetrievedAt",
+        "completedAt",
+        "artifacts",
+    }
+    if set(manifest) != required_keys:
+        raise SnapshotError(
+            f"Jobs manifest keys differ from contract: {sorted(set(manifest) ^ required_keys)}"
+        )
+    if manifest["schemaVersion"] != JOBS_MANIFEST_SCHEMA_VERSION:
+        raise SnapshotError(f"Unsupported jobs manifest schemaVersion {manifest['schemaVersion']!r}.")
+    generation_id = manifest.get("generationId")
+    if not isinstance(generation_id, str) or not GENERATION_ID_RE.fullmatch(generation_id):
+        raise SnapshotError(f"Invalid jobs generationId {generation_id!r}.")
+    expected = make_jobs_manifest(
+        root,
+        started_at=str(manifest["startedAt"]),
+        source_retrieved_at=str(manifest["sourceRetrievedAt"]),
+        completed_at=str(manifest["completedAt"]),
+    )
+    if manifest != expected:
+        changed = [key for key in required_keys if manifest.get(key) != expected.get(key)]
+        raise SnapshotError(f"Jobs manifest verification failed for: {', '.join(sorted(changed))}.")
+    covered = {str(entry["path"]) for entry in manifest["artifacts"]}
+    actual = set(jobs_deployed_files(root, include_manifest=False))
+    if covered != actual:
+        raise SnapshotError(
+            "Every data/jobs/ deployed file must be covered exactly once by the jobs manifest."
+        )
+    return manifest
+
+
+def verify_manifest_partition(root: Path) -> None:
+    """Every publicly deployed file belongs to exactly one manifest."""
+    core = set(core_deployed_files(root))
+    jobs = set(jobs_deployed_files(root, include_manifest=False))
+    overlap = core & jobs
+    if overlap:
+        raise SnapshotError(f"Files claimed by both manifests: {sorted(overlap)}")
+    all_deployed = set(deployed_files(root, include_manifest=False)) - {JOBS_MANIFEST_PATH}
+    uncovered = all_deployed - core - jobs
+    if uncovered:
+        raise SnapshotError(f"Deployed files not covered by any manifest: {sorted(uncovered)}")
+
+
+def verify_all_manifests(root: Path) -> dict[str, Any]:
+    manifest = verify_manifest(root)
+    if (root / "data" / "jobs").exists():
+        verify_jobs_manifest(root)
+    verify_manifest_partition(root)
     return manifest
 
 
@@ -558,7 +702,7 @@ def promote_candidate(candidate: Path, repository: Path) -> None:
 
 
 def build_pages_artifact(root: Path, destination: Path) -> None:
-    verify_manifest(root)
+    verify_all_manifests(root)
     root = root.resolve()
     destination = destination.resolve()
     if destination == root or root in destination.parents:
@@ -802,6 +946,21 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
     verify.add_argument("--root", type=Path, default=ROOT_DIR)
     verify.add_argument("--output-file", type=Path)
 
+    finalize_jobs = subparsers.add_parser(
+        "finalize-jobs", help="Create the data/jobs/ manifest."
+    )
+    finalize_jobs.add_argument("--root", type=Path, required=True)
+    finalize_jobs.add_argument("--started-at", required=True)
+    finalize_jobs.add_argument("--source-retrieved-at", required=True)
+    finalize_jobs.add_argument("--completed-at")
+    finalize_jobs.add_argument("--output-file", type=Path)
+
+    verify_jobs = subparsers.add_parser(
+        "verify-jobs", help="Verify the data/jobs/ manifest and complete coverage."
+    )
+    verify_jobs.add_argument("--root", type=Path, default=ROOT_DIR)
+    verify_jobs.add_argument("--output-file", type=Path)
+
     promote = subparsers.add_parser("promote", help="Replace repository output with a candidate.")
     promote.add_argument("--candidate", type=Path, required=True)
     promote.add_argument("--repository", type=Path, default=ROOT_DIR)
@@ -850,9 +1009,23 @@ def main(argv: Sequence[str] | None = None) -> int:
             append_output(args.output_file, generation_id=manifest["generationId"])
             print(manifest["generationId"])
         elif args.command == "verify":
-            manifest = verify_manifest(args.root)
+            manifest = verify_all_manifests(args.root)
             append_output(args.output_file, generation_id=manifest["generationId"])
             print(f"Verified generation {manifest['generationId']}")
+        elif args.command == "finalize-jobs":
+            manifest = write_jobs_manifest(
+                args.root,
+                args.started_at,
+                args.source_retrieved_at,
+                args.completed_at,
+            )
+            append_output(args.output_file, generation_id=manifest["generationId"])
+            print(manifest["generationId"])
+        elif args.command == "verify-jobs":
+            manifest = verify_jobs_manifest(args.root)
+            verify_manifest_partition(args.root)
+            append_output(args.output_file, generation_id=manifest["generationId"])
+            print(f"Verified jobs generation {manifest['generationId']}")
         elif args.command == "promote":
             promote_candidate(args.candidate, args.repository)
         elif args.command == "build-pages":

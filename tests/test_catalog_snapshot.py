@@ -141,6 +141,82 @@ class PromotionSafetyTests(unittest.TestCase):
             )
 
 
+class JobsManifestIsolationTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        make_catalog(self.root)
+        write(self.root / "data/jobs/jobs.json", '{"items": []}\n')
+        write(self.root / "data/jobs/jobs.ttl", "@prefix ex: <https://example.test/> . ex:job ex:name \"Job\" .\n")
+        write(self.root / "data/jobs/run.json", '{"retrievedAt": "2026-08-18T21:00:00Z"}\n')
+
+    def tearDown(self):
+        self.temporary.cleanup()
+
+    def finalize_jobs(self):
+        return catalog_snapshot.write_jobs_manifest(
+            self.root,
+            started_at="2026-08-18T21:00:00Z",
+            source_retrieved_at="2026-08-18T21:00:00Z",
+            completed_at="2026-08-18T21:00:01Z",
+        )
+
+    def test_core_manifest_excludes_jobs_files(self):
+        manifest = finalize(self.root)
+        covered = {entry["path"] for entry in manifest["artifacts"]}
+        self.assertFalse(any(path.startswith("data/jobs/") for path in covered))
+
+    def test_core_manifest_content_is_stable_across_jobs_hourly_refresh(self):
+        manifest_before = finalize(self.root)
+        write(self.root / "data/jobs/jobs.json", '{"items": [{"title": "Changed"}]}\n')
+        self.assertEqual(catalog_snapshot.verify_manifest(self.root), manifest_before)
+
+    def test_jobs_manifest_round_trip_covers_every_jobs_file_once(self):
+        manifest = self.finalize_jobs()
+        self.assertEqual(catalog_snapshot.verify_jobs_manifest(self.root), manifest)
+        covered = {entry["path"] for entry in manifest["artifacts"]}
+        self.assertEqual(
+            covered,
+            {"data/jobs/jobs.json", "data/jobs/jobs.ttl", "data/jobs/run.json"},
+        )
+        self.assertNotIn(catalog_snapshot.JOBS_MANIFEST_PATH, covered)
+
+    def test_jobs_manifest_tamper_breaks_verification(self):
+        self.finalize_jobs()
+        write(self.root / "data/jobs/jobs.json", '{"items": [{"title": "Tampered"}]}\n')
+        with self.assertRaises(catalog_snapshot.SnapshotError):
+            catalog_snapshot.verify_jobs_manifest(self.root)
+
+    def test_partition_requires_every_deployed_file_covered_exactly_once(self):
+        finalize(self.root)
+        self.finalize_jobs()
+        catalog_snapshot.verify_manifest_partition(self.root)
+
+    def test_verify_all_fails_when_jobs_manifest_is_missing(self):
+        finalize(self.root)
+        with self.assertRaises(catalog_snapshot.SnapshotError):
+            catalog_snapshot.verify_all_manifests(self.root)
+
+    def test_verify_all_manifests_checks_both_manifests_and_partition(self):
+        finalize(self.root)
+        self.finalize_jobs()
+        catalog_snapshot.verify_all_manifests(self.root)
+
+    def test_build_pages_requires_valid_jobs_manifest_when_jobs_data_present(self):
+        finalize(self.root)
+        with tempfile.TemporaryDirectory() as destination:
+            with self.assertRaises(catalog_snapshot.SnapshotError):
+                catalog_snapshot.build_pages_artifact(self.root, Path(destination) / "out")
+
+    def test_build_pages_includes_jobs_files_once_both_manifests_are_valid(self):
+        finalize(self.root)
+        self.finalize_jobs()
+        with tempfile.TemporaryDirectory() as destination:
+            output = Path(destination) / "out"
+            catalog_snapshot.build_pages_artifact(self.root, output)
+            self.assertTrue((output / "data/jobs/jobs.json").is_file())
+
+
 class ManifestContractTests(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
