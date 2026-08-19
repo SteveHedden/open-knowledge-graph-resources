@@ -353,3 +353,60 @@ kgjs:jooble-query-knowledge-graph a kgjobs:QueryFamily ;
     kgjobs:queryText "knowledge graph" ;
     kgjobs:queryOrder 8 ;
     dcterms:subject kgjv:skill-knowledge-graph .
+
+kgjs:adzuna a dcat:Dataset ;
+    dcterms:title "Adzuna Job Search API"@en ;
+    dcterms:description "Keyed job-search aggregator API (free tier: 25 requests/minute, 250/day, 1,000/week, 2,500/month). Registered against Adzuna's \"us\" country endpoint only. Authenticates via app_id/app_key query parameters issued instantly on signup at https://developer.adzuna.com/ -- real per-account credentials, never stored in this registry -- scripts/live_sources.py reads them from the ADZUNA_APP_ID / ADZUNA_APP_KEY environment variables at request time. Adzuna's terms of service require every page displaying its listings to show a \"Jobs by Adzuna\" attribution (min 116x23px) linked to adzuna.co.uk, unconditionally -- not only when the canonical listing URL points off-host, unlike Arbeitnow's attribution rule."@en ;
+    dcterms:identifier "adzuna" ;
+    dcterms:publisher [ a foaf:Agent ; foaf:name "Adzuna" ] ;
+    dcat:landingPage <https://developer.adzuna.com/> ;
+    dcat:distribution kgjs:adzuna-api-distribution ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:networkFree false ;
+    kgjobs:searchEnabled true ;
+    kgjobs:adapter "adzuna" ;
+    kgjobs:sourceQuery
+        kgjs:adzuna-query-knowledge-graph ,
+        kgjs:adzuna-query-ontology ,
+        kgjs:adzuna-query-semantic-web ,
+        kgjs:adzuna-query-sparql ;
+    kgjobs:allowedHost "api.adzuna.com" ;
+    kgjobs:minRefreshIntervalSeconds 21600.0 ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:maxRecordsPerRun 200 ;
+    kgjobs:maxRequestsPerRun 4 ;
+    kgjobs:attributionText "Adzuna" ;
+    kgjobs:attributionURL <https://www.adzuna.co.uk/> ;
+    kgjobs:termsURL <https://developer.adzuna.com/docs/terms_of_service> .
+
+kgjs:adzuna-api-distribution a dcat:Distribution ;
+    dcterms:title "Adzuna keyed job-search JSON endpoint (us)"@en ;
+    dcat:accessURL <https://api.adzuna.com/v1/api/jobs/us/search/1> ;
+    dcat:mediaType "application/json" .
+
+kgjs:adzuna-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryText "knowledge graph" ;
+    kgjobs:queryOrder 1 ;
+    dcterms:subject kgjv:skill-knowledge-graph .
+
+kgjs:adzuna-query-ontology a kgjobs:QueryFamily ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryText "ontology" ;
+    kgjobs:queryOrder 2 ;
+    dcterms:subject
+        kgjv:role-ontologist ,
+        kgjv:role-ontology-engineer .
+
+kgjs:adzuna-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryText "semantic web" ;
+    kgjobs:queryOrder 3 ;
+    dcterms:subject kgjv:skill-semantic-web .
+
+kgjs:adzuna-query-sparql a kgjobs:QueryFamily ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryText "SPARQL" ;
+    kgjobs:queryOrder 4 ;
+    dcterms:subject kgjv:skill-sparql .
