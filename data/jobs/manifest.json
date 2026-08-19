@@ -9,6 +9,10 @@
       "sha256": "9c62a85f2b7e504c4c4b7c5d715b7c71f837d2a6452abbd13f811d0f1c761919"
     },
     {
+      "path": "data/jobs/raw/adzuna.json",
+      "sha256": "7088b5e35bee4bdec0129f88bb8ced4e244dcb4fd53b5b926abe67ee8bddb605"
+    },
+    {
       "path": "data/jobs/raw/arbeitnow.json",
       "sha256": "15c8a2e52e4e8d55995b0a9e7239e70ffa37c2beeccf60669b873f8677cf8096"
     },
@@ -30,7 +34,7 @@
     }
   ],
   "completedAt": "2026-08-19T02:17:55Z",
-  "generationId": "20260819T021755Z-c1f3a5948c07",
+  "generationId": "20260819T021755Z-929c19a293c1",
   "schemaVersion": "1.0.0",
   "sourceRetrievedAt": "2026-08-19T02:17:48Z",
   "startedAt": "2026-08-19T02:17:38Z"

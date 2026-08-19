@@ -116,10 +116,20 @@ jobs:
 
       - name: Detect published snapshot changes
         id: changes
+        # Stages data/jobs here, before the manifest step below, not just at
+        # commit time: deployed_files() (which finalize-jobs/verify-jobs use
+        # to enumerate data/jobs/) filters to git-tracked files whenever it
+        # runs against a real checkout (see catalog_snapshot.py). A brand
+        # new file -- e.g. data/jobs/raw/<source>.json the first time a
+        # source ever runs -- would otherwise exist on disk but be silently
+        # excluded from the manifest for being untracked, then get included
+        # anyway once "Commit and push" staged it, producing a manifest that
+        # never matches what was actually committed.
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         run: |
           cd ../..
-          if git diff --quiet -- data/jobs/jobs.json data/jobs/jobs.ttl data/jobs/run.json data/jobs/raw; then
+          git add data/jobs
+          if git diff --cached --quiet -- data/jobs/jobs.json data/jobs/jobs.ttl data/jobs/run.json data/jobs/raw; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
