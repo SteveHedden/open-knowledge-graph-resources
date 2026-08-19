@@ -50,9 +50,7 @@
   const CARD_CONTAINER_IDS = {
     ontologies: "ontologies-cards",
     software: "software-cards",
-    // Jobs deliberately has no mobile card layout in this first pass --
-    // renderCards() no-ops when it can't find a container for the tab, and
-    // render() forces the table view for jobs regardless of viewport.
+    jobs: "jobs-cards",
   };
 
   const COLUMN_COUNTS = {
@@ -1129,6 +1127,65 @@
     return card;
   }
 
+  function renderJobCard(item) {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.dataset.record = "true";
+
+    const title = document.createElement("h3");
+    title.textContent = item.title;
+    card.appendChild(title);
+
+    appendCardMetaLine(card, "Employer", item.hiringOrganization || "");
+    appendCardMetaLine(card, "Location", item.location || "");
+    appendCardMetaLine(card, "Remote", jobRemoteLabel(item));
+    appendCardMetaLine(
+      card,
+      "Posted",
+      item.datePosted ? formatDate(item.datePosted) : ""
+    );
+    appendCardMetaLine(card, "Salary", item.salary || "");
+
+    const links = document.createElement("p");
+    links.className = "card-links";
+    if (item.canonicalUrl) {
+      links.appendChild(
+        createLink(item.canonicalUrl, "View posting", {
+          linkType: "job_posting",
+          resourceTitle: item.title,
+          tab: "jobs",
+        })
+      );
+      // See the matching comment in renderJobRow: Arbeitnow is the one
+      // source whose canonicalUrl can point off arbeitnow.com, so it needs
+      // a separate attribution link to satisfy its API terms.
+      const canonicalHost = extractHost(item.canonicalUrl);
+      const attributionHost = extractHost(item.sourceAttributionUrl);
+      if (
+        item.sourceAttributionUrl &&
+        canonicalHost &&
+        attributionHost &&
+        canonicalHost !== attributionHost
+      ) {
+        links.appendChild(document.createTextNode(" | "));
+        links.appendChild(
+          createLink(
+            item.sourceAttributionUrl,
+            `Source: ${item.sourceName || "original board"}`,
+            {
+              linkType: "source_attribution",
+              resourceTitle: item.title,
+              tab: "jobs",
+            }
+          )
+        );
+      }
+      card.appendChild(links);
+    }
+
+    return card;
+  }
+
   function renderTable(items) {
     const tableBody = document.getElementById(TABLE_BODY_IDS[state.tab]);
     if (!tableBody) {
@@ -1184,7 +1241,12 @@
       return;
     }
 
-    const cardRenderer = state.tab === "ontologies" ? renderOntologyCard : renderSoftwareCard;
+    const cardRenderer =
+      state.tab === "ontologies"
+        ? renderOntologyCard
+        : state.tab === "jobs"
+        ? renderJobCard
+        : renderSoftwareCard;
     items.forEach((item) => {
       cardContainer.appendChild(cardRenderer(item));
     });
@@ -1313,11 +1375,8 @@
     });
   }
 
-  // Jobs has no mobile card layout in this first pass (see CARD_CONTAINER_IDS),
-  // so it always renders as a table -- renderCards() would silently no-op
-  // for it and leave the panel blank on narrow viewports otherwise.
   function shouldRenderCards() {
-    return isCardView() && state.tab !== "jobs";
+    return isCardView();
   }
 
   function render() {
