@@ -18,6 +18,23 @@ from live_sources import LivePipelineError, SourceConfig
 from remotive_adapter import canonicalize_url, html_to_text, _date_only
 
 _JOB_AGE_RE = re.compile(r"[?&]jobAge=(\d+)\b")
+_DESC_LINK_RE = re.compile(r"jooble\.org/desc/", re.IGNORECASE)
+
+
+def is_desc_link(link: str) -> bool:
+    """True for Jooble's own hosted job-description pages ("/desc/").
+
+    Verified live against a real sample of qualified postings: Jooble's
+    "/away/" links are outbound tracking redirects to wherever Jooble
+    originally scraped the listing from (often a secondary ad network like
+    appcast.io or experteer.com, per the "source" field in raw responses) --
+    every "/away/" link sampled had already gone dead. "/desc/" links are
+    pages Jooble hosts and serves itself with no redirect, and every one
+    sampled was still live. This is a link-shape filter, not a fetch
+    failure -- non-"/desc/" postings are dropped before normalization the
+    same way postings older than the freshness cutoff are.
+    """
+    return bool(_DESC_LINK_RE.search(link or ""))
 
 
 def job_age_days(link: str) -> int | None:
@@ -124,6 +141,10 @@ def records_from_payload(
             age = job_age_days(str(item.get("link") or ""))
             if age is not None and age > source.max_posting_age_days:
                 continue
+        # "/away/" outbound-redirect postings are dropped here too -- see
+        # is_desc_link's docstring for why, verified against live postings.
+        if isinstance(item, dict) and not is_desc_link(str(item.get("link") or "")):
+            continue
         normalized = normalize_jooble_job(item, source, retrieved_at, query)
         if normalized is None:
             raise LivePipelineError(

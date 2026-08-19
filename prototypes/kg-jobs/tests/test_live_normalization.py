@@ -13,7 +13,11 @@ from himalayas_adapter import records_from_payload as himalayas_records  # noqa:
 from live_records import classify_records, deduplicate  # noqa: E402
 from live_sources import LivePipelineError, load_source_registry  # noqa: E402
 from remotive_adapter import records_from_payload  # noqa: E402
-from jooble_adapter import job_age_days, records_from_payload as jooble_records  # noqa: E402
+from jooble_adapter import (  # noqa: E402
+    is_desc_link,
+    job_age_days,
+    records_from_payload as jooble_records,
+)
 from adzuna_adapter import records_from_payload as adzuna_records  # noqa: E402
 from live_sources import ADZUNA_PAGE_SIZE  # noqa: E402
 
@@ -262,7 +266,7 @@ def test_jooble_filters_postings_older_than_the_registry_cutoff():
                 "title": "Fresh Ontology Engineer",
                 "company": "Fresh Co",
                 "snippet": "Recently posted role.",
-                "link": "https://jooble.org/away/1?p=1&jobAge=10&rgn=-1",
+                "link": "https://jooble.org/desc/1?p=1&jobAge=10&rgn=-1",
                 "updated": "2026-08-17T00:00:00.0000000",
             },
             {
@@ -273,7 +277,7 @@ def test_jooble_filters_postings_older_than_the_registry_cutoff():
                 # is 206 days -- this is the real, verified discrepancy
                 # that motivated the filter, reproduced here directly.
                 "snippet": "This looks recent but is not.",
-                "link": "https://jooble.org/away/2?p=1&jobAge=206&rgn=-1",
+                "link": "https://jooble.org/desc/2?p=1&jobAge=206&rgn=-1",
                 "updated": "2026-08-10T00:00:00.0000000",
             },
         ],
@@ -281,6 +285,45 @@ def test_jooble_filters_postings_older_than_the_registry_cutoff():
     records, fetched, complete = jooble_records(payload, source, NOW, "ontology")
     assert fetched == 2  # both counted as fetched -- filtering is not a fetch failure
     assert [record["title"] for record in records] == ["Fresh Ontology Engineer"]
+
+
+def test_is_desc_link_recognizes_jooble_hosted_pages():
+    assert is_desc_link("https://jooble.org/desc/123?p=1&jobAge=10") is True
+    assert is_desc_link("https://jooble.org/away/123?p=1&jobAge=10") is False
+    assert is_desc_link("") is False
+    assert is_desc_link(None) is False
+
+
+def test_jooble_drops_away_links_keeping_only_desc_links():
+    source = load_source_registry(ROOT / "sources.ttl")["jooble"]
+    payload = {
+        "totalCount": 2,
+        "jobs": [
+            {
+                "id": 1,
+                "title": "Redirected Ontology Engineer",
+                "company": "Redirect Co",
+                "snippet": "Reached only via an outbound tracking redirect.",
+                # "/away/" links redirect off Jooble to wherever it scraped
+                # the listing from -- verified live to be frequently dead
+                # even at a low jobAge, so these are dropped regardless of
+                # freshness.
+                "link": "https://jooble.org/away/1?p=1&jobAge=5&rgn=-1",
+                "updated": "2026-08-17T00:00:00.0000000",
+            },
+            {
+                "id": 2,
+                "title": "Hosted Ontology Engineer",
+                "company": "Hosted Co",
+                "snippet": "Jooble hosts this description directly.",
+                "link": "https://jooble.org/desc/2?p=1&jobAge=5&rgn=-1",
+                "updated": "2026-08-17T00:00:00.0000000",
+            },
+        ],
+    }
+    records, fetched, complete = jooble_records(payload, source, NOW, "ontology")
+    assert fetched == 2  # both counted as fetched -- filtering is not a fetch failure
+    assert [record["title"] for record in records] == ["Hosted Ontology Engineer"]
 
 
 def _adzuna_job(**overrides):
