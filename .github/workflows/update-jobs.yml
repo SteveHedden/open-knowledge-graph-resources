@@ -41,6 +41,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Record run start
+        id: run_start
+        run: echo "started_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> "$GITHUB_OUTPUT"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -107,22 +111,39 @@ jobs:
           shopt -s nullglob
           for f in runtime/raw/*.json; do cp "$f" ../../data/jobs/raw/; done
 
-      - name: Regenerate and verify the data/jobs/ manifest
+      - name: Detect published snapshot changes
+        id: changes
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         run: |
           cd ../..
-          started_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          if git diff --quiet -- data/jobs/jobs.json data/jobs/jobs.ttl data/jobs/run.json data/jobs/raw; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Regenerate and verify the data/jobs/ manifest
+        # Only regenerate when data/jobs/ actually changed this run: most
+        # sources are gated by their own minRefreshIntervalSeconds and skip
+        # most hourly runs, so sourceRetrievedAt (the newest known-good
+        # per-source fetch time) can be well before this run started. The
+        # manifest schema requires startedAt <= sourceRetrievedAt, which
+        # only holds when this run itself is the one that produced the
+        # freshest retrieval.
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          cd ../..
           retrieved_at="$(python -c 'import json; print(max(json.load(open("data/jobs/run.json"))["sourceRefreshes"].values()))')"
           completed_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
           python scripts/catalog_snapshot.py finalize-jobs --root . \
-            --started-at "$started_at" \
+            --started-at "${{ steps.run_start.outputs.started_at }}" \
             --source-retrieved-at "$retrieved_at" \
             --completed-at "$completed_at"
           python scripts/catalog_snapshot.py verify-jobs --root .
 
       - name: Commit and push if the published snapshot changed
         id: commit
-        if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
+        if: steps.changes.outputs.changed == 'true'
         shell: bash
         run: |
           cd ../..
