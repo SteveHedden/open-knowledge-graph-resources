@@ -21,6 +21,13 @@
   "description": "authority file for persons, organisations, works, topics, and geographic places, of the French National Library",
   "url": "https://data.bnf.fr/",
   "sameAs": "https://www.wikidata.org/wiki/Q19938912",
+  "alternateName": [
+    "Biblioth\u00e8que nationale de France notices d'autorit\u00e9",
+    "BnF notices d'autorit\u00e9",
+    "data.bnf.fr",
+    "notices d'autorit\u00e9 de BnF",
+    "notices d'autorit\u00e9 de la Biblioth\u00e8que nationale de France"
+  ],
   "isPartOf": {
     "@type": "DataCatalog",
     "name": "Open Knowledge Graphs",
@@ -142,12 +149,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">BnF authorities</h1>
+      <p class="detail-field"><strong>Also known as:</strong> Bibliothèque nationale de France notices d&#x27;autorité, BnF notices d&#x27;autorité, data.bnf.fr, notices d&#x27;autorité de BnF, notices d&#x27;autorité de la Bibliothèque nationale de France</p>
       <div class="detail-meta">
         <span class="detail-tag">Software</span>
         
@@ -167,6 +188,10 @@
         <div class="detail-related-links">
           <a href="https://openknowledgegraphs.com/software/national-library-of-korea-linked-open-data/">National Library of Korea Linked Open Data</a>
         </div>
+      </div>
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=data.bnf.fr">See job postings mentioning BnF authorities &rarr;</a>
       </div>
     </div>
   </body>

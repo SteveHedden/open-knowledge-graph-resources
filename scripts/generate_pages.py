@@ -13,6 +13,7 @@ import os
 import html
 import shutil
 import ssl
+import urllib.parse
 from pathlib import Path
 
 import aiohttp
@@ -164,6 +165,36 @@ def is_non_empty_string(value):
     return isinstance(value, str) and bool(value.strip())
 
 
+def is_acronym_like(text):
+    """Short, mostly-uppercase strings (e.g. "SKOS") read as real acronyms."""
+    letters = [c for c in text if c.isalpha()]
+    if not letters or len(text) > 10:
+        return False
+    upper_count = sum(1 for c in letters if c.isupper())
+    return upper_count / len(letters) >= 0.6
+
+
+def jobs_search_query(item):
+    """Pick the best single search term for the Jobs tab's token-AND search.
+
+    Prefers a short, acronym-looking candidate (from the title or its aliases)
+    over a longer descriptive one -- e.g. "SKOS" over "Simple Knowledge
+    Organization System" -- since a multi-word title over-filters the Jobs
+    tab's token-AND search to zero results. Some Wikidata items already carry
+    the acronym as their canonical title (SKOS itself is one), so the title
+    is included in the candidate pool rather than assumed to always be the
+    long form.
+    """
+    title = item.get("title", "") or ""
+    aliases = item.get("aliases", []) or []
+    candidates = [c for c in [title, *aliases] if is_non_empty_string(c)]
+    if not candidates:
+        return title
+    acronym_candidates = [c for c in candidates if is_acronym_like(c)]
+    pool = acronym_candidates or candidates
+    return min(pool, key=len)
+
+
 def require_json_ld_identity(item):
     """Reject page records whose required content or identity is missing."""
     required_fields = ("canonicalUrl", "title", "description", "homepage", "wikidataId")
@@ -227,6 +258,12 @@ def make_json_ld(item, dataset):
         "url": item["homepage"],
         "sameAs": item["wikidataId"],
     }
+
+    aliases = item.get("aliases")
+    if isinstance(aliases, list):
+        known_aliases = [value for value in aliases if is_non_empty_string(value)]
+        if known_aliases:
+            ld["alternateName"] = known_aliases[0] if len(known_aliases) == 1 else known_aliases
 
     licenses = item.get("licenses")
     if isinstance(licenses, list):
@@ -299,6 +336,7 @@ def make_page(item, dataset, slug):
     category = item.get("category", "")
     types = item.get("types", [])
     licenses = item.get("licenses", [])
+    aliases = [a for a in item.get("aliases", []) if is_non_empty_string(a)]
     json_ld = make_json_ld(item, dataset)
 
     css_path = "../../style.css"
@@ -335,6 +373,12 @@ def make_page(item, dataset, slug):
             version_html += f" ({d})"
         version_html += "</p>"
 
+    aliases_html = ""
+    if aliases:
+        aliases_html = (
+            f'<p class="detail-field"><strong>Also known as:</strong> {esc(", ".join(aliases))}</p>'
+        )
+
     related_tools_html = ""
     related_tools = project_related_tools(item)
     if related_tools:
@@ -348,6 +392,12 @@ def make_page(item, dataset, slug):
         <div class="detail-related-links">
           {related_links}
         </div>
+      </div>"""
+
+    jobs_query = jobs_search_query(item)
+    jobs_link_html = f"""
+      <div class="detail-jobs-link">
+        <a href="{BASE_URL}/?tab=jobs&amp;q={urllib.parse.quote(jobs_query)}">See job postings mentioning {title} &rarr;</a>
       </div>"""
 
     return f"""<!doctype html>
@@ -468,12 +518,26 @@ def make_page(item, dataset, slug):
       .detail-related-links a:hover {{
         background: var(--highlight, #f6ca67);
       }}
+      .detail-jobs-link {{
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }}
+      .detail-jobs-link a {{
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }}
+      .detail-jobs-link a:hover {{
+        text-decoration: underline;
+      }}
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="{BASE_URL}/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">{title}</h1>
+      {aliases_html}
       <div class="detail-meta">
         {types_html}
         {category_html}
@@ -488,6 +552,7 @@ def make_page(item, dataset, slug):
       {license_html}
       {version_html}
       {related_tools_html}
+      {jobs_link_html}
     </div>
   </body>
 </html>"""

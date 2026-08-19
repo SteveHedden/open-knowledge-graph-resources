@@ -21,6 +21,10 @@
   "description": "The NASA Thesaurus contains the authorized NASA subject terms used to index and retrieve materials in the STI Repository (formerly NASA Technical Reports Server).",
   "url": "https://sti.nasa.gov/nasa-thesaurus/",
   "sameAs": "https://www.wikidata.org/wiki/Q101086265",
+  "alternateName": [
+    "NASA THESAURUS: VOLUME 1 Hierarchical Listing With Definitions",
+    "NASA THESAURUS: VOLUME 2 Rotated Term Display"
+  ],
   "isPartOf": {
     "@type": "DataCatalog",
     "name": "Open Knowledge Graphs",
@@ -129,12 +133,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">NASA Thesaurus</h1>
+      <p class="detail-field"><strong>Also known as:</strong> NASA THESAURUS: VOLUME 1 Hierarchical Listing With Definitions, NASA THESAURUS: VOLUME 2 Rotated Term Display</p>
       <div class="detail-meta">
         <span class="detail-tag">ControlledVocabulary</span>
         <a href="https://openknowledgegraphs.com/?category=technology-web" class="detail-category">Technology &amp; Web</a>
@@ -149,6 +167,10 @@
       
       
       
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=NASA%20Thesaurus">See job postings mentioning NASA Thesaurus &rarr;</a>
+      </div>
     </div>
   </body>
 </html>

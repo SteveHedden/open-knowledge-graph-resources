@@ -21,6 +21,7 @@
   "description": "Browse ontologies, controlled vocabularies, taxonomies, and semantic software from a daily-refreshed RDF catalog.",
   "url": "https://openknowledgegraphs.com/",
   "sameAs": "https://www.wikidata.org/wiki/Q138639042",
+  "alternateName": "OKG",
   "license": "Apache Software License 2.0",
   "isPartOf": {
     "@type": "DataCatalog",
@@ -140,12 +141,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">Open Knowledge Graphs</h1>
+      <p class="detail-field"><strong>Also known as:</strong> OKG</p>
       <div class="detail-meta">
         <span class="detail-tag">ControlledVocabulary</span> <span class="detail-tag">Ontology</span>
         <a href="https://openknowledgegraphs.com/?category=technology-web" class="detail-category">Technology &amp; Web</a>
@@ -160,6 +175,10 @@
       <p class="detail-field"><strong>License:</strong> Apache Software License 2.0</p>
       
       
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=OKG">See job postings mentioning Open Knowledge Graphs &rarr;</a>
+      </div>
     </div>
   </body>
 </html>
