@@ -208,12 +208,19 @@ class JobsManifestIsolationTests(unittest.TestCase):
             with self.assertRaises(catalog_snapshot.SnapshotError):
                 catalog_snapshot.build_pages_artifact(self.root, Path(destination) / "out")
 
-    def test_substantive_changes_ignores_jobs_files(self):
+    def test_substantive_changes_detects_jobs_files_via_raw_byte_hash(self):
+        # data/jobs/ is excluded from the core manifest's own artifact list
+        # (see test_core_manifest_excludes_jobs_files) but must still be
+        # able to trigger a full republish, or it can only reach production
+        # by coincidentally riding along with an unrelated Wikidata change.
         finalize(self.root)
         candidate = self.root.parent / "candidate"
         shutil.copytree(self.root, candidate)
         write(candidate / "data/jobs/jobs.ttl", "@prefix ex: <https://example.test/> . ex:job ex:name \"Changed\" .\n")
-        self.assertEqual(catalog_snapshot.substantive_changes(candidate, self.root), [])
+        self.assertEqual(
+            catalog_snapshot.substantive_changes(candidate, self.root),
+            ["data/jobs/jobs.ttl"],
+        )
 
     def test_build_pages_includes_jobs_files_once_both_manifests_are_valid(self):
         finalize(self.root)
