@@ -26,6 +26,7 @@ SRC = Namespace("https://openknowledgegraphs.com/sources#")
 
 BASELINE_JSON_FIELDS = {
     "ontologies": {
+        "aliases",
         "canonicalUrl",
         "category",
         "creators",
@@ -41,6 +42,7 @@ BASELINE_JSON_FIELDS = {
         "wikidataId",
     },
     "software": {
+        "aliases",
         "canonicalUrl",
         "creators",
         "description",

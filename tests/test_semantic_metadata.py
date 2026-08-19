@@ -131,6 +131,7 @@ class SourceRowParsingTests(unittest.TestCase):
             [self.source_row("Q141108893")],
             {item_iri: "OntoBricks"},
             {},
+            {},
         )
 
         self.assertEqual(records[item_iri].homepages, {self.official_website})
@@ -141,6 +142,7 @@ class SourceRowParsingTests(unittest.TestCase):
         records, _, _ = fetch_data.parse_ontology_rows(
             [self.source_row("Q123")],
             {item_iri: "Example ontology"},
+            {},
             {},
             {"Q324254": OKG.Ontology},
         )

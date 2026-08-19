@@ -197,7 +197,7 @@ def capture_source_snapshot(session: requests.Session, mappings: SourceMappings)
                 record["officialWebsites"].add(homepage)
 
     item_iris = {f"http://www.wikidata.org/entity/{qid}" for qid in aggregated}
-    labels, descriptions = fetch_data.fetch_entity_labels(session, item_iris)
+    labels, descriptions, _aliases = fetch_data.fetch_entity_labels(session, item_iris)
     records = []
     for qid, raw in sorted(aggregated.items()):
         iri = f"http://www.wikidata.org/entity/{qid}"

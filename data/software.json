@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T03:33:25Z",
+  "generatedAt": "2026-08-19T04:05:24Z",
   "items": [
     {
       "title": "4store",
@@ -9,6 +9,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/4store/",
       "description": "RDF database system",
+      "aliases": [],
       "homepage": "https://4store.github.io",
       "sourceRepo": "https://github.com/4store/4store",
       "licenses": [
@@ -29,6 +30,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/abecto/",
       "description": "software for the comparison and evaluation of ontologies and knowledge graphs",
+      "aliases": [],
       "sourceRepo": "https://github.com/fusion-jena/abecto",
       "creators": [
         {
@@ -56,6 +58,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/akutan/",
       "description": "distributed knowledge graph store",
+      "aliases": [],
       "sourceRepo": "https://github.com/eBay/akutan",
       "licenses": [
         "Apache Software License 2.0"
@@ -73,6 +76,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/allegrograph/",
       "description": "horizontally distributed, multi-model (document and graph), entity-event knowledge graph database system",
+      "aliases": [],
       "homepage": "https://allegrograph.com/",
       "creators": [
         {
@@ -97,6 +101,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/allotrope-data-format/",
       "description": "scientific file format",
+      "aliases": [
+        "ADF"
+      ],
       "creators": [
         {
           "name": "Allotrope Foundation",
@@ -114,6 +121,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/amazon-neptune/",
       "description": "graph database service offered as a service by Amazon Web Services",
+      "aliases": [],
       "partOf": "Amazon Web Services",
       "softwareType": "Graph Database"
     },
@@ -125,6 +133,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/anapsid/",
       "description": "adaptive query processing engine for SPARQL endpoints",
+      "aliases": [
+        "An adaptive query processing engine for SPARQL endpoints."
+      ],
       "homepage": "https://anapsid.github.io/anapsid/",
       "sourceRepo": "https://github.com/anapsid/anapsid",
       "licenses": [
@@ -144,6 +155,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/anzograph/",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -157,6 +169,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena/",
       "description": "open source semantic web framework for Java",
+      "aliases": [],
       "homepage": "https://jena.apache.org/",
       "sourceRepo": "https://git.apache.org/jena",
       "creators": [
@@ -211,6 +224,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/",
       "description": "Fuseki is a SPARQL server.",
+      "aliases": [
+        "Fuseki"
+      ],
       "homepage": "https://jena.apache.org/documentation/fuseki2/index.html",
       "sourceRepo": "https://github.com/apache/jena/tree/main/jena-fuseki2",
       "creators": [
@@ -256,6 +272,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/apache-marmotta/",
       "description": "open platform for linked data",
+      "aliases": [],
       "homepage": "http://marmotta.apache.org",
       "creators": [
         {
@@ -302,6 +319,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/apache-rya/",
       "description": "distributed RDF triple store built on Apache Accumulo for scalable SPARQL querying over massive datasets",
+      "aliases": [],
       "homepage": "https://rya.apache.org/",
       "sourceRepo": "https://github.com/apache/rya",
       "creators": [
@@ -352,6 +370,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/arangodb/",
       "description": "open-source multi-model database system",
+      "aliases": [],
       "homepage": "https://www.arangodb.com",
       "sourceRepo": "https://github.com/arangodb/arangodb",
       "creators": [
@@ -412,6 +431,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/arcadedb/",
       "description": "multi-model graph database supporting SQL, Cypher, Gremlin, and MongoDB query language; conceptual fork of OrientDB",
+      "aliases": [],
       "homepage": "https://arcadedb.com",
       "sourceRepo": "https://github.com/ArcadeData/arcadedb",
       "creators": [
@@ -461,6 +481,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/asqc/",
       "description": "SPARQL query client (pronounced \\",
+      "aliases": [],
       "sourceRepo": "https://github.com/gklyne/asqc",
       "licenses": [
         "proprietary license"
@@ -478,6 +499,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/atomicserver/",
       "description": "open source headless CMS / real-time database. Powerful table editor, full-text search, and SDKs for JS / React / Svelte",
+      "aliases": [],
       "homepage": "https://atomicserver.eu/",
       "sourceRepo": "https://github.com/ontola/atomic-server",
       "licenses": [
@@ -499,6 +521,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/autosparql/",
       "description": "Warning: Not working at the moment",
+      "aliases": [],
       "homepage": "https://aksw.org/Projects/AutoSPARQL.html",
       "sourceRepo": "https://github.com/AskNowQA/AutoSPARQL",
       "licenses": [
@@ -517,6 +540,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/aws-neptune/",
       "description": "AWS graph database service",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -530,6 +554,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/blazegraph/",
       "description": "Blazegraph High Performance Graph Database",
+      "aliases": [
+        "Bigdata"
+      ],
       "homepage": "https://blazegraph.com/",
       "sourceRepo": "https://github.com/blazegraph/database",
       "creators": [
@@ -564,6 +591,13 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/bnf-authorities/",
       "description": "authority file for persons, organisations, works, topics, and geographic places, of the French National Library",
+      "aliases": [
+        "Bibliothèque nationale de France notices d'autorité",
+        "BnF notices d'autorité",
+        "data.bnf.fr",
+        "notices d'autorité de BnF",
+        "notices d'autorité de la Bibliothèque nationale de France"
+      ],
       "homepage": "https://data.bnf.fr/",
       "partOf": "Semantic Web",
       "creators": [
@@ -589,6 +623,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/carml/",
       "description": "Java library for transforming structured data into RDF using RML mappings",
+      "aliases": [
+        "CARML RML engine"
+      ],
       "sourceRepo": "https://github.com/carml/carml",
       "licenses": [
         "MIT License"
@@ -608,6 +645,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cel/",
       "description": "semantic reasoner",
+      "aliases": [],
       "homepage": "https://julianmendez.github.io/cel/",
       "sourceRepo": "https://github.com/julianmendez/cel",
       "licenses": [
@@ -630,6 +668,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cellar/",
       "description": "semantic repository of the Publications Office of the European Union for EU legal content, publications, and reference datasets, exposed via a public SPARQL endpoint",
+      "aliases": [],
       "homepage": "https://op.europa.eu/en/web/eu-vocabularies/cellar",
       "creators": [
         {
@@ -651,6 +690,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/chainsaw/",
       "description": "semantic reasoner",
+      "aliases": [],
       "sourceRepo": "https://bitbucket.org/ignazio1977/chainsaw",
       "softwareType": "Reasoning & Inference"
     },
@@ -662,6 +702,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/chimera/",
       "description": "open-source framework for composing semantic data-transformation pipelines",
+      "aliases": [
+        "Cefriel Chimera",
+        "Chimera semantic transformation framework"
+      ],
       "homepage": "https://cefriel.github.io/chimera/",
       "sourceRepo": "https://github.com/cefriel/chimera",
       "licenses": [
@@ -682,6 +726,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/chowlk/",
       "description": "tool to transform an ontology diagram into OWL code",
+      "aliases": [],
       "sourceRepo": "https://github.com/oeg-upm/Chowlk",
       "licenses": [
         "Apache Software License 2.0"
@@ -701,6 +746,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cm-well/",
       "description": "CM-Well - a data warehouse for your knowledge graph",
+      "aliases": [],
       "sourceRepo": "https://github.com/CM-Well/CM-Well",
       "licenses": [
         "Apache Software License 2.0"
@@ -720,6 +766,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/",
       "description": "open-source framework that builds ontology-grounded knowledge graphs as persistent memory for AI agents",
+      "aliases": [
+        "Cognee AI memory",
+        "cognee"
+      ],
       "homepage": "https://www.cognee.ai/",
       "sourceRepo": "https://github.com/topoteretes/cognee",
       "licenses": [
@@ -758,6 +808,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/comunica/",
       "description": "modular knowledge-graph querying framework",
+      "aliases": [],
       "homepage": "https://comunica.dev/",
       "sourceRepo": "https://github.com/comunica/comunica",
       "licenses": [
@@ -775,6 +826,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/corese/",
       "description": "semantic web software",
+      "aliases": [],
       "homepage": "https://project.inria.fr/corese/",
       "sourceRepo": "https://github.com/Wimmics/corese",
       "licenses": [
@@ -796,6 +848,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/costfed/",
       "description": "Cost-Based Query Optimization for SPARQL Endpoint Federation",
+      "aliases": [],
       "sourceRepo": "https://github.com/dice-group/CostFed",
       "licenses": [
         "GNU Affero General Public License, version 3.0",
@@ -814,6 +867,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cow/",
       "description": "command-line converter from CSV on the Web data to RDF and nanopublications",
+      "aliases": [
+        "CoW CSVW converter",
+        "Converter for CSV on the Web"
+      ],
       "homepage": "https://csvw-converter.readthedocs.io/",
       "sourceRepo": "https://github.com/CLARIAH/COW",
       "licenses": [
@@ -834,6 +891,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cqels/",
       "description": "fork of CQELS (Continuous Query Evaluation over Linked Data)",
+      "aliases": [],
       "homepage": "https://code.google.com/archive/p/cqels",
       "sourceRepo": "https://github.com/KMax/cqels",
       "licenses": [
@@ -852,6 +910,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cubicweb/",
       "description": "semantic web framework",
+      "aliases": [],
       "homepage": "https://www.cubicweb.org/",
       "sourceRepo": "https://forge.extranet.logilab.fr/cubicweb/cubicweb",
       "licenses": [
@@ -886,6 +945,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cumulusrdf/",
       "description": "RDF store on a cloud-based architecture (previously on https://code.google.com/p/cumulusrdf)",
+      "aliases": [
+        "RDF store on a cloud-based architecture (previously on https://code.google.com/p/cumulusrdf)"
+      ],
       "sourceRepo": "https://github.com/cumulusrdf/cumulusrdf",
       "licenses": [
         "Apache Software License 2.0"
@@ -903,6 +965,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/cwm/",
       "description": "general-purpose data processing software for the Semantic Web",
+      "aliases": [],
       "homepage": "https://www.w3.org/2000/10/swap/doc/cwm",
       "creators": [
         {
@@ -934,6 +997,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/d2rq/",
       "description": "platform for accessing relational databases as virtual RDF graphs",
+      "aliases": [
+        "D2R Server",
+        "D2RQ Platform"
+      ],
       "homepage": "https://d2rq.org/",
       "sourceRepo": "https://github.com/d2rq/d2rq",
       "latestVersion": "0.8.1",
@@ -948,6 +1015,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/d3-sparql/",
       "description": "Query a SPARQL endpoint with a SELECT query and get the data ready to be used with d3js",
+      "aliases": [],
       "sourceRepo": "https://github.com/zazuko/d3-sparql",
       "licenses": [
         "3-clause BSD License"
@@ -967,6 +1035,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/d3sparql-js/",
       "description": "JavaScript library for executing SPARQL query and transforming resulted JSON for visualization in D3.js",
+      "aliases": [],
       "sourceRepo": "https://github.com/ktym/d3sparql",
       "licenses": [
         "proprietary license"
@@ -987,6 +1056,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/darq-sparql-federation-engine/",
       "description": "historical federated SPARQL query engine",
+      "aliases": [
+        "DARQ",
+        "DARQ SPARQL"
+      ],
       "homepage": "https://darq.sourceforge.net/",
       "sourceRepo": "https://darq.sourceforge.net/",
       "softwareType": "SPARQL Tooling"
@@ -999,6 +1072,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/data-world-data-catalog-platform/",
       "description": "knowledge-graph-powered enterprise data catalog and data governance software platform",
+      "aliases": [
+        "data.world Data Catalog",
+        "data.world platform"
+      ],
       "homepage": "https://data.world/product/",
       "creators": [
         {
@@ -1020,6 +1097,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dbpedia-archivo/",
       "description": "DBpedia Archivo - Augmented Ontology Archive powered by Databus",
+      "aliases": [],
       "homepage": "https://archivo.dbpedia.org/list",
       "sourceRepo": "https://github.com/dbpedia/archivo",
       "licenses": [
@@ -1039,6 +1117,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dgraph/",
       "description": "distributed, horizontally scalable native GraphQL graph database written in Go",
+      "aliases": [
+        "Dgraph Labs"
+      ],
       "homepage": "https://dgraph.io/",
       "sourceRepo": "https://github.com/dgraph-io/dgraph",
       "licenses": [
@@ -1059,6 +1140,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dosdp-tools/",
       "description": "toolkit for working with Dead Simple OWL Design Patterns and OWL ontologies",
+      "aliases": [
+        "DOSDP",
+        "Dead Simple OWL Design Patterns Tools"
+      ],
       "homepage": "https://github.com/INCATools/dosdp-tools",
       "sourceRepo": "https://github.com/INCATools/dosdp-tools",
       "licenses": [
@@ -1076,6 +1161,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dotnetrdf/",
       "description": "open source .NET library for RDF",
+      "aliases": [],
       "homepage": "http://dotnetrdf.org/",
       "sourceRepo": "https://github.com/dotnetrdf/dotnetrdf",
       "licenses": [
@@ -1096,6 +1182,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dragoman-rdf-mapping-optimizer/",
       "description": "framework for optimizing and executing declarative knowledge-graph mappings",
+      "aliases": [
+        "Dragoman",
+        "Dragoman RDF"
+      ],
       "homepage": "https://github.com/SDM-TIB/Dragoman",
       "sourceRepo": "https://github.com/SDM-TIB/Dragoman",
       "licenses": [
@@ -1113,6 +1203,11 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/duck-rdf/",
       "description": "DuckDB community extension for reading, writing, profiling, and querying RDF data",
+      "aliases": [
+        "Duck RDF",
+        "DuckDB RDF extension",
+        "rdf DuckDB extension"
+      ],
       "homepage": "https://duckdb.org/community_extensions/extensions/rdf",
       "sourceRepo": "https://github.com/nonodename/duck_rdf",
       "licenses": [
@@ -1132,6 +1227,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/dydra/",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -1145,6 +1241,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/elda-linked-data-api/",
       "description": "Java implementation of the Linked Data API for configurable REST interfaces over RDF data",
+      "aliases": [
+        "Elda"
+      ],
       "homepage": "https://epimorphics.github.io/elda/current/index.html",
       "sourceRepo": "https://github.com/epimorphics/elda",
       "softwareType": "Developer Library"
@@ -1157,6 +1256,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/elk/",
       "description": "semantic reasoner",
+      "aliases": [],
       "homepage": "https://www.uni-ulm.de/en/elkreasoner/",
       "sourceRepo": "https://github.com/liveontologies/elk-reasoner",
       "licenses": [
@@ -1177,6 +1277,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/emmontopy/",
       "description": "Python library for representing and working with ontologies",
+      "aliases": [],
       "homepage": "https://emmo-repo.github.io/EMMOntoPy/",
       "sourceRepo": "https://github.com/emmo-repo/EMMOntoPy",
       "licenses": [
@@ -1207,6 +1308,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/euler-yet-another-proof-engine/",
       "description": "Euler Yet another proof Engine (EYE), a Semantic Web reasoning engine for N3 and RDF rules",
+      "aliases": [
+        "EYE"
+      ],
       "homepage": "https://eulersharp.sourceforge.net/",
       "sourceRepo": "https://github.com/eyereasoner/eye",
       "licenses": [
@@ -1224,6 +1328,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/excel-2-rdf/",
       "description": "Excel-to-RDF converter. It can generate RDF files from Excel spreadsheets structured in a specific way, and contains specific features for SKOS",
+      "aliases": [
+        "xls2rdf"
+      ],
       "homepage": "https://xls2rdf.sparna.fr/rest/",
       "sourceRepo": "https://github.com/sparna-git/xls2rdf",
       "creators": [
@@ -1265,6 +1372,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/f-uji/",
       "description": "FAIRsFAIR Research Data Object Assessment Service",
+      "aliases": [],
       "homepage": "https://www.f-uji.net/",
       "sourceRepo": "https://github.com/pangaea-data-publisher/fuji",
       "licenses": [
@@ -1299,6 +1407,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/fabric/",
       "description": "triplestore software library written in Golang",
+      "aliases": [],
       "sourceRepo": "https://github.com/spy16/fabric",
       "licenses": [
         "MIT License"
@@ -1316,6 +1425,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/fact/",
       "description": "semantic reasoner",
+      "aliases": [],
       "homepage": "http://owl.cs.manchester.ac.uk/tools/fact/",
       "sourceRepo": "https://bitbucket.org/dtsarkov/factplusplus",
       "licenses": [
@@ -1338,6 +1448,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/falkordb-q141103185/",
       "description": "graph database management system implemented in C",
+      "aliases": [],
       "homepage": "https://www.falkordb.com/",
       "sourceRepo": "https://github.com/FalkorDB/FalkorDB",
       "licenses": [
@@ -1357,6 +1468,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/flexrml/",
       "description": "memory-efficient C++ RML interpreter",
+      "aliases": [
+        "Flex RML"
+      ],
       "homepage": "https://github.com/wintechis/flex-rml",
       "sourceRepo": "https://github.com/wintechis/flex-rml",
       "licenses": [
@@ -1374,6 +1488,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/flint-sparql-editor/",
       "description": "reusable browser-based editor for authoring SPARQL queries",
+      "aliases": [
+        "Flint"
+      ],
       "homepage": "https://github.com/TSO-Openup/FlintSparqlEditor",
       "sourceRepo": "https://github.com/TSO-Openup/FlintSparqlEditor",
       "licenses": [
@@ -1391,6 +1508,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/flockdb/",
       "description": "graph-based distributed data manager, project no longer maintained since 2012",
+      "aliases": [],
       "homepage": "http://github.com/twitter/flockdb",
       "sourceRepo": "https://github.com/twitter/flockdb",
       "licenses": [
@@ -1430,6 +1548,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/flora-2/",
       "description": "open source semantic rule-based system for knowledge representation and reasoning",
+      "aliases": [
+        "Ergo Lite"
+      ],
       "homepage": "http://flora.sourceforge.net/",
       "softwareType": "Reasoning & Inference"
     },
@@ -1441,6 +1562,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/fluent-sparql/",
       "description": "Fluent query API for SPARQL based on the Jena framework",
+      "aliases": [],
       "sourceRepo": "https://github.com/stoewer/fluent-sparql",
       "licenses": [
         "3-clause BSD License"
@@ -1458,6 +1580,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/fluree/",
       "description": "Fluree’s platform enables trusted, linked, and composable data",
+      "aliases": [],
       "homepage": "https://flur.ee",
       "sourceRepo": "https://github.com/fluree/db",
       "licenses": [
@@ -1476,6 +1599,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/foops/",
       "description": "OEG FAIR ontologies validator",
+      "aliases": [],
       "homepage": "https://foops.linkeddata.es/FAIR_validator.html",
       "sourceRepo": "https://github.com/oeg-upm/fair_ontologies",
       "licenses": [
@@ -1495,6 +1619,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/forestqb/",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -1508,6 +1633,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/foundation/",
       "description": "Data, and its history, via change requests",
+      "aliases": [],
       "sourceRepo": "https://github.com/amirouche/foundation",
       "licenses": [
         "GNU Affero General Public License, version 3.0",
@@ -1528,6 +1654,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/framework/",
       "description": "Software-as-a-service Startup building all-in-one tool for project management & note-taking",
+      "aliases": [
+        "Framework Tools",
+        "Framework.tools"
+      ],
       "homepage": "https://framework.tools",
       "softwareType": "Knowledge Graph Construction",
       "relatedTools": [
@@ -1553,6 +1683,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/fs2kg/",
       "description": "FS2KG: File System to Knowledge Graph",
+      "aliases": [],
       "sourceRepo": "https://github.com/YannisTzitzikas/FS2KG",
       "licenses": [
         "proprietary license"
@@ -1570,6 +1701,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/fuxi-rdf-reasoner/",
       "description": "Python semantic web logical reasoning system",
+      "aliases": [
+        "FuXi",
+        "FuXi RDF reasoner"
+      ],
       "homepage": "https://pypi.org/project/fuxi/",
       "sourceRepo": "https://pypi.org/project/fuxi/",
       "softwareType": "Reasoning & Inference"
@@ -1582,6 +1717,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/g3-toolkit/",
       "description": "TypeScript visualization toolkit for RDF, labeled property graphs, and virtualized graphs",
+      "aliases": [
+        "G3 Toolkit",
+        "g3t"
+      ],
       "homepage": "https://zwelz3.github.io/g3-toolkit/",
       "sourceRepo": "https://github.com/zwelz3/g3-toolkit",
       "licenses": [
@@ -1600,6 +1739,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/gdotv/",
       "description": "graph database client with query editing and visualization for RDF triplestores and other graph databases",
+      "aliases": [
+        "gdotv graph database client"
+      ],
       "homepage": "https://gdotv.com/",
       "softwareType": "SPARQL Tooling"
     },
@@ -1611,6 +1753,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/gh-rdf3x/",
       "description": "extension of the rdf3x engine and the translatesparql tool",
+      "aliases": [],
       "sourceRepo": "https://github.com/gh-rdf3x/gh-rdf3x",
       "licenses": [
         "proprietary license"
@@ -1628,6 +1771,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/graphameleon-web-extension/",
       "description": "Web extension that captures Web navigation traces and transforms them into a RDF graph for further exploration",
+      "aliases": [],
       "homepage": "https://github.com/Orange-OpenSource/graphameleon",
       "sourceRepo": "https://github.com/Orange-OpenSource/graphameleon",
       "creators": [
@@ -1682,6 +1826,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/graphd/",
       "description": "triplestore by Metaweb",
+      "aliases": [],
       "sourceRepo": "https://github.com/google/graphd",
       "creators": [
         {
@@ -1706,6 +1851,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/",
       "description": "open-source framework for building temporal knowledge graphs as evolving context for AI agents",
+      "aliases": [
+        "Graphiti temporal knowledge graph",
+        "Zep Graphiti"
+      ],
       "homepage": "https://help.getzep.com/graphiti",
       "sourceRepo": "https://github.com/getzep/graphiti",
       "licenses": [
@@ -1748,6 +1897,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/graphy-js/",
       "description": "collection of JavaScript libraries for parsing, serializing, and manipulating RDF",
+      "aliases": [
+        "graphy"
+      ],
       "homepage": "https://graphy.link/",
       "sourceRepo": "https://github.com/blake-regalia/graphy.js",
       "licenses": [
@@ -1765,6 +1917,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/grlc-sparql-api-constructor/",
       "description": "software that generates RESTful Web APIs from SPARQL queries stored in Git repositories",
+      "aliases": [
+        "grlc",
+        "grlc SPARQL API"
+      ],
       "homepage": "https://grlc.io/",
       "sourceRepo": "https://github.com/CLARIAH/grlc",
       "licenses": [
@@ -1782,6 +1938,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/gruff/",
       "description": "commercial graph database software",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -1795,6 +1952,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/gstore/",
       "description": "gStore - a graph based RDF triple store.",
+      "aliases": [
+        "gStore - a graph based RDF triple store."
+      ],
       "homepage": "https://www.gstore.cn/",
       "sourceRepo": "https://github.com/pkumod/gStore",
       "licenses": [
@@ -1813,6 +1973,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/halyard/",
       "description": "Halyard is an extremely horizontally scalable Triplestore with support for Named Graphs, designed for integration of extremely large Semantic Data Models, and for storage and SPARQL 1.1 querying of the whole Linked Data universe snapshots.",
+      "aliases": [],
       "homepage": "https://merck.github.io/Halyard/",
       "sourceRepo": "https://github.com/Merck/Halyard",
       "licenses": [
@@ -1831,6 +1992,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/hefquin/",
       "description": "HeFQUIN is a query federation engine for heterogeneous federations of graph data sources, including federations of knowledge graphs.",
+      "aliases": [
+        "HeFQUIN is a query federation engine for heterogeneous federations of graph data sources, including federations of knowledge graphs."
+      ],
       "homepage": "https://liusemweb.github.io/HeFQUIN/",
       "sourceRepo": "https://github.com/LiUSemWeb/HeFQUIN",
       "licenses": [
@@ -1851,6 +2015,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/helio-ecosystem/",
       "description": "framework for generating and publishing knowledge graphs as Linked Data",
+      "aliases": [
+        "Helio KG framework"
+      ],
       "homepage": "https://helio-playground.linkeddata.es/home",
       "sourceRepo": "https://github.com/helio-ecosystem",
       "softwareType": "Knowledge Graph Construction"
@@ -1863,6 +2030,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/hermit/",
       "description": "Semantic reasoner, usable as cli, api, or plugin",
+      "aliases": [],
       "homepage": "http://www.hermit-reasoner.com",
       "sourceRepo": "https://code.google.com/archive/p/hermit-reasoner/",
       "licenses": [
@@ -1883,6 +2051,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/hets/",
       "description": "The Heterogeneous Tool Set",
+      "aliases": [],
       "homepage": "http://hets.eu/",
       "sourceRepo": "https://github.com/spechub/Hets",
       "licenses": [
@@ -1903,6 +2072,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/holonet-galactic-encyclopedia/",
       "description": "Wikidata-based gateway to explore data about Star Wars",
+      "aliases": [],
       "homepage": "https://sw-holonet.com/",
       "sourceRepo": "https://github.com/yoanchabot/holonet_datasets",
       "creators": [
@@ -1931,6 +2101,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/hugegraph/",
       "description": "High-performance graph database system supporting 100+ billion vertices and edges",
+      "aliases": [],
       "homepage": "https://hugegraph.apache.org",
       "sourceRepo": "https://github.com/apache/hugegraph",
       "creators": [
@@ -1977,6 +2148,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/imagesnippets/",
+      "aliases": [],
       "licenses": [
         "open access"
       ],
@@ -1990,6 +2162,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/imagesnippets-q125506367/",
       "description": "ImageSnippets is a fully operational web application for creating precise image descriptions/annotations using linked data",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -2002,6 +2175,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/infinitegraph/",
+      "aliases": [],
       "homepage": "http://www.infinitegraph.com",
       "softwareType": "Graph Database",
       "programmingLanguages": [
@@ -2016,6 +2190,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/intentional-arrangement-skos-editor/",
       "description": "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies",
+      "aliases": [
+        "Intentional Arrangement SKOS"
+      ],
       "homepage": "https://jesstalisman-ia.github.io/intentional-arrangement-skos/",
       "sourceRepo": "https://github.com/jesstalisman-ia/intentional-arrangement-skos",
       "licenses": [
@@ -2037,6 +2214,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/j2rm/",
       "description": "ontology-based JSON-to-RDF mapping tool",
+      "aliases": [
+        "J2RM JSON to RDF"
+      ],
       "homepage": "https://github.com/KGCP/g0-Builder-J2RM",
       "sourceRepo": "https://github.com/KGCP/g0-Builder-J2RM",
       "softwareType": "RDF Data Mapping / ETL"
@@ -2049,6 +2229,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/janusgraph/",
       "description": "distributed online transaction processing and OLAP graph database system with BerkeleyDB, Apache Cassandra and Apache HBase support; uses the TinkerPop framework and Gremlin graph traversal language; written in Java",
+      "aliases": [],
       "homepage": "https://janusgraph.org/",
       "sourceRepo": "https://github.com/JanusGraph/janusgraph",
       "creators": [
@@ -2090,6 +2271,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/jcel/",
       "description": "semantic reasoner",
+      "aliases": [],
       "homepage": "https://julianmendez.github.io/jcel/",
       "sourceRepo": "https://github.com/julianmendez/jcel",
       "licenses": [
@@ -2111,6 +2293,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/jdbc-4-sparql/",
       "description": "JDBC driver that takes data from SPARQL endpoints or RDF graphs",
+      "aliases": [],
       "sourceRepo": "https://github.com/Claudenw/jdbc4sparql",
       "licenses": [
         "proprietary license"
@@ -2128,6 +2311,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/jelly/",
       "description": "high-performance binary serialization format and streaming protocol for RDF",
+      "aliases": [
+        "Jelly-RDF"
+      ],
       "homepage": "https://w3id.org/jelly",
       "sourceRepo": "https://github.com/Jelly-RDF/jelly-protobuf",
       "licenses": [
@@ -2145,6 +2331,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/json-ld-playground/",
       "description": "web-based playground for processing and testing JSON-LD documents",
+      "aliases": [],
       "homepage": "https://json-ld.org/playground/",
       "sourceRepo": "https://github.com/json-ld/json-ld.org",
       "latestVersion": "1.0",
@@ -2162,6 +2349,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/json-rql/",
       "description": "JSON Resource Query Language, for simple, consistent query APIs",
+      "aliases": [],
       "homepage": "https://json-rql.org/",
       "sourceRepo": "https://github.com/gsvarovsky/json-rql",
       "licenses": [
@@ -2180,6 +2368,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/jsonld-js/",
       "description": "JavaScript library implementing the JSON-LD processing algorithms and API",
+      "aliases": [
+        "jsonld"
+      ],
       "homepage": "https://github.com/digitalbazaar/jsonld.js",
       "sourceRepo": "https://github.com/digitalbazaar/jsonld.js",
       "licenses": [
@@ -2210,6 +2401,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/juliett/",
       "description": "N3/RDF Surfaces reasoner that lowers Notation3 rules to first-order logic and decides them with the Z3 SMT solver, running as WebAssembly in the browser",
+      "aliases": [],
       "homepage": "https://phochste.codeberg.page/juliett/",
       "licenses": [
         "MIT License"
@@ -2228,6 +2420,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/karma-semantic-mapping-platform/",
       "description": "visual platform for semantic modeling and RDF generation",
+      "aliases": [
+        "Karma RDF",
+        "Karma mapping"
+      ],
       "homepage": "https://usc-isi-i2.github.io/karma/",
       "sourceRepo": "https://github.com/usc-isi-i2/Web-Karma",
       "licenses": [
@@ -2243,6 +2439,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/katts/",
       "description": "Katts is A Triple Torrent Sieve",
+      "aliases": [],
       "sourceRepo": "https://github.com/uzh/katts",
       "licenses": [
         "Apache Software License 2.0"
@@ -2260,6 +2457,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/kgx/",
       "description": "Python library and CLI for converting and validating knowledge graphs conforming to the Biolink Model across RDF, Neo4j, ArangoDB, and other formats",
+      "aliases": [],
       "homepage": "https://kgx.readthedocs.io/",
       "sourceRepo": "https://github.com/biolink/kgx",
       "licenses": [
@@ -2280,6 +2478,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/kineo/",
       "description": "persistent RDF quadstore and SPARQL engine",
+      "aliases": [],
       "sourceRepo": "https://github.com/kasei/kineo",
       "licenses": [
         "MIT License"
@@ -2299,6 +2498,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/knwler/",
       "description": "Open-source Python tool that extracts structured knowledge graphs from unstructured documents using LLMs",
+      "aliases": [],
       "homepage": "https://knwler.com/",
       "sourceRepo": "https://github.com/Orbifold/knwler",
       "licenses": [
@@ -2319,6 +2519,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/kolibrie-sparql-engine/",
       "description": "Rust-based SPARQL query engine and RDF stream-processing system",
+      "aliases": [
+        "Kolibrie",
+        "Kolibrie SPARQL engine"
+      ],
       "homepage": "https://streamintelligencelab.github.io/Kolibrie-website/",
       "sourceRepo": "https://github.com/StreamIntelligenceLab/Kolibrie",
       "latestVersion": "0.1.1",
@@ -2333,6 +2537,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/konclude/",
       "description": "a tableau-based parallel OWL 2 DL reasoner",
+      "aliases": [
+        "Konclude OWL reasoner"
+      ],
       "homepage": "https://www.derivo.de/produkte/konclude/",
       "sourceRepo": "https://github.com/konclude/Konclude",
       "latestVersion": "0.7.0-1138",
@@ -2347,6 +2554,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/kuzudb/",
       "description": "Embedded property graph database with vector and full-text search, implements Cypher",
+      "aliases": [],
       "homepage": "https://kuzudb.com",
       "sourceRepo": "https://github.com/kuzudb/kuzu",
       "licenses": [
@@ -2367,6 +2575,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/levelgraph/",
       "description": "Graph database JS style for Node.js and the Browser. Built upon LevelUp and LevelDB.",
+      "aliases": [],
       "sourceRepo": "https://github.com/levelgraph/levelgraph",
       "licenses": [
         "MIT License"
@@ -2385,6 +2594,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/librdf-sqlite/",
+      "aliases": [],
       "sourceRepo": "https://github.com/mro/librdf.sqlite",
       "licenses": [
         "proprietary license"
@@ -2399,6 +2609,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/linked-data-fragments-server/",
       "description": "Node.js server for publishing Triple Pattern Fragments and other Linked Data Fragments",
+      "aliases": [
+        "LDF Server",
+        "Server.js"
+      ],
       "homepage": "https://linkeddatafragments.org/software/",
       "sourceRepo": "https://github.com/LinkedDataFragments/Server.js",
       "licenses": [
@@ -2416,6 +2630,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/linked-open-vocabularies/",
       "description": "dataset of ontologies",
+      "aliases": [
+        "LOV"
+      ],
       "homepage": "https://lov.linkeddata.es/dataset/lov",
       "sourceRepo": "https://github.com/pyvandenbussche/lov",
       "licenses": [
@@ -2434,6 +2651,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/linkeddatahub/",
       "description": "The low-code Knowledge Graph application platform. Apache license.",
+      "aliases": [],
       "homepage": "https://atomgraph.github.io/LinkedDataHub/",
       "sourceRepo": "https://github.com/AtomGraph/LinkedDataHub",
       "licenses": [
@@ -2454,6 +2672,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/linkedpipes-etl/",
       "description": "LinkedPipes ETL is an RDF based, lightweight ETL tool",
+      "aliases": [],
       "homepage": "https://etl.linkedpipes.com",
       "sourceRepo": "https://github.com/linkedpipes/etl",
       "partOf": "LinkedPipes",
@@ -2487,6 +2706,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/linkml/",
       "description": "flexible modeling framework that allow for working with semantic web standards alongside a modern data stack",
+      "aliases": [
+        "BiolinkML"
+      ],
       "homepage": "https://linkml.io/",
       "sourceRepo": "https://github.com/linkml/linkml",
       "creators": [
@@ -2532,6 +2754,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/linkml-scala/",
       "description": "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework",
+      "aliases": [
+        "linkml-scala"
+      ],
       "homepage": "https://linkml.neverblink.eu/",
       "sourceRepo": "https://github.com/NeverBlink-OSS/linkml-scala",
       "licenses": [
@@ -2552,6 +2777,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/logmap/",
       "description": "LogMap: An Ontology Alignment and Alignment Repair System",
+      "aliases": [],
       "sourceRepo": "https://github.com/ernestojimenezruiz/logmap-matcher",
       "licenses": [
         "Apache Software License 2.0"
@@ -2569,6 +2795,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/luposdate/",
       "description": "Semantic Web database",
+      "aliases": [],
       "sourceRepo": "https://github.com/luposdate/luposdate",
       "licenses": [
         "proprietary license"
@@ -2586,6 +2813,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/mapeathor/",
       "description": "spreadsheet-based R2RML, RML, and YARRRML mapping generator",
+      "aliases": [
+        "Mapeathor RDF"
+      ],
       "homepage": "https://morph.oeg.fi.upm.es/tool/mapeathor",
       "sourceRepo": "https://github.com/oeg-upm/mapeathor",
       "licenses": [
@@ -2603,6 +2833,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/maplib/",
       "description": "High-performance Python/Rust framework for constructing and querying RDF knowledge graphs from tabular data using OTTR templates, with Polars/Apache Arrow integration, SPARQL, RDFS reasoning, SHACL validation, and Datalog support.",
+      "aliases": [
+        "maplib RDF"
+      ],
       "homepage": "https://datatreehouse.github.io/documentation/",
       "sourceRepo": "https://github.com/magbak/maplib",
       "licenses": [
@@ -2620,6 +2853,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/mapping-workbench/",
       "description": "collaborative platform for developing and validating knowledge-graph mappings",
+      "aliases": [
+        "Mapping Workbench RDF"
+      ],
       "homepage": "https://meaningfy.ws/mapping-workbench/",
       "sourceRepo": "https://meaningfy.ws/mapping-workbench/",
       "softwareType": "RDF Data Mapping / ETL"
@@ -2632,6 +2868,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/marklogic/",
       "description": "multi-model NoSQL database",
+      "aliases": [
+        "MarkLogic Server"
+      ],
       "homepage": "http://www.marklogic.com/",
       "creators": [
         {
@@ -2680,6 +2919,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/matey-yarrrml-editor/",
       "description": "browser-based editor for YARRRML mappings",
+      "aliases": [
+        "Matey RDF"
+      ],
       "homepage": "https://github.com/RMLio/matey",
       "sourceRepo": "https://github.com/RMLio/matey",
       "licenses": [
@@ -2697,6 +2939,11 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/",
       "description": "open-source software framework providing persistent memory for artificial intelligence agents",
+      "aliases": [
+        "Mem0 AI memory",
+        "mem0",
+        "mem0ai"
+      ],
       "homepage": "https://mem0.ai/",
       "sourceRepo": "https://github.com/mem0ai/mem0",
       "licenses": [
@@ -2736,6 +2983,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/memgraph/",
       "description": "High-performance in-memory graph database for real-time analytics and GraphRAG",
+      "aliases": [],
       "homepage": "https://memgraph.com",
       "sourceRepo": "https://github.com/memgraph/memgraph",
       "licenses": [
@@ -2753,6 +3001,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/mentor/",
       "description": "Visual Studio Code extension providing editing support for RDF languages and knowledge graphs",
+      "aliases": [],
       "homepage": "https://mentor-vscode.dev",
       "sourceRepo": "https://github.com/faubulous/mentor-vscode",
       "licenses": [
@@ -2768,6 +3017,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/metaphactory/",
       "description": "software platform for knowledge graphs",
+      "aliases": [],
       "homepage": "http://metaphactory.com/",
       "creators": [
         {
@@ -2792,6 +3042,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/millenniumdb/",
       "description": "graph database system implemented in C++",
+      "aliases": [
+        "MDB",
+        "MillDB"
+      ],
       "sourceRepo": "https://github.com/MillenniumDB/MillenniumDB",
       "licenses": [
         "GNU General Public License, version 2.0"
@@ -2810,6 +3064,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/minimal-mappings/",
+      "aliases": [],
       "softwareType": "RDF Data Mapping / ETL"
     },
     {
@@ -2820,6 +3075,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/morph/",
       "description": "rdb2rdf tool using r2rml mappings",
+      "aliases": [],
       "sourceRepo": "https://github.com/jpcik/morph",
       "licenses": [
         "proprietary license"
@@ -2836,6 +3092,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/morph-kgc/",
       "description": "Python engine for constructing RDF knowledge graphs using R2RML and RML mappings",
+      "aliases": [
+        "Morph KGC"
+      ],
       "homepage": "https://morph-kgc.readthedocs.io/",
       "sourceRepo": "https://github.com/morph-kgc/morph-kgc",
       "licenses": [
@@ -2856,6 +3115,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/morph-streams/",
       "description": "sparql-stream sensor queries",
+      "aliases": [],
       "sourceRepo": "https://github.com/jpcik/morph-streams",
       "licenses": [
         "proprietary license"
@@ -2873,6 +3133,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/morph-xr2rml/",
       "description": "xR2RML implementation for mapping non-relational data to RDF",
+      "aliases": [
+        "Morph xR2RML"
+      ],
       "homepage": "https://github.com/frmichel/morph-xr2rml",
       "sourceRepo": "https://github.com/frmichel/morph-xr2rml",
       "licenses": [
@@ -2890,6 +3153,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/mulgara/",
       "description": "RDF TripleStore in Java",
+      "aliases": [],
       "homepage": "http://mulgara.org/",
       "sourceRepo": "https://github.com/quoll/mulgara",
       "licenses": [
@@ -2909,6 +3173,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/n3-js/",
       "description": "JavaScript implementation of the RDF.js specification for handling RDF data",
+      "aliases": [
+        "N3"
+      ],
       "homepage": "https://github.com/rdfjs/N3.js",
       "sourceRepo": "https://github.com/rdfjs/N3.js",
       "licenses": [
@@ -2926,6 +3193,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/national-library-of-korea-linked-open-data/",
       "description": "National Library of Korea authority file for personal names and works",
+      "aliases": [],
       "homepage": "https://lod.nl.go.kr/home/",
       "softwareType": "Knowledge Graph Construction",
       "relatedTools": [
@@ -2943,6 +3211,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ndoli/",
       "description": "personal knowledge graph tool for AI coding assistants that tracks a user's professional network, projects, and opportunities using RDF, OWL, and SHACL",
+      "aliases": [],
       "homepage": "https://ndoli.ai/",
       "sourceRepo": "https://github.com/SteveHedden/ndoli",
       "creators": [
@@ -2975,6 +3244,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/nebulagraph/",
       "description": "open-source distributed graph database system",
+      "aliases": [
+        "Nebula Graph"
+      ],
       "homepage": "https://www.nebula-graph.io/",
       "sourceRepo": "https://github.com/vesoft-inc/nebula",
       "licenses": [
@@ -3005,6 +3277,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/neo4j/",
       "description": "graph database management system implemented in Java",
+      "aliases": [],
       "homepage": "https://neo4j.com/",
       "sourceRepo": "https://github.com/neo4j/neo4j",
       "licenses": [
@@ -3041,6 +3314,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/neontometrics/",
       "description": "Calculate (evolutional) ontology metrics using a GUI or API",
+      "aliases": [],
       "homepage": "http://neontometrics.informatik.uni-rostock.de",
       "sourceRepo": "https://github.com/achiminator/NEOntometrics",
       "licenses": [
@@ -3061,6 +3335,11 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/neosemantics/",
       "description": "Neo4j plugin for RDF integration, SHACL validation, and inference",
+      "aliases": [
+        "Graph Semantics",
+        "Neo4j neosemantics",
+        "n10s"
+      ],
       "homepage": "https://neo4j.com/labs/neosemantics/",
       "sourceRepo": "https://github.com/neo4j-labs/neosemantics",
       "creators": [
@@ -3096,6 +3375,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/nitrosbase/",
       "description": "Russian high-performance multi-model database system",
+      "aliases": [
+        "NitrosBase RDF Storage"
+      ],
       "homepage": "http://nitrosbase.com",
       "licenses": [
         "proprietary license"
@@ -3137,6 +3419,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/node-quadstore/",
       "description": "LevelDB-backed graph database engine for Node.js and the browser supporting SPARQL queries and the RDF/JS interface",
+      "aliases": [],
       "homepage": "https://beautifulinteractions.github.io/node-quadstore",
       "sourceRepo": "https://github.com/m-ld/node-quadstore",
       "licenses": [
@@ -3163,6 +3446,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/nodica/",
       "description": "Web-based tool for visualizing graphs with image-filled nodes, taken from SPARQL CONSTRUCT/DESCRIBE results or from a file.",
+      "aliases": [],
       "homepage": "https://kvistgaard.github.io/nodica/index.html",
       "sourceRepo": "https://github.com/kvistgaard/nodica",
       "creators": [
@@ -3190,6 +3474,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/onto-tool/",
       "description": "toolkit for updating and exporting ontologies in RDF",
+      "aliases": [
+        "onto_tool",
+        "ontology-toolkit"
+      ],
       "sourceRepo": "https://github.com/semanticarts/ontology-toolkit",
       "licenses": [
         "Apache Software License 2.0"
@@ -3209,6 +3497,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontobricks/",
       "description": "web application for designing ontologies and constructing knowledge graphs on Databricks",
+      "aliases": [],
       "homepage": "https://github.com/databrickslabs/ontobricks/tree/master/documentation",
       "sourceRepo": "https://github.com/databrickslabs/ontobricks",
       "creators": [
@@ -3236,6 +3525,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontofelia/",
       "description": "Open-source self-hosted AI agent gateway giving LLM agents RDF/OWL-based semantic memory, queryable via SPARQL with OWL-DL reasoning",
+      "aliases": [],
       "homepage": "https://github.com/semantification-org/Ontofelia",
       "sourceRepo": "https://github.com/semantification-org/Ontofelia",
       "licenses": [
@@ -3255,6 +3545,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontofox/",
       "description": "tool for extracting ontology terms and axioms",
+      "aliases": [],
       "homepage": "https://ontofox.hegroup.org/",
       "sourceRepo": "https://github.com/OntoZoo/ontofox",
       "licenses": [
@@ -3273,6 +3564,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontogpt/",
       "description": "Python package for extracting structured knowledge and ontology terms from text using language models",
+      "aliases": [
+        "SPIRES"
+      ],
       "homepage": "https://monarch-initiative.github.io/ontogpt/",
       "sourceRepo": "https://github.com/monarch-initiative/ontogpt",
       "creators": [
@@ -3317,6 +3611,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-kit/",
       "description": "The Ontology Development Kit is a toolbox of various ontology related tools such as ROBOT and dosdp-tools, bundled as a docker image. It provides executable workflows for managing ontologies continuous integration, releases and dynamic imports.",
+      "aliases": [
+        "ODK"
+      ],
       "homepage": "http://incatools.github.io/ontology-development-kit/",
       "sourceRepo": "https://github.com/INCATools/ontology-development-kit",
       "creators": [
@@ -3365,6 +3662,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-development-suite/",
       "description": "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks",
+      "aliases": [],
       "sourceRepo": "https://github.com/pwin/consolidated-ontology-quality-suite-webapp",
       "licenses": [
         "MIT License"
@@ -3384,6 +3682,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-pitfall-scanner/",
       "description": "on-line tool for ontology evaluation",
+      "aliases": [
+        "oops!"
+      ],
       "homepage": "https://oops.linkeddata.es/",
       "creators": [
         {
@@ -3406,6 +3707,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontology-quality-suite/",
       "description": "Python package for assessing OWL2 ontology and RDF graph quality, including version-consistency and rename detection",
+      "aliases": [],
       "homepage": "https://pypi.org/project/ontology-quality-suite/",
       "sourceRepo": "https://github.com/pwin/consolidated-ontology-quality-suite-python",
       "licenses": [
@@ -3427,6 +3729,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontology2graph/",
       "description": "A tool/approach for generating synthetic knowledge graphs using generative AI and graph fusion, taking an RDFS/OWL ontology as input.",
+      "aliases": [],
       "homepage": "https://github.com/Orange-OpenSource/Ontology2Graph",
       "sourceRepo": "https://github.com/Orange-OpenSource/Ontology2Graph",
       "licenses": [
@@ -3445,6 +3748,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontoology/",
       "description": "online tool for automatically generating documentation and evaluating Ontologies hosted on GitHub",
+      "aliases": [],
       "homepage": "http://ontoology.linkeddata.es/",
       "sourceRepo": "https://github.com/OnToology/OnToology",
       "licenses": [
@@ -3465,6 +3769,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/",
       "description": "platform to query relational databases as Virtual RDF Knowledge Graphs using SPARQL",
+      "aliases": [
+        "Ontop"
+      ],
       "homepage": "https://ontop-vkg.org",
       "sourceRepo": "https://github.com/ontop/ontop",
       "creators": [
@@ -3519,6 +3826,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontopic-suite/",
       "description": "no-code software platform for building and deploying virtual or materialized knowledge graphs from enterprise data",
+      "aliases": [
+        "Ontopic Studio",
+        "Ontopic Studio Desktop"
+      ],
       "homepage": "https://ontopic.ai/en/ontopic-suite/",
       "creators": [
         {
@@ -3547,6 +3858,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontopspark/",
       "description": "OntopSpark is an Ontop's extension which supports Apache Spark as query processing engine. The Ontop platform allows to query relational databases as Virtual RDF Knowledge Graphs using SPARQL.",
+      "aliases": [],
       "homepage": "https://ontop-vkg.org/",
       "sourceRepo": "https://github.com/chimera-suite/OntopSpark",
       "licenses": [
@@ -3567,6 +3879,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontopstream/",
       "description": "OntopStream is a research protype extension of the popular Ontology-Based Data Access engine Ontop.",
+      "aliases": [],
       "sourceRepo": "https://github.com/chimera-suite/OntopStream",
       "licenses": [
         "Apache Software License 2.0"
@@ -3586,6 +3899,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontospy/",
       "description": "Python library and command-line interface for inspecting and visualizing RDF models aka ontologies.",
+      "aliases": [],
       "homepage": "http://lambdamusic.github.io/Ontospy/",
       "sourceRepo": "https://github.com/lambdamusic/Ontospy",
       "licenses": [
@@ -3606,6 +3920,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/",
       "description": "A highly efficient and robust graph database system with RDF and SPARQL support",
+      "aliases": [
+        "GraphDB"
+      ],
       "homepage": "http://graphdb.ontotext.com",
       "sourceRepo": "http://maven.ontotext.com/service/rest/repository/browse/owlim-releases/com/ontotext/graphdb/graphdb-se/",
       "creators": [
@@ -3638,6 +3955,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontouml-plugin-for-visual-paradigm/",
       "description": "Menthor Editor",
+      "aliases": [],
       "sourceRepo": "https://github.com/MenthorTools/menthor-editor",
       "licenses": [
         "proprietary license"
@@ -3657,6 +3975,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/oops/",
       "description": "Ontology Pitfall Scanner",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -3670,6 +3989,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/open-knowledge-graphs/",
       "description": "Browse ontologies, controlled vocabularies, taxonomies, and semantic software from a daily-refreshed RDF catalog.",
+      "aliases": [
+        "OKG"
+      ],
       "homepage": "https://openknowledgegraphs.com/",
       "sourceRepo": "https://github.com/SteveHedden/open-knowledge-graphs",
       "creators": [
@@ -3702,6 +4024,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/open-ontologies/",
       "description": "Open-source ontology engine for RDF and OWL with SPARQL querying, SHACL validation, and OWL2-DL reasoning. Written in Rust and runs as a lightweight MCP server.",
+      "aliases": [],
       "homepage": "https://github.com/fabio-rovai/open-ontologies",
       "sourceRepo": "https://github.com/fabio-rovai/open-ontologies",
       "licenses": [
@@ -3719,6 +4042,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/openllet/",
       "description": "semantic reasoner",
+      "aliases": [],
       "homepage": "https://github.com/Galigator/openllet",
       "sourceRepo": "https://github.com/Galigator/openllet",
       "licenses": [
@@ -3739,6 +4063,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/openskos/",
       "description": "open-source platform for publishing and managing SKOS vocabularies",
+      "aliases": [
+        "Open SKOS"
+      ],
       "homepage": "https://github.com/openskos/openskos",
       "sourceRepo": "https://github.com/openskos/openskos",
       "latestVersion": "2.2",
@@ -3753,6 +4080,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/orientdb/",
       "description": "open source NoSQL database management system written in Java",
+      "aliases": [
+        "Orient"
+      ],
       "homepage": "https://orientdb.com",
       "sourceRepo": "https://github.com/orientechnologies/orientdb",
       "licenses": [
@@ -3795,6 +4125,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/origintrail-dkg-v10-node/",
       "description": "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph",
+      "aliases": [
+        "DKG V10 node",
+        "OriginTrail DKG node"
+      ],
       "homepage": "https://docs.origintrail.io/",
       "sourceRepo": "https://github.com/OriginTrail/dkg",
       "partOf": "OriginTrail Decentralized Knowledge Graph",
@@ -3816,6 +4150,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ostrich/",
       "description": "🐦 Versioned RDF triple store (OffSet-enabled TRIple store for CHangesets)",
+      "aliases": [],
       "sourceRepo": "https://github.com/rdfostrich/ostrich",
       "licenses": [
         "proprietary license"
@@ -3835,6 +4170,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/owbo-ontology-white-board/",
       "description": "Ontology White Board",
+      "aliases": [],
       "sourceRepo": "https://github.com/mdaquin/OWBO",
       "licenses": [
         "MIT License"
@@ -3852,6 +4188,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/owl-rl/",
       "description": "Python library implementing OWL 2 RL profile and RDFS forward-chaining inference over RDFLib graphs",
+      "aliases": [],
       "homepage": "https://owl-rl.readthedocs.io",
       "sourceRepo": "https://github.com/RDFLib/OWL-RL",
       "licenses": [
@@ -3872,6 +4209,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/owl2vec/",
       "description": "Embedding OWL ontologies",
+      "aliases": [],
       "sourceRepo": "https://github.com/KRR-Oxford/OWL2Vec-Star",
       "licenses": [
         "Apache Software License 2.0"
@@ -3891,6 +4229,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/owlapi/",
       "description": "OWL API main repository",
+      "aliases": [],
       "sourceRepo": "https://github.com/owlcs/owlapi",
       "licenses": [
         "Affero General Public License",
@@ -3910,6 +4249,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/owlready2/",
       "description": "Owlready2 is a package for ontology-oriented programming in Python",
+      "aliases": [],
       "homepage": "https://bitbucket.org/jibalamy/owlready2",
       "sourceRepo": "https://bitbucket.org/jibalamy/owlready2",
       "licenses": [
@@ -3938,6 +4278,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/oxigraph/",
       "description": "embeddable SPARQL and RDF graph database written in Rust, with Python, JavaScript, and CLI bindings",
+      "aliases": [],
       "homepage": "https://oxigraph.org",
       "sourceRepo": "https://github.com/oxigraph/oxigraph",
       "creators": [
@@ -3968,6 +4309,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ofaire/",
       "description": "FAIRness assessment tool for ontologies, vocabularies and semantic resources",
+      "aliases": [],
       "homepage": "https://services.stageportal.lirmm.fr/fairness/v2/",
       "sourceRepo": "https://github.com/agroportal/fairness",
       "licenses": [
@@ -3988,6 +4330,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/parliament/",
       "description": "Standards-compliant triple store for RDF, OWL, and SPARQL",
+      "aliases": [],
       "sourceRepo": "https://github.com/SemWebCentral/parliament",
       "licenses": [
         "3-clause BSD License"
@@ -4007,6 +4350,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pellet/",
       "description": "Pellet is an OWL 2 reasoner in Java; open source (AGPL) and commercially licensed, commercial support available.",
+      "aliases": [],
       "sourceRepo": "https://github.com/stardog-union/pellet",
       "creators": [
         {
@@ -4034,6 +4378,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/polypheny/",
       "description": "multi-model database system optimized for heterogeneous workloads and supporting multiple query languages",
+      "aliases": [],
       "homepage": "https://polypheny.com",
       "sourceRepo": "https://github.com/polypheny/Polypheny-DB",
       "licenses": [
@@ -4076,6 +4421,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/poolparty-semantic-suite/",
       "description": "semantic middleware and software suite for taxonomy, ontology, knowledge graph and text-mining management",
+      "aliases": [],
       "homepage": "https://www.poolparty.biz/",
       "creators": [
         {
@@ -4099,6 +4445,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/prez-linked-data-api/",
       "description": "RDF framework for publishing Linked Data through profile-based APIs and web interfaces",
+      "aliases": [
+        "Prez"
+      ],
       "homepage": "https://github.com/RDFLib/prez",
       "sourceRepo": "https://github.com/RDFLib/prez",
       "licenses": [
@@ -4116,6 +4465,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/processor/",
       "description": "Ontology-driven Linked Data processor and server for SPARQL backends. Apache License.",
+      "aliases": [],
       "homepage": "https://hub.docker.com/r/atomgraph/processor/",
       "sourceRepo": "https://github.com/AtomGraph/Processor",
       "licenses": [
@@ -4136,6 +4486,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/protege/",
       "description": "Ontology editor",
+      "aliases": [
+        "Protege"
+      ],
       "homepage": "https://protege.stanford.edu",
       "sourceRepo": "https://github.com/protegeproject/protege-distribution",
       "creators": [
@@ -4169,6 +4522,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pubby/",
       "description": "Linked Data frontend for SPARQL endpoints",
+      "aliases": [],
       "homepage": "http://www4.wiwiss.fu-berlin.de/pubby/",
       "sourceRepo": "https://github.com/cygri/pubby",
       "licenses": [
@@ -4189,6 +4543,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pygraft-gen/",
       "description": "Synthetic knowledge graphs generation using a stochastic approach, taking an RDFS/OWL ontology as input. Post-generation graph matching helps assess the adequacy of the knowledge graph for a specific application domain.",
+      "aliases": [],
       "homepage": "https://github.com/Orange-OpenSource/pygraft-gen",
       "sourceRepo": "https://github.com/Orange-OpenSource/pygraft-gen",
       "licenses": [
@@ -4209,6 +4564,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pyldapi/",
       "description": "Python framework for serving RDF as Linked Data APIs",
+      "aliases": [
+        "pyLDAPI"
+      ],
       "homepage": "https://github.com/RDFLib/pyLDAPI",
       "sourceRepo": "https://github.com/RDFLib/pyLDAPI",
       "licenses": [
@@ -4226,6 +4584,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pylodstorage/",
       "description": "python List of Dict (Table) Storage library",
+      "aliases": [],
       "sourceRepo": "https://github.com/WolfgangFahl/pyLoDStorage",
       "licenses": [
         "Apache License"
@@ -4242,6 +4601,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/pyshacl/",
       "description": "Python library and command-line validator for the Shapes Constraint Language",
+      "aliases": [
+        "PySHACL",
+        "pyshacl"
+      ],
       "homepage": "https://pypi.org/project/pyshacl/",
       "sourceRepo": "https://github.com/RDFLib/pySHACL",
       "creators": [
@@ -4275,6 +4638,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/qendpoint/",
       "description": "Highly scalable triple-store",
+      "aliases": [],
       "homepage": "https://the-qa-company.com/products/qEndpoint",
       "sourceRepo": "https://github.com/the-qa-company/qEndpoint",
       "creators": [
@@ -4308,6 +4672,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/qlever/",
       "description": "SPARQL engine",
+      "aliases": [],
       "homepage": "https://qlever.dev/",
       "sourceRepo": "https://github.com/ad-freiburg/qlever",
       "creators": [
@@ -4372,6 +4737,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/quitstore/",
       "description": "🖧 Quads in Git - Distributed Version Control for RDF Knowledge Bases",
+      "aliases": [],
       "homepage": "https://aksw.org/Projects/Quit",
       "sourceRepo": "https://github.com/AKSW/QuitStore",
       "licenses": [
@@ -4392,6 +4758,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/r2rml-f/",
       "description": "open-source R2RML processor",
+      "aliases": [],
       "homepage": "https://github.com/chrdebru/r2rml",
       "sourceRepo": "https://github.com/chrdebru/r2rml",
       "creators": [
@@ -4417,6 +4784,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/racer/",
       "description": "semantic reasoner",
+      "aliases": [],
       "sourceRepo": "https://github.com/ha-mo-we/Racer",
       "licenses": [
         "3-clause BSD License"
@@ -4437,6 +4805,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/radar-station/",
       "description": "Radar Station: Using Knowledge Graph Embeddings for Semantic Table Interpretation (row, column, and relationships between columns annotations) and Entity Disambiguation",
+      "aliases": [
+        "DAGOBAH Radar Station"
+      ],
       "sourceRepo": "https://github.com/Orange-OpenSource/radar-station",
       "creators": [
         {
@@ -4475,6 +4846,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/raptor-rdf-syntax-library/",
       "description": "C library for parsing and serializing RDF syntaxes",
+      "aliases": [
+        "Raptor",
+        "libraptor2"
+      ],
       "homepage": "https://librdf.org/raptor/",
       "sourceRepo": "https://github.com/dajobe/raptor",
       "creators": [
@@ -4504,6 +4879,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-glance/",
       "description": "lightweight browser for exploring RDF graphs",
+      "aliases": [
+        "RDFGlance"
+      ],
       "homepage": "https://github.com/xdobry/rdfglance",
       "sourceRepo": "https://github.com/xdobry/rdfglance",
       "latestVersion": "0.17",
@@ -4518,6 +4896,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-playground/",
       "description": "web interface for Linked Data courses, tailored for CC7220 \\",
+      "aliases": [],
       "sourceRepo": "https://github.com/RDFPlaygroundProject/RDFPlayground",
       "licenses": [
         "Apache Software License 2.0"
@@ -4537,6 +4916,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-transform/",
       "description": "OpenRefine extension for transforming tabular data into RDF",
+      "aliases": [
+        "OpenRefine RDF extension",
+        "RDF Transform for OpenRefine"
+      ],
       "homepage": "https://openrefine.org/extensions",
       "sourceRepo": "https://github.com/AtesComp/rdf-transform",
       "partOf": "OpenRefine",
@@ -4555,6 +4938,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-ext/",
       "description": "RDF-Ext is a JavaScript library that extends the RDF/JS specs to handle RDF data in a developer-friendly way.",
+      "aliases": [],
       "homepage": "https://rdf-ext.org/",
       "sourceRepo": "https://github.com/rdf-ext",
       "licenses": [
@@ -4572,6 +4956,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-sketch/",
       "description": "Sketch RDF in the web browser with immediate visualization",
+      "aliases": [],
       "homepage": "https://sketch.zazuko.com/",
       "sourceRepo": "https://github.com/zazuko/rdf-sketch",
       "licenses": [
@@ -4592,6 +4977,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-validate-shacl/",
       "description": "TypeScript library for validating RDF data using SHACL",
+      "aliases": [
+        "RDF Validate SHACL"
+      ],
       "homepage": "https://www.npmjs.com/package/rdf-validate-shacl",
       "sourceRepo": "https://github.com/zazuko/rdf-validate-shacl",
       "creators": [
@@ -4629,6 +5017,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf2rml/",
       "description": "RDF by Example: rdfpuml for True RDF Diagrams, rdf2rml for R2RML Generation",
+      "aliases": [],
       "sourceRepo": "https://github.com/VladimirAlexiev/rdf2rml",
       "licenses": [
         "proprietary license"
@@ -4646,6 +5035,11 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/",
       "description": "Eclipse RDF4J: scalable RDF for Java",
+      "aliases": [
+        "Eclipse RDF4J",
+        "OpenRDF Sesame",
+        "Sesame"
+      ],
       "homepage": "http://rdf4j.org/",
       "sourceRepo": "https://github.com/eclipse-rdf4j/rdf4j",
       "licenses": [
@@ -4689,6 +5083,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdfgraphgen/",
       "description": "Python tool that generates synthetic RDF graphs satisfying given SHACL shape constraints, for benchmarking, testing, and training use cases",
+      "aliases": [],
       "homepage": "https://github.com/etnc/RDFGraphGen",
       "sourceRepo": "https://github.com/etnc/RDFGraphGen",
       "licenses": [
@@ -4709,6 +5104,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdflib/",
       "description": "Python library for working with RDF",
+      "aliases": [
+        "rdflib"
+      ],
       "homepage": "https://rdflib.dev",
       "sourceRepo": "https://github.com/RDFLib/rdflib",
       "licenses": [
@@ -4740,6 +5138,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdfox/",
       "description": "RDF database engine",
+      "aliases": [],
       "homepage": "https://www.oxfordsemantic.tech/",
       "licenses": [
         "proprietary license"
@@ -4754,6 +5153,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdfsharp/",
       "description": "Modular .NET library for building Semantic Web applications: RDF modeling, SHACL validation, quad stores, and SPARQL querying",
+      "aliases": [],
       "homepage": "https://www.nuget.org/packages/RDFSharp",
       "sourceRepo": "https://github.com/mdesalvo/RDFSharp",
       "licenses": [
@@ -4774,6 +5174,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdfunit/",
       "description": "Java framework for test-driven validation and quality assessment of RDF data",
+      "aliases": [
+        "Databugger",
+        "RDF Unit"
+      ],
       "homepage": "https://aksw.org/Projects/RDFUnit",
       "sourceRepo": "https://github.com/AKSW/RDFUnit",
       "creators": [
@@ -4803,6 +5207,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/reactive-sparql/",
       "description": "Reactive Sparql Client written in Scala and Akka",
+      "aliases": [],
       "sourceRepo": "https://github.com/agnos-ai/reactive-sparql",
       "licenses": [
         "MIT License"
@@ -4822,6 +5227,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/reactodia/",
       "description": "JavaScript library for visual interaction with graph data in a form of a diagram",
+      "aliases": [
+        "Reactodia Workspace"
+      ],
       "homepage": "https://reactodia.github.io",
       "sourceRepo": "https://github.com/reactodia/reactodia-workspace",
       "licenses": [
@@ -4852,6 +5260,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/reasonable/",
       "description": "an OWL 2 RL reasoner implemented in Rust with Python bindings and a command-line interface",
+      "aliases": [],
       "homepage": "https://reasonable.gtf.fyi/",
       "sourceRepo": "https://github.com/gtfierro/reasonable",
       "licenses": [
@@ -4869,6 +5278,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/redstore/",
       "description": "lightweight RDF triplestore written in C using the Redland library",
+      "aliases": [],
       "homepage": "https://www.aelius.com/njh/redstore/",
       "sourceRepo": "https://github.com/njh/redstore",
       "licenses": [
@@ -4889,6 +5299,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/riq/",
       "description": "software tool for fast processing of SPARQL queries on RDF quadruples, funded by National Science Foundation Grant Nos. 1115871 and 1620023",
+      "aliases": [],
       "sourceRepo": "https://github.com/UMKC-BigDataLab/RIQ",
       "licenses": [
         "proprietary license"
@@ -4906,6 +5317,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rmlmapper/",
       "description": "Java engine that executes RML mappings to generate RDF from heterogeneous data sources",
+      "aliases": [
+        "RMLMapper Java",
+        "RMLMapper-Java"
+      ],
       "homepage": "https://rml.io/implementation-report/",
       "sourceRepo": "https://github.com/RMLio/rmlmapper-java",
       "licenses": [
@@ -4926,6 +5341,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rmlstreamer/",
       "description": "streaming RML materialization engine",
+      "aliases": [
+        "RML Streamer"
+      ],
       "homepage": "https://rml.io/tools/",
       "sourceRepo": "https://github.com/RMLio/RMLStreamer",
       "licenses": [
@@ -4943,6 +5361,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/robot-is-an-obo-tool/",
       "description": "high-level tool for working with OBO ontologies",
+      "aliases": [
+        "ROBOT"
+      ],
       "homepage": "https://robot.obolibrary.org/",
       "sourceRepo": "https://github.com/ontodev/robot",
       "licenses": [
@@ -4969,6 +5390,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rocketrml/",
       "description": "JavaScript engine for generating RDF by executing RML mappings",
+      "aliases": [
+        "Rocket RML"
+      ],
       "sourceRepo": "https://github.com/semantifyit/RocketRML",
       "licenses": [
         "Creative Commons Attribution-ShareAlike 4.0 International"
@@ -4988,6 +5412,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rsp4j/",
       "description": "RSP4J a library for RDF Stream Processing",
+      "aliases": [],
       "sourceRepo": "https://github.com/streamreasoning/rsp4j",
       "licenses": [
         "Apache Software License 2.0"
@@ -5007,6 +5432,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/safe/",
       "description": "SAFE: SPARQL Federation over RDF DataCubes with Access Control",
+      "aliases": [],
       "sourceRepo": "https://github.com/yasarkhangithub/SAFE",
       "licenses": [
         "GNU General Public License, version 2.0",
@@ -5026,6 +5452,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sage-sparql-query-engine/",
       "description": "preemptive SPARQL query engine for Web-scale RDF datasets",
+      "aliases": [
+        "SaGe",
+        "SaGe SPARQL query engine"
+      ],
       "homepage": "https://github.com/sage-org/sage-engine",
       "sourceRepo": "https://github.com/sage-org/sage-engine",
       "licenses": [
@@ -5043,6 +5473,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sampo-ui/",
       "description": "Sampo-UI is a framework for developing user interfaces for semantic portals to publish Linked Open Data.",
+      "aliases": [],
       "homepage": "https://seco.cs.aalto.fi/tools/sampo-ui/",
       "sourceRepo": "https://github.com/SemanticComputing/dbpedia-sampo-ui-demo",
       "licenses": [
@@ -5067,6 +5498,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sansa/",
       "description": "big data RDF processing and analytics stack built on Apache Spark and Apache Jena",
+      "aliases": [
+        "Semantic Analytics Stack"
+      ],
       "homepage": "http://sansa-stack.net/",
       "sourceRepo": "https://github.com/SANSA-Stack/SANSA-Stack",
       "creators": [
@@ -5094,6 +5528,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sdm-rdfizer/",
       "description": "RML-compliant engine for constructing RDF knowledge graphs from heterogeneous data",
+      "aliases": [
+        "SDM RDFizer"
+      ],
       "homepage": "https://doi.org/10.5281/zenodo.3872103",
       "sourceRepo": "https://github.com/SDM-TIB/SDM-RDFizer",
       "licenses": [
@@ -5114,6 +5551,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/semagrow/",
       "description": "SPARQL query federator of heterogeneous data sources",
+      "aliases": [],
       "homepage": "https://semagrow.github.io/",
       "sourceRepo": "https://github.com/semagrow/semagrow",
       "licenses": [
@@ -5134,6 +5572,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/semantic-ui/",
       "description": "XQuery and Java tools for working with semantic tuples stored in MarkLogic Server",
+      "aliases": [
+        "Semantic"
+      ],
       "homepage": "http://www.semantic-ui.com",
       "sourceRepo": "https://github.com/Semantic-Org/Semantic-UI",
       "licenses": [
@@ -5165,6 +5606,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/semantica/",
       "description": "Open-source framework for building knowledge graphs from unstructured data",
+      "aliases": [],
       "homepage": "https://hawksight-ai.github.io/semantica/",
       "sourceRepo": "https://github.com/semantica-agi/semantica",
       "licenses": [
@@ -5182,6 +5624,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sempala/",
       "description": "historical SPARQL query processor for Hadoop and Impala",
+      "aliases": [
+        "Sempala SPARQL"
+      ],
       "homepage": "https://github.com/aschaetzle/Sempala",
       "sourceRepo": "https://github.com/aschaetzle/Sempala",
       "licenses": [
@@ -5199,6 +5644,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/semspect/",
       "description": "commercial visual exploration and querying tool for RDF and knowledge graphs",
+      "aliases": [
+        "SemSpect RDF explorer"
+      ],
       "homepage": "https://www.semspect.de/",
       "softwareType": "Visualization"
     },
@@ -5210,6 +5658,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sentag/",
       "description": "Tesi triennale Alberto Zerbinati, Simone Mosco. Relatore prof. Andrea Loreggia. @unipd",
+      "aliases": [
+        "Tesi triennale Alberto Zerbinati, Simone Mosco. Relatore prof. Andrea Loreggia. @unipd"
+      ],
       "sourceRepo": "https://github.com/AlbertoZerbinati/sentag",
       "licenses": [
         "MIT License"
@@ -5228,6 +5679,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sepa/",
       "description": "Get notifications about changes in your SPARQL endpoint.",
+      "aliases": [
+        "Get notifications about changes in your SPARQL endpoint."
+      ],
       "homepage": "https://vaimee.com",
       "sourceRepo": "https://github.com/vaimee/SEPA",
       "licenses": [
@@ -5248,6 +5702,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sequoia-reasoner/",
       "description": "a consequence-based OWL 2 DL ontology reasoner supporting the SROIQ subset",
+      "aliases": [],
       "homepage": "https://www.cs.ox.ac.uk/isg/tools/Sequoia/",
       "sourceRepo": "https://github.com/andrewdbate/Sequoia",
       "softwareType": "Reasoning & Inference"
@@ -5260,6 +5715,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-play/",
       "description": "Free online SHACL tool suite : RDF data validation, documentation generation, and more.",
+      "aliases": [],
       "homepage": "https://shacl-play.sparna.fr/play/",
       "sourceRepo": "https://github.com/sparna-git/shacl-play",
       "creators": [
@@ -5301,6 +5757,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-playground/",
       "description": "client-side web application for validating RDF data with SHACL",
+      "aliases": [
+        "Zazuko SHACL Playground"
+      ],
       "homepage": "https://shacl-playground.zazuko.com/",
       "sourceRepo": "https://github.com/zazuko/shacl-playground",
       "creators": [
@@ -5334,6 +5793,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/shacl-engine/",
       "description": "JavaScript SHACL validation engine for RDF/JS data",
+      "aliases": [
+        "RDF/JS SHACL engine"
+      ],
       "homepage": "https://www.npmjs.com/package/shacl-engine",
       "sourceRepo": "https://github.com/rdf-ext/shacl-engine",
       "creators": [
@@ -5361,6 +5823,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/shactor/",
       "description": "SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes",
+      "aliases": [],
       "homepage": "https://relweb.cs.aau.dk/qse/shactor/",
       "sourceRepo": "https://github.com/dkw-aau/demo-shactor",
       "licenses": [
@@ -5380,6 +5843,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/skos-play/",
       "description": "SKOS Play! is a free application to render and visualise thesaurus, taxonomies or controlled vocabularies expressed in SKOS. SKOS Play! also provides a way to convert Excel spreadsheets to SKOS files.",
+      "aliases": [],
       "homepage": "https://skos-play.sparna.fr/play/",
       "sourceRepo": "https://github.com/sparna-git/skos-play",
       "creators": [
@@ -5421,6 +5885,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/smassif-rml/",
       "description": "Semantic Web stream processing solution with declarative data mapping capability based on a modified version of the RMLMapper-java tool and extensions to the StreamingMASSIF framework",
+      "aliases": [],
       "homepage": "https://github.com/Orange-OpenSource/SMASSIF-RML",
       "sourceRepo": "https://github.com/Orange-OpenSource/SMASSIF-RML",
       "creators": [
@@ -5471,6 +5936,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/snap-sparql-query/",
       "description": "API for parsing SPARQL queries",
+      "aliases": [],
       "sourceRepo": "https://github.com/protegeproject/snap-sparql-query",
       "licenses": [
         "GNU Lesser General Public License, version 3.0"
@@ -5488,6 +5954,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/snorql/",
       "description": "a ajaxy front-end for exploring triple stores",
+      "aliases": [],
       "sourceRepo": "https://github.com/kurtjx/SNORQL",
       "licenses": [
         "Apache Software License 2.0"
@@ -5505,6 +5972,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sones-graphdb/",
       "description": "former graph database system by German company sones GmbH",
+      "aliases": [],
       "licenses": [
         "end-user license agreement",
         "GNU Affero General Public License"
@@ -5522,6 +5990,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sophia-rdf-toolkit/",
       "description": "Rust toolkit for RDF and Linked Data",
+      "aliases": [
+        "Sophia",
+        "Sophia RDF toolkit"
+      ],
       "homepage": "https://pchampin.github.io/sophia_rs/",
       "sourceRepo": "https://github.com/pchampin/sophia_rs",
       "licenses": [
@@ -5539,6 +6011,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/souslesens/",
       "description": "open-source suite for managing SKOS vocabularies, OWL ontologies, and RDF thesauri",
+      "aliases": [
+        "Sous Le Sens",
+        "SousLeSens Vocables"
+      ],
       "homepage": "https://github.com/souslesens/souslesensVocables",
       "sourceRepo": "https://github.com/souslesens/souslesensVocables",
       "licenses": [
@@ -5556,6 +6032,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/spanqit/",
       "description": "Java-based SPARQL query generator",
+      "aliases": [],
       "sourceRepo": "https://github.com/anqit/spanqit",
       "licenses": [
         "Apache Software License 2.0"
@@ -5575,6 +6052,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparklis/",
       "description": "natural-language SPARQL query builder software",
+      "aliases": [],
       "sourceRepo": "https://github.com/sebferre/sparklis",
       "licenses": [
         "Apache Software License 2.0"
@@ -5592,6 +6070,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparksee/",
       "description": "graph database system",
+      "aliases": [
+        "DEX"
+      ],
       "homepage": "http://www.sparsity-technologies.com/#sparksee",
       "softwareType": "Graph Database"
     },
@@ -5603,6 +6084,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparnatural/",
       "description": "visual knowledge graph explorer with SPARQL, in the browser, configurable with SHACL",
+      "aliases": [],
       "homepage": "https://sparnatural.eu/",
       "sourceRepo": "https://github.com/sparna-git/Sparnatural",
       "creators": [
@@ -5644,6 +6126,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-anything/",
       "description": "SPARQL Anything is a system for Semantic Web re-engineering that allows users to ... query anything with SPARQL.",
+      "aliases": [],
       "homepage": "https://sparql-anything.cc/",
       "sourceRepo": "https://github.com/SPARQL-Anything/sparql.anything",
       "licenses": [
@@ -5677,6 +6160,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-parser/",
+      "aliases": [],
       "sourceRepo": "https://github.com/tenforce/SPARQL-parser",
       "licenses": [
         "MIT License"
@@ -5694,6 +6178,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-transformer/",
       "description": "more handy way to use SPARQL data in your web app",
+      "aliases": [],
       "homepage": "https://d2klab.github.io/sparql-transformer/",
       "sourceRepo": "https://github.com/D2KLab/sparql-transformer",
       "licenses": [
@@ -5712,6 +6197,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-cli/",
       "description": "command line API for SPARQL",
+      "aliases": [],
       "sourceRepo": "https://github.com/lambdamusic/Sparql-cli",
       "licenses": [
         "GNU General Public License, version 3.0"
@@ -5729,6 +6215,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-proxy/",
       "description": "Simple SPARQL Endpoint Proxy Servlet",
+      "aliases": [],
       "sourceRepo": "https://github.com/clarkparsia/sparql-proxy",
       "licenses": [
         "Unlicense"
@@ -5746,6 +6233,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql-js/",
       "description": "JavaScript parser and generator for the SPARQL query language",
+      "aliases": [
+        "SPARQL JS"
+      ],
       "homepage": "https://github.com/RubenVerborgh/SPARQL.js",
       "sourceRepo": "https://github.com/RubenVerborgh/SPARQL.js",
       "latestVersion": "3.7.3",
@@ -5760,6 +6250,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql2git/",
       "description": "Easily store and curate SPARQL queries (and their associated Linked Data APIs) in GitHub",
+      "aliases": [],
       "homepage": "https://www.albertmeronyo.org/wp-content/uploads/2017/04/sparql2git-transparent-sparql-4.pdf",
       "sourceRepo": "https://github.com/albertmeronyo/SPARQL2Git",
       "creators": [
@@ -5785,6 +6276,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparql2nl/",
       "description": "converts SPARQL queries to natural language expressions",
+      "aliases": [],
       "sourceRepo": "https://github.com/AKSW/SPARQL2NL",
       "licenses": [
         "proprietary license"
@@ -5802,6 +6294,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlanalytics/",
       "description": "Java based middleware/proxy framework for live analysis of SPARQL queries. Publish live SPARQL endpoint metrics using embeddable HTML/JavaScript widgets.",
+      "aliases": [],
       "sourceRepo": "https://github.com/AKSW/SparqlAnalytics",
       "licenses": [
         "proprietary license"
@@ -5819,6 +6312,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlblocks/",
       "description": "Using Blockly library for building SPARQL queries with blocks.",
+      "aliases": [],
       "sourceRepo": "https://github.com/miguel76/SparqlBlocks",
       "licenses": [
         "MIT License"
@@ -5836,6 +6330,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqled/",
       "description": "Assisted SPARQL Editor",
+      "aliases": [],
       "sourceRepo": "https://github.com/sindice/sparqled",
       "licenses": [
         "GNU Affero General Public License, version 3.0",
@@ -5854,6 +6349,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlexplorer/",
       "description": "Browse the content of a SPARQL endpoint using hypertext links and without writing queries.",
+      "aliases": [],
       "sourceRepo": "https://forge.extranet.logilab.fr/open-source/SemWeb/sparqlexplorer",
       "licenses": [
         "GNU Lesser General Public License"
@@ -5871,6 +6367,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlfederator/",
       "description": "Expand SPARQL queries to perform inference on multiple endpoints and relational databases.",
+      "aliases": [
+        "Expand SPARQL queries to perform inference on multiple endpoints and relational databases."
+      ],
       "sourceRepo": "https://github.com/djogopatrao/SPARQLFederator",
       "licenses": [
         "proprietary license"
@@ -5888,6 +6387,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqllab/",
       "description": "Lab for exercising SPARQL",
+      "aliases": [],
       "sourceRepo": "https://github.com/KIZI/sparqlab",
       "licenses": [
         "Eclipse Public License 1.0"
@@ -5905,6 +6405,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sparqlprog/",
       "description": "logic programming with SPARQL",
+      "aliases": [],
       "homepage": "https://www.swi-prolog.org/pack/list?p=sparqlprog",
       "sourceRepo": "https://github.com/cmungall/sparqlprog",
       "licenses": [
@@ -5925,6 +6426,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/spread2rml-software/",
       "description": "tool for predicting RML mappings from messy spreadsheets",
+      "aliases": [
+        "Spread2RML"
+      ],
       "homepage": "https://www.dfki.uni-kl.de/~mschroeder/demo/spread2rml/",
       "sourceRepo": "https://www.dfki.uni-kl.de/~mschroeder/demo/spread2rml/",
       "softwareType": "RDF Data Mapping / ETL"
@@ -5937,6 +6441,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/sq-sparql-cli/",
       "description": "small Rust command-line client for querying SPARQL endpoints, designed for both interactive use and direct invocation by AI agents",
+      "aliases": [],
       "sourceRepo": "https://github.com/ktk/sq",
       "licenses": [
         "Apache Software License 2.0"
@@ -5954,6 +6459,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/squebi/",
       "description": "Squebi provides an extendable SPARQL interface.",
+      "aliases": [],
       "sourceRepo": "https://github.com/tkurz/squebi",
       "licenses": [
         "Apache Software License 2.0"
@@ -5971,6 +6477,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ssb-consum-up/",
       "description": "A \"Kafka to SPARQL gateway\" standalone piece of software enabling end-to-end Semantic Web data flow architecture with a Semantic Service Bus (SSB) approach.",
+      "aliases": [],
       "homepage": "https://github.com/Orange-OpenSource/ssb-consum-up",
       "sourceRepo": "https://github.com/Orange-OpenSource/ssb-consum-up",
       "creators": [
@@ -6021,6 +6528,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/stardog/",
       "description": "Stardog is a commercial RDF database engine with support for SPARQL querying and OWL reasoning",
+      "aliases": [],
       "homepage": "https://www.stardog.com",
       "licenses": [
         "proprietary license"
@@ -6035,6 +6543,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/strabon/",
       "description": "semantic geospatial database system",
+      "aliases": [],
       "homepage": "https://strabon.di.uoa.gr/",
       "sourceRepo": "https://github.com/AI-team-UoA/Strabon",
       "licenses": [
@@ -6053,6 +6562,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/streaming-sparql/",
       "description": "Cross-server SPARQL query library with support for incremental, streaming result processing.",
+      "aliases": [
+        "Cross-server SPARQL query library with support for incremental, streaming result processing."
+      ],
       "sourceRepo": "https://github.com/weblyzard/streaming-sparql",
       "licenses": [
         "Apache Software License 2.0"
@@ -6072,6 +6584,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/streamingmassif/",
       "description": "Cascading Stream Reasoning with Streaming MASSIF",
+      "aliases": [],
       "sourceRepo": "https://github.com/IBCNServices/StreamingMASSIF",
       "creators": [
         {
@@ -6096,6 +6609,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/surrealdb/",
       "description": "multi-modal database system written in Rust",
+      "aliases": [],
       "homepage": "https://surrealdb.com",
       "sourceRepo": "https://github.com/surrealdb/surrealdb",
       "licenses": [
@@ -6139,6 +6653,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/table-annotation/",
       "description": "TableAnnotation is a semantic annotation tool for tables leveraging three steps: table preprocessing, entity lookup and annotation (Cell-Entity Annotation, Column-Type Annotation, Column-Pair Annotation)",
+      "aliases": [
+        "DAGOBAH"
+      ],
       "sourceRepo": "https://github.com/Orange-OpenSource/Table-Annotation",
       "creators": [
         {
@@ -6177,6 +6694,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/tentris/",
       "description": "RDF graph database and SPARQL engine using a compressed Hypertrie index",
+      "aliases": [
+        "Tentris RDF store"
+      ],
       "homepage": "https://tentris.io/",
       "sourceRepo": "https://github.com/dice-group/tentris-research-project",
       "licenses": [
@@ -6194,6 +6714,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/terminusdb/",
       "description": "open-source document graph database with Git-like version control for collaborative data management",
+      "aliases": [],
       "homepage": "https://terminusdb.org",
       "sourceRepo": "https://github.com/terminusdb/terminusdb",
       "licenses": [
@@ -6214,6 +6735,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/timbr/",
       "description": "Commercial ontology-based semantic layer that virtualizes and unifies enterprise data sources into a queryable knowledge graph",
+      "aliases": [],
       "homepage": "https://timbr.ai/",
       "licenses": [
         "proprietary license"
@@ -6228,6 +6750,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/titan/",
       "description": "graph database system; optimized for storing and querying graph databases containing hundreds of billions of vertices and edges distributed across a multi-machine cluster",
+      "aliases": [],
       "homepage": "http://titan.thinkaurelius.com/",
       "sourceRepo": "https://github.com/thinkaurelius/titan",
       "licenses": [
@@ -6248,6 +6771,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/titanium-json-ld/",
       "description": "Java implementation of the JSON-LD 1.1 processing algorithm and API",
+      "aliases": [
+        "Titanium"
+      ],
       "homepage": "https://github.com/filip26/titanium-json-ld",
       "sourceRepo": "https://github.com/filip26/titanium-json-ld",
       "licenses": [
@@ -6265,6 +6791,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-composer/",
       "description": "editor for ontologies, especially SHACL",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -6278,6 +6805,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-edg/",
       "description": "enterprise data governance and knowledge graph management software platform",
+      "aliases": [
+        "TopBraid Enterprise Data Governance"
+      ],
       "homepage": "https://www.topquadrant.com/topbraid-edg/",
       "licenses": [
         "proprietary license"
@@ -6294,6 +6824,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-shacl-api/",
       "description": "Java API for SHACL validation and rules based on Apache Jena",
+      "aliases": [
+        "TopQuadrant SHACL API"
+      ],
       "homepage": "https://central.sonatype.com/artifact/org.topbraid/shacl",
       "sourceRepo": "https://github.com/TopQuadrant/shacl",
       "creators": [
@@ -6322,6 +6855,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/torchic-tab/",
       "description": "semantic table annotation tool that leverages Wikidata and language model architectures",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -6338,6 +6872,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/tq-data-foundation/",
       "description": "TopQuadrant data governance platform that builds an AI context layer from enterprise data using RDF, OWL, SPARQL, and SHACL knowledge graphs",
+      "aliases": [],
       "homepage": "https://www.topquadrant.com/tq-data-foundation/",
       "licenses": [
         "proprietary license"
@@ -6352,6 +6887,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/traqula/",
       "description": "modular framework for parsing, transforming, and generating SPARQL queries",
+      "aliases": [],
       "homepage": "https://comunica.github.io/traqula/",
       "sourceRepo": "https://github.com/comunica/traqula",
       "creators": [
@@ -6376,6 +6912,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/triplewave/",
       "description": "TripleWave is a framework to publish RDF streams on the Web.",
+      "aliases": [
+        "TripleWave is a framework to publish RDF streams on the Web."
+      ],
       "homepage": "https://streamreasoning.org/TripleWave/",
       "sourceRepo": "https://github.com/streamreasoning/TripleWave",
       "licenses": [
@@ -6396,6 +6935,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/triply/",
       "description": "Multimodel-Database",
+      "aliases": [
+        "Multimodel-Database"
+      ],
       "licenses": [
         "proprietary license"
       ],
@@ -6409,6 +6951,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/trustfuse/",
       "description": "Playground to experiment with knowledge fusion models in a knowledge graph construction context",
+      "aliases": [],
       "sourceRepo": "https://github.com/Orange-OpenSource/trustfuse",
       "creators": [
         {
@@ -6442,6 +6985,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/trustgraph/",
       "description": "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval",
+      "aliases": [],
       "homepage": "https://trustgraph.ai/",
       "sourceRepo": "https://github.com/trustgraph-ai/trustgraph",
       "licenses": [
@@ -6462,6 +7006,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/turingdb/",
       "description": "In-memory, columnar graph database engine for real-time analytics, with Cypher query support and git-style version control over graph data",
+      "aliases": [],
       "homepage": "https://useturingdb.com/",
       "sourceRepo": "https://github.com/turing-db/turingdb",
       "licenses": [
@@ -6482,6 +7027,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/turtle-editor-viewer/",
       "description": "browser-based editor and graph visualizer for RDF/Turtle data with SPARQL query support",
+      "aliases": [],
       "homepage": "https://semantechs.co.uk/turtle-editor-viewer-new/",
       "sourceRepo": "https://github.com/pwin/turtle-editor-viewer",
       "licenses": [
@@ -6500,6 +7046,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/typedb/",
       "description": "Grakn is an open-source, distributed knowledge graph database for knowledge-oriented systems",
+      "aliases": [],
       "homepage": "https://typedb.com/",
       "sourceRepo": "https://github.com/typedb/typedb",
       "licenses": [
@@ -6518,6 +7065,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/uniprot/",
       "description": "database of protein sequence and functional information",
+      "aliases": [
+        "UniProt Knowledge Base"
+      ],
       "homepage": "https://www.uniprot.org/",
       "partOf": "ELIXIR EMBL-EBI Node",
       "creators": [
@@ -6551,6 +7101,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/vedas/",
       "description": "software",
+      "aliases": [],
       "sourceRepo": "https://github.com/Remixman/Vedas",
       "licenses": [
         "proprietary license"
@@ -6568,6 +7119,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/",
       "description": "Virtuoso is a high-performance and scalable Multi-Model RDBMS, Data Integration Middleware, Linked Data Deployment, and HTTP Application Server Platform",
+      "aliases": [
+        "Virtuoso"
+      ],
       "homepage": "https://virtuoso.openlinksw.com/",
       "sourceRepo": "https://github.com/openlink/virtuoso-opensource",
       "creators": [
@@ -6610,6 +7164,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/visu/",
       "description": "Visual SPARQL query tool",
+      "aliases": [],
       "sourceRepo": "https://github.com/jiemakel/visu",
       "licenses": [
         "MIT License"
@@ -6627,6 +7182,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/visual-sparql-builder/",
       "description": "standalone visual interface for constructing SPARQL queries",
+      "aliases": [
+        "VSB"
+      ],
       "homepage": "https://leipert.github.io/vsb/",
       "softwareType": "SPARQL Tooling"
     },
@@ -6637,6 +7195,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/vizbrick/",
+      "aliases": [],
       "sourceRepo": "https://github.com/liza183/vizbrick",
       "licenses": [
         "proprietary license"
@@ -6654,6 +7213,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/vocbench/",
       "description": "Web-based, multilingual, collaborative platform for managing OWL ontologies, SKOS(/XL) thesauri, Ontolex-lemon lexicons, and RDF datasets",
+      "aliases": [],
       "homepage": "https://vocbench.uniroma2.it/",
       "sourceRepo": "https://bitbucket.org/art-uniroma2/vocbench3",
       "licenses": [
@@ -6671,6 +7231,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/vocprez/",
       "description": "software for publishing RDF vocabularies through human- and machine-readable web interfaces",
+      "aliases": [
+        "VocPrez vocabulary publisher"
+      ],
       "homepage": "https://github.com/RDFLib/VocPrez",
       "sourceRepo": "https://github.com/RDFLib/VocPrez",
       "latestVersion": "2.5.15",
@@ -6685,6 +7248,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/wallix-triplestore/",
       "description": "Nifty library to manage, query and store RDF triples. Make RDF great again!",
+      "aliases": [
+        "Nifty library to manage, query and store RDF triples. Make RDF great again!"
+      ],
       "sourceRepo": "https://github.com/wallix/triplestore",
       "licenses": [
         "Apache Software License 2.0"
@@ -6701,6 +7267,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/waves/",
+      "aliases": [],
       "licenses": [
         "proprietary license"
       ],
@@ -6714,6 +7281,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/web-algebra/",
       "description": "Python framework and MCP tools that translate natural language into a JSON DSL for RDF/SPARQL Linked Data operations",
+      "aliases": [],
       "homepage": "https://pypi.org/project/web-algebra/",
       "sourceRepo": "https://github.com/AtomGraph/Web-Algebra",
       "licenses": [
@@ -6734,6 +7302,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/webprotege/",
       "description": "collaborative web application for editing and sharing OWL ontologies",
+      "aliases": [],
       "homepage": "https://webprotege.stanford.edu/",
       "sourceRepo": "https://github.com/protegeproject/webprotege",
       "creators": [
@@ -6779,6 +7348,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/webvowl/",
       "description": "web tool for visualizing ontologies",
+      "aliases": [],
       "homepage": "https://service.tib.eu/webvowl/",
       "sourceRepo": "https://github.com/VisualDataWeb/WebVOWL",
       "licenses": [
@@ -6813,6 +7383,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/whelk-reasoner/",
       "description": "an OWL EL and OWL RL reasoner for ontology-intensive applications",
+      "aliases": [],
       "homepage": "https://github.com/INCATools/whelk",
       "sourceRepo": "https://github.com/INCATools/whelk",
       "licenses": [
@@ -6830,6 +7401,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/widoco/",
       "description": "Wizard for documenting ontologies. WIDOCO is a step by step generator of HTML templates with the documentation of your ontology. It uses the LODE environment to create part of the template.",
+      "aliases": [],
       "homepage": "https://dgarijo.github.io/Widoco/",
       "sourceRepo": "https://github.com/dgarijo/Widoco",
       "licenses": [
@@ -6851,6 +7423,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/wikibase/",
       "description": "collection of software (applications and libraries) for creating, managing and sharing structured data",
+      "aliases": [
+        "Help:Wikibase"
+      ],
       "homepage": "https://wikiba.se/",
       "sourceRepo": "https://gerrit.wikimedia.org/g/mediawiki/extensions/Wikibase",
       "creators": [
@@ -6883,6 +7458,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/wistor/",
       "description": "commercial no-code platform for building applications and APIs on RDF, OWL, SHACL, and SPARQL data",
+      "aliases": [
+        "Wistor Linked Data platform"
+      ],
       "homepage": "https://wistor.nl/",
       "softwareType": "Developer Library"
     },
@@ -6894,6 +7472,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/yarrrml-parser/",
       "description": "JavaScript library and command-line tool for converting YARRRML mappings to RML",
+      "aliases": [
+        "yarrrml-parser"
+      ],
       "homepage": "https://www.npmjs.com/package/@rmlio/yarrrml-parser",
       "sourceRepo": "https://github.com/RMLio/yarrrml-parser",
       "licenses": [
@@ -6914,6 +7495,11 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/yars2-rdf-store/",
       "description": "distributed Java RDF store for querying graph-structured data",
+      "aliases": [
+        "YARS 2",
+        "YARS2",
+        "Yet Another RDF Store 2"
+      ],
       "homepage": "https://doi.org/10.1016/j.websem.2008.06.001",
       "sourceRepo": "https://sw.deri.org/2004/06/yars/",
       "softwareType": "Graph Database"
@@ -6926,6 +7512,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui/",
       "description": "Yet Another Sparql GUI",
+      "aliases": [],
       "homepage": "https://yasgui.triply.cc/",
       "sourceRepo": "https://github.com/rdfjs/Yasgui",
       "creators": [
@@ -6981,6 +7568,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/yasgui-matdata/",
       "description": "SPARQL query interface maintained by Matdata; fork of Triply's Yasgui",
+      "aliases": [
+        "Yasgui Matdata"
+      ],
       "homepage": "https://yasgui.matdata.eu/",
       "sourceRepo": "https://github.com/Matdata-eu/yasgui",
       "partOf": "Yasgui",
@@ -7005,6 +7595,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/zazuko-trifid/",
       "description": "Linked Data server and web interface for publishing RDF from SPARQL endpoints",
+      "aliases": [
+        "Trifid",
+        "Trifid Linked Data server"
+      ],
       "homepage": "https://zazuko.com/products/trifid/",
       "sourceRepo": "https://github.com/zazuko/trifid",
       "creators": [
@@ -7042,6 +7636,10 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/zep/",
       "description": "managed temporal knowledge graph and persistent memory service for artificial intelligence agents",
+      "aliases": [
+        "Zep AI memory",
+        "Zep agent memory"
+      ],
       "homepage": "https://www.getzep.com/",
       "softwareType": "AI Agent Tooling",
       "relatedTools": [

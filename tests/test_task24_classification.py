@@ -207,6 +207,7 @@ class EligibilityRuleTests(unittest.TestCase):
                 "http://www.wikidata.org/entity/Q3": "Child term",
             },
             {},
+            {},
             {"Q100": semantic_config.OKG.ControlledVocabulary},
         )
         self.assertEqual(
