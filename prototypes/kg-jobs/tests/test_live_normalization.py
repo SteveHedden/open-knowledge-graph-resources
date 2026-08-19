@@ -14,6 +14,8 @@ from live_records import classify_records, deduplicate  # noqa: E402
 from live_sources import LivePipelineError, load_source_registry  # noqa: E402
 from remotive_adapter import records_from_payload  # noqa: E402
 from jooble_adapter import job_age_days, records_from_payload as jooble_records  # noqa: E402
+from adzuna_adapter import records_from_payload as adzuna_records  # noqa: E402
+from live_sources import ADZUNA_PAGE_SIZE  # noqa: E402
 
 import pytest
 
@@ -279,3 +281,83 @@ def test_jooble_filters_postings_older_than_the_registry_cutoff():
     records, fetched, complete = jooble_records(payload, source, NOW, "ontology")
     assert fetched == 2  # both counted as fetched -- filtering is not a fetch failure
     assert [record["title"] for record in records] == ["Fresh Ontology Engineer"]
+
+
+def _adzuna_job(**overrides):
+    job = {
+        "id": "50001",
+        "title": "Ontology Engineer",
+        "company": {"display_name": "Northstar Research"},
+        "description": "Design production ontologies and build knowledge graphs.",
+        "redirect_url": "https://www.adzuna.com/land/ad/50001?se=abc123",
+        "location": {"display_name": "Austin, TX"},
+        "created": "2026-08-15T09:00:00Z",
+        "salary_min": 120000,
+        "salary_max": 150000,
+        "contract_type": "permanent",
+        "contract_time": "full_time",
+        "category": {"label": "IT Jobs", "tag": "it-jobs"},
+    }
+    job.update(overrides)
+    return job
+
+
+def test_adzuna_normalizes_a_search_result_with_off_host_redirect_and_salary():
+    source = load_source_registry(ROOT / "sources.ttl")["adzuna"]
+    payload = {"count": 1, "results": [_adzuna_job()]}
+    records, fetched, complete = adzuna_records(payload, source, NOW, "ontology")
+    assert fetched == 1
+    assert complete is True
+    first = records[0]
+    assert first["id"] == "adzuna-50001"
+    assert first["sourceRecordId"] == "50001"
+    # canonicalize_url strips the "se" tracking parameter (not a utm_/ref
+    # param) -- confirms it is NOT restricted to source.allowed_host
+    # (api.adzuna.com), since redirect_url is on a different adzuna.com
+    # subdomain than the registered API endpoint.
+    assert first["canonicalUrl"] == "https://www.adzuna.com/land/ad/50001?se=abc123"
+    assert first["hiringOrganization"] == "Northstar Research"
+    assert first["location"] == "Austin, TX"
+    assert first["datePosted"] == "2026-08-15"
+    assert first["employmentType"] == "Permanent, Full Time"
+    assert first["tags"] == ["IT Jobs"]
+    assert first["salary"] == "USD 120,000–150,000"
+    assert first["baseSalary"] == {
+        "currency": "USD",
+        "minValue": 120000,
+        "maxValue": 150000,
+    }
+    assert first["sourceName"] == "Adzuna"
+    assert first["sourceAttributionUrl"] == "https://www.adzuna.co.uk/"
+
+
+def test_adzuna_rejects_malformed_payload_and_record():
+    source = load_source_registry(ROOT / "sources.ttl")["adzuna"]
+    with pytest.raises(LivePipelineError, match="results array"):
+        adzuna_records({"count": 0}, source, NOW, "ontology")
+    with pytest.raises(LivePipelineError, match="count metadata"):
+        adzuna_records({"results": []}, source, NOW, "ontology")
+    with pytest.raises(LivePipelineError, match="failed normalization"):
+        adzuna_records(
+            {"count": 1, "results": [{"title": "Missing everything else"}]},
+            source,
+            NOW,
+            "ontology",
+        )
+
+
+def test_adzuna_completeness_uses_the_fixed_page_size():
+    source = load_source_registry(ROOT / "sources.ttl")["adzuna"]
+    full_page = [_adzuna_job(id=str(index)) for index in range(ADZUNA_PAGE_SIZE)]
+    records, fetched, complete = adzuna_records(
+        {"count": 500, "results": full_page}, source, NOW, "ontology"
+    )
+    assert fetched == ADZUNA_PAGE_SIZE
+    assert complete is False
+
+    short_page = full_page[:5]
+    records, fetched, complete = adzuna_records(
+        {"count": 5, "results": short_page}, source, NOW, "ontology"
+    )
+    assert fetched == 5
+    assert complete is True

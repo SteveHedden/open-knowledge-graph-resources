@@ -50,6 +50,7 @@ from remotive_adapter import records_from_payload as remotive_records  # noqa: E
 from himalayas_adapter import records_from_payload as himalayas_records  # noqa: E402
 from jobicy_adapter import records_from_payload as jobicy_records  # noqa: E402
 from jooble_adapter import records_from_payload as jooble_records  # noqa: E402
+from adzuna_adapter import records_from_payload as adzuna_records  # noqa: E402
 
 SOURCES_PATH = ROOT / "sources.ttl"
 VOCAB_PATH = ROOT / "vocabularies" / "kg-jobs.ttl"
@@ -144,7 +145,7 @@ def run_pipeline(
             f"unknown or disabled source {source_key!r}; available: {', '.join(sorted(sources))}"
         )
     source = sources[source_key]
-    if source.adapter not in {"arbeitnow", "remotive", "himalayas", "jobicy", "jooble"}:
+    if source.adapter not in {"arbeitnow", "remotive", "himalayas", "jobicy", "jooble", "adzuna"}:
         raise LivePipelineError(f"unsupported reviewed source adapter: {source.adapter!r}")
     if not source.source_queries or any(not query for query in source.source_queries):
         raise LivePipelineError(f"source {source.key} has an empty registry query")
@@ -155,7 +156,7 @@ def run_pipeline(
     # search their own API with our reviewed vocabulary terms; local
     # classification below still remains the sole eligibility decision, as a
     # safety net against an unreliable or overly broad source-side filter.
-    is_multi_query = source.adapter in {"himalayas", "jobicy", "jooble"}
+    is_multi_query = source.adapter in {"himalayas", "jobicy", "jooble", "adzuna"}
 
     # Candidate retrieval is deliberately bounded; all KG eligibility
     # decisions below still come from the RDF vocabulary.
@@ -213,6 +214,21 @@ def run_pipeline(
                     "queryConcepts": list(query_family.concept_uris),
                     "returnedCount": page_count,
                     "totalCount": payload["totalCount"],
+                    "complete": page_complete,
+                }
+            )
+        elif source.adapter == "adzuna":
+            query_family = source.query_families[request_number - 1]
+            page_records, page_count, page_complete = adzuna_records(
+                payload, source, retrieved_at, query_family.text, limit=remaining
+            )
+            query_results.append(
+                {
+                    "queryUri": query_family.uri,
+                    "query": query_family.text,
+                    "queryConcepts": list(query_family.concept_uris),
+                    "returnedCount": page_count,
+                    "totalCount": payload["count"],
                     "complete": page_complete,
                 }
             )

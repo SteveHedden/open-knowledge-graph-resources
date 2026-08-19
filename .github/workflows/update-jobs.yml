@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: Refresh only this source; default refreshes all four
+        description: Refresh only this source; default refreshes all five
         required: false
         default: all
         type: choice
@@ -16,6 +16,7 @@ on:
           - jobicy
           - jooble
           - arbeitnow
+          - adzuna
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false
@@ -79,7 +80,7 @@ jobs:
           set +e
           requested="${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
           if [ "$requested" = "all" ]; then
-            sources=(himalayas jobicy jooble arbeitnow)
+            sources=(himalayas jobicy jooble arbeitnow adzuna)
           else
             sources=("$requested")
           fi
@@ -88,6 +89,8 @@ jobs:
             echo "::group::Refreshing $source"
             if [ "$source" = "jooble" ]; then
               JOOBLE_API_KEY="${{ secrets.JOOBLE_API_KEY }}" python scripts/live_pipeline.py --live --source jooble
+            elif [ "$source" = "adzuna" ]; then
+              ADZUNA_APP_ID="${{ secrets.ADZUNA_APP_ID }}" ADZUNA_APP_KEY="${{ secrets.ADZUNA_APP_KEY }}" python scripts/live_pipeline.py --live --source adzuna
             else
               python scripts/live_pipeline.py --live --source "$source"
             fi

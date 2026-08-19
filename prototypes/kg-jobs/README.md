@@ -218,7 +218,7 @@ the production OKG site.
 
 ## Pulling a live local snapshot
 
-Five sources are registered in `sources.ttl`, each independently refreshable
+Six sources are registered in `sources.ttl`, each independently refreshable
 with its own registry-declared query families, request cap, and refresh
 interval:
 
@@ -228,6 +228,7 @@ interval:
 | `jobicy` | 8 reviewed queries (`rdf`, `ontology`, `sparql`, `skos`, `shacl`, `linkml`, `semantic web`, `knowledge graph`), ≤20 results each | 1h | none |
 | `jooble` | Same 8 queries, ≤30 results each (their fixed page size) | 6h | `JOOBLE_API_KEY` env var |
 | `arbeitnow` | Broad, unfiltered feed pull; KG relevance decided entirely by local classification | 1h | none |
+| `adzuna` | Same 4 queries as Himalayas, ≤50 results each (their fixed page size), "us" country endpoint only | 6h | `ADZUNA_APP_ID` + `ADZUNA_APP_KEY` env vars |
 | `remotive` | Broad, unfiltered feed pull (their own `search` param was verified live to not filter at all) | 6h | none |
 
 Jobicy's own `tag` search was verified against the live API to be genuine for
@@ -263,10 +264,29 @@ export JOOBLE_API_KEY="your-key-here"
 Jooble is also the only source that requires a POST request with a JSON body
 (verified directly: an equivalent GET request returns nothing at all), so it
 is fetched through a dedicated code path in `scripts/live_sources.py` rather
-than the shared GET fetcher used by the other four sources.
+than the shared GET fetcher used by the other sources.
 
-Four of these five sources — Himalayas, Jobicy, Jooble, and Arbeitnow — are
-cleared under their own published terms for public, repeatedly-refreshed
+**Running `adzuna` requires a free `app_id`/`app_key` pair**, issued
+instantly on signup at <https://developer.adzuna.com/>. Like Jooble's key,
+these are never written to `sources.ttl` or any other file in this repo —
+export them as environment variables before running the pipeline:
+
+```bash
+export ADZUNA_APP_ID="your-app-id"
+export ADZUNA_APP_KEY="your-app-key"
+```
+
+Adzuna's terms of service require every page displaying its listings to show
+a "Jobs by Adzuna" attribution linked to adzuna.co.uk, unconditionally — not
+only when the canonical listing URL points off-host, unlike Arbeitnow's
+attribution rule. This happens to be satisfied automatically by the existing
+host-mismatch attribution logic in `site/app.js` without any source-specific
+code: Adzuna's `redirect_url` is always on `www.adzuna.com`, which never
+matches the registered `kgjobs:attributionURL` host (`www.adzuna.co.uk`), so
+the "Source: Adzuna" attribution link renders on every Adzuna posting.
+
+Five of these six sources — Himalayas, Jobicy, Jooble, Arbeitnow, and Adzuna
+— are cleared under their own published terms for public, repeatedly-refreshed
 display and are the ones the production schedule below actually runs.
 Remotive is **not** in production scope: it remains local-evaluation-only,
 run by hand with `--source remotive` exactly as before.
@@ -278,6 +298,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/live_pipeline.py --live               # himalayas (default)
 .venv/bin/python scripts/live_pipeline.py --live --source jobicy
 JOOBLE_API_KEY=... .venv/bin/python scripts/live_pipeline.py --live --source jooble
+ADZUNA_APP_ID=... ADZUNA_APP_KEY=... .venv/bin/python scripts/live_pipeline.py --live --source adzuna
 .venv/bin/python -m http.server 8008
 # open http://localhost:8008/site/
 ```
@@ -313,8 +334,8 @@ Generated local artifacts:
 
 `.github/workflows/update-jobs.yml` runs hourly and calls this same
 `scripts/live_pipeline.py --live --source <key>`, unmodified, once for each
-of the four production-cleared sources (Himalayas, Jobicy, Jooble,
-Arbeitnow). It is a separate, purpose-built workflow, not an extension of
+of the five production-cleared sources (Himalayas, Jobicy, Jooble,
+Arbeitnow, Adzuna). It is a separate, purpose-built workflow, not an extension of
 the main catalog's `update-data.yml` publication pipeline — that pipeline's
 Cloudflare/vectors/rollback sequence runs once a day for the Wikidata
 catalog, on a completely different cadence and failure model than an hourly
@@ -342,7 +363,8 @@ Because `enforce_refresh_interval` raises the dedicated
 `RefreshNotDueError` (a `LivePipelineError` subclass) rather than a generic
 one when a source's `minRefreshIntervalSeconds` has not elapsed yet, and
 `scripts/live_pipeline.py`'s `main()` exits `0` for that specific case, an
-hourly run legitimately "doing nothing" for Himalayas (24h) or Jooble (6h)
+hourly run legitimately "doing nothing" for Himalayas (24h) or Jooble/Adzuna
+(6h each)
 on most invocations is expected and is not a workflow failure. Only a
 genuine fetch or SHACL-validation failure exits non-zero — and because
 `publish_snapshot` only replaces `runtime/` atomically after validation
@@ -352,7 +374,9 @@ overwrite the last good committed snapshot with partial or missing data.
 
 Jooble's API key is provisioned as the `JOOBLE_API_KEY` GitHub Actions
 secret on the repository and is passed to that one step's environment only —
-never written to a file, logged, or committed.
+never written to a file, logged, or committed. Adzuna's `app_id`/`app_key`
+pair is provisioned the same way, as the `ADZUNA_APP_ID` and
+`ADZUNA_APP_KEY` secrets.
 
 A manual dispatch (Actions tab -> "Run workflow") accepts an optional
 `dry_run` input: when true, the pipeline still runs and its logs are still

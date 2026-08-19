@@ -27,6 +27,13 @@ USER_AGENT = "OKG-KG-Jobs/1.0 (+https://openknowledgegraphs.com/)"
 # Read only at request time, from the environment -- never stored in
 # sources.ttl, never logged, never included in any raised error message.
 JOOBLE_API_KEY_ENV = "JOOBLE_API_KEY"
+ADZUNA_APP_ID_ENV = "ADZUNA_APP_ID"
+ADZUNA_APP_KEY_ENV = "ADZUNA_APP_KEY"
+
+# Adzuna's results_per_page is capped at 50 by the API itself; build_feed_url
+# requests exactly this many per query family, so adzuna_adapter.py also
+# uses it as its only reliable per-page completeness signal.
+ADZUNA_PAGE_SIZE = 50
 
 
 class LivePipelineError(RuntimeError):
@@ -253,7 +260,7 @@ def load_source_registry(path: Path) -> dict[str, SourceConfig]:
                 graph.value(dataset, KGJOBS.maxPostingAgeDays), "maximum posting age in days"
             ),
         )
-        if config.adapter in {"himalayas", "jobicy", "jooble"}:
+        if config.adapter in {"himalayas", "jobicy", "jooble", "adzuna"}:
             if len(config.source_queries) != config.max_requests_per_run:
                 raise LivePipelineError(
                     f"{config.adapter} requires exactly one bounded request per declared query family"
@@ -322,6 +329,21 @@ def build_feed_url(source: SourceConfig, request_number: int = 1) -> str:
                 ("offset", "0"),
             )
         )
+    elif source.adapter == "adzuna":
+        if request_number > len(source.source_queries):
+            raise LivePipelineError(
+                f"Adzuna request {request_number} has no declared query family"
+            )
+        # app_id/app_key are never added here -- only fetch_json_http injects
+        # them, from the environment, at request time (see JOOBLE_API_KEY_ENV
+        # for the equivalent pattern).
+        params.extend(
+            (
+                ("what", source.source_queries[request_number - 1]),
+                ("results_per_page", str(ADZUNA_PAGE_SIZE)),
+                ("content-type", "application/json"),
+            )
+        )
     else:
         raise LivePipelineError(f"unsupported reviewed source adapter: {source.adapter!r}")
     return urlunparse(parsed._replace(query=urlencode(params), fragment=""))
@@ -348,6 +370,32 @@ def fetch_json_http(url: str, source: SourceConfig) -> dict:
             response = requests.post(
                 request_url,
                 json=json_body,
+                headers={"Accept": "application/json", "User-Agent": USER_AGENT},
+                timeout=source.timeout_seconds,
+                stream=True,
+                allow_redirects=False,
+            )
+        except requests.RequestException as exc:
+            raise LivePipelineError(
+                f"request to {source.key} failed: {type(exc).__name__}"
+            ) from None
+    elif source.adapter == "adzuna":
+        app_id = os.environ.get(ADZUNA_APP_ID_ENV, "").strip()
+        app_key = os.environ.get(ADZUNA_APP_KEY_ENV, "").strip()
+        if not app_id or not app_key:
+            raise LivePipelineError(
+                f"{ADZUNA_APP_ID_ENV} and {ADZUNA_APP_KEY_ENV} environment variables must "
+                "both be set; Adzuna requires an approved app_id/app_key pair "
+                "(see https://developer.adzuna.com/)"
+            )
+        # app_id/app_key live only in this local request -- like Jooble's
+        # key, they must never appear in a raised error message.
+        parsed_request = urlparse(url)
+        params = [("app_id", app_id), ("app_key", app_key), *parse_qsl(parsed_request.query, keep_blank_values=True)]
+        request_url = urlunparse(parsed_request._replace(query=urlencode(params)))
+        try:
+            response = requests.get(
+                request_url,
                 headers={"Accept": "application/json", "User-Agent": USER_AGENT},
                 timeout=source.timeout_seconds,
                 stream=True,
