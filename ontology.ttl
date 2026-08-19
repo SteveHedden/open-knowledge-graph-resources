@@ -128,6 +128,13 @@ okg:description a rdf:Property ;
     rdfs:label "description" ;
     rdfs:comment "Short human-readable description of a resource." .
 
+okg:alias a rdf:Property ;
+    rdfs:domain okg:Resource ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf skos:altLabel, schema:alternateName ;
+    rdfs:label "alias" ;
+    rdfs:comment "Alternate name or abbreviation for a resource, sourced from Wikidata skos:altLabel." .
+
 okg:category a rdf:Property ;
     rdfs:domain okg:Resource ;
     rdfs:range okg:Category ;

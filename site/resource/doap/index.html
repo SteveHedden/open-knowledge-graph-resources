@@ -21,6 +21,7 @@
   "description": "RDF/OWL schema for describing software projects",
   "url": "https://github.com/ewilderj/doap/wiki",
   "sameAs": "https://www.wikidata.org/wiki/Q5205836",
+  "alternateName": "Description of a Project",
   "license": "Apache License",
   "isPartOf": {
     "@type": "DataCatalog",
@@ -131,12 +132,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">DOAP</h1>
+      <p class="detail-field"><strong>Also known as:</strong> Description of a Project</p>
       <div class="detail-meta">
         <span class="detail-tag">Ontology</span>
         <a href="https://openknowledgegraphs.com/?category=technology-web" class="detail-category">Technology &amp; Web</a>
@@ -151,6 +166,10 @@
       <p class="detail-field"><strong>License:</strong> Apache License</p>
       
       
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=DOAP">See job postings mentioning DOAP &rarr;</a>
+      </div>
     </div>
   </body>
 </html>

@@ -21,6 +21,10 @@
   "description": "products and services taxonomy used by US Federal Government agencies",
   "url": "https://www.acquisition.gov/psc-manual",
   "sameAs": "https://www.wikidata.org/wiki/Q108458292",
+  "alternateName": [
+    "PSC",
+    "US PSC"
+  ],
   "isPartOf": {
     "@type": "DataCatalog",
     "name": "Open Knowledge Graphs",
@@ -141,12 +145,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">Product and Service Code</h1>
+      <p class="detail-field"><strong>Also known as:</strong> PSC, US PSC</p>
       <div class="detail-meta">
         <span class="detail-tag">ControlledVocabulary</span>
         <a href="https://openknowledgegraphs.com/?category=government-public-sector" class="detail-category">Government &amp; Public Sector</a>
@@ -161,6 +179,10 @@
       
       
       
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=PSC">See job postings mentioning Product and Service Code &rarr;</a>
+      </div>
     </div>
   </body>
 </html>

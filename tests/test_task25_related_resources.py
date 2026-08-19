@@ -862,6 +862,7 @@ class ProjectionAndDiagnosticsTests(unittest.TestCase):
             rows,
             labels,
             {},
+            {},
             {"Q324254": OKG.Ontology},
         )
         self.assertEqual(

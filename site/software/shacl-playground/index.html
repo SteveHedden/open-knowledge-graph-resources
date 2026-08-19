@@ -21,6 +21,7 @@
   "description": "client-side web application for validating RDF data with SHACL",
   "url": "https://shacl-playground.zazuko.com/",
   "sameAs": "https://www.wikidata.org/wiki/Q140676266",
+  "alternateName": "Zazuko SHACL Playground",
   "license": "GNU Affero General Public License, version 3.0 or later",
   "isPartOf": {
     "@type": "DataCatalog",
@@ -147,12 +148,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">SHACL Playground</h1>
+      <p class="detail-field"><strong>Also known as:</strong> Zazuko SHACL Playground</p>
       <div class="detail-meta">
         <span class="detail-tag">Software</span>
         
@@ -172,6 +187,10 @@
         <div class="detail-related-links">
           <a href="https://openknowledgegraphs.com/software/yasgui/">Yasgui</a>
         </div>
+      </div>
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=SHACL%20Playground">See job postings mentioning SHACL Playground &rarr;</a>
       </div>
     </div>
   </body>

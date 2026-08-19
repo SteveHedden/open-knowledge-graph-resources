@@ -21,6 +21,11 @@
   "description": "online Serbian geological terminology dictionary",
   "url": "https://geoliss.mre.gov.rs/recnik/",
   "sameAs": "https://www.wikidata.org/wiki/Q111960726",
+  "alternateName": [
+    "Geological Terminology and Nomenclature",
+    "Geolo\u0161ka terminologija i nomenklatura",
+    "Geolo\u0161ki Informacioni Sistem Srbije - Geolo\u0161ka terminologija i nomenklatura"
+  ],
   "isPartOf": {
     "@type": "DataCatalog",
     "name": "Open Knowledge Graphs",
@@ -129,12 +134,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">GeolISSTerm</h1>
+      <p class="detail-field"><strong>Also known as:</strong> Geological Terminology and Nomenclature, Geološka terminologija i nomenklatura, Geološki Informacioni Sistem Srbije - Geološka terminologija i nomenklatura</p>
       <div class="detail-meta">
         <span class="detail-tag">ControlledVocabulary</span>
         <a href="https://openknowledgegraphs.com/?category=environment-agriculture" class="detail-category">Environment &amp; Agriculture</a>
@@ -149,6 +168,10 @@
       
       
       
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=GeolISSTerm">See job postings mentioning GeolISSTerm &rarr;</a>
+      </div>
     </div>
   </body>
 </html>

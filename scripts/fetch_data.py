@@ -225,6 +225,7 @@ class ResourceRecord:
     item_iri: str
     label: str
     description: str | None = None
+    aliases: set[str] = field(default_factory=set)
     category: URIRef | None = None
     software_type: URIRef | None = None
     types: set[URIRef] = field(default_factory=set)
@@ -646,13 +647,14 @@ def chunked(items: list[str], size: int) -> list[list[str]]:
 def fetch_entity_labels(
     session: requests.Session,
     entity_iris: set[str],
-) -> tuple[dict[str, str], dict[str, str]]:
+) -> tuple[dict[str, str], dict[str, str], dict[str, set[str]]]:
     if not entity_iris:
-        return {}, {}
+        return {}, {}, {}
 
     labels: dict[str, str] = {}
     descriptions: dict[str, str] = {}
     description_lang: dict[str, str] = {}
+    aliases: dict[str, set[str]] = {}
     sorted_entities = sorted(canonical_entity_iri(iri) for iri in entity_iris)
 
     for chunk in chunked(sorted_entities, LABEL_QUERY_BATCH_SIZE):
@@ -709,9 +711,28 @@ WHERE {{
                 descriptions[canonical] = description_text
                 description_lang[canonical] = lang
 
+        alias_query = f"""
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?entity ?altLabel
+WHERE {{
+  VALUES ?entity {{ {values} }}
+  ?entity skos:altLabel ?altLabel .
+  FILTER(LANG(?altLabel) = "en")
+}}
+"""
+        alias_rows = run_wdqs_query(session, alias_query, "entity alias query")
+        for row in alias_rows:
+            entity_iri = binding_value(row, "entity")
+            alt_label = binding_value(row, "altLabel")
+            if not entity_iri or not alt_label:
+                continue
+            canonical = canonical_entity_iri(entity_iri)
+            aliases.setdefault(canonical, set()).add(alt_label)
+
         time.sleep(QUERY_PAUSE_SECONDS)
 
-    return labels, descriptions
+    return labels, descriptions, aliases
 
 
 def fetch_human_creators(
@@ -824,6 +845,7 @@ def parse_ontology_rows(
     rows: list[dict],
     labels: dict[str, str],
     descriptions: dict[str, str],
+    aliases: dict[str, set[str]],
     qid_to_okg_class: dict[str, URIRef],
 ) -> tuple[dict[str, ResourceRecord], dict[str, str], dict[str, str]]:
     records: dict[str, ResourceRecord] = {}
@@ -839,6 +861,7 @@ def parse_ontology_rows(
         record = get_or_create_record(records, item_iri, label)
         if record.description is None:
             record.description = descriptions.get(item_iri)
+        record.aliases.update(aliases.get(item_iri, ()))
 
         type_qid = binding_value(row, "matchedTypeQid")
         if type_qid:
@@ -883,6 +906,7 @@ def parse_software_rows(
     rows: list[dict],
     labels: dict[str, str],
     descriptions: dict[str, str],
+    aliases: dict[str, set[str]],
 ) -> tuple[dict[str, ResourceRecord], dict[str, str], dict[str, str], dict[str, str]]:
     records: dict[str, ResourceRecord] = {}
     license_labels: dict[str, str] = {}
@@ -898,6 +922,7 @@ def parse_software_rows(
         record = get_or_create_record(records, item_iri, label)
         if record.description is None:
             record.description = descriptions.get(item_iri)
+        record.aliases.update(aliases.get(item_iri, ()))
         record.types.add(OKG.Software)
 
         homepage = binding_value(row, "officialWebsite")
@@ -1268,6 +1293,8 @@ def extract_items_from_graph(
         if description:
             item["description"] = description
 
+        item["aliases"] = all_literal_values(graph, subject, OKG.alias)
+
         category_iri = first_iri_value(graph, subject, OKG.category)
         if category_iri:
             category_label = first_literal_value(graph, URIRef(category_iri), RDFS.label)
@@ -1375,6 +1402,8 @@ def build_graph(
         graph.add((resource_iri, OKG.wikidataId, URIRef(wikidata_page_iri(record.item_iri))))
         if record.description:
             graph.add((resource_iri, OKG.description, Literal(record.description)))
+        for alias in sorted(record.aliases):
+            graph.add((resource_iri, OKG.alias, Literal(alias)))
         if record.category:
             if category_vocabulary is None or record.category not in category_vocabulary.by_iri:
                 raise ValueError(f"Unknown curated category for {record.item_iri}: {record.category}")
@@ -1612,7 +1641,7 @@ def run() -> int:
 
         time.sleep(QUERY_PAUSE_SECONDS)
         logging.info("Querying Wikidata for labels of %d referenced entities", len(label_entities))
-        labels, descriptions = fetch_entity_labels(session, label_entities)
+        labels, descriptions, entity_aliases = fetch_entity_labels(session, label_entities)
 
         creator_entities = set()
         creator_entities.update(collect_entity_iris(ontology_rows, "creator"))
@@ -1637,6 +1666,7 @@ def run() -> int:
         ontology_rows,
         labels,
         descriptions,
+        entity_aliases,
         source_mappings.class_target_map(ONTOLOGIES_DATASET),
     )
     (
@@ -1648,6 +1678,7 @@ def run() -> int:
         software_base_rows,
         labels,
         descriptions,
+        entity_aliases,
     )
     latest_versions = pick_latest_version_rows(software_version_rows)
     apply_declared_relationships(ontology_records, direct_iri_edges, source_mappings)

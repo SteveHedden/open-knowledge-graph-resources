@@ -21,6 +21,10 @@
   "description": "systematically organized computer processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting.",
   "url": "https://bioportal.bioontology.org/ontologies/SNOMEDCT",
   "sameAs": "https://www.wikidata.org/wiki/Q1753883",
+  "alternateName": [
+    "SNOMED",
+    "SNOMED Clinical Terms"
+  ],
   "isPartOf": {
     "@type": "DataCatalog",
     "name": "Open Knowledge Graphs",
@@ -136,12 +140,26 @@
       .detail-related-links a:hover {
         background: var(--highlight, #f6ca67);
       }
+      .detail-jobs-link {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--bg-muted, #f0f0f0);
+      }
+      .detail-jobs-link a {
+        color: var(--brand);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      .detail-jobs-link a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
     <div class="detail-page">
       <a href="https://openknowledgegraphs.com/" class="detail-back">&larr; Browse all resources</a>
       <h1 class="detail-title">SNOMED CT</h1>
+      <p class="detail-field"><strong>Also known as:</strong> SNOMED, SNOMED Clinical Terms</p>
       <div class="detail-meta">
         <span class="detail-tag">KnowledgeGraph</span>
         <a href="https://openknowledgegraphs.com/?category=life-sciences-healthcare" class="detail-category">Life Sciences &amp; Healthcare</a>
@@ -161,6 +179,10 @@
         <div class="detail-related-links">
           <a href="https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/">Diagnostic and Statistical Manual of Mental Disorders</a>
         </div>
+      </div>
+      
+      <div class="detail-jobs-link">
+        <a href="https://openknowledgegraphs.com/?tab=jobs&amp;q=SNOMED">See job postings mentioning SNOMED CT &rarr;</a>
       </div>
     </div>
   </body>

@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260819T033412Z-0220e798ac36",
-  "startedAt": "2026-08-19T03:28:52Z",
-  "sourceRetrievedAt": "2026-08-19T03:33:24Z",
-  "completedAt": "2026-08-19T03:34:12Z",
+  "generationId": "20260819T042102Z-5586ea7b0d72",
+  "startedAt": "2026-08-19T03:54:53Z",
+  "sourceRetrievedAt": "2026-08-19T04:05:25Z",
+  "completedAt": "2026-08-19T04:21:02Z",
   "counts": {
     "records": {
       "resources": 2999,
@@ -11,9 +11,9 @@
       "total": 3311
     },
     "triples": {
-      "ontologies": 29859,
-      "software": 4546,
-      "total": 34405
+      "ontologies": 31326,
+      "software": 4711,
+      "total": 36037
     }
   },
   "versions": {
@@ -38,11 +38,11 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "70a7b6f71507945728b63e297a705845898dcdf9e86562b496143782794e6d93"
+      "sha256": "000a7c19a9e5b6a43bba09874b474d182e790342de7643fee87c7425d29b2cd0"
     },
     {
       "path": "data/ontologies.ttl",
-      "sha256": "0972154b2c17fce3ea4f89880b6871fdfbdfa509ed4384e17bfa393fcba94d76"
+      "sha256": "549f2268fa0d324c061906e2924fa9f416d062db7f447e4559aab9331213a509"
     },
     {
       "path": "data/page_qids.json",
@@ -50,11 +50,11 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "86253b7336f910f03fa17c24e8620c2da9714601e981796785fda7dd5c8e0ea1"
+      "sha256": "195de85be887f714609457b7dda13b61f2b236e44ce36fcd6f5856aef777c7fd"
     },
     {
       "path": "data/software.ttl",
-      "sha256": "ef74c3cb670f2dab555a2599993f267c567130566acc837c7b2e45e63893909c"
+      "sha256": "9f33116b939fdb235526415633adeb6798c44775bb932920b338a77c4e07d764"
     },
     {
       "path": "data/software_types.json",
@@ -66,7 +66,7 @@
     },
     {
       "path": "ontology.ttl",
-      "sha256": "081cac937d9cc5d742409e9213664d0fad1146892c9f124f4715d56cb6025a4a"
+      "sha256": "1a4d06668d608051ed416921575c48f28f6b47337a6495a30961f7efca023d43"
     },
     {
       "path": "site/CNAME",
@@ -128,12 +128,12 @@
   "directoryTrees": [
     {
       "path": "site/resource",
-      "sha256": "1c432b36ed08be44324db2da66aeb332805e0fbaa2997ed0515b5b5b124f008c",
+      "sha256": "5c2a5e8caf2c4ac2ed2ce2143b7b054ab3e7d10756b8572f871a826e433dfbc8",
       "fileCount": 793
     },
     {
       "path": "site/software",
-      "sha256": "5002a0fe01fc84cdafa34392b2b1f70f6074c6ca1c3df4da6e6ca2b6c1257476",
+      "sha256": "f018932bb865472e36b2bc19c14170efd6649bf3482306d05c7cc9002111b082",
       "fileCount": 209
     }
   ]
