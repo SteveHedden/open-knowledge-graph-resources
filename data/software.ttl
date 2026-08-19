@@ -590,8 +590,9 @@
     okg:description "graph database management system implemented in C" ;
     okg:hasLicense okg:License_Server_Side_Public_License_Q58531884 ;
     okg:homepage <https://www.falkordb.com/> ;
-    okg:latestVersion "4.18.11" ;
+    okg:latestVersion "4.20.3" ;
     okg:programmingLanguage "C" ;
+    okg:releaseDate "2026-08-13"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/FalkorDB/FalkorDB> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
@@ -944,10 +945,10 @@
     okg:description "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_NoDerivs_4_0_International_Q36795408 ;
     okg:homepage <https://jesstalisman-ia.github.io/intentional-arrangement-skos/> ;
-    okg:latestVersion "0.3.0" ;
+    okg:latestVersion "0.6.0" ;
     okg:programmingLanguage "JavaScript",
         "Python" ;
-    okg:releaseDate "2026-08-15"^^xsd:date ;
+    okg:releaseDate "2026-08-18"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/jesstalisman-ia/intentional-arrangement-skos> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1088,9 +1089,9 @@
     rdfs:label "Kineo" ;
     okg:description "persistent RDF quadstore and SPARQL engine" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.0.108" ;
+    okg:latestVersion "0.0.109" ;
     okg:programmingLanguage "Swift" ;
-    okg:releaseDate "2024-11-17"^^xsd:date ;
+    okg:releaseDate "2026-08-18"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/kasei/kineo> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1211,9 +1212,9 @@
     okg:description "The low-code Knowledge Graph application platform. Apache license." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://atomgraph.github.io/LinkedDataHub/> ;
-    okg:latestVersion "5.8.0" ;
+    okg:latestVersion "5.9.0" ;
     okg:programmingLanguage "XSLT" ;
-    okg:releaseDate "2026-08-17"^^xsd:date ;
+    okg:releaseDate "2026-08-18"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/AtomGraph/LinkedDataHub> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1451,8 +1452,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.2.0" ;
-    okg:releaseDate "2026-08-05"^^xsd:date ;
+    okg:latestVersion "2.2.5" ;
+    okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1562,9 +1563,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.11.2" ;
+    okg:latestVersion "0.12.0" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-17"^^xsd:date ;
+    okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1589,9 +1590,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
-    okg:latestVersion "0.3.4" ;
+    okg:latestVersion "0.7.0" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-12"^^xsd:date ;
+    okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -2071,7 +2072,7 @@
         okg:License_GNU_General_Public_License_version_2_0_or_later_Q27016752,
         okg:License_GNU_Lesser_General_Public_License_version_2_1_or_later_Q27016757 ;
     okg:homepage <https://librdf.org/raptor/> ;
-    okg:latestVersion "2.0.16" ;
+    okg:latestVersion "2.2.0.16" ;
     okg:programmingLanguage "C" ;
     okg:releaseDate "2023-03-01"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
@@ -3079,9 +3080,9 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.8.14" ;
+    okg:latestVersion "2.8.15" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-11"^^xsd:date ;
+    okg:releaseDate "2026-08-18"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,

@@ -28389,7 +28389,8 @@
     okg:alias "Wikibase model" ;
     okg:category okg:TechnologyWeb ;
     okg:description "ontology data model" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1172480>,
+        <http://www.wikidata.org/entity/Q324254> ;
     okg:title "Wikidata data model" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q16354757> .
 
