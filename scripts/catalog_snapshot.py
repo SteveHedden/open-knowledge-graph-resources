@@ -670,8 +670,8 @@ def substantive_changes(candidate: Path, baseline: Path) -> list[str]:
     if not (baseline / MANIFEST_PATH).is_file():
         return [MANIFEST_PATH]
     # data/jobs/ has its own independent manifest/refresh cadence (see
-    # CORE_MANIFEST_EXCLUDED_PREFIX) and is never regenerated as part of a
-    # catalog generation, so it is excluded here too -- diffing it pulls in
+    # CORE_MANIFEST_EXCLUDED_PREFIX) and is excluded from the RDF-aware
+    # fingerprinting below -- diffing it that way pulls in
     # normalized_artifact_fingerprint's RDF isomorphism check on jobs.ttl,
     # which is pathologically slow (verified: hung 24+ minutes live, and
     # locally, on a graph with 937 blank nodes from ~450 job postings).
@@ -682,6 +682,21 @@ def substantive_changes(candidate: Path, baseline: Path) -> list[str]:
         if normalized_artifact_fingerprint(candidate, relative) != normalized_artifact_fingerprint(
             baseline, relative
         ):
+            changed.append(relative)
+    # data/jobs/ must still be able to trigger a full republish -- that is
+    # the only thing that copies it into the live Pages artifact (see
+    # build_pages_artifact) -- or it can only ever reach production by
+    # coincidentally riding along with an unrelated Wikidata change (this
+    # happened in practice: the second "Publish Catalog Generation" run
+    # after a Jooble-only refresh found nothing to publish and silently
+    # skipped, because data/jobs/ was invisible to this function entirely).
+    # A raw byte hash avoids the RDF isomorphism cost above while still
+    # correctly detecting that something changed.
+    candidate_jobs = set(jobs_deployed_files(candidate, include_manifest=False))
+    baseline_jobs = set(jobs_deployed_files(baseline, include_manifest=False))
+    changed.extend(sorted(candidate_jobs ^ baseline_jobs))
+    for relative in sorted(candidate_jobs & baseline_jobs):
+        if sha256_file(candidate / relative) != sha256_file(baseline / relative):
             changed.append(relative)
     return sorted(set(changed))
 
