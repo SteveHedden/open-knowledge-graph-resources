@@ -1,27 +1,31 @@
 {
-  "activeCount": 564,
+  "activeCount": 535,
   "classificationCounts": {
-    "not_match": 413,
-    "qualified": 151,
+    "not_match": 403,
+    "qualified": 132,
     "review": 0
   },
-  "completeSourceSnapshot": false,
-  "deduplicatedCount": 564,
-  "fetchedCount": 200,
+  "completeSourceSnapshot": true,
+  "deduplicatedCount": 535,
+  "fetchedCount": 143,
   "queries": [
-    "knowledge graph",
+    "rdf",
     "ontology",
+    "sparql",
+    "skos",
+    "shacl",
+    "linkml",
     "semantic web",
-    "SPARQL"
+    "knowledge graph"
   ],
-  "queryCount": 4,
+  "queryCount": 8,
   "queryFamilies": [
     {
-      "query": "knowledge graph",
+      "query": "rdf",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-knowledge-graph"
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-rdf"
     },
     {
       "query": "ontology",
@@ -29,79 +33,147 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-ontology"
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-ontology"
+    },
+    {
+      "query": "sparql",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-sparql"
+    },
+    {
+      "query": "skos",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-skos"
+    },
+    {
+      "query": "shacl",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-shacl"
+    },
+    {
+      "query": "linkml",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-linkml"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-linkml"
     },
     {
       "query": "semantic web",
       "queryConcepts": [
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-semantic-web"
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-semantic-web"
     },
     {
-      "query": "SPARQL",
+      "query": "knowledge graph",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-sparql"
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-knowledge-graph"
     }
   ],
   "queryResults": [
     {
-      "complete": false,
-      "query": "knowledge graph",
+      "complete": true,
+      "query": "rdf",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-knowledge-graph",
-      "returnedCount": 50,
-      "totalCount": 4402
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-rdf",
+      "returnedCount": 20,
+      "totalCount": 194
     },
     {
-      "complete": false,
+      "complete": true,
       "query": "ontology",
       "queryConcepts": [
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-ontology",
-      "returnedCount": 50,
-      "totalCount": 2685
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-ontology",
+      "returnedCount": 20,
+      "totalCount": 1133
     },
     {
-      "complete": false,
+      "complete": true,
+      "query": "sparql",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-sparql",
+      "returnedCount": 20,
+      "totalCount": 142
+    },
+    {
+      "complete": true,
+      "query": "skos",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-skos",
+      "returnedCount": 20,
+      "totalCount": 54
+    },
+    {
+      "complete": true,
+      "query": "shacl",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-shacl",
+      "returnedCount": 20,
+      "totalCount": 47
+    },
+    {
+      "complete": true,
+      "query": "linkml",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-linkml"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-linkml",
+      "returnedCount": 3,
+      "totalCount": 3
+    },
+    {
+      "complete": true,
       "query": "semantic web",
       "queryConcepts": [
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-semantic-web",
-      "returnedCount": 50,
-      "totalCount": 258
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-semantic-web",
+      "returnedCount": 20,
+      "totalCount": 685932
     },
     {
-      "complete": false,
-      "query": "SPARQL",
+      "complete": true,
+      "query": "knowledge graph",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
       ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-sparql",
-      "returnedCount": 50,
-      "totalCount": 413
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-knowledge-graph",
+      "returnedCount": 20,
+      "totalCount": 971475
     }
   ],
   "rejectedCount": 0,
-  "requestCount": 4,
-  "retrievedAt": "2026-08-19T08:42:54Z",
-  "runId": "20260819T084254Z-5522c9aac4cc",
-  "sourceAttributionUrl": "https://www.adzuna.co.uk/",
-  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna",
-  "sourceKey": "adzuna",
-  "sourceName": "Adzuna",
+  "requestCount": 8,
+  "retrievedAt": "2026-08-19T09:38:36Z",
+  "runId": "20260819T093836Z-58be661f97c7",
+  "sourceAttributionUrl": "https://jooble.org/",
+  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble",
+  "sourceKey": "jooble",
+  "sourceName": "Jooble",
   "sourceRefreshes": {
     "adzuna": "2026-08-19T08:42:54Z",
     "arbeitnow": "2026-08-19T08:42:50Z",
     "himalayas": "2026-08-18T20:14:44Z",
     "jobicy": "2026-08-19T08:42:44Z",
-    "jooble": "2026-08-19T02:58:20Z"
+    "jooble": "2026-08-19T09:38:36Z"
   }
 }
