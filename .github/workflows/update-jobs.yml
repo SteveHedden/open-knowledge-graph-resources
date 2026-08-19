@@ -46,10 +46,15 @@ jobs:
         with:
           python-version: "3.12"
           cache: "pip"
-          cache-dependency-path: prototypes/kg-jobs/requirements.txt
+          cache-dependency-path: |
+            prototypes/kg-jobs/requirements.txt
+            requirements.txt
 
       - name: Install kg-jobs prototype dependencies
         run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Install root catalog_snapshot.py dependencies
+        run: pip install -r ../../requirements.txt
 
       - name: Restore last committed snapshot into runtime/
         run: |
