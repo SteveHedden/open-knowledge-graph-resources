@@ -1,12 +1,12 @@
 {
-  "activeCount": 512,
+  "activeCount": 531,
   "classificationCounts": {
-    "not_match": 394,
+    "not_match": 413,
     "qualified": 118,
     "review": 0
   },
   "completeSourceSnapshot": false,
-  "deduplicatedCount": 512,
+  "deduplicatedCount": 531,
   "fetchedCount": 300,
   "queries": [
     "all active postings; KG relevance classified locally"
@@ -21,17 +21,17 @@
   ],
   "rejectedCount": 0,
   "requestCount": 2,
-  "retrievedAt": "2026-08-20T06:53:28Z",
-  "runId": "20260820T065328Z-99afecbe47e5",
+  "retrievedAt": "2026-08-20T08:43:54Z",
+  "runId": "20260820T084354Z-6673e81fc7c6",
   "sourceAttributionUrl": "https://www.arbeitnow.com/",
   "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
   "sourceKey": "arbeitnow",
   "sourceName": "Arbeitnow",
   "sourceRefreshes": {
     "adzuna": "2026-08-20T04:42:12Z",
-    "arbeitnow": "2026-08-20T06:53:28Z",
+    "arbeitnow": "2026-08-20T08:43:54Z",
     "himalayas": "2026-08-19T20:33:38Z",
-    "jobicy": "2026-08-20T06:53:18Z",
+    "jobicy": "2026-08-20T08:43:47Z",
     "jooble": "2026-08-20T05:35:35Z"
   }
 }
