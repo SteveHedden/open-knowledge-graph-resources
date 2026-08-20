@@ -1,107 +1,37 @@
 {
-  "activeCount": 531,
+  "activeCount": 521,
   "classificationCounts": {
-    "not_match": 412,
+    "not_match": 402,
     "qualified": 119,
     "review": 0
   },
   "completeSourceSnapshot": false,
-  "deduplicatedCount": 531,
-  "fetchedCount": 200,
+  "deduplicatedCount": 521,
+  "fetchedCount": 300,
   "queries": [
-    "knowledge graph",
-    "ontology",
-    "semantic web",
-    "SPARQL"
+    "all active postings; KG relevance classified locally"
   ],
-  "queryCount": 4,
+  "queryCount": 1,
   "queryFamilies": [
     {
-      "query": "knowledge graph",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-knowledge-graph"
-    },
-    {
-      "query": "ontology",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-ontology"
-    },
-    {
-      "query": "semantic web",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-semantic-web"
-    },
-    {
-      "query": "SPARQL",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-sparql"
-    }
-  ],
-  "queryResults": [
-    {
-      "complete": false,
-      "query": "knowledge graph",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-knowledge-graph",
-      "returnedCount": 50,
-      "totalCount": 4607
-    },
-    {
-      "complete": false,
-      "query": "ontology",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-ontology",
-      "returnedCount": 50,
-      "totalCount": 2676
-    },
-    {
-      "complete": false,
-      "query": "semantic web",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-semantic-web",
-      "returnedCount": 50,
-      "totalCount": 266
-    },
-    {
-      "complete": false,
-      "query": "SPARQL",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-sparql",
-      "returnedCount": 50,
-      "totalCount": 421
+      "query": "all active postings; KG relevance classified locally",
+      "queryConcepts": [],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow-query-all-active"
     }
   ],
   "rejectedCount": 0,
-  "requestCount": 4,
-  "retrievedAt": "2026-08-20T11:31:03Z",
-  "runId": "20260820T113103Z-7dda3be8fb13",
-  "sourceAttributionUrl": "https://www.adzuna.co.uk/",
-  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna",
-  "sourceKey": "adzuna",
-  "sourceName": "Adzuna",
+  "requestCount": 2,
+  "retrievedAt": "2026-08-20T12:57:15Z",
+  "runId": "20260820T125715Z-8df8d504f96d",
+  "sourceAttributionUrl": "https://www.arbeitnow.com/",
+  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
+  "sourceKey": "arbeitnow",
+  "sourceName": "Arbeitnow",
   "sourceRefreshes": {
     "adzuna": "2026-08-20T11:31:03Z",
-    "arbeitnow": "2026-08-20T10:35:46Z",
+    "arbeitnow": "2026-08-20T12:57:15Z",
     "himalayas": "2026-08-19T20:33:38Z",
-    "jobicy": "2026-08-20T10:35:39Z",
-    "jooble": "2026-08-20T05:35:35Z"
+    "jobicy": "2026-08-20T12:57:00Z",
+    "jooble": "2026-08-20T12:57:10Z"
   }
 }
