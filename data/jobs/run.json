@@ -1,8 +1,8 @@
 {
   "activeCount": 533,
   "classificationCounts": {
-    "not_match": 407,
-    "qualified": 126,
+    "not_match": 406,
+    "qualified": 127,
     "review": 0
   },
   "completeSourceSnapshot": false,
@@ -21,17 +21,17 @@
   ],
   "rejectedCount": 0,
   "requestCount": 2,
-  "retrievedAt": "2026-08-21T03:07:42Z",
-  "runId": "20260821T030742Z-3901dfc7774b",
+  "retrievedAt": "2026-08-21T04:43:04Z",
+  "runId": "20260821T044304Z-1c2504b11492",
   "sourceAttributionUrl": "https://www.arbeitnow.com/",
   "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
   "sourceKey": "arbeitnow",
   "sourceName": "Arbeitnow",
   "sourceRefreshes": {
     "adzuna": "2026-08-21T01:38:27Z",
-    "arbeitnow": "2026-08-21T03:07:42Z",
+    "arbeitnow": "2026-08-21T04:43:04Z",
     "himalayas": "2026-08-20T21:32:39Z",
-    "jobicy": "2026-08-21T03:07:34Z",
+    "jobicy": "2026-08-21T04:42:54Z",
     "jooble": "2026-08-21T01:38:17Z"
   }
 }
