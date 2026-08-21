@@ -8,7 +8,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf"
       ],
       "payload": {
-        "totalCount": 216,
+        "totalCount": 218,
         "jobs": [
           {
             "title": "Remote RDF & Semantic Data Engineer",
@@ -17,7 +17,7 @@
             "salary": "$65k - $90k",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/4700619057970714979?p=1&pos=1&rgn=-1&cid=18065&ckey=rdf&jobAge=73&relb=122&brelb=100&scr=6284.79828&bscr=5151.474&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/4700619057970714979?p=1&pos=1&rgn=-1&cid=18065&ckey=rdf&jobAge=79&relb=122&brelb=100&scr=6239.2634880000005&bscr=5114.1504&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "European Dynamics",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": 4700619057970714979
@@ -29,7 +29,7 @@
             "salary": "$14 per hour",
             "source": "jazzhr.com",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/578416831008348889?ckey=rdf&rgn=-1&pos=2&elckey=4964331563966117568&p=1&aq=-4879915212590199886&cid=18065&jobAge=169&relb=100&brelb=100&bscr=5972.2007&scr=5972.2007",
+            "link": "https://jooble.org/desc/578416831008348889?ckey=rdf&rgn=-1&pos=2&elckey=-3473411852339422789&p=1&aq=3167786162759083111&cid=18065&jobAge=175&relb=100&brelb=100&bscr=5967.6475&scr=5967.6475",
             "company": "A & Associates",
             "updated": "2026-08-14T00:00:00.0000000",
             "id": 578416831008348889
@@ -41,22 +41,10 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-5636669618126076856?ckey=rdf&rgn=-1&pos=3&elckey=4964331563966117568&p=1&aq=-4879915212590199886&cid=18065&jobAge=25&relb=175&brelb=115&bscr=1034.3375&scr=1573.9918478260872",
+            "link": "https://jooble.org/desc/-5636669618126076856?ckey=rdf&rgn=-1&pos=3&elckey=-3473411852339422789&p=1&aq=3167786162759083111&cid=18065&jobAge=7&relb=175&brelb=115&bscr=1008.6961&scr=1534.9723260869566",
             "company": "Intangible",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -5636669618126076856
-          },
-          {
-            "title": "Information Architect",
-            "location": "Chicago, IL",
-            "snippet": "&nbsp;...skills, API integration, automationPractical Snowflake and Databricks experience including Cortex AI and GenieWorking knowledge of OWL, <b>RDF,</b> SPARQL and enterprise ontology designExperience with at least one agentic AI frameworkGitHub Copilot or equivalent AI coding...&nbsp;",
-            "salary": "$137.4k - $240.4k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/77729852769319009?p=1&pos=4&rgn=-1&cid=18065&ckey=rdf&jobAge=121&relb=150&brelb=100&scr=1473.47799&bscr=982.31866&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "Northern Trust",
-            "updated": "2026-08-16T00:00:00.0000000",
-            "id": 77729852769319009
           },
           {
             "title": "Data scientist",
@@ -65,10 +53,22 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-1038838495015871156?p=1&pos=5&rgn=-1&cid=18065&ckey=rdf&jobAge=49&relb=150&brelb=100&scr=1469.13795&bscr=979.4253&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/-1038838495015871156?p=1&pos=4&rgn=-1&cid=18065&ckey=rdf&jobAge=55&relb=150&brelb=100&scr=1475.0484&bscr=983.3656&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "SRI Tech",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -1038838495015871156
+          },
+          {
+            "title": "Information Architect",
+            "location": "Chicago, IL",
+            "snippet": "&nbsp;...skills, API integration, automationPractical Snowflake and Databricks experience including Cortex AI and GenieWorking knowledge of OWL, <b>RDF,</b> SPARQL and enterprise ontology designExperience with at least one agentic AI frameworkGitHub Copilot or equivalent AI coding...&nbsp;",
+            "salary": "$137.4k - $240.4k",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/77729852769319009?p=1&pos=5&rgn=-1&cid=18065&ckey=rdf&jobAge=7&relb=150&brelb=100&scr=1468.658475&bscr=979.10565&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Northern Trust",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": 77729852769319009
           },
           {
             "title": "Engineering Manager, Tapestry",
@@ -77,34 +77,10 @@
             "salary": "$207k - $304k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3984073596078442450?p=1&pos=6&rgn=-1&cid=18065&ckey=rdf&jobAge=49&relb=150&brelb=100&scr=1460.7237900000002&bscr=973.81586&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/-3984073596078442450?p=1&pos=6&rgn=-1&cid=18065&ckey=rdf&jobAge=55&relb=150&brelb=100&scr=1453.838475&bscr=969.22565&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "X Company",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -3984073596078442450
-          },
-          {
-            "title": "Senior Full Stack Developer",
-            "location": "United States",
-            "snippet": "&nbsp;...implementing agentic AI workflows using frameworks such as LangChain, LangGraph, LlamaIndex, or BAML \r\n Graph Technologies: Experience with <b>RDF </b>graph databases, SPARQL, or Linked Data technologies. \r\n DevOps & Cloud: Deep comfort working with containerized environments (Docker...&nbsp;",
-            "salary": "$140k - $155k",
-            "source": "grabjobs.co",
-            "type": "Full-time",
-            "link": "https://jooble.org/desc/1492139279319711808?ckey=rdf&rgn=-1&pos=7&elckey=4964331563966117568&p=1&aq=-4879915212590199886&cid=18065&jobAge=25&relb=175&brelb=115&bscr=955.1501&scr=1453.4892826086955",
-            "company": "Enterprise Knowledge, Llc",
-            "updated": "2026-08-20T00:00:00.0000000",
-            "id": 1492139279319711808
-          },
-          {
-            "title": "Senior Knowledge Engineer",
-            "location": "Houston, TX",
-            "snippet": "&nbsp;...representation.Translate complex domain knowledge from subject matter experts into formal, machine-readable knowledge structures using <b>RDF,</b> OWL, SPARQL, or property graph models.Lead knowledge engineering discovery workshops and working sessions with client stakeholders...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/6861469901069050919?p=1&pos=8&rgn=-1&cid=18065&ckey=rdf&jobAge=25&relb=150&brelb=100&scr=1448.7323999999999&bscr=965.8216&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "Accenture",
-            "updated": "2026-08-20T00:00:00.0000000",
-            "id": 6861469901069050919
           },
           {
             "title": "Senior Integrations Engineer I",
@@ -113,10 +89,34 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/301964898089703809?p=1&pos=9&rgn=-1&cid=18065&ckey=rdf&jobAge=25&relb=150&brelb=100&scr=1446.24285&bscr=964.1619&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/301964898089703809?p=1&pos=7&rgn=-1&cid=18065&ckey=rdf&jobAge=31&relb=150&brelb=100&scr=1452.7254&bscr=968.4836&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "Kendra Scott",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 301964898089703809
+          },
+          {
+            "title": "Senior Knowledge Engineer",
+            "location": "Houston, TX",
+            "snippet": "&nbsp;...representation.Translate complex domain knowledge from subject matter experts into formal, machine-readable knowledge structures using <b>RDF,</b> OWL, SPARQL, or property graph models.Lead knowledge engineering discovery workshops and working sessions with client stakeholders...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/6861469901069050919?p=1&pos=8&rgn=-1&cid=18065&ckey=rdf&jobAge=31&relb=150&brelb=100&scr=1441.54239&bscr=961.02826&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Accenture",
+            "updated": "2026-08-20T00:00:00.0000000",
+            "id": 6861469901069050919
+          },
+          {
+            "title": "Senior Full Stack Developer",
+            "location": "United States",
+            "snippet": "&nbsp;...implementing agentic AI workflows using frameworks such as LangChain, LangGraph, LlamaIndex, or BAML \r\n Graph Technologies: Experience with <b>RDF </b>graph databases, SPARQL, or Linked Data technologies. \r\n DevOps & Cloud: Deep comfort working with containerized environments (Docker...&nbsp;",
+            "salary": "$140k - $155k",
+            "source": "grabjobs.co",
+            "type": "Full-time",
+            "link": "https://jooble.org/desc/1492139279319711808?ckey=rdf&rgn=-1&pos=9&elckey=-3473411852339422789&p=1&aq=3167786162759083111&cid=18065&jobAge=7&relb=175&brelb=115&bscr=930.89746&scr=1416.583091304348",
+            "company": "Enterprise Knowledge, Llc",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": 1492139279319711808
           },
           {
             "title": "Bioinformatics Engineer, QDI",
@@ -125,7 +125,7 @@
             "salary": "$130k - $150k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/6642003258932626471?p=1&pos=10&rgn=-1&cid=18065&ckey=rdf&jobAge=25&relb=150&brelb=100&scr=1435.09215&bscr=956.7281&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/6642003258932626471?p=1&pos=10&rgn=-1&cid=18065&ckey=rdf&jobAge=31&relb=150&brelb=100&scr=1416.1242000000002&bscr=944.0828&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "Qiagen",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 6642003258932626471
@@ -137,34 +137,34 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-4746401624182598302?p=1&pos=11&rgn=-1&cid=18065&ckey=rdf&jobAge=73&relb=150&brelb=100&scr=1427.2962&bscr=951.5308&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/-4746401624182598302?p=1&pos=11&rgn=-1&cid=18065&ckey=rdf&jobAge=79&relb=150&brelb=100&scr=1408.2945000000002&bscr=938.863&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "OCLC",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -4746401624182598302
           },
           {
-            "title": "Data Architect IV",
-            "location": "Chantilly, Loudoun County, VA",
-            "snippet": "&nbsp;.... Utilizes deep expertise in distributed data systems, streaming architectures, vector integrations, and W3C semantic web standards (<b>RDF,</b> OWL, SPARQL) to design the knowledge graphs, ontologies, and data lineage pipelines necessary to feed continuously evolving context...&nbsp;",
-            "salary": "$146.2k - $228.4k",
+            "title": "Ontologist, Product Knowledge",
+            "location": "Seattle, WA",
+            "snippet": "&nbsp;...Ability to communicate knowledge-based requirements and needs to engineering and retail teams- Familiarity with Semantic Web technologies (<b>RDF/</b>s, OWL), query languages (SPARQL) and validation/reasoning standards (SHACL, SPIN)- Knowledge of open-source and commercial ontology...&nbsp;",
+            "salary": "$82.7k - $144.7k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-8315445924172724601?p=1&pos=12&rgn=-1&cid=18065&ckey=rdf&jobAge=49&relb=150&brelb=100&scr=1423.48905&bscr=948.9927&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "Noblis",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": -8315445924172724601
+            "link": "https://jooble.org/away/2843275558376594524?p=1&pos=12&rgn=-1&cid=18065&ckey=rdf&jobAge=7&relb=150&brelb=100&scr=1398.45291&bscr=932.30194&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Amazon",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": 2843275558376594524
           },
           {
-            "title": "Executive Director-Ontology",
-            "location": "New York, NY",
-            "snippet": "&nbsp;...developing and managing ontologies for real-world applicationsExpertise in Data and Financial service standards such as ISO 20022, OWL, <b>RDF,</b> SKOS, and SHACL.Experience with ontology and taxonomy development process and tools (e.g., Protégé, TopBraid Composer, PoolParty,...&nbsp;",
+            "title": "Lead Ontologist - OBIQUA",
+            "location": "Reston, VA",
+            "snippet": "&nbsp;...responsible for the development of domain-specific ontologies.· This position leads the application of semantic web standards (e.g., <b>RDF,</b> OWL, SPARQL) and government data standards to enable semantic representation of data inputs, facilitating integration and interoperability...&nbsp;",
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-7407426251786010987?p=1&pos=13&rgn=-1&cid=18065&ckey=rdf&jobAge=49&relb=150&brelb=100&scr=1418.57985&bscr=945.7199&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "JP Morgan Chase",
+            "link": "https://jooble.org/away/-6811009133562741509?p=1&pos=13&rgn=-1&cid=18065&ckey=rdf&jobAge=55&relb=150&brelb=100&scr=1397.41434&bscr=931.60956&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Celestar",
             "updated": "2026-08-19T00:00:00.0000000",
-            "id": -7407426251786010987
+            "id": -6811009133562741509
           },
           {
             "title": "Agentic AI Architect",
@@ -173,9 +173,9 @@
             "salary": "$122.65k - $283.91k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/3054468914384038974?p=1&pos=14&rgn=-1&cid=18065&ckey=rdf&jobAge=117&relb=150&brelb=100&scr=1410.3438&bscr=940.2292&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/3054468914384038974?p=1&pos=14&rgn=-1&cid=18065&ckey=rdf&jobAge=7&relb=150&brelb=100&scr=1393.6977&bscr=929.1318&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "NTT DATA",
-            "updated": "2026-08-16T04:15:07.7600000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 3054468914384038974
           },
           {
@@ -185,70 +185,70 @@
             "salary": "$154.05k - $278.48k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/430679554657034763?p=1&pos=15&rgn=-1&cid=18065&ckey=rdf&jobAge=49&relb=150&brelb=100&scr=1408.799475&bscr=939.19965&aq=-4879915212590199886&elckey=4964331563966117568",
+            "link": "https://jooble.org/away/430679554657034763?p=1&pos=15&rgn=-1&cid=18065&ckey=rdf&jobAge=55&relb=150&brelb=100&scr=1389.807&bscr=926.538&aq=3167786162759083111&elckey=-3473411852339422789",
             "company": "Leidos",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 430679554657034763
           },
           {
-            "title": "Machinist",
-            "location": "Hudson, NH",
-            "snippet": "&nbsp;...Job Description \r\n Job Description  <b>RdF </b>Corporation, a manufacturing company in Hudson, NH, seeks an experienced machinist with manual lathe and CNC experience. \r\n\r\n Responsibilities of Machinist: \r\n Under supervision, sets up and operates conventional machines and machining...&nbsp;",
-            "salary": "",
-            "source": "ziprecruiter.com",
+            "title": "Data Architect IV",
+            "location": "Chantilly, Loudoun County, VA",
+            "snippet": "&nbsp;.... Utilizes deep expertise in distributed data systems, streaming architectures, vector integrations, and W3C semantic web standards (<b>RDF,</b> OWL, SPARQL) to design the knowledge graphs, ontologies, and data lineage pipelines necessary to feed continuously evolving context...&nbsp;",
+            "salary": "$146.2k - $228.4k",
+            "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-4604205444750154276?p=1&pos=16&rgn=-1&cid=18065&ckey=rdf&jobAge=73&relb=144&brelb=110&scr=1323.400450909091&bscr=1010.9309&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "RdF Corporation",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": -4604205444750154276
-          },
-          {
-            "title": "Lead Ontologist",
-            "location": "Atlanta, GA",
-            "snippet": "&nbsp;...product management, machine learning, and other enterprise initiatives.\n\n3+ years of experience with knowledge graph technologies such as <b>RDF,</b> OWL, SHACL, SKOS, LPG, and SPARQL.\n\nAt least 2 years of experience or training with ontology and linked data tools such as Protégé,...&nbsp;",
-            "salary": "$152k - $178.3k",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/5323621521471815188?p=1&pos=17&rgn=-1&cid=18065&ckey=rdf&jobAge=73&relb=122&brelb=100&scr=1253.1053100000001&bscr=1027.1355&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "The Coca-Cola Company",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": 5323621521471815188
-          },
-          {
-            "title": "Data Engineer",
-            "location": "Herndon, VA",
-            "snippet": "&nbsp;....\nDevelop data integration frameworks that support enterprise ontologies, knowledge graphs, and Semantic Web technologies, including <b>RDF,</b> OWL, and SPARQL.\nCollaborate with ontology engineers, software engineers, database engineers, analysts, and Government stakeholders...&nbsp;",
-            "salary": "",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/2491274133961613044?p=1&pos=18&rgn=-1&cid=18065&ckey=rdf&jobAge=73&relb=122&brelb=100&scr=1251.961682&bscr=1026.1981&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "Pt78",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": 2491274133961613044
-          },
-          {
-            "title": "Ontology Consultant",
-            "location": "Arlington, VA",
-            "snippet": "&nbsp;...lifecycle: requirements gathering, scoping, design, implementation, management, and governance.\nExpertise in semantic standards such as <b>RDF,</b> OWL, SHACL, and SPARQL.\nHands‑on experience with ontology tooling and management systems such as Protégé.\nStrong communication,...&nbsp;",
-            "salary": "$110k - $150k",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/-440542189657856333?p=1&pos=19&rgn=-1&cid=18065&ckey=rdf&jobAge=73&relb=122&brelb=100&scr=1238.1370080000002&bscr=1014.8664&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "Enterprise Knowledge, LLC",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": -440542189657856333
-          },
-          {
-            "title": "Data Engineer",
-            "location": "Poland, NY",
-            "snippet": "&nbsp;...Big Data processing tools (Spark, etc.);\n\nExperience with search systems (Elasticsearch, Apache Lucene, Apache Solr);\n\nExperience with <b>RDF </b>or OWL;\n\nExperience with Big Data processing and analytics stack in AWS: EMR, S3, EC2, Athena, Kinesis, Lambda, QuickSight, etc.;\n\nMS...&nbsp;",
-            "salary": "",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/-4972133842793774651?p=1&pos=20&rgn=-1&cid=18065&ckey=rdf&jobAge=49&relb=122&brelb=100&scr=1225.805858&bscr=1004.7589&aq=-4879915212590199886&elckey=4964331563966117568",
-            "company": "Andersen",
+            "link": "https://jooble.org/away/-8315445924172724601?p=1&pos=16&rgn=-1&cid=18065&ckey=rdf&jobAge=55&relb=150&brelb=100&scr=1388.1442499999998&bscr=925.4295&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Noblis",
             "updated": "2026-08-19T00:00:00.0000000",
-            "id": -4972133842793774651
+            "id": -8315445924172724601
+          },
+          {
+            "title": "Data Steward/ Scientist",
+            "location": "Cupertino, CA",
+            "snippet": "&nbsp;...similar)\nPractical experience building or deploying AI agents or LLM-powered applications\nFamiliarity with knowledge graph technologies (<b>RDF,</b> property graphs, Neo4j)\nExperience with data governance practices — data quality, metadata management, or data stewardship\nAbility...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/-2122282351511028325?p=1&pos=17&rgn=-1&cid=18065&ckey=rdf&jobAge=55&relb=150&brelb=100&scr=1386.6570749999998&bscr=924.43805&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "SRI Tech",
+            "updated": "2026-08-19T00:00:00.0000000",
+            "id": -2122282351511028325
+          },
+          {
+            "title": "Lead AI Architect",
+            "location": "San Francisco, CA",
+            "snippet": "&nbsp;...modeling, relationship modeling, ontology design, and semantic interoperabilityExperience with knowledge graph technologies such as Neo4j, <b>RDF/</b>SPARQL, or equivalent graph platformsExperience integrating heterogeneous enterprise data sources including CRM, SaaS, APIs,...&nbsp;",
+            "salary": "$164.7k - $266k",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/-743727187986523929?p=1&pos=18&rgn=-1&cid=18065&ckey=rdf&jobAge=79&relb=150&brelb=100&scr=1376.61795&bscr=917.7453&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "DocuSign",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": -743727187986523929
+          },
+          {
+            "title": "Agentic AI Engineer",
+            "location": "Houston, TX",
+            "snippet": "&nbsp;...Layer, Cube, or Power BI semantic modelsHands-on experience with knowledge graphs: graph databases (Neo4j, Azure Cosmos DB Gremlin), <b>RDF/</b>SPARQL, ontology design, or graph-augmented RAGExperience with agent evaluation tooling such as LangSmithExperience with our broader...&nbsp;",
+            "salary": "$103.15k - $158.59k",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/5366605110060573135?p=1&pos=19&rgn=-1&cid=18065&ckey=rdf&jobAge=7&relb=150&brelb=100&scr=1373.79465&bscr=915.8631&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Fervo Energy",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": 5366605110060573135
+          },
+          {
+            "title": "Data Architect, Data Foundry",
+            "location": "San Francisco, CA",
+            "snippet": "&nbsp;..., metadata standards, and FAIR-compliant data frameworks in partnership with Preparedness4Insight.Implement semantic data standards (<b>RDF,</b> OWL, SPARQL) and ontology engineering practices to create interoperable, machine-readable scientific data.Data Platform & Lakehouse...&nbsp;",
+            "salary": "$132k - $193.6k",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/-3429238207161268308?p=1&pos=20&rgn=-1&cid=18065&ckey=rdf&jobAge=7&relb=150&brelb=100&scr=1365.8152499999999&bscr=910.5435&aq=3167786162759083111&elckey=-3473411852339422789",
+            "company": "Eli Lilly and Company",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": -3429238207161268308
           }
         ]
       }
@@ -261,7 +261,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
       ],
       "payload": {
-        "totalCount": 1192,
+        "totalCount": 1173,
         "jobs": [
           {
             "title": "Ontology Engineer",
@@ -270,22 +270,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/1157926175998543767?p=1&pos=1&rgn=-1&cid=18065&ckey=ontology&jobAge=25&relb=150&brelb=100&scr=8189.653500000001&bscr=5459.769&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/1157926175998543767?p=1&pos=1&rgn=-1&cid=18065&ckey=ontology&jobAge=31&relb=150&brelb=100&scr=8197.944&bscr=5465.296&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Stellantis",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 1157926175998543767
-          },
-          {
-            "title": "Executive Director-Ontology",
-            "location": "New York, NY",
-            "snippet": "&nbsp;...within the JP Morgan Chase team, you will be instrumental in shaping our knowledge representation. Your role will involve utilizing <b>ontologies </b>and taxonomies to enhance data interoperability and management, preparing our data for AI applications. Your responsibilities...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-7407426251786010987?p=1&pos=2&rgn=-1&cid=18065&ckey=ontology&jobAge=49&relb=150&brelb=100&scr=8123.588999999999&bscr=5415.726&aq=8583917924692712280&elckey=-254511204566621154",
-            "company": "JP Morgan Chase",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": -7407426251786010987
           },
           {
             "title": "Ontology Data Scientist",
@@ -294,22 +282,10 @@
             "salary": "$77.6k - $176k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/4751888697289011232?p=1&pos=3&rgn=-1&cid=18065&ckey=ontology&jobAge=97&relb=150&brelb=100&scr=7960.104&bscr=5306.736&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/4751888697289011232?p=1&pos=2&rgn=-1&cid=18065&ckey=ontology&jobAge=103&relb=150&brelb=100&scr=7970.3805&bscr=5313.587&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Booz Allen Hamilton",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 4751888697289011232
-          },
-          {
-            "title": "Palantir Enterprise Ontology Architect",
-            "location": "Arlington, VA",
-            "snippet": "&nbsp;...Design, govern, and evolve the enterprise information architecture within Palantir Foundry. This role is responsible for ensuring <b>ontology </b>objects, metadata, permissions, and enterprise data structures remain consistent, reusable, secure, and scalable across multiple applications...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/1428670090047130112?p=1&pos=4&rgn=-1&cid=18065&ckey=ontology&jobAge=69&relb=150&brelb=100&scr=7659.45&bscr=5106.3&aq=8583917924692712280&elckey=-254511204566621154",
-            "company": "Guidehouse",
-            "updated": "2026-08-18T04:42:17.5770000",
-            "id": 1428670090047130112
           },
           {
             "title": "Palantir Foundry Ontology Engineer",
@@ -318,10 +294,22 @@
             "salary": "$77.6k - $176k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/2045251180273563383?p=1&pos=5&rgn=-1&cid=18065&ckey=ontology&jobAge=49&relb=150&brelb=100&scr=7634.556&bscr=5089.704&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/2045251180273563383?p=1&pos=3&rgn=-1&cid=18065&ckey=ontology&jobAge=55&relb=150&brelb=100&scr=7744.583549999999&bscr=5163.0557&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Booz Allen Hamilton",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 2045251180273563383
+          },
+          {
+            "title": "Palantir Enterprise Ontology Architect",
+            "location": "Arlington, VA",
+            "snippet": "&nbsp;...Design, govern, and evolve the enterprise information architecture within Palantir Foundry. This role is responsible for ensuring <b>ontology </b>objects, metadata, permissions, and enterprise data structures remain consistent, reusable, secure, and scalable across multiple applications...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/1428670090047130112?p=1&pos=4&rgn=-1&cid=18065&ckey=ontology&jobAge=75&relb=150&brelb=100&scr=7718.121900000001&bscr=5145.4146&aq=6138496950108431066&elckey=-8692254620872161511",
+            "company": "Guidehouse",
+            "updated": "2026-08-18T04:42:17.5770000",
+            "id": 1428670090047130112
           },
           {
             "title": "Palantir Foundry Ontology Engineer",
@@ -330,22 +318,10 @@
             "salary": "$99k - $225k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3001034810411539358?p=1&pos=6&rgn=-1&cid=18065&ckey=ontology&jobAge=25&relb=150&brelb=100&scr=7609.2949499999995&bscr=5072.8633&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-3001034810411539358?p=1&pos=5&rgn=-1&cid=18065&ckey=ontology&jobAge=31&relb=150&brelb=100&scr=7666.2315&bscr=5110.821&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Booz Allen Hamilton",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": -3001034810411539358
-          },
-          {
-            "title": "Ontology Engineer (TS/SCI)",
-            "location": "Herndon, VA",
-            "snippet": "&nbsp;...below.This position requires an active U.S. Government Security Clearance at the TS/SCI level with CI polygraph.Vantor is seeking an <b>Ontology </b>Lead to join our team. In this position you will design, develop, and maintain domain-specific ontologies and knowledge models in...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/1577411543731915809?p=1&pos=7&rgn=-1&cid=18065&ckey=ontology&jobAge=97&relb=150&brelb=100&scr=7387.194&bscr=4924.796&aq=8583917924692712280&elckey=-254511204566621154",
-            "company": "Maxar Technologies",
-            "updated": "2026-08-17T00:00:00.0000000",
-            "id": 1577411543731915809
           },
           {
             "title": "Senior Ontology Developer (TS/SCI)",
@@ -354,10 +330,22 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-5658560604223203807?p=1&pos=8&rgn=-1&cid=18065&ckey=ontology&jobAge=117&relb=150&brelb=100&scr=7313.868899999999&bscr=4875.9126&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-5658560604223203807?p=1&pos=6&rgn=-1&cid=18065&ckey=ontology&jobAge=7&relb=150&brelb=100&scr=7435.111050000001&bscr=4956.7407&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Maxar Technologies",
-            "updated": "2026-08-16T04:14:31.0900000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -5658560604223203807
+          },
+          {
+            "title": "Ontology Engineer (TS/SCI)",
+            "location": "Herndon, VA",
+            "snippet": "&nbsp;...below.This position requires an active U.S. Government Security Clearance at the TS/SCI level with CI polygraph.Vantor is seeking an <b>Ontology </b>Lead to join our team. In this position you will design, develop, and maintain domain-specific ontologies and knowledge models in...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/1577411543731915809?p=1&pos=7&rgn=-1&cid=18065&ckey=ontology&jobAge=103&relb=150&brelb=100&scr=7395.226500000001&bscr=4930.151&aq=6138496950108431066&elckey=-8692254620872161511",
+            "company": "Maxar Technologies",
+            "updated": "2026-08-17T00:00:00.0000000",
+            "id": 1577411543731915809
           },
           {
             "title": "Principal Software Architect, Building Ontology",
@@ -366,7 +354,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/5524463066097662535?p=1&pos=9&rgn=-1&cid=18065&ckey=ontology&jobAge=49&relb=150&brelb=100&scr=7185.4644&bscr=4790.3096&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/5524463066097662535?p=1&pos=8&rgn=-1&cid=18065&ckey=ontology&jobAge=55&relb=150&brelb=100&scr=7289.018999999999&bscr=4859.346&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Honeywell",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 5524463066097662535
@@ -378,9 +366,9 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3737752380424619768?p=1&pos=10&rgn=-1&cid=18065&ckey=ontology&jobAge=117&relb=150&brelb=100&scr=7179.04395&bscr=4786.0293&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-3737752380424619768?p=1&pos=9&rgn=-1&cid=18065&ckey=ontology&jobAge=7&relb=150&brelb=100&scr=7233.1479&bscr=4822.0986&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Maxar Technologies",
-            "updated": "2026-08-16T04:14:28.3500000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -3737752380424619768
           },
           {
@@ -390,9 +378,9 @@
             "salary": "$180k - $235k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/446404527100024463?p=1&pos=11&rgn=-1&cid=18065&ckey=ontology&jobAge=117&relb=150&brelb=100&scr=7179.04395&bscr=4786.0293&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/446404527100024463?p=1&pos=10&rgn=-1&cid=18065&ckey=ontology&jobAge=7&relb=150&brelb=100&scr=7233.1479&bscr=4822.0986&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Qiagen",
-            "updated": "2026-08-16T04:14:29.5870000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 446404527100024463
           },
           {
@@ -402,22 +390,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/6682805855543405757?p=1&pos=12&rgn=-1&cid=18065&ckey=ontology&jobAge=117&relb=150&brelb=100&scr=7129.266&bscr=4752.844&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/6682805855543405757?p=1&pos=11&rgn=-1&cid=18065&ckey=ontology&jobAge=7&relb=150&brelb=100&scr=7155.657000000001&bscr=4770.438&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Maxar Technologies",
-            "updated": "2026-08-16T04:15:06.9630000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 6682805855543405757
-          },
-          {
-            "title": "Principal Enterprise Ontology Architect / Engineer",
-            "location": "Los Angeles, CA",
-            "snippet": "Position Summary\n\n\n\nHands-on Software Engineer - <b>Ontology-</b>Driven, Knowledge Graph, and Agentic Architecture role is critical in defining, governing, and operationalizing an enterprise-scale semantic backbone. The successful candidate will lead the design and deployment...&nbsp;",
-            "salary": "$225k - $260k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-3899996907840266286?p=1&pos=13&rgn=-1&cid=18065&ckey=ontology&jobAge=97&relb=150&brelb=100&scr=6986.066100000001&bscr=4657.3774&aq=8583917924692712280&elckey=-254511204566621154",
-            "company": "The TCW Group",
-            "updated": "2026-08-17T00:00:00.0000000",
-            "id": -3899996907840266286
           },
           {
             "title": "Journeyman LLM + Ontology Software Engineer",
@@ -426,22 +402,22 @@
             "salary": "$92k - $105k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/510595822652374638?p=1&pos=14&rgn=-1&cid=18065&ckey=ontology&jobAge=97&relb=150&brelb=100&scr=6977.9766&bscr=4651.9844&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/510595822652374638?p=1&pos=12&rgn=-1&cid=18065&ckey=ontology&jobAge=103&relb=150&brelb=100&scr=7027.759499999999&bscr=4685.173&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "I2X/ISYS Technologies",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 510595822652374638
           },
           {
-            "title": "Enterprise Ontology Leader - IDEA by Lear",
-            "location": "Southfield, MI",
-            "snippet": "&nbsp;...all understand that we must work together to win. Are you ready for a better career? A better future?We're Lear For You. ENTERPRISE <b>ONTOLOGY </b>LEADER - IDEA BY LEARSOUTHFIELD, MIAbout Lear and IDEA by Lear:Lear is a global Tier 1 automotive supplier of Seating and E‑...&nbsp;",
-            "salary": "",
+            "title": "Principal Enterprise Ontology Architect / Engineer",
+            "location": "Los Angeles, CA",
+            "snippet": "Position Summary\n\n\n\nHands-on Software Engineer - <b>Ontology-</b>Driven, Knowledge Graph, and Agentic Architecture role is critical in defining, governing, and operationalizing an enterprise-scale semantic backbone. The successful candidate will lead the design and deployment...&nbsp;",
+            "salary": "$225k - $260k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/617286099576192941?p=1&pos=15&rgn=-1&cid=18065&ckey=ontology&jobAge=97&relb=150&brelb=100&scr=6952.652999999999&bscr=4635.102&aq=8583917924692712280&elckey=-254511204566621154",
-            "company": "Lear",
+            "link": "https://jooble.org/away/-3899996907840266286?p=1&pos=13&rgn=-1&cid=18065&ckey=ontology&jobAge=103&relb=150&brelb=100&scr=7009.0244999999995&bscr=4672.683&aq=6138496950108431066&elckey=-8692254620872161511",
+            "company": "The TCW Group",
             "updated": "2026-08-17T00:00:00.0000000",
-            "id": 617286099576192941
+            "id": -3899996907840266286
           },
           {
             "title": "Ontology Engineer-Knowledge Graph & Identity",
@@ -450,9 +426,9 @@
             "salary": "$150k - $180k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-2341283580121742361?p=1&pos=16&rgn=-1&cid=18065&ckey=ontology&jobAge=121&relb=150&brelb=100&scr=6950.28225&bscr=4633.5215&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-2341283580121742361?p=1&pos=14&rgn=-1&cid=18065&ckey=ontology&jobAge=7&relb=150&brelb=100&scr=6999.603&bscr=4666.402&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Samba TV",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -2341283580121742361
           },
           {
@@ -462,22 +438,22 @@
             "salary": "$77.4k - $135.4k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-7564201774508593205?p=1&pos=17&rgn=-1&cid=18065&ckey=ontology&jobAge=49&relb=150&brelb=100&scr=6909.176549999999&bscr=4606.1177&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-7564201774508593205?p=1&pos=15&rgn=-1&cid=18065&ckey=ontology&jobAge=55&relb=150&brelb=100&scr=6970.521&bscr=4647.014&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "Vizient",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -7564201774508593205
           },
           {
-            "title": "Ontology Consultant",
-            "location": "Arlington, VA",
-            "snippet": "Enterprise Knowledge (EK) is hiring for a full-time <b>Ontology </b>Consultant To join our growing Semantic Design and Modeling Practice, the Ontology Consultant will lead ontology design and implementation for commercial and federal clients. The role involves advising clients...&nbsp;",
-            "salary": "$110k - $150k",
-            "source": "appcast.io",
+            "title": "Enterprise Ontology Leader - IDEA by Lear",
+            "location": "Southfield, MI",
+            "snippet": "&nbsp;...all understand that we must work together to win. Are you ready for a better career? A better future?We're Lear For You. ENTERPRISE <b>ONTOLOGY </b>LEADER - IDEA BY LEARSOUTHFIELD, MIAbout Lear and IDEA by Lear:Lear is a global Tier 1 automotive supplier of Seating and E‑...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-440542189657856333?p=1&pos=18&rgn=-1&cid=18065&ckey=ontology&jobAge=73&relb=122&brelb=100&scr=6797.848906&bscr=5572.0073&aq=8583917924692712280&elckey=-254511204566621154",
-            "company": "Enterprise Knowledge, LLC",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": -440542189657856333
+            "link": "https://jooble.org/away/617286099576192941?p=1&pos=16&rgn=-1&cid=18065&ckey=ontology&jobAge=103&relb=150&brelb=100&scr=6960.213&bscr=4640.142&aq=6138496950108431066&elckey=-8692254620872161511",
+            "company": "Lear",
+            "updated": "2026-08-17T00:00:00.0000000",
+            "id": 617286099576192941
           },
           {
             "title": "Principal Data and Ontology Architect - AI Enablement",
@@ -486,10 +462,22 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-615504878041910407?p=1&pos=19&rgn=-1&cid=18065&ckey=ontology&jobAge=97&relb=150&brelb=100&scr=6782.6115&bscr=4521.741&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-615504878041910407?p=1&pos=17&rgn=-1&cid=18065&ckey=ontology&jobAge=103&relb=150&brelb=100&scr=6893.6974500000015&bscr=4595.7983&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "American Honda Motor Co",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -615504878041910407
+          },
+          {
+            "title": "Ontology Consultant",
+            "location": "Arlington, VA",
+            "snippet": "Enterprise Knowledge (EK) is hiring for a full-time <b>Ontology </b>Consultant To join our growing Semantic Design and Modeling Practice, the Ontology Consultant will lead ontology design and implementation for commercial and federal clients. The role involves advising clients...&nbsp;",
+            "salary": "$110k - $150k",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/-440542189657856333?p=1&pos=18&rgn=-1&cid=18065&ckey=ontology&jobAge=79&relb=122&brelb=100&scr=6890.216326&bscr=5647.7183&aq=6138496950108431066&elckey=-8692254620872161511",
+            "company": "Enterprise Knowledge, LLC",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": -440542189657856333
           },
           {
             "title": "Ontology Engineer",
@@ -498,10 +486,22 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-8298719359671823927?p=1&pos=20&rgn=-1&cid=18065&ckey=ontology&jobAge=145&relb=122&brelb=100&scr=6733.35873&bscr=5519.1465&aq=8583917924692712280&elckey=-254511204566621154",
+            "link": "https://jooble.org/away/-8298719359671823927?p=1&pos=19&rgn=-1&cid=18065&ckey=ontology&jobAge=151&relb=122&brelb=100&scr=6823.962152000001&bscr=5593.4116&aq=6138496950108431066&elckey=-8692254620872161511",
             "company": "ANAUTICS INC",
             "updated": "2026-08-15T00:00:00.0000000",
             "id": -8298719359671823927
+          },
+          {
+            "title": "Taxonomy & Ontology Specialist",
+            "location": "Seattle, WA",
+            "snippet": "Aquent Talent is seeking a skilled Taxonomist for a temporary role in Seattle to design, implement, and refine organizational taxonomies that underpin large information stores. You will strengthen metadata, improve search and content understanding, and collaborate with ...",
+            "salary": "",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/5065749749733107542?p=1&pos=20&rgn=-1&cid=18065&ckey=ontology&jobAge=151&relb=122&brelb=100&scr=6745.6891479999995&bscr=5529.2534&aq=6138496950108431066&elckey=-8692254620872161511",
+            "company": "Skill",
+            "updated": "2026-08-15T00:00:00.0000000",
+            "id": 5065749749733107542
           }
         ]
       }
@@ -516,13 +516,25 @@
         "totalCount": 158,
         "jobs": [
           {
+            "title": "Graph Data Engineer / SPARQL Developer",
+            "location": "Denver, CO",
+            "snippet": "&nbsp;...integration| CMDB| network inventoryEvent-driven and real-time data architectures (Kafka| REST APIs)\r\n Essential Skills: Technical: <b>SPARQL|</b> RDF| OWL| semantic web technologies Graph databases (e.g.| Stardog| Neo4j)SQL| Python| JavaScript for data processing and...&nbsp;",
+            "salary": "",
+            "source": "fitly.work",
+            "type": "",
+            "link": "https://jooble.org/desc/-1907651985842669632?ckey=sparql&rgn=-1&pos=1&elckey=1181681529431588670&p=1&aq=-8828821448411548267&cid=18065&jobAge=79&relb=41&brelb=15&bscr=875.425&scr=2392.828333333333",
+            "company": "Programmers.io",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": -1907651985842669632
+          },
+          {
             "title": "Enterprise Architect",
             "location": "Dallas, TX",
             "snippet": "&nbsp;...experience:• Proven experience with Semantic Web Graphs, graph databases, RDBMS and Collated (search engine) databases• Skills with <b>Sparql,</b> SQL and general scripting of databases• Experience on projects with AI, ML• Skills with Scala, Apache Spark, AKKA• Experience in...&nbsp;",
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-1005163502685434513?p=1&pos=1&rgn=-1&cid=18065&ckey=sparql&jobAge=92&relb=150&brelb=100&scr=1565.37255&bscr=1043.5817&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/-1005163502685434513?p=1&pos=2&rgn=-1&cid=18065&ckey=sparql&jobAge=98&relb=150&brelb=100&scr=1573.58205&bscr=1049.0547&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "NTT DATA",
             "updated": "2026-08-17T05:02:12.9770000",
             "id": -1005163502685434513
@@ -534,10 +546,22 @@
             "salary": "$137.4k - $240.4k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/77729852769319009?p=1&pos=2&rgn=-1&cid=18065&ckey=sparql&jobAge=121&relb=150&brelb=100&scr=1536.2595000000001&bscr=1024.173&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/77729852769319009?p=1&pos=3&rgn=-1&cid=18065&ckey=sparql&jobAge=7&relb=150&brelb=100&scr=1518.181275&bscr=1012.12085&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "Northern Trust",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 77729852769319009
+          },
+          {
+            "title": "Senior Knowledge Engineer",
+            "location": "Houston, TX",
+            "snippet": "&nbsp;....Translate complex domain knowledge from subject matter experts into formal, machine-readable knowledge structures using RDF, OWL, <b>SPARQL,</b> or property graph models.Lead knowledge engineering discovery workshops and working sessions with client stakeholders to surface,...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/6861469901069050919?p=1&pos=4&rgn=-1&cid=18065&ckey=sparql&jobAge=31&relb=150&brelb=100&scr=1466.3473499999998&bscr=977.5649&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Accenture",
+            "updated": "2026-08-20T00:00:00.0000000",
+            "id": 6861469901069050919
           },
           {
             "title": "Senior Full Stack Developer",
@@ -546,9 +570,9 @@
             "salary": "$140k - $155k",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/1492139279319711808?ckey=sparql&rgn=-1&pos=3&elckey=-8827319127972422589&p=1&aq=4308146866023845480&cid=18065&jobAge=25&relb=175&brelb=115&bscr=979.5008&scr=1490.5446956521741",
+            "link": "https://jooble.org/desc/1492139279319711808?ckey=sparql&rgn=-1&pos=5&elckey=1181681529431588670&p=1&aq=-8828821448411548267&cid=18065&jobAge=7&relb=175&brelb=115&bscr=954.17523&scr=1452.0057847826088",
             "company": "Enterprise Knowledge, Llc",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 1492139279319711808
           },
           {
@@ -558,34 +582,10 @@
             "salary": "$150k - $210k",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/7468627678405332798?ckey=sparql&rgn=-1&pos=4&elckey=-8827319127972422589&p=1&aq=4308146866023845480&cid=18065&jobAge=25&relb=175&brelb=115&bscr=969.80096&scr=1475.7840695652174",
+            "link": "https://jooble.org/desc/7468627678405332798?ckey=sparql&rgn=-1&pos=6&elckey=1181681529431588670&p=1&aq=-8828821448411548267&cid=18065&jobAge=7&relb=175&brelb=115&bscr=948.99744&scr=1444.1265391304348",
             "company": "Enterprise Knowledge, Llc",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 7468627678405332798
-          },
-          {
-            "title": "Senior Knowledge Engineer",
-            "location": "Atlanta, GA",
-            "snippet": "&nbsp;....Translate complex domain knowledge from subject matter experts into formal, machine-readable knowledge structures using RDF, OWL, <b>SPARQL,</b> or property graph models.Lead knowledge engineering discovery workshops and working sessions with client stakeholders to surface,...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/848500351376922034?p=1&pos=5&rgn=-1&cid=18065&ckey=sparql&jobAge=25&relb=150&brelb=100&scr=1472.43015&bscr=981.6201&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Accenture",
-            "updated": "2026-08-20T00:00:00.0000000",
-            "id": 848500351376922034
-          },
-          {
-            "title": "Data Architect IV",
-            "location": "Chantilly, Loudoun County, VA",
-            "snippet": "&nbsp;...deep expertise in distributed data systems, streaming architectures, vector integrations, and W3C semantic web standards (RDF, OWL, <b>SPARQL)</b> to design the knowledge graphs, ontologies, and data lineage pipelines necessary to feed continuously evolving context to LLMs....&nbsp;",
-            "salary": "$146.2k - $228.4k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-8315445924172724601?p=1&pos=6&rgn=-1&cid=18065&ckey=sparql&jobAge=49&relb=150&brelb=100&scr=1459.7796000000003&bscr=973.1864&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Noblis",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": -8315445924172724601
           },
           {
             "title": "Product Manager- WorldCat",
@@ -594,22 +594,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-4746401624182598302?p=1&pos=7&rgn=-1&cid=18065&ckey=sparql&jobAge=73&relb=150&brelb=100&scr=1456.31589&bscr=970.87726&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/-4746401624182598302?p=1&pos=7&rgn=-1&cid=18065&ckey=sparql&jobAge=79&relb=150&brelb=100&scr=1435.9463999999998&bscr=957.2976&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "OCLC",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -4746401624182598302
-          },
-          {
-            "title": "Sr. Marklogic Developer",
-            "location": "Bethesda, MD",
-            "snippet": "&nbsp;...implementing the MarkLogic java-client-api within an enterprise application.Strong knowledge of XQuery, FLWOR queries, JavaScript, MarkLogic, <b>SPARQL,</b> RDF data, XML Data, triple-stores, XML ProcessingSignificant experience with Java and data processing, manipulation or querying (...&nbsp;",
-            "salary": "$107.9k - $195.05k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/1154738313257957996?p=1&pos=8&rgn=-1&cid=18065&ckey=sparql&jobAge=49&relb=150&brelb=100&scr=1445.3238000000001&bscr=963.5492&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Leidos",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": 1154738313257957996
           },
           {
             "title": "Agentic AI Architect",
@@ -618,9 +606,9 @@
             "salary": "$122.65k - $283.91k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/3054468914384038974?p=1&pos=9&rgn=-1&cid=18065&ckey=sparql&jobAge=117&relb=150&brelb=100&scr=1441.7303399999998&bscr=961.15356&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/3054468914384038974?p=1&pos=8&rgn=-1&cid=18065&ckey=sparql&jobAge=7&relb=150&brelb=100&scr=1431.23055&bscr=954.1537&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "NTT DATA",
-            "updated": "2026-08-16T04:15:07.7600000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 3054468914384038974
           },
           {
@@ -630,22 +618,22 @@
             "salary": "$164.7k - $266k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-743727187986523929?p=1&pos=10&rgn=-1&cid=18065&ckey=sparql&jobAge=73&relb=150&brelb=100&scr=1440.1576499999999&bscr=960.1051&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/-743727187986523929?p=1&pos=9&rgn=-1&cid=18065&ckey=sparql&jobAge=79&relb=150&brelb=100&scr=1423.0372049999999&bscr=948.69147&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "DocuSign",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -743727187986523929
           },
           {
-            "title": "Data Architect, Data Foundry",
-            "location": "San Francisco, CA",
-            "snippet": "&nbsp;...standards, and FAIR-compliant data frameworks in partnership with Preparedness4Insight.Implement semantic data standards (RDF, OWL, <b>SPARQL)</b> and ontology engineering practices to create interoperable, machine-readable scientific data.Data Platform & Lakehouse...&nbsp;",
-            "salary": "$132k - $193.6k",
+            "title": "Data Architect IV",
+            "location": "Chantilly, Loudoun County, VA",
+            "snippet": "&nbsp;...deep expertise in distributed data systems, streaming architectures, vector integrations, and W3C semantic web standards (RDF, OWL, <b>SPARQL)</b> to design the knowledge graphs, ontologies, and data lineage pipelines necessary to feed continuously evolving context to LLMs....&nbsp;",
+            "salary": "$146.2k - $228.4k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3429238207161268308?p=1&pos=11&rgn=-1&cid=18065&ckey=sparql&jobAge=121&relb=150&brelb=100&scr=1428.96525&bscr=952.6435&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Eli Lilly and Company",
-            "updated": "2026-08-16T00:00:00.0000000",
-            "id": -3429238207161268308
+            "link": "https://jooble.org/away/-8315445924172724601?p=1&pos=10&rgn=-1&cid=18065&ckey=sparql&jobAge=55&relb=150&brelb=100&scr=1422.85584&bscr=948.57056&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Noblis",
+            "updated": "2026-08-19T00:00:00.0000000",
+            "id": -8315445924172724601
           },
           {
             "title": "Ontologist, Product Knowledge",
@@ -654,46 +642,34 @@
             "salary": "$82.7k - $144.7k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/2843275558376594524?p=1&pos=12&rgn=-1&cid=18065&ckey=sparql&jobAge=121&relb=150&brelb=100&scr=1422.6645&bscr=948.443&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/2843275558376594524?p=1&pos=11&rgn=-1&cid=18065&ckey=sparql&jobAge=7&relb=150&brelb=100&scr=1422.51654&bscr=948.34436&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "Amazon",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 2843275558376594524
           },
           {
-            "title": "Agentic AI Engineer",
-            "location": "Houston, TX",
-            "snippet": "&nbsp;...Cube, or Power BI semantic modelsHands-on experience with knowledge graphs: graph databases (Neo4j, Azure Cosmos DB Gremlin), RDF/<b>SPARQL,</b> ontology design, or graph-augmented RAGExperience with agent evaluation tooling such as LangSmithExperience with our broader data...&nbsp;",
-            "salary": "$103.15k - $158.59k",
+            "title": "MarkLogic Developer (SME)",
+            "location": "Bethesda, MD",
+            "snippet": "&nbsp;...implementing the MarkLogic java-client-api within an enterprise application.Strong knowledge of XQuery, FLWOR queries, JavaScript, MarkLogic, <b>SPARQL,</b> RDF data, XML Data, triple-stores, XML Processing.In-depth experience with Java and data processing, manipulation or querying (SQL...&nbsp;",
+            "salary": "$154.05k - $278.48k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/5366605110060573135?p=1&pos=13&rgn=-1&cid=18065&ckey=sparql&jobAge=121&relb=150&brelb=100&scr=1421.0462100000002&bscr=947.36414&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Fervo Energy",
-            "updated": "2026-08-16T00:00:00.0000000",
-            "id": 5366605110060573135
-          },
-          {
-            "title": "Principal Data Scientist - Oncology",
-            "location": "Titusville, NJ",
-            "snippet": "&nbsp;...into established biomedical ontologies and controlled terminologies using resource description framework (RDF) standards.Work with <b>SPARQL/</b>GraphQL/REST services; develop ingestion and curation pipelines to ingest, normalize and map concepts across data sources.Extend and...&nbsp;",
-            "salary": "$117k - $201.25k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-7203596125696637069?p=1&pos=14&rgn=-1&cid=18065&ckey=sparql&jobAge=16&relb=150&brelb=100&scr=1417.93524&bscr=945.29016&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Johnson & Johnson",
-            "updated": "2026-08-20T08:49:35.8170000",
-            "id": -7203596125696637069
-          },
-          {
-            "title": "Senior Data Scientist",
-            "location": "Amsterdam, NY",
-            "snippet": "&nbsp;...who invests in others, gives direct feedback, and raises the bar for the team as a whole.PreferredKnowledge graph design (RDF, OWL, <b>SPARQL,</b> or equivalent graph frameworks), Natural Language Processing, Background in ad tech, CTV/OTT, ACR, audience activation, identity...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-9216817860256969850?p=1&pos=15&rgn=-1&cid=18065&ckey=sparql&jobAge=49&relb=150&brelb=100&scr=1416.8894999999998&bscr=944.593&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Samba TV",
+            "link": "https://jooble.org/away/430679554657034763?p=1&pos=12&rgn=-1&cid=18065&ckey=sparql&jobAge=55&relb=150&brelb=100&scr=1417.095975&bscr=944.73065&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Leidos",
             "updated": "2026-08-19T00:00:00.0000000",
-            "id": -9216817860256969850
+            "id": 430679554657034763
+          },
+          {
+            "title": "Data Architect, Data Foundry",
+            "location": "San Francisco, CA",
+            "snippet": "&nbsp;...standards, and FAIR-compliant data frameworks in partnership with Preparedness4Insight.Implement semantic data standards (RDF, OWL, <b>SPARQL)</b> and ontology engineering practices to create interoperable, machine-readable scientific data.Data Platform & Lakehouse...&nbsp;",
+            "salary": "$132k - $193.6k",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/-3429238207161268308?p=1&pos=13&rgn=-1&cid=18065&ckey=sparql&jobAge=7&relb=150&brelb=100&scr=1411.870155&bscr=941.24677&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Eli Lilly and Company",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": -3429238207161268308
           },
           {
             "title": "Data Steward/ Scientist",
@@ -702,22 +678,22 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-2122282351511028325?p=1&pos=16&rgn=-1&cid=18065&ckey=sparql&jobAge=49&relb=150&brelb=100&scr=1410.76845&bscr=940.5123&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/-2122282351511028325?p=1&pos=14&rgn=-1&cid=18065&ckey=sparql&jobAge=55&relb=150&brelb=100&scr=1410.517725&bscr=940.34515&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "SRI Tech",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -2122282351511028325
           },
           {
-            "title": "Database Engineer (TS/SCI)",
-            "location": "Herndon, VA",
-            "snippet": "&nbsp;...implement scalable database architectures that support Semantic Web technologies, including RDF triple stores, graph databases, and <b>SPARQL </b>query endpoints.Develop and maintain Extract, Transform, Load (ETL) and Extract, Load, Transform (ELT) processes that integrate...&nbsp;",
-            "salary": "",
+            "title": "Agentic AI Engineer",
+            "location": "Houston, TX",
+            "snippet": "&nbsp;...Cube, or Power BI semantic modelsHands-on experience with knowledge graphs: graph databases (Neo4j, Azure Cosmos DB Gremlin), RDF/<b>SPARQL,</b> ontology design, or graph-augmented RAGExperience with agent evaluation tooling such as LangSmithExperience with our broader data...&nbsp;",
+            "salary": "$103.15k - $158.59k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/6403377006989994739?p=1&pos=17&rgn=-1&cid=18065&ckey=sparql&jobAge=117&relb=150&brelb=100&scr=1407.81465&bscr=938.5431&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Maxar Technologies",
-            "updated": "2026-08-16T04:14:47.5430000",
-            "id": 6403377006989994739
+            "link": "https://jooble.org/away/5366605110060573135?p=1&pos=15&rgn=-1&cid=18065&ckey=sparql&jobAge=7&relb=150&brelb=100&scr=1400.7693&bscr=933.8462&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Fervo Energy",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": 5366605110060573135
           },
           {
             "title": "Technical Delivery Lead",
@@ -726,22 +702,34 @@
             "salary": "$220k - $255k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/1185006684087067961?p=1&pos=18&rgn=-1&cid=18065&ckey=sparql&jobAge=73&relb=150&brelb=100&scr=1406.72175&bscr=937.8145&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/1185006684087067961?p=1&pos=16&rgn=-1&cid=18065&ckey=sparql&jobAge=79&relb=150&brelb=100&scr=1395.97335&bscr=930.6489&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "Chubb",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": 1185006684087067961
           },
           {
-            "title": "Lead Ontologist - OBIQUA",
-            "location": "Reston, VA",
-            "snippet": "&nbsp;...for the development of domain-specific ontologies.· This position leads the application of semantic web standards (e.g., RDF, OWL, <b>SPARQL)</b> and government data standards to enable semantic representation of data inputs, facilitating integration and interoperability across...&nbsp;",
+            "title": "Principal Data Scientist - Oncology",
+            "location": "San Diego, CA",
+            "snippet": "&nbsp;...into established biomedical ontologies and controlled terminologies using resource description framework (RDF) standards.Work with <b>SPARQL/</b>GraphQL/REST services; develop ingestion and curation pipelines to ingest, normalize and map concepts across data sources.Extend and...&nbsp;",
+            "salary": "$117k - $201.25k",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/-8259940884372824924?p=1&pos=17&rgn=-1&cid=18065&ckey=sparql&jobAge=23&relb=150&brelb=100&scr=1388.2296&bscr=925.4864&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Johnson & Johnson",
+            "updated": "2026-08-20T08:50:49.9600000",
+            "id": -8259940884372824924
+          },
+          {
+            "title": "Senior Data Scientist",
+            "location": "Amsterdam, NY",
+            "snippet": "&nbsp;...who invests in others, gives direct feedback, and raises the bar for the team as a whole.PreferredKnowledge graph design (RDF, OWL, <b>SPARQL,</b> or equivalent graph frameworks), Natural Language Processing, Background in ad tech, CTV/OTT, ACR, audience activation, identity...&nbsp;",
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-6811009133562741509?p=1&pos=19&rgn=-1&cid=18065&ckey=sparql&jobAge=49&relb=150&brelb=100&scr=1402.1043000000002&bscr=934.7362&aq=4308146866023845480&elckey=-8827319127972422589",
-            "company": "Celestar",
+            "link": "https://jooble.org/away/-9216817860256969850?p=1&pos=18&rgn=-1&cid=18065&ckey=sparql&jobAge=55&relb=150&brelb=100&scr=1387.0317000000002&bscr=924.6878&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Samba TV",
             "updated": "2026-08-19T00:00:00.0000000",
-            "id": -6811009133562741509
+            "id": -9216817860256969850
           },
           {
             "title": "Data Lake Engineer",
@@ -750,10 +738,22 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/1159198110921878421?p=1&pos=20&rgn=-1&cid=18065&ckey=sparql&jobAge=25&relb=150&brelb=100&scr=1390.0430999999999&bscr=926.6954&aq=4308146866023845480&elckey=-8827319127972422589",
+            "link": "https://jooble.org/away/1159198110921878421?p=1&pos=19&rgn=-1&cid=18065&ckey=sparql&jobAge=31&relb=150&brelb=100&scr=1379.26566&bscr=919.51044&aq=-8828821448411548267&elckey=1181681529431588670",
             "company": "Prescient Edge",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 1159198110921878421
+          },
+          {
+            "title": "Lead Ontologist - OBIQUA",
+            "location": "Reston, VA",
+            "snippet": "&nbsp;...for the development of domain-specific ontologies.· This position leads the application of semantic web standards (e.g., RDF, OWL, <b>SPARQL)</b> and government data standards to enable semantic representation of data inputs, facilitating integration and interoperability across...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/-6811009133562741509?p=1&pos=20&rgn=-1&cid=18065&ckey=sparql&jobAge=55&relb=150&brelb=100&scr=1377.642&bscr=918.428&aq=-8828821448411548267&elckey=1181681529431588670",
+            "company": "Celestar",
+            "updated": "2026-08-19T00:00:00.0000000",
+            "id": -6811009133562741509
           }
         ]
       }
@@ -765,7 +765,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos"
       ],
       "payload": {
-        "totalCount": 52,
+        "totalCount": 53,
         "jobs": [
           {
             "title": "Executive Assistant to the CEO & Office Manager",
@@ -774,22 +774,10 @@
             "salary": "$90k - $120k",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-216727705220819142?ckey=skos&rgn=-1&pos=1&elckey=-657864284409407028&p=1&aq=2542537740067576620&cid=18065&jobAge=25&relb=175&brelb=115&bscr=1132.6062&scr=1723.5311739130434",
+            "link": "https://jooble.org/desc/-216727705220819142?ckey=skos&rgn=-1&pos=1&elckey=7970378374029153903&p=1&aq=743320362854880580&cid=18065&jobAge=7&relb=175&brelb=115&bscr=1133.2251&scr=1724.4729782608697",
             "company": "Nimbleway",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -216727705220819142
-          },
-          {
-            "title": "Executive Director-Ontology",
-            "location": "New York, NY",
-            "snippet": "&nbsp;...developing and managing ontologies for real-world applicationsExpertise in Data and Financial service standards such as ISO 20022, OWL, RDF, <b>SKOS,</b> and SHACL.Experience with ontology and taxonomy development process and tools (e.g., Protégé, TopBraid Composer, PoolParty, etc.)....&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-7407426251786010987?p=1&pos=2&rgn=-1&cid=18065&ckey=skos&jobAge=49&relb=150&brelb=100&scr=1661.5827000000002&bscr=1107.7218&aq=2542537740067576620&elckey=-657864284409407028",
-            "company": "JP Morgan Chase",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": -7407426251786010987
           },
           {
             "title": "Senior Director, Sales Enablement",
@@ -798,7 +786,7 @@
             "salary": "$201.1k - $327.69k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-156862948329390916?p=1&pos=3&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=150&brelb=100&scr=1642.374&bscr=1094.916&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/-156862948329390916?p=1&pos=2&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=150&brelb=100&scr=1660.8459000000003&bscr=1107.2306&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Autodesk",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -156862948329390916
@@ -810,7 +798,7 @@
             "salary": "$160k - $210k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/6724241153219674978?p=1&pos=4&rgn=-1&cid=18065&ckey=skos&jobAge=73&relb=150&brelb=100&scr=1611.8229000000001&bscr=1074.5486&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/6724241153219674978?p=1&pos=3&rgn=-1&cid=18065&ckey=skos&jobAge=79&relb=150&brelb=100&scr=1627.4802&bscr=1084.9868&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Verkada",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": 6724241153219674978
@@ -822,22 +810,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/1661114951020680381?p=1&pos=5&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=150&brelb=100&scr=1592.87115&bscr=1061.9141&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/1661114951020680381?p=1&pos=4&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=150&brelb=100&scr=1610.0497500000001&bscr=1073.3665&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Accenture",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 1661114951020680381
-          },
-          {
-            "title": "Knowledge Graph Engineer / Ontologist",
-            "location": "Charlotte, NC",
-            "snippet": "&nbsp;...architecture, ontology modeling, and knowledge graph design at enterprise scale.Deep, hands‑on expertise with RDF, OWL (OWL2), RDFS, <b>SKOS,</b> SPARQL (querying, optimization, semantic analytics), and W3C semantic web standardsProven experience designing and operating...&nbsp;",
-            "salary": "$156k - $234k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-7905311881143456302?p=1&pos=6&rgn=-1&cid=18065&ckey=skos&jobAge=145&relb=150&brelb=100&scr=1580.0178&bscr=1053.3452&aq=2542537740067576620&elckey=-657864284409407028",
-            "company": "The Hartford Financial Services Group",
-            "updated": "2026-08-15T00:00:00.0000000",
-            "id": -7905311881143456302
           },
           {
             "title": "Senior Knowledge Graph Engineer",
@@ -846,7 +822,7 @@
             "salary": "$152k - $178.3k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/8405613803544479626?p=1&pos=7&rgn=-1&cid=18065&ckey=skos&jobAge=49&relb=150&brelb=100&scr=1561.4193000000002&bscr=1040.9462&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/8405613803544479626?p=1&pos=5&rgn=-1&cid=18065&ckey=skos&jobAge=55&relb=150&brelb=100&scr=1556.09535&bscr=1037.3969&aq=743320362854880580&elckey=7970378374029153903",
             "company": "The Coca-Cola Company",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 8405613803544479626
@@ -858,7 +834,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3918292969626529263?p=1&pos=8&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=150&brelb=100&scr=1525.6935&bscr=1017.129&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/-3918292969626529263?p=1&pos=6&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=150&brelb=100&scr=1542.4614000000001&bscr=1028.3076&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Accenture",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -3918292969626529263
@@ -870,7 +846,7 @@
             "salary": "$130k - $200k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/1885575485294346649?p=1&pos=9&rgn=-1&cid=18065&ckey=skos&jobAge=25&relb=150&brelb=100&scr=1438.9602&bscr=959.3068&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/1885575485294346649?p=1&pos=7&rgn=-1&cid=18065&ckey=skos&jobAge=31&relb=150&brelb=100&scr=1442.75505&bscr=961.8367&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Airwallex",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 1885575485294346649
@@ -882,7 +858,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/118327414240191866?p=1&pos=10&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=150&brelb=100&scr=1435.9364249999999&bscr=957.29095&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/118327414240191866?p=1&pos=8&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=150&brelb=100&scr=1436.14764&bscr=957.43176&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Accenture",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 118327414240191866
@@ -894,7 +870,7 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-7332410142800011085?p=1&pos=11&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=122&brelb=100&scr=1421.3372100000001&bscr=1165.0305&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/-7332410142800011085?p=1&pos=9&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=122&brelb=100&scr=1435.74541&bscr=1176.8405&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Black Canyon Consulting",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -7332410142800011085
@@ -906,7 +882,7 @@
             "salary": "$100k",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-6948961559042192301?p=1&pos=12&rgn=-1&cid=18065&ckey=skos&jobAge=73&relb=122&brelb=100&scr=1415.655914&bscr=1160.3737&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/-6948961559042192301?p=1&pos=10&rgn=-1&cid=18065&ckey=skos&jobAge=79&relb=122&brelb=100&scr=1416.2160159999999&bscr=1160.8328&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Johns Hopkins Applied Physics Lab",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -6948961559042192301
@@ -918,34 +894,10 @@
             "salary": "$210k - $250k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/4776777382058492128?p=1&pos=13&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=150&brelb=100&scr=1402.047825&bscr=934.69855&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/4776777382058492128?p=1&pos=11&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=150&brelb=100&scr=1405.2594&bscr=936.8396&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Outreach",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 4776777382058492128
-          },
-          {
-            "title": "Senior Consultant - Semantic Data & AI Engineering",
-            "location": "New York, NY",
-            "snippet": "&nbsp;...semantic-data integration, or closely related solutions.Working knowledge of semantic standards such as RDF, RDFS, OWL, SPARQL, SHACL, <b>SKOS,</b> JSON-LD, or Turtle.Experience with at least one graph platform such as Stardog, Neo4j, GraphDB, Amazon Neptune, Anzo, MarkLogic,...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/829950380025595511?p=1&pos=14&rgn=-1&cid=18065&ckey=skos&jobAge=49&relb=150&brelb=100&scr=1392.7801499999998&bscr=928.5201&aq=2542537740067576620&elckey=-657864284409407028",
-            "company": "Capco",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": 829950380025595511
-          },
-          {
-            "title": "Principal Software Architect, Building Ontology",
-            "location": "Atlanta, GA",
-            "snippet": "&nbsp;...structured knowledge of graphs for semantic backbone creationTechnical SkillsExpert-level proficiency in OWL 2, RDF, RDFS, SPARQL, SHACL, <b>SKOS,</b> JSON-LD, and Turtle. Semantic Web Stack:Deep expertise in at least two of: Neo4j, Amazon Neptune, Stardog, GraphDB, Virtuoso,...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/5524463066097662535?p=1&pos=15&rgn=-1&cid=18065&ckey=skos&jobAge=49&relb=150&brelb=100&scr=1384.8062400000001&bscr=923.20416&aq=2542537740067576620&elckey=-657864284409407028",
-            "company": "Honeywell",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": 5524463066097662535
           },
           {
             "title": "Content Strategist",
@@ -954,10 +906,22 @@
             "salary": "$48.75 - $53.75 per hour",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-6115316444780836856?p=1&pos=16&rgn=-1&cid=18065&ckey=skos&jobAge=121&relb=122&brelb=100&scr=1375.08579&bscr=1127.1195&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/-6115316444780836856?p=1&pos=12&rgn=-1&cid=18065&ckey=skos&jobAge=127&relb=122&brelb=100&scr=1389.368574&bscr=1138.8267&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Cella",
             "updated": "2026-08-16T00:00:00.0000000",
             "id": -6115316444780836856
+          },
+          {
+            "title": "Principal Software Architect, Building Ontology",
+            "location": "Atlanta, GA",
+            "snippet": "&nbsp;...structured knowledge of graphs for semantic backbone creationTechnical SkillsExpert-level proficiency in OWL 2, RDF, RDFS, SPARQL, SHACL, <b>SKOS,</b> JSON-LD, and Turtle. Semantic Web Stack:Deep expertise in at least two of: Neo4j, Amazon Neptune, Stardog, GraphDB, Virtuoso,...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/5524463066097662535?p=1&pos=13&rgn=-1&cid=18065&ckey=skos&jobAge=55&relb=150&brelb=100&scr=1387.8235499999998&bscr=925.2157&aq=743320362854880580&elckey=7970378374029153903",
+            "company": "Honeywell",
+            "updated": "2026-08-19T00:00:00.0000000",
+            "id": 5524463066097662535
           },
           {
             "title": "Executive Assistant",
@@ -966,7 +930,7 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/127640498484728832?p=1&pos=17&rgn=-1&cid=18065&ckey=skos&jobAge=49&relb=122&brelb=100&scr=1317.028552&bscr=1079.5316&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/127640498484728832?p=1&pos=14&rgn=-1&cid=18065&ckey=skos&jobAge=55&relb=122&brelb=100&scr=1328.784594&bscr=1089.1677&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Serval, Inc.",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 127640498484728832
@@ -978,7 +942,7 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-5134895412433470055?p=1&pos=18&rgn=-1&cid=18065&ckey=skos&jobAge=121&relb=122&brelb=100&scr=1311.9748240000001&bscr=1075.3892&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/-5134895412433470055?p=1&pos=15&rgn=-1&cid=18065&ckey=skos&jobAge=127&relb=122&brelb=100&scr=1324.2807200000002&bscr=1085.476&aq=743320362854880580&elckey=7970378374029153903",
             "company": "JPMorgan Chase & Co.",
             "updated": "2026-08-16T00:00:00.0000000",
             "id": -5134895412433470055
@@ -990,10 +954,34 @@
             "salary": "$50 - $54 per hour",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/3567555917953950442?p=1&pos=19&rgn=-1&cid=18065&ckey=skos&jobAge=49&relb=122&brelb=100&scr=1309.024132&bscr=1072.9706&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/3567555917953950442?p=1&pos=16&rgn=-1&cid=18065&ckey=skos&jobAge=55&relb=122&brelb=100&scr=1320.246668&bscr=1082.1694&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Aequor",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 3567555917953950442
+          },
+          {
+            "title": "Knowledge Modeler / Ontologist Manager",
+            "location": "Seattle, WA",
+            "snippet": "&nbsp;...ontology lifecycle supporting a defined project scope: requirements gathering, conceptual modeling, formal specification (OWL 2, RDFS, <b>SKOS)</b>, validation, and deployment\n\nDesign T-Box (schema) structures and contribute to A-Box (instance) hydration patterns across...&nbsp;",
+            "salary": "$94.4k - $293.8k",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/-5925375593408719813?p=1&pos=17&rgn=-1&cid=18065&ckey=skos&jobAge=55&relb=122&brelb=100&scr=1289.458992&bscr=1056.9336&aq=743320362854880580&elckey=7970378374029153903",
+            "company": "Information Technology Senior Management Forum",
+            "updated": "2026-08-19T00:00:00.0000000",
+            "id": -5925375593408719813
+          },
+          {
+            "title": "Senior Knowledge Graph Ontologist",
+            "location": "Kansas City, MO",
+            "snippet": "&nbsp;...ML teams, translating complex domains into semantic models that power intelligent applications.\nThe role requires deep expertise in OWL 2, RDF, RDFS, <b>SKOS,</b> SHACL, and SPARQL, with a focus on governance, data integration, and interoperability.\n\n#J-18808-Ljbffr Socket.dev",
+            "salary": "",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/-9113292523429469905?p=1&pos=18&rgn=-1&cid=18065&ckey=skos&jobAge=151&relb=122&brelb=100&scr=1278.0977420000002&bscr=1047.6211&aq=743320362854880580&elckey=7970378374029153903",
+            "company": "Socket.dev",
+            "updated": "2026-08-15T00:00:00.0000000",
+            "id": -9113292523429469905
           },
           {
             "title": "Revenue Enablement Manager",
@@ -1002,10 +990,22 @@
             "salary": "$169k - $199k",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/751563014612051554?p=1&pos=20&rgn=-1&cid=18065&ckey=skos&jobAge=97&relb=122&brelb=100&scr=1292.76873&bscr=1059.6465&aq=2542537740067576620&elckey=-657864284409407028",
+            "link": "https://jooble.org/away/751563014612051554?p=1&pos=19&rgn=-1&cid=18065&ckey=skos&jobAge=103&relb=122&brelb=100&scr=1272.549548&bscr=1043.0734&aq=743320362854880580&elckey=7970378374029153903",
             "company": "Checkr",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 751563014612051554
+          },
+          {
+            "title": "Senior Metadata and Standards Specialist",
+            "location": "New York, NY",
+            "snippet": "&nbsp;...analysis and define mappings and crosswalks between local terminologies and reference ontologies\n\nDesign semantic models using RDF/OWL, <b>SKOS,</b> JSON‑LD, and related standards to enable machine‑interpretable, ontology‑driven data integration and reasoning\n\nIn collaboration...&nbsp;",
+            "salary": "$121.79k - $162.05k",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/7692464034551764242?p=1&pos=20&rgn=-1&cid=18065&ckey=skos&jobAge=46&relb=122&brelb=100&scr=1270.779572&bscr=1041.6226&aq=743320362854880580&elckey=7970378374029153903",
+            "company": "NYU Langone Health",
+            "updated": "2026-08-19T09:37:05.6030000",
+            "id": 7692464034551764242
           }
         ]
       }
@@ -1017,7 +1017,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl"
       ],
       "payload": {
-        "totalCount": 48,
+        "totalCount": 49,
         "jobs": [
           {
             "title": "Senior Knowledge Engineer",
@@ -1026,22 +1026,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/6861469901069050919?p=1&pos=1&rgn=-1&cid=18065&ckey=shacl&jobAge=25&relb=160&brelb=100&scr=1781.1928&bscr=1113.2455&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/6861469901069050919?p=1&pos=1&rgn=-1&cid=18065&ckey=shacl&jobAge=31&relb=160&brelb=100&scr=1775.53456&bscr=1109.7091&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Accenture",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 6861469901069050919
-          },
-          {
-            "title": "Executive Director-Ontology",
-            "location": "New York, NY",
-            "snippet": "&nbsp;...managing ontologies for real-world applicationsExpertise in Data and Financial service standards such as ISO 20022, OWL, RDF, SKOS, and <b>SHACL.</b>Experience with ontology and taxonomy development process and tools (e.g., Protégé, TopBraid Composer, PoolParty, etc.).Structured...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/-7407426251786010987?p=1&pos=2&rgn=-1&cid=18065&ckey=shacl&jobAge=49&relb=160&brelb=100&scr=1754.3643199999997&bscr=1096.4777&aq=-3341976165886739404&elckey=-6772383681518127701",
-            "company": "JP Morgan Chase",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": -7407426251786010987
           },
           {
             "title": "Ontologist, Product Knowledge",
@@ -1050,9 +1038,9 @@
             "salary": "$82.7k - $144.7k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/2843275558376594524?p=1&pos=3&rgn=-1&cid=18065&ckey=shacl&jobAge=121&relb=160&brelb=100&scr=1728.6134399999999&bscr=1080.3834&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/2843275558376594524?p=1&pos=2&rgn=-1&cid=18065&ckey=shacl&jobAge=7&relb=160&brelb=100&scr=1722.4616000000003&bscr=1076.5385&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Amazon",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 2843275558376594524
           },
           {
@@ -1062,22 +1050,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-6811009133562741509?p=1&pos=4&rgn=-1&cid=18065&ckey=shacl&jobAge=49&relb=160&brelb=100&scr=1683.0724799999998&bscr=1051.9203&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-6811009133562741509?p=1&pos=3&rgn=-1&cid=18065&ckey=shacl&jobAge=55&relb=160&brelb=100&scr=1704.7918399999999&bscr=1065.4949&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Celestar",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -6811009133562741509
-          },
-          {
-            "title": "Knowledge Modeler / Ontologist Manager",
-            "location": "Columbus, OH",
-            "snippet": "&nbsp;...iterationTechnical Contribution:Apply ontology governance standards: version control, change management, and quality gates (W3C compliance, <b>SHACL/</b>ShEx validation)Define and enforce Definition of Done criteria for ontology deliverables in collaboration with the senior teamApply...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/1661114951020680381?p=1&pos=5&rgn=-1&cid=18065&ckey=shacl&jobAge=97&relb=160&brelb=100&scr=1639.0846399999998&bscr=1024.4279&aq=-3341976165886739404&elckey=-6772383681518127701",
-            "company": "Accenture",
-            "updated": "2026-08-17T00:00:00.0000000",
-            "id": 1661114951020680381
           },
           {
             "title": "Senior Knowledge Graph Engineer",
@@ -1086,10 +1062,22 @@
             "salary": "$152k - $178.3k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/8405613803544479626?p=1&pos=6&rgn=-1&cid=18065&ckey=shacl&jobAge=49&relb=160&brelb=100&scr=1633.8821280000002&bscr=1021.17633&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/8405613803544479626?p=1&pos=4&rgn=-1&cid=18065&ckey=shacl&jobAge=55&relb=160&brelb=100&scr=1635.320208&bscr=1022.07513&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "The Coca-Cola Company",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 8405613803544479626
+          },
+          {
+            "title": "Knowledge Modeler / Ontologist Manager",
+            "location": "Columbus, OH",
+            "snippet": "&nbsp;...iterationTechnical Contribution:Apply ontology governance standards: version control, change management, and quality gates (W3C compliance, <b>SHACL/</b>ShEx validation)Define and enforce Definition of Done criteria for ontology deliverables in collaboration with the senior teamApply...&nbsp;",
+            "salary": "",
+            "source": "us.experteer.com",
+            "type": "",
+            "link": "https://jooble.org/away/1661114951020680381?p=1&pos=5&rgn=-1&cid=18065&ckey=shacl&jobAge=103&relb=160&brelb=100&scr=1633.31312&bscr=1020.8207&aq=-3743323000120867336&elckey=1855858976920433230",
+            "company": "Accenture",
+            "updated": "2026-08-17T00:00:00.0000000",
+            "id": 1661114951020680381
           },
           {
             "title": "Ontology Engineer (TS/SCI)",
@@ -1098,7 +1086,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/1577411543731915809?p=1&pos=7&rgn=-1&cid=18065&ckey=shacl&jobAge=97&relb=160&brelb=100&scr=1596.15664&bscr=997.5979&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/1577411543731915809?p=1&pos=6&rgn=-1&cid=18065&ckey=shacl&jobAge=103&relb=160&brelb=100&scr=1597.08928&bscr=998.1808&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Maxar Technologies",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 1577411543731915809
@@ -1110,7 +1098,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3918292969626529263?p=1&pos=8&rgn=-1&cid=18065&ckey=shacl&jobAge=97&relb=160&brelb=100&scr=1569.9580799999999&bscr=981.2238&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-3918292969626529263?p=1&pos=7&rgn=-1&cid=18065&ckey=shacl&jobAge=103&relb=160&brelb=100&scr=1564.7482400000001&bscr=977.96765&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Accenture",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -3918292969626529263
@@ -1122,7 +1110,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/118327414240191866?p=1&pos=9&rgn=-1&cid=18065&ckey=shacl&jobAge=97&relb=160&brelb=100&scr=1531.67552&bscr=957.2972&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/118327414240191866?p=1&pos=8&rgn=-1&cid=18065&ckey=shacl&jobAge=103&relb=160&brelb=100&scr=1531.890816&bscr=957.43176&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Accenture",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": 118327414240191866
@@ -1134,9 +1122,9 @@
             "salary": "$180k - $230k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3612818399149173342?p=1&pos=10&rgn=-1&cid=18065&ckey=shacl&jobAge=121&relb=160&brelb=100&scr=1524.2263999999998&bscr=952.6415&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-3612818399149173342?p=1&pos=9&rgn=-1&cid=18065&ckey=shacl&jobAge=7&relb=160&brelb=100&scr=1522.5339840000001&bscr=951.58374&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Samba TV",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -3612818399149173342
           },
           {
@@ -1146,9 +1134,9 @@
             "salary": "$150k - $180k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-2341283580121742361?p=1&pos=11&rgn=-1&cid=18065&ckey=shacl&jobAge=121&relb=160&brelb=100&scr=1500.9778399999998&bscr=938.11115&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-2341283580121742361?p=1&pos=10&rgn=-1&cid=18065&ckey=shacl&jobAge=7&relb=160&brelb=100&scr=1518.39456&bscr=948.9966&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Samba TV",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -2341283580121742361
           },
           {
@@ -1158,7 +1146,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/5524463066097662535?p=1&pos=12&rgn=-1&cid=18065&ckey=shacl&jobAge=49&relb=160&brelb=100&scr=1496.06432&bscr=935.0402&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/5524463066097662535?p=1&pos=11&rgn=-1&cid=18065&ckey=shacl&jobAge=55&relb=160&brelb=100&scr=1515.3705120000002&bscr=947.10657&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Honeywell",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 5524463066097662535
@@ -1170,34 +1158,10 @@
             "salary": "$225k - $260k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3899996907840266286?p=1&pos=13&rgn=-1&cid=18065&ckey=shacl&jobAge=97&relb=160&brelb=100&scr=1494.7003200000001&bscr=934.1877&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-3899996907840266286?p=1&pos=12&rgn=-1&cid=18065&ckey=shacl&jobAge=103&relb=160&brelb=100&scr=1490.93272&bscr=931.83295&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "The TCW Group",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -3899996907840266286
-          },
-          {
-            "title": "Senior Ontologist",
-            "location": "Laurel, MD",
-            "snippet": "&nbsp;...content\n\nExperience developing AI tools that use ontologies or knowledge graphs\n\nExperience with semantic validation languages (e.g., <b>SHACL,</b> SPIN)\n\nExperience with software version management using GIT\n\nExperience with machine learning, natural language processing, or the...&nbsp;",
-            "salary": "$100k",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/-6948961559042192301?p=1&pos=14&rgn=-1&cid=18065&ckey=shacl&jobAge=73&relb=126&brelb=100&scr=1462.080312&bscr=1160.3812&aq=-3341976165886739404&elckey=-6772383681518127701",
-            "company": "Johns Hopkins Applied Physics Lab",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": -6948961559042192301
-          },
-          {
-            "title": "Senior Consultant - Semantic Data & AI Engineering",
-            "location": "New York, NY",
-            "snippet": "&nbsp;...and manage data used for AI retrieval, model evaluation, inference, and analytics.Implement semantic-data quality controls, including <b>SHACL </b>validation, provenance, lineage, confidence scoring, and version management.Participate in graph-platform evaluations, proofs of...&nbsp;",
-            "salary": "",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/829950380025595511?p=1&pos=15&rgn=-1&cid=18065&ckey=shacl&jobAge=49&relb=160&brelb=100&scr=1457.4168&bscr=910.8855&aq=-3341976165886739404&elckey=-6772383681518127701",
-            "company": "Capco",
-            "updated": "2026-08-19T00:00:00.0000000",
-            "id": 829950380025595511
           },
           {
             "title": "Lead Ontologist",
@@ -1206,10 +1170,22 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-7332410142800011085?p=1&pos=16&rgn=-1&cid=18065&ckey=shacl&jobAge=97&relb=126&brelb=100&scr=1453.037922&bscr=1153.2047&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-7332410142800011085?p=1&pos=13&rgn=-1&cid=18065&ckey=shacl&jobAge=103&relb=126&brelb=100&scr=1470.6263880000001&bscr=1167.1638&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Black Canyon Consulting",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -7332410142800011085
+          },
+          {
+            "title": "Senior Ontologist",
+            "location": "Laurel, MD",
+            "snippet": "&nbsp;...content\n\nExperience developing AI tools that use ontologies or knowledge graphs\n\nExperience with semantic validation languages (e.g., <b>SHACL,</b> SPIN)\n\nExperience with software version management using GIT\n\nExperience with machine learning, natural language processing, or the...&nbsp;",
+            "salary": "$100k",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/-6948961559042192301?p=1&pos=14&rgn=-1&cid=18065&ckey=shacl&jobAge=79&relb=126&brelb=100&scr=1462.6493279999997&bscr=1160.8328&aq=-3743323000120867336&elckey=1855858976920433230",
+            "company": "Johns Hopkins Applied Physics Lab",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": -6948961559042192301
           },
           {
             "title": "Ontology Consultant",
@@ -1218,7 +1194,7 @@
             "salary": "$110k - $150k",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-440542189657856333?p=1&pos=17&rgn=-1&cid=18065&ckey=shacl&jobAge=73&relb=126&brelb=100&scr=1435.729806&bscr=1139.4681&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-440542189657856333?p=1&pos=15&rgn=-1&cid=18065&ckey=shacl&jobAge=79&relb=126&brelb=100&scr=1431.53955&bscr=1136.1425&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Enterprise Knowledge, LLC",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -440542189657856333
@@ -1230,7 +1206,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-8411722740427505705?p=1&pos=18&rgn=-1&cid=18065&ckey=shacl&jobAge=73&relb=160&brelb=100&scr=1415.4704000000002&bscr=884.669&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-8411722740427505705?p=1&pos=16&rgn=-1&cid=18065&ckey=shacl&jobAge=79&relb=160&brelb=100&scr=1411.04304&bscr=881.9019&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Dell Technologies",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -8411722740427505705
@@ -1242,7 +1218,7 @@
             "salary": "$48.75 - $53.75 per hour",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-6115316444780836856?p=1&pos=19&rgn=-1&cid=18065&ckey=shacl&jobAge=121&relb=126&brelb=100&scr=1370.03769&bscr=1087.3315&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-6115316444780836856?p=1&pos=17&rgn=-1&cid=18065&ckey=shacl&jobAge=127&relb=126&brelb=100&scr=1364.6761379999998&bscr=1083.0763&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "Cella",
             "updated": "2026-08-16T00:00:00.0000000",
             "id": -6115316444780836856
@@ -1254,10 +1230,34 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-6815332264736584466?p=1&pos=20&rgn=-1&cid=18065&ckey=shacl&jobAge=145&relb=126&brelb=100&scr=1367.5942979999998&bscr=1085.3923&aq=-3341976165886739404&elckey=-6772383681518127701",
+            "link": "https://jooble.org/away/-6815332264736584466?p=1&pos=18&rgn=-1&cid=18065&ckey=shacl&jobAge=151&relb=126&brelb=100&scr=1363.735422&bscr=1082.3297&aq=-3743323000120867336&elckey=1855858976920433230",
             "company": "West Coast Consulting",
             "updated": "2026-08-15T00:00:00.0000000",
             "id": -6815332264736584466
+          },
+          {
+            "title": "Executive Director-Ontology",
+            "location": "New York, NY",
+            "snippet": "&nbsp;...managing ontologies for real-world applications\nExpertise in Data and Financial service standards such as ISO 20022, OWL, RDF, SKOS, and <b>SHACL.</b>\nExperience with ontology and taxonomy development process and tools (e.g., Protégé, TopBraid Composer, PoolParty, etc.).\nStructured...&nbsp;",
+            "salary": "",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/-5134895412433470055?p=1&pos=19&rgn=-1&cid=18065&ckey=shacl&jobAge=127&relb=126&brelb=100&scr=1340.187156&bscr=1063.6406&aq=-3743323000120867336&elckey=1855858976920433230",
+            "company": "JPMorgan Chase & Co.",
+            "updated": "2026-08-16T00:00:00.0000000",
+            "id": -5134895412433470055
+          },
+          {
+            "title": "Manager, Data Analytics Consulting",
+            "location": "Austin, TX",
+            "snippet": "&nbsp;...stakeholders to secure funding and deliver AI products\n\nKnowledge of semantic technologies (Ontology, Knowledge Graphs, OWL, RDF, SPARQL, <b>SHACL)</b> is a strong plus\n\nExcellent communication and problem‑solving skills — able to translate complex technical concepts and business...&nbsp;",
+            "salary": "$160k - $200k",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/2139333150458610384?p=1&pos=20&rgn=-1&cid=18065&ckey=shacl&jobAge=70&relb=126&brelb=100&scr=1329.492276&bscr=1055.1526&aq=-3743323000120867336&elckey=1855858976920433230",
+            "company": "EPAM Systems Inc",
+            "updated": "2026-08-18T09:18:45.4870000",
+            "id": 2139333150458610384
           }
         ]
       }
@@ -1278,7 +1278,7 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-7332410142800011085?p=1&pos=1&rgn=-1&cid=18065&ckey=linkml&jobAge=97&relb=100&brelb=100&scr=1391.731&bscr=1391.731&aq=892312467771860020&elckey=550613756791074591",
+            "link": "https://jooble.org/away/-7332410142800011085?p=1&pos=1&rgn=-1&cid=18065&ckey=linkml&jobAge=103&relb=100&brelb=100&scr=1393.4858&bscr=1393.4858&aq=396011018951257230&elckey=9178856415229635522",
             "company": "Black Canyon Consulting",
             "updated": "2026-08-17T00:00:00.0000000",
             "id": -7332410142800011085
@@ -1290,7 +1290,7 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-6815332264736584466?p=1&pos=2&rgn=-1&cid=18065&ckey=linkml&jobAge=145&relb=100&brelb=100&scr=1269.4974&bscr=1269.4974&aq=892312467771860020&elckey=550613756791074591",
+            "link": "https://jooble.org/away/-6815332264736584466?p=1&pos=2&rgn=-1&cid=18065&ckey=linkml&jobAge=151&relb=100&brelb=100&scr=1268.225&bscr=1268.225&aq=396011018951257230&elckey=9178856415229635522",
             "company": "West Coast Consulting",
             "updated": "2026-08-15T00:00:00.0000000",
             "id": -6815332264736584466
@@ -1302,7 +1302,7 @@
             "salary": "$121.79k - $162.05k",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/7692464034551764242?p=1&pos=3&rgn=-1&cid=18065&ckey=linkml&jobAge=40&relb=100&brelb=100&scr=1171.8766&bscr=1171.8766&aq=892312467771860020&elckey=550613756791074591",
+            "link": "https://jooble.org/away/7692464034551764242?p=1&pos=3&rgn=-1&cid=18065&ckey=linkml&jobAge=46&relb=100&brelb=100&scr=1196.3497&bscr=1196.3497&aq=396011018951257230&elckey=9178856415229635522",
             "company": "NYU Langone Health",
             "updated": "2026-08-19T09:37:05.6030000",
             "id": 7692464034551764242
@@ -1314,7 +1314,7 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/-2274617886443138643?p=1&pos=4&rgn=-1&cid=18065&ckey=linkml&jobAge=121&relb=100&brelb=100&scr=1093.0562&bscr=1093.0562&aq=892312467771860020&elckey=550613756791074591",
+            "link": "https://jooble.org/away/-2274617886443138643?p=1&pos=4&rgn=-1&cid=18065&ckey=linkml&jobAge=127&relb=100&brelb=100&scr=1115.732&bscr=1115.732&aq=396011018951257230&elckey=9178856415229635522",
             "company": "Bridge Analytics",
             "updated": "2026-08-16T00:00:00.0000000",
             "id": -2274617886443138643
@@ -1329,7 +1329,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
       ],
       "payload": {
-        "totalCount": 699502,
+        "totalCount": 702878,
         "jobs": [
           {
             "title": "Semantic Map Frontend Engineer",
@@ -1338,7 +1338,7 @@
             "salary": "$75k - $300k",
             "source": "purehealthjobs.com",
             "type": "",
-            "link": "https://jooble.org/away/-543409718035369407?p=1&pos=1&rgn=-1&cid=18065&ckey=semantic+web&jobAge=6&brelb=10&scr=1008.0002&bscr=1008.0002&aq=1885637262203106526&elckey=7027697241827380366",
+            "link": "https://jooble.org/away/-543409718035369407?p=1&pos=1&rgn=-1&cid=18065&ckey=semantic+web&jobAge=12&brelb=10&scr=996.294&bscr=996.294&aq=-6206586333182882995&elckey=-1410046174478159991",
             "company": "Tensor",
             "updated": "2026-08-20T19:21:41.6930000",
             "id": -543409718035369407
@@ -1350,7 +1350,7 @@
             "salary": "",
             "source": "purehealthjobs.com",
             "type": "",
-            "link": "https://jooble.org/away/-9059097602985211488?p=1&pos=2&rgn=-1&cid=18065&ckey=semantic+web&jobAge=6&brelb=10&scr=987.45&bscr=987.45&aq=1885637262203106526&elckey=7027697241827380366",
+            "link": "https://jooble.org/away/-9059097602985211488?p=1&pos=2&rgn=-1&cid=18065&ckey=semantic+web&jobAge=12&brelb=10&scr=974.65015&bscr=974.65015&aq=-6206586333182882995&elckey=-1410046174478159991",
             "company": "Tensor",
             "updated": "2026-08-20T19:21:02.0300000",
             "id": -9059097602985211488
@@ -1362,9 +1362,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/1952524881510152154?ckey=semantic+web&rgn=-1&pos=3&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=643.729&scr=643.729",
+            "link": "https://jooble.org/desc/1952524881510152154?ckey=semantic+web&rgn=-1&pos=3&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=632.87585&scr=632.87585",
             "company": "Collabera",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 1952524881510152154
           },
           {
@@ -1374,9 +1374,9 @@
             "salary": "$174k - $253k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/7122400497427686261?p=1&pos=4&rgn=-1&cid=18065&ckey=semantic+web&jobAge=121&brelb=100&scr=561.92395&bscr=561.92395&aq=1885637262203106526&elckey=7027697241827380366",
+            "link": "https://jooble.org/away/7122400497427686261?p=1&pos=4&rgn=-1&cid=18065&ckey=semantic+web&jobAge=7&brelb=100&scr=550.9571&bscr=550.9571&aq=-6206586333182882995&elckey=-1410046174478159991",
             "company": "Google",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 7122400497427686261
           },
           {
@@ -1386,7 +1386,7 @@
             "salary": "$65k - $90k",
             "source": "Lensa.com",
             "type": "",
-            "link": "https://jooble.org/away/8481144124446066328?p=1&pos=5&rgn=-1&cid=18065&ckey=semantic+web&jobAge=73&brelb=10&scr=538.6259&bscr=538.6259&aq=1885637262203106526&elckey=7027697241827380366",
+            "link": "https://jooble.org/away/8481144124446066328?p=1&pos=5&rgn=-1&cid=18065&ckey=semantic+web&jobAge=79&brelb=10&scr=532.98083&bscr=532.98083&aq=-6206586333182882995&elckey=-1410046174478159991",
             "company": "European Dynamics",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": 8481144124446066328
@@ -1398,9 +1398,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-4187732674385508654?ckey=semantic+web&rgn=-1&pos=6&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=454.82986&scr=454.82986",
+            "link": "https://jooble.org/desc/-4187732674385508654?ckey=semantic+web&rgn=-1&pos=6&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=446.71924&scr=446.71924",
             "company": "Bristol",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -4187732674385508654
           },
           {
@@ -1410,9 +1410,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-8783687835028108444?ckey=semantic+web&rgn=-1&pos=7&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=436.5326&scr=436.5326",
+            "link": "https://jooble.org/desc/-8783687835028108444?ckey=semantic+web&rgn=-1&pos=7&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=431.3616&scr=431.3616",
             "company": "Jobsbridge",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -8783687835028108444
           },
           {
@@ -1422,9 +1422,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-1692791273842911589?ckey=semantic+web&rgn=-1&pos=8&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=436.18777&scr=436.18777",
+            "link": "https://jooble.org/desc/-1692791273842911589?ckey=semantic+web&rgn=-1&pos=8&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=431.13086&scr=431.13086",
             "company": "Inent Inc",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -1692791273842911589
           },
           {
@@ -1434,9 +1434,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/5561884105063907809?ckey=semantic+web&rgn=-1&pos=9&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=430.30756&scr=430.30756",
+            "link": "https://jooble.org/desc/5561884105063907809?ckey=semantic+web&rgn=-1&pos=9&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=426.51572&scr=426.51572",
             "company": "Boston Technology Corporation",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 5561884105063907809
           },
           {
@@ -1446,7 +1446,7 @@
             "salary": "$79.66k - $133.12k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-8576713112347416083?p=1&pos=10&rgn=-1&cid=18065&ckey=semantic+web&jobAge=49&brelb=100&scr=425.85663&bscr=425.85663&aq=1885637262203106526&elckey=7027697241827380366",
+            "link": "https://jooble.org/away/-8576713112347416083?p=1&pos=10&rgn=-1&cid=18065&ckey=semantic+web&jobAge=55&scr=422.99344&bscr=422.99344&aq=-6206586333182882995&elckey=-1410046174478159991",
             "company": "ESRI",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -8576713112347416083
@@ -1458,9 +1458,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-1727178823501722742?ckey=semantic+web&rgn=-1&pos=11&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=423.49802&scr=423.49802",
+            "link": "https://jooble.org/desc/-1727178823501722742?ckey=semantic+web&rgn=-1&pos=11&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=415.9513&scr=415.9513",
             "company": "Gcommerce Solutions",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -1727178823501722742
           },
           {
@@ -1470,9 +1470,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/3131710707751673251?ckey=semantic+web&rgn=-1&pos=12&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=415.03586&scr=415.03586",
+            "link": "https://jooble.org/desc/3131710707751673251?ckey=semantic+web&rgn=-1&pos=12&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=408.7568&scr=408.7568",
             "company": "360 IT Professionals Inc.",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 3131710707751673251
           },
           {
@@ -1482,9 +1482,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/2644717861549228263?ckey=semantic+web&rgn=-1&pos=13&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=414.12958&scr=414.12958",
+            "link": "https://jooble.org/desc/2644717861549228263?ckey=semantic+web&rgn=-1&pos=13&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=407.21255&scr=407.21255",
             "company": "Opendatajobs",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 2644717861549228263
           },
           {
@@ -1494,9 +1494,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-1633919601423602464?ckey=semantic+web&rgn=-1&pos=14&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=408.8358&scr=408.8358",
+            "link": "https://jooble.org/desc/-1633919601423602464?ckey=semantic+web&rgn=-1&pos=14&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=404.4432&scr=404.4432",
             "company": "Jobsbridge",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -1633919601423602464
           },
           {
@@ -1506,10 +1506,22 @@
             "salary": "$500,000 per unit",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/6482569573868403115?ckey=semantic+web&rgn=-1&pos=15&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=407.21945&scr=407.21945",
+            "link": "https://jooble.org/desc/6482569573868403115?ckey=semantic+web&rgn=-1&pos=15&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=403.50385&scr=403.50385",
             "company": "Diligencesquared",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 6482569573868403115
+          },
+          {
+            "title": "Front End Developer-----Need GC and USC",
+            "location": "Southfield, MI",
+            "snippet": "&nbsp;...of our internal development team. We are looking for a Front-end <b>web </b>developer skilled in building interfaces to rich internet...&nbsp;&nbsp;...a focus on usability optimization \r\n\r\n A solid understanding of <b>semantic </b>markup and WCAG accessibility guidelines. \r\n Ability to communicate...&nbsp;",
+            "salary": "",
+            "source": "grabjobs.co",
+            "type": "Full-time",
+            "link": "https://jooble.org/desc/-8167136404127786799?ckey=semantic+web&rgn=-1&pos=16&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=394.78665&scr=394.78665",
+            "company": "Usm Corporation",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": -8167136404127786799
           },
           {
             "title": "Senior UX/UI Developer",
@@ -1518,9 +1530,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/2637001938359893038?ckey=semantic+web&rgn=-1&pos=16&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=401.48944&scr=401.48944",
+            "link": "https://jooble.org/desc/2637001938359893038?ckey=semantic+web&rgn=-1&pos=17&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=394.64688&scr=394.64688",
             "company": "Futurewave Systems",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 2637001938359893038
           },
           {
@@ -1530,22 +1542,10 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/1295329653736665603?ckey=semantic+web&rgn=-1&pos=17&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=400.3497&scr=400.3497",
+            "link": "https://jooble.org/desc/1295329653736665603?ckey=semantic+web&rgn=-1&pos=18&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=392.81726&scr=392.81726",
             "company": "Bluestone",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 1295329653736665603
-          },
-          {
-            "title": "Front End Developer-----Need GC and USC",
-            "location": "Southfield, MI",
-            "snippet": "&nbsp;...of our internal development team. We are looking for a Front-end <b>web </b>developer skilled in building interfaces to rich internet...&nbsp;&nbsp;...a focus on usability optimization \r\n\r\n A solid understanding of <b>semantic </b>markup and WCAG accessibility guidelines. \r\n Ability to communicate...&nbsp;",
-            "salary": "",
-            "source": "grabjobs.co",
-            "type": "Full-time",
-            "link": "https://jooble.org/desc/-8167136404127786799?ckey=semantic+web&rgn=-1&pos=18&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=397.74997&scr=397.74997",
-            "company": "Usm Corporation",
-            "updated": "2026-08-20T00:00:00.0000000",
-            "id": -8167136404127786799
           },
           {
             "title": "Web Developer, Marketing Site",
@@ -1554,9 +1554,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/4872951858587818664?ckey=semantic+web&rgn=-1&pos=19&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=394.98422&scr=394.98422",
+            "link": "https://jooble.org/desc/4872951858587818664?ckey=semantic+web&rgn=-1&pos=19&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=388.62646&scr=388.62646",
             "company": "Sierra Limited",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 4872951858587818664
           },
           {
@@ -1566,9 +1566,9 @@
             "salary": "",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/-3023224842219451195?ckey=semantic+web&rgn=-1&pos=20&groupId=44427&elckey=7027697241827380366&p=1&aq=1885637262203106526&cid=18065&jobAge=25&brelb=115&bscr=385.7234&scr=385.7234",
+            "link": "https://jooble.org/desc/-3023224842219451195?ckey=semantic+web&rgn=-1&pos=20&groupId=44427&elckey=-1410046174478159991&p=1&aq=-6206586333182882995&cid=18065&jobAge=7&brelb=115&bscr=382.9857&scr=382.9857",
             "company": "Vtech Solution Inc",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -3023224842219451195
           }
         ]
@@ -1581,7 +1581,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
       ],
       "payload": {
-        "totalCount": 944830,
+        "totalCount": 949122,
         "jobs": [
           {
             "title": "Knowledge Graph Engineer",
@@ -1590,7 +1590,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/5393702244665647385?p=1&pos=1&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=150&brelb=100&scr=14195.277&bscr=9463.518&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/5393702244665647385?p=1&pos=1&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=150&brelb=100&scr=14129.2155&bscr=9419.477&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "SRI Tech",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 5393702244665647385
@@ -1602,7 +1602,7 @@
             "salary": "$200k - $300k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/3575499841469767437?p=1&pos=2&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=25&relb=150&brelb=100&scr=13930.9275&bscr=9287.285&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/3575499841469767437?p=1&pos=2&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=31&relb=150&brelb=100&scr=13872.437999999998&bscr=9248.292&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Point72",
             "updated": "2026-08-20T00:00:00.0000000",
             "id": 3575499841469767437
@@ -1614,22 +1614,10 @@
             "salary": "$152k - $178.3k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/8405613803544479626?p=1&pos=3&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=150&brelb=100&scr=13685.242500000002&bscr=9123.495&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/8405613803544479626?p=1&pos=3&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=150&brelb=100&scr=13707.8295&bscr=9138.553&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "The Coca-Cola Company",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 8405613803544479626
-          },
-          {
-            "title": "Knowledge Graph Engineer / Ontologist",
-            "location": "Hartford, CT",
-            "snippet": "&nbsp;...to achieve your goals - and to help others accomplish theirs, too. Join our team as we help shape the future. The Ontologist (<b>Knowledge Graph </b>Engineer) is responsible for designing, implementing, and operationalizing enterprise semantic models, ontologies, and knowledge...&nbsp;",
-            "salary": "$156k - $234k",
-            "source": "us.experteer.com",
-            "type": "",
-            "link": "https://jooble.org/away/3995211202574607996?p=1&pos=4&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=145&relb=150&brelb=100&scr=13358.9055&bscr=8905.937&aq=6587885460289322599&elckey=-4982470451508393783",
-            "company": "The Hartford Financial Services Group",
-            "updated": "2026-08-15T00:00:00.0000000",
-            "id": 3995211202574607996
           },
           {
             "title": "Senior Knowledge Graph Engineer",
@@ -1638,22 +1626,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/714744204502819072?p=1&pos=5&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=121&relb=150&brelb=100&scr=13235.9715&bscr=8823.981&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/714744204502819072?p=1&pos=4&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=7&relb=150&brelb=100&scr=13185.689999999997&bscr=8790.46&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Labur",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 714744204502819072
-          },
-          {
-            "title": "Machine Learning Engineer, Knowledge Graph Intelligence",
-            "location": "United States",
-            "snippet": " A Career with point72’s Surveillance team \r\n Point72’s Surveillance team sets the industry standard for intelligence-driven surveillance by proactively identifying, monitoring, and assessing various sources of compliance risk using proprietary tools and specialized tradecraft...",
-            "salary": "$175k - $250k",
-            "source": "grabjobs.co",
-            "type": "Full-time",
-            "link": "https://jooble.org/desc/-5936281363808777919?ckey=knowledge+graph&rgn=-1&pos=6&elckey=-4982470451508393783&p=1&aq=6587885460289322599&cid=18065&jobAge=25&relb=175&brelb=115&bscr=8444.707&scr=12850.641086956522",
-            "company": "Point72",
-            "updated": "2026-08-20T00:00:00.0000000",
-            "id": -5936281363808777919
           },
           {
             "title": "Local POI Knowledge Graph Engineer",
@@ -1662,10 +1638,22 @@
             "salary": "$142k - $342k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-7170289324562985634?p=1&pos=7&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=73&relb=150&brelb=100&scr=12843.9525&bscr=8562.635&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-7170289324562985634?p=1&pos=5&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=79&relb=150&brelb=100&scr=12864.542999999998&bscr=8576.362&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "News Break",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -7170289324562985634
+          },
+          {
+            "title": "Machine Learning Engineer, Knowledge Graph Intelligence",
+            "location": "United States",
+            "snippet": " A Career with point72’s Surveillance team \r\n Point72’s Surveillance team sets the industry standard for intelligence-driven surveillance by proactively identifying, monitoring, and assessing various sources of compliance risk using proprietary tools and specialized tradecraft...",
+            "salary": "$175k - $250k",
+            "source": "grabjobs.co",
+            "type": "Full-time",
+            "link": "https://jooble.org/desc/-5936281363808777919?ckey=knowledge+graph&rgn=-1&pos=6&elckey=5026530205895617476&p=1&aq=-8631751305704792533&cid=18065&jobAge=7&relb=175&brelb=115&bscr=8443.332&scr=12848.548695652175",
+            "company": "Point72",
+            "updated": "2026-08-21T00:00:00.0000000",
+            "id": -5936281363808777919
           },
           {
             "title": "Principal Presales Consultant - Knowledge Graph",
@@ -1674,7 +1662,7 @@
             "salary": "$135.7k - $250k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3833707079132185685?p=1&pos=8&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=150&brelb=100&scr=12781.3275&bscr=8520.885&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-3833707079132185685?p=1&pos=7&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=150&brelb=100&scr=12803.021999999999&bscr=8535.348&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Mendix",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -3833707079132185685
@@ -1686,9 +1674,9 @@
             "salary": "$150k - $180k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-2341283580121742361?p=1&pos=9&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=121&relb=150&brelb=100&scr=12635.53125&bscr=8423.6875&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-2341283580121742361?p=1&pos=8&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=7&relb=150&brelb=100&scr=12655.515&bscr=8437.01&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Samba TV",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -2341283580121742361
           },
           {
@@ -1698,7 +1686,7 @@
             "salary": "$150k - $220k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-7646358753280371557?p=1&pos=10&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=150&brelb=100&scr=12618.024&bscr=8412.016&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-7646358753280371557?p=1&pos=9&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=150&brelb=100&scr=12559.302&bscr=8372.868&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Avathon",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -7646358753280371557
@@ -1710,7 +1698,7 @@
             "salary": "$120k - $250k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3141337467980588021?p=1&pos=11&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=150&brelb=100&scr=12529.876500000002&bscr=8353.251&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-3141337467980588021?p=1&pos=10&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=150&brelb=100&scr=12548.7675&bscr=8365.845&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Point72",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": -3141337467980588021
@@ -1722,22 +1710,22 @@
             "salary": "$180k - $230k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-3612818399149173342?p=1&pos=12&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=121&relb=150&brelb=100&scr=12420.366000000002&bscr=8280.244&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-3612818399149173342?p=1&pos=11&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=7&relb=150&brelb=100&scr=12345.264&bscr=8230.176&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Samba TV",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -3612818399149173342
           },
           {
             "title": "Platform Product Manager, Ontology & Knowledge Graph",
-            "location": "Edina, MN",
+            "location": "Centennial, CO",
             "snippet": "&nbsp;...role, you will independently own defined capabilities within the <b>Knowledge </b>& Semantic Platform that enable AI-powered products and...&nbsp;&nbsp;...operating layer beneath the platform, including ontology, knowledge <b>graph,</b> metadata, entity relationships, taxonomy, and semantic models....&nbsp;",
             "salary": "$77.4k - $135.4k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-7564201774508593205?p=1&pos=13&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=150&brelb=100&scr=12133.642049999999&bscr=8089.0947&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/5833315476263049986?p=1&pos=12&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=150&brelb=100&scr=12095.214&bscr=8063.476&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Vizient",
             "updated": "2026-08-19T00:00:00.0000000",
-            "id": -7564201774508593205
+            "id": 5833315476263049986
           },
           {
             "title": "Software Engineer (L5), Ads Foundations Knowledge Graph",
@@ -1746,9 +1734,9 @@
             "salary": "$100k",
             "source": "grabjobs.co",
             "type": "Full-time",
-            "link": "https://jooble.org/desc/5811275786647574104?ckey=knowledge+graph&rgn=-1&pos=14&elckey=-4982470451508393783&p=1&aq=6587885460289322599&cid=18065&jobAge=25&relb=175&brelb=115&bscr=7881.028&scr=11992.868695652176",
+            "link": "https://jooble.org/desc/5811275786647574104?ckey=knowledge+graph&rgn=-1&pos=13&elckey=5026530205895617476&p=1&aq=-8631751305704792533&cid=18065&jobAge=7&relb=175&brelb=115&bscr=7887.77&scr=12003.128260869566",
             "company": "Netflix",
-            "updated": "2026-08-20T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": 5811275786647574104
           },
           {
@@ -1758,7 +1746,7 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-8411722740427505705?p=1&pos=15&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=73&relb=150&brelb=100&scr=11842.6665&bscr=7895.111&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-8411722740427505705?p=1&pos=14&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=79&relb=150&brelb=100&scr=11847.096000000001&bscr=7898.064&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Dell Technologies",
             "updated": "2026-08-18T00:00:00.0000000",
             "id": -8411722740427505705
@@ -1770,9 +1758,9 @@
             "salary": "$125.9k - $247.9k",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-2914059964150426451?p=1&pos=16&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=121&relb=150&brelb=100&scr=11749.586400000002&bscr=7833.0576&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-2914059964150426451?p=1&pos=15&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=7&relb=150&brelb=100&scr=11765.055&bscr=7843.37&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "BTI360",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -2914059964150426451
           },
           {
@@ -1782,34 +1770,10 @@
             "salary": "",
             "source": "us.experteer.com",
             "type": "",
-            "link": "https://jooble.org/away/-2399201860873827861?p=1&pos=17&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=121&relb=150&brelb=100&scr=11678.79855&bscr=7785.8657&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/-2399201860873827861?p=1&pos=16&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=7&relb=150&brelb=100&scr=11634.4329&bscr=7756.2886&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "Mendix",
-            "updated": "2026-08-16T00:00:00.0000000",
+            "updated": "2026-08-21T00:00:00.0000000",
             "id": -2399201860873827861
-          },
-          {
-            "title": "Knowledge Graph Ontology Engineer",
-            "location": "Chicago, IL",
-            "snippet": "Accenture is seeking an experienced <b>Knowledge </b>Modeler / Ontologist to design and govern enterprise ontologies for knowledge <b>graph </b>initiatives. You will work with business stakeholders, data engineering, and AI/ML teams to translate domain concepts into rigorous semantic...&nbsp;",
-            "salary": "",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/-6682555431363926224?p=1&pos=18&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=73&relb=122&brelb=100&scr=11165.82064&bscr=9152.312&aq=6587885460289322599&elckey=-4982470451508393783",
-            "company": "Accenture",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": -6682555431363926224
-          },
-          {
-            "title": "Senior Knowledge Graph Architect",
-            "location": "Atlanta, GA",
-            "snippet": "The Coca-Cola Company is seeking a Senior Manager - Ontology and <b>Graph </b>Modeling in Atlanta to lead ontology, taxonomy, and graph model...&nbsp;&nbsp;...pipelines connecting diverse data sources to a unified <b>knowledge </b>graph.\nThis individual contributor role emphasizes hands-on technical...&nbsp;",
-            "salary": "",
-            "source": "appcast.io",
-            "type": "",
-            "link": "https://jooble.org/away/7557607693712237169?p=1&pos=19&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=73&relb=122&brelb=100&scr=11132.63908&bscr=9125.114&aq=6587885460289322599&elckey=-4982470451508393783",
-            "company": "Coca-Cola HBC",
-            "updated": "2026-08-18T00:00:00.0000000",
-            "id": 7557607693712237169
           },
           {
             "title": "GenAI Knowledge Graph Engineer",
@@ -1818,10 +1782,46 @@
             "salary": "",
             "source": "appcast.io",
             "type": "",
-            "link": "https://jooble.org/away/3039721725519979518?p=1&pos=20&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=49&relb=122&brelb=100&scr=11131.653320000001&bscr=9124.306&aq=6587885460289322599&elckey=-4982470451508393783",
+            "link": "https://jooble.org/away/3039721725519979518?p=1&pos=17&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=55&relb=122&brelb=100&scr=11138.679300000002&bscr=9130.065&aq=-8631751305704792533&elckey=5026530205895617476",
             "company": "McKinsey & Company",
             "updated": "2026-08-19T00:00:00.0000000",
             "id": 3039721725519979518
+          },
+          {
+            "title": "Knowledge Graph Ontology Engineer",
+            "location": "Chicago, IL",
+            "snippet": "Accenture is seeking an experienced <b>Knowledge </b>Modeler / Ontologist to design and govern enterprise ontologies for knowledge <b>graph </b>initiatives. You will work with business stakeholders, data engineering, and AI/ML teams to translate domain concepts into rigorous semantic...&nbsp;",
+            "salary": "",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/-6682555431363926224?p=1&pos=18&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=79&relb=122&brelb=100&scr=11129.630559999998&bscr=9122.648&aq=-8631751305704792533&elckey=5026530205895617476",
+            "company": "Accenture",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": -6682555431363926224
+          },
+          {
+            "title": "Senior Knowledge Graph Ontologist",
+            "location": "Detroit, MI",
+            "snippet": "Accenture is seeking a <b>Knowledge </b>Modeler / Ontologist to design and govern domain ontologies for enterprise knowledge <b>graphs.</b> You will lead the ontology lifecycle, align models with business goals, and collaborate with data engineering and AI/ML teams.\nYou will work in...&nbsp;",
+            "salary": "",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/1513256397869548102?p=1&pos=19&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=79&relb=122&brelb=100&scr=11106.78362&bscr=9103.921&aq=-8631751305704792533&elckey=5026530205895617476",
+            "company": "Accenture",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": 1513256397869548102
+          },
+          {
+            "title": "Senior Knowledge Graph Architect",
+            "location": "Atlanta, GA",
+            "snippet": "The Coca-Cola Company is seeking a Senior Manager - Ontology and <b>Graph </b>Modeling in Atlanta to lead ontology, taxonomy, and graph model...&nbsp;&nbsp;...pipelines connecting diverse data sources to a unified <b>knowledge </b>graph.\nThis individual contributor role emphasizes hands-on technical...&nbsp;",
+            "salary": "",
+            "source": "appcast.io",
+            "type": "",
+            "link": "https://jooble.org/away/7557607693712237169?p=1&pos=20&rgn=-1&cid=18065&ckey=knowledge+graph&jobAge=79&relb=122&brelb=100&scr=11071.518299999998&bscr=9075.015&aq=-8631751305704792533&elckey=5026530205895617476",
+            "company": "Coca-Cola HBC",
+            "updated": "2026-08-18T00:00:00.0000000",
+            "id": 7557607693712237169
           }
         ]
       }
