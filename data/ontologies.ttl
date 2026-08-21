@@ -2810,6 +2810,7 @@
 
 <https://openknowledgegraphs.com/resource/creative-commons-rights-expression-language/> a okg:Ontology ;
     rdfs:label "Creative Commons Rights Expression Language" ;
+    okg:alias "ccREL" ;
     okg:category okg:TechnologyWeb ;
     okg:homepage <https://wiki.creativecommons.org/wiki/CC_REL> ;
     okg:namespaceURI <http://creativecommons.org/ns#> ;

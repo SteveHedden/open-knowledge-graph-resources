@@ -590,9 +590,9 @@
     okg:description "graph database management system implemented in C" ;
     okg:hasLicense okg:License_Server_Side_Public_License_Q58531884 ;
     okg:homepage <https://www.falkordb.com/> ;
-    okg:latestVersion "4.20.3" ;
+    okg:latestVersion "4.20.4" ;
     okg:programmingLanguage "C" ;
-    okg:releaseDate "2026-08-13"^^xsd:date ;
+    okg:releaseDate "2026-08-20"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/FalkorDB/FalkorDB> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
@@ -658,8 +658,8 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://flur.ee> ;
-    okg:latestVersion "4.1.5" ;
-    okg:releaseDate "2026-08-11"^^xsd:date ;
+    okg:latestVersion "4.1.6" ;
+    okg:releaseDate "2026-08-20"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/fluree/db> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -945,10 +945,10 @@
     okg:description "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_NoDerivs_4_0_International_Q36795408 ;
     okg:homepage <https://jesstalisman-ia.github.io/intentional-arrangement-skos/> ;
-    okg:latestVersion "0.6.0" ;
+    okg:latestVersion "0.7.0" ;
     okg:programmingLanguage "JavaScript",
         "Python" ;
-    okg:releaseDate "2026-08-18"^^xsd:date ;
+    okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/jesstalisman-ia/intentional-arrangement-skos> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1212,9 +1212,9 @@
     okg:description "The low-code Knowledge Graph application platform. Apache license." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://atomgraph.github.io/LinkedDataHub/> ;
-    okg:latestVersion "5.9.0" ;
+    okg:latestVersion "5.9.1" ;
     okg:programmingLanguage "XSLT" ;
-    okg:releaseDate "2026-08-18"^^xsd:date ;
+    okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/AtomGraph/LinkedDataHub> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1563,7 +1563,7 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.12.0" ;
+    okg:latestVersion "0.12.5" ;
     okg:programmingLanguage "TypeScript" ;
     okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
@@ -2414,8 +2414,8 @@
     okg:description "Open-source framework for building knowledge graphs from unstructured data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://hawksight-ai.github.io/semantica/> ;
-    okg:latestVersion "0.6.5" ;
-    okg:releaseDate "2026-08-11"^^xsd:date ;
+    okg:latestVersion "0.6.6" ;
+    okg:releaseDate "2026-08-20"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/semantica-agi/semantica> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -3121,7 +3121,9 @@
     okg:description "Grakn is an open-source, distributed knowledge graph database for knowledge-oriented systems" ;
     okg:hasLicense okg:License_Mozilla_Public_License_version_2_0_Q25428413 ;
     okg:homepage <https://typedb.com/> ;
+    okg:latestVersion "3.12.3" ;
     okg:programmingLanguage "Java" ;
+    okg:releaseDate "2026-08-13"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/typedb/typedb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
@@ -3824,9 +3826,9 @@ okg:License_open_access_Q232932 a okg:License ;
     okg:description "Browse ontologies, controlled vocabularies, taxonomies, and semantic software from a daily-refreshed RDF catalog." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://openknowledgegraphs.com/> ;
-    okg:latestVersion "0.1.0" ;
+    okg:latestVersion "0.2.0" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/ndoli/> ;
-    okg:releaseDate "2026-07-03"^^xsd:date ;
+    okg:releaseDate "2026-08-19"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/SteveHedden/open-knowledge-graphs> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
