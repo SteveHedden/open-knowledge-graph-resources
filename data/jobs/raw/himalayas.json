@@ -12,7 +12,7 @@
         "updatedAt": 1787162066,
         "offset": 0,
         "limit": 20,
-        "totalCount": 33,
+        "totalCount": 29,
         "jobs": [
           {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
@@ -186,6 +186,44 @@
             "guid": "https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer"
           },
           {
+            "title": "Staff Applied Scientist - Knowledge Graphs & AI",
+            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
+            "companyName": "Outreach.io",
+            "companySlug": "outreach-io",
+            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "India"
+            ],
+            "timezoneRestrictions": [
+              5.5
+            ],
+            "categories": [
+              "Knowledge-Graph-Engineering",
+              "AI-Research",
+              "Machine-Learning",
+              "Data-Science",
+              "Staff-Applied-Scientist",
+              "Applied-AI-Scientist",
+              "Senior-Applied-Scientist",
+              "Senior-AI-Scientist",
+              "Applied-Sciences"
+            ],
+            "parentCategories": [],
+            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div>\n<div><h3><strong>About the job:</strong></h3></div>\n<div><div><ul>\n<li>We are looking for an Applied Scientist to join a dynamic and innovative AI platform team that is pushing the boundaries of what's possible in sales execution. If you are passionate about applying cutting-edge research in knowledge graphs and reasoning systems to real-world problems at scale, this is an exceptional opportunity to shape a core piece of Outreach's AI architecture from the ground up. </li>\n<li>Our team is building a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph powers contextual reasoning across the platform, driving next-best-action recommendations, deal risk signals, coaching suggestions, and competitive intelligence. In this pivotal role, you will design the underlying representations, extraction pipelines, and reasoning layers that make this possible, working closely with cross-functional engineering and product teams to deliver innovative, scalable, and reliable AI capabilities with direct impact on revenue outcomes. </li>\n</ul></div></div>\n</div><h3>Your Daily Adventures Will Include:</h3><ul><div><div>\n<h3><strong>Key Responsibilities:</strong></h3>\n<div>\n<li>Knowledge Graph Design &amp; Construction: Architect and evolve per-tenant knowledge graph schemas, including entity resolution, temporal modeling, and ontology design tailored to sales execution domains.</li>\n<li>Information Extraction: Architect NLP pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, and event detection.</li>\n<li>Contextual Reasoning &amp; Recommendation: Design reasoning and inference layers over the knowledge graph to power next-best-action suggestions, deal risk scoring, coaching recommendations, and competitive intelligence surfaces.</li>\n<li>Representation Learning: Design and train graph-based models (GNNs, relational embeddings, link prediction) over heterogeneous, multi-relational graph structures to support downstream reasoning and retrieval tasks. Diagnose and address embedding quality issues including cold-start entities, and temporal drift. </li>\n<li>Domain Modeling: Formalize sales execution concepts such as deal stages, buyer engagement patterns, rep behaviors, and account health, into structured representations that ground the platform's AI capabilities. Extract ontology structure. Lead ontology versioning and migration. </li>\n<li>Cross-functional Collaboration: Partner with engineering, product, and data teams to bring models from prototype to production, ensuring reliability and measurable impact at scale. </li>\n</div>\n</div></div></ul><h3>Our Vision of You:</h3><ul><div><div><div>\n<div><h3><strong>Qualifications:</strong></h3></div>\n<div><div><div><div>\n<li>PhD in a relevant field such as Computer Science, NLP, Machine Learning, or a related discipline with a focus on knowledge representation and reasoning, information extraction and relationship extraction, graph neural networks, recommendation systems, or conversation AI and dialogue systems.</li>\n<li>Strong engineering fundamentals. You can write production-quality code, not just prototype notebooks. Proficiency in Python; and graph databases or query languages (e.g., Neo4j, SPARQL, Cypher) is required.</li>\n<li>Comfort with ambiguity. You can take a vague product goal and decompose it into concrete technical problems. You don't need a fully scoped spec to start making progress.</li>\n<li>A track record of building things: whether that's research prototypes that went beyond the paper, open-source contributions, or side projects that required real systems thinking. You understand the gap between a research prototype and a reliable production system, such as monitoring, data drift, latency, and operational excellence.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n<li>Strong communication skills with the ability to translate research concepts into product impact for cross-functional audiences.</li>\n<li>Experience mentoring or leading technical work. You've helped junior team membersgrow and have driven cross-team technical decisions.</li>\n</div></div></div></div>\n</div></div></div></ul><h3>Nice to Have: </h3><ul><div><div>\n<li>2+ years of hands-on experience applying knowledge graphs or graph-based learning methods to real-world data in a production setting.</li>\n<li>Strong fundamentals in at least two of: knowledge graph construction, information extraction, graph neural networks, or recommender systems. </li>\n<li>Experience working with large-scale unstructured text data (conversational transcripts, email, or similar)</li>\n<li>Experience with probabilistic graphical models, conversational AI, or sales/revenue domain data</li>\n<li>Published research at top-tier venues</li>\n</div></div></ul><h3>Why Join Us? </h3><ul><div><div>\n<li>Greenfield Architecture: Shape the design of a core AI system from the ground up, with the latitude to make foundational technical decisions that define the platform.</li>\n<li>Depth That Matters: This role genuinely requires PhD-level thinking; you will tackle problems in entity resolution, temporal reasoning, and graph learning that demand it.</li>\n<li>Applied Impact: Work with real production feedback loops and millions of sales interactions, not just benchmarks; see your models change how thousands of teams sell.</li>\n<li>High Leverage, Low Bureaucracy: Join a small, senior team where your contributions are visible, your ideas ship fast, and you have direct access to leadership.</li>\n<li>Career Growth: Opportunity to lead initiatives and mentor engineers.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1783365112,
+            "expiryDate": 1788549111,
+            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai",
+            "guid": "https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai"
+          },
+          {
             "title": "Knowledge Engineer — Knowledge Graph & Agentic Interfaces",
             "excerpt": "Build and curate the ontology, knowledge graph and grounding infrastructure that let AI agents understand IFS software and reason accurately over customer data, turning what the platform already knows about itself, plus deep industry expertise, into a semantic layer other engineers and agents can trust.",
             "companyName": "IFS",
@@ -227,44 +265,6 @@
             "expiryDate": 1792117987,
             "applicationLink": "https://himalayas.app/companies/ifs/jobs/knowledge-engineer-knowledge-graph-agentic-interfaces",
             "guid": "https://himalayas.app/companies/ifs/jobs/knowledge-engineer-knowledge-graph-agentic-interfaces"
-          },
-          {
-            "title": "Staff Applied Scientist - Knowledge Graphs & AI",
-            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
-            "companyName": "Outreach.io",
-            "companySlug": "outreach-io",
-            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "India"
-            ],
-            "timezoneRestrictions": [
-              5.5
-            ],
-            "categories": [
-              "Knowledge-Graph-Engineering",
-              "AI-Research",
-              "Machine-Learning",
-              "Data-Science",
-              "Staff-Applied-Scientist",
-              "Applied-AI-Scientist",
-              "Senior-Applied-Scientist",
-              "Senior-AI-Scientist",
-              "Applied-Sciences"
-            ],
-            "parentCategories": [],
-            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div>\n<div><h3><strong>About the job:</strong></h3></div>\n<div><div><ul>\n<li>We are looking for an Applied Scientist to join a dynamic and innovative AI platform team that is pushing the boundaries of what's possible in sales execution. If you are passionate about applying cutting-edge research in knowledge graphs and reasoning systems to real-world problems at scale, this is an exceptional opportunity to shape a core piece of Outreach's AI architecture from the ground up. </li>\n<li>Our team is building a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph powers contextual reasoning across the platform, driving next-best-action recommendations, deal risk signals, coaching suggestions, and competitive intelligence. In this pivotal role, you will design the underlying representations, extraction pipelines, and reasoning layers that make this possible, working closely with cross-functional engineering and product teams to deliver innovative, scalable, and reliable AI capabilities with direct impact on revenue outcomes. </li>\n</ul></div></div>\n</div><h3>Your Daily Adventures Will Include:</h3><ul><div><div>\n<h3><strong>Key Responsibilities:</strong></h3>\n<div>\n<li>Knowledge Graph Design &amp; Construction: Architect and evolve per-tenant knowledge graph schemas, including entity resolution, temporal modeling, and ontology design tailored to sales execution domains.</li>\n<li>Information Extraction: Architect NLP pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, and event detection.</li>\n<li>Contextual Reasoning &amp; Recommendation: Design reasoning and inference layers over the knowledge graph to power next-best-action suggestions, deal risk scoring, coaching recommendations, and competitive intelligence surfaces.</li>\n<li>Representation Learning: Design and train graph-based models (GNNs, relational embeddings, link prediction) over heterogeneous, multi-relational graph structures to support downstream reasoning and retrieval tasks. Diagnose and address embedding quality issues including cold-start entities, and temporal drift. </li>\n<li>Domain Modeling: Formalize sales execution concepts such as deal stages, buyer engagement patterns, rep behaviors, and account health, into structured representations that ground the platform's AI capabilities. Extract ontology structure. Lead ontology versioning and migration. </li>\n<li>Cross-functional Collaboration: Partner with engineering, product, and data teams to bring models from prototype to production, ensuring reliability and measurable impact at scale. </li>\n</div>\n</div></div></ul><h3>Our Vision of You:</h3><ul><div><div><div>\n<div><h3><strong>Qualifications:</strong></h3></div>\n<div><div><div><div>\n<li>PhD in a relevant field such as Computer Science, NLP, Machine Learning, or a related discipline with a focus on knowledge representation and reasoning, information extraction and relationship extraction, graph neural networks, recommendation systems, or conversation AI and dialogue systems.</li>\n<li>Strong engineering fundamentals. You can write production-quality code, not just prototype notebooks. Proficiency in Python; and graph databases or query languages (e.g., Neo4j, SPARQL, Cypher) is required.</li>\n<li>Comfort with ambiguity. You can take a vague product goal and decompose it into concrete technical problems. You don't need a fully scoped spec to start making progress.</li>\n<li>A track record of building things: whether that's research prototypes that went beyond the paper, open-source contributions, or side projects that required real systems thinking. You understand the gap between a research prototype and a reliable production system, such as monitoring, data drift, latency, and operational excellence.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n<li>Strong communication skills with the ability to translate research concepts into product impact for cross-functional audiences.</li>\n<li>Experience mentoring or leading technical work. You've helped junior team membersgrow and have driven cross-team technical decisions.</li>\n</div></div></div></div>\n</div></div></div></ul><h3>Nice to Have: </h3><ul><div><div>\n<li>2+ years of hands-on experience applying knowledge graphs or graph-based learning methods to real-world data in a production setting.</li>\n<li>Strong fundamentals in at least two of: knowledge graph construction, information extraction, graph neural networks, or recommender systems. </li>\n<li>Experience working with large-scale unstructured text data (conversational transcripts, email, or similar)</li>\n<li>Experience with probabilistic graphical models, conversational AI, or sales/revenue domain data</li>\n<li>Published research at top-tier venues</li>\n</div></div></ul><h3>Why Join Us? </h3><ul><div><div>\n<li>Greenfield Architecture: Shape the design of a core AI system from the ground up, with the latitude to make foundational technical decisions that define the platform.</li>\n<li>Depth That Matters: This role genuinely requires PhD-level thinking; you will tackle problems in entity resolution, temporal reasoning, and graph learning that demand it.</li>\n<li>Applied Impact: Work with real production feedback loops and millions of sales interactions, not just benchmarks; see your models change how thousands of teams sell.</li>\n<li>High Leverage, Low Bureaucracy: Join a small, senior team where your contributions are visible, your ideas ship fast, and you have direct access to leadership.</li>\n<li>Career Growth: Opportunity to lead initiatives and mentor engineers.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1783365112,
-            "expiryDate": 1788549111,
-            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai",
-            "guid": "https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai"
           },
           {
             "title": "Knowledge Graph Engineer",
@@ -394,6 +394,50 @@
             "guid": "https://himalayas.app/companies/inizio-partners-corp/jobs/knowledge-graph-engineer"
           },
           {
+            "title": "Principal Solutions Architect - Expert Services",
+            "excerpt": "Mendix is a low-code app development platform: First, what is low-code?",
+            "companyName": "Mendix",
+            "companySlug": "mendix",
+            "companyLogo": "https://cdn-images.himalayas.app/pffiteru4r3p7vqkxl6oyg8nh6st",
+            "employmentType": "Full Time",
+            "minSalary": 150000,
+            "maxSalary": 290000,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Director"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Solutions-Architect",
+              "Expert-Services",
+              "Enterprise-Architecture",
+              "Technical-Architecture",
+              "AI-ML-Architecture",
+              "Executive-Solutions-Architect",
+              "Professional-Services-Principal-Consultant"
+            ],
+            "parentCategories": [
+              "Developer"
+            ],
+            "description": "<div><b><a href=\"https://himalayas.app/companies/mendix\">Mendix</a> is a low-code app development platform:</b></div><div>First, what is low-code? Low-code is a visual approach to software development that enables you to abstract and automate every step of the application lifecycle. Gartner predicts that “by 2024, low-code application development will be responsible for more than 65% of application development activity.”</div><div>\n<a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, the global leader in enterprise low-code, is fundamentally reinventing the way applications are built. The <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> platform was created to promote collaboration between Business &amp; IT teams so that an entire organization can participate in the application development process. With <a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, thousands of forward-thinking companies around the world like Ford Auto, Zurich Insurance, Freshfields, and Red Bull, can unleash their best ideas quickly. </div><div>\n<a href=\"https://himalayas.app/companies/mendix\">Mendix</a> is repeatedly ranked a Leader in analyst reports from Gartner and Forrester. In the 2021 Gartner® Magic Quadrant for Multiexperience Development Platforms, <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> placed at the very top of the Leaders quadrant. </div><div><b><a href=\"https://himalayas.app/companies/mendix\">Mendix</a> is a Siemens Business:</b></div><div>Siemens is a Top 10 Global Software Company and a leader on Fast Company’s Most Innovative Companies in the World! With the acquisition of <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> in 2018, Siemens Digital Industries Software is driving transformation to enhance the digital enterprise where engineering, manufacturing and electronics meet the future of innovation. <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> employees have the opportunity to work in a hyper-growth environment with the support of Siemens’ unbeatable legacy and resources.</div><div>\n<h3>Principal Solution Architect, Expert Services</h3>\n<h3>Position Summary</h3>\n<p>As a Principal Solution Architect and Technical Lead, you serve as the senior technical advisor responsible for guiding enterprise customers through the successful implementation, adoption, and optimization of Intelligence Center X, an agentic AI platform. Partnering closely with customer executives, program stakeholders, and business audiences, you lead the delivery of transformative AI-powered solutions that drive measurable business outcomes.</p>\n<p>In this role, you oversee solution architecture and implementation across complex enterprise engagements. You translate business objectives into scalable, secure, and integrated solutions leveraging Intelligence Center X, AI Studio, <a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, Graph, and enterprise knowledge graph technologies while ensuring alignment with enterprise architecture standards, operational requirements, and organizational change initiatives.</p>\n<p>The ideal candidate possesses deep expertise in graph databases, knowledge graph architectures, semantic data modeling, enterprise integration, and agentic AI. You will help customers build intelligent enterprises by connecting people, processes, products, systems, and data through graph-powered enterprise intelligence and AI-driven automation.</p>\n<p>You provide leadership throughout the delivery lifecycle, including discovery, solution design, implementation oversight, adoption planning, and value realization. Acting as a trusted advisor to customer leadership, you help organizations modernize operations through agentic workflows, enterprise intelligence, digital thread initiatives, and AI-powered automation.</p>\n<p>Success is measured by customer outcomes, platform adoption, delivery excellence, and the ability to establish Intelligence Center X as a strategic capability within the emerging agentic enterprise.</p>\n<h3>Key Responsibilities</h3>\n<h3>Delivery Leadership</h3>\n<ul>\n<li><p>Lead end-to-end delivery of strategic customer programs from discovery through production deployment and operationalization.</p></li>\n<li><p>Serve as the primary technical leader across multiple concurrent enterprise engagements.</p></li>\n<li><p>Drive alignment across customer stakeholders, implementation partners, product teams, and engineering organizations.</p></li>\n<li><p>Ensure projects are delivered on time, within scope, and aligned with customer business objectives.</p></li>\n<li><p>Provide executive-level guidance on AI transformation, enterprise intelligence, and operational modernization initiatives.</p></li>\n</ul>\n<h3>Solution Architecture</h3>\n<ul>\n<li><p>Collaborate with product, presales, and delivery teams to translate business use cases into knowledge graph-based architectures, reference implementations, and solution blueprints.</p></li>\n<li><p>Design scalable enterprise architectures leveraging Intelligence Center X, AI Studio, <a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, Graph, and cloud-native technologies.</p></li>\n<li><p>Architect enterprise knowledge graph solutions that connect business processes, operational systems, products, data assets, and organizational knowledge.</p></li>\n<li><p>Design graph-based semantic data models that support enterprise intelligence, AI reasoning, contextual awareness, and relationship analytics.</p></li>\n<li><p>Apply architectural standards for security, governance, scalability, observability, and operational excellence.</p></li>\n</ul>\n<h3>Graph Databases and Enterprise Knowledge Graphs</h3>\n<ul>\n<li><p>Lead the design and implementation of enterprise knowledge graphs using RapidMiner Graph Studio demonstrating expertise in conceptual modeling, ontology design, graph data management, query and inference techniques, and the engineering practices required to deploy and govern large-scale, production grade knowledge graph systems.</p></li>\n<li><p>Establish best practices for performance, governance, scalability, and operational management.</p></li>\n<li><p>Enable customers to transform disconnected enterprise data into connected intelligence assets.</p></li>\n</ul>\n<h3>Agentic AI and Enterprise Intelligence</h3>\n<ul>\n<li><p>Architect and implement agentic workflows that automate complex business processes and decision-making activities.</p></li>\n<li><p>Guide customers in identifying and prioritizing high-value AI use cases.</p></li>\n<li><p>Design enterprise intelligence solutions that combine structured and unstructured data using knowledge graphs and AI services.</p></li>\n<li><p>Establish governance models for AI agents, knowledge management, data access, and model utilization.</p></li>\n<li><p>Design graph-powered retrieval and contextual reasoning architectures that improve the effectiveness of enterprise AI agents.</p></li>\n<li><p>Drive adoption of AI-powered automation while ensuring responsible, secure, and compliant implementation practices.</p></li>\n</ul>\n<h3>Required Qualifications</h3>\n<ul>\n<li><p>12+ years of experience in enterprise software delivery, solution architecture, consulting, or digital transformation leadership.</p></li>\n<li><p>5+ years of hands-on experience designing and implementing graph database solutions and enterprise knowledge graphs.</p></li>\n<li><p>Deep expertise in enterprise architecture, systems integration, cloud platforms, and distributed systems.</p></li>\n<li><p>Strong experience with graph data modeling, ontology design, semantic architectures, and relationship analytics.</p></li>\n<li><p>Experience with competitive graph database technologies such as Neo4j, Amazon Neptune, TigerGraph, Stardog, ArangoDB, or similar platforms.</p></li>\n<li><p>Knowledge of graph query languages, ideally including SPARQL, Cypher, Gremlin, or equivalent technologies.</p></li>\n<li><p>Experience leading large-scale technology implementations for Fortune 1000 organizations.</p></li>\n<li><p>Strong understanding of AI, machine learning, generative AI, agentic AI, and enterprise automation platforms.</p></li>\n<li><p>Experience with context engineering strategy: what information is loaded, how it is chunked, summarized, ordered, and governed across tools, skills, and knowledge sources.</p></li>\n<li><p>Demonstrated success managing executive stakeholder relationships and complex delivery programs.</p></li>\n<li><p>Exceptional communication, facilitation, leadership, and consulting skills.</p></li>\n<li><p>Bachelor's degree in Computer Science, Engineering, Information Systems, or a related field.</p></li>\n</ul>\n<h3>Preferred Qualifications</h3>\n<ul>\n<li><p>Experience in manufacturing and Product Lifecycle Management (PLM), including product structures, bills of materials (BOMs), engineering change management, and digital thread initiatives.</p></li>\n<li><p>Experience implementing graph-based digital thread, product intelligence, or manufacturing knowledge graph solutions.</p></li>\n<li><p>Familiarity with semantic web standards, RDF, OWL, linked data, and knowledge representation frameworks.</p></li>\n<li><p>Experience with cloud platforms including AWS, Azure, or Google Cloud.</p></li>\n<li><p>Experience implementing Retrieval-Augmented Generation (RAG), agent frameworks, and enterprise AI architectures.</p></li>\n<li><p>Knowledge of enterprise data governance, master data management, and metadata management practices.</p></li>\n<li><p>Advanced degree in Computer Science, Engineering, Data Science, Information Systems, or a related field.</p></li>\n<li><p>Relevant cloud, architecture, AI, or graph technology certifications.</p></li>\n</ul>\n<h3>Success Metrics</h3>\n<ul>\n<li><p>Successful delivery of strategic enterprise programs and customer transformation initiatives.</p></li>\n<li><p>Customer adoption and expansion of Intelligence Center X and related platform capabilities.</p></li>\n<li><p>Measurable business outcomes achieved through AI, automation, and enterprise intelligence solutions.</p></li>\n<li><p>Successful deployment and operationalization of enterprise knowledge graph capabilities.</p></li>\n<li><p>Executive stakeholder satisfaction and customer advocacy.</p></li>\n<li><p>Development of reusable implementation assets, architectural frameworks, and best practices.</p></li>\n<li><p>Contribution to platform innovation, product strategy, and continuous improvement.</p></li>\n</ul>\n</div><h3>Equal Employment Opportunity Statement</h3><div>Siemens is an Equal Opportunity and Affirmative Action Employer encouraging diversity in the workplace. All qualified applicants will receive consideration for employment without regard to their race, color, creed, religion, national origin, citizenship status, ancestry, sex, age, physical or mental disability unrelated to ability, marital status, family responsibilities, pregnancy, genetic information, sexual orientation, gender expression, gender identity, transgender, sex stereotyping, order of protection status, protected veteran or military status, or an unfavorable discharge from military service, and other categories protected by federal, state or local law.</div><h3>EEO is the Law</h3><div>Applicants and employees are protected under Federal law from discrimination. To learn more, Click here.</div><h3>Pay Transparency Non-Discrimination Provision</h3><div>Siemens follows Executive Order 11246, including the Pay Transparency Nondiscrimination Provision. To learn more, Click here.</div><h3>California Privacy Notice</h3><div>California residents have the right to receive additional notices about their personal information. To learn more, click here.</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1783986392,
+            "expiryDate": 1789170392,
+            "applicationLink": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services",
+            "guid": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services"
+          },
+          {
             "title": "Knowledge Graph Engineer",
             "excerpt": "We are looking for a Knowledge Graph Engineer to join our team in the US, supporting the Delivery team in designing, implementing, and deploying knowledge graph–driven SaaS solutions for enterprise customers.",
             "companyName": "Squirro",
@@ -439,99 +483,6 @@
             "expiryDate": 1791894537,
             "applicationLink": "https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer",
             "guid": "https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer"
-          },
-          {
-            "title": "Principal Solutions Architect - Expert Services",
-            "excerpt": "Mendix is a low-code app development platform: First, what is low-code?",
-            "companyName": "Mendix",
-            "companySlug": "mendix",
-            "companyLogo": "https://cdn-images.himalayas.app/pffiteru4r3p7vqkxl6oyg8nh6st",
-            "employmentType": "Full Time",
-            "minSalary": 150000,
-            "maxSalary": 290000,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Director"
-            ],
-            "currency": "USD",
-            "locationRestrictions": [
-              "United States"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "categories": [
-              "Solutions-Architect",
-              "Expert-Services",
-              "Enterprise-Architecture",
-              "Technical-Architecture",
-              "AI-ML-Architecture",
-              "Executive-Solutions-Architect",
-              "Professional-Services-Principal-Consultant"
-            ],
-            "parentCategories": [
-              "Developer"
-            ],
-            "description": "<div><b><a href=\"https://himalayas.app/companies/mendix\">Mendix</a> is a low-code app development platform:</b></div><div>First, what is low-code? Low-code is a visual approach to software development that enables you to abstract and automate every step of the application lifecycle. Gartner predicts that “by 2024, low-code application development will be responsible for more than 65% of application development activity.”</div><div>\n<a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, the global leader in enterprise low-code, is fundamentally reinventing the way applications are built. The <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> platform was created to promote collaboration between Business &amp; IT teams so that an entire organization can participate in the application development process. With <a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, thousands of forward-thinking companies around the world like Ford Auto, Zurich Insurance, Freshfields, and Red Bull, can unleash their best ideas quickly. </div><div>\n<a href=\"https://himalayas.app/companies/mendix\">Mendix</a> is repeatedly ranked a Leader in analyst reports from Gartner and Forrester. In the 2021 Gartner® Magic Quadrant for Multiexperience Development Platforms, <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> placed at the very top of the Leaders quadrant. </div><div><b><a href=\"https://himalayas.app/companies/mendix\">Mendix</a> is a Siemens Business:</b></div><div>Siemens is a Top 10 Global Software Company and a leader on Fast Company’s Most Innovative Companies in the World! With the acquisition of <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> in 2018, Siemens Digital Industries Software is driving transformation to enhance the digital enterprise where engineering, manufacturing and electronics meet the future of innovation. <a href=\"https://himalayas.app/companies/mendix\">Mendix</a> employees have the opportunity to work in a hyper-growth environment with the support of Siemens’ unbeatable legacy and resources.</div><div>\n<h3>Principal Solution Architect, Expert Services</h3>\n<h3>Position Summary</h3>\n<p>As a Principal Solution Architect and Technical Lead, you serve as the senior technical advisor responsible for guiding enterprise customers through the successful implementation, adoption, and optimization of Intelligence Center X, an agentic AI platform. Partnering closely with customer executives, program stakeholders, and business audiences, you lead the delivery of transformative AI-powered solutions that drive measurable business outcomes.</p>\n<p>In this role, you oversee solution architecture and implementation across complex enterprise engagements. You translate business objectives into scalable, secure, and integrated solutions leveraging Intelligence Center X, AI Studio, <a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, Graph, and enterprise knowledge graph technologies while ensuring alignment with enterprise architecture standards, operational requirements, and organizational change initiatives.</p>\n<p>The ideal candidate possesses deep expertise in graph databases, knowledge graph architectures, semantic data modeling, enterprise integration, and agentic AI. You will help customers build intelligent enterprises by connecting people, processes, products, systems, and data through graph-powered enterprise intelligence and AI-driven automation.</p>\n<p>You provide leadership throughout the delivery lifecycle, including discovery, solution design, implementation oversight, adoption planning, and value realization. Acting as a trusted advisor to customer leadership, you help organizations modernize operations through agentic workflows, enterprise intelligence, digital thread initiatives, and AI-powered automation.</p>\n<p>Success is measured by customer outcomes, platform adoption, delivery excellence, and the ability to establish Intelligence Center X as a strategic capability within the emerging agentic enterprise.</p>\n<h3>Key Responsibilities</h3>\n<h3>Delivery Leadership</h3>\n<ul>\n<li><p>Lead end-to-end delivery of strategic customer programs from discovery through production deployment and operationalization.</p></li>\n<li><p>Serve as the primary technical leader across multiple concurrent enterprise engagements.</p></li>\n<li><p>Drive alignment across customer stakeholders, implementation partners, product teams, and engineering organizations.</p></li>\n<li><p>Ensure projects are delivered on time, within scope, and aligned with customer business objectives.</p></li>\n<li><p>Provide executive-level guidance on AI transformation, enterprise intelligence, and operational modernization initiatives.</p></li>\n</ul>\n<h3>Solution Architecture</h3>\n<ul>\n<li><p>Collaborate with product, presales, and delivery teams to translate business use cases into knowledge graph-based architectures, reference implementations, and solution blueprints.</p></li>\n<li><p>Design scalable enterprise architectures leveraging Intelligence Center X, AI Studio, <a href=\"https://himalayas.app/companies/mendix\">Mendix</a>, Graph, and cloud-native technologies.</p></li>\n<li><p>Architect enterprise knowledge graph solutions that connect business processes, operational systems, products, data assets, and organizational knowledge.</p></li>\n<li><p>Design graph-based semantic data models that support enterprise intelligence, AI reasoning, contextual awareness, and relationship analytics.</p></li>\n<li><p>Apply architectural standards for security, governance, scalability, observability, and operational excellence.</p></li>\n</ul>\n<h3>Graph Databases and Enterprise Knowledge Graphs</h3>\n<ul>\n<li><p>Lead the design and implementation of enterprise knowledge graphs using RapidMiner Graph Studio demonstrating expertise in conceptual modeling, ontology design, graph data management, query and inference techniques, and the engineering practices required to deploy and govern large-scale, production grade knowledge graph systems.</p></li>\n<li><p>Establish best practices for performance, governance, scalability, and operational management.</p></li>\n<li><p>Enable customers to transform disconnected enterprise data into connected intelligence assets.</p></li>\n</ul>\n<h3>Agentic AI and Enterprise Intelligence</h3>\n<ul>\n<li><p>Architect and implement agentic workflows that automate complex business processes and decision-making activities.</p></li>\n<li><p>Guide customers in identifying and prioritizing high-value AI use cases.</p></li>\n<li><p>Design enterprise intelligence solutions that combine structured and unstructured data using knowledge graphs and AI services.</p></li>\n<li><p>Establish governance models for AI agents, knowledge management, data access, and model utilization.</p></li>\n<li><p>Design graph-powered retrieval and contextual reasoning architectures that improve the effectiveness of enterprise AI agents.</p></li>\n<li><p>Drive adoption of AI-powered automation while ensuring responsible, secure, and compliant implementation practices.</p></li>\n</ul>\n<h3>Required Qualifications</h3>\n<ul>\n<li><p>12+ years of experience in enterprise software delivery, solution architecture, consulting, or digital transformation leadership.</p></li>\n<li><p>5+ years of hands-on experience designing and implementing graph database solutions and enterprise knowledge graphs.</p></li>\n<li><p>Deep expertise in enterprise architecture, systems integration, cloud platforms, and distributed systems.</p></li>\n<li><p>Strong experience with graph data modeling, ontology design, semantic architectures, and relationship analytics.</p></li>\n<li><p>Experience with competitive graph database technologies such as Neo4j, Amazon Neptune, TigerGraph, Stardog, ArangoDB, or similar platforms.</p></li>\n<li><p>Knowledge of graph query languages, ideally including SPARQL, Cypher, Gremlin, or equivalent technologies.</p></li>\n<li><p>Experience leading large-scale technology implementations for Fortune 1000 organizations.</p></li>\n<li><p>Strong understanding of AI, machine learning, generative AI, agentic AI, and enterprise automation platforms.</p></li>\n<li><p>Experience with context engineering strategy: what information is loaded, how it is chunked, summarized, ordered, and governed across tools, skills, and knowledge sources.</p></li>\n<li><p>Demonstrated success managing executive stakeholder relationships and complex delivery programs.</p></li>\n<li><p>Exceptional communication, facilitation, leadership, and consulting skills.</p></li>\n<li><p>Bachelor's degree in Computer Science, Engineering, Information Systems, or a related field.</p></li>\n</ul>\n<h3>Preferred Qualifications</h3>\n<ul>\n<li><p>Experience in manufacturing and Product Lifecycle Management (PLM), including product structures, bills of materials (BOMs), engineering change management, and digital thread initiatives.</p></li>\n<li><p>Experience implementing graph-based digital thread, product intelligence, or manufacturing knowledge graph solutions.</p></li>\n<li><p>Familiarity with semantic web standards, RDF, OWL, linked data, and knowledge representation frameworks.</p></li>\n<li><p>Experience with cloud platforms including AWS, Azure, or Google Cloud.</p></li>\n<li><p>Experience implementing Retrieval-Augmented Generation (RAG), agent frameworks, and enterprise AI architectures.</p></li>\n<li><p>Knowledge of enterprise data governance, master data management, and metadata management practices.</p></li>\n<li><p>Advanced degree in Computer Science, Engineering, Data Science, Information Systems, or a related field.</p></li>\n<li><p>Relevant cloud, architecture, AI, or graph technology certifications.</p></li>\n</ul>\n<h3>Success Metrics</h3>\n<ul>\n<li><p>Successful delivery of strategic enterprise programs and customer transformation initiatives.</p></li>\n<li><p>Customer adoption and expansion of Intelligence Center X and related platform capabilities.</p></li>\n<li><p>Measurable business outcomes achieved through AI, automation, and enterprise intelligence solutions.</p></li>\n<li><p>Successful deployment and operationalization of enterprise knowledge graph capabilities.</p></li>\n<li><p>Executive stakeholder satisfaction and customer advocacy.</p></li>\n<li><p>Development of reusable implementation assets, architectural frameworks, and best practices.</p></li>\n<li><p>Contribution to platform innovation, product strategy, and continuous improvement.</p></li>\n</ul>\n</div><h3>Equal Employment Opportunity Statement</h3><div>Siemens is an Equal Opportunity and Affirmative Action Employer encouraging diversity in the workplace. All qualified applicants will receive consideration for employment without regard to their race, color, creed, religion, national origin, citizenship status, ancestry, sex, age, physical or mental disability unrelated to ability, marital status, family responsibilities, pregnancy, genetic information, sexual orientation, gender expression, gender identity, transgender, sex stereotyping, order of protection status, protected veteran or military status, or an unfavorable discharge from military service, and other categories protected by federal, state or local law.</div><h3>EEO is the Law</h3><div>Applicants and employees are protected under Federal law from discrimination. To learn more, Click here.</div><h3>Pay Transparency Non-Discrimination Provision</h3><div>Siemens follows Executive Order 11246, including the Pay Transparency Nondiscrimination Provision. To learn more, Click here.</div><h3>California Privacy Notice</h3><div>California residents have the right to receive additional notices about their personal information. To learn more, click here.</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1783986392,
-            "expiryDate": 1789170392,
-            "applicationLink": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services",
-            "guid": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services"
-          },
-          {
-            "title": "Graph Engineer",
-            "excerpt": "Our story:The widespread adoption of intelligent technologies powered by automation, AI, ML, and knowledge graphs is accelerating.",
-            "companyName": "Adapter",
-            "companySlug": "adapter",
-            "companyLogo": "https://cdn-images.himalayas.app/2wu30fj3es2makqlqc5d4e9ftszg",
-            "employmentType": "Full Time",
-            "minSalary": 180000,
-            "maxSalary": 230000,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": "USD",
-            "locationRestrictions": [
-              "United States"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "categories": [
-              "Data-Engineering",
-              "Graph-Engineering",
-              "Machine-Learning-Engineering",
-              "Backend-Engineering",
-              "Graph-Database-Engineer",
-              "Graph-Database-Engineering",
-              "Graph-Data-Engineering",
-              "Knowledge-Graph-Engineer",
-              "Graph-Database-Developer",
-              "Knowledge-Graph-Engineering",
-              "Senior-Knowledge-Graph-Engineer",
-              "Software-Engineer"
-            ],
-            "parentCategories": [
-              "Developer"
-            ],
-            "description": "<h3>Our story:</h3><p>The widespread adoption of intelligent technologies powered by automation, AI, ML, and knowledge graphs is accelerating. As these technologies become increasingly accessible, our aim is to make their capabilities empowering, trustworthy, and useful to real people in the real world. </p><p><a href=\"https://himalayas.app/companies/adapter\">Adapter</a> was founded in 2022 by Adam Ghetti and Dr. David Bader, with the support of some of the most esteemed Tier 1 Silicon Valley firms and individual entrepreneurs. We are a small but dedicated team, currently working towards solving a significant problem. We recognize the importance of being early movers in this field, and have assembled a well-supported and passionate team to do so.</p><h3>What we are looking for:</h3><p>We are seeking an engineer experienced in designing and implementing robust systems to ingest diverse, complex data types into large-scale knowledge graphs, who will play a key role in shaping and creating the product, which at its core aims to empower individuals through thoughtful collaboration with intelligent technology. You will partner with a brilliant team of engineers and innovators and will be at the cutting edge of some of the most interesting consumer use-cases for intelligent technologies.</p><p>We have established a culture that promotes both remote work and in-person collaboration, with team members currently dispersed around the country with hubs in Austin, NYC, and the Bay Area. We believe that the integration of these two elements allows for maximum productivity and creativity as we strive to achieve our goal.</p><h3>Responsibilities: </h3><ul>\n<li>Design and develop the ingestion, processing and application of algorithms for user data to build models of user behavior and preferences for large knowledge graphs</li>\n<li>Design efficient implementations utilizing graph query languages to drive valuable and actionable insights and data retrieval</li>\n<li>Collaborate with a team of designers, researchers and other stakeholders to implement the knowledge graph components required to deliver product features</li>\n<li>Identify and address performance bottlenecks, security concerns, and other technical challenges</li>\n<li>Stay updated on emerging technologies and industry trends in usage of AI/ML integration with knowledge graphs</li>\n</ul><h3>Qualifications: </h3><ul>\n<li>Proven experience with knowledge graphs and algorithms </li>\n<li>Strong experience in using knowledge graphs for user modeling and data ingestion from disparate data sources</li>\n<li>Implementation experience with databases technologies such as PostgreSQL</li>\n<li>Experience with graph query languages like GraphQL.</li>\n<li>Strong communication skills; must be able to effectively and clearly communicate vision and objectives with the team and stakeholders.</li>\n<li>Strategic thinker with the demonstrated ability to align design goals with key objectives and priorities.</li>\n</ul><h3>Desired:</h3><ul>\n<li>Experience building and deploying ML models from end to end</li>\n<li>Experience working with data science and ML teams in delivering products to market</li>\n</ul><h3>Work Experience: </h3><ul>\n<li>5+ years of experience with systems and graph algorithms.</li>\n<li>Startup experience is a plus.</li>\n</ul><h3>Benefits: </h3><ul>\n<li>Early stage equity</li>\n<li>Comprehensive health insurance.</li>\n<li>Generous PTO.</li>\n<li>Remote and in-person cultures that promote collaboration.</li>\n</ul><div class=\"content-pay-transparency\"><div class=\"pay-input\">\n<div class=\"description\"><p>Full compensation packages are based on candidate experience and certifications.</p></div>\n<div class=\"title\">United States - Remote Pay Range</div>\n<div class=\"pay-range\">$180,000—$230,000 USD</div>\n</div></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1782164132,
-            "expiryDate": 1787348131,
-            "applicationLink": "https://himalayas.app/companies/adapter/jobs/graph-engineer",
-            "guid": "https://himalayas.app/companies/adapter/jobs/graph-engineer"
           },
           {
             "title": "Senior AI Platform Engineer",
@@ -825,44 +776,6 @@
             "guid": "https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect"
           },
           {
-            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
-            "excerpt": "At IRIUM we want you to always chase your dreams.",
-            "companyName": "IRIUM Portugal",
-            "companySlug": "irium-portugal",
-            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
-            "employmentType": "Full Time",
-            "minSalary": 3800,
-            "maxSalary": 4300,
-            "salaryPeriod": "monthly",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": "EUR",
-            "locationRestrictions": [
-              "Portugal"
-            ],
-            "timezoneRestrictions": [
-              -1,
-              0
-            ],
-            "categories": [
-              "Ontologist",
-              "Semantic-Knowledge-Engineer",
-              "Ontology-Engineer",
-              "Knowledge-Graph-Engineer",
-              "Semantic-Web-Engineer",
-              "Remote-Senior-Ontology-Specialist",
-              "Senior-Semantic-Data-Consultant",
-              "Senior-Knowledge-Graph-Engineer"
-            ],
-            "parentCategories": [],
-            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1787162066,
-            "expiryDate": 1792346065,
-            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
-            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
-          },
-          {
             "title": "Principal Knowledge Acquisition Analyst",
             "excerpt": "Job Requisition ID # 26WD97787Position Overview Autodesk’s Technical Advisory organization is building a scalable knowledge platform that transforms implementationexpertisefrom enterprise engagements into structured, reusable, and customer-facing guidance within Workflow Advisory.",
             "companyName": "Autodesk",
@@ -902,38 +815,59 @@
             "expiryDate": 1791269728,
             "applicationLink": "https://himalayas.app/companies/autodesk/jobs/principal-knowledge-acquisition-analyst",
             "guid": "https://himalayas.app/companies/autodesk/jobs/principal-knowledge-acquisition-analyst"
-          }
-        ]
-      }
-    },
-    {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology",
-      "query": "ontology",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
-      ],
-      "payload": {
-        "comments": "13/03/2026: The API has been updated to include the companySlug field in the response.",
-        "updatedAt": 1786134667,
-        "offset": 0,
-        "limit": 20,
-        "totalCount": 4,
-        "jobs": [
+          },
           {
-            "title": "Ontology Expert - Remote (Dallas, TX, US)",
-            "excerpt": "Req ID:367052 NTT DATA strives to hire exceptional, innovative and passionate individuals who want to grow with us.",
-            "companyName": "NTT DATA",
-            "companySlug": "nttdata",
-            "companyLogo": "https://cdn-images.himalayas.app/to0griyuq0frod5n5b7505ono0z4",
+            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
+            "excerpt": "At IRIUM we want you to always chase your dreams.",
+            "companyName": "IRIUM Portugal",
+            "companySlug": "irium-portugal",
+            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
             "employmentType": "Full Time",
-            "minSalary": 105840,
-            "maxSalary": 245000,
+            "minSalary": 3800,
+            "maxSalary": 4300,
+            "salaryPeriod": "monthly",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": "EUR",
+            "locationRestrictions": [
+              "Portugal"
+            ],
+            "timezoneRestrictions": [
+              -1,
+              0
+            ],
+            "categories": [
+              "Ontologist",
+              "Semantic-Knowledge-Engineer",
+              "Ontology-Engineer",
+              "Knowledge-Graph-Engineer",
+              "Semantic-Web-Engineer",
+              "Remote-Senior-Ontology-Specialist",
+              "Senior-Semantic-Data-Consultant",
+              "Senior-Knowledge-Graph-Engineer"
+            ],
+            "parentCategories": [],
+            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787162066,
+            "expiryDate": 1792346065,
+            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
+            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
+          },
+          {
+            "title": "Head of Intelligence Products",
+            "excerpt": "ELEKS is looking for a Head of Intelligence Products in the United States.",
+            "companyName": "ELEKS",
+            "companySlug": "eleks",
+            "companyLogo": "https://cdn-images.himalayas.app/j86cg1w0vy1a40f4hecmacmnfxh4",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
             "salaryPeriod": "annual",
             "seniority": [
-              "Mid-level"
+              "Director"
             ],
-            "currency": "USD",
+            "currency": null,
             "locationRestrictions": [
               "United States"
             ],
@@ -947,25 +881,41 @@
               14
             ],
             "categories": [
-              "Ontology-Engineering",
-              "Semantic-Modeling",
-              "Knowledge-Engineering",
-              "Healthcare-AI",
-              "Biomedical-Informatics",
-              "Clinical-Informatics",
-              "Healthcare-Informatics",
-              "Remote-Senior-Ontology-Specialist",
-              "Ontology-Specialist",
-              "Ontology-Expert",
-              "Senior-Semantic-Data-Consultant"
+              "Head-Of-Intelligence-Products",
+              "Data-Platform-Product-Management",
+              "Enterprise-AI-Platform-Leadership",
+              "Data-Architecture-Leadership",
+              "AI-Product-Strategy",
+              "Intelligence-Product-Management",
+              "Head-Of-AI-Product",
+              "Head-Of-Threat-Intelligence",
+              "Market-Intelligence-Director",
+              "Senior-Director-Intelligence-Analysis"
             ],
             "parentCategories": [],
-            "description": "<p><strong>Req ID:</strong>367052</p><p><a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> strives to hire exceptional, innovative and passionate individuals who want to grow with us. If you want to be part of an inclusive, adaptable, and forward-thinking organization, apply now.</p><p>We are currently seeking a Ontology Expert - Remote to join our team in Dallas, Texas (US-TX), United States (US).</p><p>Ontology Expert – Healthcare AI Solutions</p><p><strong>Day to Day job Duties: (what this person will do on a daily/weekly basis) </strong></p><h3>Role Summary</h3><p>We are seeking an experienced Ontology Expert to design, develop, and govern healthcare ontologies that power AI-driven and agentic healthcare solutions. The role focuses on building semantic models that enable interoperability, reasoning, knowledge representation, and explainable AI across clinical and healthcare enterprise systems.</p><h3>Key Responsibilities</h3><ul>\n<li>Design, build, and maintain healthcare ontologies and semantic models.</li>\n<li>Define domain vocabularies, taxonomies, and relationships for AI-driven solutions.</li>\n<li>Support knowledge representation for AI agents, decision-support, and clinical intelligence systems.</li>\n<li>Collaborate with clinicians, data scientists, and AI engineers to translate knowledge into formal models.</li>\n<li>Govern ontology lifecycle, versioning, and semantic consistency.</li>\n</ul><h3>Healthcare Ontology &amp; Semantic Modeling</h3><ul>\n<li>Develop ontologies using standards such as OWL, RDF, and SKOS.</li>\n<li>Work with healthcare standards and terminologies (SNOMED CT, ICD-10, LOINC, RxNorm).</li>\n<li>Enable semantic interoperability across EHRs and healthcare data sources.</li>\n<li>Support reasoning, inference, and rule-based logic for AI systems.</li>\n</ul><h3>AI &amp; Agentic Solution Support</h3><ul>\n<li>Enable AI and GenAI systems with structured healthcare knowledge.</li>\n<li>Support agentic workflows, decision models, and explainable AI outputs.</li>\n<li>Collaborate on RAG pipelines and knowledge graph integration for LLM-based systems.</li>\n<li>Ensure semantic accuracy and safety for clinical use cases.</li>\n</ul><h3>Technical Skills &amp; Tools</h3><ul>\n<li>Strong knowledge of OWL, RDF, SPARQL, and knowledge graph technologies.</li>\n<li>Experience with ontology tools such as Protégé, TopBraid, or Stardog.</li>\n<li>Familiarity with FHIR, HL7, and healthcare data models.</li>\n<li>Exposure to AI/ML and GenAI systems, including LLM-enabled solutions.</li>\n<li>Programming or scripting experience in Python or similar languages (preferred).</li>\n</ul><h3>Compliance, Governance &amp; Quality</h3><ul>\n<li>Ensure ontologies align with clinical safety, regulatory, and compliance requirements.</li>\n<li>Support auditability, traceability, and explainability of AI decisions.</li>\n<li>Define semantic governance policies and best practices.</li>\n</ul><p><strong>Basic Qualifications: (what are the skills required to this job with minimum years of experience on each)</strong></p><h3>Required Skills &amp; Experience</h3><ul>\n<li>5+ years of experience in ontology engineering, semantic modeling, or knowledge engineering.</li>\n<li>Strong healthcare domain knowledge (clinical, payer, or life sciences).</li>\n<li>Experience working with structured and unstructured healthcare data.</li>\n<li>Ability to collaborate across technical and clinical teams.</li>\n</ul><h3>Nice to Have; </h3><h3>Preferred Qualifications</h3><ul>\n<li>Background in clinical informatics or biomedical informatics.</li>\n<li>Experience with healthcare AI platforms or decision-support systems.</li>\n<li>Knowledge of semantic search, reasoning engines, or knowledge graphs.</li>\n<li>Advanced degree in Computer Science, Biomedical Informatics, or related fields.</li>\n</ul><h3>Soft Skills</h3><ul>\n<li>Strong analytical and conceptual thinking abilities.</li>\n<li>Excellent communication skills to work with clinical and technical stakeholders.</li>\n<li>Attention to detail and passion for semantic accuracy.</li>\n</ul><h3>Why Join Us</h3><p>This role offers the opportunity to shape the semantic foundation of AI-driven healthcare solutions, supporting intelligent agents, explainable AI, and interoperable healthcare systems at scale.</p><div><h3>Must reside in the US</h3></div><div><p>Where required by law, <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> provides a reasonable range of compensation for specific roles. The starting pay range for this remote role is $105,840.00-$147,000.00.This range reflects the minimum and maximum target compensation for the position across all US locations. Actual compensation will depend on a number of factors, including the candidate’s actual work location, relevant experience, technical skills, and other qualifications. </p></div><div><p>This position may also be eligible for incentive compensation based on individual and/or company performance. </p></div><div><p>This position is eligible for company benefits including medical, dental, and vision insurance with an employer contribution, flexible spending or health savings account, life and AD&amp;D insurance, short and long term disability coverage, paid time off, employee assistance, participation in a 401k program with company match, and additional voluntary or legally-required benefits.</p></div><p><strong>Pay Transparency:</strong> Where required by law, <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> provides a reasonable range of compensation for specific roles. The starting pay range for this remote role is $105,840 - $245,00. This range reflects the minimum and maximum target compensation for the position across all US locations. Actual compensation will depend on a number of factors, including the candidate’s actual work location, relevant experience, technical skills, and other qualifications.</p><p></p><h3>About <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a>\n</h3><p><a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> is a $30+ billion business and technology services leader, serving 75% of the Fortune Global 100. We are committed to accelerating client success and positively impacting society through responsible innovation. We are one of the world’s leading AI and digital infrastructure providers, with unmatched capabilities in enterprise-scale AI, cloud, security, connectivity, data centers and application services.  Our consulting and industry solutions help organizations and society move confidently and sustainably into the digital future. As a Global Top Employer, we have experts in more than 50 countries. We also offer clients access to a robust ecosystem of innovation centers as well as established and start-up partners. <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> is part of NTT Group, which invests over $3 billion each year in R&amp;D.</p><p>Whenever possible, we hire locally to <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> offices or client sites. This ensures we can provide timely and effective support tailored to each client’s needs. While many positions offer remote or hybrid work options, these arrangements are subject to change based on client requirements. For employees near an <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> office or client site, in-office attendance may be required for meetings or events, depending on business needs. At <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a>, we are committed to staying flexible and meeting the evolving needs of both our clients and employees. <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> recruiters will never ask for payment or banking information and will only use @nttdata.com and @talent.nttdataservices.com email addresses. If you are requested to provide payment or disclose banking information, please submit a contact us form, .</p><p></p><p><strong><em><a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> endeavors to make </em></strong><strong><em> accessible to any and all users. If you would like to contact us regarding the accessibility of our website or need assistance completing the application process, please contact us at </em></strong><strong><em>. This contact information is for accommodation requests only and cannot be used to inquire about the status of applications. <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> is an equal opportunity employer. Qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or protected veteran status. For our EEO Policy Statement, please click </em></strong><strong><em>here</em></strong><strong><em>. If you'd like more information on your EEO rights under the law, please click </em></strong><strong><em>here</em></strong><strong><em>. For Pay Transparency information, please click</em></strong><strong><em> here</em></strong><strong><em>.</em></strong></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1782048045,
-            "expiryDate": 1787232044,
-            "applicationLink": "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us",
-            "guid": "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us"
-          },
+            "description": "<div>\n<a href=\"https://himalayas.app/companies/eleks\">ELEKS</a> is looking for a Head of Intelligence Products in the United States.</div><h3><strong>ABOUT CLIENT</strong></h3><p>Our customer is building a next-generation AI platform that enables organizations to securely develop, govern, and operationalize artificial intelligence while ensuring that sensitive data and organizational knowledge remain fully under their control. The platform combines advanced AI capabilities with enterprise-grade governance, security, and data sovereignty to support mission-critical decision-making.</p><p>The solution serves government organizations, NGOs, and enterprise customers operating in highly regulated and security-sensitive environments, where reliability, accountability, and trust are essential.</p><h3>REQUIREMENTS</h3><ul><div>\n<li>10+ years of experience in Data Engineering, Data Architecture, Platform Engineering, or related leadership roles</li>\n<li>Proven experience building and scaling modern cloud-based data platforms in enterprise environments</li>\n<li>Strong expertise with Snowflake, lakehouse architectures, graph databases, vector databases, and modern data platforms</li>\n<li>Deep understanding of knowledge graphs, ontology design, semantic modeling, metadata management, and enterprise data architecture</li>\n<li>Experience building AI-ready data platforms supporting LLMs, Retrieval-Augmented Generation (RAG), vector search, and AI applications</li>\n<li>Experience designing enterprise APIs, developer platforms, and data products for external customers</li>\n<li>Strong knowledge of data governance, lineage, privacy, security, and enterprise access control</li>\n<li>Experience defining enterprise data strategy and leading architecture decisions</li>\n<li>Hands-on experience with modern ETL/ELT pipelines, orchestration frameworks, and production data services</li>\n<li>Experience working with cross-functional Product, Engineering, AI, and Commercial teams</li>\n<li>Strong leadership, stakeholder management, and communication skills</li>\n<li>Experience building and leading high-performing technical teams</li>\n<li>Upper-Intermediate or higher level of English</li>\n</div></ul><h3>RESPONSIBILITIES</h3><ul><div><ul>\n<li>Define and lead the enterprise intelligence product strategy, architecture, and operating model</li>\n<li>Drive the evolution of a modern enterprise data platform supporting AI, analytics, and commercial data products</li>\n<li>Design scalable data architecture, semantic models, and knowledge graph capabilities</li>\n<li>Define enterprise ontology, metadata, governance, and interoperability standards</li>\n<li>Lead the development of AI-ready data services, APIs, and developer-facing platforms</li>\n<li>Define architecture supporting structured, semi-structured, and unstructured data at scale</li>\n<li>Partner with Engineering, AI, Product, and Commercial teams to transform data assets into reusable intelligence products</li>\n<li>Establish standards for data quality, lineage, provenance, security, and lifecycle management</li>\n<li>Define commercialization requirements for enterprise data products, including APIs, licensing models, access control, SLAs, and observability</li>\n<li>Evaluate and recommend technologies across cloud data platforms, graph databases, vector stores, orchestration, and AI infrastructure</li>\n<li>Lead architecture decisions supporting AI-native applications, LLM integrations, and semantic search capabilities</li>\n<li>Build and mentor a high-performing team of data architects, engineers, and platform specialists</li>\n<li>Act as a strategic technical advisor for executive stakeholders and drive long-term data platform vision</li>\n</ul></div></ul><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1782996237,
+            "expiryDate": 1788180237,
+            "applicationLink": "https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products",
+            "guid": "https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products"
+          }
+        ]
+      }
+    },
+    {
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology",
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+      ],
+      "payload": {
+        "comments": "13/03/2026: The API has been updated to include the companySlug field in the response.",
+        "updatedAt": 1787257959,
+        "offset": 0,
+        "limit": 20,
+        "totalCount": 5,
+        "jobs": [
           {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
             "excerpt": "wie du die welt von morgen prägen kannst • Wissen modellieren: Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.",
@@ -1050,6 +1000,90 @@
             "expiryDate": 1787740860,
             "applicationLink": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect",
             "guid": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect"
+          },
+          {
+            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
+            "excerpt": "At IRIUM we want you to always chase your dreams.",
+            "companyName": "IRIUM Portugal",
+            "companySlug": "irium-portugal",
+            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
+            "employmentType": "Full Time",
+            "minSalary": 3800,
+            "maxSalary": 4300,
+            "salaryPeriod": "monthly",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": "EUR",
+            "locationRestrictions": [
+              "Portugal"
+            ],
+            "timezoneRestrictions": [
+              -1,
+              0
+            ],
+            "categories": [
+              "Ontologist",
+              "Semantic-Knowledge-Engineer",
+              "Ontology-Engineer",
+              "Knowledge-Graph-Engineer",
+              "Semantic-Web-Engineer",
+              "Remote-Senior-Ontology-Specialist",
+              "Senior-Semantic-Data-Consultant",
+              "Senior-Knowledge-Graph-Engineer"
+            ],
+            "parentCategories": [],
+            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787162066,
+            "expiryDate": 1792346065,
+            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
+            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
+          },
+          {
+            "title": "Ontology Expert - Remote (Dallas, TX, US)",
+            "excerpt": "Req ID:367052 NTT DATA strives to hire exceptional, innovative and passionate individuals who want to grow with us.",
+            "companyName": "NTT DATA",
+            "companySlug": "nttdata",
+            "companyLogo": "https://cdn-images.himalayas.app/to0griyuq0frod5n5b7505ono0z4",
+            "employmentType": "Full Time",
+            "minSalary": 105840,
+            "maxSalary": 245000,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Mid-level"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Ontology-Engineering",
+              "Semantic-Modeling",
+              "Knowledge-Engineering",
+              "Healthcare-AI",
+              "Biomedical-Informatics",
+              "Clinical-Informatics",
+              "Healthcare-Informatics",
+              "Remote-Senior-Ontology-Specialist",
+              "Ontology-Specialist",
+              "Ontology-Expert",
+              "Senior-Semantic-Data-Consultant"
+            ],
+            "parentCategories": [],
+            "description": "<p><strong>Req ID:</strong>367052</p><p><a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> strives to hire exceptional, innovative and passionate individuals who want to grow with us. If you want to be part of an inclusive, adaptable, and forward-thinking organization, apply now.</p><p>We are currently seeking a Ontology Expert - Remote to join our team in Dallas, Texas (US-TX), United States (US).</p><p>Ontology Expert – Healthcare AI Solutions</p><p><strong>Day to Day job Duties: (what this person will do on a daily/weekly basis) </strong></p><h3>Role Summary</h3><p>We are seeking an experienced Ontology Expert to design, develop, and govern healthcare ontologies that power AI-driven and agentic healthcare solutions. The role focuses on building semantic models that enable interoperability, reasoning, knowledge representation, and explainable AI across clinical and healthcare enterprise systems.</p><h3>Key Responsibilities</h3><ul>\n<li>Design, build, and maintain healthcare ontologies and semantic models.</li>\n<li>Define domain vocabularies, taxonomies, and relationships for AI-driven solutions.</li>\n<li>Support knowledge representation for AI agents, decision-support, and clinical intelligence systems.</li>\n<li>Collaborate with clinicians, data scientists, and AI engineers to translate knowledge into formal models.</li>\n<li>Govern ontology lifecycle, versioning, and semantic consistency.</li>\n</ul><h3>Healthcare Ontology &amp; Semantic Modeling</h3><ul>\n<li>Develop ontologies using standards such as OWL, RDF, and SKOS.</li>\n<li>Work with healthcare standards and terminologies (SNOMED CT, ICD-10, LOINC, RxNorm).</li>\n<li>Enable semantic interoperability across EHRs and healthcare data sources.</li>\n<li>Support reasoning, inference, and rule-based logic for AI systems.</li>\n</ul><h3>AI &amp; Agentic Solution Support</h3><ul>\n<li>Enable AI and GenAI systems with structured healthcare knowledge.</li>\n<li>Support agentic workflows, decision models, and explainable AI outputs.</li>\n<li>Collaborate on RAG pipelines and knowledge graph integration for LLM-based systems.</li>\n<li>Ensure semantic accuracy and safety for clinical use cases.</li>\n</ul><h3>Technical Skills &amp; Tools</h3><ul>\n<li>Strong knowledge of OWL, RDF, SPARQL, and knowledge graph technologies.</li>\n<li>Experience with ontology tools such as Protégé, TopBraid, or Stardog.</li>\n<li>Familiarity with FHIR, HL7, and healthcare data models.</li>\n<li>Exposure to AI/ML and GenAI systems, including LLM-enabled solutions.</li>\n<li>Programming or scripting experience in Python or similar languages (preferred).</li>\n</ul><h3>Compliance, Governance &amp; Quality</h3><ul>\n<li>Ensure ontologies align with clinical safety, regulatory, and compliance requirements.</li>\n<li>Support auditability, traceability, and explainability of AI decisions.</li>\n<li>Define semantic governance policies and best practices.</li>\n</ul><p><strong>Basic Qualifications: (what are the skills required to this job with minimum years of experience on each)</strong></p><h3>Required Skills &amp; Experience</h3><ul>\n<li>5+ years of experience in ontology engineering, semantic modeling, or knowledge engineering.</li>\n<li>Strong healthcare domain knowledge (clinical, payer, or life sciences).</li>\n<li>Experience working with structured and unstructured healthcare data.</li>\n<li>Ability to collaborate across technical and clinical teams.</li>\n</ul><h3>Nice to Have; </h3><h3>Preferred Qualifications</h3><ul>\n<li>Background in clinical informatics or biomedical informatics.</li>\n<li>Experience with healthcare AI platforms or decision-support systems.</li>\n<li>Knowledge of semantic search, reasoning engines, or knowledge graphs.</li>\n<li>Advanced degree in Computer Science, Biomedical Informatics, or related fields.</li>\n</ul><h3>Soft Skills</h3><ul>\n<li>Strong analytical and conceptual thinking abilities.</li>\n<li>Excellent communication skills to work with clinical and technical stakeholders.</li>\n<li>Attention to detail and passion for semantic accuracy.</li>\n</ul><h3>Why Join Us</h3><p>This role offers the opportunity to shape the semantic foundation of AI-driven healthcare solutions, supporting intelligent agents, explainable AI, and interoperable healthcare systems at scale.</p><div><h3>Must reside in the US</h3></div><div><p>Where required by law, <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> provides a reasonable range of compensation for specific roles. The starting pay range for this remote role is $105,840.00-$147,000.00.This range reflects the minimum and maximum target compensation for the position across all US locations. Actual compensation will depend on a number of factors, including the candidate’s actual work location, relevant experience, technical skills, and other qualifications. </p></div><div><p>This position may also be eligible for incentive compensation based on individual and/or company performance. </p></div><div><p>This position is eligible for company benefits including medical, dental, and vision insurance with an employer contribution, flexible spending or health savings account, life and AD&amp;D insurance, short and long term disability coverage, paid time off, employee assistance, participation in a 401k program with company match, and additional voluntary or legally-required benefits.</p></div><p><strong>Pay Transparency:</strong> Where required by law, <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> provides a reasonable range of compensation for specific roles. The starting pay range for this remote role is $105,840 - $245,00. This range reflects the minimum and maximum target compensation for the position across all US locations. Actual compensation will depend on a number of factors, including the candidate’s actual work location, relevant experience, technical skills, and other qualifications.</p><p></p><h3>About <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a>\n</h3><p><a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> is a $30+ billion business and technology services leader, serving 75% of the Fortune Global 100. We are committed to accelerating client success and positively impacting society through responsible innovation. We are one of the world’s leading AI and digital infrastructure providers, with unmatched capabilities in enterprise-scale AI, cloud, security, connectivity, data centers and application services.  Our consulting and industry solutions help organizations and society move confidently and sustainably into the digital future. As a Global Top Employer, we have experts in more than 50 countries. We also offer clients access to a robust ecosystem of innovation centers as well as established and start-up partners. <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> is part of NTT Group, which invests over $3 billion each year in R&amp;D.</p><p>Whenever possible, we hire locally to <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> offices or client sites. This ensures we can provide timely and effective support tailored to each client’s needs. While many positions offer remote or hybrid work options, these arrangements are subject to change based on client requirements. For employees near an <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> office or client site, in-office attendance may be required for meetings or events, depending on business needs. At <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a>, we are committed to staying flexible and meeting the evolving needs of both our clients and employees. <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> recruiters will never ask for payment or banking information and will only use @nttdata.com and @talent.nttdataservices.com email addresses. If you are requested to provide payment or disclose banking information, please submit a contact us form, .</p><p></p><p><strong><em><a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> endeavors to make </em></strong><strong><em> accessible to any and all users. If you would like to contact us regarding the accessibility of our website or need assistance completing the application process, please contact us at </em></strong><strong><em>. This contact information is for accommodation requests only and cannot be used to inquire about the status of applications. <a href=\"https://himalayas.app/companies/nttdata\">NTT DATA</a> is an equal opportunity employer. Qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or protected veteran status. For our EEO Policy Statement, please click </em></strong><strong><em>here</em></strong><strong><em>. If you'd like more information on your EEO rights under the law, please click </em></strong><strong><em>here</em></strong><strong><em>. For Pay Transparency information, please click</em></strong><strong><em> here</em></strong><strong><em>.</em></strong></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787257959,
+            "expiryDate": 1789781719,
+            "applicationLink": "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us",
+            "guid": "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us"
           },
           {
             "title": "Ontologist",
@@ -1840,45 +1874,6 @@
             "guid": "https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer"
           },
           {
-            "title": "Senior Applied Scientist - Knowledge Graphs & AI",
-            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
-            "companyName": "Outreach.io",
-            "companySlug": "outreach-io",
-            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "India"
-            ],
-            "timezoneRestrictions": [
-              5.5
-            ],
-            "categories": [
-              "Applied-Scientist",
-              "Machine-Learning-Scientist",
-              "Knowledge-Graphs-Engineer",
-              "AI-Research-Scientist",
-              "NLP-Scientist",
-              "Senior-Applied-Scientist",
-              "Senior-AI-Scientist",
-              "Senior-AI-ML-Scientist"
-            ],
-            "parentCategories": [
-              "Data Science"
-            ],
-            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div>\n<div><h3><strong>About the job:</strong></h3></div>\n<div><ul>\n<li>We are looking for an Associate Applied Scientist to join a dynamic and innovative AI platform team. If you are passionate about applying machine learning to knowledge graphs and reasoning systems at scale, this is an opportunity to build core components of Outreach's per-tenant knowledge graph while developing deep expertise under the guidance of senior scientists.</li>\n<li>Our team is building a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph powers contextual reasoning across the platform, driving next-best-action recommendations, deal risk signals, coaching suggestions, and competitive intelligence. In this pivotal role, you will design the underlying representations, extraction pipelines, and reasoning layers that make this possible, working closely with cross-functional engineering and product teams to deliver innovative, scalable, and reliable AI capabilities with direct impact on revenue outcomes. </li>\n<li>This role is ideal for someone with strong ML fundamentals who wants to build deepexpertise in knowledge graphs and applied NLP in a fast-moving product environment.</li>\n</ul></div>\n</div><h3>Your Daily Adventures Will Include:</h3><ul><div><div>\n<h3><strong>Key Responsibilities:</strong></h3>\n<li>Knowledge Graph Design &amp; Construction: Design and implement entity resolution and ontology population within established graph schemas. Write and optimize queries for graph traversal and feature extraction. Own data quality for assigned domains.</li>\n<li>Information Extraction: Build pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, and event detection. Run   experiments to compare approaches and improve accuracy metrics.</li>\n<li>Contextual Reasoning &amp; Recommendation: Implement graph traversal logic and feature queries that feed downstream scoring signals. Build and maintain features for deal risk, next-best-action, or coaching recommendation surfaces. </li>\n<li>Representation Learning: Train and evaluate link prediction and node classification models using established graph embedding methods. Implement evaluation pipelines and track model performance over time.</li>\n<li>Domain Modeling: Translate sales concepts, such as deal stages, buyer engagement patterns, rep behaviors, and account health, into graph nodes and relationships under the guidance of senior scientists. Contribute to ontology design and documentation.</li>\n<li>Cross-functional Collaboration: Work with software engineers to deploy models and pipelines into production. Write clean, tested code. Monitor system health and respond to incidents. Participate in code review and design discussions.</li>\n</div></div></ul><h3>Our Vision of You:</h3><ul><div><div><div>\n<div><h3><strong>Qualifications:</strong></h3></div>\n<div><div>\n<li>PhD in a relevant field such as Computer Science, NLP, Machine Learning, or a related discipline with a focus on knowledge representation and reasoning, information extraction and relationship extraction, graph neural networks, recommendation systems, or conversation AI and dialogue systems. MS + 2 years of relevant experiecne will also be considered.</li>\n<li>Solid engineering fundamentals. You can write production-quality code, not just prototype notebooks. You can write clean, tested Python code. Experience with graph databases or query languages (e.g., Neo4j, SPARQL, Cypher).</li>\n<li>Demonstrated ability to build and evaluate ML models. You've trained models, measured performance using appropriate metrics, and iterated on results.</li>\n<li>A track record of building things: whether that's research prototypes that went beyond the paper, open-source contributions, or side projects that required real systems thinking. You understand the gap between a research prototype and a reliable production system, such as monitoring, data drift, latency, and operational excellence.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n<li>Good communication skills. You can explain technical concepts to engineers and product managers.</li>\n<li>Eager to learn. You are excited to develop deep expertise in knowledge graphs and applied NLP under the mentorship of senior scientists.</li>\n</div></div>\n</div></div></div></ul><h3>Nice to Have: </h3><ul><div><div>\n<li>Hands-on experience applying knowledge graphs or graph-based learning methods to real-world data in a production setting.</li>\n<li>Strong fundamentals in at least two of: knowledge graph construction, information extraction, graph neural networks, or recommender systems. </li>\n<li>Experience working with large-scale unstructured text data (conversational transcripts, email, or similar)</li>\n<li>Experience with probabilistic graphical models, conversational AI, or sales/revenue domain data</li>\n<li>Published research at top-tier venues</li>\n</div></div></ul><h3>Why Join Us? </h3><ul><div><div>\n<li>Greenfield Architecture: Shape the design of a core AI system from the ground up, with the latitude to make foundational technical decisions that define the platform.</li>\n<li>Depth That Matters: This role genuinely requires PhD-level thinking; you will tackle problems in entity resolution, temporal reasoning, and graph learning that demand it.</li>\n<li>Applied Impact: Work with real production feedback loops and millions of sales interactions, not just benchmarks; see your models change how thousands of teams sell.</li>\n<li>High Leverage, Low Bureaucracy: Join a small, senior team where your contributions are visible, your ideas ship fast, and you have direct access to leadership.</li>\n<li>Career Growth: Opportunity to lead initiatives and mentor engineers.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1783335032,
-            "expiryDate": 1788519031,
-            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai",
-            "guid": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai"
-          },
-          {
             "title": "Principal Solutions Architect - Expert Services",
             "excerpt": "Mendix is a low-code app development platform: First, what is low-code?",
             "companyName": "Mendix",
@@ -1921,6 +1916,45 @@
             "expiryDate": 1789170392,
             "applicationLink": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services",
             "guid": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services"
+          },
+          {
+            "title": "Senior Applied Scientist - Knowledge Graphs & AI",
+            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
+            "companyName": "Outreach.io",
+            "companySlug": "outreach-io",
+            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "India"
+            ],
+            "timezoneRestrictions": [
+              5.5
+            ],
+            "categories": [
+              "Applied-Scientist",
+              "Machine-Learning-Scientist",
+              "Knowledge-Graphs-Engineer",
+              "AI-Research-Scientist",
+              "NLP-Scientist",
+              "Senior-Applied-Scientist",
+              "Senior-AI-Scientist",
+              "Senior-AI-ML-Scientist"
+            ],
+            "parentCategories": [
+              "Data Science"
+            ],
+            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div>\n<div><h3><strong>About the job:</strong></h3></div>\n<div><ul>\n<li>We are looking for an Associate Applied Scientist to join a dynamic and innovative AI platform team. If you are passionate about applying machine learning to knowledge graphs and reasoning systems at scale, this is an opportunity to build core components of Outreach's per-tenant knowledge graph while developing deep expertise under the guidance of senior scientists.</li>\n<li>Our team is building a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph powers contextual reasoning across the platform, driving next-best-action recommendations, deal risk signals, coaching suggestions, and competitive intelligence. In this pivotal role, you will design the underlying representations, extraction pipelines, and reasoning layers that make this possible, working closely with cross-functional engineering and product teams to deliver innovative, scalable, and reliable AI capabilities with direct impact on revenue outcomes. </li>\n<li>This role is ideal for someone with strong ML fundamentals who wants to build deepexpertise in knowledge graphs and applied NLP in a fast-moving product environment.</li>\n</ul></div>\n</div><h3>Your Daily Adventures Will Include:</h3><ul><div><div>\n<h3><strong>Key Responsibilities:</strong></h3>\n<li>Knowledge Graph Design &amp; Construction: Design and implement entity resolution and ontology population within established graph schemas. Write and optimize queries for graph traversal and feature extraction. Own data quality for assigned domains.</li>\n<li>Information Extraction: Build pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, and event detection. Run   experiments to compare approaches and improve accuracy metrics.</li>\n<li>Contextual Reasoning &amp; Recommendation: Implement graph traversal logic and feature queries that feed downstream scoring signals. Build and maintain features for deal risk, next-best-action, or coaching recommendation surfaces. </li>\n<li>Representation Learning: Train and evaluate link prediction and node classification models using established graph embedding methods. Implement evaluation pipelines and track model performance over time.</li>\n<li>Domain Modeling: Translate sales concepts, such as deal stages, buyer engagement patterns, rep behaviors, and account health, into graph nodes and relationships under the guidance of senior scientists. Contribute to ontology design and documentation.</li>\n<li>Cross-functional Collaboration: Work with software engineers to deploy models and pipelines into production. Write clean, tested code. Monitor system health and respond to incidents. Participate in code review and design discussions.</li>\n</div></div></ul><h3>Our Vision of You:</h3><ul><div><div><div>\n<div><h3><strong>Qualifications:</strong></h3></div>\n<div><div>\n<li>PhD in a relevant field such as Computer Science, NLP, Machine Learning, or a related discipline with a focus on knowledge representation and reasoning, information extraction and relationship extraction, graph neural networks, recommendation systems, or conversation AI and dialogue systems. MS + 2 years of relevant experiecne will also be considered.</li>\n<li>Solid engineering fundamentals. You can write production-quality code, not just prototype notebooks. You can write clean, tested Python code. Experience with graph databases or query languages (e.g., Neo4j, SPARQL, Cypher).</li>\n<li>Demonstrated ability to build and evaluate ML models. You've trained models, measured performance using appropriate metrics, and iterated on results.</li>\n<li>A track record of building things: whether that's research prototypes that went beyond the paper, open-source contributions, or side projects that required real systems thinking. You understand the gap between a research prototype and a reliable production system, such as monitoring, data drift, latency, and operational excellence.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n<li>Good communication skills. You can explain technical concepts to engineers and product managers.</li>\n<li>Eager to learn. You are excited to develop deep expertise in knowledge graphs and applied NLP under the mentorship of senior scientists.</li>\n</div></div>\n</div></div></div></ul><h3>Nice to Have: </h3><ul><div><div>\n<li>Hands-on experience applying knowledge graphs or graph-based learning methods to real-world data in a production setting.</li>\n<li>Strong fundamentals in at least two of: knowledge graph construction, information extraction, graph neural networks, or recommender systems. </li>\n<li>Experience working with large-scale unstructured text data (conversational transcripts, email, or similar)</li>\n<li>Experience with probabilistic graphical models, conversational AI, or sales/revenue domain data</li>\n<li>Published research at top-tier venues</li>\n</div></div></ul><h3>Why Join Us? </h3><ul><div><div>\n<li>Greenfield Architecture: Shape the design of a core AI system from the ground up, with the latitude to make foundational technical decisions that define the platform.</li>\n<li>Depth That Matters: This role genuinely requires PhD-level thinking; you will tackle problems in entity resolution, temporal reasoning, and graph learning that demand it.</li>\n<li>Applied Impact: Work with real production feedback loops and millions of sales interactions, not just benchmarks; see your models change how thousands of teams sell.</li>\n<li>High Leverage, Low Bureaucracy: Join a small, senior team where your contributions are visible, your ideas ship fast, and you have direct access to leadership.</li>\n<li>Career Growth: Opportunity to lead initiatives and mentor engineers.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1783335032,
+            "expiryDate": 1788519031,
+            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai",
+            "guid": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai"
           },
           {
             "title": "Ontology Expert - Remote (Dallas, TX, US)",
