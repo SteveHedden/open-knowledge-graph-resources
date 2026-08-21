@@ -2,15 +2,15 @@
   "artifacts": [
     {
       "path": "data/jobs/jobs.json",
-      "sha256": "8465570ea9bc81cc177afd1393411c67905e6c961d88c363f8a04cd28ab95fa2"
+      "sha256": "09e42549c6cd936ae9bf6262e59da1056113743be85541d3bed8d319a347314f"
     },
     {
       "path": "data/jobs/jobs.ttl",
-      "sha256": "09d7e133b9ec79efe4b09d813317b88d1bc6ae8a9ffdf2e174d16f625a3b6eb5"
+      "sha256": "dc77989a5c1f975a616a542fff71323d79fe915320160666a7b73f20ef14be1e"
     },
     {
       "path": "data/jobs/raw/adzuna.json",
-      "sha256": "35939beca0b9b544d7a0441489178c6695f4fc60f03f52d9402a1218bc98b6fb"
+      "sha256": "40d70573b3b7451b251771091a9de277e3b42068ffb47ddd10ffa1976b5dc0da"
     },
     {
       "path": "data/jobs/raw/arbeitnow.json",
@@ -26,16 +26,16 @@
     },
     {
       "path": "data/jobs/raw/jooble.json",
-      "sha256": "084878064c2ca45205d6d43b6c8797ccf0b8a5daab6c7df99cf8ceee5080af38"
+      "sha256": "78535359cf8e2f2d9f8228ff51f3fab46e5fadf2093d3fc4cd97049bdeec5de2"
     },
     {
       "path": "data/jobs/run.json",
-      "sha256": "8c37d80be558ecbc64b03512c87f0c8ab11264ec141e305c452f74133436fb4c"
+      "sha256": "f5f84256f954e0c02f1fd40f1354ad2b0d35ecf50f77c59897e63a73d0d7c75b"
     }
   ],
-  "completedAt": "2026-08-21T06:54:17Z",
-  "generationId": "20260821T065417Z-0a468761d8ee",
+  "completedAt": "2026-08-21T07:47:55Z",
+  "generationId": "20260821T074755Z-1074f57f3b1c",
   "schemaVersion": "1.0.0",
-  "sourceRetrievedAt": "2026-08-21T06:54:12Z",
-  "startedAt": "2026-08-21T06:53:55Z"
+  "sourceRetrievedAt": "2026-08-21T07:47:46Z",
+  "startedAt": "2026-08-21T07:47:31Z"
 }
