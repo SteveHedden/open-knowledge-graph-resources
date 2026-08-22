@@ -8,11 +8,11 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
       ],
       "payload": {
-        "comments": "13/03/2026: The API has been updated to include the companySlug field in the response.",
+        "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
         "updatedAt": 1787162066,
         "offset": 0,
         "limit": 20,
-        "totalCount": 29,
+        "totalCount": 26,
         "jobs": [
           {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
@@ -485,47 +485,6 @@
             "guid": "https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer"
           },
           {
-            "title": "Senior AI Platform Engineer",
-            "excerpt": "Join Hire Hangar and work with fast-growing global companies while building a long-term, remote career.",
-            "companyName": "Hire Hangar",
-            "companySlug": "hire-hangar",
-            "companyLogo": "",
-            "employmentType": "Contractor",
-            "minSalary": 2500,
-            "maxSalary": 4000,
-            "salaryPeriod": "monthly",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": "USD",
-            "locationRestrictions": [
-              "Belize",
-              "Colombia",
-              "Dominican Republic",
-              "Honduras",
-              "Nicaragua",
-              "Peru"
-            ],
-            "timezoneRestrictions": [
-              -6,
-              -5,
-              -4
-            ],
-            "categories": [
-              "Senior-AI-Platform-Developer",
-              "Senior-ML-Platform-Engineer",
-              "Senior-AI-Engineer",
-              "Senior-AI-Software-Engineer",
-              "AI-ML-Platform-Engineer"
-            ],
-            "parentCategories": [],
-            "description": "<p>Join <a href=\"https://himalayas.app/companies/hire-hangar\">Hire Hangar</a> and work with fast-growing global companies while building a long-term, remote career.</p><p><strong>Job Title</strong> Senior AI Platform Engineer</p><p><strong>Location</strong> Remote</p><p><strong>Time Zone</strong> Flexible / Aligned to HQ Time Zone</p><p><strong>Role Overview</strong> This role sits at the intersection of AI engineering and platform development. As a Senior AI Platform Engineer, you will own the contextual intelligence layer that powers our AI agents — ensuring they understand, reason, and act with precision across our SaaS ecosystem.</p><p>You will work at the cutting edge of how structured knowledge is used to make AI agents smarter and more reliable. This is a role for an engineer who thinks deeply about context, meaning, and how machines can be equipped to make better decisions — and who can also build the frontend surfaces that make those capabilities accessible to end users.</p><h3>Key Responsibilities</h3><ul>\n<li><p>Design and maintain semantic context layers — knowledge graphs, ontologies, and structured context stores — that inform agent behaviour</p></li>\n<li><p>Develop full stack features that allow users to configure, monitor, and control AI agents through intuitive interfaces</p></li>\n<li><p>Integrate RPA agents with semantic reasoning capabilities, enabling context-aware automation at scale</p></li>\n<li><p>Build and maintain data platform frontends that provide real-time visibility into agent activity and data flows</p></li>\n<li><p>Work closely with product and data science teams to translate business requirements into intelligent automation solutions</p></li>\n<li><p>Champion engineering quality through testing, documentation, and architectural consistency</p></li>\n</ul><h3>Required Qualifications</h3><ul>\n<li><p>Senior-level full stack engineering experience</p></li>\n<li><p>Deep understanding of semantic technologies — knowledge graphs, RDF/OWL, ontologies, or entity resolution</p></li>\n<li><p>Hands-on experience building or consuming AI agent frameworks</p></li>\n<li><p>Strong frontend skills with React or similar, including data visualisation libraries such as D3.js or Recharts</p></li>\n<li><p>Experience with Python-based backends and ML service integration</p></li>\n<li><p>Comfort working in fast-moving SaaS product environments</p></li>\n<li><p>Must have prior remote work experience and demonstrated ability to collaborate asynchronously across distributed teams</p></li>\n</ul><h3>Preferred Qualifications</h3><ul>\n<li><p>Experience with graph databases such as Neo4j or Amazon Neptune</p></li>\n<li><p>Exposure to NLP pipelines and named entity recognition (NER)</p></li>\n<li><p>Contributions to open-source AI or semantic tooling</p></li>\n<li><p>Experience with enterprise-scale knowledge management systems</p></li>\n</ul><h3>Tools &amp; Technology</h3><ul>\n<li><h3>Python / Node.js</h3></li>\n<li><h3>React / TypeScript</h3></li>\n<li><p>Graph or semantic databases (Neo4j, Amazon Neptune, or similar)</p></li>\n<li><p>LLM APIs and agent orchestration frameworks</p></li>\n<li><p>Data visualisation tooling (D3.js, Recharts, or similar)</p></li>\n<li><h3>Slack, Zoom, Google Workspace</h3></li>\n</ul><p><strong>Please Note</strong> It is crucial that you complete the application form in full. As part of the application process, you will be required to complete a short technical assessment. If your application is successful, you will receive an email confirming next steps. Applications that are not completed in full will not be considered for any open roles.</p><p>We connect top talent with vetted employers, competitive pay, and real growth opportunities.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1782203915,
-            "expiryDate": 1787387914,
-            "applicationLink": "https://himalayas.app/companies/hire-hangar/jobs/senior-ai-platform-engineer",
-            "guid": "https://himalayas.app/companies/hire-hangar/jobs/senior-ai-platform-engineer"
-          },
-          {
             "title": "Director of Applied Science and Engineering - Knowledge Graphs & AI",
             "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
             "companyName": "Outreach.io",
@@ -563,6 +522,47 @@
             "expiryDate": 1789920761,
             "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai",
             "guid": "https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai"
+          },
+          {
+            "title": "Sr. Engineer, Knowledge Engineering - 11317",
+            "excerpt": "Coupa makes margins multiply through its community-generated AI and industry-leading total spend management platform for businesses large and small.",
+            "companyName": "Coupa Software, Inc.",
+            "companySlug": "coupa-software-inc",
+            "companyLogo": "https://cdn-images.himalayas.app/540vzyzjdifz6m156kwda48vh0br",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "India"
+            ],
+            "timezoneRestrictions": [
+              5.5
+            ],
+            "categories": [
+              "Software-Engineer",
+              "Knowledge-Engineering",
+              "Graph-Engineering",
+              "Data-Engineering",
+              "AI-Engineering",
+              "Senior-Knowledge-Graph-Engineer",
+              "Sr.-Staff-AI-Engineer",
+              "Sr.-Staff-Machine-Learning-Engineer",
+              "Senior-AI-ML-Engineer",
+              "Knowledge-Graphs-Engineer"
+            ],
+            "parentCategories": [
+              "Developer"
+            ],
+            "description": "<div>Coupa makes margins multiply through its community-generated AI and industry-leading total spend management platform for businesses large and small. Coupa AI is informed by trillions of dollars of direct and indirect spend data across a global network of 10M+ buyers and suppliers. We empower you with the ability to predict, prescribe, and automate smarter, more profitable business decisions to improve operating margins.</div><h3>Why join Coupa?</h3><div>🔹 Pioneering Technology: At Coupa, we're at the forefront of innovation, leveraging the latest technology to empower our customers with greater efficiency and visibility in their spend.</div><div>🔹 Collaborative Culture: We value collaboration and teamwork, and our culture is driven by transparency, openness, and a shared commitment to excellence.</div><div>🔹 Global Impact: Join a company where your work has a global, measurable impact on our clients, the business, and each other. </div><div>Learn more on Life at Coupa blog and hear from our employees about their experiences working at Coupa. </div><div><strong>The Impact of a Sr. Engineer, Knowledge Engineering at Coupa: </strong></div><div>Coupa's platform spans several engines with rich entity models: suppliers, contracts, commodities, purchase orders, invoices, and more. The Senior Engineer, Knowledge Engineering will formalize these entity relationships into a structured knowledge representation that our AI models can reason over. You will build ontologies and knowledge graphs that enable multi-hop reasoning, connecting our AI capabilities to the deep structure of enterprise spend data.</div><h3>What You’ll Do </h3><ul>\n<li>Design and implement an ontology from Coupa's existing data models (hundreds of entity models, relationships, business rules).</li>\n<li>Build and populate a knowledge graph with entity instances and relationship edges.</li>\n<li>Implement graph query interfaces for AI model consumption.</li>\n<li>Design tenant-isolated vs. shared knowledge graph layers.</li>\n<li>Map existing taxonomies and classification hierarchies into the knowledge graph.</li>\n<li>Collaborate with ML engineers to generate ontology-aware training data.</li>\n<li>Evaluate graph storage options (Elasticsearch graph queries, Neptune, Neo4j) and recommend approach.</li>\n<li>Evolve the ontology as AI capabilities expand to additional platform areas.</li>\n</ul><h3>What You Will Bring to Coupa </h3><ul>\n<li>5+ years of software engineering experience, with 2+ years in knowledge representation, graph systems, or data modeling.</li>\n<li>Experience with graph databases or graph-like query systems (Neo4j, Neptune, Elasticsearch).</li>\n<li>Understanding of ontology design: RDF, JSON-LD, OWL, or pragmatic schema representations.</li>\n<li>Experience with entity resolution and knowledge graph population from structured data.</li>\n<li>Strong data modeling skills: entity-relationship design, hierarchical taxonomies.</li>\n<li>Proficiency in Python and query languages (Cypher, Gremlin, SPARQL, or Elasticsearch DSL).</li>\n<li>Experience with enterprise data models in B2B SaaS is a plus.</li>\n<li>BS/MS in Computer Science or equivalent experience.</li>\n</ul><div>Coupa complies with relevant laws and regulations regarding equal opportunity and offers a welcoming and inclusive work environment. Decisions related to hiring, compensation, training, or evaluating performance are made fairly, and we provide equal employment opportunities to all qualified candidates and employees. </div><div>Please be advised that inquiries or resumes from recruiters will not be accepted.</div><div>By submitting your application, you acknowledge that you have read Coupa’s Privacy Policy and understand that Coupa receives/collects your application, including your personal data, for the purposes of managing Coupa's ongoing recruitment and placement activities, including for employment purposes in the event of a successful application and for notification of future job opportunities if you did not succeed the first time. You will find more details about how your application is processed, the purposes of processing, and how long we retain your application in our Privacy Policy.</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1783348916,
+            "expiryDate": 1788532916,
+            "applicationLink": "https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317",
+            "guid": "https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317"
           },
           {
             "title": "Enterprise Context Architect",
@@ -610,47 +610,6 @@
             "expiryDate": 1791310696,
             "applicationLink": "https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect-8865361332",
             "guid": "https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect-8865361332"
-          },
-          {
-            "title": "Sr. Engineer, Knowledge Engineering - 11317",
-            "excerpt": "Coupa makes margins multiply through its community-generated AI and industry-leading total spend management platform for businesses large and small.",
-            "companyName": "Coupa Software, Inc.",
-            "companySlug": "coupa-software-inc",
-            "companyLogo": "https://cdn-images.himalayas.app/540vzyzjdifz6m156kwda48vh0br",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "India"
-            ],
-            "timezoneRestrictions": [
-              5.5
-            ],
-            "categories": [
-              "Software-Engineer",
-              "Knowledge-Engineering",
-              "Graph-Engineering",
-              "Data-Engineering",
-              "AI-Engineering",
-              "Senior-Knowledge-Graph-Engineer",
-              "Sr.-Staff-AI-Engineer",
-              "Sr.-Staff-Machine-Learning-Engineer",
-              "Senior-AI-ML-Engineer",
-              "Knowledge-Graphs-Engineer"
-            ],
-            "parentCategories": [
-              "Developer"
-            ],
-            "description": "<div>Coupa makes margins multiply through its community-generated AI and industry-leading total spend management platform for businesses large and small. Coupa AI is informed by trillions of dollars of direct and indirect spend data across a global network of 10M+ buyers and suppliers. We empower you with the ability to predict, prescribe, and automate smarter, more profitable business decisions to improve operating margins.</div><h3>Why join Coupa?</h3><div>🔹 Pioneering Technology: At Coupa, we're at the forefront of innovation, leveraging the latest technology to empower our customers with greater efficiency and visibility in their spend.</div><div>🔹 Collaborative Culture: We value collaboration and teamwork, and our culture is driven by transparency, openness, and a shared commitment to excellence.</div><div>🔹 Global Impact: Join a company where your work has a global, measurable impact on our clients, the business, and each other. </div><div>Learn more on Life at Coupa blog and hear from our employees about their experiences working at Coupa. </div><div><strong>The Impact of a Sr. Engineer, Knowledge Engineering at Coupa: </strong></div><div>Coupa's platform spans several engines with rich entity models: suppliers, contracts, commodities, purchase orders, invoices, and more. The Senior Engineer, Knowledge Engineering will formalize these entity relationships into a structured knowledge representation that our AI models can reason over. You will build ontologies and knowledge graphs that enable multi-hop reasoning, connecting our AI capabilities to the deep structure of enterprise spend data.</div><h3>What You’ll Do </h3><ul>\n<li>Design and implement an ontology from Coupa's existing data models (hundreds of entity models, relationships, business rules).</li>\n<li>Build and populate a knowledge graph with entity instances and relationship edges.</li>\n<li>Implement graph query interfaces for AI model consumption.</li>\n<li>Design tenant-isolated vs. shared knowledge graph layers.</li>\n<li>Map existing taxonomies and classification hierarchies into the knowledge graph.</li>\n<li>Collaborate with ML engineers to generate ontology-aware training data.</li>\n<li>Evaluate graph storage options (Elasticsearch graph queries, Neptune, Neo4j) and recommend approach.</li>\n<li>Evolve the ontology as AI capabilities expand to additional platform areas.</li>\n</ul><h3>What You Will Bring to Coupa </h3><ul>\n<li>5+ years of software engineering experience, with 2+ years in knowledge representation, graph systems, or data modeling.</li>\n<li>Experience with graph databases or graph-like query systems (Neo4j, Neptune, Elasticsearch).</li>\n<li>Understanding of ontology design: RDF, JSON-LD, OWL, or pragmatic schema representations.</li>\n<li>Experience with entity resolution and knowledge graph population from structured data.</li>\n<li>Strong data modeling skills: entity-relationship design, hierarchical taxonomies.</li>\n<li>Proficiency in Python and query languages (Cypher, Gremlin, SPARQL, or Elasticsearch DSL).</li>\n<li>Experience with enterprise data models in B2B SaaS is a plus.</li>\n<li>BS/MS in Computer Science or equivalent experience.</li>\n</ul><div>Coupa complies with relevant laws and regulations regarding equal opportunity and offers a welcoming and inclusive work environment. Decisions related to hiring, compensation, training, or evaluating performance are made fairly, and we provide equal employment opportunities to all qualified candidates and employees. </div><div>Please be advised that inquiries or resumes from recruiters will not be accepted.</div><div>By submitting your application, you acknowledge that you have read Coupa’s Privacy Policy and understand that Coupa receives/collects your application, including your personal data, for the purposes of managing Coupa's ongoing recruitment and placement activities, including for employment purposes in the event of a successful application and for notification of future job opportunities if you did not succeed the first time. You will find more details about how your application is processed, the purposes of processing, and how long we retain your application in our Privacy Policy.</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1783348916,
-            "expiryDate": 1788532916,
-            "applicationLink": "https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317",
-            "guid": "https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317"
           },
           {
             "title": "Freelance Data Scientist with Ontology and Graph expertise",
@@ -898,6 +857,53 @@
             "expiryDate": 1788180237,
             "applicationLink": "https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products",
             "guid": "https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products"
+          },
+          {
+            "title": "General Application — Research & Science",
+            "excerpt": "Welcome systems thinkers.  System builds software to help the world see and solve anything as a system, starting in healthcare.",
+            "companyName": "System",
+            "companySlug": "system",
+            "companyLogo": "https://cdn-images.himalayas.app/4cb3ee9g2owbipevpadqgolixrp5",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Mid-level"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Research-Science",
+              "Machine-Learning-Research",
+              "Computational-Research",
+              "AI-Research",
+              "Healthcare-Research",
+              "Research-Scientist",
+              "Research-Associate",
+              "Data-Scientist",
+              "Laboratory-Technician"
+            ],
+            "parentCategories": [
+              "Data Science",
+              "Marketing"
+            ],
+            "description": "<p>Welcome systems thinkers. <a href=\"https://himalayas.app/companies/system\">System</a> builds software to help the world see and solve anything as a system, starting in healthcare. We are a Public Benefit Corporation driven by purpose and shaped by values. We hire systems thinkers who are motivated by our purpose, share our values, and have the skills to advance our mission. </p><p>At <a href=\"https://himalayas.app/companies/system\">System</a>, research is the origin of our most important ideas — and researchers work at the frontier of graph theory, clinical AI, causal inference, and knowledge representation to push the boundaries of what our platform can do.</p><h4><strong>As a researcher at <a href=\"https://himalayas.app/companies/system\">System</a>, you will:</strong></h4><ul>\n<li>Develop and validate novel methods for modeling complex, interconnected systems</li>\n<li>Work at the intersection of graph theory, machine learning, and domain-specific knowledge</li>\n<li>Collaborate with Data Science and Engineering to transition research findings into production</li>\n<li>Publish and present findings that advance both the field and <a href=\"https://himalayas.app/companies/system\">System</a>'s mission</li>\n<li>Partner with clinical and domain experts to ground research in real-world impact</li>\n<li>Contribute to a culture of intellectual rigor, curiosity, and continuous learning</li>\n</ul><h4><strong>The ideal candidate has:</strong></h4><ul>\n<li>Master's or PhD in Computer Science, Statistics, Biomedical Informatics, or a related field</li>\n<li>A strong publication record or equivalent applied research experience</li>\n<li>Deep expertise in machine learning, statistical modeling, or computational methods</li>\n<li>Experience working with complex, heterogeneous, or graph-structured data</li>\n<li>Ability to communicate research findings clearly to both technical and non-technical audiences</li>\n<li>Comfort operating in a fast-paced startup environment alongside a long research horizon</li>\n</ul><h4><strong>Bonus if you have:</strong></h4><ul>\n<li>Experience with clinical NLP, EHR data, or healthcare ontologies (SNOMED, ICD, OMOP)</li>\n<li>Familiarity with knowledge graphs, semantic web technologies, or ontology engineering</li>\n<li>Background in causal inference, systems dynamics, or complex adaptive systems</li>\n<li>Experience collaborating with clinicians, policymakers, or public health researchers</li>\n</ul><h4><strong>You might be a fit if you:</strong></h4><ul>\n<li>Think in systems — mapping feedback loops, interdependencies, and second-order effects comes naturally to you</li>\n<li>Are motivated by purpose-driven work, particularly at the intersection of technology and healthcare</li>\n<li>Believe technology should be a force for good and are drawn to the Public Benefit Corporation model</li>\n<li>Hold yourself and your work to a values-first standard, not just a deliverables-first one</li>\n<li>Lead with first principles and are comfortable questioning assumptions others take for granted</li>\n<li>See complexity as an invitation, not an obstacle — you thrive when problems are messy and interconnected</li>\n<li>Care about the downstream effects of what you build — on users, on systems, on society</li>\n<li>Operate with intellectual humility — always learning, always open to being wrong</li>\n</ul><h3>Compensation:</h3><h3>Commensurate with experience and level. </h3><h3>About <a href=\"https://himalayas.app/companies/system\">System</a> </h3><p>We aspire to help the world see itself differently and build a more responsible and values-driven model of a tech company. We are backed by top-tier VCs in Silicon Valley and New York and leading angel investors and founded by the former VP Data at Spotify. To learn more about what motivates our social mission, we invite you to read our blog here.</p><p>We believe in the power of autonomous, interdisciplinary, and diverse teams; in agile development; and in leading with values, first principles, and clear high-level priorities backed by data.  We believe in cultivating a growth mindset for our team — always learning, improving, being challenged, and having opportunities for professional and personal development.</p><p><a href=\"https://himalayas.app/companies/system\">System</a> Inc. is an equal opportunity employer. We are proud to foster a workplace, in person and online, free from discrimination. We strongly believe that diversity of experience, perspectives, and backgrounds will lead to a better environment for our employees and a better product for our users. We are committed to providing access, equal opportunity and reasonable accommodation for individuals with disabilities in employment, its services, programs, and activities. Job applicants must be legally authorized to work in the United States of America and must maintain ongoing work authorization during employment.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1783268307,
+            "expiryDate": 1788452306,
+            "applicationLink": "https://himalayas.app/companies/system/jobs/general-application-research-science",
+            "guid": "https://himalayas.app/companies/system/jobs/general-application-research-science"
           }
         ]
       }
@@ -910,7 +916,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
       ],
       "payload": {
-        "comments": "13/03/2026: The API has been updated to include the companySlug field in the response.",
+        "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
         "updatedAt": 1787257959,
         "offset": 0,
         "limit": 20,
@@ -1002,44 +1008,6 @@
             "guid": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect"
           },
           {
-            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
-            "excerpt": "At IRIUM we want you to always chase your dreams.",
-            "companyName": "IRIUM Portugal",
-            "companySlug": "irium-portugal",
-            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
-            "employmentType": "Full Time",
-            "minSalary": 3800,
-            "maxSalary": 4300,
-            "salaryPeriod": "monthly",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": "EUR",
-            "locationRestrictions": [
-              "Portugal"
-            ],
-            "timezoneRestrictions": [
-              -1,
-              0
-            ],
-            "categories": [
-              "Ontologist",
-              "Semantic-Knowledge-Engineer",
-              "Ontology-Engineer",
-              "Knowledge-Graph-Engineer",
-              "Semantic-Web-Engineer",
-              "Remote-Senior-Ontology-Specialist",
-              "Senior-Semantic-Data-Consultant",
-              "Senior-Knowledge-Graph-Engineer"
-            ],
-            "parentCategories": [],
-            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1787162066,
-            "expiryDate": 1792346065,
-            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
-            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
-          },
-          {
             "title": "Ontology Expert - Remote (Dallas, TX, US)",
             "excerpt": "Req ID:367052 NTT DATA strives to hire exceptional, innovative and passionate individuals who want to grow with us.",
             "companyName": "NTT DATA",
@@ -1084,6 +1052,44 @@
             "expiryDate": 1789781719,
             "applicationLink": "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us",
             "guid": "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us"
+          },
+          {
+            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
+            "excerpt": "At IRIUM we want you to always chase your dreams.",
+            "companyName": "IRIUM Portugal",
+            "companySlug": "irium-portugal",
+            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
+            "employmentType": "Full Time",
+            "minSalary": 3800,
+            "maxSalary": 4300,
+            "salaryPeriod": "monthly",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": "EUR",
+            "locationRestrictions": [
+              "Portugal"
+            ],
+            "timezoneRestrictions": [
+              -1,
+              0
+            ],
+            "categories": [
+              "Ontologist",
+              "Semantic-Knowledge-Engineer",
+              "Ontology-Engineer",
+              "Knowledge-Graph-Engineer",
+              "Semantic-Web-Engineer",
+              "Remote-Senior-Ontology-Specialist",
+              "Senior-Semantic-Data-Consultant",
+              "Senior-Knowledge-Graph-Engineer"
+            ],
+            "parentCategories": [],
+            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787162066,
+            "expiryDate": 1792346065,
+            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
+            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
           },
           {
             "title": "Ontologist",
@@ -1141,7 +1147,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
       ],
       "payload": {
-        "comments": "13/03/2026: The API has been updated to include the companySlug field in the response.",
+        "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
         "updatedAt": 1787162066,
         "offset": 0,
         "limit": 20,
@@ -1619,7 +1625,7 @@
         "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
       ],
       "payload": {
-        "comments": "13/03/2026: The API has been updated to include the companySlug field in the response.",
+        "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
         "updatedAt": 1787257959,
         "offset": 0,
         "limit": 20,
