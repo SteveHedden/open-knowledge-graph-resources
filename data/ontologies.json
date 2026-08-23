@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T07:00:23Z",
+  "generatedAt": "2026-08-23T06:52:59Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -711,18 +711,22 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
-      "title": "Allotrope Foundation Ontologies",
-      "wikidataId": "https://www.wikidata.org/wiki/Q131278973",
+      "title": "Allotrope Foundation Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141142957",
       "types": [
         "Ontology"
       ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/allotrope-foundation-ontologies/",
-      "description": "definitions for analytical methods in science",
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/allotrope-foundation-ontology/",
+      "description": "main ontology of the Allotrope Foundation Ontologies suite",
       "aliases": [
-        "AFO"
+        "AFO",
+        "Allotrope Foundation Ontology Merged Without QUDT And Inferred",
+        "Allotrope Merged Ontology Suite"
       ],
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.allotrope.org/ontologies"
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "Allotrope Merged Ontology Suite",
@@ -8650,7 +8654,7 @@
       "category": "Library & Cultural Heritage",
       "creators": [
         {
-          "name": "Ḥasan Amīlī",
+          "name": "Hassan Amili",
           "type": "Person",
           "wikidataId": "https://www.wikidata.org/wiki/Q55980043"
         }
@@ -25433,7 +25437,7 @@
       "category": "Library & Cultural Heritage",
       "creators": [
         {
-          "name": "Ḥasan Amīlī",
+          "name": "Hassan Amili",
           "type": "Person",
           "wikidataId": "https://www.wikidata.org/wiki/Q55980043"
         }

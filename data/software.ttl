@@ -547,8 +547,8 @@
     okg:description "Euler Yet another proof Engine (EYE), a Semantic Web reasoning engine for N3 and RDF rules" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://eulersharp.sourceforge.net/> ;
-    okg:latestVersion "11.24.4" ;
-    okg:releaseDate "2026-05-12"^^xsd:date ;
+    okg:latestVersion "11.24.5" ;
+    okg:releaseDate "2026-08-22"^^xsd:date ;
     okg:softwareType okg:ReasoningInference ;
     okg:sourceRepo <https://github.com/eyereasoner/eye> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -732,7 +732,9 @@
     okg:description "TypeScript visualization toolkit for RDF, labeled property graphs, and virtualized graphs" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://zwelz3.github.io/g3-toolkit/> ;
+    okg:latestVersion "1.0.0" ;
     okg:programmingLanguage "TypeScript" ;
+    okg:releaseDate "2026-08-21"^^xsd:date ;
     okg:softwareType okg:Visualization ;
     okg:sourceRepo <https://github.com/zwelz3/g3-toolkit> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -1245,9 +1247,9 @@
     okg:description "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://linkml.neverblink.eu/> ;
-    okg:latestVersion "0.13.1" ;
+    okg:latestVersion "0.14.0" ;
     okg:programmingLanguage "Scala" ;
-    okg:releaseDate "2026-08-17"^^xsd:date ;
+    okg:releaseDate "2026-08-21"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/NeverBlink-OSS/linkml-scala> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -1590,9 +1592,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
-    okg:latestVersion "0.7.0" ;
+    okg:latestVersion "0.8.0" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-19"^^xsd:date ;
+    okg:releaseDate "2026-08-21"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;

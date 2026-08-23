@@ -225,15 +225,17 @@
     okg:title "Allärs – Allmän tesaurus på svenska" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q18888511> .
 
-<https://openknowledgegraphs.com/resource/allotrope-foundation-ontologies/> a okg:Ontology ;
-    rdfs:label "Allotrope Foundation Ontologies" ;
-    okg:alias "AFO" ;
+<https://openknowledgegraphs.com/resource/allotrope-foundation-ontology/> a okg:Ontology ;
+    rdfs:label "Allotrope Foundation Ontology" ;
+    okg:alias "AFO",
+        "Allotrope Foundation Ontology Merged Without QUDT And Inferred",
+        "Allotrope Merged Ontology Suite" ;
     okg:category okg:LifeSciencesHealthcare ;
-    okg:description "definitions for analytical methods in science" ;
-    okg:homepage <https://www.allotrope.org/ontologies> ;
+    okg:description "main ontology of the Allotrope Foundation Ontologies suite" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Allotrope Foundation Ontologies" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q131278973> .
+    okg:title "Allotrope Foundation Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141142957> .
 
 <https://openknowledgegraphs.com/resource/allotrope-merged-ontology-suite/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -3161,7 +3163,7 @@
 <https://openknowledgegraphs.com/resource/dictionary-of-construction-and-architecture-arabic-french-moroccan/> a okg:ControlledVocabulary ;
     rdfs:label "Dictionary of Construction and Architecture (Arabic, French, Moroccan)" ;
     okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Hasan_Amili_Q55980043 ;
+    okg:creator okg:Creator_Hassan_Amili_Q55980043 ;
     okg:sourceType <http://www.wikidata.org/entity/Q859161> ;
     okg:title "Dictionary of Construction and Architecture (Arabic, French, Moroccan)" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140610369> .
@@ -20460,7 +20462,7 @@
 <https://openknowledgegraphs.com/resource/maritime-and-navigation-dictionary-arabic-french-moroccan/> a okg:ControlledVocabulary ;
     rdfs:label "Maritime and Navigation Dictionary (Arabic-French-Moroccan)" ;
     okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Hasan_Amili_Q55980043 ;
+    okg:creator okg:Creator_Hassan_Amili_Q55980043 ;
     okg:sourceType <http://www.wikidata.org/entity/Q859161> ;
     okg:title "Maritime and Navigation Dictionary (Arabic-French-Moroccan)" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140611060> .
@@ -30917,8 +30919,8 @@ okg:Creator_Filipi_Miranda_Soares_Q111524976 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=75U3PgEAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111524976> .
 
-okg:Creator_Hasan_Amili_Q55980043 a okg:Person ;
-    rdfs:label "Ḥasan Amīlī" ;
+okg:Creator_Hassan_Amili_Q55980043 a okg:Person ;
+    rdfs:label "Hassan Amili" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55980043> .
 
 okg:Creator_International_Commission_on_Stratigraphy_Q402104 a okg:Organization ;
