@@ -7,30 +7,100 @@
   },
   "completeSourceSnapshot": false,
   "deduplicatedCount": 534,
-  "fetchedCount": 300,
+  "fetchedCount": 50,
   "queries": [
-    "all active postings; KG relevance classified locally"
+    "knowledge graph",
+    "ontology",
+    "semantic web",
+    "SPARQL"
   ],
-  "queryCount": 1,
+  "queryCount": 4,
   "queryFamilies": [
     {
-      "query": "all active postings; KG relevance classified locally",
-      "queryConcepts": [],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow-query-all-active"
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph"
+    },
+    {
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology"
+    },
+    {
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web"
+    },
+    {
+      "query": "SPARQL",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql"
+    }
+  ],
+  "queryResults": [
+    {
+      "complete": false,
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph",
+      "returnedCount": 20,
+      "totalCount": 26
+    },
+    {
+      "complete": true,
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology",
+      "returnedCount": 5,
+      "totalCount": 5
+    },
+    {
+      "complete": true,
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web",
+      "returnedCount": 11,
+      "totalCount": 11
+    },
+    {
+      "complete": true,
+      "query": "SPARQL",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql",
+      "returnedCount": 14,
+      "totalCount": 14
     }
   ],
   "rejectedCount": 0,
-  "requestCount": 2,
-  "retrievedAt": "2026-08-23T22:26:49Z",
-  "runId": "20260823T222649Z-cb9c08a4af14",
-  "sourceAttributionUrl": "https://www.arbeitnow.com/",
-  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
-  "sourceKey": "arbeitnow",
-  "sourceName": "Arbeitnow",
+  "requestCount": 4,
+  "retrievedAt": "2026-08-23T23:25:05Z",
+  "runId": "20260823T232505Z-cb9c08a4af14",
+  "sourceAttributionUrl": "https://himalayas.app/",
+  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas",
+  "sourceKey": "himalayas",
+  "sourceName": "Himalayas",
   "sourceRefreshes": {
     "adzuna": "2026-08-23T19:25:24Z",
     "arbeitnow": "2026-08-23T22:26:49Z",
-    "himalayas": "2026-08-22T23:24:39Z",
+    "himalayas": "2026-08-23T23:25:05Z",
     "jobicy": "2026-08-23T22:26:39Z",
     "jooble": "2026-08-22T19:26:06Z"
   }

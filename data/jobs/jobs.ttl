@@ -7,8 +7,8 @@
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://openknowledgegraphs.com/prototypes/kg-jobs/live/dataset/20260823T222649Z-cb9c08a4af14> a dcat:Dataset ;
-    dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow> ;
+<https://openknowledgegraphs.com/prototypes/kg-jobs/live/dataset/20260823T232505Z-cb9c08a4af14> a dcat:Dataset ;
+    dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
     dcterms:title "KG Jobs local live snapshot"@en ;
     dcat:resource <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/adzuna-5544832366>,
         <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/adzuna-5544970938>,
@@ -544,7 +544,7 @@
         <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/jooble-5811275786647574104>,
         <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/jooble-6482569573868403115>,
         <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/jooble-7468627678405332798> ;
-    prov:wasGeneratedBy <https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T222649Z-cb9c08a4af14> .
+    prov:wasGeneratedBy <https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14> .
 
 kgjd:employer-3316-takeda-development-center-americas a kgjobs:Employer,
         schema:Organization ;
@@ -1350,10 +1350,50 @@ kgjd:employer-zvoove a kgjobs:Employer,
         schema:Organization ;
     schema:name "Zvoove" .
 
-<https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T222649Z-cb9c08a4af14> a prov:Activity ;
-    prov:endedAtTime "2026-08-23T22:26:49+00:00"^^xsd:dateTime ;
-    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow>,
-        <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab> .
+<https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14> a prov:Activity ;
+    prov:endedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas>,
+        <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab> ;
+    kgjobs:hasQueryExecution <https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/1>,
+        <https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/2>,
+        <https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/3>,
+        <https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/4> .
+
+<https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/1> a prov:Activity,
+        kgjobs:QueryExecution ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph> ;
+    kgjobs:executedQueryText "knowledge graph" ;
+    kgjobs:queryComplete false ;
+    kgjobs:queryFamily <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph> ;
+    kgjobs:returnedCount "20"^^xsd:nonNegativeInteger ;
+    kgjobs:totalCount "26"^^xsd:nonNegativeInteger .
+
+<https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/2> a prov:Activity,
+        kgjobs:QueryExecution ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology> ;
+    kgjobs:executedQueryText "ontology" ;
+    kgjobs:queryComplete true ;
+    kgjobs:queryFamily <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology> ;
+    kgjobs:returnedCount "5"^^xsd:nonNegativeInteger ;
+    kgjobs:totalCount "5"^^xsd:nonNegativeInteger .
+
+<https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/3> a prov:Activity,
+        kgjobs:QueryExecution ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web> ;
+    kgjobs:executedQueryText "semantic web" ;
+    kgjobs:queryComplete true ;
+    kgjobs:queryFamily <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web> ;
+    kgjobs:returnedCount "11"^^xsd:nonNegativeInteger ;
+    kgjobs:totalCount "11"^^xsd:nonNegativeInteger .
+
+<https://openknowledgegraphs.com/prototypes/kg-jobs/live/activity/20260823T232505Z-cb9c08a4af14/query/4> a prov:Activity,
+        kgjobs:QueryExecution ;
+    prov:used <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql> ;
+    kgjobs:executedQueryText "SPARQL" ;
+    kgjobs:queryComplete true ;
+    kgjobs:queryFamily <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql> ;
+    kgjobs:returnedCount "14"^^xsd:nonNegativeInteger ;
+    kgjobs:totalCount "14"^^xsd:nonNegativeInteger .
 
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/adzuna-5544832366> a prov:Entity,
         schema:JobPosting ;
@@ -2675,14 +2715,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
@@ -2691,23 +2723,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -2719,13 +2735,37 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
@@ -2910,14 +2950,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-19T02:17:48+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontologist" ;
             kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "strong" ;
@@ -2939,6 +2971,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
@@ -3017,6 +3057,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-22T16:29:41+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontology Engineer" ;
             kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "strong" ;
@@ -3039,15 +3087,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
+            kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5749881521" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -3080,7 +3120,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontologist" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -3088,7 +3128,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
+            kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5758055646" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -3518,7 +3558,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontologist" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -3526,7 +3566,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ] ;
+            kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5782767413" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -3777,7 +3817,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontologist" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -3785,7 +3825,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
+            kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5800466725" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -3976,11 +4016,67 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-19T02:17:48+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Entity Resolution" ;
             kgjobs:conceptScheme "KG Activities" ;
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
             kgjobs:matchedPhrase "Entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SHACL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
+            kgjobs:matchedPhrase "SHACL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -4000,22 +4096,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Entity Resolution" ;
             kgjobs:conceptScheme "KG Activities" ;
             kgjobs:matchStrength "contextual" ;
@@ -4024,51 +4104,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SHACL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
-            kgjobs:matchedPhrase "SHACL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
@@ -4371,7 +4411,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontology Engineer" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -4379,7 +4419,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ] ;
+            kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5819589496" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -4406,19 +4446,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-22T16:29:41+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph Engineer" ;
             kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
             kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
@@ -4444,7 +4484,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ] ;
+            kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5821096528" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -4478,7 +4518,15 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
@@ -4488,13 +4536,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph Engineer" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -4509,14 +4557,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
             kgjobs:negated false ;
             kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
@@ -4561,19 +4601,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Semantic Data Modeler" ;
             kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-semantic-data-modeler> ;
             kgjobs:matchedPhrase "Semantic Data Modeler" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
@@ -4608,7 +4648,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontology Engineer" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -4616,7 +4656,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
+            kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5822024165" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -5781,7 +5821,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontologist" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -5789,7 +5829,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
+            kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5837813702" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -6021,7 +6061,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontology Engineer" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -6029,7 +6069,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer> ;
             kgjobs:matchedPhrase "Ontology Engineer" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
+            kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5841362633" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -6081,11 +6121,27 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-19T02:17:48+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "OWL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
+            kgjobs:matchedPhrase "OWL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "SPARQL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
             kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -6102,22 +6158,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
             kgjobs:matchedPhrase "SHACL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "OWL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
-            kgjobs:matchedPhrase "OWL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
@@ -6246,19 +6286,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-19T02:17:48+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
             kgjobs:negated false ;
             kgjobs:sourceField "title" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
@@ -6580,7 +6620,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
@@ -6588,7 +6628,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ] ;
+            kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T19:25:24+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5851420506" ;
     schema:baseSalary [ a schema:MonetaryAmount ;
@@ -6615,14 +6655,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-22T02:58:08+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "OWL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -6636,6 +6668,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
             kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -12998,7 +13038,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-1297f5e31897809d> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "1297f5e31897809d71cca36aaff4ebac78898f71cb88ece7076e298da4a5e225" ;
@@ -13029,19 +13069,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDFS" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdfs> ;
-            kgjobs:matchedPhrase "RDFS" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "SPARQL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
             kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDFS" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdfs> ;
+            kgjobs:matchedPhrase "RDFS" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13068,7 +13108,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "OWL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Greece" ] ;
@@ -13088,18 +13128,34 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-1870041ab177ec37> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/blanc-labs/jobs/senior-data-engineer> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "1870041ab177ec37baf8a98826dab58def51b0efa77d8200bf320d76f9aed278" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Graph Database" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database> ;
             kgjobs:matchedPhrase "graph database" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13119,51 +13175,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL query language" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "Resource Description Framework" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
             kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13183,6 +13199,30 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "Resource Description Framework" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL query language" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Graph Database" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
@@ -13191,14 +13231,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/blanc-labs/jobs/senior-data-engineer" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Colombia" ] ;
@@ -13218,7 +13258,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-1e41c310c342a124> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "1e41c310c342a1243bea53a135ab11658f7de00b7be80835a4815965823a51c6" ;
@@ -13232,7 +13272,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -13252,13 +13292,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-1e5b62e0903d27b5> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/autodoc-co/jobs/middle-seo-research> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "1e5b62e0903d27b56eb50d6cfe606b2f27f1fa827aa944859f6371f50f0216ac" ;
     kgjobs:classification "not_match" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/autodoc-co/jobs/middle-seo-research" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Ukraine" ] ;
@@ -13278,7 +13318,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-2ff3b9a82c83acec> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/madiff/jobs/knowledge-graph-engineer> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "2ff3b9a82c83acec16ac9563997a1a0d72ace4d36ac77fe6a1885c7b0749e489" ;
@@ -13293,35 +13333,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "GraphRAG" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
-            kgjobs:matchedPhrase "GraphRAG" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Semantic Web" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
-            kgjobs:matchedPhrase "semantic web" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13333,19 +13349,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
             kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "GraphRAG" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
+            kgjobs:matchedPhrase "GraphRAG" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13357,14 +13373,38 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "GraphRAG" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
             kgjobs:matchedPhrase "GraphRAG" ;
             kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Semantic Web" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
+            kgjobs:matchedPhrase "semantic web" ;
+            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/madiff/jobs/knowledge-graph-engineer" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -13384,13 +13424,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-371ba4dd9f6ecaa2> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "371ba4dd9f6ecaa2a4168e19cdafe814d520029891594214efba8db7e1a34067" ;
     kgjobs:classification "not_match" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -13416,18 +13456,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-4193b9a9c4556e05> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/ifs/jobs/knowledge-engineer-knowledge-graph-agentic-interfaces> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "4193b9a9c4556e05b6d4ea0c78b7560fd04e8679bd07ebc850ca7f62a0575ea4" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SKOS" ;
+            kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos> ;
-            kgjobs:matchedPhrase "SKOS" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13436,6 +13476,22 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SKOS" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos> ;
+            kgjobs:matchedPhrase "SKOS" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13455,11 +13511,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13469,24 +13525,8 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
             kgjobs:matchedPhrase "OWL" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
-            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/ifs/jobs/knowledge-engineer-knowledge-graph-agentic-interfaces" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United Kingdom" ] ;
@@ -13506,58 +13546,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-5a9f64c1f3624ecb> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "5a9f64c1f3624ecb5c3ec179d86d9c8bfa2da5cb3e812e2e8fe8cd92cb958f67" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13566,6 +13566,22 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
             kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13582,6 +13598,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
             kgjobs:matchedPhrase "entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13593,38 +13617,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
@@ -13639,8 +13631,56 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "India" ] ;
@@ -13660,13 +13700,21 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-6661db6a7b6248a1> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/associated-bank/jobs/knowledge-engineer> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "6661db6a7b6248a16c3df050899e6e7e9f8302772b19ea4d17aba6f282d65230" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -13697,16 +13745,8 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
             kgjobs:matchedPhrase "semantic web" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/associated-bank/jobs/knowledge-engineer" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -13732,34 +13772,26 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-6ae17e77589279d6> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "6ae17e77589279d6c66a34e7379cddbe1ff606c8e22e0a749dc3bf890f88ef4d" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Semantic Web" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
+            kgjobs:matchedPhrase "semantic web" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
             kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13779,27 +13811,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "GraphRAG" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
             kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
-            kgjobs:matchedPhrase "GraphRAG" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "Entity Resolution" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13811,27 +13827,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13843,22 +13851,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "Entity Resolution" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -13867,27 +13859,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Semantic Web" ;
+            kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
-            kgjobs:matchedPhrase "semantic web" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SHACL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
-            kgjobs:matchedPhrase "Shapes Constraint Language" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13899,27 +13875,91 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "GraphRAG" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
-            kgjobs:matchedPhrase "GraphRAG" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "GraphRAG" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
-            kgjobs:matchedPhrase "GraphRAG" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDFS" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdfs> ;
             kgjobs:matchedPhrase "RDFS" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "GraphRAG" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
+            kgjobs:matchedPhrase "GraphRAG" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "GraphRAG" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
+            kgjobs:matchedPhrase "GraphRAG" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "GraphRAG" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graphrag> ;
+            kgjobs:matchedPhrase "GraphRAG" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SHACL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
+            kgjobs:matchedPhrase "Shapes Constraint Language" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13930,7 +13970,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "SHACL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Spain" ] ;
@@ -13950,7 +13990,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-6afa6412fa0d4f22> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "6afa6412fa0d4f226693583d0a54524355114b96cf7aa766714817cafac76e00" ;
@@ -13962,14 +14002,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
             kgjobs:matchedPhrase "OWL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -13989,6 +14021,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Ontologist" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
+            kgjobs:matchedPhrase "Ontologist" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -13997,21 +14037,21 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Ontologist" ;
-            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
-            kgjobs:matchedPhrase "Ontologist" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+            kgjobs:sourceField "description" ] ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
-            schema:name "Germany" ],
+            schema:name "Switzerland" ],
         [ a schema:AdministrativeArea ;
             schema:name "Austria" ],
         [ a schema:AdministrativeArea ;
-            schema:name "Switzerland" ] ;
+            schema:name "Germany" ] ;
     schema:datePosted "2026-07-07"^^xsd:date ;
     schema:description "wie du die welt von morgen prägen kannst Wissen modellieren: Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle. Brücken bauen: Du agierst als zentraler Übersetzer zwischen den Fachbereichen und und unserem Engineering Team. Du stellst sicher, dass das Wissensmodell sowohl die fachliche Realität abbildet als auch technisch exzellent umsetzbar ist. Konzepte gestalten: Du entwirfst und moderierst Workshops, um gemeinsam mit Stakeholdern ein einheitliches Verständnis (eine \"Shared Language\") für zentrale Geschäftskonzepte zu entwickeln und zu etablieren. Datenquellen integrieren: Du arbeitest eng mit unserem Engineering Team zusammen, um die Anbindung von Datenbanken, APIs und anderen Quellen an den Knowledge Graphen konzeptionell zu begleiten. Ontologien entwickeln und pflegen: Mit Standards wie OWL/RDF erstellst du nicht nur das Modell, sondern definierst auch die logischen Regeln und Constraints, die die Qualität und Konsistenz unseres Knowledge Graphen sicherstellen. was dich auszeichnet Leidenschaft für Struktur und Logik: Du denkst abstrakt und liebst es, komplexe Zusammenhänge in klare, formale Strukturen zu überführen. Deine Fähigkeit, vom Konkreten zum Abstrakten zu gelangen, zeichnet dich aus. Erfahrung in der Modellierung: Du hast bereits Erfahrung in der Modellierung, z. B. mit UML oder idealerweise bereits mit semantischen Technologien (RDF, OWL). Kommunikationsstärke: Du kannst komplexe technische und logische Modelle so erklären, dass sie sowohl für Fachexperten als auch für Entwickler verständlich und überzeugend sind. Du hörst exzellent zu und stellst die richtigen Fragen. Technisches Grundverständnis: Du weißt, wie Daten in Systemen fließen. Begriffe wie APIs, Datenbanken und Datenpipelines sind dir nicht fremd. Erste Erfahrungen mit Graph-Technologien (z. B. SPARQL, Cypher) sind ein großes Plus, aber kein Muss. Neugier und Gestaltungswille: Du hast den Antrieb, nicht nur bestehende Systeme zu verwalten, sondern eine neue Art der Wissensorganisation für KI von Grund auf mitzugestalten und voranzutreiben. dich erwartet ein team, das Vertrauen lebt. Wir glauben daran, dass du selbst am besten weißt, wie, wann und wo du produktiv bist. Ob Homeoffice, Co-Working-Space oder zeitweise im europäischen Ausland - du gestaltest deinen Arbeitsalltag nach deinen Bedürfnissen. Wenn wir uns treffen, sind unsere Events echte Highlights, die uns als Team noch enger zusammenbringen. Neugier fördert. Lernen hört bei uns nie auf. Wir unterstützen dich dabei, dich kontinuierlich weiterzuentwickeln - mit Zeit, Budget und einem Umfeld, das Austausch und Weiterdenken fördert. Neugier ist für uns kein \"Nice-to-have\", sondern ein zentraler Wert. Co-Creation inspiriert. Bei digetiers gestaltest du nicht nur deine eigene Rolle, sondern auch unser Unternehmen aktiv mit. Ob in Projekten, Prozessen oder unserer Kultur - deine Ideen zählen. Wir glauben an mutige Mitgestaltung statt starrer Strukturen. Mit Leidenschaft professionell arbeitet. Wir lachen gerne - und liefern trotzdem auf höchstem Niveau. Spaß und Leistungsbereitschaft schließen sich bei uns nicht aus, sondern beflügeln sich gegenseitig. Als Musketiere zusammenhält. Einer für alle, alle für einen - bei digetiers ist das nicht nur Ursprung unseres Namens, sondern gelebte Realität. Wir gewinnen als Team und halten uns gegenseitig den Rücken frei. Originally posted on Himalayas" ;
     schema:employmentType "Full Time" ;
@@ -14028,29 +14068,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-6cb847e2f23576a3> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "6cb847e2f23576a33f2cb44bc3df0da6ca91beb8826ca33d05519575d3d703a5" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Graph Database" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database> ;
-            kgjobs:matchedPhrase "graph database" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Linked Data" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -14067,6 +14091,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -14080,6 +14112,54 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "OWL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
+            kgjobs:matchedPhrase "OWL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Graph Database" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database> ;
+            kgjobs:matchedPhrase "graph database" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14099,43 +14179,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "OWL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
-            kgjobs:matchedPhrase "OWL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14145,16 +14193,8 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database> ;
             kgjobs:matchedPhrase "graph database" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -14180,18 +14220,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-77a6d4ff02fb7102> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/sosi/jobs/ontologist> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "77a6d4ff02fb710284964e04582fec5c47b75f6e7af1b201667b3897766ffdfe" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptLabel "SHACL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
+            kgjobs:matchedPhrase "SHACL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14200,38 +14240,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Ontologist" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
-            kgjobs:matchedPhrase "Ontologist" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "OWL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
-            kgjobs:matchedPhrase "Web Ontology Language" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14243,13 +14251,37 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SHACL" ;
+            kgjobs:conceptLabel "SPARQL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
-            kgjobs:matchedPhrase "SHACL" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Ontologist" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
+            kgjobs:matchedPhrase "Ontologist" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Entity Resolution" ;
             kgjobs:conceptScheme "KG Activities" ;
@@ -14265,8 +14297,16 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
             kgjobs:matchedPhrase "OWL" ;
             kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "OWL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
+            kgjobs:matchedPhrase "Web Ontology Language" ;
+            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/sosi/jobs/ontologist" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -14286,58 +14326,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-87517d77ca1981d0> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "87517d77ca1981d0123ee7792c186c0bf6cd5843f13237918e7213405d99f99c" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
             kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14363,8 +14363,48 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
             kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "India" ] ;
@@ -14384,21 +14424,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-88b4d554d288f31a> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "88b4d554d288f31a04177420482127fff8243594ac254a88b5bfefb339fbbea3" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -14423,19 +14455,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
             kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14453,8 +14485,16 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "India" ] ;
@@ -14474,7 +14514,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-95bbbc714b24fac2> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/system/jobs/general-application-research-science> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "95bbbc714b24fac28e21f69f688c075db6e04b555042d784cb60f7343edb6937" ;
@@ -14488,7 +14528,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "semantic web" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/system/jobs/general-application-research-science" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -14508,13 +14548,21 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-964fb417e5068de7> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/parachute-health/jobs/senior-catalog-strategist-taxonomist-contract-to-hire> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "964fb417e5068de7594c4d19f0f5807d7759b45bd8f176c485fd6c13bffd3e41" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Taxonomist" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-taxonomist> ;
+            kgjobs:matchedPhrase "Taxonomist" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Taxonomist" ;
             kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "contextual" ;
@@ -14531,14 +14579,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SKOS" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos> ;
-            kgjobs:matchedPhrase "SKOS" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Semantic Web" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -14547,13 +14587,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Taxonomist" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-taxonomist> ;
-            kgjobs:matchedPhrase "Taxonomist" ;
+            kgjobs:conceptLabel "SKOS" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos> ;
+            kgjobs:matchedPhrase "SKOS" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Taxonomist" ;
             kgjobs:conceptScheme "Job Roles" ;
@@ -14562,7 +14602,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "Taxonomist" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/parachute-health/jobs/senior-catalog-strategist-taxonomist-contract-to-hire" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -14582,7 +14622,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-97d677906e84a88e> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/inizio-partners-corp/jobs/knowledge-graph-engineer> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "97d677906e84a88e6dd7be8686a1e539946acc5316095a365d1b9ab2cd885c77" ;
@@ -14594,6 +14634,30 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "contextual" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
             kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14612,14 +14676,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
@@ -14637,14 +14693,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "contextual" ;
@@ -14658,14 +14706,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14675,16 +14715,16 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+            kgjobs:sourceField "title" ] ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/inizio-partners-corp/jobs/knowledge-graph-engineer" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -14704,13 +14744,29 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-aa526468540c6504> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/autodesk/jobs/principal-knowledge-acquisition-analyst> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "aa526468540c6504e9feda0ffac52078e6f29d5512ad203e199dfee8dd0a4539" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-19T20:33:38+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Entity Resolution" ;
             kgjobs:conceptScheme "KG Activities" ;
             kgjobs:matchStrength "contextual" ;
@@ -14725,24 +14781,8 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
             kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/autodesk/jobs/principal-knowledge-acquisition-analyst" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Poland" ] ;
@@ -14762,26 +14802,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-b3e86849cb27c76c> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "b3e86849cb27c76cc9e3198d76b80d44342d0ad74adea1cbd13fc2b38bbb6405" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14793,11 +14825,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "OWL" ;
+            kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
-            kgjobs:matchedPhrase "OWL" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14817,6 +14849,22 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Entity Resolution" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
+            kgjobs:matchedPhrase "entity resolution" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "OWL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
+            kgjobs:matchedPhrase "OWL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -14833,22 +14881,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Entity Resolution" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-entity-resolution> ;
-            kgjobs:matchedPhrase "entity resolution" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "India" ] ;
@@ -14868,18 +14908,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-d12c8986ef7aff30> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "d12c8986ef7aff304c0a21304463e1021e03e6d84b7ab2cc1e66a2d2a688982c" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptLabel "OWL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
+            kgjobs:matchedPhrase "OWL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14891,11 +14931,27 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "OWL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
             kgjobs:matchedPhrase "OWL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14907,11 +14963,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "SPARQL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14920,25 +14976,9 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "OWL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
-            kgjobs:matchedPhrase "OWL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -14964,18 +15004,18 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-e29b31dfda6347fc> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "e29b31dfda6347fc994ce5759cfdcd27afb0fddf02c6f1b50edfb83cde9d5a9c" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -14987,19 +15027,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Semantic Web" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
-            kgjobs:matchedPhrase "semantic web" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15027,38 +15067,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
-            kgjobs:conceptScheme "Job Roles" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
-            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -15067,11 +15075,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "SPARQL" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15082,6 +15090,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Semantic Web" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
+            kgjobs:matchedPhrase "semantic web" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "SKOS" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
@@ -15091,14 +15107,38 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:matchedPhrase "knowledge graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph Engineer" ;
+            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-kg-engineer> ;
+            kgjobs:matchedPhrase "Knowledge Graph Engineer" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "title" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -15124,7 +15164,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-eafa9061e253e14b> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "eafa9061e253e14b914178dab4e93da73ecf0c8ab9b3a3eabd24ef6cef3e8447" ;
@@ -15139,11 +15179,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:conceptLabel "Taxonomy Management" ;
+            kgjobs:conceptScheme "KG Activities" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-taxonomy-management> ;
+            kgjobs:matchedPhrase "taxonomy management" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15155,14 +15195,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Taxonomy Management" ;
-            kgjobs:conceptScheme "KG Activities" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/activity-taxonomy-management> ;
-            kgjobs:matchedPhrase "taxonomy management" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "United States" ] ;
@@ -15182,13 +15222,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-f6a18cb9a7632cf0> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect-8865361332> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "f6a18cb9a7632cf0bc1554aab434275329e8e22048aa405bc0018126a9a6a0bb" ;
     kgjobs:classification "not_match" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/dropbox/jobs/enterprise-context-architect-8865361332" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Canada" ] ;
@@ -15214,7 +15254,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-f7931e11f7587dd6> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/adesso-belgium/jobs/freelance-data-scientist-with-ontology-and-graph-expertise> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "f7931e11f7587dd6b65d20509558a3d6190d16d49d0099d406708d69884550d6" ;
@@ -15226,6 +15266,22 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdfs> ;
             kgjobs:matchedPhrase "RDFS" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15241,7 +15297,7 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge graph" ;
+            kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15261,19 +15317,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15283,16 +15331,8 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
             kgjobs:matchedPhrase "semantic web" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "knowledge graph" ;
-            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/adesso-belgium/jobs/freelance-data-scientist-with-ontology-and-graph-expertise" ;
     schema:datePosted "2026-08-04"^^xsd:date ;
     schema:description "adesso Belgium is looking for a data scientist (2) to support our customer in building an AI Agent Platform Data Foundations. Customer info: Our customer is an international, independent provider of indirect procurement services. Requirements Preferred start date: 1xASAP and 1x January 2027 Duration: 12 months Rate: depending on your location Time Zone: CET Your role Build the data and context layer that powers the customer's procurement AI agent platform — canonical models, knowledge graph, semantic/taxonomy layer, and the retrieval and evaluation pipelines agents depend on. This is production infrastructure from day one, not a proof of concept: versioned, tested, and built for multiple tenants. You will work on: Data products & canonical modeling — Design and deliver the first reference data products (Supplier Master, Spend Cube, Contract Register) end to end, from source ingestion through the canonical model. Knowledge graph & ontology — Stand up and operate the platform and working graphs (ontology, reference data, tenant separation); own the graph-plus-vector retrieval design, deciding per source whether data is represented as entities/relationships, embeddings, or both. Master data & semantic layer — Build matching rules, golden records, and stewardship processes for Suppliers, Contracts, and Categories; contribute to the business glossary and taxonomy-to-ontology mapping. Extraction & evaluation — Build document-extraction pipelines (e.g., from SharePoint sources) with confidence scoring and human review for uncertain cases; build and maintain labelled evaluation datasets and accuracy benchmarks against agreed thresholds. Connector framework — Build source connectors (starting with Fabric data products and master data golden records) so new sources can be onboarded without modifying the graph core or query service. Quality feedback loop — Implement the mechanism routing agent overrides, failures, or low-confidence retrievals back to data owners so data products improve over time rather than decay. Engineering practice — Work exclusively in the GitHub/Azure environment; ship via pull request with CI (build, tests, security scan, evaluation fixtures); version all schemas, connector contracts, and extraction configs. Required Experience Hard skills: Demonstrated experience taking a knowledge graph system to production (not just prototyping) — schema design, query performance, tenant/data isolation - Using Neo4J and Python Strong background in semantic modeling: ontologies, taxonomies, business glossaries, and their relationship to graph and canonical data models. Hands-on experience with semantic web standards and technologies including OWL/OWL2, RDF, RDFS, SPARQL, ontology lifecycle management, taxonomy alignment, and semantic reasoning. Experience building data products and master-data pipelines (entity matching, golden-record consolidation, stewardship workflows). Experience designing and implementing hybrid retrieval architectures combining graph databases (e.g., Neo4j) and vector databases to support semantic search, RAG, and AI agent workloads. Experience with retrieval architectures combining graph and vector/embedding approaches. Experience building and maintaining labelled evaluation datasets and measuring extraction/model accuracy against a threshold. Proficiency with modern data/ML engineering practices: version control, CI/CD, automated testing, containerized deployment Experience with Microsoft Fabric and SharePoint-based document extraction pipelines. Soft skills: Fluent in ENG Open to travelling if needed (EU), this position is fully remote Collaborative mindset, ideally with a proven similar work experience Why join adesso Belgium? Work in an international group with strong local expertise in Belgium. Collaborate with cross-functional teams to deliver trusted, compliant, reusable data products. Flexible freelance setup with the support of a growing adesso Belgium community. Originally posted on Himalayas" ;
@@ -15308,20 +15348,20 @@ kgjd:employer-zvoove a kgjobs:Employer,
 <https://openknowledgegraphs.com/prototypes/kg-jobs/live/job/himalayas-ff4b43cef25106d2> a prov:Entity,
         schema:JobPosting ;
     dcterms:source <https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas> ;
-    prov:generatedAtTime "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    prov:generatedAtTime "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote> ;
     kgjobs:active true ;
     kgjobs:canonicalFingerprint "ff4b43cef25106d25c3e50077ba0b00be6c4bc65406c9adc781f1f29926e7361" ;
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-19T20:33:38+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:conceptLabel "Ontologist" ;
+            kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
+            kgjobs:matchedPhrase "Ontologist" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Semantic Integration" ;
             kgjobs:conceptScheme "KG Activities" ;
@@ -15336,22 +15376,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "OWL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
-            kgjobs:matchedPhrase "OWL" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SHACL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
-            kgjobs:matchedPhrase "SHACL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15371,27 +15395,35 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SHACL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl> ;
+            kgjobs:matchedPhrase "SHACL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "OWL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-owl> ;
+            kgjobs:matchedPhrase "OWL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Ontologist" ;
             kgjobs:conceptScheme "Job Roles" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
             kgjobs:matchedPhrase "Ontologist" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "title" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Semantic Web" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
-            kgjobs:matchedPhrase "Semantic Web" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15403,14 +15435,22 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Ontologist" ;
-            kgjobs:conceptScheme "Job Roles" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist> ;
-            kgjobs:matchedPhrase "Ontologist" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Semantic Web" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web> ;
+            kgjobs:matchedPhrase "Semantic Web" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
-    kgjobs:lastSeenAt "2026-08-22T23:24:39+00:00"^^xsd:dateTime ;
+    kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote" ;
     schema:applicantLocationRequirements [ a schema:AdministrativeArea ;
             schema:name "Portugal" ] ;
@@ -15517,11 +15557,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:45+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
@@ -15541,11 +15581,11 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T22:26:39+00:00"^^xsd:dateTime ;
@@ -16177,19 +16217,19 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:50+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "RDF" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
             kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-22T19:26:06+00:00"^^xsd:dateTime ;
@@ -16308,6 +16348,14 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:50+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SPARQL" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
+            kgjobs:matchedPhrase "SPARQL" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Linked Data" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -16321,14 +16369,6 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:matchStrength "strong" ;
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
             kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SPARQL" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql> ;
-            kgjobs:matchedPhrase "SPARQL" ;
             kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-22T19:26:06+00:00"^^xsd:dateTime ;
@@ -16483,13 +16523,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:50+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Neo4j" ;
+            kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "contextual" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
-            kgjobs:matchedPhrase "Neo4j" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
+            kgjobs:matchedPhrase "Knowledge Graph" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
+            kgjobs:sourceField "title" ],
         [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
@@ -16499,13 +16539,13 @@ kgjd:employer-zvoove a kgjobs:Employer,
             kgjobs:negated false ;
             kgjobs:sourceField "description" ],
         [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "Knowledge Graph" ;
+            kgjobs:conceptLabel "Neo4j" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
-            kgjobs:matchedPhrase "Knowledge Graph" ;
+            kgjobs:matchStrength "contextual" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-neo4j> ;
+            kgjobs:matchedPhrase "Neo4j" ;
             kgjobs:negated false ;
-            kgjobs:sourceField "title" ] ;
+            kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-22T19:26:06+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "5811275786647574104" ;
     schema:baseSalary "$100k" ;
