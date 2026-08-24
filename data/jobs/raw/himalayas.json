@@ -9,10 +9,10 @@
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
-        "updatedAt": 1787162066,
+        "updatedAt": 1787520511,
         "offset": 0,
         "limit": 20,
-        "totalCount": 26,
+        "totalCount": 30,
         "jobs": [
           {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
@@ -257,7 +257,7 @@
               "Senior-Knowledge-Graph-Engineer",
               "Knowledge-Graphs",
               "Knowledge-Platform-Engineering",
-              "AI---Agentic-Systems-Engineer"
+              "AI-Agentic-Systems-Engineer"
             ],
             "parentCategories": [],
             "description": "<p>Build and curate the ontology, knowledge graph and grounding infrastructure that let AI agents understand <a href=\"https://himalayas.app/companies/ifs\">IFS</a> software and reason accurately over customer data, turning what the platform already knows about itself, plus deep industry expertise, into a semantic layer other engineers and agents can trust.</p><h3>Key responsibilities </h3><ul><li><p>Design and build MCP servers (Model Context Protocol, the emerging standard for exposing application capability to agents) over the product’s business objects, treating capability modelling, discoverability, versioning and backward compatibility as first-class design problems. </p></li></ul><ul><li><p>Build the write path that lets an agent safely change a customer’s operational data. </p></li></ul><ul>\n<li><p>Design and build the semantic layer: an ontology and knowledge graph over the product, generated from what the platform already knows about itself and then curated industry by industry, in partnership with domain experts who turn tacit product knowledge into an explicit, machine-usable model.</p></li>\n<li><p>Build the retrieval and grounding infrastructure that connects agents to this knowledge: embeddings, vector databases, hybrid search, chunking and indexing strategies, memory architectures, and grounding techniques that keep agent outputs accurate and traceable to source.</p></li>\n<li><p>Establish data quality, provenance and versioning practices for the knowledge graph, so changes are traceable and agent behaviour built on top of it doesn't silently drift.</p></li>\n</ul><ul><li><p>Build the skills layer that maps what someone asks for onto the correct operation and the correct sequence, with a router that picks between them. </p></li></ul><ul><li><p>Build the control plane: authentication, entitlements, agent identity, telemetry, metering, resistance to injection, and a default that denies rather than permits. </p></li></ul><ul><li><p>Build the evaluation harness that certifies agent behaviour against the real product, and improve the system against what it measures. </p></li></ul><ul><li><p>Build rapid prototypes and proofs of concept to validate emerging technology, product opportunities and customer scenarios. </p></li></ul><ul><li><p>Establish the engineering practices these systems need: evaluation, testing, observability, monitoring, governance, security and operational excellence. </p></li></ul><ul><li><p>Contribute to technical design, review other engineers’ work, and support colleagues coming into the domain. </p></li></ul><ul><li><p>Represent the work outside the team through customer engagements, demonstrations, industry events and partner collaboration. </p></li></ul><p>Strong software engineering first. Everything else is applied on top of that. </p><ul><li><p>Production experience building and operating enterprise systems, with real depth in distributed systems, cloud-native architectures, API and schema design, event-driven systems, security, observability and CI/CD. </p></li></ul><ul><li><p>Strong programming in a modern backend language. </p></li></ul><ul>\n<li><p>Experience delivering AI systems built on large language models, retrieval-augmented generation (RAG), agentic workflows and orchestration frameworks, including tool use, function calling, workflow orchestration and autonomous or multi-agent architectures, with the judgement to know where they fail. </p></li>\n<li><p>Deep, hands-on expertise in knowledge graphs and semantic modelling: ontology design (RDF/OWL/SKOS or property-graph equivalents), taxonomy and controlled-vocabulary design, entity resolution, schema evolution and versioning, embeddings, vector databases and grounding strategies.</p></li>\n</ul><ul><li><p>Evaluation as a discipline: experimentation, benchmarking, prompt engineering, tracing, quality measurement and agent tuning, improving an agent against evidence rather than impression. </p></li></ul><ul>\n<li><p>Ability to design solutions that integrate enterprise applications, business processes, workflows and data platforms. </p></li>\n<li><p>Comfort working directly with domain experts to translate tacit business knowledge into explicit, machine-usable models.</p></li>\n</ul><ul><li><h3>Depth in at least one of the following: </h3></li></ul><ul>\n<li><p>Tool-surface and agent-runtime engineering. MCP servers, tool ecosystems, capability modelling, discoverability, governance, versioning, backward compatibility, multi-tenancy isolation. </p></li>\n<li><p>Enterprise platform depth. Oracle PL/SQL, OData, and comfort working inside large metadata-driven systems where behaviour is configured rather than coded. </p></li>\n</ul><h3>Desirable </h3><ul><li><p>Experience with agent frameworks such as Semantic Kernel, Microsoft Agent Framework, LangGraph, AutoGen, PydanticAI, the OpenAI Agents SDK or CrewAI. </p></li></ul><ul><li><p>Experience building reusable AI platforms, MCP ecosystems or shared engineering capabilities used across multiple products and teams. </p></li></ul><ul><li><p>Containerised platforms and infrastructure automation: Docker, Kubernetes. </p></li></ul><ul><li><p>Experience with Azure, AWS, GCP or another hyperscale cloud platform. </p></li></ul><ul><li><p>Reverse-engineering or interpreter work. </p></li></ul><ul><li><h3>Token-efficient agent design. </h3></li></ul><ul><li><p>Enterprise software domains: enterprise asset management, service management, manufacturing, supply chain, aerospace and defence, energy, telecommunications, construction, industrial AI. </p></li></ul><ul><li><p>Contributions to open-source projects, technical communities, conferences, publications or standards. </p></li></ul><p>We believe that coming together as a community, in person, is important for innovation, connection and fostering a sense of belonging. Our roles have the right balance of remote and in-office working to enable flexibility for managing your life along with ensuring a real connection with your colleagues and the broader <a href=\"https://himalayas.app/companies/ifs\">IFS</a> community.  </p><p><strong>At <a href=\"https://himalayas.app/companies/ifs\">IFS</a>, we're building the next generation of AI-native enterprise software, transforming how some of the world's largest organisations manage assets, operations and critical services. </strong></p><p><strong>This is an opportunity to work at the forefront of modern AI engineering, building intelligent products that combine Large Language Models (LLMs), agentic AI and cloud-native technologies to solve complex, real-world business challenges at enterprise scale. </strong></p><p><strong>We're looking for engineers who are passionate about building production AI systems and excited by the opportunity to shape the future of enterprise software. </strong></p><p><strong>Please note that this role requires demonstrable, hands-on experience designing, building and shipping production AI applications.</strong></p><p><a href=\"https://himalayas.app/companies/ifs\">IFS</a> is a billion-dollar revenue company with 6000+ employees on all continents. Our leading AI technology is the backbone of our award-winning enterprise software solutions, enabling our customers to be their best when it really matters–at the Moment of Service™. Our commitment to internal AI adoption has allowed us to stay at the forefront of technological advancements, ensuring our colleagues can unlock their creativity and productivity, and our solutions are always cutting-edge.</p><p>At <a href=\"https://himalayas.app/companies/ifs\">IFS</a>, we’re flexible, we’re innovative, and we’re focused not only on how we can engage with our customers but on how we can make a real change and have a worldwide impact. We help solve some of society’s greatest challenges, fostering a better future through our agility, collaboration, and trust.</p><p>We celebrate diversity and understand our responsibility to reflect the diverse world we work in. We are committed to promoting an inclusive workforce that fully represents the many different cultures, backgrounds, and viewpoints of our customers, our partners, and our communities. As a truly international company serving people from around the globe, we realize that our success is tantamount to the respect we have for those different points of view.</p><p>By joining our team, you will have the opportunity to be part of a <strong>global, diverse environment;</strong> you will be joining a <strong>winning team</strong> with a <strong>commitment to sustainability;</strong> and a company where we get things done so that you can <strong>make a positive impact</strong> on the world.</p><p>We’re looking for innovative and original thinkers to work in an environment where you can <strong>#MakeYourMoment</strong> so that we can help others make theirs. With the power of our AI-driven solutions, we empower our team to change the status quo and make a real difference.</p><p>If you want to change the status quo, we’ll help you make your moment. Join Team Purple. Join <a href=\"https://himalayas.app/companies/ifs\">IFS</a>.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
@@ -348,6 +348,53 @@
             "expiryDate": 1788519031,
             "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai",
             "guid": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai"
+          },
+          {
+            "title": "Senior Data Scientist - Ontology",
+            "excerpt": "The Ontology Engineer is a foundational technical hire on the AI, ML and Data Science team specializing in Knowledge Representation.",
+            "companyName": "Global Healthcare Exchange (GHX)",
+            "companySlug": "global-healthcare-exchange-ghx",
+            "companyLogo": "https://cdn-images.himalayas.app/dx15yehjxvwwdjg9c20pqmxmsrn5",
+            "employmentType": "Full Time",
+            "minSalary": 128000,
+            "maxSalary": 170000,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "AI",
+              "Ontology-Engineering",
+              "Knowledge-Engineering",
+              "Data-Science",
+              "Knowledge-Representation",
+              "Senior-Data-Science",
+              "Senior-Data-Scientist-Jobs",
+              "Senior-Data-Governance-and-Metadata-Scientist",
+              "Senior-Data-Science-Jobs",
+              "Data-Scientist"
+            ],
+            "parentCategories": [
+              "Data Science"
+            ],
+            "description": "<p>The Ontology Engineer is a foundational technical hire on the AI, ML and Data Science team specializing in Knowledge Representation. This role is responsible for designing and maintaining the formal ontological architecture that makes cross-organizational data alignment.  This is not a taxonomy or metadata management role. It requires genuine formal depth in description logics, upper ontology theory, and the ability to reason about what an ontology commits to and what it leaves open.</p><p>Our platform sits between hospitals, distributors, GPOs, manufacturers, and regulators, enabling transactional execution, clinical data alignment, and analytics optimization across organizational boundaries. Each party maintains its own implicit ontology encoded in its schemas, workflows, and data. The Ontology Engineer will define the formal structures and processes that make alignment across them possible.  These structures should be auditable, compositionally sound, and maintainable over a multi-year lifecycle as all parties' systems evolve.</p><p>This Engineer will work directly with teammates that are familiar with ontology formalisms and with domain experts who understand the operational realities of HCSC data.  They will be expected to make and defend design decisions at the level of formal correctness, not just practical convenience, and to direct and evaluate LLM-assisted ontology discovery and enrichment pipelines with the rigor that formal alignment demands.</p><h3>Essential Duties:</h3><ul>\n<li>Design and maintain the ontology, covering the canonical structural layer (organizations, items, contracts, transaction), source data ontologies (supporting the canonical) and the process layer (data curation, ontology matching, workflows).</li>\n<li>Establish the rules for when two records from different systems refer to the same thing, and when they don't — recognizing the answer can differ by use case.</li>\n<li>Establish mappings from trading partner source data to the canonical ontology, with documented provenance and validity conditions for each mapping.</li>\n<li>Author OWL 2 axioms for ontology components; validate logical consistency (e.g. reasoner); maintain ontology lifecycle (e.g. with ROBOT, SHACL).</li>\n<li>Align with governance team and practice.</li>\n<li>Grounded ontology discovery from data (and its uses) rather than schema declarations and metadata alone.</li>\n<li>Build, direct and evaluate LLM-assisted ontology extraction pipelines, define and enforce the human-in-the-loop validation standards for AI-generated ontological candidates.</li>\n<li>Collaborate with data quality engineers to establish formal feedback .</li>\n<li>Translate formal ontology design decisions into specification/implementation for graph and relational stores.</li>\n<li>Specify and implement SPARQL queries and graph schema requirements with sufficient precision to prevent implementation-level semantic loss.</li>\n<li>Collaborate with internal and external stakeholders including domain experts, data engineers, product managers, and integration partners to ensure ontological architecture supports transactional, clinical, and analytical requirements.</li>\n<li>Proactively monitor developments in formal ontology, knowledge representation, and LLM-assisted knowledge engineering to drive adoption of improved methods.</li>\n</ul><h3>Competencies:</h3><ul>\n<li>Fluency in OWL 2 and description logics: able to read and write OWL axioms, understand what a reasoner computes and why, and diagnose inference failures without relying solely on tooling.</li>\n<li>Working knowledge of at least one upper ontology (e.g. BFO) and the ability to apply upper ontology commitments to a domain ontology correctly, including the continuant/occurrent distinction.</li>\n<li>Proficiency in knowledge graph technologies including RDF, OWL, and SPARQL; familiarity with property graph approaches (LPG, Cypher) and awareness of the semantic differences between RDF-based and property graph representations.</li>\n<li>Understanding of data integration: schema matching and mapping semantics, entity resolution, and the formal properties of multi-source alignment.</li>\n<li>Ability to interpret data profiling results (functional dependencies, inclusion dependencies) as ontological signals rather than purely as data quality metrics.</li>\n<li>Familiarity with LLM-assisted ontology extraction and enrichment pipelines, including the ability to evaluate LLM-generated ontological candidates against formal.</li>\n<li>Excellent communication skills for translating formal design to business stakeholders without losing precision and to engineers without losing formal correctness.</li>\n<li>Comfort working with partial/incomplete formal models, maintaining clear documentation of what remains unspecified and why.</li>\n<li>Requires minimal to no supervision on formal ontology design work.</li>\n</ul><h3>Required Qualifications and Skills:</h3><ul>\n<li>Greater than 4 years of experience in knowledge engineering, ontology development, or a closely related formal methods discipline.</li>\n<li>Demonstrated experience building and maintaining domain ontologies in Protege or equivalent, with reasoner-validated consistency; not solely taxonomy or metadata management work.</li>\n<li>Experience with ROBOT or ODK for ontology lifecycle management (or similar): automated quality checks, versioning, release pipelines.</li>\n<li>Expertise in SPARQL and/or Cypher for querying ontology-aligned data stores; ability to write and evaluate queries that correctly reflect ontological intent.</li>\n<li>Demonstrated ability to interpret data profiling output and translate it into formal ontological claims; experience with empirical ontology discovery from data as well as top-down ontology design.</li>\n<li>Experience directing or evaluating LLM-assisted knowledge extraction pipelines with formal validation requirements.</li>\n<li>Proficiency in Python (or similar) for ontology tooling, pipeline scripting, and data analysis in support of knowledge engineering workflows.</li>\n<li>Experience working in multi-disciplinary teams where formal and domain knowledge must be integrated under operational constraints.</li>\n</ul><h3>Preferred Qualifications and Skills:</h3><ul>\n<li>Bachelor's or advanced degree in Computer Science, Mathematics, Philosophy (logic/formal methods), Information Science, or a related hard science discipline.</li>\n<li>Familiarity with category theory as applied to data integration -- functors, natural transformations, limits and colimits as schema merge operations -- at literacy level or above; knowledge of CQL/AQL or categorical database theory is a plus.</li>\n<li>Experience with LinkML.</li>\n<li>Healthcare supply chain domain knowledge and ontological structures.</li>\n<li>Experience with BFO 2.0 and the OBO Foundry principles and standards.</li>\n<li>Familiarity with provenance models (why-provenance, how-provenance, where-provenance) and their implementation in ontology-aligned data systems.</li>\n<li>Experience with graph database platforms at production scale (Stardog, Amazon Neptune, or equivalent) and the operational considerations of ontology-driven graph deployments.</li>\n<li>Passion for staying at the cutting edge of knowledge representation, semantic alignment, and AI-assisted ontology engineering.</li>\n<li>Sense of humor.</li>\n</ul><h3>Estimated Salary: $128,000 - $170,000</h3><div class=\"content-conclusion\">\n<p><strong>GHX: It's the way you do business in healthcare</strong><br><a href=\"https://himalayas.app/companies/global-healthcare-exchange-ghx\">Global Healthcare Exchange (GHX)</a> enables better patient care and billions in savings for the healthcare community by maximizing automation, efficiency and accuracy of business processes.</p>\n<p>GHX is a healthcare business and data automation company, empowering healthcare organizations to enable better patient care and maximize industry savings using our world class cloud-based supply chain technology exchange platform, solutions, analytics and services. We bring together healthcare providers and manufacturers and distributors in North America and Europe - who rely on smart, secure healthcare-focused technology and comprehensive data to automate their business processes and make more informed decisions.</p>\n<p>It is our passion and vision for a more operationally efficient healthcare supply chain, helping organizations reduce - not shift - the cost of doing business, paving the way to delivering patient care more effectively. Together we take more than a billion dollars out of the cost of delivering healthcare every year. GHX is privately owned, operates in the United States, Canada and Europe, and employs more than 1000 people worldwide. Our corporate headquarters is in Colorado, with additional offices in Europe.</p>\n<p><strong><em>Disclaimer</em></strong><br><em>Global Healthcare Exchange, LLC and its North American subsidiaries (collectively, “GHX”) provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, national origin, sex, sexual orientation, gender identity, religion, age, genetic information, disability, veteran status or any other status protected by applicable law. All qualified applicants will receive consideration for employment without regard to any status protected by applicable law. This EEO policy applies to all terms, conditions, and privileges of employment, including hiring, training and development, promotion, transfer, compensation, benefits, educational assistance, termination, layoffs, social and recreational programs, and retirement.</em><em>GHX believes that employees should be provided with a working environment which enables each employee to be productive and to work to the best of his or her ability. We do not condone or tolerate an atmosphere of intimidation or harassment based on race, color, national origin, sex, sexual orientation, gender identity, religion, age, genetic information, disability, veteran status or any other status protected by applicable law. GHX expects and requires the cooperation of all employees in maintaining a discrimination and harassment-free atmosphere. Improper interference with the ability of GHX’s employees to perform their expected job duties is absolutely not tolerated.</em></p>\n<p><em>Read our GHX Privacy Policy</em></p>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787520511,
+            "expiryDate": 1792704510,
+            "applicationLink": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology",
+            "guid": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology"
           },
           {
             "title": "Knowledge Graph Engineer",
@@ -776,44 +823,6 @@
             "guid": "https://himalayas.app/companies/autodesk/jobs/principal-knowledge-acquisition-analyst"
           },
           {
-            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
-            "excerpt": "At IRIUM we want you to always chase your dreams.",
-            "companyName": "IRIUM Portugal",
-            "companySlug": "irium-portugal",
-            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
-            "employmentType": "Full Time",
-            "minSalary": 3800,
-            "maxSalary": 4300,
-            "salaryPeriod": "monthly",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": "EUR",
-            "locationRestrictions": [
-              "Portugal"
-            ],
-            "timezoneRestrictions": [
-              -1,
-              0
-            ],
-            "categories": [
-              "Ontologist",
-              "Semantic-Knowledge-Engineer",
-              "Ontology-Engineer",
-              "Knowledge-Graph-Engineer",
-              "Semantic-Web-Engineer",
-              "Remote-Senior-Ontology-Specialist",
-              "Senior-Semantic-Data-Consultant",
-              "Senior-Knowledge-Graph-Engineer"
-            ],
-            "parentCategories": [],
-            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1787162066,
-            "expiryDate": 1792346065,
-            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
-            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
-          },
-          {
             "title": "Head of Intelligence Products",
             "excerpt": "ELEKS is looking for a Head of Intelligence Products in the United States.",
             "companyName": "ELEKS",
@@ -859,51 +868,42 @@
             "guid": "https://himalayas.app/companies/eleks/jobs/head-of-intelligence-products"
           },
           {
-            "title": "General Application — Research & Science",
-            "excerpt": "Welcome systems thinkers.  System builds software to help the world see and solve anything as a system, starting in healthcare.",
-            "companyName": "System",
-            "companySlug": "system",
-            "companyLogo": "https://cdn-images.himalayas.app/4cb3ee9g2owbipevpadqgolixrp5",
+            "title": "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote",
+            "excerpt": "At IRIUM we want you to always chase your dreams.",
+            "companyName": "IRIUM Portugal",
+            "companySlug": "irium-portugal",
+            "companyLogo": "https://cdn-images.himalayas.app/gds8x14rag0ukipgax8d28vl4gm2",
             "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
+            "minSalary": 3800,
+            "maxSalary": 4300,
+            "salaryPeriod": "monthly",
             "seniority": [
-              "Mid-level"
+              "Senior"
             ],
-            "currency": null,
+            "currency": "EUR",
             "locationRestrictions": [
-              "United States"
+              "Portugal"
             ],
             "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
+              -1,
+              0
             ],
             "categories": [
-              "Research-Science",
-              "Machine-Learning-Research",
-              "Computational-Research",
-              "AI-Research",
-              "Healthcare-Research",
-              "Research-Scientist",
-              "Research-Associate",
-              "Data-Scientist",
-              "Laboratory-Technician"
+              "Ontologist",
+              "Semantic-Knowledge-Engineer",
+              "Ontology-Engineer",
+              "Knowledge-Graph-Engineer",
+              "Semantic-Web-Engineer",
+              "Remote-Senior-Ontology-Specialist",
+              "Senior-Semantic-Data-Consultant",
+              "Senior-Knowledge-Graph-Engineer"
             ],
-            "parentCategories": [
-              "Data Science",
-              "Marketing"
-            ],
-            "description": "<p>Welcome systems thinkers. <a href=\"https://himalayas.app/companies/system\">System</a> builds software to help the world see and solve anything as a system, starting in healthcare. We are a Public Benefit Corporation driven by purpose and shaped by values. We hire systems thinkers who are motivated by our purpose, share our values, and have the skills to advance our mission. </p><p>At <a href=\"https://himalayas.app/companies/system\">System</a>, research is the origin of our most important ideas — and researchers work at the frontier of graph theory, clinical AI, causal inference, and knowledge representation to push the boundaries of what our platform can do.</p><h4><strong>As a researcher at <a href=\"https://himalayas.app/companies/system\">System</a>, you will:</strong></h4><ul>\n<li>Develop and validate novel methods for modeling complex, interconnected systems</li>\n<li>Work at the intersection of graph theory, machine learning, and domain-specific knowledge</li>\n<li>Collaborate with Data Science and Engineering to transition research findings into production</li>\n<li>Publish and present findings that advance both the field and <a href=\"https://himalayas.app/companies/system\">System</a>'s mission</li>\n<li>Partner with clinical and domain experts to ground research in real-world impact</li>\n<li>Contribute to a culture of intellectual rigor, curiosity, and continuous learning</li>\n</ul><h4><strong>The ideal candidate has:</strong></h4><ul>\n<li>Master's or PhD in Computer Science, Statistics, Biomedical Informatics, or a related field</li>\n<li>A strong publication record or equivalent applied research experience</li>\n<li>Deep expertise in machine learning, statistical modeling, or computational methods</li>\n<li>Experience working with complex, heterogeneous, or graph-structured data</li>\n<li>Ability to communicate research findings clearly to both technical and non-technical audiences</li>\n<li>Comfort operating in a fast-paced startup environment alongside a long research horizon</li>\n</ul><h4><strong>Bonus if you have:</strong></h4><ul>\n<li>Experience with clinical NLP, EHR data, or healthcare ontologies (SNOMED, ICD, OMOP)</li>\n<li>Familiarity with knowledge graphs, semantic web technologies, or ontology engineering</li>\n<li>Background in causal inference, systems dynamics, or complex adaptive systems</li>\n<li>Experience collaborating with clinicians, policymakers, or public health researchers</li>\n</ul><h4><strong>You might be a fit if you:</strong></h4><ul>\n<li>Think in systems — mapping feedback loops, interdependencies, and second-order effects comes naturally to you</li>\n<li>Are motivated by purpose-driven work, particularly at the intersection of technology and healthcare</li>\n<li>Believe technology should be a force for good and are drawn to the Public Benefit Corporation model</li>\n<li>Hold yourself and your work to a values-first standard, not just a deliverables-first one</li>\n<li>Lead with first principles and are comfortable questioning assumptions others take for granted</li>\n<li>See complexity as an invitation, not an obstacle — you thrive when problems are messy and interconnected</li>\n<li>Care about the downstream effects of what you build — on users, on systems, on society</li>\n<li>Operate with intellectual humility — always learning, always open to being wrong</li>\n</ul><h3>Compensation:</h3><h3>Commensurate with experience and level. </h3><h3>About <a href=\"https://himalayas.app/companies/system\">System</a> </h3><p>We aspire to help the world see itself differently and build a more responsible and values-driven model of a tech company. We are backed by top-tier VCs in Silicon Valley and New York and leading angel investors and founded by the former VP Data at Spotify. To learn more about what motivates our social mission, we invite you to read our blog here.</p><p>We believe in the power of autonomous, interdisciplinary, and diverse teams; in agile development; and in leading with values, first principles, and clear high-level priorities backed by data.  We believe in cultivating a growth mindset for our team — always learning, improving, being challenged, and having opportunities for professional and personal development.</p><p><a href=\"https://himalayas.app/companies/system\">System</a> Inc. is an equal opportunity employer. We are proud to foster a workplace, in person and online, free from discrimination. We strongly believe that diversity of experience, perspectives, and backgrounds will lead to a better environment for our employees and a better product for our users. We are committed to providing access, equal opportunity and reasonable accommodation for individuals with disabilities in employment, its services, programs, and activities. Job applicants must be legally authorized to work in the United States of America and must maintain ongoing work authorization during employment.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1783268307,
-            "expiryDate": 1788452306,
-            "applicationLink": "https://himalayas.app/companies/system/jobs/general-application-research-science",
-            "guid": "https://himalayas.app/companies/system/jobs/general-application-research-science"
+            "parentCategories": [],
+            "description": "<p><strong>At IRIUM we want you to always chase your dreams. Here, prepare yourself to conquer your goals, while enjoying the journey.</strong></p><p>We are currently looking for: <strong>Senior Ontologist</strong></p><h3>Requirements:</h3><p>We are currently looking for a <strong>Senior Ontologist</strong> to join an international project, contributing to the design, development, and maintenance of ontologies that support Knowledge Graph, semantic enrichment, data integration, and knowledge management initiatives.</p><h3>Required Competencies:</h3><ul>\n<li>Minimum 5 years of experience in ontology design, development, and semantic technologies</li>\n<li>Strong experience designing, implementing, and maintaining ontologies and taxonomies independently</li>\n<li>Expert knowledge of Semantic Web and W3C standards:<ul>\n<li>RDF / RDFS</li>\n<li>OWL</li>\n<li>SKOS</li>\n<li>SHACL</li>\n<li>SPARQL</li>\n</ul>\n</li>\n<li>Strong knowledge of Datalog or other inferencing rule languages</li>\n<li>Experience with standard serialization formats, including Turtle (TTL) and JSON-LD</li>\n<li>Experience analysing different data formats, including JSON and Excel, for semantic integration</li>\n<li>Experience with ontology development tools such as <strong>metaphactory and RDFox</strong>\n</li>\n<li>Strong experience with Git, including branching, merging, and reviewing ontology-related changes</li>\n<li>Knowledge of ontology and taxonomy development best practices and methodologies</li>\n<li>Ability to ensure semantic accuracy, consistency, and quality across ontology models</li>\n<li>Ability to work independently with minimal supervision</li>\n<li>English proficiency – <strong>C1/C2</strong>\n</li>\n</ul><h3>Soft Skills:</h3><ul>\n<li>Strong analytical and problem-solving skills</li>\n<li>Ability to analyse complex issues, evaluate trade-offs, and implement effective solutions</li>\n<li>Excellent attention to detail and semantic consistency</li>\n<li>Strong communication skills, with the ability to explain complex concepts clearly</li>\n<li>Ability to collaborate effectively with technical and business stakeholders</li>\n<li>Strong ability to drive consensus among different stakeholders</li>\n<li>Autonomous and proactive mindset</li>\n<li>Ability to work effectively in an international and collaborative environment</li>\n</ul><p><strong>Location:</strong> European Union – <strong>Full Remote</strong></p><p><strong>Gross salary range</strong><br><strong>€3,800–€4,300 </strong><strong>monthly</strong></p><p><em>Note: Includes all components: Fixed, Variable, Meal Allowance, Remote Work, and Benefits.</em><br><br><strong>What do we offer?</strong></p><p>➡ An innovative and growing company, with a lot of opportunities for professional development.</p><p>➡ Retribution according to your experience and performance. Access to flexible pay and medical insurance as a social benefit.</p><p>➡ Unlimited access to technological training in free mode.</p><p>IRIUM is a company with dynamic and proactive professionals. Our values are responsibility and commitment to work quality. This is the spirit we are looking for at IRIUM, whatever your age is. If you recognize yourself in this, this is your company!</p><h3>We can build the future together. Let’s talk!</h3><p><strong>Send your CV to:</strong></p><p>At IRIUM we defend a world without stereotypes or limitations and we believe in equality for all, principles that we subscribe to in our Equality Plan and Code of Ethics, guaranteeing equal treatment and opportunities regardless of any personal, physical or social condition.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787162066,
+            "expiryDate": 1792346065,
+            "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
+            "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
           }
         ]
       }
@@ -917,10 +917,10 @@
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
-        "updatedAt": 1787257959,
+        "updatedAt": 1787520511,
         "offset": 0,
         "limit": 20,
-        "totalCount": 5,
+        "totalCount": 6,
         "jobs": [
           {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
@@ -1090,6 +1090,53 @@
             "expiryDate": 1792346065,
             "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
             "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
+          },
+          {
+            "title": "Senior Data Scientist - Ontology",
+            "excerpt": "The Ontology Engineer is a foundational technical hire on the AI, ML and Data Science team specializing in Knowledge Representation.",
+            "companyName": "Global Healthcare Exchange (GHX)",
+            "companySlug": "global-healthcare-exchange-ghx",
+            "companyLogo": "https://cdn-images.himalayas.app/dx15yehjxvwwdjg9c20pqmxmsrn5",
+            "employmentType": "Full Time",
+            "minSalary": 128000,
+            "maxSalary": 170000,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "AI",
+              "Ontology-Engineering",
+              "Knowledge-Engineering",
+              "Data-Science",
+              "Knowledge-Representation",
+              "Senior-Data-Science",
+              "Senior-Data-Scientist-Jobs",
+              "Senior-Data-Governance-and-Metadata-Scientist",
+              "Senior-Data-Science-Jobs",
+              "Data-Scientist"
+            ],
+            "parentCategories": [
+              "Data Science"
+            ],
+            "description": "<p>The Ontology Engineer is a foundational technical hire on the AI, ML and Data Science team specializing in Knowledge Representation. This role is responsible for designing and maintaining the formal ontological architecture that makes cross-organizational data alignment.  This is not a taxonomy or metadata management role. It requires genuine formal depth in description logics, upper ontology theory, and the ability to reason about what an ontology commits to and what it leaves open.</p><p>Our platform sits between hospitals, distributors, GPOs, manufacturers, and regulators, enabling transactional execution, clinical data alignment, and analytics optimization across organizational boundaries. Each party maintains its own implicit ontology encoded in its schemas, workflows, and data. The Ontology Engineer will define the formal structures and processes that make alignment across them possible.  These structures should be auditable, compositionally sound, and maintainable over a multi-year lifecycle as all parties' systems evolve.</p><p>This Engineer will work directly with teammates that are familiar with ontology formalisms and with domain experts who understand the operational realities of HCSC data.  They will be expected to make and defend design decisions at the level of formal correctness, not just practical convenience, and to direct and evaluate LLM-assisted ontology discovery and enrichment pipelines with the rigor that formal alignment demands.</p><h3>Essential Duties:</h3><ul>\n<li>Design and maintain the ontology, covering the canonical structural layer (organizations, items, contracts, transaction), source data ontologies (supporting the canonical) and the process layer (data curation, ontology matching, workflows).</li>\n<li>Establish the rules for when two records from different systems refer to the same thing, and when they don't — recognizing the answer can differ by use case.</li>\n<li>Establish mappings from trading partner source data to the canonical ontology, with documented provenance and validity conditions for each mapping.</li>\n<li>Author OWL 2 axioms for ontology components; validate logical consistency (e.g. reasoner); maintain ontology lifecycle (e.g. with ROBOT, SHACL).</li>\n<li>Align with governance team and practice.</li>\n<li>Grounded ontology discovery from data (and its uses) rather than schema declarations and metadata alone.</li>\n<li>Build, direct and evaluate LLM-assisted ontology extraction pipelines, define and enforce the human-in-the-loop validation standards for AI-generated ontological candidates.</li>\n<li>Collaborate with data quality engineers to establish formal feedback .</li>\n<li>Translate formal ontology design decisions into specification/implementation for graph and relational stores.</li>\n<li>Specify and implement SPARQL queries and graph schema requirements with sufficient precision to prevent implementation-level semantic loss.</li>\n<li>Collaborate with internal and external stakeholders including domain experts, data engineers, product managers, and integration partners to ensure ontological architecture supports transactional, clinical, and analytical requirements.</li>\n<li>Proactively monitor developments in formal ontology, knowledge representation, and LLM-assisted knowledge engineering to drive adoption of improved methods.</li>\n</ul><h3>Competencies:</h3><ul>\n<li>Fluency in OWL 2 and description logics: able to read and write OWL axioms, understand what a reasoner computes and why, and diagnose inference failures without relying solely on tooling.</li>\n<li>Working knowledge of at least one upper ontology (e.g. BFO) and the ability to apply upper ontology commitments to a domain ontology correctly, including the continuant/occurrent distinction.</li>\n<li>Proficiency in knowledge graph technologies including RDF, OWL, and SPARQL; familiarity with property graph approaches (LPG, Cypher) and awareness of the semantic differences between RDF-based and property graph representations.</li>\n<li>Understanding of data integration: schema matching and mapping semantics, entity resolution, and the formal properties of multi-source alignment.</li>\n<li>Ability to interpret data profiling results (functional dependencies, inclusion dependencies) as ontological signals rather than purely as data quality metrics.</li>\n<li>Familiarity with LLM-assisted ontology extraction and enrichment pipelines, including the ability to evaluate LLM-generated ontological candidates against formal.</li>\n<li>Excellent communication skills for translating formal design to business stakeholders without losing precision and to engineers without losing formal correctness.</li>\n<li>Comfort working with partial/incomplete formal models, maintaining clear documentation of what remains unspecified and why.</li>\n<li>Requires minimal to no supervision on formal ontology design work.</li>\n</ul><h3>Required Qualifications and Skills:</h3><ul>\n<li>Greater than 4 years of experience in knowledge engineering, ontology development, or a closely related formal methods discipline.</li>\n<li>Demonstrated experience building and maintaining domain ontologies in Protege or equivalent, with reasoner-validated consistency; not solely taxonomy or metadata management work.</li>\n<li>Experience with ROBOT or ODK for ontology lifecycle management (or similar): automated quality checks, versioning, release pipelines.</li>\n<li>Expertise in SPARQL and/or Cypher for querying ontology-aligned data stores; ability to write and evaluate queries that correctly reflect ontological intent.</li>\n<li>Demonstrated ability to interpret data profiling output and translate it into formal ontological claims; experience with empirical ontology discovery from data as well as top-down ontology design.</li>\n<li>Experience directing or evaluating LLM-assisted knowledge extraction pipelines with formal validation requirements.</li>\n<li>Proficiency in Python (or similar) for ontology tooling, pipeline scripting, and data analysis in support of knowledge engineering workflows.</li>\n<li>Experience working in multi-disciplinary teams where formal and domain knowledge must be integrated under operational constraints.</li>\n</ul><h3>Preferred Qualifications and Skills:</h3><ul>\n<li>Bachelor's or advanced degree in Computer Science, Mathematics, Philosophy (logic/formal methods), Information Science, or a related hard science discipline.</li>\n<li>Familiarity with category theory as applied to data integration -- functors, natural transformations, limits and colimits as schema merge operations -- at literacy level or above; knowledge of CQL/AQL or categorical database theory is a plus.</li>\n<li>Experience with LinkML.</li>\n<li>Healthcare supply chain domain knowledge and ontological structures.</li>\n<li>Experience with BFO 2.0 and the OBO Foundry principles and standards.</li>\n<li>Familiarity with provenance models (why-provenance, how-provenance, where-provenance) and their implementation in ontology-aligned data systems.</li>\n<li>Experience with graph database platforms at production scale (Stardog, Amazon Neptune, or equivalent) and the operational considerations of ontology-driven graph deployments.</li>\n<li>Passion for staying at the cutting edge of knowledge representation, semantic alignment, and AI-assisted ontology engineering.</li>\n<li>Sense of humor.</li>\n</ul><h3>Estimated Salary: $128,000 - $170,000</h3><div class=\"content-conclusion\">\n<p><strong>GHX: It's the way you do business in healthcare</strong><br><a href=\"https://himalayas.app/companies/global-healthcare-exchange-ghx\">Global Healthcare Exchange (GHX)</a> enables better patient care and billions in savings for the healthcare community by maximizing automation, efficiency and accuracy of business processes.</p>\n<p>GHX is a healthcare business and data automation company, empowering healthcare organizations to enable better patient care and maximize industry savings using our world class cloud-based supply chain technology exchange platform, solutions, analytics and services. We bring together healthcare providers and manufacturers and distributors in North America and Europe - who rely on smart, secure healthcare-focused technology and comprehensive data to automate their business processes and make more informed decisions.</p>\n<p>It is our passion and vision for a more operationally efficient healthcare supply chain, helping organizations reduce - not shift - the cost of doing business, paving the way to delivering patient care more effectively. Together we take more than a billion dollars out of the cost of delivering healthcare every year. GHX is privately owned, operates in the United States, Canada and Europe, and employs more than 1000 people worldwide. Our corporate headquarters is in Colorado, with additional offices in Europe.</p>\n<p><strong><em>Disclaimer</em></strong><br><em>Global Healthcare Exchange, LLC and its North American subsidiaries (collectively, “GHX”) provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, national origin, sex, sexual orientation, gender identity, religion, age, genetic information, disability, veteran status or any other status protected by applicable law. All qualified applicants will receive consideration for employment without regard to any status protected by applicable law. This EEO policy applies to all terms, conditions, and privileges of employment, including hiring, training and development, promotion, transfer, compensation, benefits, educational assistance, termination, layoffs, social and recreational programs, and retirement.</em><em>GHX believes that employees should be provided with a working environment which enables each employee to be productive and to work to the best of his or her ability. We do not condone or tolerate an atmosphere of intimidation or harassment based on race, color, national origin, sex, sexual orientation, gender identity, religion, age, genetic information, disability, veteran status or any other status protected by applicable law. GHX expects and requires the cooperation of all employees in maintaining a discrimination and harassment-free atmosphere. Improper interference with the ability of GHX’s employees to perform their expected job duties is absolutely not tolerated.</em></p>\n<p><em>Read our GHX Privacy Policy</em></p>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787520511,
+            "expiryDate": 1792704510,
+            "applicationLink": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology",
+            "guid": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology"
           },
           {
             "title": "Ontologist",
@@ -1626,10 +1673,10 @@
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
-        "updatedAt": 1787257959,
+        "updatedAt": 1787520511,
         "offset": 0,
         "limit": 20,
-        "totalCount": 14,
+        "totalCount": 15,
         "jobs": [
           {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
@@ -1671,6 +1718,53 @@
             "expiryDate": 1788644656,
             "applicationLink": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
             "guid": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471"
+          },
+          {
+            "title": "Senior Data Scientist - Ontology",
+            "excerpt": "The Ontology Engineer is a foundational technical hire on the AI, ML and Data Science team specializing in Knowledge Representation.",
+            "companyName": "Global Healthcare Exchange (GHX)",
+            "companySlug": "global-healthcare-exchange-ghx",
+            "companyLogo": "https://cdn-images.himalayas.app/dx15yehjxvwwdjg9c20pqmxmsrn5",
+            "employmentType": "Full Time",
+            "minSalary": 128000,
+            "maxSalary": 170000,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": "USD",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "AI",
+              "Ontology-Engineering",
+              "Knowledge-Engineering",
+              "Data-Science",
+              "Knowledge-Representation",
+              "Senior-Data-Science",
+              "Senior-Data-Scientist-Jobs",
+              "Senior-Data-Governance-and-Metadata-Scientist",
+              "Senior-Data-Science-Jobs",
+              "Data-Scientist"
+            ],
+            "parentCategories": [
+              "Data Science"
+            ],
+            "description": "<p>The Ontology Engineer is a foundational technical hire on the AI, ML and Data Science team specializing in Knowledge Representation. This role is responsible for designing and maintaining the formal ontological architecture that makes cross-organizational data alignment.  This is not a taxonomy or metadata management role. It requires genuine formal depth in description logics, upper ontology theory, and the ability to reason about what an ontology commits to and what it leaves open.</p><p>Our platform sits between hospitals, distributors, GPOs, manufacturers, and regulators, enabling transactional execution, clinical data alignment, and analytics optimization across organizational boundaries. Each party maintains its own implicit ontology encoded in its schemas, workflows, and data. The Ontology Engineer will define the formal structures and processes that make alignment across them possible.  These structures should be auditable, compositionally sound, and maintainable over a multi-year lifecycle as all parties' systems evolve.</p><p>This Engineer will work directly with teammates that are familiar with ontology formalisms and with domain experts who understand the operational realities of HCSC data.  They will be expected to make and defend design decisions at the level of formal correctness, not just practical convenience, and to direct and evaluate LLM-assisted ontology discovery and enrichment pipelines with the rigor that formal alignment demands.</p><h3>Essential Duties:</h3><ul>\n<li>Design and maintain the ontology, covering the canonical structural layer (organizations, items, contracts, transaction), source data ontologies (supporting the canonical) and the process layer (data curation, ontology matching, workflows).</li>\n<li>Establish the rules for when two records from different systems refer to the same thing, and when they don't — recognizing the answer can differ by use case.</li>\n<li>Establish mappings from trading partner source data to the canonical ontology, with documented provenance and validity conditions for each mapping.</li>\n<li>Author OWL 2 axioms for ontology components; validate logical consistency (e.g. reasoner); maintain ontology lifecycle (e.g. with ROBOT, SHACL).</li>\n<li>Align with governance team and practice.</li>\n<li>Grounded ontology discovery from data (and its uses) rather than schema declarations and metadata alone.</li>\n<li>Build, direct and evaluate LLM-assisted ontology extraction pipelines, define and enforce the human-in-the-loop validation standards for AI-generated ontological candidates.</li>\n<li>Collaborate with data quality engineers to establish formal feedback .</li>\n<li>Translate formal ontology design decisions into specification/implementation for graph and relational stores.</li>\n<li>Specify and implement SPARQL queries and graph schema requirements with sufficient precision to prevent implementation-level semantic loss.</li>\n<li>Collaborate with internal and external stakeholders including domain experts, data engineers, product managers, and integration partners to ensure ontological architecture supports transactional, clinical, and analytical requirements.</li>\n<li>Proactively monitor developments in formal ontology, knowledge representation, and LLM-assisted knowledge engineering to drive adoption of improved methods.</li>\n</ul><h3>Competencies:</h3><ul>\n<li>Fluency in OWL 2 and description logics: able to read and write OWL axioms, understand what a reasoner computes and why, and diagnose inference failures without relying solely on tooling.</li>\n<li>Working knowledge of at least one upper ontology (e.g. BFO) and the ability to apply upper ontology commitments to a domain ontology correctly, including the continuant/occurrent distinction.</li>\n<li>Proficiency in knowledge graph technologies including RDF, OWL, and SPARQL; familiarity with property graph approaches (LPG, Cypher) and awareness of the semantic differences between RDF-based and property graph representations.</li>\n<li>Understanding of data integration: schema matching and mapping semantics, entity resolution, and the formal properties of multi-source alignment.</li>\n<li>Ability to interpret data profiling results (functional dependencies, inclusion dependencies) as ontological signals rather than purely as data quality metrics.</li>\n<li>Familiarity with LLM-assisted ontology extraction and enrichment pipelines, including the ability to evaluate LLM-generated ontological candidates against formal.</li>\n<li>Excellent communication skills for translating formal design to business stakeholders without losing precision and to engineers without losing formal correctness.</li>\n<li>Comfort working with partial/incomplete formal models, maintaining clear documentation of what remains unspecified and why.</li>\n<li>Requires minimal to no supervision on formal ontology design work.</li>\n</ul><h3>Required Qualifications and Skills:</h3><ul>\n<li>Greater than 4 years of experience in knowledge engineering, ontology development, or a closely related formal methods discipline.</li>\n<li>Demonstrated experience building and maintaining domain ontologies in Protege or equivalent, with reasoner-validated consistency; not solely taxonomy or metadata management work.</li>\n<li>Experience with ROBOT or ODK for ontology lifecycle management (or similar): automated quality checks, versioning, release pipelines.</li>\n<li>Expertise in SPARQL and/or Cypher for querying ontology-aligned data stores; ability to write and evaluate queries that correctly reflect ontological intent.</li>\n<li>Demonstrated ability to interpret data profiling output and translate it into formal ontological claims; experience with empirical ontology discovery from data as well as top-down ontology design.</li>\n<li>Experience directing or evaluating LLM-assisted knowledge extraction pipelines with formal validation requirements.</li>\n<li>Proficiency in Python (or similar) for ontology tooling, pipeline scripting, and data analysis in support of knowledge engineering workflows.</li>\n<li>Experience working in multi-disciplinary teams where formal and domain knowledge must be integrated under operational constraints.</li>\n</ul><h3>Preferred Qualifications and Skills:</h3><ul>\n<li>Bachelor's or advanced degree in Computer Science, Mathematics, Philosophy (logic/formal methods), Information Science, or a related hard science discipline.</li>\n<li>Familiarity with category theory as applied to data integration -- functors, natural transformations, limits and colimits as schema merge operations -- at literacy level or above; knowledge of CQL/AQL or categorical database theory is a plus.</li>\n<li>Experience with LinkML.</li>\n<li>Healthcare supply chain domain knowledge and ontological structures.</li>\n<li>Experience with BFO 2.0 and the OBO Foundry principles and standards.</li>\n<li>Familiarity with provenance models (why-provenance, how-provenance, where-provenance) and their implementation in ontology-aligned data systems.</li>\n<li>Experience with graph database platforms at production scale (Stardog, Amazon Neptune, or equivalent) and the operational considerations of ontology-driven graph deployments.</li>\n<li>Passion for staying at the cutting edge of knowledge representation, semantic alignment, and AI-assisted ontology engineering.</li>\n<li>Sense of humor.</li>\n</ul><h3>Estimated Salary: $128,000 - $170,000</h3><div class=\"content-conclusion\">\n<p><strong>GHX: It's the way you do business in healthcare</strong><br><a href=\"https://himalayas.app/companies/global-healthcare-exchange-ghx\">Global Healthcare Exchange (GHX)</a> enables better patient care and billions in savings for the healthcare community by maximizing automation, efficiency and accuracy of business processes.</p>\n<p>GHX is a healthcare business and data automation company, empowering healthcare organizations to enable better patient care and maximize industry savings using our world class cloud-based supply chain technology exchange platform, solutions, analytics and services. We bring together healthcare providers and manufacturers and distributors in North America and Europe - who rely on smart, secure healthcare-focused technology and comprehensive data to automate their business processes and make more informed decisions.</p>\n<p>It is our passion and vision for a more operationally efficient healthcare supply chain, helping organizations reduce - not shift - the cost of doing business, paving the way to delivering patient care more effectively. Together we take more than a billion dollars out of the cost of delivering healthcare every year. GHX is privately owned, operates in the United States, Canada and Europe, and employs more than 1000 people worldwide. Our corporate headquarters is in Colorado, with additional offices in Europe.</p>\n<p><strong><em>Disclaimer</em></strong><br><em>Global Healthcare Exchange, LLC and its North American subsidiaries (collectively, “GHX”) provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, national origin, sex, sexual orientation, gender identity, religion, age, genetic information, disability, veteran status or any other status protected by applicable law. All qualified applicants will receive consideration for employment without regard to any status protected by applicable law. This EEO policy applies to all terms, conditions, and privileges of employment, including hiring, training and development, promotion, transfer, compensation, benefits, educational assistance, termination, layoffs, social and recreational programs, and retirement.</em><em>GHX believes that employees should be provided with a working environment which enables each employee to be productive and to work to the best of his or her ability. We do not condone or tolerate an atmosphere of intimidation or harassment based on race, color, national origin, sex, sexual orientation, gender identity, religion, age, genetic information, disability, veteran status or any other status protected by applicable law. GHX expects and requires the cooperation of all employees in maintaining a discrimination and harassment-free atmosphere. Improper interference with the ability of GHX’s employees to perform their expected job duties is absolutely not tolerated.</em></p>\n<p><em>Read our GHX Privacy Policy</em></p>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787520511,
+            "expiryDate": 1792704510,
+            "applicationLink": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology",
+            "guid": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology"
           },
           {
             "title": "Staff Applied Scientist - Knowledge Graphs & AI",
@@ -1749,6 +1843,48 @@
             "guid": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote"
           },
           {
+            "title": "Semantic Data Engineer",
+            "excerpt": "We are seeking a Semantic / Data Engineer to support a complex platform built around RDF data models, SPARQL queries, and structured datasets.",
+            "companyName": "EUROPEAN DYNAMICS",
+            "companySlug": "european-dynamics",
+            "companyLogo": "https://cdn-images.himalayas.app/fuoymd6w6l0yk5f0nvipf7zkxios",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "Greece"
+            ],
+            "timezoneRestrictions": [
+              2
+            ],
+            "categories": [
+              "Software-Engineer",
+              "Data-Engineering",
+              "Semantic-Web",
+              "Knowledge-Graph-Engineering",
+              "Data-Modeling",
+              "Semantic-Data-Engineering",
+              "Senior-Semantic-Data-Consultant",
+              "Mid-Level-Semantic-Engineer",
+              "Semantic-Web-Developer",
+              "Semantic-Technologies-Specialist",
+              "Ontology-Engineer"
+            ],
+            "parentCategories": [
+              "Developer"
+            ],
+            "description": "<p>We are seeking a <strong>Semantic / Data Engineer</strong> to support a complex platform built around RDF data models, SPARQL queries, and structured datasets. You will be responsible for understanding, maintaining, and evolving the semantic layer of the system, working closely with backend engineers and architects. This role suits a specialist who enjoys data modelling, semantics, and knowledge representation in real-world production systems.</p><h3>What You'll Do:</h3><ul>\n<li>Analyse and maintain <strong>RDF/TTL data models</strong> and vocabularies;</li>\n<li>Develop, optimise, and maintain <strong>SPARQL queries;</strong>\n</li>\n<li>Support data ingestion, transformation, and validation workflows;</li>\n<li>Ensure consistency and correctness of semantic data across the platform;</li>\n<li>Collaborate with backend engineers to integrate semantic logic into application flows;</li>\n<li>Assist in documenting semantic models, assumptions, and constraints;</li>\n<li>Participate in troubleshooting data quality and reasoning issues.</li>\n</ul><h3>Requirements</h3><ul><li>\n<strong>3+ years of experience</strong> working with semantic or data-centric systems;</li></ul><ul><li>Strong knowledge of:</li></ul><ul>\n<ul>\n<li><strong>RDF, RDFS, OWL</strong></li>\n<li><strong>SPARQL</strong></li>\n</ul>\n<li>Experience with:</li>\n<ul>\n<li>Knowledge graphs or semantic interoperability platforms;</li>\n<li>Data modelling and ontology design;</li>\n</ul>\n<li>Comfortable working with structured data formats:</li>\n<ul><li>TTL, XML, JSON, CSV</li></ul>\n<li>Ability to analyse existing models and understand <strong>implicit domain logic.</strong>\n</li>\n</ul><h3>Nice-to-Have:</h3><ul>\n<li>Experience with triplestores or graph databases;</li>\n<li>Familiarity with EU data standards or interoperability frameworks;</li>\n<li>Python scripting for data processing and/or Apache Airflow;</li>\n<li>Experience in projects with regulatory or standards-driven constraints.</li>\n</ul><h3>Benefits</h3><p>We believe in rewarding talent and dedication. Here's what you can expect as part of our team:</p><ul>\n<li>Competitive full-time salary;</li>\n<li>Private Health Coverage on the Company’s group program;</li>\n<li>Flexible Working Hours;</li>\n<li>Top-of-the-Line Tools;</li>\n<li>Professional Development: Benefit from language courses, specialized training, and continuous learning opportunities;</li>\n<li>Career Growth: Work with some of the most innovative and exciting specialists in the industry;</li>\n<li>Dynamic Work Environment: Thrive in a setting that offers challenging goals, autonomy, and mentoring, fostering both personal and company growth.</li>\n</ul><p>If you want an exciting challenge, work with some of the coolest technologies, and enjoy your time doing it, then join us! Submit your detailed CV in English, quoting reference: (<strong>SDE/07/26</strong>).</p><p>You may also consider all our other open vacancies by visiting the career section of our website () and follow us on Twitter (@EURODYN_Careers) and LinkedIn.</p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> () is a leading European Software, Information, and Communication Technologies company, operating internationally (Athens, Brussels, Luxembourg, Copenhagen, Berlin, Stockholm, London, Nicosia, Valetta, Vienna, Den Haag, Hong Kong, etc.) The company employs over 1200 engineers, IT experts, and consultants (around 3% PhD, 41% MSc, and 54% BSc). We design and develop software applications using integrated, state-of-the-art technology. Our current IT projects have a value exceeding 300 million EURO. <a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> is a renowned supplier of IT services to European Union Institutions, international organizations, European Agencies, and national government Administrations in 40 countries and 4 continents.</p><p>As part of our dedication to the diversity of our workforce, we are committed to Equal Employment Opportunity without regard for race, colour, national origin, ethnicity, gender, disability, sexual orientation, gender identity, or religion.</p><p><img width=\"400px\" height=\"auto\"></p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> adheres to the General Data Protection Regulation principles by applying its Privacy Policy as published at . By submitting an application to this position and by sharing your personal data with ED, you acknowledge and accept its Policy and authorize ED to process your personal data for the purposes of the company's recruitment opportunities, in line with the Policy.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1785727322,
+            "expiryDate": 1790911321,
+            "applicationLink": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836",
+            "guid": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836"
+          },
+          {
             "title": "Knowledge Graph Engineer",
             "excerpt": "We are looking for a Knowledge Graph Engineer to join our team in the US, supporting the Delivery team in designing, implementing, and deploying knowledge graph–driven SaaS solutions for enterprise customers.",
             "companyName": "Squirro",
@@ -1796,48 +1932,6 @@
             "guid": "https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer"
           },
           {
-            "title": "Semantic Data Engineer",
-            "excerpt": "We are seeking a Semantic / Data Engineer to support a complex platform built around RDF data models, SPARQL queries, and structured datasets.",
-            "companyName": "EUROPEAN DYNAMICS",
-            "companySlug": "european-dynamics",
-            "companyLogo": "https://cdn-images.himalayas.app/fuoymd6w6l0yk5f0nvipf7zkxios",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "Greece"
-            ],
-            "timezoneRestrictions": [
-              2
-            ],
-            "categories": [
-              "Software-Engineer",
-              "Data-Engineering",
-              "Semantic-Web",
-              "Knowledge-Graph-Engineering",
-              "Data-Modeling",
-              "Semantic-Data-Engineering",
-              "Senior-Semantic-Data-Consultant",
-              "Mid-Level-Semantic-Engineer",
-              "Semantic-Web-Developer",
-              "Semantic-Technologies-Specialist",
-              "Ontology-Engineer"
-            ],
-            "parentCategories": [
-              "Developer"
-            ],
-            "description": "<p>We are seeking a <strong>Semantic / Data Engineer</strong> to support a complex platform built around RDF data models, SPARQL queries, and structured datasets. You will be responsible for understanding, maintaining, and evolving the semantic layer of the system, working closely with backend engineers and architects. This role suits a specialist who enjoys data modelling, semantics, and knowledge representation in real-world production systems.</p><h3>What You'll Do:</h3><ul>\n<li>Analyse and maintain <strong>RDF/TTL data models</strong> and vocabularies;</li>\n<li>Develop, optimise, and maintain <strong>SPARQL queries;</strong>\n</li>\n<li>Support data ingestion, transformation, and validation workflows;</li>\n<li>Ensure consistency and correctness of semantic data across the platform;</li>\n<li>Collaborate with backend engineers to integrate semantic logic into application flows;</li>\n<li>Assist in documenting semantic models, assumptions, and constraints;</li>\n<li>Participate in troubleshooting data quality and reasoning issues.</li>\n</ul><h3>Requirements</h3><ul><li>\n<strong>3+ years of experience</strong> working with semantic or data-centric systems;</li></ul><ul><li>Strong knowledge of:</li></ul><ul>\n<ul>\n<li><strong>RDF, RDFS, OWL</strong></li>\n<li><strong>SPARQL</strong></li>\n</ul>\n<li>Experience with:</li>\n<ul>\n<li>Knowledge graphs or semantic interoperability platforms;</li>\n<li>Data modelling and ontology design;</li>\n</ul>\n<li>Comfortable working with structured data formats:</li>\n<ul><li>TTL, XML, JSON, CSV</li></ul>\n<li>Ability to analyse existing models and understand <strong>implicit domain logic.</strong>\n</li>\n</ul><h3>Nice-to-Have:</h3><ul>\n<li>Experience with triplestores or graph databases;</li>\n<li>Familiarity with EU data standards or interoperability frameworks;</li>\n<li>Python scripting for data processing and/or Apache Airflow;</li>\n<li>Experience in projects with regulatory or standards-driven constraints.</li>\n</ul><h3>Benefits</h3><p>We believe in rewarding talent and dedication. Here's what you can expect as part of our team:</p><ul>\n<li>Competitive full-time salary;</li>\n<li>Private Health Coverage on the Company’s group program;</li>\n<li>Flexible Working Hours;</li>\n<li>Top-of-the-Line Tools;</li>\n<li>Professional Development: Benefit from language courses, specialized training, and continuous learning opportunities;</li>\n<li>Career Growth: Work with some of the most innovative and exciting specialists in the industry;</li>\n<li>Dynamic Work Environment: Thrive in a setting that offers challenging goals, autonomy, and mentoring, fostering both personal and company growth.</li>\n</ul><p>If you want an exciting challenge, work with some of the coolest technologies, and enjoy your time doing it, then join us! Submit your detailed CV in English, quoting reference: (<strong>SDE/07/26</strong>).</p><p>You may also consider all our other open vacancies by visiting the career section of our website () and follow us on Twitter (@EURODYN_Careers) and LinkedIn.</p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> () is a leading European Software, Information, and Communication Technologies company, operating internationally (Athens, Brussels, Luxembourg, Copenhagen, Berlin, Stockholm, London, Nicosia, Valetta, Vienna, Den Haag, Hong Kong, etc.) The company employs over 1200 engineers, IT experts, and consultants (around 3% PhD, 41% MSc, and 54% BSc). We design and develop software applications using integrated, state-of-the-art technology. Our current IT projects have a value exceeding 300 million EURO. <a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> is a renowned supplier of IT services to European Union Institutions, international organizations, European Agencies, and national government Administrations in 40 countries and 4 continents.</p><p>As part of our dedication to the diversity of our workforce, we are committed to Equal Employment Opportunity without regard for race, colour, national origin, ethnicity, gender, disability, sexual orientation, gender identity, or religion.</p><p><img width=\"400px\" height=\"auto\"></p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> adheres to the General Data Protection Regulation principles by applying its Privacy Policy as published at . By submitting an application to this position and by sharing your personal data with ED, you acknowledge and accept its Policy and authorize ED to process your personal data for the purposes of the company's recruitment opportunities, in line with the Policy.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1785727322,
-            "expiryDate": 1790911321,
-            "applicationLink": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836",
-            "guid": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836"
-          },
-          {
             "title": "Senior Knowledge Graph Engineer",
             "excerpt": "We are looking for a hands-on, production-focused Senior Knowledge Graph Engineer to join our growing AI Center of Excellence, responsible for using AI and machine learning to drive innovation across the organization.",
             "companyName": "EcoVadis",
@@ -1878,6 +1972,45 @@
             "expiryDate": 1790631466,
             "applicationLink": "https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer",
             "guid": "https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer"
+          },
+          {
+            "title": "Senior Applied Scientist - Knowledge Graphs & AI",
+            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
+            "companyName": "Outreach.io",
+            "companySlug": "outreach-io",
+            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "India"
+            ],
+            "timezoneRestrictions": [
+              5.5
+            ],
+            "categories": [
+              "Applied-Scientist",
+              "Machine-Learning-Scientist",
+              "Knowledge-Graphs-Engineer",
+              "AI-Research-Scientist",
+              "NLP-Scientist",
+              "Senior-Applied-Scientist",
+              "Senior-AI-Scientist",
+              "Senior-AI-ML-Scientist"
+            ],
+            "parentCategories": [
+              "Data Science"
+            ],
+            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div>\n<div><h3><strong>About the job:</strong></h3></div>\n<div><ul>\n<li>We are looking for an Associate Applied Scientist to join a dynamic and innovative AI platform team. If you are passionate about applying machine learning to knowledge graphs and reasoning systems at scale, this is an opportunity to build core components of Outreach's per-tenant knowledge graph while developing deep expertise under the guidance of senior scientists.</li>\n<li>Our team is building a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph powers contextual reasoning across the platform, driving next-best-action recommendations, deal risk signals, coaching suggestions, and competitive intelligence. In this pivotal role, you will design the underlying representations, extraction pipelines, and reasoning layers that make this possible, working closely with cross-functional engineering and product teams to deliver innovative, scalable, and reliable AI capabilities with direct impact on revenue outcomes. </li>\n<li>This role is ideal for someone with strong ML fundamentals who wants to build deepexpertise in knowledge graphs and applied NLP in a fast-moving product environment.</li>\n</ul></div>\n</div><h3>Your Daily Adventures Will Include:</h3><ul><div><div>\n<h3><strong>Key Responsibilities:</strong></h3>\n<li>Knowledge Graph Design &amp; Construction: Design and implement entity resolution and ontology population within established graph schemas. Write and optimize queries for graph traversal and feature extraction. Own data quality for assigned domains.</li>\n<li>Information Extraction: Build pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, and event detection. Run   experiments to compare approaches and improve accuracy metrics.</li>\n<li>Contextual Reasoning &amp; Recommendation: Implement graph traversal logic and feature queries that feed downstream scoring signals. Build and maintain features for deal risk, next-best-action, or coaching recommendation surfaces. </li>\n<li>Representation Learning: Train and evaluate link prediction and node classification models using established graph embedding methods. Implement evaluation pipelines and track model performance over time.</li>\n<li>Domain Modeling: Translate sales concepts, such as deal stages, buyer engagement patterns, rep behaviors, and account health, into graph nodes and relationships under the guidance of senior scientists. Contribute to ontology design and documentation.</li>\n<li>Cross-functional Collaboration: Work with software engineers to deploy models and pipelines into production. Write clean, tested code. Monitor system health and respond to incidents. Participate in code review and design discussions.</li>\n</div></div></ul><h3>Our Vision of You:</h3><ul><div><div><div>\n<div><h3><strong>Qualifications:</strong></h3></div>\n<div><div>\n<li>PhD in a relevant field such as Computer Science, NLP, Machine Learning, or a related discipline with a focus on knowledge representation and reasoning, information extraction and relationship extraction, graph neural networks, recommendation systems, or conversation AI and dialogue systems. MS + 2 years of relevant experiecne will also be considered.</li>\n<li>Solid engineering fundamentals. You can write production-quality code, not just prototype notebooks. You can write clean, tested Python code. Experience with graph databases or query languages (e.g., Neo4j, SPARQL, Cypher).</li>\n<li>Demonstrated ability to build and evaluate ML models. You've trained models, measured performance using appropriate metrics, and iterated on results.</li>\n<li>A track record of building things: whether that's research prototypes that went beyond the paper, open-source contributions, or side projects that required real systems thinking. You understand the gap between a research prototype and a reliable production system, such as monitoring, data drift, latency, and operational excellence.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n<li>Good communication skills. You can explain technical concepts to engineers and product managers.</li>\n<li>Eager to learn. You are excited to develop deep expertise in knowledge graphs and applied NLP under the mentorship of senior scientists.</li>\n</div></div>\n</div></div></div></ul><h3>Nice to Have: </h3><ul><div><div>\n<li>Hands-on experience applying knowledge graphs or graph-based learning methods to real-world data in a production setting.</li>\n<li>Strong fundamentals in at least two of: knowledge graph construction, information extraction, graph neural networks, or recommender systems. </li>\n<li>Experience working with large-scale unstructured text data (conversational transcripts, email, or similar)</li>\n<li>Experience with probabilistic graphical models, conversational AI, or sales/revenue domain data</li>\n<li>Published research at top-tier venues</li>\n</div></div></ul><h3>Why Join Us? </h3><ul><div><div>\n<li>Greenfield Architecture: Shape the design of a core AI system from the ground up, with the latitude to make foundational technical decisions that define the platform.</li>\n<li>Depth That Matters: This role genuinely requires PhD-level thinking; you will tackle problems in entity resolution, temporal reasoning, and graph learning that demand it.</li>\n<li>Applied Impact: Work with real production feedback loops and millions of sales interactions, not just benchmarks; see your models change how thousands of teams sell.</li>\n<li>High Leverage, Low Bureaucracy: Join a small, senior team where your contributions are visible, your ideas ship fast, and you have direct access to leadership.</li>\n<li>Career Growth: Opportunity to lead initiatives and mentor engineers.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1783335032,
+            "expiryDate": 1788519031,
+            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai",
+            "guid": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai"
           },
           {
             "title": "Principal Solutions Architect - Expert Services",
@@ -1922,45 +2055,6 @@
             "expiryDate": 1789170392,
             "applicationLink": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services",
             "guid": "https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services"
-          },
-          {
-            "title": "Senior Applied Scientist - Knowledge Graphs & AI",
-            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
-            "companyName": "Outreach.io",
-            "companySlug": "outreach-io",
-            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "India"
-            ],
-            "timezoneRestrictions": [
-              5.5
-            ],
-            "categories": [
-              "Applied-Scientist",
-              "Machine-Learning-Scientist",
-              "Knowledge-Graphs-Engineer",
-              "AI-Research-Scientist",
-              "NLP-Scientist",
-              "Senior-Applied-Scientist",
-              "Senior-AI-Scientist",
-              "Senior-AI-ML-Scientist"
-            ],
-            "parentCategories": [
-              "Data Science"
-            ],
-            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div>\n<div><h3><strong>About the job:</strong></h3></div>\n<div><ul>\n<li>We are looking for an Associate Applied Scientist to join a dynamic and innovative AI platform team. If you are passionate about applying machine learning to knowledge graphs and reasoning systems at scale, this is an opportunity to build core components of Outreach's per-tenant knowledge graph while developing deep expertise under the guidance of senior scientists.</li>\n<li>Our team is building a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph powers contextual reasoning across the platform, driving next-best-action recommendations, deal risk signals, coaching suggestions, and competitive intelligence. In this pivotal role, you will design the underlying representations, extraction pipelines, and reasoning layers that make this possible, working closely with cross-functional engineering and product teams to deliver innovative, scalable, and reliable AI capabilities with direct impact on revenue outcomes. </li>\n<li>This role is ideal for someone with strong ML fundamentals who wants to build deepexpertise in knowledge graphs and applied NLP in a fast-moving product environment.</li>\n</ul></div>\n</div><h3>Your Daily Adventures Will Include:</h3><ul><div><div>\n<h3><strong>Key Responsibilities:</strong></h3>\n<li>Knowledge Graph Design &amp; Construction: Design and implement entity resolution and ontology population within established graph schemas. Write and optimize queries for graph traversal and feature extraction. Own data quality for assigned domains.</li>\n<li>Information Extraction: Build pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, and event detection. Run   experiments to compare approaches and improve accuracy metrics.</li>\n<li>Contextual Reasoning &amp; Recommendation: Implement graph traversal logic and feature queries that feed downstream scoring signals. Build and maintain features for deal risk, next-best-action, or coaching recommendation surfaces. </li>\n<li>Representation Learning: Train and evaluate link prediction and node classification models using established graph embedding methods. Implement evaluation pipelines and track model performance over time.</li>\n<li>Domain Modeling: Translate sales concepts, such as deal stages, buyer engagement patterns, rep behaviors, and account health, into graph nodes and relationships under the guidance of senior scientists. Contribute to ontology design and documentation.</li>\n<li>Cross-functional Collaboration: Work with software engineers to deploy models and pipelines into production. Write clean, tested code. Monitor system health and respond to incidents. Participate in code review and design discussions.</li>\n</div></div></ul><h3>Our Vision of You:</h3><ul><div><div><div>\n<div><h3><strong>Qualifications:</strong></h3></div>\n<div><div>\n<li>PhD in a relevant field such as Computer Science, NLP, Machine Learning, or a related discipline with a focus on knowledge representation and reasoning, information extraction and relationship extraction, graph neural networks, recommendation systems, or conversation AI and dialogue systems. MS + 2 years of relevant experiecne will also be considered.</li>\n<li>Solid engineering fundamentals. You can write production-quality code, not just prototype notebooks. You can write clean, tested Python code. Experience with graph databases or query languages (e.g., Neo4j, SPARQL, Cypher).</li>\n<li>Demonstrated ability to build and evaluate ML models. You've trained models, measured performance using appropriate metrics, and iterated on results.</li>\n<li>A track record of building things: whether that's research prototypes that went beyond the paper, open-source contributions, or side projects that required real systems thinking. You understand the gap between a research prototype and a reliable production system, such as monitoring, data drift, latency, and operational excellence.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n<li>Good communication skills. You can explain technical concepts to engineers and product managers.</li>\n<li>Eager to learn. You are excited to develop deep expertise in knowledge graphs and applied NLP under the mentorship of senior scientists.</li>\n</div></div>\n</div></div></div></ul><h3>Nice to Have: </h3><ul><div><div>\n<li>Hands-on experience applying knowledge graphs or graph-based learning methods to real-world data in a production setting.</li>\n<li>Strong fundamentals in at least two of: knowledge graph construction, information extraction, graph neural networks, or recommender systems. </li>\n<li>Experience working with large-scale unstructured text data (conversational transcripts, email, or similar)</li>\n<li>Experience with probabilistic graphical models, conversational AI, or sales/revenue domain data</li>\n<li>Published research at top-tier venues</li>\n</div></div></ul><h3>Why Join Us? </h3><ul><div><div>\n<li>Greenfield Architecture: Shape the design of a core AI system from the ground up, with the latitude to make foundational technical decisions that define the platform.</li>\n<li>Depth That Matters: This role genuinely requires PhD-level thinking; you will tackle problems in entity resolution, temporal reasoning, and graph learning that demand it.</li>\n<li>Applied Impact: Work with real production feedback loops and millions of sales interactions, not just benchmarks; see your models change how thousands of teams sell.</li>\n<li>High Leverage, Low Bureaucracy: Join a small, senior team where your contributions are visible, your ideas ship fast, and you have direct access to leadership.</li>\n<li>Career Growth: Opportunity to lead initiatives and mentor engineers.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1783335032,
-            "expiryDate": 1788519031,
-            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai",
-            "guid": "https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai"
           },
           {
             "title": "Ontology Expert - Remote (Dallas, TX, US)",
