@@ -37757,6 +37757,20 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
+      "title": "Resource Description Framework",
+      "wikidataId": "https://www.wikidata.org/wiki/Q54872",
+      "types": [
+        "Standard"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/",
+      "description": "data model for describing resources on the Web",
+      "aliases": [
+        "RDF"
+      ],
+      "category": "General / Cross-domain",
+      "homepage": "https://www.w3.org/RDF/"
+    },
+    {
       "title": "Resource of Asian Primary Immunodeficiency Diseases (RAPID) Phenotype Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q138494959",
       "types": [

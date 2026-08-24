@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "shortAcronymAllowlist": [
+    "DCAT",
+    "FOAF",
+    "N3",
+    "Neo4j",
+    "OWL",
+    "OWL2",
+    "PROV",
+    "R2RML",
+    "RDF",
+    "RDF4J",
+    "RDFox",
+    "RDFS",
+    "SHACL",
+    "SKOS",
+    "SOSA"
+  ],
+  "denylist": [
+    "BIO",
+    "credit",
+    "Events",
+    "Framework",
+    "ICE",
+    "JSON Schema",
+    "JSONLD",
+    "Language",
+    "layout",
+    "Mentor",
+    "Pathways",
+    "Processor",
+    "Reasonable",
+    "schema",
+    "Semantic",
+    "structured data",
+    "The Lens"
+  ],
+  "reviewedAliases": {
+    "PoolParty": {
+      "dataset": "software",
+      "qid": "Q28136436"
+    },
+    "PROV-O": {
+      "dataset": "resource",
+      "qid": "Q62213429"
+    }
+  },
+  "disambiguationOverrides": {}
+}

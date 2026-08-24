@@ -2,11 +2,11 @@
   "artifacts": [
     {
       "path": "data/jobs/jobs.json",
-      "sha256": "56f9480981c6326e252b5ee75e9dc9a59f5d6aff1fd07fb573de53310d05158c"
+      "sha256": "b63e4804c743251fafc6f8d68c837a66f764042d1b0f0cafb59c7e63fce53364"
     },
     {
       "path": "data/jobs/jobs.ttl",
-      "sha256": "d90ab5b0cae27e89dfb95c37a79c63bdd4516838afbf29e2cddde4f00c1204b2"
+      "sha256": "b6dd532d062d09100fc686927211bb55a0675d48426f3a00c065610ad02abc33"
     },
     {
       "path": "data/jobs/raw/adzuna.json",
@@ -33,8 +33,8 @@
       "sha256": "4f3091bd57ac5ab0fa496737d4614971c4ac49e1c768e43a8edb56a39933212d"
     }
   ],
-  "completedAt": "2026-08-24T16:43:25Z",
-  "generationId": "20260824T164325Z-52500052d720",
+  "completedAt": "2026-08-24T16:47:20Z",
+  "generationId": "20260824T164720Z-ffcdcfae00d9",
   "schemaVersion": "1.0.0",
   "sourceRetrievedAt": "2026-08-24T16:43:20Z",
   "startedAt": "2026-08-24T16:42:59Z"

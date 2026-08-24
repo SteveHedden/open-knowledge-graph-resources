@@ -212,6 +212,17 @@ class SourceEligibilityPolicy:
 
 
 @dataclass(frozen=True)
+class SourceInclusion:
+    iri: URIRef
+    catalog: URIRef
+    source_qid: str
+    target_class: URIRef
+    projection_value: str
+    rationale: str
+    evidence_urls: tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class RecommendationExemplar:
     iri: URIRef
     catalog: URIRef
@@ -227,6 +238,7 @@ class SourceMappings:
     class_mappings: tuple[SourceClassMapping, ...]
     property_mappings: tuple[SourcePropertyMapping, ...]
     eligibility_policies: tuple[SourceEligibilityPolicy, ...]
+    source_inclusions: tuple[SourceInclusion, ...]
     recommendation_exemplars: tuple[RecommendationExemplar, ...]
 
     def class_mappings_for(self, catalog: URIRef) -> tuple[SourceClassMapping, ...]:
@@ -240,6 +252,23 @@ class SourceMappings:
 
     def class_ids_for(self, catalog: URIRef) -> tuple[str, ...]:
         return tuple(mapping.source_class_id for mapping in self.class_mappings_for(catalog))
+
+    def inclusions_for(self, catalog: URIRef) -> tuple[SourceInclusion, ...]:
+        return tuple(
+            inclusion for inclusion in self.source_inclusions if inclusion.catalog == catalog
+        )
+
+    def inclusion_target_map(self, catalog: URIRef) -> dict[str, URIRef]:
+        return {
+            inclusion.source_qid: inclusion.target_class
+            for inclusion in self.inclusions_for(catalog)
+        }
+
+    def target_classes_for(self, catalog: URIRef) -> set[URIRef]:
+        return {
+            *(mapping.target_class for mapping in self.class_mappings_for(catalog)),
+            *(inclusion.target_class for inclusion in self.inclusions_for(catalog)),
+        }
 
     def class_id_for_target(self, target_class: URIRef) -> str:
         matches = [
@@ -256,7 +285,7 @@ class SourceMappings:
     @property
     def projection_type_labels(self) -> dict[URIRef, str]:
         labels: dict[URIRef, str] = {}
-        for mapping in self.class_mappings:
+        for mapping in (*self.class_mappings, *self.source_inclusions):
             previous = labels.setdefault(mapping.target_class, mapping.projection_value)
             if previous != mapping.projection_value:
                 raise SemanticConfigError(
@@ -340,6 +369,7 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
     class_mappings: list[SourceClassMapping] = []
     property_mappings: list[SourcePropertyMapping] = []
     eligibility_policies: list[SourceEligibilityPolicy] = []
+    source_inclusions: list[SourceInclusion] = []
     recommendation_exemplars: list[RecommendationExemplar] = []
 
     for subject in graph.subjects(RDF.type, OKG.SourceClassMapping):
@@ -383,6 +413,38 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
                 sort_order=int(_single_literal(graph, subject, OKG.sortOrder)),
             )
         )
+
+    for subject in graph.subjects(RDF.type, OKG.SourceInclusion):
+        if not isinstance(subject, URIRef):
+            raise SemanticConfigError("Source inclusions must have stable IRIs.")
+        evidence_urls = tuple(
+            sorted(
+                str(value)
+                for value in graph.objects(subject, DCTERMS.source)
+                if isinstance(value, URIRef)
+            )
+        )
+        if not evidence_urls:
+            raise SemanticConfigError(f"Source inclusion {subject} requires public evidence.")
+        source_inclusions.append(
+            SourceInclusion(
+                iri=subject,
+                catalog=_single_iri(graph, subject, OKG.catalogDataset),
+                source_qid=_qid_from_source_entity(
+                    _single_iri(graph, subject, OKG.sourceEntity)
+                ),
+                target_class=_single_iri(graph, subject, OKG.targetTerm),
+                projection_value=_single_literal(graph, subject, OKG.projectionValue),
+                rationale=_single_literal(graph, subject, DCTERMS.description),
+                evidence_urls=evidence_urls,
+            )
+        )
+
+    inclusion_keys = [
+        (inclusion.catalog, inclusion.source_qid) for inclusion in source_inclusions
+    ]
+    if len(inclusion_keys) != len(set(inclusion_keys)):
+        raise SemanticConfigError("Source inclusions must be unique by catalog and QID.")
 
     for subject in graph.subjects(RDF.type, OKG.SourceEligibilityPolicy):
         if not isinstance(subject, URIRef):
@@ -470,6 +532,9 @@ def load_source_mappings(path: Path = SOURCES_PATH) -> SourceMappings:
         class_mappings=tuple(class_mappings),
         property_mappings=tuple(property_mappings),
         eligibility_policies=tuple(eligibility_policies),
+        source_inclusions=tuple(
+            sorted(source_inclusions, key=lambda inclusion: (str(inclusion.catalog), inclusion.source_qid))
+        ),
         recommendation_exemplars=tuple(
             sorted(recommendation_exemplars, key=lambda exemplar: str(exemplar.iri))
         ),

@@ -17,8 +17,8 @@
     dcterms:title "Open Knowledge Graphs structural ontology"@en ;
     dcterms:description "Stable structural classes, properties, alignments, and SHACL policy for the Open Knowledge Graphs catalog."@en ;
     dcterms:issued "2026-08-13"^^xsd:date ;
-    dcterms:modified "2026-08-14"^^xsd:date ;
-    owl:versionInfo "0.1.0" ;
+    dcterms:modified "2026-08-24"^^xsd:date ;
+    owl:versionInfo "0.2.0" ;
     vann:preferredNamespacePrefix "okg" ;
     vann:preferredNamespaceUri "https://openknowledgegraphs.com/ontology#" .
 
@@ -50,6 +50,11 @@ okg:OntologyLanguage a rdfs:Class ;
     rdfs:subClassOf okg:Resource ;
     rdfs:label "Ontology Language" ;
     rdfs:comment "A formal language used to define and represent ontologies." .
+
+okg:Standard a rdfs:Class ;
+    rdfs:subClassOf okg:Resource, dcterms:Standard ;
+    rdfs:label "Standard" ;
+    rdfs:comment "A reviewed technical standard used in knowledge-graph and semantic-web systems." .
 
 okg:Software a rdfs:Class ;
     rdfs:subClassOf okg:Resource ;
@@ -108,6 +113,11 @@ okg:SourceExclusion a rdfs:Class ;
 okg:SourceEligibilityException a rdfs:Class ;
     rdfs:label "Source eligibility exception" ;
     rdfs:comment "Reviewed decision allowing a source entity to override a general eligibility rule without overriding a confirmed exclusion." .
+
+okg:SourceInclusion a rdfs:Class ;
+    rdfs:subClassOf okg:SourceMapping ;
+    rdfs:label "Source inclusion" ;
+    rdfs:comment "Reviewed source entity included directly in a catalog when broad class traversal would be unsafe." .
 
 okg:RecommendationExemplar a rdfs:Class ;
     rdfs:subClassOf okg:SourceMapping ;
@@ -301,7 +311,7 @@ okg:targetTerm a rdf:Property ;
     rdfs:comment "OKG or external semantic term targeted by a source mapping." .
 
 okg:projectionValue a rdf:Property ;
-    rdfs:domain okg:SourceClassMapping ;
+    rdfs:domain okg:SourceMapping ;
     rdfs:range xsd:string ;
     rdfs:label "projection value" ;
     rdfs:comment "Stable compatibility value emitted for a mapped class in derived JSON." .
@@ -448,6 +458,10 @@ okg:KnowledgeGraphShape a sh:NodeShape ;
 
 okg:OntologyLanguageShape a sh:NodeShape ;
     sh:targetClass okg:OntologyLanguage ;
+    sh:node okg:ResourceShape .
+
+okg:StandardShape a sh:NodeShape ;
+    sh:targetClass okg:Standard ;
     sh:node okg:ResourceShape .
 
 okg:SoftwareShape a sh:NodeShape ;

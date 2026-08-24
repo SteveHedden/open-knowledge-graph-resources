@@ -282,6 +282,39 @@ h1 {
   max-width: 34ch;
 }
 
+.job-title-text {
+  font-weight: 600;
+}
+
+.catalog-mentions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  list-style: none;
+  margin: 0.42rem 0 0;
+  padding: 0;
+}
+
+.catalog-mention-chip a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #c7d7e4;
+  border-radius: 999px;
+  background: #f2f7fa;
+  color: var(--brand-strong);
+  padding: 0.16rem 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.catalog-mention-chip a:hover {
+  border-color: var(--brand);
+  background: #e9f2f7;
+  color: var(--brand-strong);
+}
+
 .sort-button {
   display: inline-flex;
   align-items: center;

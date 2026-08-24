@@ -4163,6 +4163,15 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "adzuna-5803999212" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Berkeley Heights, Union County" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/shacl/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/apache-jena-fuseki/>,
+        <https://openknowledgegraphs.com/software/blazegraph/>,
+        <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/ontotext-graphdb/>,
+        <https://openknowledgegraphs.com/software/stardog/>,
+        <https://openknowledgegraphs.com/software/virtuoso-universal-server/> ;
     schema:title "Ontology/Knowledge Graph Engineer" ;
     schema:url <https://www.adzuna.com/land/ad/5803999212?se=OE4Zh9Kf8RGOn7xjBKikhQ&v=541DEA7E919841E152A05DEB1BF9152B8A952815> .
 
@@ -6171,6 +6180,9 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "adzuna-5842142125" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Trammells, Harris County" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/shacl/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Snowflake Architect/Data Architect at Houston TX (ONSITE)" ;
     schema:url <https://www.adzuna.com/land/ad/5842142125?se=nOQ1idKf8RGzh8YGlcUa5g&v=57CB3333F5567D00745301BAA75BB8AF8793A3EE> .
 
@@ -6557,6 +6569,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "adzuna-5849259319" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Alexandria, Alexandria City" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/> ;
     schema:title "Mid-Level Data Engineer 130-006 with Security Clearance" ;
     schema:url <https://www.adzuna.com/land/ad/5849259319?se=nOQ1idKf8RGzh8YGlcUa5g&v=A8448C6903AA6387ECDF0109028F52C9DFEBA699> .
 
@@ -6764,6 +6777,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "adzuna-5851812795" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Federal Heights, Adams County" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Graph Data Engineer" ;
     schema:url <https://www.adzuna.com/details/5851812795> .
 
@@ -10863,6 +10878,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "arbeitnow-senior-consultant-search-ai-visibility-seo-geo-dusseldorf-445565" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Düsseldorf" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/wikidata/> ;
     schema:title "Senior Consultant Search & AI Visibility (SEO/GEO) (m/w/d), Düsseldorf" ;
     schema:url <https://www.arbeitnow.com/jobs/companies/towa-the-digital-growth-company/senior-consultant-search-ai-visibility-seo-geo-dusseldorf-445565> .
 
@@ -10884,6 +10900,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "arbeitnow-senior-consultant-search-ai-visibility-seo-geo-munchen-munich-186247" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Munich" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/wikidata/> ;
     schema:title "Senior Consultant Search & AI Visibility (SEO/GEO) (m/w/d), München" ;
     schema:url <https://www.arbeitnow.com/jobs/companies/towa-the-digital-growth-company/senior-consultant-search-ai-visibility-seo-geo-munchen-munich-186247> .
 
@@ -11793,6 +11810,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "arbeitnow-spezialist-lebensmittelrecht-und-kennzeichnung-export-hamburg-108529" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "Hamburg" ] ;
+    schema:mentions <https://openknowledgegraphs.com/software/orientdb/> ;
     schema:title "Spezialist Lebensmittelrecht und Kennzeichnung Export (m/w/d)" ;
     schema:url <https://www.arbeitnow.com/jobs/companies/dovgan-gmbh/spezialist-lebensmittelrecht-und-kennzeichnung-export-hamburg-108529> .
 
@@ -13110,6 +13128,9 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "Greece" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/rdf-schema/>,
+        <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Semantic Data Engineer" ;
     schema:url <https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836> ;
     schema:validThrough "2026-10-02"^^xsd:date .
@@ -13240,6 +13261,9 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "Colombia" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Senior Data Engineer" ;
     schema:url <https://himalayas.app/companies/blanc-labs/jobs/senior-data-engineer> ;
     schema:validThrough "2026-09-22"^^xsd:date .
@@ -13406,6 +13430,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Knowledge Graph Engineer" ;
     schema:url <https://himalayas.app/companies/madiff/jobs/knowledge-graph-engineer> ;
     schema:validThrough "2026-09-17"^^xsd:date .
@@ -13452,22 +13478,6 @@ kgjd:employer-zenjob a kgjobs:Employer,
     kgjobs:classification "qualified" ;
     kgjobs:firstSeenAt "2026-08-18T20:14:44+00:00"^^xsd:dateTime ;
     kgjobs:hasEvidence [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "RDF" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
-            kgjobs:matchedPhrase "RDF" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
-            kgjobs:conceptLabel "SKOS" ;
-            kgjobs:conceptScheme "KG Skills and Technologies" ;
-            kgjobs:matchStrength "strong" ;
-            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos> ;
-            kgjobs:matchedPhrase "SKOS" ;
-            kgjobs:negated false ;
-            kgjobs:sourceField "description" ],
-        [ a kgjobs:Evidence ;
             kgjobs:conceptLabel "Knowledge Graph" ;
             kgjobs:conceptScheme "KG Skills and Technologies" ;
             kgjobs:matchStrength "strong" ;
@@ -13514,6 +13524,22 @@ kgjd:employer-zenjob a kgjobs:Employer,
             kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph> ;
             kgjobs:matchedPhrase "knowledge graph" ;
             kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "RDF" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf> ;
+            kgjobs:matchedPhrase "RDF" ;
+            kgjobs:negated false ;
+            kgjobs:sourceField "description" ],
+        [ a kgjobs:Evidence ;
+            kgjobs:conceptLabel "SKOS" ;
+            kgjobs:conceptScheme "KG Skills and Technologies" ;
+            kgjobs:matchStrength "strong" ;
+            kgjobs:matchedConcept <https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos> ;
+            kgjobs:matchedPhrase "SKOS" ;
+            kgjobs:negated false ;
             kgjobs:sourceField "description" ] ;
     kgjobs:lastSeenAt "2026-08-23T23:25:05+00:00"^^xsd:dateTime ;
     kgjobs:sourceRecordId "https://himalayas.app/companies/ifs/jobs/knowledge-engineer-knowledge-graph-agentic-interfaces" ;
@@ -13528,6 +13554,9 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United Kingdom" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/skos/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Knowledge Engineer — Knowledge Graph & Agentic Interfaces" ;
     schema:url <https://himalayas.app/companies/ifs/jobs/knowledge-engineer-knowledge-graph-agentic-interfaces> ;
     schema:validThrough "2026-10-16"^^xsd:date .
@@ -13682,6 +13711,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "India" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Director of Applied Science and Engineering - Knowledge Graphs & AI" ;
     schema:url <https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai> ;
     schema:validThrough "2026-09-20"^^xsd:date .
@@ -13754,6 +13784,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Knowledge Engineer" ;
     schema:url <https://himalayas.app/companies/associated-bank/jobs/knowledge-engineer> ;
     schema:validThrough "2026-09-20"^^xsd:date .
@@ -13972,6 +14003,19 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "Spain" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/prov-o-the-prov-ontology/>,
+        <https://openknowledgegraphs.com/resource/rdf-schema/>,
+        <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/semantic-sensor-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/shacl/>,
+        <https://openknowledgegraphs.com/resource/skos/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/memgraph/>,
+        <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/ontotext-graphdb/>,
+        <https://openknowledgegraphs.com/software/rdflib/>,
+        <https://openknowledgegraphs.com/software/stardog/>,
+        <https://openknowledgegraphs.com/software/virtuoso-universal-server/> ;
     schema:title "Senior Knowledge Graph Engineer" ;
     schema:url <https://himalayas.app/companies/ecovadis/jobs/senior-knowledge-graph-engineer> ;
     schema:validThrough "2026-09-28"^^xsd:date .
@@ -14050,6 +14094,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "Austria, Germany, Switzerland" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Knowledge Engineer / Ontologist (m/w/d)" ;
     schema:url <https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471> ;
     schema:validThrough "2026-09-05"^^xsd:date .
@@ -14202,6 +14248,11 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/arangodb/>,
+        <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/stardog/> ;
     schema:title "Principal Solutions Architect - Expert Services" ;
     schema:url <https://himalayas.app/companies/mendix/jobs/principal-solutions-architect-expert-services> ;
     schema:validThrough "2026-09-11"^^xsd:date .
@@ -14308,6 +14359,11 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/common-core-ontologies/>,
+        <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/shacl/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Ontologist" ;
     schema:url <https://himalayas.app/companies/sosi/jobs/ontologist> ;
     schema:validThrough "2026-09-06"^^xsd:date .
@@ -14406,6 +14462,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "India" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Staff Applied Scientist - Knowledge Graphs & AI" ;
     schema:url <https://himalayas.app/companies/outreach-io/jobs/staff-applied-scientist-knowledge-graphs-ai> ;
     schema:validThrough "2026-09-04"^^xsd:date .
@@ -14496,6 +14553,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "India" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Senior Applied Scientist - Knowledge Graphs & AI" ;
     schema:url <https://himalayas.app/companies/outreach-io/jobs/senior-applied-scientist-knowledge-graphs-ai> ;
     schema:validThrough "2026-09-04"^^xsd:date .
@@ -14530,6 +14588,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/snomed-ct/> ;
     schema:title "General Application — Research & Science" ;
     schema:url <https://himalayas.app/companies/system/jobs/general-application-research-science> ;
     schema:validThrough "2026-09-03"^^xsd:date .
@@ -14604,6 +14663,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/skos/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Senior Catalog Strategist & Taxonomist (Contract-to-Hire)" ;
     schema:url <https://himalayas.app/companies/parachute-health/jobs/senior-catalog-strategist-taxonomist-contract-to-hire> ;
     schema:validThrough "2026-10-07"^^xsd:date .
@@ -14726,6 +14787,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Knowledge Graph Engineer" ;
     schema:url <https://himalayas.app/companies/inizio-partners-corp/jobs/knowledge-graph-engineer> ;
     schema:validThrough "2026-09-11"^^xsd:date .
@@ -14784,6 +14847,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "Poland" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/poolparty-semantic-suite/> ;
     schema:title "Principal Knowledge Acquisition Analyst" ;
     schema:url <https://himalayas.app/companies/autodesk/jobs/principal-knowledge-acquisition-analyst> ;
     schema:validThrough "2026-10-06"^^xsd:date .
@@ -14890,6 +14955,9 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "India" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Sr. Engineer, Knowledge Engineering - 11317" ;
     schema:url <https://himalayas.app/companies/coupa-software-inc/jobs/sr-engineer-knowledge-engineering-11317> ;
     schema:validThrough "2026-09-04"^^xsd:date .
@@ -14986,6 +15054,12 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/skos/>,
+        <https://openknowledgegraphs.com/resource/snomed-ct/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/protege/>,
+        <https://openknowledgegraphs.com/software/stardog/> ;
     schema:title "Ontology Expert - Remote (Dallas, TX, US)" ;
     schema:url <https://himalayas.app/companies/nttdata/jobs/ontology-expert-remote-dallas-tx-us> ;
     schema:validThrough "2026-09-19"^^xsd:date .
@@ -15146,6 +15220,9 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/skos/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Knowledge Graph Engineer" ;
     schema:url <https://himalayas.app/companies/squirro/jobs/knowledge-graph-engineer> ;
     schema:validThrough "2026-10-13"^^xsd:date .
@@ -15204,6 +15281,12 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/allegrograph/>,
+        <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/ontotext-graphdb/>,
+        <https://openknowledgegraphs.com/software/poolparty-semantic-suite/>,
+        <https://openknowledgegraphs.com/software/protege/>,
+        <https://openknowledgegraphs.com/software/stardog/> ;
     schema:title "Ontology Architect" ;
     schema:url <https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect> ;
     schema:validThrough "2026-08-26"^^xsd:date .
@@ -15330,6 +15413,10 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:hiringOrganization kgjd:employer-adesso-belgium ;
     schema:identifier "himalayas-f7931e11f7587dd6" ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/rdf-schema/>,
+        <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Freelance Data Scientist with Ontology and Graph expertise" ;
     schema:url <https://himalayas.app/companies/adesso-belgium/jobs/freelance-data-scientist-with-ontology-and-graph-expertise> ;
     schema:validThrough "2026-10-03"^^xsd:date .
@@ -15458,6 +15545,13 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "Portugal" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/rdf-schema/>,
+        <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/shacl/>,
+        <https://openknowledgegraphs.com/resource/skos/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/>,
+        <https://openknowledgegraphs.com/software/metaphactory/>,
+        <https://openknowledgegraphs.com/software/rdfox/> ;
     schema:title "Senior Ontologist / Semantic Knowledge Engineer- European Union – Full Remote" ;
     schema:url <https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote> ;
     schema:validThrough "2026-10-18"^^xsd:date .
@@ -15533,6 +15627,10 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "France, Germany, Italy, Spain, Switzerland, UK" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/arangodb/>,
+        <https://openknowledgegraphs.com/software/janusgraph/>,
+        <https://openknowledgegraphs.com/software/memgraph/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Senior Software Engineer - REDAPL Graph Engine" ;
     schema:url <https://jobicy.com/jobs/145290-senior-software-engineer-redapl-graph-engine> .
 
@@ -15587,6 +15685,12 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "USA" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/software/allegrograph/>,
+        <https://openknowledgegraphs.com/software/neo4j/>,
+        <https://openknowledgegraphs.com/software/ontotext-graphdb/>,
+        <https://openknowledgegraphs.com/software/poolparty-semantic-suite/>,
+        <https://openknowledgegraphs.com/software/protege/>,
+        <https://openknowledgegraphs.com/software/stardog/> ;
     schema:title "Ontology Architect" ;
     schema:url <https://jobicy.com/jobs/147512-ontology-architect> .
 
@@ -15875,6 +15979,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:jobLocation [ a schema:Place ;
             schema:name "EMEA, UK" ] ;
     schema:jobLocationType "TELECOMMUTE" ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
     schema:title "Software Architect" ;
     schema:url <https://jobicy.com/jobs/150381-software-architect> .
 
@@ -16177,6 +16283,8 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "jooble--5636669618126076856" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Applied AI/ML Engineer" ;
     schema:url <https://jooble.org/desc/-5636669618126076856?ckey=rdf&rgn=-1&pos=3&elckey=539230617191895263&p=1&aq=4888474007400954233&cid=18065&jobAge=10&relb=175&brelb=115&bscr=1045.0083&scr=1590.2300217391303> .
 
@@ -16317,6 +16425,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "jooble-1492139279319711808" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
+    schema:mentions <https://openknowledgegraphs.com/resource/resource-description-framework/> ;
     schema:title "Senior Full Stack Developer" ;
     schema:url <https://jooble.org/desc/1492139279319711808?ckey=sparql&rgn=-1&pos=11&elckey=5194323998962906722&p=1&aq=-3685316102928522225&cid=18065&jobAge=10&relb=175&brelb=115&bscr=982.3153&scr=1494.8276304347826> .
 
@@ -16522,6 +16631,7 @@ kgjd:employer-zenjob a kgjobs:Employer,
     schema:identifier "jooble-5811275786647574104" ;
     schema:jobLocation [ a schema:Place ;
             schema:name "United States" ] ;
+    schema:mentions <https://openknowledgegraphs.com/software/neo4j/> ;
     schema:title "Software Engineer (L5), Ads Foundations Knowledge Graph" ;
     schema:url <https://jooble.org/desc/5811275786647574104?ckey=knowledge+graph&rgn=-1&pos=12&elckey=9039172675426935528&p=1&aq=1846733188828280566&cid=18065&jobAge=10&relb=175&brelb=115&bscr=7926.407&scr=12061.923695652175> .
 

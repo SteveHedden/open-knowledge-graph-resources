@@ -504,6 +504,19 @@
 
   function normalizeJobItem(record) {
     const safeItem = { ...record };
+    safeItem.catalogMentions = Array.isArray(record.catalogMentions)
+      ? record.catalogMentions.filter(
+          (mention) =>
+            mention &&
+            typeof mention === "object" &&
+            typeof mention.title === "string" &&
+            mention.title.trim() &&
+            typeof mention.matchedPhrase === "string" &&
+            mention.matchedPhrase.trim() &&
+            typeof mention.canonicalUrl === "string" &&
+            mention.canonicalUrl.trim()
+        )
+      : [];
     safeItem._searchText = buildJobSearchText(safeItem);
     return safeItem;
   }
@@ -903,9 +916,15 @@
 
   function renderJobRow(item) {
     const row = document.createElement("tr");
+    row.dataset.record = "true";
 
     const titleCell = document.createElement("td");
-    titleCell.textContent = item.title;
+    titleCell.className = "job-title-cell";
+    const titleText = document.createElement("span");
+    titleText.className = "job-title-text";
+    titleText.textContent = item.title;
+    titleCell.appendChild(titleText);
+    appendJobCatalogMentions(titleCell, item);
     row.appendChild(titleCell);
 
     const employerCell = document.createElement("td");
@@ -978,6 +997,32 @@
     row.appendChild(linksCell);
 
     return row;
+  }
+
+  function appendJobCatalogMentions(container, item) {
+    if (!item.catalogMentions.length) {
+      return;
+    }
+    const list = document.createElement("ul");
+    list.className = "catalog-mentions";
+    list.setAttribute("aria-label", "Catalog resources mentioned in this posting");
+    item.catalogMentions.forEach((mention) => {
+      const listItem = document.createElement("li");
+      listItem.className = "catalog-mention-chip";
+      const link = document.createElement("a");
+      link.href = mention.canonicalUrl;
+      link.textContent = mention.matchedPhrase;
+      const typeLabel = mention.dataset === "software" ? "software" : "resource";
+      const accessibleName =
+        mention.matchedPhrase === mention.title
+          ? `${mention.title}, ${typeLabel} catalog page`
+          : `${mention.matchedPhrase}, ${mention.title}, ${typeLabel} catalog page`;
+      link.setAttribute("aria-label", accessibleName);
+      link.title = `${mention.title} — ${typeLabel} catalog page`;
+      listItem.appendChild(link);
+      list.appendChild(listItem);
+    });
+    container.appendChild(list);
   }
 
   function appendCardMetaLine(card, label, value) {
@@ -1135,6 +1180,7 @@
     const title = document.createElement("h3");
     title.textContent = item.title;
     card.appendChild(title);
+    appendJobCatalogMentions(card, item);
 
     appendCardMetaLine(card, "Employer", item.hiringOrganization || "");
     appendCardMetaLine(card, "Location", item.location || "");

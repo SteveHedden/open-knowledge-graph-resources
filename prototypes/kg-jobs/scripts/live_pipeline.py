@@ -25,6 +25,11 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from classifier import load_match_terms  # noqa: E402
+from catalog_mentions import (  # noqa: E402
+    CatalogMentionError,
+    add_catalog_mentions,
+    load_match_index,
+)
 from live_records import (  # noqa: E402
     build_graph,
     classify_records,
@@ -137,6 +142,7 @@ def run_pipeline(
     runtime_dir: Path = RUNTIME_DIR,
     retrieved_at: str | None = None,
     fetcher: Fetcher = fetch_json_http,
+    catalog_root: Path | None = None,
 ) -> dict:
     retrieved_at = retrieved_at or utc_now()
     sources = load_source_registry(root / "sources.ttl")
@@ -149,6 +155,14 @@ def run_pipeline(
         raise LivePipelineError(f"unsupported reviewed source adapter: {source.adapter!r}")
     if not source.source_queries or any(not query for query in source.source_queries):
         raise LivePipelineError(f"source {source.key} has an empty registry query")
+
+    catalog_root = catalog_root or root.parents[1]
+    try:
+        mention_index = load_match_index(
+            catalog_root, root / "catalog-mention-policy.json"
+        )
+    except CatalogMentionError as exc:
+        raise LivePipelineError(str(exc)) from exc
 
     source_refreshes = enforce_refresh_interval(runtime_dir, source, retrieved_at)
 
@@ -285,7 +299,10 @@ def run_pipeline(
     # published records -- each source has its own independent refresh
     # cadence (see enforce_refresh_interval), and the local reviewer page is
     # meant to show the union of every enabled source.
-    records = sorted(refreshed + other_source_records, key=lambda record: record["id"])
+    records = add_catalog_mentions(
+        sorted(refreshed + other_source_records, key=lambda record: record["id"]),
+        mention_index,
+    )
 
     classification_counts = {"qualified": 0, "review": 0, "not_match": 0}
     for record in records:

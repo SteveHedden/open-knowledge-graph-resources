@@ -229,6 +229,11 @@ class OntologyTests(unittest.TestCase):
         self.assertIn((OKG.OntologyLanguage, RDF.type, RDFS.Class), self.ontology)
         self.assertIn((OKG.OntologyLanguage, RDFS.subClassOf, OKG.Resource), self.ontology)
 
+    def test_standard_and_direct_source_inclusion_are_declared(self):
+        self.assertIn((OKG.Standard, RDF.type, RDFS.Class), self.ontology)
+        self.assertIn((OKG.Standard, RDFS.subClassOf, OKG.Resource), self.ontology)
+        self.assertIn((OKG.SourceInclusion, RDF.type, RDFS.Class), self.ontology)
+
     def test_emitted_properties_are_explicitly_declared(self):
         expected_domains = {
             OKG.creator: OKG.Resource,

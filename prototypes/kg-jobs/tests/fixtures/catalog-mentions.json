@@ -1,0 +1,87 @@
+{
+  "ontologies": {
+    "items": [
+      {
+        "title": "Resource Description Framework",
+        "wikidataId": "https://www.wikidata.org/wiki/Q54872",
+        "aliases": ["RDF"]
+      },
+      {
+        "title": "RDF Schema",
+        "wikidataId": "https://www.wikidata.org/wiki/Q1751819",
+        "aliases": ["RDFS"]
+      },
+      {
+        "title": "SKOS",
+        "wikidataId": "https://www.wikidata.org/wiki/Q2288360",
+        "aliases": ["Simple Knowledge Organization System"]
+      },
+      {
+        "title": "Framework",
+        "wikidataId": "https://www.wikidata.org/wiki/Q30",
+        "aliases": []
+      },
+      {
+        "title": "Shared Resource",
+        "wikidataId": "https://www.wikidata.org/wiki/Q40",
+        "aliases": ["Shared Technology"]
+      },
+      {
+        "title": "PROV-O: The PROV Ontology",
+        "wikidataId": "https://www.wikidata.org/wiki/Q62213429",
+        "aliases": []
+      },
+      {
+        "title": "Unresolved Vocabulary",
+        "wikidataId": "https://www.wikidata.org/wiki/Q50",
+        "aliases": ["Dead Link"]
+      }
+    ]
+  },
+  "software": {
+    "items": [
+      {
+        "title": "Neo4j",
+        "wikidataId": "https://www.wikidata.org/wiki/Q1628290",
+        "aliases": []
+      },
+      {
+        "title": "TopBraid EDG",
+        "wikidataId": "https://www.wikidata.org/wiki/Q141112436",
+        "aliases": ["TopBraid Enterprise Data Governance"]
+      },
+      {
+        "title": "Shared Software",
+        "wikidataId": "https://www.wikidata.org/wiki/Q60",
+        "aliases": ["Shared Technology"]
+      },
+      {
+        "title": "RDFox",
+        "wikidataId": "https://www.wikidata.org/wiki/Q105745603",
+        "aliases": []
+      },
+      {
+        "title": "PoolParty Semantic Suite",
+        "wikidataId": "https://www.wikidata.org/wiki/Q28136436",
+        "aliases": []
+      }
+    ]
+  },
+  "pageQids": {
+    "resource": {
+      "Q54872": "resource-description-framework",
+      "Q1751819": "rdf-schema",
+      "Q2288360": "skos",
+      "Q30": "framework",
+      "Q40": "shared-resource"
+      ,"Q62213429": "prov-o-the-prov-ontology"
+    },
+    "software": {
+      "Q1628290": "neo4j",
+      "Q141112436": "topbraid-edg",
+      "Q60": "shared-software"
+      ,"Q105745603": "rdfox"
+      ,"Q28136436": "poolparty-semantic-suite"
+    }
+  }
+}

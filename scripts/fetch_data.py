@@ -177,6 +177,34 @@ WHERE {{
 """
 
 
+def build_inclusion_base_query(qids: tuple[str, ...], mappings: SourceMappings) -> str:
+    if not qids:
+        raise SemanticConfigError("An explicit inclusion query requires at least one QID.")
+    direct_type_property = wikidata_property(
+        mappings, "instanceOf", ONTOLOGIES_DATASET, "iri"
+    )
+    clauses = [
+        optional_direct_clause(mappings, "officialWebsite", "officialWebsite", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "sourceCodeRepo", "sourceCodeRepo", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "namespaceURI", "namespaceURI", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "license", "license", ONTOLOGIES_DATASET, "iri"),
+        optional_direct_clause(mappings, "partOfEntity", "partOfEntity", ONTOLOGIES_DATASET, "iri"),
+        optional_union_clause(mappings, "creator", "creator", ONTOLOGIES_DATASET, "iri"),
+    ]
+    values = " ".join(f"wd:{qid}" for qid in sorted(qids))
+    return f"""
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?item ?directType ?officialWebsite ?sourceCodeRepo ?namespaceURI ?license ?partOfEntity ?creator
+WHERE {{
+  VALUES ?item {{ {values} }}
+  OPTIONAL {{ ?item wdt:{direct_type_property} ?directType . }}
+{chr(10).join(clauses)}
+}}
+"""
+
+
 def build_software_base_query(mappings: SourceMappings) -> str:
     clauses = [
         optional_direct_clause(mappings, "officialWebsite", "officialWebsite", SOFTWARE_DATASET, "iri"),
@@ -1587,6 +1615,36 @@ def run() -> int:
             ontology_rows.extend(typed_rows)
             time.sleep(QUERY_PAUSE_SECONDS)
 
+        inclusions = source_mappings.inclusions_for(ONTOLOGIES_DATASET)
+        if inclusions:
+            included_qids = tuple(inclusion.source_qid for inclusion in inclusions)
+            logging.info("Querying Wikidata for %d reviewed source inclusions", len(included_qids))
+            included_rows = run_wdqs_query(
+                session,
+                build_inclusion_base_query(included_qids, source_mappings),
+                "reviewed source inclusion query",
+            )
+            returned_qids = {
+                qid_from_wikidata_iri(item)
+                for row in included_rows
+                if (item := binding_value(row, "item"))
+            }
+            missing_qids = sorted(set(included_qids) - returned_qids)
+            if missing_qids:
+                raise WDQSError(
+                    "Reviewed source inclusions were absent from Wikidata results: "
+                    + ", ".join(missing_qids)
+                )
+            for row in included_rows:
+                item_iri = binding_value(row, "item")
+                if item_iri:
+                    row["matchedTypeQid"] = {
+                        "type": "literal",
+                        "value": qid_from_wikidata_iri(item_iri),
+                    }
+            ontology_rows.extend(included_rows)
+            time.sleep(QUERY_PAUSE_SECONDS)
+
         raw_ontology_qids = set(ontology_candidate_facts(ontology_rows))
         raw_ontology_count = len(raw_ontology_qids)
         ontology_rows, eligibility = filter_ontology_rows(
@@ -1667,8 +1725,17 @@ def run() -> int:
         labels,
         descriptions,
         entity_aliases,
-        source_mappings.class_target_map(ONTOLOGIES_DATASET),
+        {
+            **source_mappings.class_target_map(ONTOLOGIES_DATASET),
+            **source_mappings.inclusion_target_map(ONTOLOGIES_DATASET),
+        },
     )
+    for inclusion in source_mappings.inclusions_for(ONTOLOGIES_DATASET):
+        record = ontology_records.get(
+            f"http://www.wikidata.org/entity/{inclusion.source_qid}"
+        )
+        if record is not None and not record.homepages:
+            record.homepages.add(inclusion.evidence_urls[0])
     (
         software_records,
         software_license_labels,
@@ -1813,7 +1880,7 @@ def run() -> int:
         resource_type_labels = source_mappings.projection_type_labels
         ontologies_json = build_json_payload(
             graph=ontology_graph,
-            allowed_types={OKG.Ontology, OKG.ControlledVocabulary, OKG.Taxonomy, OKG.KnowledgeGraph, OKG.OntologyLanguage},
+            allowed_types=source_mappings.target_classes_for(ONTOLOGIES_DATASET),
             include_software_fields=False,
             generated_at=generated_at,
             resource_type_labels=resource_type_labels,

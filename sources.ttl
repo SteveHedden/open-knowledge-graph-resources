@@ -65,6 +65,19 @@ src:class-Q33002955 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDat
 src:class-Q7095059 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q7095059" ; okg:targetTerm okg:OntologyLanguage ; okg:projectionValue "OntologyLanguage" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 5 .
 src:class-Q7247749 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q7247749" ; okg:targetTerm okg:ControlledVocabulary ; okg:projectionValue "ControlledVocabulary" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 6 .
 
+# Q54872 is a reviewed, standalone W3C standard. It is included explicitly
+# because traversing every data model or technical standard would broaden the
+# ontology catalog far beyond its intended scope.
+src:include-Q54872
+    a okg:SourceInclusion ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourceEntity wd:Q54872 ;
+    okg:targetTerm okg:Standard ;
+    okg:projectionValue "Standard" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    dcterms:description "Standalone Resource Description Framework standard required as a page-backed semantic-web catalog resource."@en ;
+    dcterms:source <https://www.w3.org/RDF/> .
+
 src:class-Q124653107 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q124653107" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 10 .
 src:class-Q140639670 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q140639670" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 11 .
 src:class-Q595971 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q595971" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 12 .

@@ -31171,6 +31171,15 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q826165> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q26932303> .
 
+<https://openknowledgegraphs.com/resource/resource-description-framework/> a okg:Standard ;
+    rdfs:label "Resource Description Framework" ;
+    okg:alias "RDF" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "data model for describing resources on the Web" ;
+    okg:homepage <https://www.w3.org/RDF/> ;
+    okg:title "Resource Description Framework" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q54872> .
+
 <https://openknowledgegraphs.com/resource/domain-knowledge-infrastructure-dki/> a okg:Ontology ;
     rdfs:label "Domain Knowledge Infrastructure DKI" ;
     okg:alias "Semantic Domain Infrastructure",
@@ -34645,4 +34654,3 @@ okg:LifeSciencesHealthcare a okg:Category ;
 
 okg:GeneralCrossDomain a okg:Category ;
     rdfs:label "General / Cross-domain" .
-

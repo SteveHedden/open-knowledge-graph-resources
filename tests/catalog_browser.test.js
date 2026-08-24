@@ -8,6 +8,7 @@ const vm = require("node:vm");
 
 const ROOT = path.resolve(__dirname, "..");
 const APP_SOURCE = fs.readFileSync(path.join(ROOT, "site", "app.js"), "utf8");
+const STYLE_SOURCE = fs.readFileSync(path.join(ROOT, "site", "style.css"), "utf8");
 
 function dataName(attribute) {
   return attribute
@@ -266,7 +267,7 @@ function buildDocument() {
   });
   append(document, softwareList, "button", { className: "category-pill" }).dataset.softwareType = "all";
 
-  for (const tabName of ["ontologies", "software"]) {
+  for (const tabName of ["ontologies", "software", "jobs"]) {
     const tab = append(document, body, "button", {
       id: `tab-${tabName}`,
       className: `tab${tabName === "ontologies" ? " is-active" : ""}`,
@@ -278,12 +279,13 @@ function buildDocument() {
   const sortFields = {
     ontologies: ["title", "types", "licenses", "partOf"],
     software: ["title", "licenses", "latestVersion", "releaseDate"],
+    jobs: ["title", "employer", "location", "remote", "datePosted", "salary"],
   };
-  for (const tabName of ["ontologies", "software"]) {
+  for (const tabName of ["ontologies", "software", "jobs"]) {
     const panel = append(document, body, "section", {
       id: `panel-${tabName}`,
       attributes: { role: "tabpanel", "data-panel": tabName },
-      hidden: tabName === "software",
+      hidden: tabName !== "ontologies",
     });
     const table = append(document, panel, "table");
     const head = append(document, table, "thead");
@@ -411,6 +413,7 @@ function defaultPayloads(ontologies, software) {
       softwareTypes: [{ id: "library", label: "Library" }],
     },
     page_qids: qids,
+    jobs: [],
     manifest: {
       generationId: "20260817T120000Z-0123456789ab",
       sourceRetrievedAt: "2026-08-17T11:59:00Z",
@@ -743,4 +746,94 @@ test("artifact failures degrade independently and freshness is shared from the m
     complete.document.getElementById("last-updated").getAttribute("datetime"),
     payloads.manifest.sourceRetrievedAt
   );
+});
+
+test("job catalog mentions render as accessible linked chips in rows and mobile cards", async () => {
+  const payloads = defaultPayloads(
+    syntheticItems(1, "Resource"),
+    syntheticItems(1, "Software")
+  );
+  payloads.jobs = [
+    {
+      id: "fixture-job",
+      title: "Knowledge Graph Engineer",
+      description: "Description text must remain internal only.",
+      hiringOrganization: "Fixture Labs",
+      location: "Remote",
+      remote: true,
+      datePosted: "2026-08-24",
+      salary: "USD 100,000",
+      canonicalUrl: "https://jobs.example.test/fixture-job",
+      sourceName: "Fixture Jobs",
+      sourceAttributionUrl: "https://jobs.example.test/",
+      classification: "qualified",
+      catalogMentions: [
+        {
+          title: "Web Ontology Language",
+          dataset: "resource",
+          qid: "Q826165",
+          canonicalUrl: "https://openknowledgegraphs.com/resource/web-ontology-language/",
+          matchedPhrase: "OWL",
+        },
+        {
+          title: "Neo4j",
+          dataset: "software",
+          qid: "Q1628290",
+          canonicalUrl: "https://openknowledgegraphs.com/software/neo4j/",
+          matchedPhrase: "Neo4j",
+        },
+      ],
+    },
+  ];
+  const app = await createApp({ payloads });
+  app.document.getElementById("tab-jobs").click();
+
+  const row = app.document.getElementById("jobs-table-body").children[0];
+  const rowList = row.querySelector(".catalog-mentions");
+  const rowLinks = rowList.querySelectorAll("a");
+  assert.equal(
+    rowList.getAttribute("aria-label"),
+    "Catalog resources mentioned in this posting"
+  );
+  assert.deepEqual(rowLinks.map((link) => link.textContent), ["OWL", "Neo4j"]);
+  assert.deepEqual(rowLinks.map((link) => link.href), [
+    "https://openknowledgegraphs.com/resource/web-ontology-language/",
+    "https://openknowledgegraphs.com/software/neo4j/",
+  ]);
+  assert.match(rowLinks[0].getAttribute("aria-label"), /resource catalog page/);
+  assert.match(rowLinks[0].getAttribute("aria-label"), /Web Ontology Language/);
+  assert.match(rowLinks[0].title, /Web Ontology Language/);
+  assert.doesNotMatch(row.textContent, /Description text must remain internal/);
+
+  app.media.setWidth(760);
+  assert.equal(recordCount(app.document.getElementById("jobs-table-body")), 0);
+  const card = app.document.getElementById("jobs-cards").children[0];
+  assert.deepEqual(
+    card.querySelectorAll(".catalog-mention-chip a").map((link) => link.textContent),
+    ["OWL", "Neo4j"]
+  );
+  assert.doesNotMatch(card.textContent, /Description text must remain internal/);
+  assert.match(card.textContent, /View posting/);
+});
+
+test("job catalog chip hover text meets WCAG AA contrast", () => {
+  const color = STYLE_SOURCE.match(/--brand-strong:\s*(#[0-9a-f]{6})/i)[1];
+  const background = STYLE_SOURCE.match(
+    /\.catalog-mention-chip a:hover\s*\{[^}]*background:\s*(#[0-9a-f]{6})/is
+  )[1];
+  const hoverColor = STYLE_SOURCE.match(
+    /\.catalog-mention-chip a:hover\s*\{[^}]*color:\s*var\(--brand-strong\)/is
+  );
+  assert.ok(hoverColor);
+
+  function luminance(hex) {
+    const channels = [1, 3, 5]
+      .map((offset) => parseInt(hex.slice(offset, offset + 2), 16) / 255)
+      .map((value) =>
+        value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4
+      );
+    return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2];
+  }
+  const values = [luminance(color), luminance(background)].sort((a, b) => b - a);
+  assert.ok((values[0] + 0.05) / (values[1] + 0.05) >= 4.5);
 });

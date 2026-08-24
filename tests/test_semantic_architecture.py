@@ -112,6 +112,7 @@ class SemanticArchitectureTests(unittest.TestCase):
                     OKG.Taxonomy,
                     OKG.KnowledgeGraph,
                     OKG.OntologyLanguage,
+                    OKG.Standard,
                 },
             ),
             (self.software, "software.json", {OKG.Software}),
@@ -318,6 +319,14 @@ class SemanticArchitectureTests(unittest.TestCase):
             self.assertNotIn("wd:Q324254", query)
             self.assertNotIn("wdt:P856", query)
 
+            inclusion = changed.inclusions_for(semantic_config.ONTOLOGIES_DATASET)[0]
+            self.assertEqual(inclusion.target_class, OKG.Standard)
+            self.assertEqual(inclusion.evidence_urls, ("https://www.w3.org/RDF/",))
+            inclusion_query = fetch_data.build_inclusion_base_query(
+                (inclusion.source_qid,), changed
+            )
+            self.assertIn(f"wd:{inclusion.source_qid}", inclusion_query)
+
             changed.graph.remove((SRC["property-P999"], OKG.valueKind, None))
             changed.graph.add((SRC["property-P999"], OKG.valueKind, Literal("literal")))
             changed.graph.serialize(destination=changed_path, format="turtle")
@@ -403,6 +412,7 @@ class SemanticArchitectureTests(unittest.TestCase):
                     OKG.Taxonomy,
                     OKG.KnowledgeGraph,
                     OKG.OntologyLanguage,
+                    OKG.Standard,
                 },
                 False,
             ),
@@ -427,6 +437,7 @@ class SemanticArchitectureTests(unittest.TestCase):
             OKG.SourceEligibilityPolicy,
             OKG.SourceExclusion,
             OKG.SourceEligibilityException,
+            OKG.SourceInclusion,
         )
         mapping_properties = (
             OKG.conceptClass,

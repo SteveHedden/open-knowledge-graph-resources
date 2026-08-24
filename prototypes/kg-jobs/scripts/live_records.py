@@ -319,6 +319,10 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig) -> Graph:
         graph.add((job, DCTERMS.source, URIRef(record["sourceDataset"])))
         graph.add((job, PROV.wasDerivedFrom, URIRef(record["sourceUrl"])))
         graph.add((job, PROV.generatedAtTime, Literal(record["retrievedAt"], datatype=XSD.dateTime)))
+        for mention in record.get("catalogMentions", []):
+            canonical_url = mention.get("canonicalUrl") if isinstance(mention, dict) else None
+            if canonical_url:
+                graph.add((job, SCHEMA.mentions, URIRef(canonical_url)))
         graph.add((dataset, DCAT.resource, job))
         _evidence_to_rdf(graph, job, record)
     apply_confirmed_wikidata_matches(graph)
