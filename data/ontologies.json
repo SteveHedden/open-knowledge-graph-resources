@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T07:10:32Z",
+  "generatedAt": "2026-08-24T16:55:29Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -2493,6 +2493,12 @@
       "namespaceURI": "http://urn.fi/URN:NBN:fi:schema:bffi:",
       "licenses": [
         "GNU General Public License v3.0 or later"
+      ],
+      "relatedTools": [
+        {
+          "title": "Resource Description Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/"
+        }
       ]
     },
     {
@@ -7875,6 +7881,10 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/rdf-schema/"
         },
         {
+          "title": "Resource Description Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/"
+        },
+        {
           "title": "Web Ontology Language",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/web-ontology-language/"
         }
@@ -8412,6 +8422,20 @@
       ]
     },
     {
+      "title": "Descriptions and Situations",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141163401",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptions-and-situations/",
+      "description": "ontology",
+      "aliases": [
+        "Descriptions and Situations ontology",
+        "DnS ontology"
+      ],
+      "category": "General / Cross-domain"
+    },
+    {
       "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
       "wikidataId": "https://www.wikidata.org/wiki/Q25052983",
       "types": [
@@ -8421,6 +8445,8 @@
       "description": "ontology for categories underlying natural language and human common sense",
       "aliases": [
         "DOLCE",
+        "DOLCE ontology",
+        "DOLCE-Full",
         "top-level ontology"
       ],
       "category": "General / Cross-domain",
@@ -8948,6 +8974,44 @@
         "DUL"
       ],
       "category": "General / Cross-domain"
+    },
+    {
+      "title": "DOLCE-Lite",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141163352",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/dolce-lite/",
+      "description": "upper ontology based on DOLCE",
+      "aliases": [],
+      "category": "General / Cross-domain",
+      "creators": [
+        {
+          "name": "Aldo Gangemi",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q30103138"
+        }
+      ]
+    },
+    {
+      "title": "DOLCE-Lite-Plus",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141163319",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/dolce-lite-plus/",
+      "description": "extended version of the DOLCE-Lite upper ontology",
+      "aliases": [
+        "DLP"
+      ],
+      "category": "General / Cross-domain",
+      "creators": [
+        {
+          "name": "Aldo Gangemi",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q30103138"
+        }
+      ]
     },
     {
       "title": "Domain Knowledge Infrastructure DKI",
@@ -11932,6 +11996,10 @@
       ],
       "relatedTools": [
         {
+          "title": "Resource Description Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/"
+        },
+        {
           "title": "SHACL",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/shacl/"
         },
@@ -14125,6 +14193,10 @@
       "category": "Finance & Business",
       "homepage": "https://www.gleif.org/en/lei-data/semantic-representation-of-the-lei/lei-model-in-rdf-resource-description-framework",
       "relatedTools": [
+        {
+          "title": "Resource Description Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/"
+        },
         {
           "title": "Web Ontology Language",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/web-ontology-language/"
@@ -32262,7 +32334,13 @@
         "OriginTrail decentralized knowledge graph"
       ],
       "category": "Technology & Web",
-      "homepage": "https://docs.origintrail.io/"
+      "homepage": "https://docs.origintrail.io/",
+      "relatedTools": [
+        {
+          "title": "Resource Description Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/"
+        }
+      ]
     },
     {
       "title": "Orphanet Ontology of Rare Diseases",
@@ -37768,7 +37846,38 @@
         "RDF"
       ],
       "category": "General / Cross-domain",
-      "homepage": "https://www.w3.org/RDF/"
+      "homepage": "https://www.w3.org/RDF/",
+      "namespaceURI": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "partOf": "Web standards",
+      "creators": [
+        {
+          "name": "World Wide Web Consortium",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q37033"
+        }
+      ],
+      "relatedTools": [
+        {
+          "title": "DanNet",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/dannet/"
+        },
+        {
+          "title": "Film Club Knowledge Graph (FCKG)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/"
+        },
+        {
+          "title": "GLEIF LEI model in RDF",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/"
+        },
+        {
+          "title": "OriginTrail Decentralized Knowledge Graph",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/origintrail-decentralized-knowledge-graph/"
+        },
+        {
+          "title": "Shape Expressions",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/shape-expressions/"
+        }
+      ]
     },
     {
       "title": "Resource of Asian Primary Immunodeficiency Diseases (RAPID) Phenotype Ontology",
@@ -40109,6 +40218,12 @@
       "namespaceURI": "http://www.w3.org/ns/shex#",
       "licenses": [
         "W3C Software License"
+      ],
+      "relatedTools": [
+        {
+          "title": "Resource Description Framework",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/"
+        }
       ]
     },
     {

@@ -6,6 +6,7 @@
 @prefix okg: <https://openknowledgegraphs.com/ontology#> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -938,6 +939,7 @@
     okg:hasLicense okg:License_GNU_General_Public_License_v3_0_or_later_Q27016754 ;
     okg:homepage <https://natlibfi.github.io/lkd/> ;
     okg:namespaceURI <http://urn.fi/URN:NBN:fi:schema:bffi:> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/resource-description-framework/> ;
     okg:sourceRepo <https://github.com/NatLibFi/lkd> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1172480>,
         <http://www.wikidata.org/entity/Q20819677>,
@@ -3127,6 +3129,16 @@
     okg:title "Description historique des monnaies frappées sous l'Empire romain" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q12899629> .
 
+<https://openknowledgegraphs.com/resource/descriptions-and-situations/> a okg:Ontology ;
+    rdfs:label "Descriptions and Situations" ;
+    okg:alias "Descriptions and Situations ontology",
+        "DnS ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Descriptions and Situations" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141163401> .
+
 <https://openknowledgegraphs.com/resource/developing-human-brain-atlas-ontology-q138494182/> a okg:KnowledgeGraph,
         okg:Ontology ;
     rdfs:label "Developing Human Brain Atlas Ontology" ;
@@ -3298,6 +3310,25 @@
     okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
     okg:title "DOLCE+DnS Ultralite" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111650164> .
+
+<https://openknowledgegraphs.com/resource/dolce-lite-plus/> a okg:Ontology ;
+    rdfs:label "DOLCE-Lite-Plus" ;
+    okg:alias "DLP" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_Aldo_Gangemi_Q30103138 ;
+    okg:description "extended version of the DOLCE-Lite upper ontology" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "DOLCE-Lite-Plus" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141163319> .
+
+<https://openknowledgegraphs.com/resource/dolce-lite/> a okg:Ontology ;
+    rdfs:label "DOLCE-Lite" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_Aldo_Gangemi_Q30103138 ;
+    okg:description "upper ontology based on DOLCE" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "DOLCE-Lite" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141163352> .
 
 <https://openknowledgegraphs.com/resource/domesday-book/> a okg:ControlledVocabulary ;
     rdfs:label "Domesday Book" ;
@@ -23165,20 +23196,6 @@
     okg:title "Ordliste" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104381916> .
 
-<https://openknowledgegraphs.com/resource/origintrail-decentralized-knowledge-graph/> a okg:KnowledgeGraph ;
-    rdfs:label "OriginTrail Decentralized Knowledge Graph" ;
-    okg:alias "OriginTrail DKG",
-        "OriginTrail decentralized knowledge graph" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "permissionless peer-to-peer RDF knowledge graph network for publishing and querying verifiable knowledge assets" ;
-    okg:homepage <https://docs.origintrail.io/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q161410>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "OriginTrail Decentralized Knowledge Graph" ;
-    okg:uses <http://www.wikidata.org/entity/Q54871>,
-        <http://www.wikidata.org/entity/Q54872> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140639913> .
-
 <https://openknowledgegraphs.com/resource/orphanet-rare-disease-ontology/> a okg:Ontology ;
     rdfs:label "Orphanet Rare Disease Ontology" ;
     okg:alias "ORDO" ;
@@ -25639,25 +25656,6 @@
         <http://www.wikidata.org/entity/Q859161> ;
     okg:title "Shahpuri Kangri Glossory" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q116221882> .
-
-<https://openknowledgegraphs.com/resource/shape-expressions/> a okg:Ontology ;
-    rdfs:label "Shape Expressions" ;
-    okg:alias "ShapeExpressions",
-        "shex",
-        "sx" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "language for validating, describing or transforming RDF graphs" ;
-    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
-    okg:homepage <http://shex.io/> ;
-    okg:namespaceURI <http://www.w3.org/ns/shex#> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q317623>,
-        <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q691358> ;
-    okg:title "Shape Expressions" ;
-    okg:uses <http://www.wikidata.org/entity/Q54871>,
-        <http://www.wikidata.org/entity/Q54872>,
-        <http://www.wikidata.org/entity/Q6108942> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q29377880> .
 
 <https://openknowledgegraphs.com/resource/sibley-ahlquist-taxonomy-of-birds/> a okg:Taxonomy ;
     rdfs:label "Sibley-Ahlquist taxonomy of birds" ;
@@ -30108,22 +30106,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Getty Vocabulary Program ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q54877414> .
 
-<https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/> a okg:Ontology ;
-    rdfs:label "GLEIF LEI model in RDF" ;
-    okg:alias "GLEIF LEI RDF ontology suite",
-        "GLEIF RDF ontologies for the LEI",
-        "GLEIF ontology suite",
-        "LEI model in RDF" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "suite of RDF/OWL ontologies for representing Legal Entity Identifier data" ;
-    okg:homepage <https://www.gleif.org/en/lei-data/semantic-representation-of-the-lei/lei-model-in-rdf-resource-description-framework> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "GLEIF LEI model in RDF" ;
-    okg:uses <http://www.wikidata.org/entity/Q54872>,
-        <http://www.wikidata.org/entity/Q826165> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140639079> .
-
 <https://openknowledgegraphs.com/resource/graphical-pathway-markup-language/> a okg:KnowledgeGraph ;
     rdfs:label "Graphical Pathway Markup Language" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
@@ -30396,6 +30378,21 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Open Culture / GLAM Glossary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q115123216> .
 
+<https://openknowledgegraphs.com/resource/origintrail-decentralized-knowledge-graph/> a okg:KnowledgeGraph ;
+    rdfs:label "OriginTrail Decentralized Knowledge Graph" ;
+    okg:alias "OriginTrail DKG",
+        "OriginTrail decentralized knowledge graph" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "permissionless peer-to-peer RDF knowledge graph network for publishing and querying verifiable knowledge assets" ;
+    okg:homepage <https://docs.origintrail.io/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/resource-description-framework/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q161410>,
+        <http://www.wikidata.org/entity/Q33002955> ;
+    okg:title "OriginTrail Decentralized Knowledge Graph" ;
+    okg:uses <http://www.wikidata.org/entity/Q54871>,
+        <http://www.wikidata.org/entity/Q54872> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140639913> .
+
 <https://openknowledgegraphs.com/resource/plant-trait-ontology/> a okg:Ontology ;
     rdfs:label "Plant Trait Ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
@@ -30627,6 +30624,26 @@ okg:License_hpo_license_Q112817130 a okg:License ;
         <http://www.wikidata.org/entity/Q498267> ;
     okg:title "Semantic Scholar" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q22908627> .
+
+<https://openknowledgegraphs.com/resource/shape-expressions/> a okg:Ontology ;
+    rdfs:label "Shape Expressions" ;
+    okg:alias "ShapeExpressions",
+        "shex",
+        "sx" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "language for validating, describing or transforming RDF graphs" ;
+    okg:hasLicense okg:License_W3C_Software_License_Q3564577 ;
+    okg:homepage <http://shex.io/> ;
+    okg:namespaceURI <http://www.w3.org/ns/shex#> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/resource-description-framework/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q317623>,
+        <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q691358> ;
+    okg:title "Shape Expressions" ;
+    okg:uses <http://www.wikidata.org/entity/Q54871>,
+        <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q6108942> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q29377880> .
 
 <https://openknowledgegraphs.com/resource/speakerinnen-org/> a okg:ControlledVocabulary ;
     rdfs:label "speakerinnen.org" ;
@@ -30884,10 +30901,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Zebrafish developmental stages ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661847> .
 
-okg:Creator_Aldo_Gangemi_Q30103138 a okg:Person ;
-    rdfs:label "Aldo Gangemi" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q30103138> .
-
 okg:Creator_Andrea_Giovanni_Nuzzolese_Q56459533 a okg:Person ;
     rdfs:label "Andrea Giovanni Nuzzolese" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56459533> .
@@ -30975,10 +30988,6 @@ okg:Creator_Valentina_Presutti_Q56459943 a okg:Person ;
     rdfs:label "Valentina Presutti" ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=dvNHkAwAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56459943> .
-
-okg:Creator_World_Wide_Web_Consortium_Q37033 a okg:Organization ;
-    rdfs:label "World Wide Web Consortium" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q37033> .
 
 okg:InternationalDevelopment a okg:Category ;
     rdfs:label "International Development" .
@@ -31150,36 +31159,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Corporate body name authority list" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q130947725> .
 
-<https://openknowledgegraphs.com/resource/dannet/> a okg:ControlledVocabulary,
-        okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "DanNet" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Bolette_Sandford_Pedersen_Q28152375,
-        okg:Creator_Sanni_Nimb_Q28524324 ;
-    okg:description "Danish language resource" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://cst.ku.dk/projekter/dannet/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/rdf-schema/>,
-        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q2594143>,
-        <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "DanNet" ;
-    okg:uses <http://www.wikidata.org/entity/Q16342>,
-        <http://www.wikidata.org/entity/Q1751819>,
-        <http://www.wikidata.org/entity/Q54872>,
-        <http://www.wikidata.org/entity/Q826165> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q26932303> .
-
-<https://openknowledgegraphs.com/resource/resource-description-framework/> a okg:Standard ;
-    rdfs:label "Resource Description Framework" ;
-    okg:alias "RDF" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "data model for describing resources on the Web" ;
-    okg:homepage <https://www.w3.org/RDF/> ;
-    okg:title "Resource Description Framework" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q54872> .
-
 <https://openknowledgegraphs.com/resource/domain-knowledge-infrastructure-dki/> a okg:Ontology ;
     rdfs:label "Domain Knowledge Infrastructure DKI" ;
     okg:alias "Semantic Domain Infrastructure",
@@ -31307,25 +31286,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Federal Reserve Subject Taxonomy" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q126704612> .
 
-<https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/> a okg:ControlledVocabulary,
-        okg:Ontology ;
-    rdfs:label "Film Club Knowledge Graph (FCKG)" ;
-    okg:alias "FCKG" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:description "An RDF knowledge graph of award nominations across six major film award systems, with a SHACL-based ontology for validation and inference. Designed for predictive modeling, longitudinal analysis, and enrichment via external APIs." ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <https://stevehedden.github.io/fckg/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/shacl/>,
-        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
-    okg:sourceRepo <https://github.com/SteveHedden/fckg> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
-        <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Film Club Knowledge Graph (FCKG)" ;
-    okg:uses <http://www.wikidata.org/entity/Q29377821>,
-        <http://www.wikidata.org/entity/Q54872>,
-        <http://www.wikidata.org/entity/Q826165> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138610409> .
-
 <https://openknowledgegraphs.com/resource/germanet/> a okg:ControlledVocabulary,
         okg:KnowledgeGraph ;
     rdfs:label "GermaNet" ;
@@ -31339,6 +31299,23 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q2594143> ;
     okg:title "GermaNet" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q201329> .
+
+<https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/> a okg:Ontology ;
+    rdfs:label "GLEIF LEI model in RDF" ;
+    okg:alias "GLEIF LEI RDF ontology suite",
+        "GLEIF RDF ontologies for the LEI",
+        "GLEIF ontology suite",
+        "LEI model in RDF" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "suite of RDF/OWL ontologies for representing Legal Entity Identifier data" ;
+    okg:homepage <https://www.gleif.org/en/lei-data/semantic-representation-of-the-lei/lei-model-in-rdf-resource-description-framework> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "GLEIF LEI model in RDF" ;
+    okg:uses <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q826165> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140639079> .
 
 <https://openknowledgegraphs.com/resource/helsinki-term-bank-for-the-arts-and-sciences/> a okg:ControlledVocabulary ;
     rdfs:label "Helsinki Term Bank for the Arts and Sciences" ;
@@ -32098,6 +32075,10 @@ okg:Creator_National_Library_of_the_Czech_Republic_Q1967876 a okg:Organization ;
     rdfs:label "National Library of the Czech Republic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1967876> .
 
+okg:Creator_World_Wide_Web_Consortium_Q37033 a okg:Organization ;
+    rdfs:label "World Wide Web Consortium" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q37033> .
+
 okg:License_Creative_Commons_Attribution_1_0_Generic_Q30942811 a okg:License ;
     rdfs:label "Creative Commons Attribution 1.0 Generic" ;
     okg:licenseName "Creative Commons Attribution 1.0 Generic" .
@@ -32259,6 +32240,28 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Cultural Objects Name Authority" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11409212> .
 
+<https://openknowledgegraphs.com/resource/dannet/> a okg:ControlledVocabulary,
+        okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "DanNet" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Bolette_Sandford_Pedersen_Q28152375,
+        okg:Creator_Sanni_Nimb_Q28524324 ;
+    okg:description "Danish language resource" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://cst.ku.dk/projekter/dannet/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/rdf-schema/>,
+        <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q2594143>,
+        <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "DanNet" ;
+    okg:uses <http://www.wikidata.org/entity/Q16342>,
+        <http://www.wikidata.org/entity/Q1751819>,
+        <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q826165> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q26932303> .
+
 <https://openknowledgegraphs.com/resource/edda-study-designs-taxonomy/> a okg:KnowledgeGraph ;
     rdfs:label "EDDA Study Designs Taxonomy" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
@@ -32366,6 +32369,26 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "FactGrid" ;
     okg:uses <http://www.wikidata.org/entity/Q16354758> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q90405608> .
+
+<https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/> a okg:ControlledVocabulary,
+        okg:Ontology ;
+    rdfs:label "Film Club Knowledge Graph (FCKG)" ;
+    okg:alias "FCKG" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:description "An RDF knowledge graph of award nominations across six major film award systems, with a SHACL-based ontology for validation and inference. Designed for predictive modeling, longitudinal analysis, and enrichment via external APIs." ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <https://stevehedden.github.io/fckg/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/resource-description-framework/>,
+        <https://openknowledgegraphs.com/resource/shacl/>,
+        <https://openknowledgegraphs.com/resource/web-ontology-language/> ;
+    okg:sourceRepo <https://github.com/SteveHedden/fckg> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Film Club Knowledge Graph (FCKG)" ;
+    okg:uses <http://www.wikidata.org/entity/Q29377821>,
+        <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q826165> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q138610409> .
 
 <https://openknowledgegraphs.com/resource/foaf/> a okg:Ontology ;
     rdfs:label "FOAF" ;
@@ -32778,6 +32801,10 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Time Ontology in OWL" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q62210191> .
 
+okg:Creator_Aldo_Gangemi_Q30103138 a okg:Person ;
+    rdfs:label "Aldo Gangemi" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q30103138> .
+
 okg:License_Artistic_License_2_0_Q14624826 a okg:License ;
     rdfs:label "Artistic License 2.0" ;
     okg:licenseName "Artistic License 2.0" .
@@ -32918,6 +32945,8 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
 <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
     rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
     okg:alias "DOLCE",
+        "DOLCE ontology",
+        "DOLCE-Full",
         "top-level ontology" ;
     okg:category okg:GeneralCrossDomain ;
     okg:description "ontology for categories underlying natural language and human common sense" ;
@@ -34017,6 +34046,25 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     okg:title "RDF Schema" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1751819> .
 
+<https://openknowledgegraphs.com/resource/resource-description-framework/> a okg:Standard ;
+    rdfs:label "Resource Description Framework" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q1153289> ;
+    okg:alias "RDF" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_World_Wide_Web_Consortium_Q37033 ;
+    okg:description "data model for describing resources on the Web" ;
+    okg:homepage <https://www.w3.org/RDF/> ;
+    okg:namespaceURI rdf: ;
+    okg:partOf "Web standards" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/dannet/>,
+        <https://openknowledgegraphs.com/resource/film-club-knowledge-graph-fckg/>,
+        <https://openknowledgegraphs.com/resource/gleif-lei-model-in-rdf/>,
+        <https://openknowledgegraphs.com/resource/origintrail-decentralized-knowledge-graph/>,
+        <https://openknowledgegraphs.com/resource/shape-expressions/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1172480> ;
+    okg:title "Resource Description Framework" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q54872> .
+
 <https://openknowledgegraphs.com/resource/web-ontology-language/> a okg:OntologyLanguage ;
     rdfs:label "Web Ontology Language" ;
     okg:alias "OWL",
@@ -34654,3 +34702,4 @@ okg:LifeSciencesHealthcare a okg:Category ;
 
 okg:GeneralCrossDomain a okg:Category ;
     rdfs:label "General / Cross-domain" .
+

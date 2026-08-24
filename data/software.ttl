@@ -595,8 +595,7 @@
     okg:releaseDate "2026-08-20"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/FalkorDB/FalkorDB> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
-        <http://www.wikidata.org/entity/Q595971> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q137916409> ;
     okg:title "FalkorDB" ;
     okg:uses <http://www.wikidata.org/entity/Q16834355>,
         <http://www.wikidata.org/entity/Q96379864> ;
@@ -1454,8 +1453,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.2.5" ;
-    okg:releaseDate "2026-08-19"^^xsd:date ;
+    okg:latestVersion "2.3.0" ;
+    okg:releaseDate "2026-08-23"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -3119,7 +3118,7 @@
 
 <https://openknowledgegraphs.com/software/typedb/> a okg:Software ;
     rdfs:label "TypeDB" ;
-    okg:description "Grakn is an open-source, distributed knowledge graph database for knowledge-oriented systems" ;
+    okg:description "open-source, distributed knowledge graph database software for knowledge-oriented systems" ;
     okg:hasLicense okg:License_Mozilla_Public_License_version_2_0_Q25428413 ;
     okg:homepage <https://typedb.com/> ;
     okg:latestVersion "3.12.3" ;

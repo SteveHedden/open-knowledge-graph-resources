@@ -1053,6 +1053,9 @@
 <https://openknowledgegraphs.com/resource/description-historique-des-monnaies-frappees-sous-l-empire-romain/> okg:category okg:LibraryCulturalHeritage ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q12899629> .
 
+<https://openknowledgegraphs.com/resource/descriptions-and-situations/> okg:category okg:GeneralCrossDomain ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141163401> .
+
 <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> okg:category okg:GeneralCrossDomain ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
 
@@ -1109,6 +1112,12 @@
 
 <https://openknowledgegraphs.com/resource/dolce-dns-ultralite/> okg:category okg:GeneralCrossDomain ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111650164> .
+
+<https://openknowledgegraphs.com/resource/dolce-lite-plus/> okg:category okg:GeneralCrossDomain ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141163319> .
+
+<https://openknowledgegraphs.com/resource/dolce-lite/> okg:category okg:GeneralCrossDomain ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141163352> .
 
 <https://openknowledgegraphs.com/resource/domain-knowledge-infrastructure-dki/> okg:category okg:TechnologyWeb ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140752694> .
@@ -5967,9 +5976,6 @@
 <https://openknowledgegraphs.com/resource/geosparql/> okg:category okg:Geospatial ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q5533918> .
 
-<https://openknowledgegraphs.com/resource/resource-description-framework/> okg:category okg:GeneralCrossDomain ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q54872> .
-
 <https://openknowledgegraphs.com/resource/geotope-register-of-north-rhine-westphalia/> okg:category okg:GeneralCrossDomain ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q97487790> .
 
@@ -9275,6 +9281,9 @@
 
 <https://openknowledgegraphs.com/resource/rero/> okg:category okg:LibraryCulturalHeritage ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q19696495> .
+
+<https://openknowledgegraphs.com/resource/resource-description-framework/> okg:category okg:GeneralCrossDomain ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q54872> .
 
 <https://openknowledgegraphs.com/resource/return-of-owners-of-land-1873/> okg:category okg:GovernmentPublicSector ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7317183> .
