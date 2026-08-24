@@ -3553,6 +3553,15 @@
     okg:title "EAGLE Vocabulary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q19371183> .
 
+<https://openknowledgegraphs.com/resource/ebucore/> a okg:Ontology ;
+    rdfs:label "EBUCore" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:description "metadata scheme" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q41623316> ;
+    okg:title "EBUCore" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q41623270> .
+
 <https://openknowledgegraphs.com/resource/eclass/> a okg:ControlledVocabulary ;
     rdfs:label "ECLASS" ;
     okg:alias "eClass" ;

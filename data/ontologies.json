@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T06:52:59Z",
+  "generatedAt": "2026-08-24T07:10:32Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -9674,6 +9674,17 @@
       "category": "General / Cross-domain",
       "homepage": "https://bioportal.bioontology.org/ontologies/ECM4M-MD-VOCABS",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
+    },
+    {
+      "title": "EBUCore",
+      "wikidataId": "https://www.wikidata.org/wiki/Q41623270",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/ebucore/",
+      "description": "metadata scheme",
+      "aliases": [],
+      "category": "Library & Cultural Heritage"
     },
     {
       "title": "ECLASS",

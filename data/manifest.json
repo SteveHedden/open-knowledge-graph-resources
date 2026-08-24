@@ -1,19 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260823T065348Z-edc07d775747",
-  "startedAt": "2026-08-23T06:49:09Z",
-  "sourceRetrievedAt": "2026-08-23T06:52:56Z",
-  "completedAt": "2026-08-23T06:53:48Z",
+  "generationId": "20260824T071119Z-e8ebfdbfb1b9",
+  "startedAt": "2026-08-24T07:07:20Z",
+  "sourceRetrievedAt": "2026-08-24T07:10:29Z",
+  "completedAt": "2026-08-24T07:11:19Z",
   "counts": {
     "records": {
-      "resources": 2999,
+      "resources": 3000,
       "software": 312,
-      "total": 3311
+      "total": 3312
     },
     "triples": {
-      "ontologies": 31330,
-      "software": 4716,
-      "total": 36046
+      "ontologies": 31338,
+      "software": 4715,
+      "total": 36053
     }
   },
   "versions": {
@@ -26,11 +26,11 @@
   "artifacts": [
     {
       "path": "curation/classifications.ttl",
-      "sha256": "f4f0fdf663fd44efe27f3f4891cb6706861fcf4faa901ab297566a3ed34ea951"
+      "sha256": "7b8b6682173f6aa67f5efa6554c1d6598f8b105449939b3d90cc7e3322527e08"
     },
     {
       "path": "data/categories.json",
-      "sha256": "203b621dd4ff4b4f696af01244572c9f2a12430b223a12899aeaa53937c046bb"
+      "sha256": "4061af4ae47d2d7b99afbb8af696565a280e0282da7887de5ce0715d1345d0c4"
     },
     {
       "path": "data/controlled_vocabularies.json",
@@ -38,11 +38,11 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "fc3e3b27b34e8dae9cbdbb817142f190d5bed1c2bf044e1a2379666637c7810f"
+      "sha256": "ebd233ab81af90c02a01418add6c0fc2d7322fca121fd75ee777a3be7fd17ebf"
     },
     {
       "path": "data/ontologies.ttl",
-      "sha256": "abe9f63e14d84635afc3d324cb1bfbb9a0b2e8e1387f01845ff28c2d1919625a"
+      "sha256": "0950b0b5eaacb22fcf4cabc2856cab58c40ed4bb9efb0f97be0c62a06687f451"
     },
     {
       "path": "data/page_qids.json",
@@ -50,11 +50,11 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "b57e273c00a306e2961aba2f57074a4aeec54920dfea4a847f35f6d8770a1c6b"
+      "sha256": "269623c0cdfc9f363b2077cf7909bcc1333fb69c0831ddefd95818ef6ee820e3"
     },
     {
       "path": "data/software.ttl",
-      "sha256": "ffc36316ccc055cba814fdc675455b4691281a1ee6d42001f8d78a75bfba6c48"
+      "sha256": "1ba259d91c3405fad2a89f6739f8fb2a74ac72b0514b4c7fe80a6722336631bd"
     },
     {
       "path": "data/software_types.json",
@@ -62,7 +62,7 @@
     },
     {
       "path": "data/uri_registry.json",
-      "sha256": "0d3e842fef17bf45379e1a26ff8ebe629f54aa38eab58e4279dcb3e22b1a23fb"
+      "sha256": "7b86fa729f7d6cf434f9df625111aa9cdc0cb65783a6324dd789f8f64f115b23"
     },
     {
       "path": "ontology.ttl",

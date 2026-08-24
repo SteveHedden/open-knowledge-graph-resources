@@ -3056,8 +3056,7 @@
 
 <https://openknowledgegraphs.com/software/triply/> a okg:Software ;
     rdfs:label "Triply" ;
-    okg:alias "Multimodel-Database" ;
-    okg:description "Multimodel-Database" ;
+    okg:description "multimodel database software" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
