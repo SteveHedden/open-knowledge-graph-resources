@@ -364,6 +364,18 @@
     okg:title "Anatomical Entity Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661532> .
 
+<https://openknowledgegraphs.com/resource/anatomical-therapeutic-chemical-classification-system/> a okg:ControlledVocabulary ;
+    rdfs:label "Anatomical Therapeutic Chemical Classification System" ;
+    okg:alias "ATC",
+        "Anatomical Therapeutic Chemical Classification" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "classification of active ingredients of drugs according to the organ or system on which they act and their therapeutic, pharmacological and chemical properties." ;
+    okg:homepage <http://www.whocc.no> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q2943035> ;
+    okg:title "Anatomical Therapeutic Chemical Classification System" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q192093> .
+
 <https://openknowledgegraphs.com/resource/animal-natural-history-and-life-history/> a okg:Ontology ;
     rdfs:label "Animal natural history and life history" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
@@ -18562,6 +18574,17 @@
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118406> .
 
+<https://openknowledgegraphs.com/resource/health-sciences-descriptors/> a okg:ControlledVocabulary ;
+    rdfs:label "Health Sciences Descriptors" ;
+    okg:alias "DeCS" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "trilingual thesaurus developed from MeSH" ;
+    okg:homepage <https://pesquisa.bvsalud.org/portal/decs-locator/?lang=es> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q3518464> ;
+    okg:title "Health Sciences Descriptors" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q5690673> .
+
 <https://openknowledgegraphs.com/resource/health-surveillance-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
     rdfs:label "Health Surveillance Ontology" ;
@@ -19328,6 +19351,18 @@
     okg:sourceType <http://www.wikidata.org/entity/Q1469824> ;
     okg:title "International Classification of Childhood Cancer" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q39045947> .
+
+<https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/> a okg:Ontology ;
+    rdfs:label "International Classification of Diseases for Oncology" ;
+    okg:alias "ICD-O",
+        "ICDO" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "Diagnosis classification." ;
+    okg:homepage <https://www.who.int/classifications/icd/adaptations/oncology/en/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q3518464> ;
+    okg:title "International Classification of Diseases for Oncology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1430635> .
 
 <https://openknowledgegraphs.com/resource/international-classification-of-nursing-practice/> a okg:Ontology ;
     rdfs:label "International Classification of Nursing Practice" ;
@@ -20389,6 +20424,20 @@
         <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Loggerhead nesting" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114677892> .
+
+<https://openknowledgegraphs.com/resource/logical-observation-identifiers-names-and-codes/> a okg:ControlledVocabulary ;
+    rdfs:label "Logical Observation Identifiers Names and Codes" ;
+    okg:alias "LOINC",
+        "Laboratory Observation Identifier Names and Codes" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_Regenstrief_Institute_Q7308063 ;
+    okg:description "database and universal standard for identifying medical laboratory observations" ;
+    okg:homepage <https://loinc.org/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q3518464>,
+        <http://www.wikidata.org/entity/Q8513> ;
+    okg:title "Logical Observation Identifiers Names and Codes" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q502480> .
 
 <https://openknowledgegraphs.com/resource/logopedia/> a okg:Ontology ;
     rdfs:label "Logopedia" ;
@@ -25851,6 +25900,21 @@
     okg:title "SNK authority file" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q107922512> .
 
+<https://openknowledgegraphs.com/resource/snomed-ct/> a okg:KnowledgeGraph ;
+    rdfs:label "SNOMED CT" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
+    okg:alias "SNOMED",
+        "SNOMED Clinical Terms" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "systematically organized computer processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting." ;
+    okg:homepage <https://bioportal.bioontology.org/ontologies/SNOMEDCT> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q3518464>,
+        <http://www.wikidata.org/entity/Q7397> ;
+    okg:title "SNOMED CT" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1753883> .
+
 <https://openknowledgegraphs.com/resource/snooker-terms/> a okg:ControlledVocabulary ;
     rdfs:label "snooker terms" ;
     okg:category okg:GeneralCrossDomain ;
@@ -25937,6 +26001,17 @@
         <http://www.wikidata.org/entity/Q36524> ;
     okg:title "South African Company Registration Number" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q91317879> .
+
+<https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/> a okg:ControlledVocabulary ;
+    rdfs:label "Słownik imion współcześnie w Polsce używanych" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Kazimierz_Rymut_Q980744 ;
+    okg:description "1995 dictionary of names used in Poland by Kazimierz Rymut" ;
+    okg:homepage <https://rcin.org.pl/dlibra/publication/4284/edition/233> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q859161> ;
+    okg:title "Słownik imion współcześnie w Polsce używanych" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q121668817> .
 
 <https://openknowledgegraphs.com/resource/soyontology/> a okg:Ontology ;
     rdfs:label "SoyOntology" ;
@@ -28394,16 +28469,6 @@
     okg:title "Wikibase system ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q115686989> .
 
-<https://openknowledgegraphs.com/resource/wikidata-data-model/> a okg:Ontology ;
-    rdfs:label "Wikidata data model" ;
-    okg:alias "Wikibase model" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "ontology data model" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1172480>,
-        <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Wikidata data model" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q16354757> .
-
 <https://openknowledgegraphs.com/resource/wikidata-query-service-database/> a okg:KnowledgeGraph ;
     rdfs:label "Wikidata query service database" ;
     okg:alias "Wikidata",
@@ -29366,6 +29431,10 @@ okg:Creator_Raphael_Troncy_Q50290708 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=1BxhcigAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50290708> .
 
+okg:Creator_Regenstrief_Institute_Q7308063 a okg:Organization ;
+    rdfs:label "Regenstrief Institute" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7308063> .
+
 okg:Creator_Renaissance_Computing_Institute_Q7312413 a okg:Organization ;
     rdfs:label "Renaissance Computing Institute" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7312413> .
@@ -29573,6 +29642,10 @@ okg:License_Creative_Commons_Attribution_3_0_IGO_Q26259495 a okg:License ;
 okg:License_Creative_Commons_Attribution_3_0_Netherlands_Q53859967 a okg:License ;
     rdfs:label "Creative Commons Attribution 3.0 Netherlands" ;
     okg:licenseName "Creative Commons Attribution 3.0 Netherlands" .
+
+okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Intergovernmental_Organization_Q125536842 a okg:License ;
+    rdfs:label "Creative Commons Attribution - NoDerivs 3.0 Intergovernmental Organization" ;
+    okg:licenseName "Creative Commons Attribution - NoDerivs 3.0 Intergovernmental Organization" .
 
 okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_2_0_Generic_Q28050835 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" ;
@@ -29791,19 +29864,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Chemical Methods Ontology" ;
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118301> .
-
-<https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/> a okg:ControlledVocabulary ;
-    rdfs:label "Cointegrity Web3 Glossary" ;
-    okg:alias "Cointegrity Glossary, Web3 & Cryptocurrency Glossary, Cointegrity Blockchain and AI Glossary, Crypto glossary, ai glossary, blockchain vocabulary, ai vocabulary, crypto vocabulary" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "Reference glossary of more than 2,000 terms covering blockchain, cryptocurrency, Web3, AI-blockchain integration, digital asset regulation, and crypto financial crime, maintained by Cointegrity" ;
-    okg:homepage <https://cointegrity.io/glossary> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q13136>,
-        <http://www.wikidata.org/entity/Q7094076>,
-        <http://www.wikidata.org/entity/Q859161> ;
-    okg:title "Cointegrity Web3 Glossary" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q139584010> .
 
 <https://openknowledgegraphs.com/resource/collembola-anatomy-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -30081,6 +30141,27 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "FRBR-aligned Bibliographic Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55806952> .
 
+<https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/> a okg:Ontology ;
+    rdfs:label "FRBR-aligned Bibliographic Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q44952732> ;
+    okg:alias "FaBiO",
+        "FaBiO v. 2" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_David_Shotton_Q28913576,
+        okg:Creator_Paolo_Ciccarese_Q56876108,
+        okg:Creator_Silvio_Peroni_Q30536251,
+        okg:Creator_Timothy_W_Clark_Q30743874 ;
+    okg:description "2018 version of ontology for describing entities that are or may be published" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <http://www.sparontologies.net/ontologies/fabio> ;
+    okg:partOf "Semantic Publishing and Referencing Ontologies" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology-q55806952/> ;
+    okg:sourceRepo <https://github.com/sparontologies/fabio> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q3331189> ;
+    okg:title "FRBR-aligned Bibliographic Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q44955004> .
+
 <https://openknowledgegraphs.com/resource/gellish/> a okg:OntologyLanguage ;
     rdfs:label "Gellish" ;
     okg:category okg:GeneralCrossDomain ;
@@ -30266,21 +30347,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Mathematics Genealogy Project" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q829984> .
 
-<https://openknowledgegraphs.com/resource/medical-subject-headings/> a okg:ControlledVocabulary ;
-    rdfs:label "Medical Subject Headings" ;
-    okg:alias "MeSH",
-        "MeSH vocabulary" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:creator okg:Creator_United_States_National_Library_of_Medicine_Q611833 ;
-    okg:description "controlled vocabulary for the purpose of indexing journal articles and books in the life sciences" ;
-    okg:homepage <https://www.nlm.nih.gov/mesh/meshhome.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/ndf-rt/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
-        <http://www.wikidata.org/entity/Q17152639>,
-        <http://www.wikidata.org/entity/Q1916557> ;
-    okg:title "Medical Subject Headings" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q199897> .
-
 <https://openknowledgegraphs.com/resource/nanoparticle-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
     rdfs:label "Nanoparticle Ontology" ;
@@ -30309,21 +30375,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:sourceType <http://www.wikidata.org/entity/Q1469824> ;
     okg:title "National Diet Library Subject Headings" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11421238> .
-
-<https://openknowledgegraphs.com/resource/ndf-rt/> a okg:KnowledgeGraph ;
-    rdfs:label "NDF-RT" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:alias "National Drug File Reference Terminology" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "database by the Department of Veterans Affairs maintaining FDA approved drug concepts and their interactions" ;
-    okg:homepage <https://rxnav.nlm.nih.gov/> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/medical-subject-headings/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1916557>,
-        <http://www.wikidata.org/entity/Q33002955>,
-        <http://www.wikidata.org/entity/Q8513> ;
-    okg:title "NDF-RT" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q21008030> .
 
 <https://openknowledgegraphs.com/resource/new-mexico-geology/> a okg:ControlledVocabulary ;
     rdfs:label "New Mexico Geology" ;
@@ -31134,6 +31185,20 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Chinese thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q110040015> .
 
+<https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/> a okg:ControlledVocabulary ;
+    rdfs:label "Cointegrity Web3 Glossary" ;
+    okg:alias "Cointegrity Glossary, Web3 & Cryptocurrency Glossary, Cointegrity Blockchain and AI Glossary, Crypto glossary, ai glossary, blockchain vocabulary, ai vocabulary, crypto vocabulary" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "Reference glossary of more than 2,000 terms covering blockchain, cryptocurrency, Web3, AI-blockchain integration, digital asset regulation, and crypto financial crime, maintained by Cointegrity" ;
+    okg:homepage <https://cointegrity.io/glossary> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/>,
+        <https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q13136>,
+        <http://www.wikidata.org/entity/Q7094076>,
+        <http://www.wikidata.org/entity/Q859161> ;
+    okg:title "Cointegrity Web3 Glossary" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q139584010> .
+
 <https://openknowledgegraphs.com/resource/conceptnet/> a okg:KnowledgeGraph ;
     rdfs:label "ConceptNet" ;
     okg:category okg:GeneralCrossDomain ;
@@ -31337,6 +31402,39 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Helsinki Term Bank for the Arts and Sciences" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q66890318> .
 
+<https://openknowledgegraphs.com/resource/icd-10/> a okg:ControlledVocabulary ;
+    rdfs:label "ICD-10" ;
+    okg:alias "International Classification of Diseases, Tenth Revision" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_World_Health_Organization_Q7817 ;
+    okg:description "10th version of the International Statistical Classification of Diseases and Related Health Problems of the World Health Organisation" ;
+    okg:homepage <https://icd.who.int/browse10/2019/en> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/icd-11/>,
+        <https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1151067>,
+        <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q3518464> ;
+    okg:title "ICD-10" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q45127> .
+
+<https://openknowledgegraphs.com/resource/icd-11/> a okg:ControlledVocabulary ;
+    rdfs:label "ICD-11" ;
+    okg:alias "ICD 11" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_World_Health_Organization_Q7817 ;
+    okg:description "11th version of the International Statistical Classification of Diseases and Related Health Problems of the World Health Organisation" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Intergovernmental_Organization_Q125536842 ;
+    okg:homepage <https://icd.who.int/browse/latest-release/mms/en> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/icd-10/>,
+        <https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1151067>,
+        <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q3518464> ;
+    okg:title "ICD-11" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55695727> .
+
 <https://openknowledgegraphs.com/resource/information-artifact-ontology/> a okg:Ontology ;
     rdfs:label "Information Artifact Ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
@@ -31353,20 +31451,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Information Artifact Ontology" ;
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118415> .
-
-<https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/> a okg:Ontology ;
-    rdfs:label "International Classification of Diseases for Oncology" ;
-    okg:alias "ICD-O",
-        "ICDO" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "Diagnosis classification." ;
-    okg:homepage <https://www.who.int/classifications/icd/adaptations/oncology/en/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/>,
-        <https://openknowledgegraphs.com/resource/snomed-ct/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q3518464> ;
-    okg:title "International Classification of Diseases for Oncology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1430635> .
 
 <https://openknowledgegraphs.com/resource/international-standard-industrial-classification/> a okg:ControlledVocabulary ;
     rdfs:label "International Standard Industrial Classification" ;
@@ -31429,6 +31513,22 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Maot" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111793495> .
 
+<https://openknowledgegraphs.com/resource/medical-subject-headings/> a okg:ControlledVocabulary ;
+    rdfs:label "Medical Subject Headings" ;
+    okg:alias "MeSH",
+        "MeSH vocabulary" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_United_States_National_Library_of_Medicine_Q611833 ;
+    okg:description "controlled vocabulary for the purpose of indexing journal articles and books in the life sciences" ;
+    okg:homepage <https://www.nlm.nih.gov/mesh/meshhome.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/ndf-rt/>,
+        <https://openknowledgegraphs.com/resource/rxnorm/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q17152639>,
+        <http://www.wikidata.org/entity/Q1916557> ;
+    okg:title "Medical Subject Headings" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q199897> .
+
 <https://openknowledgegraphs.com/resource/metabelgica/> a okg:ControlledVocabulary ;
     rdfs:label "MetaBelgica" ;
     okg:category okg:LibraryCulturalHeritage ;
@@ -31455,6 +31555,22 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q7094076> ;
     okg:title "National Library of Korea Linked Open Data" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q61095607> .
+
+<https://openknowledgegraphs.com/resource/ndf-rt/> a okg:KnowledgeGraph ;
+    rdfs:label "NDF-RT" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
+    okg:alias "National Drug File Reference Terminology" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "database by the Department of Veterans Affairs maintaining FDA approved drug concepts and their interactions" ;
+    okg:homepage <https://rxnav.nlm.nih.gov/> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/medical-subject-headings/>,
+        <https://openknowledgegraphs.com/resource/rxnorm/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1916557>,
+        <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q8513> ;
+    okg:title "NDF-RT" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q21008030> .
 
 <https://openknowledgegraphs.com/resource/neomanitai-q138773774/> a okg:KnowledgeGraph ;
     rdfs:label "Neomanitai" ;
@@ -31833,6 +31949,18 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "ROF image dimensionality" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104538442> .
 
+<https://openknowledgegraphs.com/resource/rxnorm/> a okg:ControlledVocabulary ;
+    rdfs:label "RxNorm" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "normalized dictionary for drugs and drug formulations from the National Library of Medicine, part of UMLS" ;
+    okg:homepage <http://www.nlm.nih.gov/research/umls/rxnorm/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/medical-subject-headings/>,
+        <https://openknowledgegraphs.com/resource/ndf-rt/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q1916557> ;
+    okg:title "RxNorm" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7383767> .
+
 <https://openknowledgegraphs.com/resource/sgd/> a okg:KnowledgeGraph ;
     rdfs:label "SGD" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
@@ -31848,23 +31976,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q4117139> ;
     okg:title "SGD" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3460832> .
-
-<https://openknowledgegraphs.com/resource/snomed-ct/> a okg:KnowledgeGraph ;
-    rdfs:label "SNOMED CT" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:alias "SNOMED",
-        "SNOMED Clinical Terms" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "systematically organized computer processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting." ;
-    okg:homepage <https://bioportal.bioontology.org/ontologies/SNOMEDCT> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/>,
-        <https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
-        <http://www.wikidata.org/entity/Q3518464>,
-        <http://www.wikidata.org/entity/Q7397> ;
-    okg:title "SNOMED CT" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1753883> .
 
 <https://openknowledgegraphs.com/resource/social-insect-behavior-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -31897,6 +32008,39 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:sourceType <http://www.wikidata.org/entity/Q1752462> ;
     okg:title "Software Process Engineering Metamodel" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q125252856> .
+
+<https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/> a okg:ControlledVocabulary ;
+    rdfs:label "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)" ;
+    okg:alias "NACE 2.1",
+        "NACE Rev. 2.1" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "NACE 2.1" ;
+    okg:homepage <http://data.europa.eu/ux2/nace2.1/nace2.1> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/international-standard-industrial-classification/>,
+        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q2976602>,
+        <http://www.wikidata.org/entity/Q317623>,
+        <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q36524>,
+        <http://www.wikidata.org/entity/Q367293> ;
+    okg:title "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q134409349> .
+
+<https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/> a okg:ControlledVocabulary ;
+    rdfs:label "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)" ;
+    okg:alias "NACE Rev. 2" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "NACE 2" ;
+    okg:homepage <https://op.europa.eu/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/ux2/nace2/nace2> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/international-standard-industrial-classification/>,
+        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q2976602>,
+        <http://www.wikidata.org/entity/Q317623>,
+        <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q36524>,
+        <http://www.wikidata.org/entity/Q367293> ;
+    okg:title "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q732298> .
 
 <https://openknowledgegraphs.com/resource/street-list-of-aachen/> a okg:ControlledVocabulary ;
     rdfs:label "street list of Aachen" ;
@@ -31989,25 +32133,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Unified Cyber Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q79040919> .
 
-<https://openknowledgegraphs.com/resource/union-list-of-artist-names/> a okg:ControlledVocabulary ;
-    rdfs:label "Union List of Artist Names" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q110250907> ;
-    okg:alias "Getty Union List of Artist Names",
-        "JPG",
-        "The Union List of Artist Names" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Getty_Research_Institute_Q11203476 ;
-    okg:description "thesaurus of artists and people by the Getty Research Institute" ;
-    okg:homepage <https://www.getty.edu/research/tools/vocabularies/ulan/> ;
-    okg:partOf "Getty Vocabularies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/art-architecture-thesaurus/>,
-        <https://openknowledgegraphs.com/resource/cultural-objects-name-authority/>,
-        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q36524>,
-        <http://www.wikidata.org/entity/Q7094076> ;
-    okg:title "Union List of Artist Names" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q2494649> .
-
 <https://openknowledgegraphs.com/resource/unique-entity-identifier/> a okg:ControlledVocabulary ;
     rdfs:label "Unique Entity Identifier" ;
     okg:alias "UEI",
@@ -32074,6 +32199,10 @@ okg:Creator_National_Library_of_Finland_Q420747 a okg:Organization ;
 okg:Creator_National_Library_of_the_Czech_Republic_Q1967876 a okg:Organization ;
     rdfs:label "National Library of the Czech Republic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1967876> .
+
+okg:Creator_World_Health_Organization_Q7817 a okg:Organization ;
+    rdfs:label "World Health Organization" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7817> .
 
 okg:Creator_World_Wide_Web_Consortium_Q37033 a okg:Organization ;
     rdfs:label "World Wide Web Consortium" ;
@@ -32221,25 +32350,6 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
         <http://www.wikidata.org/entity/Q902623> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111272479> .
 
-<https://openknowledgegraphs.com/resource/cultural-objects-name-authority/> a okg:ControlledVocabulary ;
-    rdfs:label "Cultural Objects Name Authority" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q110250907> ;
-    okg:alias "CONA" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Getty_Research_Institute_Q11203476 ;
-    okg:description "thesaurus (IR) by Getty Research Institute" ;
-    okg:hasLicense okg:License_Open_Data_Commons_Attribution_License_Q30940585 ;
-    okg:homepage <http://www.getty.edu/research/tools/vocabularies/cona/> ;
-    okg:partOf "Getty Vocabularies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/art-architecture-thesaurus/>,
-        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/>,
-        <https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/>,
-        <https://openknowledgegraphs.com/resource/union-list-of-artist-names/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q17152639>,
-        <http://www.wikidata.org/entity/Q7094076> ;
-    okg:title "Cultural Objects Name Authority" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q11409212> .
-
 <https://openknowledgegraphs.com/resource/dannet/> a okg:ControlledVocabulary,
         okg:KnowledgeGraph,
         okg:Ontology ;
@@ -32261,6 +32371,24 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
         <http://www.wikidata.org/entity/Q54872>,
         <http://www.wikidata.org/entity/Q826165> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q26932303> .
+
+<https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/> a okg:ControlledVocabulary ;
+    rdfs:label "Diagnostic and Statistical Manual of Mental Disorders" ;
+    okg:alias "DSM" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_American_Psychiatric_Association_Q466524 ;
+    okg:description "American psychiatric classification and diagnostic guide, in periodic editions" ;
+    okg:homepage <https://www.psychiatry.org/psychiatrists/practice/dsm> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/>,
+        <https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/>,
+        <https://openknowledgegraphs.com/resource/thai-subject-headings-by-cataloging-working-group-of-thailand-university-libraries/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q13136>,
+        <http://www.wikidata.org/entity/Q1338914>,
+        <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q3511132>,
+        <http://www.wikidata.org/entity/Q3518464> ;
+    okg:title "Diagnostic and Statistical Manual of Mental Disorders" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q201561> .
 
 <https://openknowledgegraphs.com/resource/edda-study-designs-taxonomy/> a okg:KnowledgeGraph ;
     rdfs:label "EDDA Study Designs Taxonomy" ;
@@ -32457,6 +32585,29 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "GeolISSTerm" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111960726> .
 
+<https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/> a okg:ControlledVocabulary ;
+    rdfs:label "Getty Thesaurus of Geographic Names" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q110250907> ;
+    okg:alias "Getty Thesaurus of Geographic Names On Line",
+        "Getty Thesaurus of Geographic Names Online",
+        "Getty Thesaurus of Geographic Names® Online",
+        "TGN",
+        "TGN On Line",
+        "Thesaurus of Geographic Names" ;
+    okg:category okg:Geospatial ;
+    okg:creator okg:Creator_Getty_Research_Institute_Q11203476 ;
+    okg:description "thesaurus of geographic names by the Getty Research Institute" ;
+    okg:homepage <https://www.getty.edu/research/tools/vocabularies/tgn/> ;
+    okg:partOf "Getty Vocabularies" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cultural-objects-name-authority/>,
+        <https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/>,
+        <https://openknowledgegraphs.com/resource/union-list-of-artist-names/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q17152639>,
+        <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q7094076> ;
+    okg:title "Getty Thesaurus of Geographic Names" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1520117> .
+
 <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/> a okg:Ontology ;
     rdfs:label "Industrial Data Ontology (IDO)" ;
     okg:alias "IDO",
@@ -32464,7 +32615,8 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:category okg:FinanceBusiness ;
     okg:description "Industrial Data Ontology (IDO) is an ontology initiative for representing industrial and process-industry data, developed within ISO standardization efforts (ISO 23726 series) and maintained by the POSC Caesar Association." ;
     okg:homepage <https://rds.posccaesar.org/ontology/lis14/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/iso-12620/>,
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/iso-12620/>,
         <https://openknowledgegraphs.com/resource/iso-19115/>,
         <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
@@ -32481,7 +32633,8 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:category okg:TechnologyWeb ;
     okg:description "ISO standard" ;
     okg:homepage <https://www.datcatinfo.net> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
         <https://openknowledgegraphs.com/resource/iso-19115/>,
         <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
@@ -32497,7 +32650,8 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:description "international standard for geospatial metadata" ;
     okg:homepage <https://bioportal.bioontology.org/ontologies/ISO19115> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
         <https://openknowledgegraphs.com/resource/iso-12620/>,
         <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
@@ -32548,7 +32702,8 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:category okg:GeneralCrossDomain ;
     okg:description "modelling language and methodology for capturing knowledge and designing systems" ;
     okg:homepage <https://www.iso.org/standard/84612.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
         <https://openknowledgegraphs.com/resource/iso-12620/>,
         <https://openknowledgegraphs.com/resource/iso-19115/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1209840>,
@@ -32801,6 +32956,25 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Time Ontology in OWL" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q62210191> .
 
+<https://openknowledgegraphs.com/resource/union-list-of-artist-names/> a okg:ControlledVocabulary ;
+    rdfs:label "Union List of Artist Names" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q110250907> ;
+    okg:alias "Getty Union List of Artist Names",
+        "JPG",
+        "The Union List of Artist Names" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Getty_Research_Institute_Q11203476 ;
+    okg:description "thesaurus of artists and people by the Getty Research Institute" ;
+    okg:homepage <https://www.getty.edu/research/tools/vocabularies/ulan/> ;
+    okg:partOf "Getty Vocabularies" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/art-architecture-thesaurus/>,
+        <https://openknowledgegraphs.com/resource/cultural-objects-name-authority/>,
+        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q36524>,
+        <http://www.wikidata.org/entity/Q7094076> ;
+    okg:title "Union List of Artist Names" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q2494649> .
+
 okg:Creator_Aldo_Gangemi_Q30103138 a okg:Person ;
     rdfs:label "Aldo Gangemi" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q30103138> .
@@ -32906,6 +33080,25 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "Corporate Bodies" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q107530684> .
 
+<https://openknowledgegraphs.com/resource/cultural-objects-name-authority/> a okg:ControlledVocabulary ;
+    rdfs:label "Cultural Objects Name Authority" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q110250907> ;
+    okg:alias "CONA" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Getty_Research_Institute_Q11203476 ;
+    okg:description "thesaurus (IR) by Getty Research Institute" ;
+    okg:hasLicense okg:License_Open_Data_Commons_Attribution_License_Q30940585 ;
+    okg:homepage <http://www.getty.edu/research/tools/vocabularies/cona/> ;
+    okg:partOf "Getty Vocabularies" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/art-architecture-thesaurus/>,
+        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/>,
+        <https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/>,
+        <https://openknowledgegraphs.com/resource/union-list-of-artist-names/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q17152639>,
+        <http://www.wikidata.org/entity/Q7094076> ;
+    okg:title "Cultural Objects Name Authority" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q11409212> .
+
 <https://openknowledgegraphs.com/resource/czech-national-authority-database/> a okg:ControlledVocabulary ;
     rdfs:label "Czech National Authority Database" ;
     okg:alias "AUT",
@@ -32941,45 +33134,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <http://www.wikidata.org/entity/Q1789476> ;
     okg:title "Database of Czech Librarians" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q135216794> .
-
-<https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
-    rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
-    okg:alias "DOLCE",
-        "DOLCE ontology",
-        "DOLCE-Full",
-        "top-level ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "ontology for categories underlying natural language and human common sense" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://www.loa.istc.cnr.it/dolce/overview.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/general-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/>,
-        <https://openknowledgegraphs.com/resource/yamato/> ;
-    okg:sourceRepo <https://github.com/appliedontolab/DOLCE> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
-    okg:title "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
-
-<https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/> a okg:ControlledVocabulary ;
-    rdfs:label "Diagnostic and Statistical Manual of Mental Disorders" ;
-    okg:alias "DSM" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:creator okg:Creator_American_Psychiatric_Association_Q466524 ;
-    okg:description "American psychiatric classification and diagnostic guide, in periodic editions" ;
-    okg:homepage <https://www.psychiatry.org/psychiatrists/practice/dsm> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/>,
-        <https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/>,
-        <https://openknowledgegraphs.com/resource/snomed-ct/>,
-        <https://openknowledgegraphs.com/resource/thai-subject-headings-by-cataloging-working-group-of-thailand-university-libraries/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q13136>,
-        <http://www.wikidata.org/entity/Q1338914>,
-        <http://www.wikidata.org/entity/Q1469824>,
-        <http://www.wikidata.org/entity/Q3511132>,
-        <http://www.wikidata.org/entity/Q3518464> ;
-    okg:title "Diagnostic and Statistical Manual of Mental Disorders" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q201561> .
 
 <https://openknowledgegraphs.com/resource/events/> a okg:ControlledVocabulary ;
     rdfs:label "Events" ;
@@ -33145,6 +33299,25 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <http://www.wikidata.org/entity/Q35127> ;
     okg:title "ICPSR Thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q110305220> .
+
+<https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/> a okg:ControlledVocabulary ;
+    rdfs:label "International Classification of Functioning, Disability and Health" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q41341734> ;
+    okg:alias "ICF" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_World_Health_Organization_Q7817 ;
+    okg:description "WHO classification describing the health components of a person's functioning and disability" ;
+    okg:homepage <https://icd.who.int/browse/latest-release/icf/en> ;
+    okg:partOf "WHO Family of International Classifications" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/>,
+        <https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/>,
+        <https://openknowledgegraphs.com/resource/icd-10/>,
+        <https://openknowledgegraphs.com/resource/icd-11/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q13136>,
+        <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q3518464> ;
+    okg:title "International Classification of Functioning, Disability and Health" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q917426> .
 
 <https://openknowledgegraphs.com/resource/internet-dictionary-of-polish-surnames/> a okg:ControlledVocabulary ;
     rdfs:label "Internet Dictionary of Polish Surnames" ;
@@ -33408,21 +33581,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "SKOS" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2288360> .
 
-<https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/> a okg:ControlledVocabulary ;
-    rdfs:label "Słownik imion współcześnie w Polsce używanych" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Kazimierz_Rymut_Q980744 ;
-    okg:description "1995 dictionary of names used in Poland by Kazimierz Rymut" ;
-    okg:homepage <https://rcin.org.pl/dlibra/publication/4284/edition/233> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/>,
-        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q3331189>,
-        <http://www.wikidata.org/entity/Q859161> ;
-    okg:title "Słownik imion współcześnie w Polsce używanych" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q121668817> .
-
 <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/> a okg:Ontology ;
     rdfs:label "Suggested Upper Merged Ontology" ;
     okg:alias "SUMO" ;
@@ -33667,31 +33825,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "CiNii" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q10726338> .
 
-<https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/> a okg:Ontology ;
-    rdfs:label "FRBR-aligned Bibliographic Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q44952732> ;
-    okg:alias "FaBiO",
-        "FaBiO v. 2" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_David_Shotton_Q28913576,
-        okg:Creator_Paolo_Ciccarese_Q56876108,
-        okg:Creator_Silvio_Peroni_Q30536251,
-        okg:Creator_Timothy_W_Clark_Q30743874 ;
-    okg:description "2018 version of ontology for describing entities that are or may be published" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <http://www.sparontologies.net/ontologies/fabio> ;
-    okg:partOf "Semantic Publishing and Referencing Ontologies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology-q55806952/>,
-        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/>,
-        <https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/> ;
-    okg:sourceRepo <https://github.com/sparontologies/fabio> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q3331189> ;
-    okg:title "FRBR-aligned Bibliographic Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q44955004> .
-
 <https://openknowledgegraphs.com/resource/general-information-model/> a okg:Ontology ;
     rdfs:label "General Information Model" ;
     okg:alias "GIM",
@@ -33910,45 +34043,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "SHACL" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29377821> .
 
-<https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/> a okg:ControlledVocabulary ;
-    rdfs:label "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)" ;
-    okg:alias "NACE 2.1",
-        "NACE Rev. 2.1" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "NACE 2.1" ;
-    okg:homepage <http://data.europa.eu/ux2/nace2.1/nace2.1> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/>,
-        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/>,
-        <https://openknowledgegraphs.com/resource/international-standard-industrial-classification/>,
-        <https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q2976602>,
-        <http://www.wikidata.org/entity/Q317623>,
-        <http://www.wikidata.org/entity/Q3331189>,
-        <http://www.wikidata.org/entity/Q36524>,
-        <http://www.wikidata.org/entity/Q367293> ;
-    okg:title "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q134409349> .
-
-<https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/> a okg:ControlledVocabulary ;
-    rdfs:label "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)" ;
-    okg:alias "NACE Rev. 2" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "NACE 2" ;
-    okg:homepage <https://op.europa.eu/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/ux2/nace2/nace2> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/>,
-        <https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/>,
-        <https://openknowledgegraphs.com/resource/international-standard-industrial-classification/>,
-        <https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q2976602>,
-        <http://www.wikidata.org/entity/Q317623>,
-        <http://www.wikidata.org/entity/Q3331189>,
-        <http://www.wikidata.org/entity/Q36524>,
-        <http://www.wikidata.org/entity/Q367293> ;
-    okg:title "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q732298> .
-
 okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     rdfs:label "Getty Research Institute" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11203476> .
@@ -34155,31 +34249,6 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     okg:title "Gellish English" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q5530471> .
 
-<https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/> a okg:ControlledVocabulary ;
-    rdfs:label "Getty Thesaurus of Geographic Names" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q110250907> ;
-    okg:alias "Getty Thesaurus of Geographic Names On Line",
-        "Getty Thesaurus of Geographic Names Online",
-        "Getty Thesaurus of Geographic Names® Online",
-        "TGN",
-        "TGN On Line",
-        "Thesaurus of Geographic Names" ;
-    okg:category okg:Geospatial ;
-    okg:creator okg:Creator_Getty_Research_Institute_Q11203476 ;
-    okg:description "thesaurus of geographic names by the Getty Research Institute" ;
-    okg:homepage <https://www.getty.edu/research/tools/vocabularies/tgn/> ;
-    okg:partOf "Getty Vocabularies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/>,
-        <https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/>,
-        <https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/>,
-        <https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q17152639>,
-        <http://www.wikidata.org/entity/Q3331189>,
-        <http://www.wikidata.org/entity/Q7094076> ;
-    okg:title "Getty Thesaurus of Geographic Names" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1520117> .
-
 <https://openknowledgegraphs.com/resource/mnemosine-biblioteca-digital-de-la-otra-edad-de-plata/> a okg:ControlledVocabulary ;
     rdfs:label "Mnemosine: Biblioteca Digital de la otra Edad de Plata" ;
     okg:alias "Mnemosyne: Digital Library for Rare and Forgotten Literary Texts (1868-1936)" ;
@@ -34287,6 +34356,28 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
         <http://www.wikidata.org/entity/Q81661717>,
         <http://www.wikidata.org/entity/Q902623> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118285> .
+
+<https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
+    rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
+    okg:alias "DOLCE",
+        "DOLCE ontology",
+        "DOLCE-Full",
+        "ISO/IEC 21838-3",
+        "top-level ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology for categories underlying natural language and human common sense" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://www.loa.istc.cnr.it/dolce/overview.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/cyc/>,
+        <https://openknowledgegraphs.com/resource/general-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/>,
+        <https://openknowledgegraphs.com/resource/yamato/> ;
+    okg:sourceRepo <https://github.com/appliedontolab/DOLCE> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
+        <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
 
 <https://openknowledgegraphs.com/resource/rof-extension-mode/> a okg:ControlledVocabulary ;
     rdfs:label "ROF extension mode" ;

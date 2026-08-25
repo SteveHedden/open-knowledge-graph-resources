@@ -153,6 +153,9 @@
 <https://openknowledgegraphs.com/resource/anatomical-entity-ontology/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661532> .
 
+<https://openknowledgegraphs.com/resource/anatomical-therapeutic-chemical-classification-system/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q192093> .
+
 <https://openknowledgegraphs.com/resource/animal-natural-history-and-life-history/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114677837> .
 
@@ -7317,6 +7320,9 @@
 <https://openknowledgegraphs.com/resource/health-data-ontology-trunk/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118406> .
 
+<https://openknowledgegraphs.com/resource/health-sciences-descriptors/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q5690673> .
+
 <https://openknowledgegraphs.com/resource/health-surveillance-ontology/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q113012664> .
 
@@ -7449,6 +7455,12 @@
 <https://openknowledgegraphs.com/resource/iab-content-taxonomy/> okg:category okg:TechnologyWeb ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138858299> .
 
+<https://openknowledgegraphs.com/resource/icd-10/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q45127> .
+
+<https://openknowledgegraphs.com/resource/icd-11/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55695727> .
+
 <https://openknowledgegraphs.com/resource/icpsr-geographic-names-thesaurus/> okg:category okg:Geospatial ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q110305490> .
 
@@ -7568,6 +7580,9 @@
 
 <https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1430635> .
+
+<https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q917426> .
 
 <https://openknowledgegraphs.com/resource/international-classification-of-nursing-practice/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1666418> .
@@ -7931,6 +7946,9 @@
 
 <https://openknowledgegraphs.com/resource/loggerhead-nesting/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q114677892> .
+
+<https://openknowledgegraphs.com/resource/logical-observation-identifiers-names-and-codes/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q502480> .
 
 <https://openknowledgegraphs.com/resource/logopedia/> okg:category okg:GeneralCrossDomain ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q53859674> .
@@ -9398,6 +9416,9 @@
 
 <https://openknowledgegraphs.com/resource/ruwordnet/> okg:category okg:GeneralCrossDomain ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q65937068> .
+
+<https://openknowledgegraphs.com/resource/rxnorm/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7383767> .
 
 <https://openknowledgegraphs.com/resource/sabdatatwabodha-abhidhana/> okg:category okg:LibraryCulturalHeritage ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q123020813> .

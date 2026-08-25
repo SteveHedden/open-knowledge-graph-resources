@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T16:55:29Z",
+  "generatedAt": "2026-08-25T14:46:32Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -1024,6 +1024,21 @@
       "category": "Life Sciences & Healthcare",
       "homepage": "http://bioportal.bioontology.org/ontologies/1568",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
+    },
+    {
+      "title": "Anatomical Therapeutic Chemical Classification System",
+      "wikidataId": "https://www.wikidata.org/wiki/Q192093",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/anatomical-therapeutic-chemical-classification-system/",
+      "description": "classification of active ingredients of drugs according to the organ or system on which they act and their therapeutic, pharmacological and chemical properties.",
+      "aliases": [
+        "ATC",
+        "Anatomical Therapeutic Chemical Classification"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "http://www.whocc.no"
     },
     {
       "title": "Ancient Poet Resource Ontology",
@@ -6127,6 +6142,10 @@
         {
           "title": "Diagnostic and Statistical Manual of Mental Disorders",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/"
+        },
+        {
+          "title": "International Classification of Functioning, Disability and Health",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/"
         }
       ]
     },
@@ -8447,6 +8466,7 @@
         "DOLCE",
         "DOLCE ontology",
         "DOLCE-Full",
+        "ISO/IEC 21838-3",
         "top-level ontology"
       ],
       "category": "General / Cross-domain",
@@ -8621,12 +8641,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
         },
         {
-          "title": "International Classification of Diseases for Oncology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/"
-        },
-        {
-          "title": "SNOMED CT",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/snomed-ct/"
+          "title": "International Classification of Functioning, Disability and Health",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/"
         },
         {
           "title": "Thai Subject Headings by Cataloging Working Group of Thailand University Libraries",
@@ -12830,22 +12846,6 @@
         {
           "title": "FRBR-aligned Bibliographic Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology-q55806952/"
-        },
-        {
-          "title": "Getty Thesaurus of Geographic Names",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/"
-        },
-        {
-          "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/"
-        },
-        {
-          "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/"
-        },
-        {
-          "title": "Słownik imion współcześnie w Polsce używanych",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/"
         }
       ]
     },
@@ -14109,24 +14109,16 @@
       ],
       "relatedTools": [
         {
-          "title": "FRBR-aligned Bibliographic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/"
-        },
-        {
-          "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/"
-        },
-        {
-          "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/"
-        },
-        {
-          "title": "Słownik imion współcześnie w Polsce używanych",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/"
+          "title": "Cultural Objects Name Authority",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/"
         },
         {
           "title": "Thesaurus of Geographic Names LOD Dataset",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/"
+        },
+        {
+          "title": "Union List of Artist Names",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/union-list-of-artist-names/"
         }
       ]
     },
@@ -19523,6 +19515,20 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
+      "title": "Health Sciences Descriptors",
+      "wikidataId": "https://www.wikidata.org/wiki/Q5690673",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/health-sciences-descriptors/",
+      "description": "trilingual thesaurus developed from MeSH",
+      "aliases": [
+        "DeCS"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://pesquisa.bvsalud.org/portal/decs-locator/?lang=es"
+    },
+    {
       "title": "Health Surveillance Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q113012664",
       "types": [
@@ -20919,6 +20925,71 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
+      "title": "ICD-10",
+      "wikidataId": "https://www.wikidata.org/wiki/Q45127",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/icd-10/",
+      "description": "10th version of the International Statistical Classification of Diseases and Related Health Problems of the World Health Organisation",
+      "aliases": [
+        "International Classification of Diseases, Tenth Revision"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://icd.who.int/browse10/2019/en",
+      "creators": [
+        {
+          "name": "World Health Organization",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7817"
+        }
+      ],
+      "relatedTools": [
+        {
+          "title": "ICD-11",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icd-11/"
+        },
+        {
+          "title": "International Classification of Functioning, Disability and Health",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/"
+        }
+      ]
+    },
+    {
+      "title": "ICD-11",
+      "wikidataId": "https://www.wikidata.org/wiki/Q55695727",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/icd-11/",
+      "description": "11th version of the International Statistical Classification of Diseases and Related Health Problems of the World Health Organisation",
+      "aliases": [
+        "ICD 11"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://icd.who.int/browse/latest-release/mms/en",
+      "creators": [
+        {
+          "name": "World Health Organization",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7817"
+        }
+      ],
+      "licenses": [
+        "Creative Commons Attribution - NoDerivs 3.0 Intergovernmental Organization"
+      ],
+      "relatedTools": [
+        {
+          "title": "ICD-10",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icd-10/"
+        },
+        {
+          "title": "International Classification of Functioning, Disability and Health",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/"
+        }
+      ]
+    },
+    {
       "title": "ICHOM Set Pregcy and Childbirth",
       "wikidataId": "https://www.wikidata.org/wiki/Q138495068",
       "types": [
@@ -21514,6 +21585,10 @@
       "category": "Finance & Business",
       "homepage": "https://rds.posccaesar.org/ontology/lis14/",
       "relatedTools": [
+        {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
         {
           "title": "ISO 12620",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
@@ -22156,17 +22231,7 @@
         "ICDO"
       ],
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://www.who.int/classifications/icd/adaptations/oncology/en/",
-      "relatedTools": [
-        {
-          "title": "Diagnostic and Statistical Manual of Mental Disorders",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/"
-        },
-        {
-          "title": "SNOMED CT",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/snomed-ct/"
-        }
-      ]
+      "homepage": "https://www.who.int/classifications/icd/adaptations/oncology/en/"
     },
     {
       "title": "International Classification of Diseases for Oncology, 3rd edition",
@@ -22191,6 +22256,46 @@
       "category": "General / Cross-domain",
       "homepage": "https://github.com/icdo/ICDO",
       "partOf": "BLOD: Biomedical Linked Open Datasets"
+    },
+    {
+      "title": "International Classification of Functioning, Disability and Health",
+      "wikidataId": "https://www.wikidata.org/wiki/Q917426",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/",
+      "description": "WHO classification describing the health components of a person's functioning and disability",
+      "aliases": [
+        "ICF"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://icd.who.int/browse/latest-release/icf/en",
+      "partOf": "WHO Family of International Classifications",
+      "creators": [
+        {
+          "name": "World Health Organization",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7817"
+        }
+      ],
+      "relatedTools": [
+        {
+          "title": "Cointegrity Web3 Glossary",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cointegrity-web3-glossary/"
+        },
+        {
+          "title": "Diagnostic and Statistical Manual of Mental Disorders",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/"
+        },
+        {
+          "title": "ICD-10",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icd-10/"
+        },
+        {
+          "title": "ICD-11",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/icd-11/"
+        }
+      ]
     },
     {
       "title": "International Classification of Functioning, Disability and Health (ICF)",
@@ -22486,6 +22591,10 @@
       "homepage": "https://www.datcatinfo.net",
       "relatedTools": [
         {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
+        {
           "title": "Industrial Data Ontology (IDO)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/"
         },
@@ -22536,6 +22645,10 @@
       "homepage": "https://bioportal.bioontology.org/ontologies/ISO19115",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "relatedTools": [
+        {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
         {
           "title": "Industrial Data Ontology (IDO)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/"
@@ -25077,6 +25190,28 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
+      "title": "Logical Observation Identifiers Names and Codes",
+      "wikidataId": "https://www.wikidata.org/wiki/Q502480",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/logical-observation-identifiers-names-and-codes/",
+      "description": "database and universal standard for identifying medical laboratory observations",
+      "aliases": [
+        "LOINC",
+        "Laboratory Observation Identifier Names and Codes"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "https://loinc.org/",
+      "creators": [
+        {
+          "name": "Regenstrief Institute",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7308063"
+        }
+      ]
+    },
+    {
       "title": "Logopedia",
       "wikidataId": "https://www.wikidata.org/wiki/Q53859674",
       "types": [
@@ -26128,6 +26263,10 @@
         {
           "title": "NDF-RT",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ndf-rt/"
+        },
+        {
+          "title": "RxNorm",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/rxnorm/"
         }
       ]
     },
@@ -28272,6 +28411,10 @@
         {
           "title": "Medical Subject Headings",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/medical-subject-headings/"
+        },
+        {
+          "title": "RxNorm",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/rxnorm/"
         }
       ]
     },
@@ -29615,6 +29758,10 @@
       "category": "General / Cross-domain",
       "homepage": "https://www.iso.org/standard/84612.html",
       "relatedTools": [
+        {
+          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+        },
         {
           "title": "Industrial Data Ontology (IDO)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/"
@@ -39029,6 +39176,28 @@
       "sourceRepo": "https://github.com/Zebradil/RuWordNetView"
     },
     {
+      "title": "RxNorm",
+      "wikidataId": "https://www.wikidata.org/wiki/Q7383767",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/rxnorm/",
+      "description": "normalized dictionary for drugs and drug formulations from the National Library of Medicine, part of UMLS",
+      "aliases": [],
+      "category": "Life Sciences & Healthcare",
+      "homepage": "http://www.nlm.nih.gov/research/umls/rxnorm/",
+      "relatedTools": [
+        {
+          "title": "Medical Subject Headings",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/medical-subject-headings/"
+        },
+        {
+          "title": "NDF-RT",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/ndf-rt/"
+        }
+      ]
+    },
+    {
       "title": "Répertoire de vedettes-matière",
       "wikidataId": "https://www.wikidata.org/wiki/Q3456268",
       "types": [
@@ -40633,17 +40802,7 @@
       ],
       "category": "Life Sciences & Healthcare",
       "homepage": "https://bioportal.bioontology.org/ontologies/SNOMEDCT",
-      "partOf": "BLOD: Biomedical Linked Open Datasets",
-      "relatedTools": [
-        {
-          "title": "Diagnostic and Statistical Manual of Mental Disorders",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/"
-        },
-        {
-          "title": "International Classification of Diseases for Oncology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/international-classification-of-diseases-for-oncology/"
-        }
-      ]
+      "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
       "title": "SNOMED CT (International Edition)",
@@ -41082,24 +41241,12 @@
       "homepage": "https://op.europa.eu/web/eu-vocabularies/concept-scheme/-/resource?uri=http://data.europa.eu/ux2/nace2/nace2",
       "relatedTools": [
         {
-          "title": "FRBR-aligned Bibliographic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/"
-        },
-        {
-          "title": "Getty Thesaurus of Geographic Names",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/"
-        },
-        {
           "title": "International Standard Industrial Classification",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/international-standard-industrial-classification/"
         },
         {
           "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/"
-        },
-        {
-          "title": "Słownik imion współcześnie w Polsce używanych",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/"
         }
       ]
     },
@@ -41119,24 +41266,12 @@
       "homepage": "http://data.europa.eu/ux2/nace2.1/nace2.1",
       "relatedTools": [
         {
-          "title": "FRBR-aligned Bibliographic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/"
-        },
-        {
-          "title": "Getty Thesaurus of Geographic Names",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/"
-        },
-        {
           "title": "International Standard Industrial Classification",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/international-standard-industrial-classification/"
         },
         {
           "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/"
-        },
-        {
-          "title": "Słownik imion współcześnie w Polsce używanych",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/sownik-imion-wspoczesnie-w-polsce-uzywanych/"
         }
       ]
     },
@@ -42351,24 +42486,6 @@
           "name": "Kazimierz Rymut",
           "type": "Person",
           "wikidataId": "https://www.wikidata.org/wiki/Q980744"
-        }
-      ],
-      "relatedTools": [
-        {
-          "title": "FRBR-aligned Bibliographic Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/frbr-aligned-bibliographic-ontology/"
-        },
-        {
-          "title": "Getty Thesaurus of Geographic Names",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/"
-        },
-        {
-          "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2 (2008)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-2008/"
-        },
-        {
-          "title": "Statistical Classification of Economic Activities in the European Community, Rev. 2.1 (2025)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/statistical-classification-of-economic-activities-in-the-european-community-rev-2-1-2025/"
         }
       ]
     },
@@ -46656,19 +46773,6 @@
         "Creative Commons Attribution-ShareAlike 4.0 International",
         "Creative Commons CC0 License"
       ]
-    },
-    {
-      "title": "Wikidata data model",
-      "wikidataId": "https://www.wikidata.org/wiki/Q16354757",
-      "types": [
-        "Ontology"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/wikidata-data-model/",
-      "description": "ontology data model",
-      "aliases": [
-        "Wikibase model"
-      ],
-      "category": "Technology & Web"
     },
     {
       "title": "Wikidata Ontology",

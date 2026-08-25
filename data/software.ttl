@@ -430,9 +430,9 @@
     okg:description "distributed, horizontally scalable native GraphQL graph database written in Go" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://dgraph.io/> ;
-    okg:latestVersion "25.4.0" ;
+    okg:latestVersion "25.4.1" ;
     okg:programmingLanguage "Go" ;
-    okg:releaseDate "2026-07-30"^^xsd:date ;
+    okg:releaseDate "2026-08-24"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/dgraph-io/dgraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1130645>,
@@ -1350,6 +1350,8 @@
     okg:description "Visual Studio Code extension providing editing support for RDF languages and knowledge graphs" ;
     okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
     okg:homepage <https://mentor-vscode.dev> ;
+    okg:latestVersion "0.6.2" ;
+    okg:releaseDate "2026-08-25"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/faubulous/mentor-vscode> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1453,8 +1455,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.3.0" ;
-    okg:releaseDate "2026-08-23"^^xsd:date ;
+    okg:latestVersion "2.4.0" ;
+    okg:releaseDate "2026-08-24"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1758,10 +1760,10 @@
     okg:description "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://docs.origintrail.io/> ;
-    okg:latestVersion "10.0.13" ;
+    okg:latestVersion "10.0.14" ;
     okg:partOf "OriginTrail Decentralized Knowledge Graph" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-07"^^xsd:date ;
+    okg:releaseDate "2026-08-25"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/OriginTrail/dkg> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -3080,9 +3082,9 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.8.15" ;
+    okg:latestVersion "2.9.2" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-18"^^xsd:date ;
+    okg:releaseDate "2026-08-24"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -3095,9 +3097,9 @@
     okg:description "In-memory, columnar graph database engine for real-time analytics, with Cypher query support and git-style version control over graph data" ;
     okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://useturingdb.com/> ;
-    okg:latestVersion "1.36" ;
+    okg:latestVersion "1.37" ;
     okg:programmingLanguage "C++" ;
-    okg:releaseDate "2026-07-27"^^xsd:date ;
+    okg:releaseDate "2026-08-24"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/turing-db/turingdb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
