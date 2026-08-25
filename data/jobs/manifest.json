@@ -2,11 +2,11 @@
   "artifacts": [
     {
       "path": "data/jobs/jobs.json",
-      "sha256": "6086a280895ae5f95b7afe8a5f283be2f98947683c884bc77c3a4a8cb6efc7fa"
+      "sha256": "5218248055952b6148f4dda3e3b3a4acffde1cd1d61aade2033d013060eea279"
     },
     {
       "path": "data/jobs/jobs.ttl",
-      "sha256": "2b6d5544d5487ab1b81a071c7f2e46c856ee74052fdcf6d105554570d5d753d2"
+      "sha256": "b1278418fc2b1961c308fc756dfad82d9b3ff52ad83f9e064266637dbf23e2ad"
     },
     {
       "path": "data/jobs/raw/adzuna.json",
@@ -14,7 +14,7 @@
     },
     {
       "path": "data/jobs/raw/arbeitnow.json",
-      "sha256": "54fe4ba51c2c49773279b5636344dcbc66f4dbff8d7e5cf3af1afc3add07b53a"
+      "sha256": "c9336874e5c1f2aba0f084cbaa36d6ca7407e7b660b0fa69d71f2e94b8bc0e7f"
     },
     {
       "path": "data/jobs/raw/himalayas.json",
@@ -30,12 +30,12 @@
     },
     {
       "path": "data/jobs/run.json",
-      "sha256": "918124cecb124b7488d9767d4fbf1622b273f8d7fac5d4b85994c6def2668ea9"
+      "sha256": "feb158565e7db464fa03459ed0192cbbaed0b02a3c5a9075c4adfcadab8d8594"
     }
   ],
-  "completedAt": "2026-08-25T19:36:33Z",
-  "generationId": "20260825T193633Z-6a7b14b970af",
+  "completedAt": "2026-08-25T20:36:22Z",
+  "generationId": "20260825T203622Z-eb8fcec2d7d7",
   "schemaVersion": "1.0.0",
-  "sourceRetrievedAt": "2026-08-25T19:35:44Z",
-  "startedAt": "2026-08-25T19:35:30Z"
+  "sourceRetrievedAt": "2026-08-25T20:35:11Z",
+  "startedAt": "2026-08-25T20:33:49Z"
 }
