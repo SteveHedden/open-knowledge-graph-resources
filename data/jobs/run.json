@@ -1,36 +1,106 @@
 {
-  "activeCount": 524,
+  "activeCount": 547,
   "classificationCounts": {
-    "not_match": 402,
-    "qualified": 122,
+    "not_match": 415,
+    "qualified": 132,
     "review": 0
   },
   "completeSourceSnapshot": false,
-  "deduplicatedCount": 524,
-  "fetchedCount": 300,
+  "deduplicatedCount": 547,
+  "fetchedCount": 79,
   "queries": [
-    "all active postings; KG relevance classified locally"
+    "knowledge graph",
+    "ontology",
+    "semantic web",
+    "SPARQL"
   ],
-  "queryCount": 1,
+  "queryCount": 4,
   "queryFamilies": [
     {
-      "query": "all active postings; KG relevance classified locally",
-      "queryConcepts": [],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow-query-all-active"
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph"
+    },
+    {
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology"
+    },
+    {
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web"
+    },
+    {
+      "query": "SPARQL",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql"
+    }
+  ],
+  "queryResults": [
+    {
+      "complete": false,
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph",
+      "returnedCount": 20,
+      "totalCount": 154
+    },
+    {
+      "complete": false,
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology",
+      "returnedCount": 19,
+      "totalCount": 55
+    },
+    {
+      "complete": false,
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web",
+      "returnedCount": 20,
+      "totalCount": 21
+    },
+    {
+      "complete": false,
+      "query": "SPARQL",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql",
+      "returnedCount": 20,
+      "totalCount": 21
     }
   ],
   "rejectedCount": 0,
-  "requestCount": 2,
-  "retrievedAt": "2026-08-25T22:33:23Z",
-  "runId": "20260825T223323Z-bb83859477ec",
-  "sourceAttributionUrl": "https://www.arbeitnow.com/",
-  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
-  "sourceKey": "arbeitnow",
-  "sourceName": "Arbeitnow",
+  "requestCount": 4,
+  "retrievedAt": "2026-08-25T23:28:25Z",
+  "runId": "20260825T232825Z-afb05276b409",
+  "sourceAttributionUrl": "https://himalayas.app/",
+  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas",
+  "sourceKey": "himalayas",
+  "sourceName": "Himalayas",
   "sourceRefreshes": {
     "adzuna": "2026-08-25T17:37:24Z",
     "arbeitnow": "2026-08-25T22:33:23Z",
-    "himalayas": "2026-08-24T23:26:11Z",
+    "himalayas": "2026-08-25T23:28:25Z",
     "jobicy": "2026-08-25T22:31:53Z",
     "jooble": "2026-08-25T19:35:44Z"
   }
