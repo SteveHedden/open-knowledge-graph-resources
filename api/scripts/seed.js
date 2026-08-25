@@ -29,6 +29,9 @@ const LIST_RESTART_INTERVAL_MS = Number.parseInt(
 );
 const VERIFY_TIMEOUT_MS = Number.parseInt(process.env.VECTOR_VERIFY_TIMEOUT_MS || "300000", 10);
 const VERIFY_INTERVAL_MS = Number.parseInt(process.env.VECTOR_VERIFY_INTERVAL_MS || "5000", 10);
+const EMBED_RETRY_INITIAL_INTERVAL_MS = 1000;
+const EMBED_RETRY_MAX_INTERVAL_MS = 30000;
+const EMBED_MAX_ATTEMPTS = 8;
 const API_BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}`;
 const authHeaders = { Authorization: `Bearer ${API_TOKEN}` };
 
@@ -306,13 +309,35 @@ function readinessWriter(startedAt) {
   };
 }
 
-async function embedBatch(projections) {
-  const result = await cloudflareJson(`${API_BASE}/ai/run/${EMBED_MODEL}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ text: projections }),
-  });
-  return result.data;
+export async function embedBatch(
+  projections,
+  {
+    nowFn = Date.now,
+    deadline = nowFn() + VERIFY_TIMEOUT_MS,
+    sleepFn = sleep,
+    logFn = console.warn,
+  } = {}
+) {
+  let retryInterval = EMBED_RETRY_INITIAL_INTERVAL_MS;
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      const result = await cloudflareJson(`${API_BASE}/ai/run/${EMBED_MODEL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: projections }),
+      });
+      return result.data;
+    } catch (error) {
+      if (!isRetryableCloudflareError(error) || attempt >= EMBED_MAX_ATTEMPTS) throw error;
+      const remaining = Math.max(0, deadline - nowFn());
+      if (remaining === 0) throw error;
+      const delay = Math.min(error.retryAfterMs ?? retryInterval, remaining);
+      logFn(`Workers AI embedding failed; retrying in ${delay}ms: ${error.message}`);
+      if (delay > 0) await sleepFn(delay);
+      if (nowFn() >= deadline) throw error;
+      retryInterval = Math.min(retryInterval * 2, EMBED_RETRY_MAX_INTERVAL_MS);
+    }
+  }
 }
 
 export async function upsertBatch(vectors) {

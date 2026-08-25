@@ -8,6 +8,7 @@ process.env.VECTOR_VERIFY_INTERVAL_MS = "0";
 
 const {
   anyVectorsByIds,
+  embedBatch,
   ensureMetadataIndexes,
   fetchAndValidateAllVectors,
   getVectorsByIds,
@@ -334,6 +335,113 @@ test("get-by-IDs honors retryable rate limits without restarting completed batch
 
   assert.deepEqual(await getVectorsByIds(["G1:software:Q1"]), []);
   assert.equal(calls, 2);
+});
+
+test("embedding retries transient Cloudflare failures with bounded backoff", async (t) => {
+  const original = globalThis.fetch;
+  const delays = [];
+  const messages = [];
+  let calls = 0;
+  let now = 0;
+  globalThis.fetch = async (input, init = {}) => {
+    calls += 1;
+    assert.match(String(input), /\/ai\/run\//);
+    assert.deepEqual(JSON.parse(init.body), { text: ["first", "second"] });
+    if (calls <= 2) {
+      return Response.json(
+        {
+          success: false,
+          errors: [{ message: "Service unavailable" }],
+          result: null,
+        },
+        { status: 503 }
+      );
+    }
+    return cloudflareResponse({ data: [[0.1], [0.2]] });
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  const embeddings = await embedBatch(["first", "second"], {
+    deadline: 10000,
+    nowFn: () => now,
+    sleepFn: async (milliseconds) => {
+      delays.push(milliseconds);
+      now += milliseconds;
+    },
+    logFn: (message) => messages.push(message),
+  });
+  assert.deepEqual(embeddings, [[0.1], [0.2]]);
+  assert.equal(calls, 3);
+  assert.deepEqual(delays, [1000, 2000]);
+  assert.equal(messages.length, 2);
+  assert.match(messages[0], /Workers AI embedding failed; retrying in 1000ms/);
+});
+
+test("embedding stops retrying transient failures at its deadline", async (t) => {
+  const original = globalThis.fetch;
+  const delays = [];
+  let calls = 0;
+  let now = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    return Response.json(
+      {
+        success: false,
+        errors: [{ message: "Service unavailable" }],
+        result: null,
+      },
+      { status: 503 }
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    embedBatch(["text"], {
+      deadline: 2500,
+      nowFn: () => now,
+      sleepFn: async (milliseconds) => {
+        delays.push(milliseconds);
+        now += milliseconds;
+      },
+      logFn: () => {},
+    }),
+    /Cloudflare API error \(503\): Service unavailable/
+  );
+  assert.equal(calls, 2);
+  assert.deepEqual(delays, [1000, 1500]);
+});
+
+test("embedding does not retry permanent Cloudflare client errors", async (t) => {
+  const original = globalThis.fetch;
+  const delays = [];
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    return Response.json(
+      {
+        success: false,
+        errors: [{ message: "Forbidden" }],
+        result: null,
+      },
+      { status: 403 }
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    embedBatch(["text"], {
+      sleepFn: async (milliseconds) => delays.push(milliseconds),
+    }),
+    /Cloudflare API error \(403\): Forbidden/
+  );
+  assert.equal(calls, 1);
+  assert.deepEqual(delays, []);
 });
 
 test("absence probing stops as soon as a remaining vector is found", async (t) => {
