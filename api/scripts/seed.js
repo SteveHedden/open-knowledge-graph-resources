@@ -27,7 +27,6 @@ const LIST_RESTART_INTERVAL_MS = Number.parseInt(
   process.env.VECTOR_LIST_RESTART_INTERVAL_MS || "1000",
   10
 );
-const LIST_CURSOR_RESTARTS = Number.parseInt(process.env.VECTOR_LIST_CURSOR_RESTARTS || "3", 10);
 const VERIFY_TIMEOUT_MS = Number.parseInt(process.env.VECTOR_VERIFY_TIMEOUT_MS || "300000", 10);
 const VERIFY_INTERVAL_MS = Number.parseInt(process.env.VECTOR_VERIFY_INTERVAL_MS || "5000", 10);
 const API_BASE = `https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_ID}`;
@@ -57,11 +56,27 @@ export class VectorVisibilityPendingError extends Error {
   }
 }
 
+export class VectorListSnapshotError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "VectorListSnapshotError";
+  }
+}
+
 export function isRetryableCloudflareError(error) {
   return (
     error instanceof CloudflareTransportError ||
     (error instanceof CloudflareApiError &&
       (error.status === 408 || error.status === 425 || error.status === 429 || error.status >= 500))
+  );
+}
+
+export function isRecoverableVectorListError(error) {
+  if (error instanceof VectorListSnapshotError) return true;
+  if (!(error instanceof CloudflareApiError) || error.status !== 400) return false;
+  return (
+    /\bcursor\b/i.test(error.message) &&
+    /\b(?:corrupt\w*|expir\w*|invalid|no longer valid)\b/i.test(error.message)
   );
 }
 
@@ -315,9 +330,13 @@ export async function upsertBatch(vectors) {
   return mutationId;
 }
 
-export async function listAllVectorIds({ sleepFn = sleep } = {}) {
+export async function listAllVectorIds({
+  sleepFn = sleep,
+  nowFn = Date.now,
+  deadline = nowFn() + VERIFY_TIMEOUT_MS,
+} = {}) {
   let lastError;
-  for (let attempt = 0; attempt <= LIST_CURSOR_RESTARTS; attempt += 1) {
+  for (;;) {
     const ids = [];
     const seenCursors = new Set();
     let expectedTotal = null;
@@ -332,14 +351,18 @@ export async function listAllVectorIds({ sleepFn = sleep } = {}) {
         if (Number.isInteger(page.totalCount)) {
           if (expectedTotal === null) expectedTotal = page.totalCount;
           if (page.totalCount !== expectedTotal) {
-            throw new Error("Vectorize list snapshot total changed during pagination");
+            throw new VectorListSnapshotError(
+              "Vectorize list snapshot total changed during pagination"
+            );
           }
         }
         if (page.isTruncated && !page.nextCursor) {
-          throw new Error("Vectorize list response is truncated but has no next cursor");
+          throw new VectorListSnapshotError(
+            "Vectorize list response is truncated but has no next cursor"
+          );
         }
         if (page.nextCursor && seenCursors.has(page.nextCursor)) {
-          throw new Error("Vectorize list response repeated a cursor");
+          throw new VectorListSnapshotError("Vectorize list response repeated a cursor");
         }
         if (page.nextCursor) seenCursors.add(page.nextCursor);
         cursor = page.isTruncated ? page.nextCursor : null;
@@ -349,27 +372,27 @@ export async function listAllVectorIds({ sleepFn = sleep } = {}) {
       } while (cursor);
       const uniqueIds = [...new Set(ids)].sort();
       if (uniqueIds.length !== ids.length) {
-        throw new Error("Vectorize list snapshot contained duplicate vector IDs");
+        throw new VectorListSnapshotError(
+          "Vectorize list snapshot contained duplicate vector IDs"
+        );
       }
       if (expectedTotal !== null && uniqueIds.length !== expectedTotal) {
-        throw new Error(
+        throw new VectorListSnapshotError(
           `Vectorize list snapshot count mismatch: expected=${expectedTotal} actual=${uniqueIds.length}`
         );
       }
       return uniqueIds;
     } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      const recoverable =
-        /cursor|snapshot/i.test(message) &&
-        /corrupt|expir|repeat|missing|changed|mismatch|duplicate|truncated/i.test(message);
-      if (!recoverable || attempt === LIST_CURSOR_RESTARTS) throw error;
+      if (!isRecoverableVectorListError(error)) throw error;
       lastError = error;
-      if (LIST_RESTART_INTERVAL_MS > 0) {
-        await sleepFn(LIST_RESTART_INTERVAL_MS);
+      const remaining = Math.max(0, deadline - nowFn());
+      if (remaining === 0) throw lastError;
+      const delay = Math.min(LIST_RESTART_INTERVAL_MS, remaining);
+      if (delay > 0) {
+        await sleepFn(delay);
       }
     }
   }
-  throw lastError || new Error("Vectorize list traversal failed");
 }
 
 function expectedDatasetForId(generationId, id) {
@@ -470,9 +493,9 @@ export async function anyVectorsByIds(ids) {
   return false;
 }
 
-export async function verifyGenerationInventory(generationId, expectedIds) {
+export async function verifyGenerationInventory(generationId, expectedIds, listOptions) {
   const prefix = `${generationId}:`;
-  const actualIds = (await listAllVectorIds())
+  const actualIds = (await listAllVectorIds(listOptions))
     .filter((id) => id.startsWith(prefix))
     .sort();
   const expected = [...expectedIds].sort();
@@ -536,7 +559,7 @@ export async function waitForExpectedVectors(generationId, expectedIds) {
   // this as a separate phase so a lagging list never repeats every ID lookup.
   while (Date.now() <= deadline) {
     try {
-      await verifyGenerationInventory(generationId, expectedIds);
+      await verifyGenerationInventory(generationId, expectedIds, { deadline });
       return vectors;
     } catch (error) {
       if (!(error instanceof VectorVisibilityPendingError) && !isRetryableCloudflareError(error)) {

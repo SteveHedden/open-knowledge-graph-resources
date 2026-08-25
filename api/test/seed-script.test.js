@@ -456,10 +456,10 @@ test("vector listing restarts from a fresh snapshot when Cloudflare rejects a cu
       return cloudflareResponse({
         vectors: [{ id: "G1:software:Q1" }],
         isTruncated: true,
-        nextCursor: initialRequests === 1 ? "bad-cursor" : "good-cursor",
+        nextCursor: initialRequests <= 4 ? `bad-cursor-${initialRequests}` : "good-cursor",
       });
     }
-    if (cursor === "bad-cursor") {
+    if (cursor.startsWith("bad-cursor-")) {
       return Response.json(
         {
           success: false,
@@ -486,8 +486,94 @@ test("vector listing restarts from a fresh snapshot when Cloudflare rejects a cu
     await listAllVectorIds({ sleepFn: async (milliseconds) => delays.push(milliseconds) }),
     ["G1:software:Q1", "G1:software:Q2"]
   );
-  assert.deepEqual(cursors, [null, "bad-cursor", null, "good-cursor"]);
-  assert.deepEqual(delays, [1000]);
+  assert.equal(initialRequests, 5);
+  assert.deepEqual(cursors, [
+    null,
+    "bad-cursor-1",
+    null,
+    "bad-cursor-2",
+    null,
+    "bad-cursor-3",
+    null,
+    "bad-cursor-4",
+    null,
+    "good-cursor",
+  ]);
+  assert.deepEqual(delays, [1000, 1000, 1000, 1000]);
+});
+
+test("vector listing bounds repeated cursor recovery by the verification deadline", async (t) => {
+  const original = globalThis.fetch;
+  const delays = [];
+  let now = 0;
+  let initialRequests = 0;
+  let cursorRequests = 0;
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    const cursor = url.searchParams.get("cursor");
+    if (!cursor) {
+      initialRequests += 1;
+      return cloudflareResponse({
+        vectors: [{ id: "G1:software:Q1" }],
+        isTruncated: true,
+        nextCursor: "always-corrupt",
+      });
+    }
+    cursorRequests += 1;
+    return Response.json(
+      {
+        success: false,
+        errors: [{ message: "List vectors cursor appears to be corrupted" }],
+        result: null,
+      },
+      { status: 400 }
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    listAllVectorIds({
+      deadline: 2500,
+      nowFn: () => now,
+      sleepFn: async (milliseconds) => {
+        delays.push(milliseconds);
+        now += milliseconds;
+      },
+    }),
+    /List vectors cursor appears to be corrupted/
+  );
+  assert.equal(initialRequests, 4);
+  assert.equal(cursorRequests, 4);
+  assert.deepEqual(delays, [1000, 1000, 500]);
+});
+
+test("vector listing does not retry unrelated Cloudflare client errors", async (t) => {
+  const original = globalThis.fetch;
+  const delays = [];
+  let calls = 0;
+  globalThis.fetch = async () => {
+    calls += 1;
+    return Response.json(
+      {
+        success: false,
+        errors: [{ message: "Invalid vector-list request" }],
+        result: null,
+      },
+      { status: 400 }
+    );
+  };
+  t.after(() => {
+    globalThis.fetch = original;
+  });
+
+  await assert.rejects(
+    listAllVectorIds({ sleepFn: async (milliseconds) => delays.push(milliseconds) }),
+    /Invalid vector-list request/
+  );
+  assert.equal(calls, 1);
+  assert.deepEqual(delays, []);
 });
 
 test("REST upsert fails closed on any unparsable vector", async (t) => {
