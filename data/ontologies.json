@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T13:15:49Z",
+  "generatedAt": "2026-08-26T13:45:50Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -13560,7 +13560,9 @@
         "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/general-formal-ontology/",
-      "aliases": [],
+      "aliases": [
+        "GFO"
+      ],
       "category": "General / Cross-domain",
       "homepage": "http://www.onto-med.de/ontologies/gfo"
     },
@@ -35070,6 +35072,7 @@
       "aliases": [],
       "category": "Technology & Web",
       "homepage": "https://www.w3.org/TR/prov-o/",
+      "partOf": "W3C PROVenance Interchange",
       "relatedTools": [
         {
           "title": "NORIA-O",

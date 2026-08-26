@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260826T131627Z-12005df58b49",
-  "startedAt": "2026-08-26T13:04:18Z",
-  "sourceRetrievedAt": "2026-08-26T13:15:48Z",
-  "completedAt": "2026-08-26T13:16:27Z",
+  "generationId": "20260826T134636Z-cd94bbad91dc",
+  "startedAt": "2026-08-26T13:42:34Z",
+  "sourceRetrievedAt": "2026-08-26T13:45:48Z",
+  "completedAt": "2026-08-26T13:46:36Z",
   "counts": {
     "records": {
       "resources": 3012,
@@ -11,9 +11,9 @@
       "total": 3324
     },
     "triples": {
-      "ontologies": 31477,
+      "ontologies": 31481,
       "software": 4716,
-      "total": 36193
+      "total": 36197
     }
   },
   "versions": {
@@ -38,11 +38,11 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "44875aa81d3177cc5f761e9e87fc265b454c5b35f2b548fd910dc53120e4fa0f"
+      "sha256": "57a2627834a18ea84641139d8bb3c4a3cd70c2f36a394f41f0250c54d0feedf5"
     },
     {
       "path": "data/ontologies.ttl",
-      "sha256": "384c269a0c2c8b7a95192d61e37c776370b58864d25efedb07a28435b2ed6370"
+      "sha256": "24af0cb863d66fd8879fb02ee9171b3d38739d5092476df747bf8c4ed373912a"
     },
     {
       "path": "data/page_qids.json",
@@ -50,7 +50,7 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "ede6223f6bff9ec85ae4b64ab58b3a130d35782a081a72ea532eae347166ea97"
+      "sha256": "ad94742f5f268b03688632944340be1af4aacb82935da27593aa9d899eaf2e87"
     },
     {
       "path": "data/software.ttl",

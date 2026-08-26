@@ -2170,7 +2170,7 @@
         <https://openknowledgegraphs.com/resource/semantic-web-rule-language/>,
         <https://openknowledgegraphs.com/resource/shacl/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1047113>,
-        <http://www.wikidata.org/entity/Q324254> ;
+        <http://www.wikidata.org/entity/Q3882785> ;
     okg:title "CIDOC Conceptual Reference Model" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q624005> .
 
@@ -14859,6 +14859,7 @@
 
 <https://openknowledgegraphs.com/resource/general-formal-ontology/> a okg:Ontology ;
     rdfs:label "General formal ontology" ;
+    okg:alias "GFO" ;
     okg:category okg:GeneralCrossDomain ;
     okg:homepage <http://www.onto-med.de/ontologies/gfo> ;
     okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
@@ -30563,11 +30564,14 @@ okg:License_hpo_license_Q112817130 a okg:License ;
 
 <https://openknowledgegraphs.com/resource/prov-o-the-prov-ontology/> a okg:Ontology ;
     rdfs:label "PROV-O: The PROV Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q141182637> ;
     okg:category okg:TechnologyWeb ;
     okg:description "W3C ontology for representing provenance information on the web" ;
     okg:homepage <https://www.w3.org/TR/prov-o/> ;
+    okg:partOf "W3C PROVenance Interchange" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/noria-o/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q2661442>,
+        <http://www.wikidata.org/entity/Q3882785>,
         <http://www.wikidata.org/entity/Q62210692> ;
     okg:title "PROV-O: The PROV Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q62213429> .
