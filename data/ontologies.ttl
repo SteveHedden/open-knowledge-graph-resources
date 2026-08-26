@@ -2157,10 +2157,6 @@
 
 <https://openknowledgegraphs.com/resource/cidoc-conceptual-reference-model/> a okg:Ontology ;
     rdfs:label "CIDOC Conceptual Reference Model" ;
-    okg:alias "CIDOC CRM",
-        "CIDOC-CRM",
-        "CRM",
-        "ISO 21127" ;
     okg:category okg:LibraryCulturalHeritage ;
     okg:description "theoretical and practical tool for information integration in the field of cultural heritage" ;
     okg:homepage <http://www.cidoc-crm.org/> ;
