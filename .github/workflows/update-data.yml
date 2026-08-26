@@ -33,6 +33,7 @@ jobs:
       - name: Checkout repository and successful-generation tags
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python

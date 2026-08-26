@@ -112,6 +112,10 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
                 path,
             )
 
+    def test_queued_runs_checkout_the_current_trigger_branch_tip(self) -> None:
+        for path, workflow in self.workflows.items():
+            self.assertIn("ref: ${{ github.ref_name }}", workflow, path)
+
     def test_publication_workflows_do_not_reconcile_after_generation(self) -> None:
         forbidden_commands = (
             "git pull",
