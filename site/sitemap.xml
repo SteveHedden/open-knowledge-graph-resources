@@ -1856,6 +1856,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://openknowledgegraphs.com/resource/library-of-ontologies/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://openknowledgegraphs.com/resource/lido-terminology/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -4106,6 +4111,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://openknowledgegraphs.com/software/autosparql/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://openknowledgegraphs.com/software/blazegraph/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -4767,6 +4777,11 @@
   </url>
   <url>
     <loc>https://openknowledgegraphs.com/software/rdfsharp/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://openknowledgegraphs.com/software/rdfunit/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

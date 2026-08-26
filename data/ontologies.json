@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T16:08:36Z",
+  "generatedAt": "2026-08-26T12:31:05Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -7717,24 +7717,16 @@
       "homepage": "https://www.cyc.com/",
       "relatedTools": [
         {
-          "title": "Basic Formal Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+          "title": "Neomanitai",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/neomanitai-q138773774/"
         },
         {
-          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
+          "title": "Onto-exhibit",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/onto-exhibit/"
         },
         {
-          "title": "General formal ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-formal-ontology/"
-        },
-        {
-          "title": "Suggested Upper Merged Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/"
-        },
-        {
-          "title": "YAMATO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yamato/"
+          "title": "PeriodO",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/periodo/"
         }
       ]
     },
@@ -8466,8 +8458,7 @@
         "DOLCE",
         "DOLCE ontology",
         "DOLCE-Full",
-        "ISO/IEC 21838-3",
-        "top-level ontology"
+        "ISO/IEC 21838-3"
       ],
       "category": "General / Cross-domain",
       "homepage": "https://www.loa.istc.cnr.it/dolce/overview.html",
@@ -8477,24 +8468,20 @@
       ],
       "relatedTools": [
         {
-          "title": "Basic Formal Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+          "title": "Industrial Data Ontology (IDO)",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/"
         },
         {
-          "title": "Cyc",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyc/"
+          "title": "ISO 12620",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-12620/"
         },
         {
-          "title": "General formal ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-formal-ontology/"
+          "title": "ISO 19115",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/iso-19115/"
         },
         {
-          "title": "Suggested Upper Merged Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/"
-        },
-        {
-          "title": "YAMATO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yamato/"
+          "title": "Object Process Methodology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/object-process-methodology/"
         }
       ]
     },
@@ -13575,29 +13562,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/general-formal-ontology/",
       "aliases": [],
       "category": "General / Cross-domain",
-      "homepage": "http://www.onto-med.de/ontologies/gfo",
-      "relatedTools": [
-        {
-          "title": "Basic Formal Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Cyc",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyc/"
-        },
-        {
-          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
-        },
-        {
-          "title": "Suggested Upper Merged Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/"
-        },
-        {
-          "title": "YAMATO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yamato/"
-        }
-      ]
+      "homepage": "http://www.onto-med.de/ontologies/gfo"
     },
     {
       "title": "General Formal Ontology for Biology",
@@ -24330,6 +24295,30 @@
         {
           "title": "Library of Congress Name Authority File",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-congress-name-authority-file/"
+        }
+      ]
+    },
+    {
+      "title": "Library of Ontologies",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141182185",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/library-of-ontologies/",
+      "description": "ontology suite implemented in KIF",
+      "aliases": [],
+      "category": "General / Cross-domain",
+      "homepage": "https://www.loa.istc.cnr.it/old/medicine/index.html",
+      "creators": [
+        {
+          "name": "François Gerbaux",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q141182304"
+        },
+        {
+          "name": "Tom Gruber",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q7816025"
         }
       ]
     },
@@ -40690,6 +40679,19 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
+      "title": "SmartWeb Integrated Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141177877",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/smartweb-integrated-ontology/",
+      "description": "merged upper ontology",
+      "aliases": [
+        "SWIntO"
+      ],
+      "category": "General / Cross-domain"
+    },
+    {
       "title": "SMASH Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q138494285",
       "types": [
@@ -41725,29 +41727,7 @@
         "SUMO"
       ],
       "category": "General / Cross-domain",
-      "homepage": "https://www.ontologyportal.org/",
-      "relatedTools": [
-        {
-          "title": "Basic Formal Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Cyc",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyc/"
-        },
-        {
-          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
-        },
-        {
-          "title": "General formal ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-formal-ontology/"
-        },
-        {
-          "title": "YAMATO",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/yamato/"
-        }
-      ]
+      "homepage": "https://www.ontologyportal.org/"
     },
     {
       "title": "suicideonto",
@@ -47059,28 +47039,6 @@
           "type": "Person",
           "wikidataId": "https://www.wikidata.org/wiki/Q112433082",
           "googleScholarProfile": "https://scholar.google.com/citations?user=8vYF2UIAAAAJ"
-        }
-      ],
-      "relatedTools": [
-        {
-          "title": "Basic Formal Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
-        },
-        {
-          "title": "Cyc",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/cyc/"
-        },
-        {
-          "title": "Descriptive Ontology for Linguistic and Cognitive Engineering",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/"
-        },
-        {
-          "title": "General formal ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/general-formal-ontology/"
-        },
-        {
-          "title": "Suggested Upper Merged Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/"
         }
       ]
     },

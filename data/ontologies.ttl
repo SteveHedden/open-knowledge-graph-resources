@@ -14857,6 +14857,14 @@
     okg:title "General Formal Ontology: Biology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q99543645> .
 
+<https://openknowledgegraphs.com/resource/general-formal-ontology/> a okg:Ontology ;
+    rdfs:label "General formal ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:homepage <http://www.onto-med.de/ontologies/gfo> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "General formal ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q5532347> .
+
 <https://openknowledgegraphs.com/resource/general-multilingual-environmental-thesaurus/> a okg:ControlledVocabulary ;
     rdfs:label "General Multilingual Environmental Thesaurus" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q1378198> ;
@@ -19965,6 +19973,17 @@
     okg:title "Library of Congress Control Number" ;
     okg:uses <http://www.wikidata.org/entity/Q135847> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q620946> .
+
+<https://openknowledgegraphs.com/resource/library-of-ontologies/> a okg:Ontology ;
+    rdfs:label "Library of Ontologies" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_Francois_Gerbaux_Q141182304,
+        okg:Creator_Tom_Gruber_Q7816025 ;
+    okg:description "ontology suite implemented in KIF" ;
+    okg:homepage <https://www.loa.istc.cnr.it/old/medicine/index.html> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "Library of Ontologies" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141182185> .
 
 <https://openknowledgegraphs.com/resource/lido-terminology/> a okg:ControlledVocabulary ;
     rdfs:label "LIDO Terminology" ;
@@ -25838,6 +25857,15 @@
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118617> .
 
+<https://openknowledgegraphs.com/resource/smartweb-integrated-ontology/> a okg:Ontology ;
+    rdfs:label "SmartWeb Integrated Ontology" ;
+    okg:alias "SWIntO" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "merged upper ontology" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "SmartWeb Integrated Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141177877> .
+
 <https://openknowledgegraphs.com/resource/smithsonian-american-art-museum-person-institution-id/> a okg:ControlledVocabulary ;
     rdfs:label "Smithsonian American Art Museum person/institution ID" ;
     okg:alias "SAAM person/institution thesaurus ID",
@@ -26307,6 +26335,17 @@
         <http://www.wikidata.org/entity/Q7094076> ;
     okg:title "Suggested Ontology for Pharmacogenomics" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q99546277> .
+
+<https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/> a okg:Ontology ;
+    rdfs:label "Suggested Upper Merged Ontology" ;
+    okg:alias "SUMO" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "type of upper ontology for computer systems" ;
+    okg:homepage <https://www.ontologyportal.org/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785>,
+        <http://www.wikidata.org/entity/Q7397> ;
+    okg:title "Suggested Upper Merged Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7635093> .
 
 <https://openknowledgegraphs.com/resource/sumerisches-glossar/> a okg:ControlledVocabulary ;
     rdfs:label "Sumerisches Glossar" ;
@@ -28628,6 +28667,18 @@
     okg:title "Yale LUX" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q133612457> .
 
+<https://openknowledgegraphs.com/resource/yamato/> a okg:Ontology ;
+    rdfs:label "YAMATO" ;
+    okg:alias "Yet Another More Advanced Top-Level Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_Riichiro_Mizoguchi_Q112433082 ;
+    okg:description "upper ontology providing foundational concepts for knowledge representation" ;
+    okg:homepage <http://www.hozo.jp/onto_library/upperOnto.htm> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "YAMATO" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118653> .
+
 <https://openknowledgegraphs.com/resource/yangan/> a okg:ControlledVocabulary ;
     rdfs:label "Yangan" ;
     okg:alias "Tianjeok" ;
@@ -29023,6 +29074,10 @@ okg:Creator_Florian_Thiery_Q66606154 a okg:Person ;
 okg:Creator_Francois_Enaud_Q59194354 a okg:Person ;
     rdfs:label "François Énaud" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q59194354> .
+
+okg:Creator_Francois_Gerbaux_Q141182304 a okg:Person ;
+    rdfs:label "François Gerbaux" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141182304> .
 
 okg:Creator_French_Interministerial_Service_of_Archives_Q3480450 a okg:Organization ;
     rdfs:label "French Interministerial Service of Archives" ;
@@ -29554,6 +29609,10 @@ okg:Creator_Thomas_Baker_Q46914185 a okg:Person ;
 okg:Creator_Timothy_W_Clark_Q30743874 a okg:Person ;
     rdfs:label "Timothy W. Clark" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q30743874> .
+
+okg:Creator_Tom_Gruber_Q7816025 a okg:Person ;
+    rdfs:label "Tom Gruber" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7816025> .
 
 okg:Creator_Tom_Heath_Q17744272 a okg:Person ;
     rdfs:label "Tom Heath" ;
@@ -31572,28 +31631,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "NDF-RT" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q21008030> .
 
-<https://openknowledgegraphs.com/resource/neomanitai-q138773774/> a okg:KnowledgeGraph ;
-    rdfs:label "Neomanitai" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q139491295> ;
-    okg:alias "NEOMANITAI",
-        "NEOMANITAI Knowledge Graph" ;
-    okg:category okg:TechnologyWeb ;
-    okg:creator okg:Creator_Andreas_Ehstand_Q138634675 ;
-    okg:description "open terminological framework for systematic naming of human-technology interaction phenomena across domains" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_NonCommercial_NoDerivatives_4_0_International_Q24082749 ;
-    okg:homepage <https://augmanitai.com> ;
-    okg:partOf "PERMANITAI / AUGMANITAI Research Programme" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/onto-exhibit/>,
-        <https://openknowledgegraphs.com/resource/periodo/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1298668>,
-        <http://www.wikidata.org/entity/Q33002955>,
-        <http://www.wikidata.org/entity/Q99231506> ;
-    okg:title "Neomanitai" ;
-    okg:uses <http://www.wikidata.org/entity/Q138522830>,
-        <http://www.wikidata.org/entity/Q5974418> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138773774> .
-
 <https://openknowledgegraphs.com/resource/nukat/> a okg:ControlledVocabulary ;
     rdfs:label "NUKAT" ;
     okg:alias "Narodowy Uniwersalny Katalog Centralny" ;
@@ -31607,20 +31644,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q856638> ;
     okg:title "NUKAT" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11789729> .
-
-<https://openknowledgegraphs.com/resource/onto-exhibit/> a okg:Ontology ;
-    rdfs:label "Onto-exhibit" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:description "OntoExhibit is an innovative ontology that accurately and extensively models museums, exhibitions, and artworks." ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_Q6905323 ;
-    okg:homepage <https://complexhibit-project.github.io/OntoExhibit/index-es.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/neomanitai-q138773774/>,
-        <https://openknowledgegraphs.com/resource/periodo/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1298668>,
-        <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Onto-exhibit" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140363106> .
 
 <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/> a okg:Ontology ;
     rdfs:label "Ontology of units of Measure 2.0" ;
@@ -31665,24 +31688,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q35127> ;
     okg:title "Pathways" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q72699439> .
-
-<https://openknowledgegraphs.com/resource/periodo/> a okg:ControlledVocabulary ;
-    rdfs:label "PeriodO" ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:creator okg:Creator_Adam_Rabinowitz_Q59162564,
-        okg:Creator_Ryan_Shaw_Q104904906 ;
-    okg:description "public domain thesaurus of scholarly definitions of historical, art-historical, and archaeological periods" ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <https://perio.do/en/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/neomanitai-q138773774/>,
-        <https://openknowledgegraphs.com/resource/onto-exhibit/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1006160>,
-        <http://www.wikidata.org/entity/Q1298668>,
-        <http://www.wikidata.org/entity/Q17152639>,
-        <http://www.wikidata.org/entity/Q35127> ;
-    okg:title "PeriodO" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q104904881> .
 
 <https://openknowledgegraphs.com/resource/physico-chemical-methods-and-properties/> a okg:Ontology ;
     rdfs:label "Physico-chemical methods and properties" ;
@@ -32350,6 +32355,24 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
         <http://www.wikidata.org/entity/Q902623> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111272479> .
 
+<https://openknowledgegraphs.com/resource/cyc/> a okg:Ontology ;
+    rdfs:label "Cyc" ;
+    okg:alias "OpenCyc" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "knowledge base and artificial intelligence project" ;
+    okg:homepage <https://www.cyc.com/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/neomanitai-q138773774/>,
+        <https://openknowledgegraphs.com/resource/onto-exhibit/>,
+        <https://openknowledgegraphs.com/resource/periodo/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1298668>,
+        <http://www.wikidata.org/entity/Q1341685>,
+        <http://www.wikidata.org/entity/Q184609>,
+        <http://www.wikidata.org/entity/Q3882785>,
+        <http://www.wikidata.org/entity/Q40056>,
+        <http://www.wikidata.org/entity/Q593744> ;
+    okg:title "Cyc" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q1147294> .
+
 <https://openknowledgegraphs.com/resource/dannet/> a okg:ControlledVocabulary,
         okg:KnowledgeGraph,
         okg:Ontology ;
@@ -32608,57 +32631,6 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Getty Thesaurus of Geographic Names" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1520117> .
 
-<https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/> a okg:Ontology ;
-    rdfs:label "Industrial Data Ontology (IDO)" ;
-    okg:alias "IDO",
-        "ISO 23726 Industrial Data Ontology" ;
-    okg:category okg:FinanceBusiness ;
-    okg:description "Industrial Data Ontology (IDO) is an ontology initiative for representing industrial and process-industry data, developed within ISO standardization efforts (ISO 23726 series) and maintained by the POSC Caesar Association." ;
-    okg:homepage <https://rds.posccaesar.org/ontology/lis14/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/iso-12620/>,
-        <https://openknowledgegraphs.com/resource/iso-19115/>,
-        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
-        <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Industrial Data Ontology (IDO)" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q137713618> .
-
-<https://openknowledgegraphs.com/resource/iso-12620/> a okg:ControlledVocabulary ;
-    rdfs:label "ISO 12620" ;
-    okg:alias "DCR",
-        "Data Category Registry",
-        "Data Category Repository",
-        "ISOCat" ;
-    okg:category okg:TechnologyWeb ;
-    okg:description "ISO standard" ;
-    okg:homepage <https://www.datcatinfo.net> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
-        <https://openknowledgegraphs.com/resource/iso-19115/>,
-        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
-        <http://www.wikidata.org/entity/Q15087423>,
-        <http://www.wikidata.org/entity/Q317623> ;
-    okg:title "ISO 12620" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q5974188> .
-
-<https://openknowledgegraphs.com/resource/iso-19115/> a okg:KnowledgeGraph ;
-    rdfs:label "ISO 19115" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:category okg:Geospatial ;
-    okg:description "international standard for geospatial metadata" ;
-    okg:homepage <https://bioportal.bioontology.org/ontologies/ISO19115> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
-        <https://openknowledgegraphs.com/resource/iso-12620/>,
-        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "ISO 19115" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q50377276> .
-
 <https://openknowledgegraphs.com/resource/national-registry-of-science-technology-and-innovation/> a okg:ControlledVocabulary ;
     rdfs:label "National Registry of Science, Technology and Innovation" ;
     okg:alias "Renacyt" ;
@@ -32696,22 +32668,41 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "NCBI organismal classification" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661717> .
 
-<https://openknowledgegraphs.com/resource/object-process-methodology/> a okg:OntologyLanguage ;
-    rdfs:label "Object Process Methodology" ;
-    okg:alias "OPM" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "modelling language and methodology for capturing knowledge and designing systems" ;
-    okg:homepage <https://www.iso.org/standard/84612.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
-        <https://openknowledgegraphs.com/resource/iso-12620/>,
-        <https://openknowledgegraphs.com/resource/iso-19115/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1209840>,
-        <http://www.wikidata.org/entity/Q15087423>,
-        <http://www.wikidata.org/entity/Q1941921>,
-        <http://www.wikidata.org/entity/Q7095059> ;
-    okg:title "Object Process Methodology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q7075046> .
+<https://openknowledgegraphs.com/resource/neomanitai-q138773774/> a okg:KnowledgeGraph ;
+    rdfs:label "Neomanitai" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q139491295> ;
+    okg:alias "NEOMANITAI",
+        "NEOMANITAI Knowledge Graph" ;
+    okg:category okg:TechnologyWeb ;
+    okg:creator okg:Creator_Andreas_Ehstand_Q138634675 ;
+    okg:description "open terminological framework for systematic naming of human-technology interaction phenomena across domains" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_NonCommercial_NoDerivatives_4_0_International_Q24082749 ;
+    okg:homepage <https://augmanitai.com> ;
+    okg:partOf "PERMANITAI / AUGMANITAI Research Programme" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cyc/>,
+        <https://openknowledgegraphs.com/resource/onto-exhibit/>,
+        <https://openknowledgegraphs.com/resource/periodo/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1298668>,
+        <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q99231506> ;
+    okg:title "Neomanitai" ;
+    okg:uses <http://www.wikidata.org/entity/Q138522830>,
+        <http://www.wikidata.org/entity/Q5974418> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q138773774> .
+
+<https://openknowledgegraphs.com/resource/onto-exhibit/> a okg:Ontology ;
+    rdfs:label "Onto-exhibit" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:description "OntoExhibit is an innovative ontology that accurately and extensively models museums, exhibitions, and artworks." ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_Q6905323 ;
+    okg:homepage <https://complexhibit-project.github.io/OntoExhibit/index-es.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cyc/>,
+        <https://openknowledgegraphs.com/resource/neomanitai-q138773774/>,
+        <https://openknowledgegraphs.com/resource/periodo/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1298668>,
+        <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Onto-exhibit" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140363106> .
 
 <https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/> a okg:Ontology ;
     rdfs:label "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)" ;
@@ -32750,6 +32741,24 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
         <http://www.wikidata.org/entity/Q3327521> ;
     okg:title "Parks Canada Descriptive and Visual Dictionary of Objects" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55438037> .
+
+<https://openknowledgegraphs.com/resource/periodo/> a okg:ControlledVocabulary ;
+    rdfs:label "PeriodO" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Adam_Rabinowitz_Q59162564,
+        okg:Creator_Ryan_Shaw_Q104904906 ;
+    okg:description "public domain thesaurus of scholarly definitions of historical, art-historical, and archaeological periods" ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <https://perio.do/en/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cyc/>,
+        <https://openknowledgegraphs.com/resource/neomanitai-q138773774/>,
+        <https://openknowledgegraphs.com/resource/onto-exhibit/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1006160>,
+        <http://www.wikidata.org/entity/Q1298668>,
+        <http://www.wikidata.org/entity/Q17152639>,
+        <http://www.wikidata.org/entity/Q35127> ;
+    okg:title "PeriodO" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q104904881> .
 
 <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -33135,6 +33144,26 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "Database of Czech Librarians" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q135216794> .
 
+<https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
+    rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
+    okg:alias "DOLCE",
+        "DOLCE ontology",
+        "DOLCE-Full",
+        "ISO/IEC 21838-3" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology for categories underlying natural language and human common sense" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://www.loa.istc.cnr.it/dolce/overview.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+        <https://openknowledgegraphs.com/resource/iso-12620/>,
+        <https://openknowledgegraphs.com/resource/iso-19115/>,
+        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
+    okg:sourceRepo <https://github.com/appliedontolab/DOLCE> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
+        <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
+
 <https://openknowledgegraphs.com/resource/events/> a okg:ControlledVocabulary ;
     rdfs:label "Events" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q107530575> ;
@@ -33149,19 +33178,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:sourceType <http://www.wikidata.org/entity/Q17152639> ;
     okg:title "Events" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q107530716> .
-
-<https://openknowledgegraphs.com/resource/general-formal-ontology/> a okg:Ontology ;
-    rdfs:label "General formal ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <http://www.onto-med.de/ontologies/gfo> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/>,
-        <https://openknowledgegraphs.com/resource/yamato/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
-    okg:title "General formal ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q5532347> .
 
 <https://openknowledgegraphs.com/resource/german-barcode-of-life/> a okg:KnowledgeGraph ;
     rdfs:label "German Barcode of Life" ;
@@ -33300,6 +33316,22 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "ICPSR Thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q110305220> .
 
+<https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/> a okg:Ontology ;
+    rdfs:label "Industrial Data Ontology (IDO)" ;
+    okg:alias "IDO",
+        "ISO 23726 Industrial Data Ontology" ;
+    okg:category okg:FinanceBusiness ;
+    okg:description "Industrial Data Ontology (IDO) is an ontology initiative for representing industrial and process-industry data, developed within ISO standardization efforts (ISO 23726 series) and maintained by the POSC Caesar Association." ;
+    okg:homepage <https://rds.posccaesar.org/ontology/lis14/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/iso-12620/>,
+        <https://openknowledgegraphs.com/resource/iso-19115/>,
+        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
+        <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Industrial Data Ontology (IDO)" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q137713618> .
+
 <https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/> a okg:ControlledVocabulary ;
     rdfs:label "International Classification of Functioning, Disability and Health" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q41341734> ;
@@ -33339,6 +33371,41 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <http://www.wikidata.org/entity/Q859161> ;
     okg:title "Internet Dictionary of Polish Surnames" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q118130420> .
+
+<https://openknowledgegraphs.com/resource/iso-12620/> a okg:ControlledVocabulary ;
+    rdfs:label "ISO 12620" ;
+    okg:alias "DCR",
+        "Data Category Registry",
+        "Data Category Repository",
+        "ISOCat" ;
+    okg:category okg:TechnologyWeb ;
+    okg:description "ISO standard" ;
+    okg:homepage <https://www.datcatinfo.net> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+        <https://openknowledgegraphs.com/resource/iso-19115/>,
+        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824>,
+        <http://www.wikidata.org/entity/Q15087423>,
+        <http://www.wikidata.org/entity/Q317623> ;
+    okg:title "ISO 12620" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q5974188> .
+
+<https://openknowledgegraphs.com/resource/iso-19115/> a okg:KnowledgeGraph ;
+    rdfs:label "ISO 19115" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
+    okg:category okg:Geospatial ;
+    okg:description "international standard for geospatial metadata" ;
+    okg:homepage <https://bioportal.bioontology.org/ontologies/ISO19115> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+        <https://openknowledgegraphs.com/resource/iso-12620/>,
+        <https://openknowledgegraphs.com/resource/object-process-methodology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
+        <http://www.wikidata.org/entity/Q33002955> ;
+    okg:title "ISO 19115" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q50377276> .
 
 <https://openknowledgegraphs.com/resource/library-of-congress-subject-headings/> a okg:ControlledVocabulary ;
     rdfs:label "Library of Congress Subject Headings" ;
@@ -33472,6 +33539,23 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "NSK" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55753821> .
 
+<https://openknowledgegraphs.com/resource/object-process-methodology/> a okg:OntologyLanguage ;
+    rdfs:label "Object Process Methodology" ;
+    okg:alias "OPM" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "modelling language and methodology for capturing knowledge and designing systems" ;
+    okg:homepage <https://www.iso.org/standard/84612.html> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
+        <https://openknowledgegraphs.com/resource/industrial-data-ontology-ido/>,
+        <https://openknowledgegraphs.com/resource/iso-12620/>,
+        <https://openknowledgegraphs.com/resource/iso-19115/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1209840>,
+        <http://www.wikidata.org/entity/Q15087423>,
+        <http://www.wikidata.org/entity/Q1941921>,
+        <http://www.wikidata.org/entity/Q7095059> ;
+    okg:title "Object Process Methodology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q7075046> .
+
 <https://openknowledgegraphs.com/resource/personal-authority-wikibase-of-the-czech-republic/> a okg:KnowledgeGraph ;
     rdfs:label "Personal Authority Wikibase of the Czech Republic" ;
     okg:alias "Czech National Name Authority Database as Linked Data" ;
@@ -33580,22 +33664,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <http://www.wikidata.org/entity/Q62210692> ;
     okg:title "SKOS" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q2288360> .
-
-<https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/> a okg:Ontology ;
-    rdfs:label "Suggested Upper Merged Ontology" ;
-    okg:alias "SUMO" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "type of upper ontology for computer systems" ;
-    okg:homepage <https://www.ontologyportal.org/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/general-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/yamato/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q3882785>,
-        <http://www.wikidata.org/entity/Q7397> ;
-    okg:title "Suggested Upper Merged Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q7635093> .
 
 <https://openknowledgegraphs.com/resource/ted/> a okg:ControlledVocabulary ;
     rdfs:label "TED" ;
@@ -33731,23 +33799,6 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <http://www.wikidata.org/entity/Q17152639> ;
     okg:title "World War II Thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q107530575> .
-
-<https://openknowledgegraphs.com/resource/yamato/> a okg:Ontology ;
-    rdfs:label "YAMATO" ;
-    okg:alias "Yet Another More Advanced Top-Level Ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:creator okg:Creator_Riichiro_Mizoguchi_Q112433082 ;
-    okg:description "upper ontology providing foundational concepts for knowledge representation" ;
-    okg:homepage <http://www.hozo.jp/onto_library/upperOnto.htm> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/general-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q3882785> ;
-    okg:title "YAMATO" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118653> .
 
 okg:Creator_Inter_university_Consortium_for_Political_and_Social_Research_Q6044782 a okg:Organization ;
     rdfs:label "Inter-university Consortium for Political and Social Research" ;
@@ -34206,26 +34257,6 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
         <http://www.wikidata.org/entity/Q902623> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q113006226> .
 
-<https://openknowledgegraphs.com/resource/cyc/> a okg:Ontology ;
-    rdfs:label "Cyc" ;
-    okg:alias "OpenCyc" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "knowledge base and artificial intelligence project" ;
-    okg:homepage <https://www.cyc.com/> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/>,
-        <https://openknowledgegraphs.com/resource/general-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/>,
-        <https://openknowledgegraphs.com/resource/yamato/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1298668>,
-        <http://www.wikidata.org/entity/Q1341685>,
-        <http://www.wikidata.org/entity/Q184609>,
-        <http://www.wikidata.org/entity/Q3882785>,
-        <http://www.wikidata.org/entity/Q40056>,
-        <http://www.wikidata.org/entity/Q593744> ;
-    okg:title "Cyc" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q1147294> .
-
 <https://openknowledgegraphs.com/resource/gellish-english/> a okg:ControlledVocabulary,
         okg:Ontology ;
     rdfs:label "Gellish English" ;
@@ -34356,28 +34387,6 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
         <http://www.wikidata.org/entity/Q81661717>,
         <http://www.wikidata.org/entity/Q902623> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118285> .
-
-<https://openknowledgegraphs.com/resource/descriptive-ontology-for-linguistic-and-cognitive-engineering/> a okg:Ontology ;
-    rdfs:label "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
-    okg:alias "DOLCE",
-        "DOLCE ontology",
-        "DOLCE-Full",
-        "ISO/IEC 21838-3",
-        "top-level ontology" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "ontology for categories underlying natural language and human common sense" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://www.loa.istc.cnr.it/dolce/overview.html> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/cyc/>,
-        <https://openknowledgegraphs.com/resource/general-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/suggested-upper-merged-ontology/>,
-        <https://openknowledgegraphs.com/resource/yamato/> ;
-    okg:sourceRepo <https://github.com/appliedontolab/DOLCE> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q15087423>,
-        <http://www.wikidata.org/entity/Q3882785> ;
-    okg:title "Descriptive Ontology for Linguistic and Cognitive Engineering" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q25052983> .
 
 <https://openknowledgegraphs.com/resource/rof-extension-mode/> a okg:ControlledVocabulary ;
     rdfs:label "ROF extension mode" ;

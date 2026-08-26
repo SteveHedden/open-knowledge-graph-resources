@@ -1455,8 +1455,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.4.0" ;
-    okg:releaseDate "2026-08-24"^^xsd:date ;
+    okg:latestVersion "2.6.0" ;
+    okg:releaseDate "2026-08-25"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -4492,12 +4492,12 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:description "Free online SHACL tool suite : RDF data validation, documentation generation, and more." ;
     okg:hasLicense okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 ;
     okg:homepage <https://shacl-play.sparna.fr/play/> ;
-    okg:latestVersion "0.12.3" ;
+    okg:latestVersion "0.12.4" ;
     okg:programmingLanguage "Java" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/excel-2-rdf/>,
         <https://openknowledgegraphs.com/software/skos-play/>,
         <https://openknowledgegraphs.com/software/sparnatural/> ;
-    okg:releaseDate "2026-08-10"^^xsd:date ;
+    okg:releaseDate "2026-08-25"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/sparna-git/shacl-play> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
