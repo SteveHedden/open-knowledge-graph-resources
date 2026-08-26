@@ -537,9 +537,13 @@ class GitPointerTests(unittest.TestCase):
 
 class WorkflowContractTests(unittest.TestCase):
     def test_publication_and_rollback_share_non_canceling_max_queue(self):
-        for relative in (".github/workflows/update-data.yml", ".github/workflows/deploy.yml"):
+        for relative in (
+            ".github/workflows/update-data.yml",
+            ".github/workflows/update-jobs.yml",
+            ".github/workflows/deploy.yml",
+        ):
             workflow = (ROOT / relative).read_text()
-            self.assertIn("group: catalog-publication", workflow)
+            self.assertIn("group: repository-publication", workflow)
             self.assertIn("cancel-in-progress: false", workflow)
             self.assertIn("queue: max", workflow)
 

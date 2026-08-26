@@ -27,8 +27,9 @@ permissions:
   contents: write
 
 concurrency:
-  group: kg-jobs-publication
+  group: repository-publication
   cancel-in-progress: false
+  queue: max
 
 jobs:
   refresh:

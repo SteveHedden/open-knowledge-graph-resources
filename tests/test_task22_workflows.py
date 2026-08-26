@@ -12,6 +12,7 @@ from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLISH_PATH = ROOT / ".github/workflows/update-data.yml"
+JOBS_PATH = ROOT / ".github/workflows/update-jobs.yml"
 ROLLBACK_PATH = ROOT / ".github/workflows/deploy.yml"
 VALIDATE_PATH = ROOT / ".github/workflows/validate.yml"
 VERIFIER_PATH = ROOT / ".github/workflows/scripts/verify_task22_surfaces.py"
@@ -23,6 +24,105 @@ def step_block(workflow: str, name: str) -> str:
     start = workflow.index(marker)
     next_step = workflow.find("\n      - name:", start + len(marker))
     return workflow[start:] if next_step == -1 else workflow[start:next_step]
+
+
+def top_level_block(workflow: str, key: str) -> str:
+    marker = f"{key}:\n"
+    start = workflow.index(marker)
+    lines = workflow[start:].splitlines(keepends=True)
+    end = len(lines)
+    for index, line in enumerate(lines[1:], start=1):
+        if line.strip() and not line.startswith((" ", "\t")):
+            end = index
+            break
+    return "".join(lines[:end]).rstrip()
+
+
+class Task37PublicationConcurrencyContractTests(unittest.TestCase):
+    EXPECTED_CONCURRENCY = """concurrency:
+  group: repository-publication
+  cancel-in-progress: false
+  queue: max"""
+
+    EXPECTED_TRIGGERS = {
+        PUBLISH_PATH: """on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      initialize_semantic_search:
+        description: Initialize or repair semantic search without changing catalog content
+        required: false
+        default: false
+        type: boolean""",
+        JOBS_PATH: """on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: Refresh only this source; default refreshes all five
+        required: false
+        default: all
+        type: choice
+        options:
+          - all
+          - himalayas
+          - jobicy
+          - jooble
+          - arbeitnow
+          - adzuna
+      dry_run:
+        description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
+        required: false
+        default: false
+        type: boolean""",
+        ROLLBACK_PATH: """on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Immutable generation ID or Git ref to redeploy
+        required: true
+        type: string""",
+    }
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.workflows = {
+            path: path.read_text(encoding="utf-8")
+            for path in (PUBLISH_PATH, JOBS_PATH, ROLLBACK_PATH)
+        }
+
+    def test_all_repository_writers_share_one_waiting_queue(self) -> None:
+        concurrency_blocks = {
+            path: top_level_block(workflow, "concurrency")
+            for path, workflow in self.workflows.items()
+        }
+        self.assertEqual(
+            set(concurrency_blocks.values()),
+            {self.EXPECTED_CONCURRENCY},
+            concurrency_blocks,
+        )
+
+    def test_schedules_and_manual_dispatch_inputs_are_unchanged(self) -> None:
+        for path, workflow in self.workflows.items():
+            self.assertEqual(
+                top_level_block(workflow, "on"),
+                self.EXPECTED_TRIGGERS[path],
+                path,
+            )
+
+    def test_publication_workflows_do_not_reconcile_after_generation(self) -> None:
+        forbidden_commands = (
+            "git pull",
+            "git rebase",
+            "git merge",
+            "git push --force",
+            "git push -f",
+        )
+        for path, workflow in self.workflows.items():
+            for command in forbidden_commands:
+                self.assertNotIn(command, workflow, f"{path}: {command}")
 
 
 class Task22WorkflowContractTests(unittest.TestCase):
