@@ -550,6 +550,17 @@ class WorkflowContractTests(unittest.TestCase):
             self.assertIn("cancel-in-progress: false", workflow)
             self.assertIn("queue: max", workflow)
 
+    def test_catalog_pointer_workflows_use_repository_scoped_deploy_key(self):
+        for relative in (
+            ".github/workflows/update-data.yml",
+            ".github/workflows/deploy.yml",
+        ):
+            workflow = (ROOT / relative).read_text()
+            self.assertIn("ssh-key: ${{ secrets.CATALOG_DEPLOY_KEY }}", workflow)
+
+        jobs = (ROOT / ".github/workflows/update-jobs.yml").read_text()
+        self.assertNotIn("CATALOG_DEPLOY_KEY", jobs)
+
     def test_only_refresh_promotes_candidates_and_tag_pushes_cannot_publish(self):
         refresh = (ROOT / ".github/workflows/update-data.yml").read_text()
         rollback = (ROOT / ".github/workflows/deploy.yml").read_text()

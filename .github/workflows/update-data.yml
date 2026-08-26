@@ -35,6 +35,7 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
+          ssh-key: ${{ secrets.CATALOG_DEPLOY_KEY }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
