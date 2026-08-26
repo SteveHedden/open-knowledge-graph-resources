@@ -1,13 +1,16 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import shutil
 import subprocess
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr
 from pathlib import Path
+from unittest import mock
 from urllib.parse import parse_qs, urlsplit
 
 
@@ -583,6 +586,34 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertGreaterEqual(rollback.count(target_script), 3)
         self.assertIn(target_validator, rollback)
         self.assertIn(target_requirements, rollback)
+
+
+class CommandDiagnosticsTests(unittest.TestCase):
+    def test_git_failure_reports_captured_stdout_and_stderr(self):
+        failure = subprocess.CalledProcessError(
+            1,
+            ["git", "push"],
+            output="remote output\n",
+            stderr="remote rejection\n",
+        )
+        captured = io.StringIO()
+        with mock.patch.object(catalog_snapshot, "advance_success_tags", side_effect=failure):
+            with redirect_stderr(captured):
+                result = catalog_snapshot.main(
+                    [
+                        "advance-success",
+                        "--repository",
+                        ".",
+                        "--generation-id",
+                        GENERATION_ID,
+                        "--commit",
+                        "HEAD",
+                    ]
+                )
+
+        self.assertEqual(result, 1)
+        self.assertIn("remote output", captured.getvalue())
+        self.assertIn("remote rejection", captured.getvalue())
 
 
 if __name__ == "__main__":

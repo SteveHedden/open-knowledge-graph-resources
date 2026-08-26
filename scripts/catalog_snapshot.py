@@ -1067,6 +1067,11 @@ def main(argv: Sequence[str] | None = None) -> int:
             raise SnapshotError(f"Unknown command {args.command!r}.")
     except (SnapshotError, OSError, subprocess.CalledProcessError) as exc:
         print(f"catalog snapshot failed: {exc}", file=sys.stderr)
+        if isinstance(exc, subprocess.CalledProcessError):
+            if exc.stdout:
+                print(exc.stdout.rstrip(), file=sys.stderr)
+            if exc.stderr:
+                print(exc.stderr.rstrip(), file=sys.stderr)
         return 1
     return 0
 
