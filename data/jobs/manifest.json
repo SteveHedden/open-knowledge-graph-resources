@@ -2,11 +2,11 @@
   "artifacts": [
     {
       "path": "data/jobs/jobs.json",
-      "sha256": "3780049990ff4cdf41e4e306902c2b0e15bff579ea5bba9b565418028d5ac837"
+      "sha256": "7b21a9ed54581d948720df6997a4d9a0b0a0072085bd881185d9fbd207084db3"
     },
     {
       "path": "data/jobs/jobs.ttl",
-      "sha256": "4350bbe0b26bf2d0fefdd83598fbe34372fc7e1fe461b7e539c145394f892e48"
+      "sha256": "c474bf6ea4e98df0b8bdf7b5a575e03b6145b04f717f7492a00a4918fb22c48f"
     },
     {
       "path": "data/jobs/raw/adzuna.json",
@@ -30,11 +30,11 @@
     },
     {
       "path": "data/jobs/run.json",
-      "sha256": "d6f8a0cf1727f572173fb3f188c98469dc74d9747fe224608be7abc8d16585fe"
+      "sha256": "09d5d5c4ac4cb1ba78d81f73112e0e4f515871e1a19b25187759ad8bb1a48b9f"
     }
   ],
-  "completedAt": "2026-08-27T16:31:00Z",
-  "generationId": "20260827T163100Z-573703ae5eb3",
+  "completedAt": "2026-08-27T16:58:05Z",
+  "generationId": "20260827T165805Z-b1ec5577c872",
   "schemaVersion": "1.0.0",
   "sourceRetrievedAt": "2026-08-27T16:29:23Z",
   "startedAt": "2026-08-27T16:25:08Z"

@@ -1,12 +1,12 @@
 {
-  "activeCount": 567,
+  "activeCount": 582,
   "classificationCounts": {
     "not_match": 419,
-    "qualified": 147,
+    "qualified": 162,
     "review": 1
   },
   "completeSourceSnapshot": false,
-  "deduplicatedCount": 567,
+  "deduplicatedCount": 582,
   "fetchedCount": 200,
   "publicSourceCount": 163,
   "publicationPolicy": "existing-aggregator-policy",
@@ -94,15 +94,24 @@
   "reconciliation": {
     "aggregatorRecords": 554,
     "ambiguous": [],
-    "firstPartyRecords": 13,
-    "inputRecords": 567,
+    "firstPartyRecords": 28,
+    "inputRecords": 582,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 567
+    "outputRecords": 582
   },
   "rejectedCount": 0,
   "requestCount": 4,
   "retrievedAt": "2026-08-27T16:29:23Z",
-  "runId": "20260827T162923Z-7197afb2eae9",
+  "reviewedFirstPartyPromotion": {
+    "appliedAt": "2026-08-27T16:57:31Z",
+    "artifactId": "9631740022",
+    "audit": "jobs/audits/task40-first-party-qualification.json",
+    "baselineRecordCount": 82,
+    "githubActionsRunId": "33034495838",
+    "netQualifiedChange": 15,
+    "qualifiedPublished": 28
+  },
+  "runId": "20260827T162923Z-a399fca515b8",
   "sourceAttributionUrl": "https://www.adzuna.co.uk/",
   "sourceClassificationCounts": {
     "not_match": 71,
