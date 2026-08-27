@@ -1,50 +1,120 @@
 {
-  "activeCount": 569,
+  "activeCount": 567,
   "classificationCounts": {
-    "not_match": 417,
-    "qualified": 151,
+    "not_match": 419,
+    "qualified": 147,
     "review": 1
   },
   "completeSourceSnapshot": false,
-  "deduplicatedCount": 569,
-  "fetchedCount": 300,
-  "publicSourceCount": 300,
+  "deduplicatedCount": 567,
+  "fetchedCount": 200,
+  "publicSourceCount": 163,
   "publicationPolicy": "existing-aggregator-policy",
   "queries": [
-    "all active postings; KG relevance classified locally"
+    "knowledge graph",
+    "ontology",
+    "semantic web",
+    "SPARQL"
   ],
-  "queryCount": 1,
+  "queryCount": 4,
   "queryFamilies": [
     {
-      "query": "all active postings; KG relevance classified locally",
-      "queryConcepts": [],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/arbeitnow-query-all-active"
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-knowledge-graph"
+    },
+    {
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-ontology"
+    },
+    {
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-semantic-web"
+    },
+    {
+      "query": "SPARQL",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-sparql"
+    }
+  ],
+  "queryResults": [
+    {
+      "complete": false,
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-knowledge-graph",
+      "returnedCount": 50,
+      "totalCount": 4541
+    },
+    {
+      "complete": false,
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-ontology",
+      "returnedCount": 50,
+      "totalCount": 2701
+    },
+    {
+      "complete": false,
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-semantic-web",
+      "returnedCount": 50,
+      "totalCount": 301
+    },
+    {
+      "complete": false,
+      "query": "SPARQL",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-sparql",
+      "returnedCount": 50,
+      "totalCount": 525
     }
   ],
   "reconciliation": {
-    "aggregatorRecords": 556,
+    "aggregatorRecords": 554,
     "ambiguous": [],
     "firstPartyRecords": 13,
-    "inputRecords": 569,
+    "inputRecords": 567,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 569
+    "outputRecords": 567
   },
   "rejectedCount": 0,
-  "requestCount": 2,
-  "retrievedAt": "2026-08-27T04:29:32Z",
-  "runId": "20260827T042932Z-4940ebccd773",
-  "sourceAttributionUrl": "https://www.arbeitnow.com/",
+  "requestCount": 4,
+  "retrievedAt": "2026-08-27T16:29:23Z",
+  "runId": "20260827T162923Z-7197afb2eae9",
+  "sourceAttributionUrl": "https://www.adzuna.co.uk/",
   "sourceClassificationCounts": {
-    "not_match": 299,
-    "qualified": 0,
-    "review": 1
+    "not_match": 71,
+    "qualified": 92,
+    "review": 0
   },
-  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/arbeitnow",
-  "sourceKey": "arbeitnow",
-  "sourceName": "Arbeitnow",
+  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/adzuna",
+  "sourceKey": "adzuna",
+  "sourceName": "Adzuna",
   "sourceRefreshes": {
-    "adzuna": "2026-08-26T22:59:37Z",
-    "arbeitnow": "2026-08-27T04:29:32Z",
+    "adzuna": "2026-08-27T16:29:23Z",
+    "arbeitnow": "2026-08-27T16:28:01Z",
     "first-party-eccenca": "2026-08-27T03:01:56Z",
     "first-party-enterprise-knowledge": "2026-08-27T02:59:12Z",
     "first-party-graphwise": "2026-08-27T02:58:16Z",
@@ -58,7 +128,7 @@
     "first-party-weaviate": "2026-08-27T02:57:22Z",
     "first-party-wikimedia": "2026-08-27T02:55:34Z",
     "himalayas": "2026-08-27T02:50:10Z",
-    "jobicy": "2026-08-27T04:28:16Z",
-    "jooble": "2026-08-26T22:57:33Z"
+    "jobicy": "2026-08-27T16:25:19Z",
+    "jooble": "2026-08-27T16:26:41Z"
   }
 }
