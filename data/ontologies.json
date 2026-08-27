@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T03:13:38Z",
+  "generatedAt": "2026-08-27T17:19:43Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -14118,6 +14118,25 @@
       ]
     },
     {
+      "title": "gist",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141190966",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/gist/",
+      "description": "minimalist upper ontology for enterprise information systems",
+      "aliases": [
+        "gist ontology",
+        "gist upper ontology"
+      ],
+      "category": "General / Cross-domain",
+      "homepage": "https://www.semanticarts.com/gist/",
+      "sourceRepo": "https://github.com/semanticarts/gist",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
+    },
+    {
       "title": "Gitabhidhana",
       "wikidataId": "https://www.wikidata.org/wiki/Q123036779",
       "types": [
@@ -21687,16 +21706,19 @@
       "title": "Information Artifact Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q55118415",
       "types": [
+        "KnowledgeGraph",
         "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology/",
       "description": "ontology of information entities",
       "aliases": [
-        "IAO"
+        "IAO",
+        "Information Artifact Ontology (IAO)"
       ],
       "category": "General / Cross-domain",
-      "homepage": "https://github.com/information-artifact-ontology/IAO/",
-      "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
+      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/iao",
+      "sourceRepo": "https://github.com/information-artifact-ontology/IAO/",
+      "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
       ],
@@ -21714,19 +21736,6 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/"
         }
       ]
-    },
-    {
-      "title": "Information Artifact Ontology (IAO)",
-      "wikidataId": "https://www.wikidata.org/wiki/Q138524202",
-      "types": [
-        "KnowledgeGraph",
-        "Ontology"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology-iao/",
-      "aliases": [],
-      "category": "General / Cross-domain",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/iao",
-      "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
       "title": "Information Artifact Ontology (Meta)",

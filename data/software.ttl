@@ -946,10 +946,10 @@
     okg:description "web application for creating, validating, visualizing, querying and exporting SKOS vocabularies" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_NoDerivs_4_0_International_Q36795408 ;
     okg:homepage <https://jesstalisman-ia.github.io/intentional-arrangement-skos/> ;
-    okg:latestVersion "0.7.0" ;
+    okg:latestVersion "0.9.0" ;
     okg:programmingLanguage "JavaScript",
         "Python" ;
-    okg:releaseDate "2026-08-19"^^xsd:date ;
+    okg:releaseDate "2026-08-26"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/jesstalisman-ia/intentional-arrangement-skos> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;

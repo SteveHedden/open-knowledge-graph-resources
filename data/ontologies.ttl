@@ -15032,6 +15032,19 @@
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118404> .
 
+<https://openknowledgegraphs.com/resource/gist/> a okg:Ontology ;
+    rdfs:label "gist" ;
+    okg:alias "gist ontology",
+        "gist upper ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "minimalist upper ontology for enterprise information systems" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://www.semanticarts.com/gist/> ;
+    okg:sourceRepo <https://github.com/semanticarts/gist> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "gist" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141190966> .
+
 <https://openknowledgegraphs.com/resource/gitabhidhana/> a okg:ControlledVocabulary ;
     rdfs:label "Gitabhidhana" ;
     okg:alias "Geetabhidhana" ;
@@ -19176,18 +19189,6 @@
     okg:sourceType <http://www.wikidata.org/entity/Q17152639> ;
     okg:title "INFODATA thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1654169> .
-
-<https://openknowledgegraphs.com/resource/information-artifact-ontology-iao/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Information Artifact Ontology (IAO)" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <https://www.ebi.ac.uk/ols4/ontologies/iao> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Information Artifact Ontology (IAO)" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138524202> .
 
 <https://openknowledgegraphs.com/resource/information-artifact-ontology-meta/> a okg:KnowledgeGraph ;
     rdfs:label "Information Artifact Ontology (Meta)" ;
@@ -28671,8 +28672,7 @@
     okg:creator okg:Creator_Riichiro_Mizoguchi_Q112433082 ;
     okg:description "upper ontology providing foundational concepts for knowledge representation" ;
     okg:homepage <http://www.hozo.jp/onto_library/upperOnto.htm> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q3882785> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
     okg:title "YAMATO" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118653> .
 
@@ -31494,19 +31494,25 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "ICD-11" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55695727> .
 
-<https://openknowledgegraphs.com/resource/information-artifact-ontology/> a okg:Ontology ;
+<https://openknowledgegraphs.com/resource/information-artifact-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
     rdfs:label "Information Artifact Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "IAO" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183>,
+        <http://www.wikidata.org/entity/Q54837> ;
+    okg:alias "IAO",
+        "Information Artifact Ontology (IAO)" ;
     okg:category okg:GeneralCrossDomain ;
     okg:description "ontology of information entities" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://github.com/information-artifact-ontology/IAO/> ;
-    okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
+    okg:homepage <https://www.ebi.ac.uk/ols4/ontologies/iao> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
         <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
         <https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:sourceRepo <https://github.com/information-artifact-ontology/IAO/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Information Artifact Ontology" ;
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118415> .
