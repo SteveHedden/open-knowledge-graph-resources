@@ -1,18 +1,26 @@
 {
   "activeCount": 569,
   "classificationCounts": {
-    "not_match": 418,
+    "not_match": 417,
     "qualified": 151,
-    "review": 0
+    "review": 1
   },
-  "completeSourceSnapshot": true,
+  "completeSourceSnapshot": false,
   "deduplicatedCount": 569,
-  "fetchedCount": 0,
-  "publicSourceCount": 0,
-  "publicationPolicy": "first-party-qualified-only",
-  "queries": [],
-  "queryCount": 0,
-  "queryFamilies": [],
+  "fetchedCount": 300,
+  "publicSourceCount": 300,
+  "publicationPolicy": "existing-aggregator-policy",
+  "queries": [
+    "all active postings; KG relevance classified locally"
+  ],
+  "queryCount": 1,
+  "queryFamilies": [
+    {
+      "query": "all active postings; KG relevance classified locally",
+      "queryConcepts": [],
+      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow-query-all-active"
+    }
+  ],
   "reconciliation": {
     "aggregatorRecords": 556,
     "ambiguous": [],
@@ -22,21 +30,21 @@
     "outputRecords": 569
   },
   "rejectedCount": 0,
-  "requestCount": 1,
-  "retrievedAt": "2026-08-27T03:02:53Z",
-  "runId": "20260827T030253Z-26b3e660275a",
-  "sourceAttributionUrl": "https://www.w3.org/careers/",
+  "requestCount": 2,
+  "retrievedAt": "2026-08-27T04:29:32Z",
+  "runId": "20260827T042932Z-4940ebccd773",
+  "sourceAttributionUrl": "https://www.arbeitnow.com/",
   "sourceClassificationCounts": {
-    "not_match": 0,
+    "not_match": 299,
     "qualified": 0,
-    "review": 0
+    "review": 1
   },
-  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-w3c",
-  "sourceKey": "first-party-w3c",
-  "sourceName": "Careers at W3C",
+  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
+  "sourceKey": "arbeitnow",
+  "sourceName": "Arbeitnow",
   "sourceRefreshes": {
     "adzuna": "2026-08-26T22:59:37Z",
-    "arbeitnow": "2026-08-27T02:51:55Z",
+    "arbeitnow": "2026-08-27T04:29:32Z",
     "first-party-eccenca": "2026-08-27T03:01:56Z",
     "first-party-enterprise-knowledge": "2026-08-27T02:59:12Z",
     "first-party-graphwise": "2026-08-27T02:58:16Z",
@@ -50,7 +58,7 @@
     "first-party-weaviate": "2026-08-27T02:57:22Z",
     "first-party-wikimedia": "2026-08-27T02:55:34Z",
     "himalayas": "2026-08-27T02:50:10Z",
-    "jobicy": "2026-08-27T02:51:01Z",
+    "jobicy": "2026-08-27T04:28:16Z",
     "jooble": "2026-08-26T22:57:33Z"
   }
 }
