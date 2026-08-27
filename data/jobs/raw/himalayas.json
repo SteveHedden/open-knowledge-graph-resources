@@ -12,7 +12,7 @@
         "updatedAt": 1787430618,
         "offset": 0,
         "limit": 20,
-        "totalCount": 154,
+        "totalCount": 146,
         "jobs": [
           {
             "title": "Knowledge Graph Engineer",
@@ -653,49 +653,6 @@
             "guid": "https://himalayas.app/companies/adesso-belgium/jobs/freelance-data-scientist-with-ontology-and-graph-expertise"
           },
           {
-            "title": "Senior Data Engineer (Graph Databases & Databricks) - LATAM/Mexico - English Req",
-            "excerpt": "Work at DaCodes! We are a high-impact software and digital transformation firm.",
-            "companyName": "DaCodes",
-            "companySlug": "dacodes",
-            "companyLogo": "https://cdn-images.himalayas.app/haejjwc2pp2xj7laq5h4crs9759z",
-            "employmentType": "Contractor",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "Mexico"
-            ],
-            "timezoneRestrictions": [
-              -8,
-              -7,
-              -6,
-              -5
-            ],
-            "categories": [
-              "Data-Engineering",
-              "Graph-Database-Engineering",
-              "Database-Engineering",
-              "Data-Platform-Engineering",
-              "Senior-Data-Engineering",
-              "Senior-Databricks-Engineer",
-              "Senior-Data-Infrastructure-Engineer",
-              "Senior-Cloud-Data-Engineer",
-              "Data-Engineer"
-            ],
-            "parentCategories": [
-              "Data Science"
-            ],
-            "description": "<h3>Work at <a href=\"https://himalayas.app/companies/dacodes\">DaCodes</a>!</h3><p>We are a high-impact software and digital transformation firm.</p><p>For over 10 years, we have developed technology and innovation-driven solutions thanks to our team of nearly 300 talented #DaCoders, including developers, architects, UX/UI designers, PMs, QA testers, and more. Our team collaborates on projects with clients across LATAM and the United States, delivering outstanding results.</p><p>At <a href=\"https://himalayas.app/companies/dacodes\">DaCodes</a>, you will have the opportunity to accelerate your professional growth, work on diverse projects across multiple industries, and contribute to the design, implementation, and optimization of cloud-based and data-driven solutions.</p><p>Our DaCoders have a significant impact on the success of both our business and our clients. You will be the expert participating in our projects and will gain exposure to disruptive startups and global brands.</p><h3>Interested?</h3><p>We are seeking a Senior Graph Data Engineer to join a strategic initiative focused on evaluating and benchmarking enterprise-scale knowledge graph technologies. This role combines hands-on data engineering, graph database implementation, performance testing, and technical analysis to determine the best technology stack for large-scale graph-based workloads.</p><p>The ideal candidate is passionate about data platforms, graph technologies, performance optimization, and evidence-driven engineering decisions. You will work closely with engineering and architecture leaders to assess multiple graph database platforms and provide technical recommendations based on measurable results and enterprise requirements. </p><h3>Requirements</h3><h3>Main Responsibilities</h3><ul>\n<li> Design and execute large-scale graph database evaluations and benchmarking initiatives. </li>\n<li> Extract, transform, and load data from Databricks into multiple graph database platforms. </li>\n<li> Build and maintain graph structures, entity relationships, and linkages that replicate production-grade data models. </li>\n<li> Implement benchmark workloads using graph query languages such as Cypher, GSQL, openCypher, nGQL, or AQL. </li>\n<li> Develop PostgreSQL baseline implementations using recursive CTEs and advanced querying techniques. </li>\n<li> Design and build APIs to evaluate real-world query performance and scalability. </li>\n<li> Analyze execution plans, indexing strategies, and query optimization opportunities. </li>\n<li> Continuously provision, configure, and tear down database environments for controlled testing. </li>\n<li> Document findings, benchmark results, technical trade-offs, and recommendations. </li>\n<li> Collaborate with architects, data engineers, and technical leadership teams throughout the evaluation process. </li>\n<li> Participate in architecture discussions and contribute to strategic technology decisions. </li>\n</ul><h3>Desired Profile</h3><h3>Experience</h3><ul>\n<li> 6+ years of experience in Data Engineering, Database Engineering, or Data Platform development. </li>\n<li> 3+ years working with enterprise-scale data platforms. </li>\n<li> Proven experience designing and executing technology evaluations and performance benchmarks. </li>\n<li> Experience working with distributed systems and large-scale data environments. </li>\n</ul><h3>Required Technical Skills</h3><ul>\n<li> Strong Databricks experience. </li>\n<li> Advanced SQL and PostgreSQL expertise. </li>\n<li> Deep knowledge of: </li>\n<ul>\n<li> Recursive CTEs </li>\n<li> Query optimization </li>\n<li> Query plan analysis </li>\n<li> Indexing strategies </li>\n<li> Materialized views </li>\n</ul>\n<li> Hands-on experience with at least two graph database technologies, preferably: </li>\n<ul>\n<li> Neo4j </li>\n<li> TigerGraph </li>\n<li> Nebula Graph </li>\n<li> ArangoDB </li>\n<li> Memgraph </li>\n</ul>\n<li> Strong Cypher knowledge. </li>\n<li> Experience building APIs for data access and performance testing. </li>\n<li> ETL/ELT development experience. </li>\n<li> Git and version control best practices. </li>\n</ul><h3>Nice to Have</h3><ul>\n<li> AWS-native database deployments. </li>\n<li> Kubernetes for database workloads. </li>\n<li> Knowledge Graph architecture experience. </li>\n<li> KYC / AML domain knowledge. </li>\n<li> Data modeling for highly connected datasets. </li>\n<li> Experience comparing graph databases against relational database solutions. </li>\n</ul><h3>Soft Skills</h3><ul>\n<li> Strong analytical and problem-solving abilities. </li>\n<li> Excellent communication and documentation skills. </li>\n<li> Ability to present technical findings to leadership teams. </li>\n<li> Ownership mindset and accountability. </li>\n<li> Data-driven decision making. </li>\n<li> Ability to work independently in ambiguous environments. </li>\n<li> Strong collaboration skills within distributed teams. </li>\n</ul><h3>Education</h3><ul>\n<li> Bachelor's degree in Computer Science, Software Engineering, Information Systems, Data Science, or related field. </li>\n<li> Master's degree is a plus. </li>\n</ul><h3>Additional Requirements</h3><ul>\n<li> Advanced English (C1+ preferred). </li>\n<li> Remote position. </li>\n<li> Candidates located in LATAM or Mexico. </li>\n<li> Availability to collaborate with teams across the Americas time zones.</li>\n</ul><h3>Benefits</h3><p>🚀 Integration into global brands and disruptive startups.</p><h3> 🏠 Remote work/Home office.</h3><p> 📌 If a hybrid or on-site modality is required, you will be informed from the first session.</p><p> ⏰ Schedule aligned with the assigned project/work cell.</p><h3> 📅 Monday to Friday work schedule.</h3><h3> 🎂 Day off on your birthday.</h3><p> 🏥 Major medical insurance (applies to Mexico).</p><h3> 🛡️ Life insurance (applies to Mexico).</h3><h3> 🌎 Multicultural teams.</h3><h3> 📚 Access to courses and certifications.</h3><p> 🎤 Meetups with special guests from the IT industry.</p><p> 🤝 Virtual integration events and interest groups.</p><h3> 🇺🇸 English classes.</h3><p> 📈 Opportunities within our different business lines.</p><p> 🏆 Proudly certified as a Great Place to Work.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1782572943,
-            "expiryDate": 1787756943,
-            "applicationLink": "https://himalayas.app/companies/dacodes/jobs/senior-data-engineer-graph-databases-databricks-latam-mexico-english-req",
-            "guid": "https://himalayas.app/companies/dacodes/jobs/senior-data-engineer-graph-databases-databricks-latam-mexico-english-req"
-          },
-          {
             "title": "Sr. Engineer, Knowledge Engineering - 11317",
             "excerpt": "Coupa makes margins multiply through its community-generated AI and industry-leading total spend management platform for businesses large and small.",
             "companyName": "Coupa Software, Inc.",
@@ -814,50 +771,6 @@
             "guid": "https://himalayas.app/companies/ci-t/jobs/job-30900-master-data-developer-amazon-neptune-colombia"
           },
           {
-            "title": "Ontology Architect",
-            "excerpt": "Tiger Analytics is an advanced analytics consulting firm.",
-            "companyName": "Tiger Analytics",
-            "companySlug": "tiger-analytics",
-            "companyLogo": "https://cdn-images.himalayas.app/fbbn4sxk8oyuweoaquy6j1fi4j4r",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Director"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "United States"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "categories": [
-              "Ontology-Architecture",
-              "Knowledge-Graph-Engineering",
-              "Data-Architecture",
-              "Data-Engineering",
-              "Semantic-Technologies",
-              "Ontology-Expert",
-              "Ontology-Development",
-              "Ontology",
-              "Data-Ontology-Engineering"
-            ],
-            "parentCategories": [],
-            "description": "<p><a href=\"https://himalayas.app/companies/tiger-analytics\">Tiger Analytics</a> is an advanced analytics consulting firm. We are the trusted analytics partner for several Fortune 100 companies, enabling them to generate business value from data. Our consultants bring deep expertise in Data Science, Machine Learning, and AI. Our business value and leadership have been recognized by various market research firms, including Forrester and Gartner.</p><p>We are looking for an Ontology Architect to lead high-impact applied Engineering and analytics initiatives. This role combines deep technical expertise, strong experimentation rigor, and business leadership to influence product direction and drive measurable outcomes at scale.</p><h3>Responsibilities:</h3><ul><ul>\n<li>\n<strong>Ontology &amp; Taxonomy Design:</strong> Lead the creation, modeling, and evolution of enterprise-wide ontologies, taxonomies, and controlled vocabularies that accurately represent complex business domains.</li>\n<li>\n<strong>Knowledge Graph Architecture:</strong> Design and implement scalable architecture, ingestion pipelines, and governance for enterprise Knowledge Graphs (Triple Stores or Property Graphs).</li>\n<li>\n<strong>Semantic Layer Strategy:</strong> Build and maintain the enterprise semantic layer to abstract physical data complexities, providing a unified, machine-readable business view of data.</li>\n<li>\n<strong>Data Product Augmentation:</strong> Partner with domain data teams to map, link, and augment decentralized <strong>Data Products</strong> using the central ontology to ensure semantic interoperability across the organization.</li>\n<li>\n<strong>Inference &amp; Reasoning:</strong> Implement semantic reasoning and inference rules to automatically generate new metadata and uncover hidden insights within the graph.</li>\n<li>\n<strong>Governance &amp; Standards:</strong> Establish best practices, version control mechanisms, and data contracts for semantic models, ensuring consistent graph schema updates across business units.</li>\n</ul></ul><h3>Requirements</h3><ul>\n<li>\n<strong>Semantic Standards:</strong> Expert-level mastery of core semantic technologies</li>\n<li>\n<strong>Knowledge Graph Engineering:</strong> Hands-on experience designing and operating production-grade Graph Databases / Triple Stores (e.g., <strong>GraphDB, Stardog, Amazon Neptune, AllegroGraph, or Neo4j</strong>).</li>\n<li>\n<strong>Ontology Modeling Tools:</strong> Proficiency with industry-standard ontology engineering and taxonomy management software (e.g., <strong>Protégé, TopBraid Composer, PoolParty</strong>).</li>\n<li>\n<strong>Modern Data Frameworks:</strong> Clear, practical understanding of <strong>Data Mesh</strong> paradigms, specifically how to design a semantic layer that overlays federated, domain-driven <strong>Data Products</strong>.</li>\n<li>\n<strong>Traditional Data Modeling:</strong> Strong baseline in classic data concepts, including relational databases, dimensional modeling, and ETL/ELT integration patterns.</li>\n</ul><h3>Preferred Skills</h3><ul>\n<li>\n<strong>Data Quality &amp; Validation:</strong> Hands-on experience to enforce data quality and constraint validation across graph structures.</li>\n<li>\n<strong>Advanced AI &amp; Graph Analytics:</strong> Familiarity with graph algorithms, graph machine learning (GNNs), or leveraging Knowledge Graphs to enhance Large Language Model architectures via Graph RAG (Retrieval-Aug Generation).</li>\n</ul><h3>Benefits</h3><p>Significant career development opportunities exist as the company grows. The position offers a unique opportunity to be part of a small, fast-growing, challenging and entrepreneurial environment, with a high degree of individual responsibility.</p><p><em><strong><a href=\"https://himalayas.app/companies/tiger-analytics\">Tiger Analytics</a> provides equal employment opportunities to applicants and employees without regard to race, color, religion, age, sex, sexual orientation, gender identity/expression, pregnancy, national origin, ancestry, marital status, protected veteran status, disability status, or any other basis as protected by federal, state, or local law.</strong></em></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1782556860,
-            "expiryDate": 1787740860,
-            "applicationLink": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect",
-            "guid": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect"
-          },
-          {
             "title": "Knowledge Engineer / Ontologist (m/w/d)",
             "excerpt": "wie du die welt von morgen prägen kannst • Wissen modellieren: Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.",
             "companyName": "digetiers",
@@ -941,6 +854,89 @@
             "expiryDate": 1787828387,
             "applicationLink": "https://himalayas.app/companies/pradeepit-consulting-services-pvt-ltd/jobs/nlp-engineer-_-machine-learning-engineer-5-years-remote",
             "guid": "https://himalayas.app/companies/pradeepit-consulting-services-pvt-ltd/jobs/nlp-engineer-_-machine-learning-engineer-5-years-remote"
+          },
+          {
+            "title": "[Job -  30900] Master Data Developer (Amazon Neptune), Brazil",
+            "excerpt": "At CI&T, we help large enterprises transform the potential of AI into real business impact with AI Deployment, AI-native execution, and tech-integrated business solutions.",
+            "companyName": "CI&T",
+            "companySlug": "ci-t",
+            "companyLogo": "https://cdn-images.himalayas.app/gwceunf7j5byi79t5d5qq2yjvis9",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Mid-level"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "Brazil"
+            ],
+            "timezoneRestrictions": [
+              -5,
+              -4,
+              -3,
+              -2
+            ],
+            "categories": [
+              "Graph-Database-Developer",
+              "Data-Developer",
+              "Database-Engineer",
+              "Data-Engineer",
+              "Knowledge-Graph-Engineer",
+              "Master-Data-Management-Engineer"
+            ],
+            "parentCategories": [
+              "Developer",
+              "Data Science"
+            ],
+            "description": "<p>At CI&amp;T, we help large enterprises transform the potential of AI into real business impact with AI Deployment, AI-native execution, and tech-integrated business solutions.</p><p>With 30 years of experience in technological transformation, we accelerate innovation with expertise in Agentic SDLC, Application modernization, Data &amp; AI, Martech and Business strategy.</p><p>We are 8,000 CI&amp;Ters across more than 25 countries, collaborating to build solutions with real impact. AI is already part of how we work, evolve, and innovate every day.</p><div>\n<p>As CI&amp;T grows its Data &amp; Analytics Center of Excellence, we seek a talented and experienced Graph Database Developer to join a specialized team building an AI-powered fashion advisory platform for a leading client in the fashion and retail industry. This role is central to turning unstructured editorial content into a structured knowledge graph that powers real-time, intelligent style recommendations for end users attending formal events.</p>\n<p>The Graph Database Developer will work in a staff augmentation model, integrating with a cross-functional team that includes a Machine Learning Developer and a GenAI Agent Developer. This is a hands-on technical position requiring strong ownership of the graph data layer — from schema design through ingestion, entity resolution, and query performance — with direct impact on what the AI agent recommends to users.</p>\n<h3>Responsibilities:</h3>\n<ul>\n<li><p><strong>Schema Design</strong>: Define node labels and edge types that represent the relationships between designers, garments, style attributes, trends, occasions, and editorial articles.</p></li>\n<li><p><strong>Entity Ingestion</strong>: Build workflows that consume structured JSON payloads from the upstream data pipeline and load them into the graph database in batch mode.</p></li>\n<li><p><strong>Probabilistic Entity Matching</strong>: Match extracted item mentions (for example, a bag described by type, color, and material) to the correct product node in a catalog of 50,000+ SKUs by scoring attribute overlap, assigning a match confidence, and creating the relationship only when it exceeds a defined threshold. Deduplicate items that appear inconsistently across different articles.</p></li>\n<li><p><strong>Editorial Signal Weighting</strong>: Assign weights to relationships based on how prominently an item or trend was featured, distinguishing a dedicated feature from a passing mention. These weights determine what the AI agent surfaces first in its recommendations.</p></li>\n<li><p><strong>Query Optimization</strong>: Design and tune openCypher traversal queries, including multi-hop queries, to return relevant results in under three seconds for downstream Amazon Bedrock Agents.</p></li>\n<li><p><strong>Cross-Functional Collaboration</strong>: Work alongside the Machine Learning Developer and GenAI Agent Developer to align the graph structure with the retrieval and recommendation needs of the AI agent.</p></li>\n<li><p><strong>Technical Validation</strong>: Support technical interviews and validation of new team members joining the graph database workstream, as needed.</p></li>\n</ul>\n<h3>Requirements:</h3>\n<ul>\n<li><p>Advanced English proficiency (C1 or above), with autonomy to communicate directly with international stakeholders</p></li>\n<li><p>Solid experience with Amazon Neptune and the property graph data model</p></li>\n<li><p>Experience writing and optimizing openCypher queries, including multi-hop traversals under latency constraints</p></li>\n<li><p>Experience designing graph schemas, evaluating trade-offs between different modeling approaches</p></li>\n<li><p>Experience building entity resolution logic, including fuzzy matching, scoring algorithms, and deduplication across data sources</p></li>\n<li><p>Strong Python skills for data engineering, including batch processing of structured data payloads</p></li>\n<li><p>Ability to work independently in a fast-paced, staff augmentation setting with an established client team</p></li>\n</ul>\n<h3>Nice to Have:</h3>\n<ul>\n<li><p>Prior experience in fashion, retail, or e-commerce catalogs</p></li>\n<li><p>AWS certification in databases or data analytics</p></li>\n<li><p>Experience integrating graph databases with generative AI agents (for example, Amazon Bedrock Agents)</p></li>\n<li><p>Familiarity with recommendation systems or ranking/weighting logic for content surfacing</p></li>\n</ul>\n</div><h3>Our benefits:</h3><div>-Health and dental insurance</div><div>-Meal and food allowance</div><div>-Childcare assistance</div><div>-Extended paternity leave</div><div>-Partnership with gyms and health and wellness professionals via Wellhub (Gympass) TotalPass;</div><div>-Profit Sharing and Results Participation (PLR);</div><div>-Life insurance</div><div>-Continuous learning platform (CI&amp;T University);</div><div>-Discount club</div><div>-Free online platform dedicated to physical, mental, and overall well-being</div><div>-Pregnancy and responsible parenting course</div><div>-Partnerships with online learning platforms</div><div>-Language learning platform</div><div>And many more!</div><div>More details about our benefits here: </div><div>At CI&amp;T, inclusion starts at the first contact. If you are a person with a disability, it is important<strong> to present your assessment during the selection process. </strong><em>See which data needs to be included in the report by clicking here</em>.This way, we can ensure the support and accommodations that you deserve. <strong>If you do not yet have the assessment, don't worry: we can support you in obtaining it.</strong>\n</div><div>We have a dedicated Health and Well-being team, inclusion specialists, and affinity groups who will be with you at every stage. Count on us to make this journey side by side.</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787186852,
+            "expiryDate": 1792370851,
+            "applicationLink": "https://himalayas.app/companies/ci-t/jobs/job-30900-master-data-developer-amazon-neptune-brazil",
+            "guid": "https://himalayas.app/companies/ci-t/jobs/job-30900-master-data-developer-amazon-neptune-brazil"
+          },
+          {
+            "title": "Semantic Data Engineer",
+            "excerpt": "We are seeking a Semantic / Data Engineer to support a complex platform built around RDF data models, SPARQL queries, and structured datasets.",
+            "companyName": "EUROPEAN DYNAMICS",
+            "companySlug": "european-dynamics",
+            "companyLogo": "https://cdn-images.himalayas.app/fuoymd6w6l0yk5f0nvipf7zkxios",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "Greece"
+            ],
+            "timezoneRestrictions": [
+              2
+            ],
+            "categories": [
+              "Software-Engineer",
+              "Data-Engineering",
+              "Semantic-Web",
+              "Knowledge-Graph-Engineering",
+              "Data-Modeling",
+              "Semantic-Data-Engineering",
+              "Senior-Semantic-Data-Consultant",
+              "Mid-Level-Semantic-Engineer",
+              "Semantic-Web-Developer",
+              "Semantic-Technologies-Specialist",
+              "Ontology-Engineer"
+            ],
+            "parentCategories": [
+              "Developer"
+            ],
+            "description": "<p>We are seeking a <strong>Semantic / Data Engineer</strong> to support a complex platform built around RDF data models, SPARQL queries, and structured datasets. You will be responsible for understanding, maintaining, and evolving the semantic layer of the system, working closely with backend engineers and architects. This role suits a specialist who enjoys data modelling, semantics, and knowledge representation in real-world production systems.</p><h3>What You'll Do:</h3><ul>\n<li>Analyse and maintain <strong>RDF/TTL data models</strong> and vocabularies;</li>\n<li>Develop, optimise, and maintain <strong>SPARQL queries;</strong>\n</li>\n<li>Support data ingestion, transformation, and validation workflows;</li>\n<li>Ensure consistency and correctness of semantic data across the platform;</li>\n<li>Collaborate with backend engineers to integrate semantic logic into application flows;</li>\n<li>Assist in documenting semantic models, assumptions, and constraints;</li>\n<li>Participate in troubleshooting data quality and reasoning issues.</li>\n</ul><h3>Requirements</h3><ul><li>\n<strong>3+ years of experience</strong> working with semantic or data-centric systems;</li></ul><ul><li>Strong knowledge of:</li></ul><ul>\n<ul>\n<li><strong>RDF, RDFS, OWL</strong></li>\n<li><strong>SPARQL</strong></li>\n</ul>\n<li>Experience with:</li>\n<ul>\n<li>Knowledge graphs or semantic interoperability platforms;</li>\n<li>Data modelling and ontology design;</li>\n</ul>\n<li>Comfortable working with structured data formats:</li>\n<ul><li>TTL, XML, JSON, CSV</li></ul>\n<li>Ability to analyse existing models and understand <strong>implicit domain logic.</strong>\n</li>\n</ul><h3>Nice-to-Have:</h3><ul>\n<li>Experience with triplestores or graph databases;</li>\n<li>Familiarity with EU data standards or interoperability frameworks;</li>\n<li>Python scripting for data processing and/or Apache Airflow;</li>\n<li>Experience in projects with regulatory or standards-driven constraints.</li>\n</ul><h3>Benefits</h3><p>We believe in rewarding talent and dedication. Here's what you can expect as part of our team:</p><ul>\n<li>Competitive full-time salary;</li>\n<li>Private Health Coverage on the Company’s group program;</li>\n<li>Flexible Working Hours;</li>\n<li>Top-of-the-Line Tools;</li>\n<li>Professional Development: Benefit from language courses, specialized training, and continuous learning opportunities;</li>\n<li>Career Growth: Work with some of the most innovative and exciting specialists in the industry;</li>\n<li>Dynamic Work Environment: Thrive in a setting that offers challenging goals, autonomy, and mentoring, fostering both personal and company growth.</li>\n</ul><p>If you want an exciting challenge, work with some of the coolest technologies, and enjoy your time doing it, then join us! Submit your detailed CV in English, quoting reference: (<strong>SDE/07/26</strong>).</p><p>You may also consider all our other open vacancies by visiting the career section of our website () and follow us on Twitter (@EURODYN_Careers) and LinkedIn.</p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> () is a leading European Software, Information, and Communication Technologies company, operating internationally (Athens, Brussels, Luxembourg, Copenhagen, Berlin, Stockholm, London, Nicosia, Valetta, Vienna, Den Haag, Hong Kong, etc.) The company employs over 1200 engineers, IT experts, and consultants (around 3% PhD, 41% MSc, and 54% BSc). We design and develop software applications using integrated, state-of-the-art technology. Our current IT projects have a value exceeding 300 million EURO. <a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> is a renowned supplier of IT services to European Union Institutions, international organizations, European Agencies, and national government Administrations in 40 countries and 4 continents.</p><p>As part of our dedication to the diversity of our workforce, we are committed to Equal Employment Opportunity without regard for race, colour, national origin, ethnicity, gender, disability, sexual orientation, gender identity, or religion.</p><p><img width=\"400px\" height=\"auto\"></p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> adheres to the General Data Protection Regulation principles by applying its Privacy Policy as published at . By submitting an application to this position and by sharing your personal data with ED, you acknowledge and accept its Policy and authorize ED to process your personal data for the purposes of the company's recruitment opportunities, in line with the Policy.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1785727322,
+            "expiryDate": 1790911321,
+            "applicationLink": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836",
+            "guid": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836"
           }
         ]
       }
@@ -957,52 +953,8 @@
         "updatedAt": 1787520511,
         "offset": 0,
         "limit": 20,
-        "totalCount": 55,
+        "totalCount": 53,
         "jobs": [
-          {
-            "title": "Ontology Architect",
-            "excerpt": "Tiger Analytics is an advanced analytics consulting firm.",
-            "companyName": "Tiger Analytics",
-            "companySlug": "tiger-analytics",
-            "companyLogo": "https://cdn-images.himalayas.app/fbbn4sxk8oyuweoaquy6j1fi4j4r",
-            "employmentType": "Full Time",
-            "minSalary": null,
-            "maxSalary": null,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Director"
-            ],
-            "currency": null,
-            "locationRestrictions": [
-              "United States"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "categories": [
-              "Ontology-Architecture",
-              "Knowledge-Graph-Engineering",
-              "Data-Architecture",
-              "Data-Engineering",
-              "Semantic-Technologies",
-              "Ontology-Expert",
-              "Ontology-Development",
-              "Ontology",
-              "Data-Ontology-Engineering"
-            ],
-            "parentCategories": [],
-            "description": "<p><a href=\"https://himalayas.app/companies/tiger-analytics\">Tiger Analytics</a> is an advanced analytics consulting firm. We are the trusted analytics partner for several Fortune 100 companies, enabling them to generate business value from data. Our consultants bring deep expertise in Data Science, Machine Learning, and AI. Our business value and leadership have been recognized by various market research firms, including Forrester and Gartner.</p><p>We are looking for an Ontology Architect to lead high-impact applied Engineering and analytics initiatives. This role combines deep technical expertise, strong experimentation rigor, and business leadership to influence product direction and drive measurable outcomes at scale.</p><h3>Responsibilities:</h3><ul><ul>\n<li>\n<strong>Ontology &amp; Taxonomy Design:</strong> Lead the creation, modeling, and evolution of enterprise-wide ontologies, taxonomies, and controlled vocabularies that accurately represent complex business domains.</li>\n<li>\n<strong>Knowledge Graph Architecture:</strong> Design and implement scalable architecture, ingestion pipelines, and governance for enterprise Knowledge Graphs (Triple Stores or Property Graphs).</li>\n<li>\n<strong>Semantic Layer Strategy:</strong> Build and maintain the enterprise semantic layer to abstract physical data complexities, providing a unified, machine-readable business view of data.</li>\n<li>\n<strong>Data Product Augmentation:</strong> Partner with domain data teams to map, link, and augment decentralized <strong>Data Products</strong> using the central ontology to ensure semantic interoperability across the organization.</li>\n<li>\n<strong>Inference &amp; Reasoning:</strong> Implement semantic reasoning and inference rules to automatically generate new metadata and uncover hidden insights within the graph.</li>\n<li>\n<strong>Governance &amp; Standards:</strong> Establish best practices, version control mechanisms, and data contracts for semantic models, ensuring consistent graph schema updates across business units.</li>\n</ul></ul><h3>Requirements</h3><ul>\n<li>\n<strong>Semantic Standards:</strong> Expert-level mastery of core semantic technologies</li>\n<li>\n<strong>Knowledge Graph Engineering:</strong> Hands-on experience designing and operating production-grade Graph Databases / Triple Stores (e.g., <strong>GraphDB, Stardog, Amazon Neptune, AllegroGraph, or Neo4j</strong>).</li>\n<li>\n<strong>Ontology Modeling Tools:</strong> Proficiency with industry-standard ontology engineering and taxonomy management software (e.g., <strong>Protégé, TopBraid Composer, PoolParty</strong>).</li>\n<li>\n<strong>Modern Data Frameworks:</strong> Clear, practical understanding of <strong>Data Mesh</strong> paradigms, specifically how to design a semantic layer that overlays federated, domain-driven <strong>Data Products</strong>.</li>\n<li>\n<strong>Traditional Data Modeling:</strong> Strong baseline in classic data concepts, including relational databases, dimensional modeling, and ETL/ELT integration patterns.</li>\n</ul><h3>Preferred Skills</h3><ul>\n<li>\n<strong>Data Quality &amp; Validation:</strong> Hands-on experience to enforce data quality and constraint validation across graph structures.</li>\n<li>\n<strong>Advanced AI &amp; Graph Analytics:</strong> Familiarity with graph algorithms, graph machine learning (GNNs), or leveraging Knowledge Graphs to enhance Large Language Model architectures via Graph RAG (Retrieval-Aug Generation).</li>\n</ul><h3>Benefits</h3><p>Significant career development opportunities exist as the company grows. The position offers a unique opportunity to be part of a small, fast-growing, challenging and entrepreneurial environment, with a high degree of individual responsibility.</p><p><em><strong><a href=\"https://himalayas.app/companies/tiger-analytics\">Tiger Analytics</a> provides equal employment opportunities to applicants and employees without regard to race, color, religion, age, sex, sexual orientation, gender identity/expression, pregnancy, national origin, ancestry, marital status, protected veteran status, disability status, or any other basis as protected by federal, state, or local law.</strong></em></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "pubDate": 1782556860,
-            "expiryDate": 1787740860,
-            "applicationLink": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect",
-            "guid": "https://himalayas.app/companies/tiger-analytics/jobs/ontology-architect"
-          },
           {
             "title": "Freelance Data Scientist with Ontology and Graph expertise",
             "excerpt": "adesso Belgium is looking for a data scientist (2) to support our customer in building an AI Agent Platform Data Foundations.",
@@ -1867,6 +1819,52 @@
             "expiryDate": 1792642781,
             "applicationLink": "https://himalayas.app/companies/hire-hangar/jobs/senior-ai-platform-engineer-8228704431",
             "guid": "https://himalayas.app/companies/hire-hangar/jobs/senior-ai-platform-engineer-8228704431"
+          },
+          {
+            "title": "Forward Deployed Engineer, AI & Analytics",
+            "excerpt": "About VirtasantVirtasant is a global technology services company with a network of over 4,000 technology professionals across 130+ countries.",
+            "companyName": "Virtasant",
+            "companySlug": "virtasant",
+            "companyLogo": "https://cdn-images.himalayas.app/hxw4vpmng9pgoc2a8v52i6neyry2",
+            "employmentType": "Full Time",
+            "minSalary": null,
+            "maxSalary": null,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Mid-level"
+            ],
+            "currency": null,
+            "locationRestrictions": [
+              "United States"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "categories": [
+              "Forward-Deployed-Engineer",
+              "AI-Engineering",
+              "Data-Engineering",
+              "Solutions-Engineering",
+              "Palantir-Foundry-Development",
+              "Forward-Deployed-AI-Engineer",
+              "Forward-Deployed-ML-Engineer",
+              "Forward-Deployed-Data-Engineer",
+              "Mid-Level-Forward-Deployed-Data-Engineer",
+              "Forward-Deployed-AI-Engineering",
+              "Forward-Deployed-Software-Engineer"
+            ],
+            "parentCategories": [],
+            "description": "<h3><strong>About <a href=\"https://himalayas.app/companies/virtasant\">Virtasant</a></strong></h3><p><a href=\"https://himalayas.app/companies/virtasant\">Virtasant</a> is a global technology services company with a network of over 4,000 technology professionals across 130+ countries. We specialize in cloud architecture, infrastructure, migration, and optimization, helping enterprises scale efficiently while maintaining cost control.</p><p>Our clients range from Fortune 500 companies to fast-growing startups, relying on us to build high-performance infrastructure, optimize cloud environments, and enable continuous delivery at scale.</p><h3><strong>About the role</strong></h3><p>A leading US healthcare workforce company has built an analytics and predictive proof of concept on Palantir Foundry. Client reaction has been strong, and the platform is now moving to a full production build that will be taken to market. We are standing up a pod of five to six engineers to deliver it, working alongside the client’s product and business teams and training their internal engineers as we build. This is forward deployed work in the original sense: you embed with the client, you own an outcome, and you ship. Beyond the first build, the client plans to place small AI pods inside its business units, each pairing an FDE with an AI engineer and a software engineer, and each accountable for a measurable business result. Do the first engagement well and there is a long runway.</p><h3><strong>What You’ll Do</strong></h3><p><strong>What you will do Take a Palantir Foundry proof of concept to production: data pipelines, ontology, application layer, governance, observability. Sit with business and product teams, run discovery, and turn policies and operating procedures into working code and agent logic. Define an adoption or delivery metric with the client’s business leader, own it, and report against it. Train client engineers as you build, so capability stays with the client rather than with the vendor. Shape the roadmap from proof of concept to a production-grade product the client can sell.</strong></p><h3><strong><strong>What We’re Looking For</strong></strong></h3><p><strong><strong>FDE-grade is a specific bar. We gate on four signals:</strong></strong></p><p><strong><strong>1. Platform depth. Production work on Palantir Foundry or a comparable data and AI platform. Certifications alone do not qualify; we reference-check against shipped systems.</strong></strong></p><p><strong><strong>2. Customer-facing comfort. You can run a discovery session, lead a workshop, train a team, and defend a recommendation in front of a CTO.</strong></strong></p><p><strong><strong>3. Generalist build instinct. You write the glue code, the integration, the pipeline, and the dashboard. You do not wait for tickets.</strong></strong></p><p><strong><strong>4. Outcome ownership. You have shipped end to end and are comfortable being measured on adoption, time to production, or a business KPI. The fourth signal has a corollary the client cares about deeply: business context.</strong></strong></p><p><strong><strong>A great FDE comes up to speed on the business layer fast, because an engineer who only listens and codes will faithfully rebuild the inefficient process that already exists. We look for people who ask why the process works the way it does before writing a line of it.</strong></strong></p><h4><strong><strong><strong>Must-Have Experience</strong></strong></strong></h4><h4><strong><strong><strong>*<p></p>\n<h3>*</h3>\n<h3>*</h3></strong></strong></strong></h4><p><strong><strong><strong>-6+ years in software, data, or ML engineering, with senior-level ownership of production systems.</strong></strong></strong></p><p><strong><strong><strong>-Hands-on Palantir Foundry experience (Pipeline Builder, Ontology, Workshop; AIP a strong plus), or deep experience on a comparable platform such as Databricks or Snowflake with evidence of fast platform ramp.</strong></strong></strong></p><p><strong><strong><strong>-Production Python and SQL. TypeScript or Java a plus.</strong></strong></strong></p><p><strong><strong><strong>-Experience building with LLMs and agents: retrieval, tool use, evaluation, and getting them past the demo stage.</strong></strong></strong></p><p><strong><strong><strong>-Consulting, solutions engineering, or client-embedded delivery experience. Clear written and spoken English, comfortable presenting to executives</strong></strong></strong></p><h4><strong><strong><strong><br><strong>Nice-to-haves</strong></strong></strong></strong></h4><ul>\n<li><p><strong><strong>Healthcare, staffing and workforce, or other regulated-industry domain experience.</strong></strong></p></li>\n<li><p><strong><strong>Forward Deployed Engineer, AI &amp; Analytics 3 of 4 A track record of capability transfer: training, pairing, playbooks delivered as part of an engagement.</strong></strong></p></li>\n<li><p><strong><strong>A prior FDE, solutions architect, or solutions engineer role at a platform vendor or AI-native company.</strong></strong></p></li>\n</ul><h3><strong><strong><strong>Our recruitment process</strong></strong></strong></h3><ul>\n<li><h3><strong><strong>Recruiter interview (30 min)</strong></strong></h3></li>\n<li><h3><strong><strong>Technical Interview (30 min)</strong></strong></h3></li>\n<li><h3><strong><strong>Client Interview 1 (60 min)</strong></strong></h3></li>\n</ul><p><strong><strong>We strive to move efficiently from step to step to make the recruitment process as fast as possible.</strong></strong></p><h3><strong><strong><strong>What we offer</strong></strong></strong></h3><p><strong><strong>Contract engagement through the Gigster network, full-time dedication expected.</strong></strong></p><p><strong><strong>Initial term aligned to the production build, with extension likely as the pod model expands across business units.</strong></strong></p><p><strong><strong>Compensation is competitive and set by experience and location</strong></strong></p><h5><strong><strong><br>For this role, we can only consider candidates located in contiguous US states.<br>Also, we are only able to consider candidates who are either US citizens, or Green Card Holders, or sole proprietors of their own LLC company.</strong></strong></h5><h5><strong><strong>We are NOT able to consider candidates on any kind of visa that requires sponsorship, like STEM OPT, H4 EAD, F-1 OPT, L-2S, CPT, etc.</strong></strong></h5><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "pubDate": 1787324656,
+            "expiryDate": 1792508655,
+            "applicationLink": "https://himalayas.app/companies/virtasant/jobs/forward-deployed-engineer-ai-analytics",
+            "guid": "https://himalayas.app/companies/virtasant/jobs/forward-deployed-engineer-ai-analytics"
           }
         ]
       }
