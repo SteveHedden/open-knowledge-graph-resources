@@ -1,0 +1,65 @@
+{
+  "careersHtml": "<!doctype html><html><body><section id=\"open-positions\"><h2>Open Positions</h2><input placeholder=\"Search in jobs\"><article><div>Job | AI, Data Engineering</div><h3 id=\"wpv-post-link\"><a href=\"https://graphwise.ai/jobs/semantic-ai-engineer/\">Semantic AI Engineer</a></h3><p>Build connected systems using Knowledge Graphs and semantic technologies.</p><a class=\"read-more\" href=\"https://graphwise.ai/jobs/semantic-ai-engineer/\">read more</a></article><article><div>Job | Human Resources</div><h3 id=\"wpv-post-link\"><a href=\"https://graphwise.ai/jobs/hr-operations-specialist/\">HR Operations Specialist</a></h3><p>Support employee operations and payroll.</p><a class=\"read-more\" href=\"https://graphwise.ai/jobs/hr-operations-specialist/\">read more</a></article></section></body></html>",
+  "details": [
+    {
+      "id": 249103,
+      "date": "2026-05-08T09:37:41",
+      "slug": "semantic-ai-engineer",
+      "link": "https://graphwise.ai/jobs/semantic-ai-engineer/",
+      "title": {
+        "rendered": "Semantic AI Engineer"
+      },
+      "content": {
+        "rendered": "<p>Build data pipelines and Knowledge Graph systems.</p><ul><li>Semantic technologies such as RDF, OWL, SHACL, or SPARQL</li><li>Ontology or taxonomy modeling</li></ul>"
+      },
+      "toolset-meta": {
+        "job-form": {
+          "bamboo-url": {
+            "type": "url",
+            "raw": "https://graphwise.bamboohr.com/careers/111"
+          }
+        },
+        "skills": {
+          "location": {
+            "type": "textfield",
+            "raw": "Sofia (Hybrid)"
+          },
+          "contract-type": {
+            "type": "textfield",
+            "raw": "Full-time"
+          }
+        }
+      }
+    },
+    {
+      "id": 250001,
+      "date": "2026-06-01T10:00:00",
+      "slug": "hr-operations-specialist",
+      "link": "https://graphwise.ai/jobs/hr-operations-specialist/",
+      "title": {
+        "rendered": "HR Operations Specialist"
+      },
+      "content": {
+        "rendered": "<p>Manage payroll, onboarding, employee records, and Austrian employment compliance.</p>"
+      },
+      "toolset-meta": {
+        "job-form": {
+          "bamboo-url": {
+            "type": "url",
+            "raw": "https://graphwise.bamboohr.com/careers/115?source=aWQ9MjY%3D"
+          }
+        },
+        "skills": {
+          "location": {
+            "type": "textfield",
+            "raw": "Vienna (Hybrid)"
+          },
+          "contract-type": {
+            "type": "textfield",
+            "raw": "Part-time"
+          }
+        }
+      }
+    }
+  ]
+}

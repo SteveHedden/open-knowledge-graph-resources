@@ -19,6 +19,7 @@ from rdflib.namespace import RDF, XSD
 from classifier import Evidence, classify, find_evidence
 from entities import KGJD, apply_confirmed_wikidata_matches, employer_uri
 from live_sources import LivePipelineError, SourceConfig
+from reconcile import merge_source_occurrences
 
 SCHEMA = Namespace("https://schema.org/")
 KGJOBS = Namespace("https://openknowledgegraphs.com/prototypes/kg-jobs/ontology#")
@@ -156,6 +157,25 @@ def load_previous_records(runtime_dir: Path) -> list[dict]:
     return [record for record in data if isinstance(record, dict) and record.get("id")]
 
 
+def load_source_snapshots(runtime_dir: Path) -> dict[str, list[dict]]:
+    """Load the unreconciled last-good record set retained for each source."""
+    directory = runtime_dir / "sources"
+    if not directory.exists():
+        return {}
+    output = {}
+    for path in sorted(directory.glob("*.json")):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise LivePipelineError(f"existing source snapshot is invalid: {path.name}") from exc
+        if not isinstance(payload, list) or any(
+            not isinstance(record, dict) or not record.get("id") for record in payload
+        ):
+            raise LivePipelineError(f"existing source snapshot has an invalid shape: {path.name}")
+        output[path.stem] = payload
+    return output
+
+
 def preserve_first_seen(
     current: list[dict],
     previous: list[dict],
@@ -168,6 +188,13 @@ def preserve_first_seen(
         prior = previous_by_id.get(record["id"])
         if prior and prior.get("firstSeenAt"):
             enriched["firstSeenAt"] = prior["firstSeenAt"]
+        else:
+            enriched.setdefault("firstSeenAt", retrieved_at)
+        if prior and prior.get("sourceOccurrences"):
+            enriched["sourceOccurrences"] = merge_source_occurrences(
+                prior.get("sourceOccurrences", []),
+                enriched.get("sourceOccurrences", []),
+            )
         enriched["lastSeenAt"] = retrieved_at
         enriched["retrievedAt"] = retrieved_at
         enriched["active"] = True
@@ -192,7 +219,7 @@ def _evidence_to_rdf(graph: Graph, job, record: dict) -> None:
         graph.add((job, KGJOBS.hasEvidence, node))
 
 
-def build_graph(records: list[dict], run: dict, source: SourceConfig) -> Graph:
+def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -> Graph:
     graph = Graph()
     for prefix, namespace in (
         ("schema", SCHEMA), ("kgjobs", KGJOBS), ("kgjlive", KGJDLIVE), ("kgjd", KGJD),
@@ -246,7 +273,11 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig) -> Graph:
         graph.add((job, SCHEMA.url, URIRef(record["canonicalUrl"])))
         graph.add((job, SCHEMA.title, Literal(record["title"])))
         graph.add((job, SCHEMA.description, Literal(record["description"])))
-        organization = employer_uri(record["hiringOrganization"])
+        organization = (
+            URIRef(record["organizationIri"])
+            if record.get("organizationIri")
+            else employer_uri(record["hiringOrganization"])
+        )
         if (organization, RDF.type, SCHEMA.Organization) not in graph:
             # First record seen for this employer slug sets the canonical
             # display name; later records reusing the same slug (e.g. minor
@@ -319,6 +350,31 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig) -> Graph:
         graph.add((job, DCTERMS.source, URIRef(record["sourceDataset"])))
         graph.add((job, PROV.wasDerivedFrom, URIRef(record["sourceUrl"])))
         graph.add((job, PROV.generatedAtTime, Literal(record["retrievedAt"], datatype=XSD.dateTime)))
+        for method in record.get("reconciliationMethod", []):
+            graph.add((job, KGJOBS.reconciliationMethod, Literal(method)))
+        if record.get("reconciliationReason"):
+            graph.add((job, KGJOBS.reconciliationReason, Literal(record["reconciliationReason"])))
+        for index, occurrence in enumerate(record.get("sourceOccurrences", []), start=1):
+            node = KGJDLIVE[
+                f"occurrence/{quote(record['id'], safe='')}/{index}"
+            ]
+            graph.add((node, RDF.type, PROV.Entity))
+            graph.add((job, KGJOBS.sourceOccurrence, node))
+            if occurrence.get("sourceDataset"):
+                graph.add((node, DCTERMS.source, URIRef(occurrence["sourceDataset"])))
+            if occurrence.get("sourceRecordId"):
+                graph.add((node, KGJOBS.occurrenceRecordId, Literal(occurrence["sourceRecordId"])))
+            if occurrence.get("sourceUrl"):
+                graph.add((node, SCHEMA.url, URIRef(occurrence["sourceUrl"])))
+            if occurrence.get("provider"):
+                graph.add((node, KGJOBS.careerProvider, Literal(occurrence["provider"])))
+            if occurrence.get("tenant"):
+                graph.add((node, KGJOBS.tenantIdentifier, Literal(occurrence["tenant"])))
+            graph.add((
+                node, KGJOBS.firstParty,
+                Literal(bool(occurrence.get("firstParty")), datatype=XSD.boolean),
+            ))
+            graph.add((job, PROV.wasDerivedFrom, node))
         for mention in record.get("catalogMentions", []):
             canonical_url = mention.get("canonicalUrl") if isinstance(mention, dict) else None
             if canonical_url:
@@ -383,6 +439,7 @@ def publish_snapshot(
     runtime_dir: Path,
     raw_payload: dict,
     source_key: str,
+    source_snapshots: dict[str, list[dict]],
 ) -> None:
     runtime_dir.parent.mkdir(parents=True, exist_ok=True)
     _recover_interrupted_publication(runtime_dir)
@@ -399,6 +456,15 @@ def publish_snapshot(
             json.dumps(run, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
             encoding="utf-8",
         )
+        sources_dir = stage / "sources"
+        sources_dir.mkdir()
+        for key, source_records in sorted(source_snapshots.items()):
+            (sources_dir / f"{key}.json").write_text(
+                json.dumps(
+                    source_records, indent=2, ensure_ascii=False, sort_keys=True
+                ) + "\n",
+                encoding="utf-8",
+            )
         raw_dir = stage / "raw"
         raw_dir.mkdir()
         previous_raw_dir = runtime_dir / "raw"

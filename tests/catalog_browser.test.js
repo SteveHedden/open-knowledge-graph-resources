@@ -816,6 +816,43 @@ test("job catalog mentions render as accessible linked chips in rows and mobile 
   assert.match(card.textContent, /View posting/);
 });
 
+test("first-party jobs retain official source attribution in rows and mobile cards", async () => {
+  const payloads = defaultPayloads(
+    syntheticItems(1, "Resource"),
+    syntheticItems(1, "Software")
+  );
+  payloads.jobs = [
+    {
+      id: "firstparty:first-party-graphwise:249103",
+      title: "Semantic AI Engineer",
+      description: "RDF and ontology engineering.",
+      hiringOrganization: "Graphwise",
+      location: "Sofia",
+      canonicalUrl: "https://graphwise.bamboohr.com/careers/111",
+      sourceName: "Careers at Graphwise",
+      sourceAttributionUrl: "https://graphwise.ai/careers/",
+      classification: "qualified",
+      catalogMentions: [],
+    },
+  ];
+  const app = await createApp({ payloads });
+  app.document.getElementById("tab-jobs").click();
+
+  const row = app.document.getElementById("jobs-table-body").children[0];
+  const rowSource = row.querySelectorAll("a").find(
+    (link) => link.textContent === "Source: Careers at Graphwise"
+  );
+  assert.equal(rowSource.href, "https://graphwise.ai/careers/");
+
+  app.media.setWidth(760);
+  const card = app.document.getElementById("jobs-cards").children[0];
+  const cardSource = card.querySelectorAll("a").find(
+    (link) => link.textContent === "Source: Careers at Graphwise"
+  );
+  assert.equal(cardSource.href, "https://graphwise.ai/careers/");
+  assert.doesNotMatch(card.textContent, /RDF and ontology engineering/);
+});
+
 test("job catalog chip hover text meets WCAG AA contrast", () => {
   const color = STYLE_SOURCE.match(/--brand-strong:\s*(#[0-9a-f]{6})/i)[1];
   const background = STYLE_SOURCE.match(

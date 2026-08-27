@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix orgv: <https://openknowledgegraphs.com/prototypes/kg-jobs/organization-vocabulary/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+orgv:kinds a skos:ConceptScheme ;
+    dcterms:title "KG ecosystem organization kinds"@en ;
+    dcterms:description "Reviewed, multi-valued kinds used to describe organizations in the OKG ecosystem registry."@en ;
+    skos:prefLabel "Organization Kinds"@en .
+
+orgv:kind-commercial-enterprise a skos:Concept ;
+    skos:inScheme orgv:kinds ;
+    skos:prefLabel "Commercial enterprise"@en ;
+    skos:definition "A for-profit company or other commercial organization."@en .
+
+orgv:kind-nonprofit-foundation a skos:Concept ;
+    skos:inScheme orgv:kinds ;
+    skos:prefLabel "Nonprofit or foundation"@en ;
+    skos:definition "A nonprofit organization, charitable body, or foundation."@en .
+
+orgv:kind-public-intergovernmental a skos:Concept ;
+    skos:inScheme orgv:kinds ;
+    skos:prefLabel "Public-sector or intergovernmental body"@en ;
+    skos:definition "A government, public-sector, or intergovernmental organization."@en .
+
+orgv:kind-academic-research a skos:Concept ;
+    skos:inScheme orgv:kinds ;
+    skos:prefLabel "Academic or research organization"@en ;
+    skos:definition "A university, research institute, laboratory, or other research organization."@en .
+
+orgv:kind-consortium-association a skos:Concept ;
+    skos:inScheme orgv:kinds ;
+    skos:prefLabel "Consortium or membership association"@en ;
+    skos:definition "A consortium, alliance, standards group, or membership association."@en .
+
+orgv:kind-informal-open-source-community a skos:Concept ;
+    skos:inScheme orgv:kinds ;
+    skos:prefLabel "Informal or open-source community"@en ;
+    skos:definition "A sustained open-source or professional community that is not represented as a formal legal organization."@en .
+
+orgv:roles a skos:ConceptScheme ;
+    dcterms:title "KG ecosystem organization roles"@en ;
+    dcterms:description "Reviewed, multi-valued roles describing an organization's material contribution to the knowledge-graph ecosystem."@en ;
+    skos:prefLabel "Ecosystem Roles"@en .
+
+orgv:role-graph-platform-provider a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Graph database or KG platform provider"@en ;
+    skos:definition "Develops or provides a graph database, knowledge-graph platform, or closely related infrastructure."@en .
+
+orgv:role-semantic-tooling-provider a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Semantic-modeling or tooling provider"@en ;
+    skos:definition "Develops or provides semantic-modeling, ontology, taxonomy, linked-data, or related tooling."@en .
+
+orgv:role-kg-consultancy-integrator a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "KG consultancy or systems integrator"@en ;
+    skos:definition "Provides professional services for knowledge graphs, semantic systems, ontologies, or taxonomies."@en .
+
+orgv:role-standards-steward a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Standards or specification steward"@en ;
+    skos:definition "Develops, governs, or publishes standards or specifications material to the KG ecosystem."@en .
+
+orgv:role-vocabulary-maintainer a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Ontology or vocabulary maintainer or publisher"@en ;
+    skos:definition "Creates, maintains, or publishes an ontology, controlled vocabulary, or taxonomy."@en .
+
+orgv:role-kg-dataset-operator a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Knowledge-graph or dataset publisher or operator"@en ;
+    skos:definition "Publishes or operates a knowledge graph, linked dataset, or related public data service."@en .
+
+orgv:role-kg-research-education a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "KG research or education organization"@en ;
+    skos:definition "Conducts sustained knowledge-graph or semantic-web research, education, or training."@en .
+
+orgv:role-open-source-steward a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Open-source KG software steward"@en ;
+    skos:definition "Stewards open-source software material to knowledge graphs or semantic technologies."@en .
+
+orgv:role-ecosystem-convener a skos:Concept ;
+    skos:inScheme orgv:roles ;
+    skos:prefLabel "Ecosystem convener or professional community"@en ;
+    skos:definition "Convenes a sustained professional, standards, research, or open-source knowledge-graph community."@en .

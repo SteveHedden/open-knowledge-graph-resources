@@ -168,11 +168,12 @@ just means that field is blank in the catalog, but these are the ones worth sett
 - `P178` / `P170` / `P50` — developer / creator / author
 - `P348` — software version (with a qualifier date where possible)
 
-A note on `creator`/`author`/`developer`: OKG's ingestion only accepts a *human* (`wdt:P31
-wd:Q5`) as `schema:creator` — organizations are deliberately excluded from that field, since
-schema.org's `creator` expects a Person or Organization and OKG currently only maps humans. Don't
-be surprised if an organization you add as creator doesn't show up in the published record; that's
-expected, not a bug to work around.
+A note on `creator`/`author`/`developer`: OKG preserves human credits and also audits apparent
+organization-valued `P170`, `P50`, and `P178` relationships for its reviewed organization registry.
+Use the Wikidata property that describes the real relationship; do not substitute `creator` merely
+to make an organization appear. The registry validates that the value is actually an organization
+and keeps the resource-specific role and source property, so ambiguous or mistyped values may be
+marked unresolved or rejected rather than published as organizations.
 
 Follow the existing script pattern for bot-driven creation (see §6) rather than hand-editing
 items one field at a time in the Wikidata UI, especially for batches.

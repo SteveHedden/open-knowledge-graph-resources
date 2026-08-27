@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: Refresh only this source; default refreshes all five
+        description: Refresh one approved source; default refreshes all 17
         required: false
         default: all
         type: choice
@@ -17,6 +17,18 @@ on:
           - jooble
           - arbeitnow
           - adzuna
+          - first-party-neo4j
+          - first-party-relationalai
+          - first-party-tigergraph
+          - first-party-wikimedia
+          - first-party-stardog
+          - first-party-weaviate
+          - first-party-graphwise
+          - first-party-enterprise-knowledge
+          - first-party-metaphacts
+          - first-party-topquadrant
+          - first-party-eccenca
+          - first-party-w3c
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false
@@ -34,7 +46,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     defaults:
       run:
         working-directory: prototypes/kg-jobs
@@ -66,7 +78,7 @@ jobs:
 
       - name: Restore last committed snapshot into runtime/
         run: |
-          mkdir -p runtime/raw
+          mkdir -p runtime/raw runtime/sources
           [ -f ../../data/jobs/jobs.json ] && cp ../../data/jobs/jobs.json runtime/jobs.json
           [ -f ../../data/jobs/jobs.ttl ] && cp ../../data/jobs/jobs.ttl runtime/jobs.ttl
           [ -f ../../data/jobs/run.json ] && cp ../../data/jobs/run.json runtime/run.json
@@ -83,7 +95,14 @@ jobs:
           set +e
           requested="${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
           if [ "$requested" = "all" ]; then
-            sources=(himalayas jobicy jooble arbeitnow adzuna)
+            sources=(
+              himalayas jobicy jooble arbeitnow adzuna
+              first-party-neo4j first-party-relationalai first-party-tigergraph
+              first-party-wikimedia first-party-stardog first-party-weaviate
+              first-party-graphwise first-party-enterprise-knowledge
+              first-party-metaphacts first-party-topquadrant first-party-eccenca
+              first-party-w3c
+            )
           else
             sources=("$requested")
           fi
@@ -106,6 +125,17 @@ jobs:
           done
           echo "failures=$failures" >> "$GITHUB_OUTPUT"
 
+      - name: Retain first-party diagnostics outside the public Pages artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: first-party-diagnostics-${{ github.run_id }}
+          path: |
+            prototypes/kg-jobs/runtime/raw/first-party-*.json
+            prototypes/kg-jobs/runtime/sources/first-party-*.json
+          if-no-files-found: ignore
+          retention-days: 30
+
       - name: Publish snapshot to the committed data path
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
         run: |
@@ -114,8 +144,9 @@ jobs:
           cp runtime/jobs.ttl ../../data/jobs/jobs.ttl
           cp runtime/run.json ../../data/jobs/run.json
           rm -f ../../data/jobs/raw/*.json
-          shopt -s nullglob
-          for f in runtime/raw/*.json; do cp "$f" ../../data/jobs/raw/; done
+          for source in himalayas jobicy jooble arbeitnow adzuna; do
+            [ -f "runtime/raw/$source.json" ] && cp "runtime/raw/$source.json" ../../data/jobs/raw/
+          done
 
       - name: Detect published snapshot changes
         id: changes

@@ -1,0 +1,942 @@
+{
+  "accepted": [
+    {
+      "identityKey": "wikidata:Q1468503",
+      "iri": "https://openknowledgegraphs.com/organization/academia-valenciana-de-la-llengua/",
+      "name": "Acadèmia Valenciana de la Llengua",
+      "reason": "Wikidata organization typing reviewed: language regulator, cultural institution, learned society"
+    },
+    {
+      "identityKey": "wikidata:Q2174585",
+      "iri": "https://openknowledgegraphs.com/organization/african-studies-centre-leiden/",
+      "name": "African Studies Centre Leiden",
+      "reason": "Wikidata organization typing reviewed: publishing house, research institute"
+    },
+    {
+      "identityKey": "wikidata:Q2826570",
+      "iri": "https://openknowledgegraphs.com/organization/agence-bibliographique-de-l-enseignement-superieur/",
+      "name": "Agence bibliographique de l'enseignement supérieur",
+      "reason": "Wikidata organization typing reviewed: organization"
+    },
+    {
+      "identityKey": "wikidata:Q108730224",
+      "iri": "https://openknowledgegraphs.com/organization/allotrope-foundation/",
+      "name": "Allotrope Foundation",
+      "reason": "Wikidata organization typing reviewed: foundation, organization"
+    },
+    {
+      "identityKey": "wikidata:Q4743036",
+      "iri": "https://openknowledgegraphs.com/organization/american-association-for-state-and-local-history/",
+      "name": "American Association for State and Local History",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization, historical society"
+    },
+    {
+      "identityKey": "wikidata:Q4743795",
+      "iri": "https://openknowledgegraphs.com/organization/american-folklife-center/",
+      "name": "American Folklife Center",
+      "reason": "Wikidata organization typing reviewed: reading room, research center"
+    },
+    {
+      "identityKey": "wikidata:Q4743796",
+      "iri": "https://openknowledgegraphs.com/organization/american-folklore-society/",
+      "name": "American Folklore Society",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization, learned society"
+    },
+    {
+      "identityKey": "wikidata:Q466524",
+      "iri": "https://openknowledgegraphs.com/organization/american-psychiatric-association/",
+      "name": "American Psychiatric Association",
+      "reason": "Wikidata organization typing reviewed: professional association, learned society"
+    },
+    {
+      "identityKey": "wikidata:Q5917182",
+      "iri": "https://openknowledgegraphs.com/organization/andalusian-institute-of-historical-heritage/",
+      "name": "Andalusian Institute of Historical Heritage",
+      "reason": "Wikidata organization typing reviewed: office for the preservation of historical monuments, public research institution in Spain, public enterprise, archaeological service, scientific archive"
+    },
+    {
+      "identityKey": "wikidata:Q489709",
+      "iri": "https://openknowledgegraphs.com/organization/apache-software-foundation/",
+      "name": "Apache Software Foundation",
+      "reason": "Wikidata organization typing reviewed: open-source project, foundation"
+    },
+    {
+      "identityKey": "wikidata:Q113997707",
+      "iri": "https://openknowledgegraphs.com/organization/arcade-data-ltd/",
+      "name": "Arcade Data Ltd",
+      "reason": "Wikidata organization typing reviewed: company"
+    },
+    {
+      "identityKey": "wikidata:Q4796642",
+      "iri": "https://openknowledgegraphs.com/organization/artsy/",
+      "name": "Artsy",
+      "reason": "Wikidata organization typing reviewed: website, business"
+    },
+    {
+      "identityKey": "wikidata:Q781523",
+      "iri": "https://openknowledgegraphs.com/organization/australian-institute-of-aboriginal-and-torres-strait-islander-studies/",
+      "name": "Australian Institute of Aboriginal and Torres Strait Islander Studies",
+      "reason": "Wikidata organization typing reviewed: Government body of Australia, archives, research institute"
+    },
+    {
+      "identityKey": "wikidata:Q14772",
+      "iri": "https://openknowledgegraphs.com/organization/baidu/",
+      "name": "Baidu",
+      "reason": "Wikidata organization typing reviewed: search engine, organization, business, online community, enterprise, public company"
+    },
+    {
+      "identityKey": "wikidata:Q106501953",
+      "iri": "https://openknowledgegraphs.com/organization/bibliographic-standards-committee-of-the-rare-books-and-manuscripts-section/",
+      "name": "Bibliographic Standards Committee of the Rare Books and Manuscripts Section",
+      "reason": "Wikidata organization typing reviewed: committee"
+    },
+    {
+      "identityKey": "wikidata:Q750403",
+      "iri": "https://openknowledgegraphs.com/organization/biblioteca-nacional-de-espana/",
+      "name": "Biblioteca Nacional de España",
+      "reason": "Wikidata organization typing reviewed: main library, national library, public library"
+    },
+    {
+      "identityKey": "wikidata:Q4903496",
+      "iri": "https://openknowledgegraphs.com/organization/biblioteksentralen/",
+      "name": "Biblioteksentralen",
+      "reason": "Wikidata organization typing reviewed: business"
+    },
+    {
+      "identityKey": "wikidata:Q16506987",
+      "iri": "https://openknowledgegraphs.com/organization/bibliotheque-de-l-universite-laval/",
+      "name": "Bibliothèque de l'Université Laval",
+      "reason": "Wikidata organization typing reviewed: research library, publishing house, academic library"
+    },
+    {
+      "identityKey": "wikidata:Q193563",
+      "iri": "https://openknowledgegraphs.com/organization/bibliotheque-nationale-de-france/",
+      "name": "Bibliothèque nationale de France",
+      "reason": "Wikidata organization typing reviewed: publishing house, national library, catalog, organization"
+    },
+    {
+      "identityKey": "wikidata:Q140285712",
+      "iri": "https://openknowledgegraphs.com/organization/blackcat-informatics-inc/",
+      "name": "Blackcat Informatics Inc.",
+      "reason": "Wikidata organization typing reviewed: business"
+    },
+    {
+      "identityKey": "wikidata:Q6373",
+      "iri": "https://openknowledgegraphs.com/organization/british-museum/",
+      "name": "British Museum",
+      "reason": "Wikidata organization typing reviewed: national museum, art museum, non-departmental public body, museum, charitable organization"
+    },
+    {
+      "identityKey": "curation:cambridge-semantics",
+      "iri": "https://openknowledgegraphs.com/organization/cambridge-semantics/",
+      "name": "Cambridge Semantics",
+      "reason": "Official company material documents a sustained enterprise knowledge-graph platform."
+    },
+    {
+      "identityKey": "wikidata:Q3456610",
+      "iri": "https://openknowledgegraphs.com/organization/canadian-heritage-information-network/",
+      "name": "Canadian Heritage Information Network",
+      "reason": "Wikidata organization typing reviewed: government agency"
+    },
+    {
+      "identityKey": "wikidata:Q10444919",
+      "iri": "https://openknowledgegraphs.com/organization/centre-international-detude-des-textiles-anciens/",
+      "name": "Centre International d’Etude des Textiles Anciens",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization"
+    },
+    {
+      "identityKey": "wikidata:Q1105202",
+      "iri": "https://openknowledgegraphs.com/organization/cochrane/",
+      "name": "Cochrane",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization, publishing house, healthcare provider"
+    },
+    {
+      "identityKey": "wikidata:Q24214058",
+      "iri": "https://openknowledgegraphs.com/organization/consejo-nacional-de-investigaciones-cientificas-y-tecnicas-centro-argentino-de-informacion-cientifica-y-tecnologica/",
+      "name": "Consejo Nacional de Investigaciones Científicas y Técnicas, Centro Argentino de Información Científica y Tecnológica",
+      "reason": "Wikidata organization typing reviewed: research institute, government agency"
+    },
+    {
+      "identityKey": "wikidata:Q22972975",
+      "iri": "https://openknowledgegraphs.com/organization/creative-commons-uruguay/",
+      "name": "Creative Commons Uruguay",
+      "reason": "Wikidata organization typing reviewed: organization"
+    },
+    {
+      "identityKey": "wikidata:Q12307383",
+      "iri": "https://openknowledgegraphs.com/organization/danish-bibliographic-centre/",
+      "name": "Danish Bibliographic Centre",
+      "reason": "Wikidata organization typing reviewed: public enterprise, organization, business, enterprise"
+    },
+    {
+      "identityKey": "wikidata:Q91143628",
+      "iri": "https://openknowledgegraphs.com/organization/data-world/",
+      "name": "data.world",
+      "reason": "Wikidata organization typing reviewed: public-benefit corporation"
+    },
+    {
+      "identityKey": "wikidata:Q18350420",
+      "iri": "https://openknowledgegraphs.com/organization/databricks/",
+      "name": "Databricks",
+      "reason": "Wikidata organization typing reviewed: software company, business"
+    },
+    {
+      "identityKey": "wikidata:Q843327",
+      "iri": "https://openknowledgegraphs.com/organization/defense-logistics-agency/",
+      "name": "Defense Logistics Agency",
+      "reason": "Wikidata organization typing reviewed: standards organization, Combat support agency"
+    },
+    {
+      "identityKey": "curation:eccenca",
+      "iri": "https://openknowledgegraphs.com/organization/eccenca/",
+      "name": "eccenca",
+      "reason": "Official company material documents a sustained enterprise knowledge-graph platform."
+    },
+    {
+      "identityKey": "wikidata:Q860051",
+      "iri": "https://openknowledgegraphs.com/organization/election-assistance-commission/",
+      "name": "Election Assistance Commission",
+      "reason": "Wikidata organization typing reviewed: government commission, independent agency of the United States government"
+    },
+    {
+      "identityKey": "wikidata:Q12361408",
+      "iri": "https://openknowledgegraphs.com/organization/elnet-consortium/",
+      "name": "ELNET Consortium",
+      "reason": "Wikidata organization typing reviewed: organization, library consortium"
+    },
+    {
+      "identityKey": "wikidata:Q1341845",
+      "iri": "https://openknowledgegraphs.com/organization/embl-s-european-bioinformatics-institute/",
+      "name": "EMBL's European Bioinformatics Institute",
+      "reason": "Wikidata organization typing reviewed: facility, research infrastructure, intergovernmental organization, research institute, organization, international organization"
+    },
+    {
+      "identityKey": "curation:enterprise-knowledge",
+      "iri": "https://openknowledgegraphs.com/organization/enterprise-knowledge/",
+      "name": "Enterprise Knowledge",
+      "reason": "Official service material documents sustained knowledge-graph consulting and implementation work."
+    },
+    {
+      "identityKey": "wikidata:Q8880",
+      "iri": "https://openknowledgegraphs.com/organization/european-commission/",
+      "name": "European Commission",
+      "reason": "Wikidata organization typing reviewed: executive branch, institutions of the European Union"
+    },
+    {
+      "identityKey": "wikidata:Q21755493",
+      "iri": "https://openknowledgegraphs.com/organization/european-holocaust-research-infrastructure/",
+      "name": "European Holocaust Research Infrastructure",
+      "reason": "Wikidata organization typing reviewed: science project, virtual research environment, working group"
+    },
+    {
+      "identityKey": "wikidata:Q48718",
+      "iri": "https://openknowledgegraphs.com/organization/european-institute-for-gender-equality/",
+      "name": "European Institute for Gender Equality",
+      "reason": "Wikidata organization typing reviewed: decentralised agency of the European Union"
+    },
+    {
+      "identityKey": "wikidata:Q94778608",
+      "iri": "https://openknowledgegraphs.com/organization/finnish-terminology-centre-tsk/",
+      "name": "Finnish Terminology Centre TSK",
+      "reason": "Wikidata organization typing reviewed: cultural institution, voluntary association"
+    },
+    {
+      "identityKey": "wikidata:Q11333728",
+      "iri": "https://openknowledgegraphs.com/organization/franz-inc/",
+      "name": "Franz Inc.",
+      "reason": "Wikidata organization typing reviewed: business, company"
+    },
+    {
+      "identityKey": "wikidata:Q1231433",
+      "iri": "https://openknowledgegraphs.com/organization/free-university-of-bozen-bolzano/",
+      "name": "Free University of Bozen-Bolzano",
+      "reason": "Wikidata organization typing reviewed: university, organization"
+    },
+    {
+      "identityKey": "wikidata:Q3480450",
+      "iri": "https://openknowledgegraphs.com/organization/french-interministerial-service-of-archives/",
+      "name": "French Interministerial Service of Archives",
+      "reason": "Wikidata organization typing reviewed: public service, patrimonial administration"
+    },
+    {
+      "identityKey": "wikidata:Q1501657",
+      "iri": "https://openknowledgegraphs.com/organization/general-services-administration/",
+      "name": "General Services Administration",
+      "reason": "Wikidata organization typing reviewed: independent agency of the United States government, central purchasing body, contracting authority"
+    },
+    {
+      "identityKey": "wikidata:Q63461270",
+      "iri": "https://openknowledgegraphs.com/organization/geoscience-terminology-working-group/",
+      "name": "Geoscience Terminology Working Group",
+      "reason": "Wikidata organization typing reviewed: working group"
+    },
+    {
+      "identityKey": "wikidata:Q27302",
+      "iri": "https://openknowledgegraphs.com/organization/german-national-library/",
+      "name": "German National Library",
+      "reason": "Wikidata organization typing reviewed: bibliographic database, national library, archival library"
+    },
+    {
+      "identityKey": "wikidata:Q11203476",
+      "iri": "https://openknowledgegraphs.com/organization/getty-research-institute/",
+      "name": "Getty Research Institute",
+      "reason": "Wikidata organization typing reviewed: research institute, organization"
+    },
+    {
+      "identityKey": "wikidata:Q133503461",
+      "iri": "https://openknowledgegraphs.com/organization/graphwise/",
+      "name": "Graphwise",
+      "reason": "Official company and careers material documents sustained knowledge-graph and semantic-AI products."
+    },
+    {
+      "identityKey": "wikidata:Q1382220",
+      "iri": "https://openknowledgegraphs.com/organization/helsinki-university-library/",
+      "name": "Helsinki University Library",
+      "reason": "Wikidata organization typing reviewed: academic library"
+    },
+    {
+      "identityKey": "wikidata:Q266936",
+      "iri": "https://openknowledgegraphs.com/organization/hp-labs/",
+      "name": "HP Labs",
+      "reason": "Wikidata organization typing reviewed: research institute"
+    },
+    {
+      "identityKey": "wikidata:Q265058",
+      "iri": "https://openknowledgegraphs.com/organization/hungarian-academy-of-sciences/",
+      "name": "Hungarian Academy of Sciences",
+      "reason": "Wikidata organization typing reviewed: public body, national academy, academy of sciences, organization"
+    },
+    {
+      "identityKey": "wikidata:Q135643489",
+      "iri": "https://openknowledgegraphs.com/organization/iab-technology-laboratory/",
+      "name": "IAB Technology Laboratory",
+      "reason": "Wikidata organization typing reviewed: organization"
+    },
+    {
+      "identityKey": "wikidata:Q100269543",
+      "iri": "https://openknowledgegraphs.com/organization/ilo-library/",
+      "name": "ILO Library",
+      "reason": "Wikidata organization typing reviewed: special library"
+    },
+    {
+      "identityKey": "wikidata:Q131566",
+      "iri": "https://openknowledgegraphs.com/organization/institute-of-electrical-and-electronics-engineers/",
+      "name": "Institute of Electrical and Electronics Engineers",
+      "reason": "Wikidata organization typing reviewed: engineering society, standards organization, trade union federation, nonprofit organization, publishing house, open-access publisher, charitable organization, professional association, learned society"
+    },
+    {
+      "identityKey": "wikidata:Q3152021",
+      "iri": "https://openknowledgegraphs.com/organization/institute-of-scientific-and-technical-information/",
+      "name": "Institute of Scientific and Technical Information",
+      "reason": "Wikidata organization typing reviewed: research institute"
+    },
+    {
+      "identityKey": "wikidata:Q30262675",
+      "iri": "https://openknowledgegraphs.com/organization/institute-of-scientific-and-technical-information-of-china/",
+      "name": "Institute of Scientific and Technical Information of China",
+      "reason": "Wikidata organization typing reviewed: government agency, research center"
+    },
+    {
+      "identityKey": "wikidata:Q6044782",
+      "iri": "https://openknowledgegraphs.com/organization/inter-university-consortium-for-political-and-social-research/",
+      "name": "Inter-university Consortium for Political and Social Research",
+      "reason": "Wikidata organization typing reviewed: research consortium, research institute, international organization"
+    },
+    {
+      "identityKey": "wikidata:Q402104",
+      "iri": "https://openknowledgegraphs.com/organization/international-commission-on-stratigraphy/",
+      "name": "International Commission on Stratigraphy",
+      "reason": "Wikidata organization typing reviewed: international non-governmental organization"
+    },
+    {
+      "identityKey": "wikidata:Q106472263",
+      "iri": "https://openknowledgegraphs.com/organization/laboratory-for-telecommunication-sciences/",
+      "name": "Laboratory for Telecommunication Sciences",
+      "reason": "Wikidata organization typing reviewed: laboratory"
+    },
+    {
+      "identityKey": "wikidata:Q913250",
+      "iri": "https://openknowledgegraphs.com/organization/library-and-archives-canada/",
+      "name": "Library and Archives Canada",
+      "reason": "Wikidata organization typing reviewed: national archives, national library, library, open-access repository"
+    },
+    {
+      "identityKey": "wikidata:Q3456783",
+      "iri": "https://openknowledgegraphs.com/organization/library-network-of-western-switzerland/",
+      "name": "Library Network of Western Switzerland",
+      "reason": "Wikidata organization typing reviewed: library network"
+    },
+    {
+      "identityKey": "wikidata:Q131454",
+      "iri": "https://openknowledgegraphs.com/organization/library-of-congress/",
+      "name": "Library of Congress",
+      "reason": "Wikidata organization typing reviewed: United Nations Depository Library, legislative branch agency, national library, parliamentary archives"
+    },
+    {
+      "identityKey": "wikidata:Q858851",
+      "iri": "https://openknowledgegraphs.com/organization/linux-foundation/",
+      "name": "Linux Foundation",
+      "reason": "Wikidata organization typing reviewed: foundation, mutual-benefit nonprofit corporation"
+    },
+    {
+      "identityKey": "wikidata:Q1319177",
+      "iri": "https://openknowledgegraphs.com/organization/mariano-moreno-national-library/",
+      "name": "Mariano Moreno National Library",
+      "reason": "Wikidata organization typing reviewed: national library"
+    },
+    {
+      "identityKey": "wikidata:Q6766381",
+      "iri": "https://openknowledgegraphs.com/organization/marklogic/",
+      "name": "MarkLogic",
+      "reason": "Wikidata organization typing reviewed: business"
+    },
+    {
+      "identityKey": "curation:memgraph",
+      "iri": "https://openknowledgegraphs.com/organization/memgraph/",
+      "name": "Memgraph",
+      "reason": "Official product material documents sustained graph-database development."
+    },
+    {
+      "identityKey": "wikidata:Q22132500",
+      "iri": "https://openknowledgegraphs.com/organization/metaphacts/",
+      "name": "metaphacts",
+      "reason": "Official company material documents sustained enterprise knowledge-graph products and services."
+    },
+    {
+      "identityKey": "wikidata:Q1575434",
+      "iri": "https://openknowledgegraphs.com/organization/metaweb/",
+      "name": "Metaweb",
+      "reason": "Wikidata organization typing reviewed: business"
+    },
+    {
+      "identityKey": "wikidata:Q160236",
+      "iri": "https://openknowledgegraphs.com/organization/metropolitan-museum-of-art/",
+      "name": "Metropolitan Museum of Art",
+      "reason": "Wikidata organization typing reviewed: production company, nonprofit organization, art museum, publishing house, museum"
+    },
+    {
+      "identityKey": "wikidata:Q1144725",
+      "iri": "https://openknowledgegraphs.com/organization/microsoft-research/",
+      "name": "Microsoft Research",
+      "reason": "Wikidata organization typing reviewed: department, division"
+    },
+    {
+      "identityKey": "wikidata:Q4294879",
+      "iri": "https://openknowledgegraphs.com/organization/ministry-of-justice/",
+      "name": "Ministry of Justice",
+      "reason": "Wikidata organization typing reviewed: ministry of Finland, justice ministry"
+    },
+    {
+      "identityKey": "wikidata:Q10333503",
+      "iri": "https://openknowledgegraphs.com/organization/museum-of-the-city-of-rio-de-janeiro/",
+      "name": "Museum of the City of Rio de Janeiro",
+      "reason": "Wikidata organization typing reviewed: museum"
+    },
+    {
+      "identityKey": "wikidata:Q623578",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-australia/",
+      "name": "National Library of Australia",
+      "reason": "Wikidata organization typing reviewed: Government body of Australia, United Nations Depository Library, history museum, art museum, national library"
+    },
+    {
+      "identityKey": "wikidata:Q948882",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-brazil/",
+      "name": "National Library of Brazil",
+      "reason": "Wikidata organization typing reviewed: national library, public library, library"
+    },
+    {
+      "identityKey": "wikidata:Q1200925",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-catalonia/",
+      "name": "National Library of Catalonia",
+      "reason": "Wikidata organization typing reviewed: digital library, national library, open-access publisher"
+    },
+    {
+      "identityKey": "wikidata:Q2901472",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-colombia/",
+      "name": "National Library of Colombia",
+      "reason": "Wikidata organization typing reviewed: national library, library"
+    },
+    {
+      "identityKey": "wikidata:Q420747",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-finland/",
+      "name": "National Library of Finland",
+      "reason": "Wikidata organization typing reviewed: national library, academic library"
+    },
+    {
+      "identityKey": "wikidata:Q856651",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-luxembourg/",
+      "name": "National Library of Luxembourg",
+      "reason": "Wikidata organization typing reviewed: Luxembourg National Cultural Institutions, national library, government agency"
+    },
+    {
+      "identityKey": "wikidata:Q924551",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-norway/",
+      "name": "National Library of Norway",
+      "reason": "Wikidata organization typing reviewed: depository library, national library"
+    },
+    {
+      "identityKey": "wikidata:Q245966",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-portugal/",
+      "name": "National Library of Portugal",
+      "reason": "Wikidata organization typing reviewed: national library, public library"
+    },
+    {
+      "identityKey": "wikidata:Q622012",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-romania/",
+      "name": "National Library of Romania",
+      "reason": "Wikidata organization typing reviewed: national library"
+    },
+    {
+      "identityKey": "wikidata:Q267566",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-russia/",
+      "name": "National Library of Russia",
+      "reason": "Wikidata organization typing reviewed: archives, national library, public library"
+    },
+    {
+      "identityKey": "wikidata:Q1967876",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-the-czech-republic/",
+      "name": "National Library of the Czech Republic",
+      "reason": "Wikidata organization typing reviewed: Czech research institution, university library, national library"
+    },
+    {
+      "identityKey": "wikidata:Q3308862",
+      "iri": "https://openknowledgegraphs.com/organization/national-library-of-uruguay/",
+      "name": "National Library of Uruguay",
+      "reason": "Wikidata organization typing reviewed: national library"
+    },
+    {
+      "identityKey": "wikidata:Q1063819",
+      "iri": "https://openknowledgegraphs.com/organization/national-szechenyi-library/",
+      "name": "National Széchényi Library",
+      "reason": "Wikidata organization typing reviewed: national library, library building"
+    },
+    {
+      "identityKey": "wikidata:Q6979416",
+      "iri": "https://openknowledgegraphs.com/organization/national-wildfire-coordinating-group/",
+      "name": "National Wildfire Coordinating Group",
+      "reason": "Wikidata organization typing reviewed: consortium, government organization"
+    },
+    {
+      "identityKey": "curation:neo4j-inc",
+      "iri": "https://openknowledgegraphs.com/organization/neo4j-inc/",
+      "name": "Neo4j, Inc.",
+      "reason": "Official company material documents sustained graph-database and knowledge-graph products."
+    },
+    {
+      "identityKey": "wikidata:Q98276929",
+      "iri": "https://openknowledgegraphs.com/organization/nfdi4culture/",
+      "name": "NFDI4Culture",
+      "reason": "Wikidata organization typing reviewed: science project, disciplinary research data infrastructure, accepted NFDI consortium"
+    },
+    {
+      "identityKey": "wikidata:Q252733",
+      "iri": "https://openknowledgegraphs.com/organization/object-management-group/",
+      "name": "Object Management Group",
+      "reason": "Wikidata organization typing reviewed: standards organization"
+    },
+    {
+      "identityKey": "wikidata:Q115740336",
+      "iri": "https://openknowledgegraphs.com/organization/ontopic/",
+      "name": "Ontopic",
+      "reason": "Wikidata organization typing reviewed: software company, enterprise"
+    },
+    {
+      "identityKey": "wikidata:Q7095072",
+      "iri": "https://openknowledgegraphs.com/organization/ontotext/",
+      "name": "Ontotext",
+      "reason": "Wikidata organization typing reviewed: software company, company"
+    },
+    {
+      "identityKey": "wikidata:Q5848375",
+      "iri": "https://openknowledgegraphs.com/organization/openlink-software/",
+      "name": "OpenLink Software",
+      "reason": "Wikidata organization typing reviewed: business"
+    },
+    {
+      "identityKey": "wikidata:Q10677814",
+      "iri": "https://openknowledgegraphs.com/organization/prime-minister-s-office/",
+      "name": "Prime Minister's Office",
+      "reason": "Wikidata organization typing reviewed: ministry of Finland, ministry"
+    },
+    {
+      "identityKey": "wikidata:Q1256927",
+      "iri": "https://openknowledgegraphs.com/organization/protein-information-resource/",
+      "name": "Protein Information Resource",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization, biological database"
+    },
+    {
+      "identityKey": "wikidata:Q233358",
+      "iri": "https://openknowledgegraphs.com/organization/public-library-of-science/",
+      "name": "Public Library of Science",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization, website, open-access publisher, academic publisher"
+    },
+    {
+      "identityKey": "wikidata:Q480222",
+      "iri": "https://openknowledgegraphs.com/organization/publications-office-of-the-european-union/",
+      "name": "Publications Office of the European Union",
+      "reason": "Wikidata organization typing reviewed: service department of the European Commission, Interinstitutional Service of the European Union, open-access publisher"
+    },
+    {
+      "identityKey": "wikidata:Q107620349",
+      "iri": "https://openknowledgegraphs.com/organization/q107620349/",
+      "name": "Q107620349",
+      "reason": "Wikidata organization typing reviewed: company"
+    },
+    {
+      "identityKey": "wikidata:Q7308063",
+      "iri": "https://openknowledgegraphs.com/organization/regenstrief-institute/",
+      "name": "Regenstrief Institute",
+      "reason": "Wikidata organization typing reviewed: nonprofit organization, institute"
+    },
+    {
+      "identityKey": "curation:relationalai",
+      "iri": "https://openknowledgegraphs.com/organization/relationalai/",
+      "name": "RelationalAI",
+      "reason": "Official product material documents a sustained knowledge-graph and reasoning platform."
+    },
+    {
+      "identityKey": "wikidata:Q7312413",
+      "iri": "https://openknowledgegraphs.com/organization/renaissance-computing-institute/",
+      "name": "Renaissance Computing Institute",
+      "reason": "Wikidata organization typing reviewed: research institute"
+    },
+    {
+      "identityKey": "wikidata:Q109251004",
+      "iri": "https://openknowledgegraphs.com/organization/rero/",
+      "name": "RERO+",
+      "reason": "Wikidata organization typing reviewed: organization"
+    },
+    {
+      "identityKey": "wikidata:Q6253",
+      "iri": "https://openknowledgegraphs.com/organization/rhein-kreis-neuss/",
+      "name": "Rhein-Kreis Neuss",
+      "reason": "Wikidata organization typing reviewed: rural district of North Rhine-Westphalia"
+    },
+    {
+      "identityKey": "wikidata:Q136716648",
+      "iri": "https://openknowledgegraphs.com/organization/rimant-repertorium-instrumentorum-musicorum-antiquorum/",
+      "name": "RIMAnt (Repertorium Instrumentorum Musicorum Antiquorum)",
+      "reason": "Wikidata organization typing reviewed: research group, science project, research"
+    },
+    {
+      "identityKey": "wikidata:Q7374044",
+      "iri": "https://openknowledgegraphs.com/organization/royal-commission-on-the-historical-monuments-of-england/",
+      "name": "Royal Commission on the Historical Monuments of England",
+      "reason": "Wikidata organization typing reviewed: government agency"
+    },
+    {
+      "identityKey": "wikidata:Q251266",
+      "iri": "https://openknowledgegraphs.com/organization/sage-publishing/",
+      "name": "Sage Publishing",
+      "reason": "Wikidata organization typing reviewed: book publisher, open-access publisher, academic publisher"
+    },
+    {
+      "identityKey": "wikidata:Q28942361",
+      "iri": "https://openknowledgegraphs.com/organization/semantic-computing-research-group/",
+      "name": "Semantic Computing Research Group",
+      "reason": "Wikidata organization typing reviewed: university research group"
+    },
+    {
+      "identityKey": "wikidata:Q30291990",
+      "iri": "https://openknowledgegraphs.com/organization/semantic-web-company/",
+      "name": "Semantic Web Company",
+      "reason": "Wikidata organization typing reviewed: business"
+    },
+    {
+      "identityKey": "wikidata:Q3152521",
+      "iri": "https://openknowledgegraphs.com/organization/sib-swiss-institute-of-bioinformatics/",
+      "name": "SIB Swiss Institute of Bioinformatics",
+      "reason": "Wikidata organization typing reviewed: ELIXIR Node, nonprofit organization, research institute, research center"
+    },
+    {
+      "identityKey": "wikidata:Q620899",
+      "iri": "https://openknowledgegraphs.com/organization/slovak-national-library/",
+      "name": "Slovak National Library",
+      "reason": "Wikidata organization typing reviewed: national library"
+    },
+    {
+      "identityKey": "wikidata:Q1192305",
+      "iri": "https://openknowledgegraphs.com/organization/smithsonian-american-art-museum/",
+      "name": "Smithsonian American Art Museum",
+      "reason": "Wikidata organization typing reviewed: art museum, database"
+    },
+    {
+      "identityKey": "wikidata:Q117319690",
+      "iri": "https://openknowledgegraphs.com/organization/sparna/",
+      "name": "Sparna",
+      "reason": "Wikidata organization typing reviewed: organization"
+    },
+    {
+      "identityKey": "wikidata:Q4115969",
+      "iri": "https://openknowledgegraphs.com/organization/stanford-university-school-of-medicine/",
+      "name": "Stanford University School of Medicine",
+      "reason": "Wikidata organization typing reviewed: medical school"
+    },
+    {
+      "identityKey": "curation:stardog-union",
+      "iri": "https://openknowledgegraphs.com/organization/stardog-union/",
+      "name": "Stardog Union",
+      "reason": "Official product material documents a sustained enterprise knowledge-graph platform."
+    },
+    {
+      "identityKey": "wikidata:Q11900270",
+      "iri": "https://openknowledgegraphs.com/organization/state-treasury/",
+      "name": "State Treasury",
+      "reason": "Wikidata organization typing reviewed: ämbetsverk, Finnish government agency"
+    },
+    {
+      "identityKey": "wikidata:Q15209927",
+      "iri": "https://openknowledgegraphs.com/organization/swedish-competition-authority/",
+      "name": "Swedish Competition Authority",
+      "reason": "Wikidata organization typing reviewed: Swedish government agency"
+    },
+    {
+      "identityKey": "wikidata:Q7654721",
+      "iri": "https://openknowledgegraphs.com/organization/swedish-institute-for-language-and-folklore/",
+      "name": "Swedish Institute for Language and Folklore",
+      "reason": "Wikidata organization typing reviewed: Swedish government agency"
+    },
+    {
+      "identityKey": "curation:terminusdb",
+      "iri": "https://openknowledgegraphs.com/organization/terminusdb/",
+      "name": "TerminusDB",
+      "reason": "Official product and documentation material documents sustained graph and knowledge-graph software."
+    },
+    {
+      "identityKey": "wikidata:Q2413375",
+      "iri": "https://openknowledgegraphs.com/organization/the-open-university/",
+      "name": "The Open University",
+      "reason": "Wikidata organization typing reviewed: higher education institution, organization, open-access publisher, educational organization, public university"
+    },
+    {
+      "identityKey": "wikidata:Q100501108",
+      "iri": "https://openknowledgegraphs.com/organization/the-qa-company/",
+      "name": "The QA Company",
+      "reason": "Wikidata organization typing reviewed: organization"
+    },
+    {
+      "identityKey": "curation:tigergraph",
+      "iri": "https://openknowledgegraphs.com/organization/tigergraph/",
+      "name": "TigerGraph",
+      "reason": "Official product material documents sustained graph-database and graph-analytics products."
+    },
+    {
+      "identityKey": "curation:topquadrant",
+      "iri": "https://openknowledgegraphs.com/organization/topquadrant/",
+      "name": "TopQuadrant",
+      "reason": "Official product material documents sustained ontology, taxonomy, and knowledge-graph tooling."
+    },
+    {
+      "identityKey": "wikidata:Q110891877",
+      "iri": "https://openknowledgegraphs.com/organization/triply/",
+      "name": "Triply",
+      "reason": "Wikidata organization typing reviewed: company"
+    },
+    {
+      "identityKey": "curation:typedb",
+      "iri": "https://openknowledgegraphs.com/organization/typedb/",
+      "name": "TypeDB",
+      "reason": "Official product material documents a sustained graph and knowledge-representation platform."
+    },
+    {
+      "identityKey": "wikidata:Q838685",
+      "iri": "https://openknowledgegraphs.com/organization/united-nations-group-of-experts-on-geographical-names/",
+      "name": "United Nations Group of Experts on Geographical Names",
+      "reason": "Wikidata organization typing reviewed: international organization, expert group"
+    },
+    {
+      "identityKey": "wikidata:Q611833",
+      "iri": "https://openknowledgegraphs.com/organization/united-states-national-library-of-medicine/",
+      "name": "United States National Library of Medicine",
+      "reason": "Wikidata organization typing reviewed: national library, medical library"
+    },
+    {
+      "identityKey": "wikidata:Q152171",
+      "iri": "https://openknowledgegraphs.com/organization/university-of-bonn/",
+      "name": "University of Bonn",
+      "reason": "Wikidata organization typing reviewed: University of Excellence, comprehensive university, publishing house, public research university, local Internet registry, public university"
+    },
+    {
+      "identityKey": "wikidata:Q503415",
+      "iri": "https://openknowledgegraphs.com/organization/university-of-maryland/",
+      "name": "University of Maryland",
+      "reason": "Wikidata organization typing reviewed: publishing house, public educational institution of the United States, land-grant university, public research university"
+    },
+    {
+      "identityKey": "wikidata:Q192334",
+      "iri": "https://openknowledgegraphs.com/organization/university-of-north-carolina-at-chapel-hill/",
+      "name": "University of North Carolina at Chapel Hill",
+      "reason": "Wikidata organization typing reviewed: public educational institution of the United States, public research university"
+    },
+    {
+      "identityKey": "wikidata:Q8247561",
+      "iri": "https://openknowledgegraphs.com/organization/valencian-library/",
+      "name": "Valencian Library",
+      "reason": "Wikidata organization typing reviewed: main library, library"
+    },
+    {
+      "identityKey": "curation:weaviate",
+      "iri": "https://openknowledgegraphs.com/organization/weaviate/",
+      "name": "Weaviate",
+      "reason": "Official documentation establishes sustained graph-oriented database software and open-source stewardship."
+    },
+    {
+      "identityKey": "wikidata:Q28859214",
+      "iri": "https://openknowledgegraphs.com/organization/wikidata-editors/",
+      "name": "Wikidata editors",
+      "reason": "Wikidata organization typing reviewed: group of humans"
+    },
+    {
+      "identityKey": "wikidata:Q56035565",
+      "iri": "https://openknowledgegraphs.com/organization/wikimedia-community/",
+      "name": "Wikimedia community",
+      "reason": "Wikidata organization typing reviewed: community, virtual community"
+    },
+    {
+      "identityKey": "wikidata:Q15735556",
+      "iri": "https://openknowledgegraphs.com/organization/wikimedia-czech-republic/",
+      "name": "Wikimedia Czech Republic",
+      "reason": "Wikidata organization typing reviewed: Wikimedia chapter, nonprofit organization"
+    },
+    {
+      "identityKey": "wikidata:Q8288",
+      "iri": "https://openknowledgegraphs.com/organization/wikimedia-deutschland/",
+      "name": "Wikimedia Deutschland",
+      "reason": "Wikidata organization typing reviewed: charitable corporation, Wikimedia chapter, nonprofit organization, non-governmental organization"
+    },
+    {
+      "identityKey": "wikidata:Q180",
+      "iri": "https://openknowledgegraphs.com/organization/wikimedia-foundation/",
+      "name": "Wikimedia Foundation",
+      "reason": "Official Foundation material identifies it as the nonprofit operator of Wikidata and other free-knowledge projects."
+    },
+    {
+      "identityKey": "wikidata:Q18559903",
+      "iri": "https://openknowledgegraphs.com/organization/wikimedia-uruguay/",
+      "name": "Wikimedia Uruguay‎",
+      "reason": "Wikidata organization typing reviewed: Wikimedia chapter"
+    },
+    {
+      "identityKey": "wikidata:Q7817",
+      "iri": "https://openknowledgegraphs.com/organization/world-health-organization/",
+      "name": "World Health Organization",
+      "reason": "Wikidata organization typing reviewed: specialized agency of the United Nations, open-access publisher, international organization, academic publisher"
+    },
+    {
+      "identityKey": "wikidata:Q37033",
+      "iri": "https://openknowledgegraphs.com/organization/world-wide-web-consortium/",
+      "name": "World Wide Web Consortium",
+      "reason": "Official standards and careers pages document W3C's continuing standards-steward role."
+    },
+    {
+      "identityKey": "wikidata:Q93230157",
+      "iri": "https://openknowledgegraphs.com/organization/zazuko/",
+      "name": "Zazuko",
+      "reason": "Wikidata organization typing reviewed: enterprise"
+    }
+  ],
+  "counts": {
+    "accepted": 139,
+    "catalogAccepted": 126,
+    "catalogRejected": 3,
+    "catalogUnresolved": 0,
+    "missingRelationship": 13,
+    "pilotSelected": 12,
+    "rejected": 3,
+    "unresolved": 0
+  },
+  "generatedAt": "2026-08-26T17:02:48Z",
+  "inputCounts": {
+    "apparentOrganizationCandidates": 129,
+    "catalogRecords": 3324,
+    "catalogRelationships": 185,
+    "linkedCatalogRecords": 157
+  },
+  "lastVerified": "2026-08-26",
+  "missingRelationships": [
+    {
+      "identityKey": "curation:cambridge-semantics",
+      "name": "Cambridge Semantics",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:eccenca",
+      "name": "eccenca",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:enterprise-knowledge",
+      "name": "Enterprise Knowledge",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:memgraph",
+      "name": "Memgraph",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:neo4j-inc",
+      "name": "Neo4j, Inc.",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:relationalai",
+      "name": "RelationalAI",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:stardog-union",
+      "name": "Stardog Union",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:terminusdb",
+      "name": "TerminusDB",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:tigergraph",
+      "name": "TigerGraph",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:topquadrant",
+      "name": "TopQuadrant",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:typedb",
+      "name": "TypeDB",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "curation:weaviate",
+      "name": "Weaviate",
+      "status": "evidence-reviewed"
+    },
+    {
+      "identityKey": "wikidata:Q180",
+      "name": "Wikimedia Foundation",
+      "status": "evidence-reviewed"
+    }
+  ],
+  "rejected": [
+    {
+      "identityKey": "wikidata:Q28152171",
+      "name": "Europeana Fashion",
+      "reason": "Wikidata type is not an organization: website"
+    },
+    {
+      "identityKey": "wikidata:Q137242347",
+      "name": "SGF: SPARQL Updates over Decentralized Knowledge Graphs without Access Path Dependencies",
+      "reason": "Wikidata type is not an organization: chapter"
+    },
+    {
+      "identityKey": "wikidata:Q34645736",
+      "name": "The Monarch Initiative",
+      "reason": "Wikidata type is not an organization: biological database"
+    }
+  ],
+  "schemaVersion": 1,
+  "unresolved": []
+}

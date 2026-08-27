@@ -56,6 +56,21 @@ kgjobs:QueryExecution a rdfs:Class ;
     rdfs:label "Query Execution"@en ;
     rdfs:comment "One execution of a declared query family during a live-ingestion activity, with the exact executed text and bounded result counts."@en .
 
+kgjobs:InclusionEvidence a rdfs:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Organization inclusion evidence"@en ;
+    rdfs:comment "A cited, dated fact supporting an evidence-reviewed organization's inclusion in the KG ecosystem registry."@en .
+
+kgjobs:ProducerRelationship a rdfs:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "Catalog producer relationship"@en ;
+    rdfs:comment "A source-backed developer, creator, author, publisher, maintainer, operator, or owner relationship between a catalog resource and an organization."@en .
+
+kgjobs:FirstPartyCareerSource a rdfs:Class ;
+    rdfs:subClassOf dcat:Dataset ;
+    rdfs:label "First-party career source"@en ;
+    rdfs:comment "An evidence-reviewed, organization-authorized ATS feed or bounded same-site JobPosting extraction source. Production use additionally requires explicit production and republication approval."@en .
+
 #################################################################
 # Properties on schema:JobPosting
 #################################################################
@@ -299,9 +314,132 @@ kgjobs:lastSeenAt a rdf:Property ;
 
 kgjobs:active a rdf:Property ;
     rdfs:label "active"@en ;
-    rdfs:comment "Whether the local snapshot currently treats this posting as active."@en ;
-    rdfs:domain schema:JobPosting ;
+    rdfs:comment "Whether a posting or reviewed organization is currently active."@en ;
     rdfs:range xsd:boolean .
+
+#################################################################
+# Properties for organization curation and first-party sources
+#################################################################
+
+kgjobs:organizationKind a rdf:Property ;
+    rdfs:label "organization kind"@en ;
+    rdfs:comment "Links an accepted organization to one reviewed kind in the Organization Kinds scheme."@en ;
+    rdfs:domain schema:Organization ;
+    rdfs:range skos:Concept .
+
+kgjobs:ecosystemRole a rdf:Property ;
+    rdfs:label "ecosystem role"@en ;
+    rdfs:comment "Links an accepted organization to one evidenced role in the KG ecosystem."@en ;
+    rdfs:domain schema:Organization ;
+    rdfs:range skos:Concept .
+
+kgjobs:inclusionEvidence a rdf:Property ;
+    rdfs:label "inclusion evidence"@en ;
+    rdfs:domain schema:Organization ;
+    rdfs:range kgjobs:InclusionEvidence .
+
+kgjobs:reviewStatus a rdf:Property ;
+    rdfs:label "review status"@en ;
+    rdfs:comment "Evidence review outcome; production approval is recorded separately."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:reviewReason a rdf:Property ;
+    rdfs:label "review reason"@en ;
+    rdfs:range xsd:string .
+
+kgjobs:lastVerified a rdf:Property ;
+    rdfs:label "last verified"@en ;
+    rdfs:range xsd:date .
+
+kgjobs:careersPage a rdf:Property ;
+    rdfs:label "official careers page"@en ;
+    rdfs:domain schema:Organization ;
+    rdfs:range rdfs:Resource .
+
+kgjobs:pilotSelected a rdf:Property ;
+    rdfs:label "selected for local pilot"@en ;
+    rdfs:range xsd:boolean .
+
+kgjobs:productionApproved a rdf:Property ;
+    rdfs:label "approved for production"@en ;
+    rdfs:comment "True only following explicit user approval. Evidence review alone never sets this value."@en ;
+    rdfs:range xsd:boolean .
+
+kgjobs:catalogResource a rdf:Property ;
+    rdfs:label "catalog resource"@en ;
+    rdfs:domain kgjobs:ProducerRelationship .
+
+kgjobs:producerOrganization a rdf:Property ;
+    rdfs:label "producer organization"@en ;
+    rdfs:domain kgjobs:ProducerRelationship ;
+    rdfs:range schema:Organization .
+
+kgjobs:producerRole a rdf:Property ;
+    rdfs:label "producer role"@en ;
+    rdfs:comment "Normalized resource-specific relationship: developer, creator, author, publisher, maintainer, operator, or owner."@en ;
+    rdfs:domain kgjobs:ProducerRelationship ;
+    rdfs:range xsd:string .
+
+kgjobs:sourceProperty a rdf:Property ;
+    rdfs:label "source property"@en ;
+    rdfs:comment "Source identifier such as P178 that substantiates the producer role."@en ;
+    rdfs:domain kgjobs:ProducerRelationship ;
+    rdfs:range xsd:string .
+
+kgjobs:careerProvider a rdf:Property ;
+    rdfs:label "career source provider"@en ;
+    rdfs:range xsd:string .
+
+kgjobs:tenantIdentifier a rdf:Property ;
+    rdfs:label "board or tenant identifier"@en ;
+    rdfs:range xsd:string .
+
+kgjobs:sourceEndpoint a rdf:Property ;
+    rdfs:label "source endpoint"@en .
+
+kgjobs:sourceReviewStatus a rdf:Property ;
+    rdfs:label "source review status"@en ;
+    rdfs:range xsd:string .
+
+kgjobs:extractionMode a rdf:Property ;
+    rdfs:label "extraction mode"@en ;
+    rdfs:range xsd:string .
+
+kgjobs:robotsURL a rdf:Property ;
+    rdfs:label "robots policy URL"@en .
+
+kgjobs:republicationStatus a rdf:Property ;
+    rdfs:label "republication review status"@en ;
+    rdfs:comment "Reviewed publication boundary for a source; local-review-only never authorizes production publication."@en ;
+    rdfs:range xsd:string .
+
+kgjobs:organization a rdf:Property ;
+    rdfs:label "reviewed organization"@en ;
+    rdfs:range schema:Organization .
+
+kgjobs:sourceOccurrence a rdf:Property ;
+    rdfs:label "source occurrence"@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range prov:Entity .
+
+kgjobs:occurrenceRecordId a rdf:Property ;
+    rdfs:label "source occurrence record identifier"@en ;
+    rdfs:comment "The source-native stable identifier retained on one provenance occurrence."@en ;
+    rdfs:domain prov:Entity ;
+    rdfs:range xsd:string .
+
+kgjobs:firstParty a rdf:Property ;
+    rdfs:label "first-party occurrence"@en ;
+    rdfs:comment "Whether a retained source occurrence came directly from the reviewed hiring organization or its authorized career provider."@en ;
+    rdfs:range xsd:boolean .
+
+kgjobs:reconciliationMethod a rdf:Property ;
+    rdfs:label "reconciliation method"@en ;
+    rdfs:range xsd:string .
+
+kgjobs:reconciliationReason a rdf:Property ;
+    rdfs:label "reconciliation reason"@en ;
+    rdfs:range xsd:string .
 
 #################################################################
 # SHACL shapes
@@ -510,3 +648,84 @@ kgjobs:QueryExecutionShape a sh:NodeShape ;
     sh:property [ sh:path kgjobs:returnedCount ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:nonNegativeInteger ] ;
     sh:property [ sh:path kgjobs:totalCount ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:nonNegativeInteger ] ;
     sh:property [ sh:path kgjobs:queryComplete ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] .
+
+kgjobs:ReviewedOrganizationShape a sh:NodeShape ;
+    sh:targetSubjectsOf kgjobs:organizationKind ;
+    sh:class schema:Organization ;
+    sh:property [ sh:path schema:name ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:organizationKind ; sh:minCount 1 ; sh:nodeKind sh:IRI ; sh:class skos:Concept ] ;
+    sh:property [ sh:path kgjobs:ecosystemRole ; sh:minCount 1 ; sh:nodeKind sh:IRI ; sh:class skos:Concept ] ;
+    sh:property [ sh:path kgjobs:inclusionEvidence ; sh:minCount 1 ; sh:class kgjobs:InclusionEvidence ] ;
+    sh:property [ sh:path kgjobs:reviewStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "evidence-reviewed" ) ] ;
+    sh:property [ sh:path kgjobs:active ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path kgjobs:lastVerified ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path kgjobs:pilotSelected ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path kgjobs:productionApproved ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path owl:sameAs ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:sparql [
+        sh:message "A production-approved organization must be active, evidence-reviewed, and selected for the reviewed career-source program." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this kgjobs:productionApproved true .
+                FILTER NOT EXISTS {
+                    $this kgjobs:active true ;
+                          kgjobs:reviewStatus "evidence-reviewed" ;
+                          kgjobs:pilotSelected true .
+                }
+            }
+        """
+    ] .
+
+kgjobs:InclusionEvidenceShape a sh:NodeShape ;
+    sh:targetClass kgjobs:InclusionEvidence ;
+    sh:property [ sh:path dcterms:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path dcterms:description ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dcterms:date ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] .
+
+kgjobs:ProducerRelationshipShape a sh:NodeShape ;
+    sh:targetClass kgjobs:ProducerRelationship ;
+    sh:property [ sh:path kgjobs:producerOrganization ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:catalogResource ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] .
+
+kgjobs:FirstPartyCareerSourceShape a sh:NodeShape ;
+    sh:targetClass kgjobs:FirstPartyCareerSource ;
+    sh:class dcat:Dataset ;
+    sh:property [ sh:path dcterms:identifier ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path kgjobs:organization ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:careerProvider ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:tenantIdentifier ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:allowedHost ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:sourceEndpoint ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:termsURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:robotsURL ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:attributionText ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:republicationStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "local-review-only" "production-approved" ) ] ;
+    sh:property [ sh:path kgjobs:minRefreshIntervalSeconds ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path kgjobs:requestTimeoutSeconds ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxResponseBytes ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxRecordsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxRequestsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:sourceReviewStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "evidence-reviewed" "unresolved" "rejected" ) ] ;
+    sh:property [ sh:path kgjobs:productionApproved ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:sparql [
+        sh:message "A production-approved career source must be evidence-reviewed and approved for republication." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this kgjobs:productionApproved true .
+                FILTER NOT EXISTS {
+                    $this kgjobs:sourceReviewStatus "evidence-reviewed" ;
+                          kgjobs:republicationStatus "production-approved" .
+                }
+            }
+        """
+    ] .
+
+kgjobs:SourceOccurrenceShape a sh:NodeShape ;
+    sh:targetObjectsOf kgjobs:sourceOccurrence ;
+    sh:class prov:Entity ;
+    sh:property [ sh:path dcterms:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:occurrenceRecordId ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path schema:url ; sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
+    sh:property [ sh:path kgjobs:firstParty ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path kgjobs:careerProvider ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path kgjobs:tenantIdentifier ; sh:maxCount 1 ; sh:datatype xsd:string ] .

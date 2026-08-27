@@ -40,7 +40,14 @@ which correctly comes back `not_match`).
 prototypes/kg-jobs/
 ├── ontology.ttl              Local classes/properties + SHACL shapes
 ├── vocabularies/kg-jobs.ttl  Controlled vocabulary (3 SKOS schemes)
+├── vocabularies/organizations.ttl  Organization-kind and ecosystem-role schemes
 ├── sources.ttl               DCAT/PROV source registry
+├── curation/organizations.ttl      Reviewed organizations, aliases, and evidence
+├── curation/location-aliases.json  Exact reconciliation aliases
+├── audits/organization-source-snapshot.json  Reproducible source audit
+├── audits/organization-registry-audit.json   Reviewed outcome audit
+├── data/organizations.{json,ttl}   Deterministic organization projections
+├── data/organization_uri_registry.json  Permanent local IRI reservations
 ├── fixtures/jobs.json        20 hand-authored, reviewed test postings
 ├── data/jobs.ttl             Generated RDF (schema:JobPosting + evidence)
 ├── data/jobs.json            Generated deterministic JSON projection
@@ -48,8 +55,13 @@ prototypes/kg-jobs/
 ├── scripts/classifier.py     Reusable, vocabulary-driven classifier
 ├── scripts/generate.py       Fixtures -> RDF + JSON
 ├── scripts/live_pipeline.py  Live API -> RDF + JSON snapshot (run by hand or by the hourly schedule)
+├── scripts/organization_registry.py  Reviewed registry generator
+├── scripts/first_party_sources.py    Bounded first-party adapters
+├── scripts/reconcile.py              Strict cross-source reconciliation
+├── scripts/first_party_pilot.py      Explicit local review harness
 ├── requirements.txt          Standalone prototype/test dependencies
-├── site/index.html           Local jobs page (live by default; fixtures explicit)
+├── site/index.html           Local reconciled jobs view (fixtures explicit)
+├── site/organizations.html   Local organization registry and audit view
 └── tests/                    pytest suite (SHACL, fixtures, determinism)
 
 # repo root (outside prototypes/kg-jobs/) -- kept separate from the
@@ -58,7 +70,8 @@ prototypes/kg-jobs/
 .github/workflows/update-jobs.yml        Hourly schedule: calls live_pipeline.py per production source
 data/jobs/jobs.json, data/jobs/jobs.ttl  Committed snapshot the production OKG site reads
 data/jobs/run.json                       Committed per-source last-refresh history (continuity across CI runs)
-data/jobs/raw/<source>.json              Committed raw payload per source, for provenance
+data/jobs/raw/<source>.json              Committed raw payload for the five aggregator sources
+Actions artifact: first-party-diagnostics-<run>  Non-public first-party raw/diagnostic records
 ```
 
 RDF reuses `schema:JobPosting` (Schema.org), `skos:Concept`/`ConceptScheme`
@@ -77,9 +90,12 @@ Every job posting's `hiringOrganization` resolves to one stable, reused URI
 per distinct employer name (`kgjd:employer-<slug>`, minted by
 `scripts/entities.py`) rather than a fresh blank node per posting — the same
 company appearing across many postings is one `kgjobs:Employer` resource.
-This is deliberately *not* automatically linked to Wikidata: employer
-identity remains optional and never a scoring input, per Task 28's original
-design.
+This is deliberately *not* automatically linked to Wikidata in production job
+generation: employer identity remains optional and never a scoring input, per
+Task 28's original design. Task 38's separate local organization registry gives
+every accepted organization a permanent OKG IRI and may attach a reviewed
+Wikidata identity. Registry membership selects where the local first-party
+pilot searches; it never affects classification or ranking.
 
 To propose a Wikidata match for review:
 
@@ -205,8 +221,9 @@ python3 -m http.server 8008
 # open http://localhost:8008/site/
 ```
 
-The default page reads the ignored `runtime/` live snapshot and presents only
-qualified postings inside the existing OKG visual language. Search covers job
+The default page reads the ignored `runtime/first-party/` reconciled pilot
+snapshot and presents qualified and internal-review postings together as current
+KG jobs inside the existing OKG visual language. Search covers job
 metadata and KG concepts; deduplicated concept chips summarize why each job
 belongs, and the complete matched phrase, concept, scheme, source field, and
 negation evidence remains behind an expandable "Why this job" disclosure. Each
@@ -216,11 +233,75 @@ not product-facing statuses. Use `http://localhost:8008/site/?mode=fixtures` to
 view the explicitly labeled synthetic corpus. The prototype is not linked from
 the production OKG site.
 
+The companion `http://localhost:8008/site/organizations.html` view browses all
+registry outcomes and exposes kinds, ecosystem roles, cited evidence, review
+reasons, official and career sources, source terms/robots status, verification
+dates, pilot selection, and accepted/unresolved/rejected counts. Both views are
+local review surfaces only.
+
+## Organization registry and local first-party pilot
+
+Normal registry generation is deterministic and network-free. It rebuilds from
+the committed source snapshot and curation, preserves every reserved slug, and
+SHACL-validates the RDF projection:
+
+```bash
+cd prototypes/kg-jobs
+../../.venv/bin/python scripts/organization_registry.py --verified-on 2026-08-26
+```
+
+Refreshing the Wikidata-backed source snapshot is an explicit network boundary
+and is never part of tests or scheduled production:
+
+```bash
+../../.venv/bin/python scripts/organization_registry.py \
+  --refresh-source-snapshot --verified-on 2026-08-26
+```
+
+First-party declarations omit `kgjobs:searchEnabled` and are handled by a
+separate production loader. That loader admits a source only when the source
+and organization are active, evidence-reviewed, explicitly
+`productionApproved true`, and carry `production-approved` republication
+status. The 12 reviewed sources meeting those gates are Neo4j, RelationalAI,
+TigerGraph, Wikimedia Foundation, Stardog, Weaviate, Graphwise, Enterprise
+Knowledge, metaphacts, TopQuadrant, eccenca, and W3C. Every other accepted
+organization remains registry-only. The network-free fixtures and bounded live
+pilot remain available as an explicit, unpublished review harness:
+
+```bash
+../../.venv/bin/python scripts/first_party_pilot.py \
+  --fixtures tests/fixtures/first-party-pilot
+../../.venv/bin/python scripts/first_party_pilot.py --live
+```
+
+Fixture and live snapshots use separate ignored runtime directories, so a live
+source failure can never retain synthetic fixture records. The pilot enforces a
+24-hour minimum refresh, a 20-second timeout, 5 MB response,
+three-request and 250-record per-source maxima, and a global ceiling of 20
+organizations / 60 requests. The reviewed set uses 12 organizations and one
+request each except Graphwise's bounded two-request discovery/detail adapter.
+A source fails independently and retains its last good local
+records; the reconciled JSON/RDF snapshot is staged, validated, and atomically
+swapped. First-party records pass through the unchanged vocabulary-driven
+classifier. Cross-source merging uses the strict reviewed Task 38 fields and
+retains every JSON occurrence and RDF provenance node. The pilot runtime itself
+is never committed, scheduled, or published; production uses the separately
+gated loader and normal live pipeline.
+
+In that production path, per-source diagnostic snapshots retain every
+first-party `qualified`, `review`, and `not_match` result in a 30-day Actions
+artifact, outside the Pages artifact. Only first-party `qualified` records
+enter the committed public JSON/RDF snapshot. Existing aggregator publication
+behavior is unchanged. Organization membership remains a discovery input only
+and cannot promote a record into the public snapshot.
+
 ## Pulling a live local snapshot
 
-Six sources are registered in `sources.ttl`, each independently refreshable
-with its own registry-declared query families, request cap, and refresh
-interval:
+Five aggregator sources and 12 approved first-party sources are production
+refreshable from `sources.ttl`, each with its own registry-declared request cap
+and refresh interval. The first-party group uses verified official ATS/API or
+bounded same-site sources, refreshes no more than once per 24 hours, and never
+crawls an organization homepage:
 
 | `--source` | Query model | Refresh interval | Auth |
 |---|---|---|---|
@@ -229,7 +310,10 @@ interval:
 | `jooble` | Same 8 queries, ≤30 results each (their fixed page size) | 6h | `JOOBLE_API_KEY` env var |
 | `arbeitnow` | Broad, unfiltered feed pull; KG relevance decided entirely by local classification | 1h | none |
 | `adzuna` | Same 4 queries as Himalayas, ≤50 results each (their fixed page size), "us" country endpoint only | 6h | `ADZUNA_APP_ID` + `ADZUNA_APP_KEY` env vars |
-| `remotive` | Broad, unfiltered feed pull (their own `search` param was verified live to not filter at all) | 6h | none |
+| `first-party-*` (12 approved keys) | Official Greenhouse, Lever, Ashby, Rippling, or bounded reviewed same-site adapter | 24h | none |
+
+The retained Remotive declaration is disabled from production search and is
+available only for historical comparison tests.
 
 Jobicy's own `tag` search was verified against the live API to be genuine for
 most terms but to silently fall back to an unfiltered result set for the bare
@@ -326,6 +410,7 @@ number of matched strong signals as a tiebreaker.
 Generated local artifacts:
 
 - `runtime/raw/<source-key>.json` — parsed JSON payloads paired with their declared queries, one file per source you've run at least once
+- `runtime/sources/<source-key>.json` — each source's unreconciled last-good normalized records, retained so reconciliation is repeatable across sequential refreshes
 - `runtime/jobs.ttl` — `schema:JobPosting` records plus evidence and PROV links, across all sources
 - `runtime/jobs.json` — deterministic browser projection containing all outcomes, across all sources
 - `runtime/run.json` — the most recent run's source, retrieval time, discovery queries, and counts (see `sourceRefreshes` for every source's last retrieval time)
@@ -334,43 +419,42 @@ Generated local artifacts:
 
 `.github/workflows/update-jobs.yml` runs hourly and calls this same
 `scripts/live_pipeline.py --live --source <key>`, unmodified, once for each
-of the five production-cleared sources (Himalayas, Jobicy, Jooble,
-Arbeitnow, Adzuna). It is a separate, purpose-built workflow, not an extension of
+of the five aggregator sources and 12 approved first-party sources. It is a
+separate, purpose-built workflow, not an extension of
 the main catalog's `update-data.yml` publication pipeline — that pipeline's
 Cloudflare/vectors/rollback sequence runs once a day for the Wikidata
 catalog, on a completely different cadence and failure model than an hourly
 per-source jobs refresh.
 
 Because each GitHub Actions run starts from a clean checkout, the workflow
-restores the last committed snapshot into `prototypes/kg-jobs/runtime/`
-before calling the pipeline (so `enforce_refresh_interval` and
-`preserve_first_seen`/`other_source_records` see continuous history across
-runs, not a blank slate every hour), then copies the resulting
-`runtime/jobs.json` / `runtime/jobs.ttl` / `runtime/run.json` / `runtime/raw/`
-back out to a committed path at repo root — `data/jobs/jobs.json`,
-`data/jobs/jobs.ttl`, `data/jobs/run.json`, `data/jobs/raw/` — and commits
-only if that output actually changed. Pages serves from the repository
-tree, so this is what lets the production OKG site read the snapshot;
-publishing only as a GitHub Actions build artifact would not be fetchable
-by a static Pages build without extra plumbing, and it would expire. This
-output is deliberately kept under its own `data/jobs/` subpath rather than
+restores the last committed public snapshot into `prototypes/kg-jobs/runtime/`
+before calling the pipeline. The refresh guard sees continuous history, and
+the prior combined snapshot supplies last-good public records when a source
+fails. Within the run, `runtime/sources/` retains complete per-source state for
+all 17 sequential refreshes. The workflow commits only the resulting public
+`jobs.json`, `jobs.ttl`, `run.json`, and existing aggregator raw payloads under
+`data/jobs/`. Full first-party raw payloads and all classifier outcomes are
+uploaded separately as a 30-day diagnostic artifact and are never copied into
+the Pages tree. This output is deliberately kept under its own `data/jobs/`
+subpath rather than
 flat inside `data/` alongside the authoritative catalog's own
-`software.json` / `ontologies.json` / etc. — nothing reads `data/jobs/`
-yet (the actual Jobs tab is Task 32), so it stays out of the catalog
-directory that `generate_pages.py` reads from until something does.
+`software.json` / `ontologies.json` / etc. The production Jobs tab reads this
+independent snapshot directly, while `generate_pages.py` remains isolated from
+it.
 
 Because `enforce_refresh_interval` raises the dedicated
 `RefreshNotDueError` (a `LivePipelineError` subclass) rather than a generic
 one when a source's `minRefreshIntervalSeconds` has not elapsed yet, and
 `scripts/live_pipeline.py`'s `main()` exits `0` for that specific case, an
-hourly run legitimately "doing nothing" for Himalayas (24h) or Jooble/Adzuna
-(6h each)
+hourly run legitimately "doing nothing" for Himalayas and every first-party
+source (24h), or Jooble/Adzuna (6h each),
 on most invocations is expected and is not a workflow failure. Only a
-genuine fetch or SHACL-validation failure exits non-zero — and because
+genuine fetch or SHACL-validation failure exits non-zero. Because
 `publish_snapshot` only replaces `runtime/` atomically after validation
-succeeds, and the workflow only copies `runtime/` out to `data/jobs/` after
-every source has been attempted, a failure on one source can never
-overwrite the last good committed snapshot with partial or missing data.
+succeeds, a failed source leaves its prior raw payload and unreconciled source
+snapshot byte-identical. Other sources remain independently refreshable; the
+combined JSON/RDF is rebuilt from the complete set of per-source last-good
+snapshots and reconciled only through the reviewed exact-match policy.
 
 Jooble's API key is provisioned as the `JOOBLE_API_KEY` GitHub Actions
 secret on the repository and is passed to that one step's environment only —
@@ -387,24 +471,23 @@ committed or pushed. This is the safe way to test a single source (via the
 
 ## Known limitations / deliberately deferred
 
-This prototype answers two bounded questions—*can KG relevance be detected from
-posting content alone, and can that classification run over a real attributed
-feed without touching production?* It still defers everything required to run
-jobs as a public OKG catalog:
+The production path remains deliberately bounded:
 
-- **Production source portfolio**: direct Greenhouse/Lever employer feeds and
-  other sources need separate registry entries, review, and coverage work.
-- **Publication rights**: local API access is not permission to republish a
-  source's listings in a public job catalog.
-- **Deduplication**: the same posting appearing across multiple boards.
-- **History and expiry**: the local feed is a current snapshot, not a durable
-  first-seen/last-seen job history.
+- **Additional organizations or sources** require their own verified career
+  configuration, evidence and republication review, and explicit production
+  approval; registry membership alone is never enough.
+- **Classification** remains content-only. Organization membership affects
+  discovery, never qualification, scoring, ranking, or rescue.
+- **Reconciliation** uses reviewed exact identities and fields only; it does
+  not perform fuzzy employer/title expansion.
+- **History and expiry** remain current-snapshot oriented rather than a durable
+  public archive of closed vacancies.
 - **Employer reconciliation**: linking `hiringOrganization` strings to
   Wikidata QIDs — deliberately optional and never a scoring input.
 - **Wikidata enrichment**: no Wikidata reads or writes happen anywhere in this
   prototype.
-- **Scheduling and deployment**: no cron, no CI wiring, no production catalog
-  category.
+- **Deployment**: the production wiring is reviewable locally; this task does
+  not itself dispatch the workflow, commit generated data, or deploy the site.
 - **Recall on single-signal postings**: a posting with exactly one contextual
   signal and nothing else is `not_match` under the current policy, which
   favors precision over recall — worth revisiting with a larger reviewed

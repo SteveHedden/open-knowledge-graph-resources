@@ -61,7 +61,7 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
   workflow_dispatch:
     inputs:
       source:
-        description: Refresh only this source; default refreshes all five
+        description: Refresh one approved source; default refreshes all 17
         required: false
         default: all
         type: choice
@@ -72,6 +72,18 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
           - jooble
           - arbeitnow
           - adzuna
+          - first-party-neo4j
+          - first-party-relationalai
+          - first-party-tigergraph
+          - first-party-wikimedia
+          - first-party-stardog
+          - first-party-weaviate
+          - first-party-graphwise
+          - first-party-enterprise-knowledge
+          - first-party-metaphacts
+          - first-party-topquadrant
+          - first-party-eccenca
+          - first-party-w3c
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false

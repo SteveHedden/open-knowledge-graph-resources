@@ -1,0 +1,34 @@
+{
+  "listing": {
+    "items": [
+      {
+        "id": "b52abfb2-4ca4-4da7-9c4a-d9723caf23a9",
+        "name": "Future Openings at TopQuadrant",
+        "url": "https://ats.rippling.com/topquadrant/jobs/b52abfb2-4ca4-4da7-9c4a-d9723caf23a9",
+        "department": {"name": "Operations"},
+        "locations": [
+          {"name": "Remote (United States)", "workplaceType": "REMOTE"}
+        ]
+      }
+    ],
+    "page": 0,
+    "pageSize": 2,
+    "totalItems": 1,
+    "totalPages": 1
+  },
+  "details": [
+    {
+      "uuid": "b52abfb2-4ca4-4da7-9c4a-d9723caf23a9",
+      "name": "Future Openings at TopQuadrant",
+      "url": "https://ats.rippling.com/topquadrant/jobs/b52abfb2-4ca4-4da7-9c4a-d9723caf23a9",
+      "description": {
+        "company": "<p>TopQuadrant builds knowledge graph and semantic technology products.</p>",
+        "role": "<p>Work with RDF, SHACL, SPARQL, and TopBraid EDG.</p>"
+      },
+      "workLocations": ["Remote (United States)"],
+      "employmentType": {"label": "SALARIED_FT", "id": "Salaried, full-time"},
+      "createdOn": "2026-02-17T08:26:49.515000-08:00",
+      "unlistedFromSearch": false
+    }
+  ]
+}

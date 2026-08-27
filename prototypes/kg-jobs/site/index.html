@@ -169,6 +169,21 @@
         color: var(--text-muted);
       }
 
+      .local-nav {
+        display: flex;
+        gap: 0.6rem;
+        margin: 1rem 0 0;
+      }
+
+      .local-nav a {
+        border: 1px solid var(--line-soft);
+        border-radius: 999px;
+        background: var(--surface);
+        padding: 0.45rem 0.75rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
       .controls {
         margin-bottom: 1.35rem;
         border: 1px solid var(--line-soft);
@@ -590,6 +605,10 @@
       <p class="site-subtitle">
         Browse ontologies, controlled vocabularies, taxonomies, semantic software, and knowledge graph jobs from RDF-first catalogs.
       </p>
+      <nav class="local-nav" aria-label="Local pilot views">
+        <a href="./" aria-current="page">Reconciled jobs</a>
+        <a href="./organizations.html">Organizations &amp; audit</a>
+      </nav>
     </header>
 
     <main id="main-content" class="site-main">
@@ -597,7 +616,7 @@
         <h2>Knowledge Graph Jobs</h2>
         <span id="prototype-label" class="prototype-label">Local live prototype</span>
         <p id="page-description" class="page-description">
-          Current postings discovered from a declared public source and classified from their content using the KG jobs vocabulary.
+          Reconciled aggregator and reviewed first-party postings, classified only from posting content using the KG jobs vocabulary.
         </p>
       </div>
 
@@ -621,7 +640,7 @@
         </div>
 
         <p id="data-note" class="prototype-note">
-          <strong>Local live data:</strong> this page reads an ignored runtime snapshot created on this computer. Nothing here is deployed or published in OKG.
+          <strong>Local first-party pilot:</strong> this page reads the ignored reconciled runtime snapshot created on this computer. Nothing here is scheduled, deployed, or published in OKG.
           <a href="?mode=fixtures">View synthetic test fixtures</a>.
         </p>
         <p id="results-meta" class="results-meta" aria-live="polite">Loading prototype data…</p>
@@ -652,8 +671,8 @@
     <footer class="site-footer">
       <p id="footer-summary">KG Jobs discovery prototype · RDF-first · local only</p>
       <div class="footer-links">
-        <a id="jobs-ttl-link" href="../runtime/jobs.ttl">jobs.ttl</a>
-        <a id="jobs-json-link" href="../runtime/jobs.json">jobs.json</a>
+        <a id="jobs-ttl-link" href="../runtime/first-party/jobs.ttl">jobs.ttl</a>
+        <a id="jobs-json-link" href="../runtime/first-party/jobs.json">jobs.json</a>
         <a href="../vocabularies/kg-jobs.ttl">KG jobs vocabulary</a>
       </div>
     </footer>
@@ -674,8 +693,8 @@
         const jobsJsonLinkEl = document.getElementById("jobs-json-link");
         const params = new URLSearchParams(window.location.search);
         const fixtureMode = params.get("mode") === "fixtures";
-        const dataUrl = fixtureMode ? "../data/jobs.json" : "../runtime/jobs.json";
-        const runUrl = fixtureMode ? null : "../runtime/run.json";
+        const dataUrl = fixtureMode ? "../data/jobs.json" : "../runtime/first-party/jobs.json";
+        const runUrl = fixtureMode ? null : "../runtime/first-party/run.json";
         let currentQuery = "";
         let allRecords = [];
         let runMetadata = null;
@@ -776,7 +795,7 @@
         }
 
         function sourceName(record) {
-          return record.sourceName || record.source || (runMetadata && (runMetadata.sourceName || runMetadata.source)) || "Source";
+          return record.sourceName || record.attributionText || record.source || (runMetadata && (runMetadata.sourceName || runMetadata.source)) || "Source";
         }
 
         function attributionUrl(record) {
@@ -1045,7 +1064,7 @@
             emptyStateEl.hidden = false;
             emptyStateEl.innerHTML = fixtureMode
               ? "Run <code>scripts/generate.py</code>, then serve <code>prototypes/kg-jobs</code> with a local HTTP server."
-              : "Run <code>python scripts/live_pipeline.py --live</code>, then reload this page. A failed pull will leave any previous good snapshot untouched.";
+              : "Run <code>python scripts/first_party_pilot.py --live</code>, then reload this page. A failed pull will leave any previous good snapshot untouched.";
           });
       })();
     </script>
