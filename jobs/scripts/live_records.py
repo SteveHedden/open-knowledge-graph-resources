@@ -13,7 +13,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from pyshacl import validate
-from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import RDF, XSD
 
 from classifier import Evidence, classify, find_evidence
@@ -207,8 +207,8 @@ def preserve_first_seen(
 
 
 def _evidence_to_rdf(graph: Graph, job, record: dict) -> None:
-    for item in record.get("evidence", []):
-        node = BNode()
+    for index, item in enumerate(record.get("evidence", []), start=1):
+        node = URIRef(f"{job}/evidence/{index}")
         graph.add((node, RDF.type, KGJOBS.Evidence))
         graph.add((node, KGJOBS.matchedConcept, URIRef(item["concept_uri"])))
         graph.add((node, KGJOBS.conceptLabel, Literal(item["concept_label"])))
@@ -290,12 +290,14 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -
             graph.add((organization, SCHEMA.name, Literal(record["hiringOrganization"])))
         graph.add((job, SCHEMA.hiringOrganization, organization))
         if record.get("location"):
-            place = BNode()
+            place = URIRef(f"{job}/location")
             graph.add((place, RDF.type, SCHEMA.Place))
             graph.add((place, SCHEMA.name, Literal(record["location"])))
             graph.add((job, SCHEMA.jobLocation, place))
-        for requirement in record.get("applicantLocationRequirements", []):
-            area = BNode()
+        for index, requirement in enumerate(
+            record.get("applicantLocationRequirements", []), start=1
+        ):
+            area = URIRef(f"{job}/applicant-location/{index}")
             graph.add((area, RDF.type, SCHEMA.AdministrativeArea))
             graph.add((area, SCHEMA.name, Literal(requirement)))
             graph.add((job, SCHEMA.applicantLocationRequirements, area))
@@ -311,8 +313,8 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -
             graph.add((job, SCHEMA.experienceRequirements, Literal(record["seniority"])))
         structured_salary = record.get("baseSalary")
         if isinstance(structured_salary, dict):
-            monetary_amount = BNode()
-            quantitative_value = BNode()
+            monetary_amount = URIRef(f"{job}/salary")
+            quantitative_value = URIRef(f"{job}/salary/value")
             graph.add((monetary_amount, RDF.type, SCHEMA.MonetaryAmount))
             graph.add((quantitative_value, RDF.type, SCHEMA.QuantitativeValue))
             if structured_salary.get("currency"):

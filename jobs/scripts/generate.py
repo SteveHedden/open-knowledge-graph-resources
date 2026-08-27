@@ -14,7 +14,7 @@ import json
 import sys
 from pathlib import Path
 
-from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import RDF, XSD
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -64,7 +64,7 @@ def build_graph(records_with_results: list[tuple[dict, str, list]]) -> Graph:
         g.add((job, SCHEMA.hiringOrganization, org))
 
         if record.get("location"):
-            place = BNode()
+            place = URIRef(f"{job}/location")
             g.add((place, RDF.type, SCHEMA.Place))
             g.add((place, SCHEMA.name, Literal(record["location"])))
             g.add((job, SCHEMA.jobLocation, place))
@@ -79,8 +79,8 @@ def build_graph(records_with_results: list[tuple[dict, str, list]]) -> Graph:
 
         g.add((job, KGJOBS.classification, Literal(classification)))
 
-        for ev in evidence:
-            node = BNode()
+        for index, ev in enumerate(evidence, start=1):
+            node = URIRef(f"{job}/evidence/{index}")
             g.add((node, RDF.type, KGJOBS.Evidence))
             g.add((node, KGJOBS.matchedConcept, URIRef(ev.concept_uri)))
             g.add((node, KGJOBS.conceptLabel, Literal(ev.concept_label)))

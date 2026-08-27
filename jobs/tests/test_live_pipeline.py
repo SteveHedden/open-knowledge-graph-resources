@@ -6,13 +6,14 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
 import pytest
-from rdflib import Graph, Literal, Namespace, RDF
+from rdflib import BNode, Graph, Literal, Namespace, RDF
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import live_pipeline  # noqa: E402
 import live_records  # noqa: E402
+import rdf_utils  # noqa: E402
 from live_sources import LivePipelineError, RefreshNotDueError  # noqa: E402
 
 REMOTIVE_FIXTURE = ROOT / "tests" / "fixtures" / "remotive.json"
@@ -60,7 +61,17 @@ def test_explicit_live_flag_is_required():
     assert exc.value.code == 2
 
 
-def test_default_himalayas_pipeline_runs_four_query_families_and_deduplicates(tmp_path):
+def test_default_himalayas_pipeline_runs_four_query_families_and_deduplicates(
+    tmp_path, monkeypatch
+):
+    def reject_slow_blank_node_canonicalization(_graph):
+        raise AssertionError("named live graphs must bypass blank-node canonicalization")
+
+    monkeypatch.setattr(
+        rdf_utils,
+        "to_canonical_graph",
+        reject_slow_blank_node_canonicalization,
+    )
     runtime = tmp_path / "runtime"
     runtime.mkdir()
     (runtime / ".gitignore").write_text("*\n!.gitignore\n", encoding="utf-8")
@@ -141,6 +152,11 @@ def test_default_himalayas_pipeline_runs_four_query_families_and_deduplicates(tm
     ]
     graph = Graph()
     graph.parse(runtime / "jobs.ttl", format="turtle")
+    assert not any(
+        isinstance(term, BNode)
+        for triple in graph
+        for term in triple
+    )
     schema = Namespace("https://schema.org/")
     kgjobs = Namespace("https://openknowledgegraphs.com/jobs/ontology#")
     prov = Namespace("http://www.w3.org/ns/prov#")
