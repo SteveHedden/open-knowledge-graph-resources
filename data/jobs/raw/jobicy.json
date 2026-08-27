@@ -2,10 +2,10 @@
   "sourceKey": "jobicy",
   "responses": [
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-rdf",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-rdf",
       "query": "rdf",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-rdf"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -43,11 +43,11 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-ontology",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-ontology",
       "query": "ontology",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -85,10 +85,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-sparql",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-sparql",
       "query": "sparql",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -107,10 +107,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-skos",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-skos",
       "query": "skos",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-skos"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -129,10 +129,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-shacl",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-shacl",
       "query": "shacl",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-shacl"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -151,10 +151,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-linkml",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-linkml",
       "query": "linkml",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-linkml"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -173,10 +173,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-semantic-web",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-semantic-web",
       "query": "semantic web",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
       ],
       "payload": {
         "apiVersion": "2.2.16",
@@ -275,10 +275,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jobicy-query-knowledge-graph",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jobicy-query-knowledge-graph",
       "query": "knowledge graph",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
       ],
       "payload": {
         "apiVersion": "2.2.16",

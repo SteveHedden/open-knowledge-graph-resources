@@ -2,10 +2,10 @@
   "sourceKey": "adzuna",
   "responses": [
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-knowledge-graph",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-knowledge-graph",
       "query": "knowledge graph",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
       ],
       "payload": {
         "count": 4337,
@@ -1656,11 +1656,11 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-ontology",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-ontology",
       "query": "ontology",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
       ],
       "payload": {
         "count": 2591,
@@ -3313,10 +3313,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-semantic-web",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-semantic-web",
       "query": "semantic web",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
       ],
       "payload": {
         "count": 294,
@@ -4964,10 +4964,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/adzuna-query-sparql",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-sparql",
       "query": "SPARQL",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
       ],
       "payload": {
         "count": 506,

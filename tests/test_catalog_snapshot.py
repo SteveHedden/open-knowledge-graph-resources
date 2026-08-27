@@ -78,6 +78,21 @@ def finalize(root: Path) -> dict:
     )
 
 
+class RootRegistryManifestTests(unittest.TestCase):
+    def test_untracked_new_root_organization_registry_is_finalized(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            make_catalog(root)
+            write(
+                root / "organizations.ttl",
+                "@prefix ex: <https://example.test/> . ex:org ex:name \"Organization\" .\n",
+            )
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            manifest = finalize(root)
+            covered = {entry["path"] for entry in manifest["artifacts"]}
+            self.assertIn("organizations.ttl", covered)
+
+
 class CanonicalDigestTests(unittest.TestCase):
     def test_fixed_stream_uses_sorted_utf8_path_nul_digest_and_newline(self):
         digest_a = hashlib.sha256(b"a").hexdigest()

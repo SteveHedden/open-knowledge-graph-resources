@@ -1,0 +1,194 @@
+[
+  {
+    "active": true,
+    "attributionText": "Jobs at TigerGraph",
+    "attributionUrl": "https://www.tigergraph.com/join-us/",
+    "canonicalFingerprint": "a63784ff00a841000de7d4e4c48a35eb1ed34b92440870524977db253304e24b",
+    "canonicalUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/2917784",
+    "classification": "not_match",
+    "datePosted": "2021-02-17",
+    "description": "TigerGraph is a platform for advanced analytics and machine learning on connected data. TigerGraph's core technology is the only scalable graph database for the enterprise. Its proven technology supports fraud detection, customer 360, MDM, IoT, AI, and machine learning.&nbsp; Fortune 500 organizations and the most innovative mid-size and startup companies choose TigerGraph to accelerate their analytics, AI, and machine learning: Seven out of the top ten global banks use TigerGraph for real-time fraud detection.&nbsp; Over 50 million patients receive care path recommendations to assist them on their wellness journey.&nbsp; 300 million consumers receive personalized offers with recommendation engines powered by TigerGraph.&nbsp; TigerGraph reduces power outages by optimizing the energy infrastructure for 1 billion people.&nbsp; Join the graph and analytics revolution!",
+    "discoveredBy": [
+      "first-party-tigergraph"
+    ],
+    "employmentType": null,
+    "evidence": [
+      {
+        "concept_label": "Graph Database",
+        "concept_scheme": "KG Skills and Technologies",
+        "concept_uri": "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database",
+        "matched_phrase": "graph database",
+        "negated": false,
+        "source_field": "description",
+        "strength": "contextual"
+      }
+    ],
+    "firstParty": true,
+    "firstSeenAt": "2026-08-27T02:54:39Z",
+    "hiringOrganization": "TigerGraph",
+    "id": "firstparty:first-party-tigergraph:2917784",
+    "lastSeenAt": "2026-08-27T02:54:39Z",
+    "location": "Redwood City, CA",
+    "locationKeys": [
+      "ca",
+      "redwood city"
+    ],
+    "organizationIri": "https://openknowledgegraphs.com/organization/tigergraph/",
+    "provider": "greenhouse",
+    "qualifications": null,
+    "remote": false,
+    "requisitionId": "50",
+    "responsibilities": null,
+    "retrievedAt": "2026-08-27T02:54:39Z",
+    "sourceAttributionUrl": "https://www.tigergraph.com/join-us/",
+    "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-tigergraph",
+    "sourceName": "Jobs at TigerGraph",
+    "sourceOccurrences": [
+      {
+        "firstParty": true,
+        "provider": "greenhouse",
+        "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-tigergraph",
+        "sourceRecordId": "2917784",
+        "sourceUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/2917784",
+        "tenant": "tigergraph"
+      }
+    ],
+    "sourceRecordId": "2917784",
+    "sourceUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/2917784",
+    "tenant": "tigergraph",
+    "title": "Stay in touch",
+    "validThrough": null,
+    "workplaceMode": "onsite"
+  },
+  {
+    "active": true,
+    "attributionText": "Jobs at TigerGraph",
+    "attributionUrl": "https://www.tigergraph.com/join-us/",
+    "canonicalFingerprint": "4514661a69529d22f6cf3f1928487a56dd83d4be1f7997240c2dea8d8aa26fd0",
+    "canonicalUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/7997595",
+    "classification": "not_match",
+    "datePosted": "2026-06-11",
+    "description": "TigerGraph is a platform for advanced analytics and machine learning on connected data. TigerGraph's core technology is the only scalable graph database for the enterprise. Its proven technology supports fraud detection, customer 360, MDM, IoT, AI, and machine learning.&nbsp; Fortune 500 organizations and the most innovative mid-size and startup companies choose TigerGraph to accelerate their analytics, AI, and machine learning: Seven out of the top ten global banks use TigerGraph for real-time fraud detection.&nbsp; Over 50 million patients receive care path recommendations to assist them on their wellness journey.&nbsp; 300 million consumers receive personalized offers with recommendation engines powered by TigerGraph.&nbsp; TigerGraph reduces power outages by optimizing the energy infrastructure for 1 billion people.&nbsp; This position is primarily remote, but location-based requirements may apply. If the selected candidate is located near one of our company offices, the candidate will have a hybrid work arrangement (2-3 days in-office). Job Responsibilities Lead the architecture, design, and evolution of highly available, scalable, and fault-tolerant distributed systems for graph data. Drive the optimization of data ingestion, indexing, and query pipelines, leading performance analysis and scalability improvements for low-latency, high-throughput workloads. Lead the diagnosis and resolution of complex production issues, driving root cause analysis, operational improvements, and preventive engineering practices. Provide technical leadership through design reviews, code reviews, mentoring, and driving engineering best practices across the team. Other responsibilities as required. Requirements Bachelor’s degree in Computer Science or a related field 5 years of relevant experience Skills and Knowledge &nbsp;Deep, hands-on experience with one or more vector databases or similarity search libraries. Proven experience designing and working with any graph database and query languages like Cypher Solid understanding of distributed systems concepts: consensus, replication, sharding, and fault tolerance. Solid programming fundamentals; experienced with C++, Go, or any other major programming language. Understanding of distributed systems principles and the ability to evaluate trade-offs in system design. Familiar with Kafka, ETCD or similar technologies; Proactive and collaborative team player with strong communication skills. Open to adopting AI-assisted engineering practices (\"vibe coding\") to improve productivity and code quality. Bonus Points Familiar with container tools such as Docker. Hands-on experience with gRPC or REST APIs. Passionate about systems performance profiling, tuning, or debugging. The anticipated salary range for candidates who will work in Milpitas, CA is $140,000- $160,000. The final salary offered to a successful candidate will be dependent on several factors that may include, but are not limited to, the type and length of experience within the job, type and length of experience within the industry, education, etc. TigerGraph is a multi-state employer and this salary range may not reflect positions that work in other states.",
+    "discoveredBy": [
+      "first-party-tigergraph"
+    ],
+    "employmentType": null,
+    "evidence": [
+      {
+        "concept_label": "Graph Database",
+        "concept_scheme": "KG Skills and Technologies",
+        "concept_uri": "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database",
+        "matched_phrase": "graph database",
+        "negated": false,
+        "source_field": "description",
+        "strength": "contextual"
+      },
+      {
+        "concept_label": "Graph Database",
+        "concept_scheme": "KG Skills and Technologies",
+        "concept_uri": "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database",
+        "matched_phrase": "graph database",
+        "negated": false,
+        "source_field": "description",
+        "strength": "contextual"
+      }
+    ],
+    "firstParty": true,
+    "firstSeenAt": "2026-08-27T02:54:39Z",
+    "hiringOrganization": "TigerGraph",
+    "id": "firstparty:first-party-tigergraph:7997595",
+    "lastSeenAt": "2026-08-27T02:54:39Z",
+    "location": "Milpitas, CA",
+    "locationKeys": [
+      "ca",
+      "milpitas"
+    ],
+    "organizationIri": "https://openknowledgegraphs.com/organization/tigergraph/",
+    "provider": "greenhouse",
+    "qualifications": null,
+    "remote": false,
+    "requisitionId": null,
+    "responsibilities": null,
+    "retrievedAt": "2026-08-27T02:54:39Z",
+    "sourceAttributionUrl": "https://www.tigergraph.com/join-us/",
+    "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-tigergraph",
+    "sourceName": "Jobs at TigerGraph",
+    "sourceOccurrences": [
+      {
+        "firstParty": true,
+        "provider": "greenhouse",
+        "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-tigergraph",
+        "sourceRecordId": "7997595",
+        "sourceUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/7997595",
+        "tenant": "tigergraph"
+      }
+    ],
+    "sourceRecordId": "7997595",
+    "sourceUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/7997595",
+    "tenant": "tigergraph",
+    "title": "Software Engineer",
+    "validThrough": null,
+    "workplaceMode": "onsite"
+  },
+  {
+    "active": true,
+    "attributionText": "Jobs at TigerGraph",
+    "attributionUrl": "https://www.tigergraph.com/join-us/",
+    "canonicalFingerprint": "cc26b3a1c031cdc2dd3b1cec3eb2e50fca62dc25a47526523b12e32fbd21d8af",
+    "canonicalUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/8042548",
+    "classification": "not_match",
+    "datePosted": "2026-08-06",
+    "description": "TigerGraph is the premier enterprise and SaaS platform for advanced analytics, context, &nbsp;and machine learning on connected data. TigerGraph's core technology is the only scalable graph database to connect &nbsp;the enterprise. Its proven technology supports fraud detection, customer 360, MDM, IoT, machine learning, and of course AI. &nbsp;TigerGraph clients leverage its technology to efficiently and accurately harness the true power, accuracy and probability of AI. Global Banks, Fortune 500 organizations, and the most innovative mid-size and startup companies choose TigerGraph to accelerate their analytics, AI,machine learning, and indeed decisioning. Seven of the top ten global banks use TigerGraph for real-time fraud detection. 50 million patients receive care path recommendations to assist them on a wellness journey. 300 million consumers receive personal offer recommendations powered by TigerGraph. TigerGraph reduces power outages by optimizing energy infrastructure for 1 billion people. Responsibilities Define and execute sales plans for assigned accounts and territory Meet and exceed quota through prospecting, qualifying, managing and closing sales opportunities within assigned accounts and territory Develop account plans for large assigned accounts Manage renewals in existing assigned accounts Understand the competitive market and industry trends Manage and track customer information in the TigerGraph CRM system Provide activity forecasts and regular pipeline reporting in sales meetings and through the CRM system Other duties as assigned Required Education and Experience Bachelor’s Degree or equivalent required 15+ years of enterprise software sales experience Experience formulating and selling large contracts Advanced degrees and/or technical expertise valued Understanding and ability to sell enterprise and SaaS contracts from lead to closed sale Qualifications Track record of closing sales with companies with revenue of $500M+ Experience selling to C-suite executives Experience selling into financial institutions Understanding of AI, ML and &nbsp;Database &amp; Cloud based solutions a plus Consistent overachievement of sales goals in a large geographic territory Drive to expand client base and close sales Excellent verbal and written communication skills Entrepreneurial, strong work ethic, resourceful Willing to travel to clients to develop and support customers Coachability as well as creativity High Emotional Intelligence Strong desire to understand complex client ecosystems and successfully navigate within those systems A commitment to continuous improvement The anticipated salary range for candidates is $150,000-$160,000. The final salary offered to a successful candidate will be dependent on several factors that may include, but are not limited to, the type and length of experience within the job, type and length of experience within the industry, education, etc.&nbsp;",
+    "discoveredBy": [
+      "first-party-tigergraph"
+    ],
+    "employmentType": null,
+    "evidence": [
+      {
+        "concept_label": "Graph Database",
+        "concept_scheme": "KG Skills and Technologies",
+        "concept_uri": "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-graph-database",
+        "matched_phrase": "graph database",
+        "negated": false,
+        "source_field": "description",
+        "strength": "contextual"
+      }
+    ],
+    "firstParty": true,
+    "firstSeenAt": "2026-08-27T02:54:39Z",
+    "hiringOrganization": "TigerGraph",
+    "id": "firstparty:first-party-tigergraph:8042548",
+    "lastSeenAt": "2026-08-27T02:54:39Z",
+    "location": "Milpitas, CA",
+    "locationKeys": [
+      "ca",
+      "milpitas"
+    ],
+    "organizationIri": "https://openknowledgegraphs.com/organization/tigergraph/",
+    "provider": "greenhouse",
+    "qualifications": null,
+    "remote": false,
+    "requisitionId": "7386439",
+    "responsibilities": null,
+    "retrievedAt": "2026-08-27T02:54:39Z",
+    "sourceAttributionUrl": "https://www.tigergraph.com/join-us/",
+    "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-tigergraph",
+    "sourceName": "Jobs at TigerGraph",
+    "sourceOccurrences": [
+      {
+        "firstParty": true,
+        "provider": "greenhouse",
+        "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-tigergraph",
+        "sourceRecordId": "8042548",
+        "sourceUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/8042548",
+        "tenant": "tigergraph"
+      }
+    ],
+    "sourceRecordId": "8042548",
+    "sourceUrl": "https://job-boards.greenhouse.io/tigergraph/jobs/8042548",
+    "tenant": "tigergraph",
+    "title": "Account Executive",
+    "validThrough": null,
+    "workplaceMode": "onsite"
+  }
+]

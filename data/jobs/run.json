@@ -18,7 +18,7 @@
     {
       "query": "all active postings; KG relevance classified locally",
       "queryConcepts": [],
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow-query-all-active"
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/arbeitnow-query-all-active"
     }
   ],
   "reconciliation": {
@@ -39,7 +39,7 @@
     "qualified": 0,
     "review": 1
   },
-  "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/arbeitnow",
+  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/arbeitnow",
   "sourceKey": "arbeitnow",
   "sourceName": "Arbeitnow",
   "sourceRefreshes": {

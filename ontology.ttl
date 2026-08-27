@@ -85,7 +85,24 @@ okg:Person a rdfs:Class ;
 okg:Organization a rdfs:Class ;
     rdfs:subClassOf schema:Organization, prov:Organization ;
     rdfs:label "Organization" ;
-    rdfs:comment "An organization credited as creator/developer of a cataloged resource. Maps to schema:Organization in generated JSON-LD." .
+    rdfs:comment "An evidence-reviewed organization in the OKG ecosystem registry or credited as a producer of a cataloged resource." .
+
+okg:CareerSource a rdfs:Class ;
+    rdfs:subClassOf dcat:DataService ;
+    rdfs:label "Career source" ;
+    rdfs:comment "An evidence-reviewed official career or ATS service used by the bounded KG Jobs ingestion pipeline." .
+
+okg:jobsProductionEnabled a rdf:Property ;
+    rdfs:domain schema:Organization ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "jobs production enabled" ;
+    rdfs:comment "True only when an organization is explicitly approved to activate its reviewed career sources in the production KG Jobs pipeline; the organization identity never supplies classification evidence." .
+
+okg:classificationDimension a rdf:Property ;
+    rdfs:domain owl:Class ;
+    rdfs:range xsd:string ;
+    rdfs:label "classification dimension" ;
+    rdfs:comment "Distinguishes reviewed organization kind classes from reviewed ecosystem role classes." .
 
 okg:SourceMapping a rdfs:Class ;
     rdfs:label "Source mapping" ;

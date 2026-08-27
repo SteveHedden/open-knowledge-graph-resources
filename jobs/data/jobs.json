@@ -1,0 +1,953 @@
+[
+  {
+    "id": "f001",
+    "test_url": "test://kg-jobs/fixtures/f001",
+    "title": "Knowledge Graph Engineer",
+    "description": "Meridian National Bank is hiring a Knowledge Graph Engineer to build our enterprise data fabric using RDF and SPARQL.",
+    "hiringOrganization": "Meridian National Bank",
+    "classification": "qualified",
+    "location": "Charlotte, NC, USA",
+    "remote": false,
+    "datePosted": "2026-06-01",
+    "qualifications": "3+ years building production data pipelines; experience with graph data modeling preferred.",
+    "responsibilities": "Design and operate the bank's knowledge graph platform; write and optimize SPARQL queries against our RDF triple store.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-kg-engineer",
+        "concept_label": "Knowledge Graph Engineer",
+        "concept_scheme": "Job Roles",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph Engineer",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-kg-engineer",
+        "concept_label": "Knowledge Graph Engineer",
+        "concept_scheme": "Job Roles",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph Engineer",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "knowledge graph",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f002",
+    "test_url": "test://kg-jobs/fixtures/f002",
+    "title": "Ontologist - Drug Discovery Data",
+    "description": "Helion Pharmaceuticals seeks an Ontologist to formalize drug discovery knowledge using OWL and SPARQL over our research data lake.",
+    "hiringOrganization": "Helion Pharmaceuticals",
+    "classification": "qualified",
+    "location": "Basel, Switzerland",
+    "remote": false,
+    "datePosted": "2026-06-03",
+    "qualifications": "Background in biomedical ontologies; familiarity with description logics.",
+    "responsibilities": "Author and maintain OWL ontologies; support scientists querying the data lake with SPARQL.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "concept_label": "Ontologist",
+        "concept_scheme": "Job Roles",
+        "strength": "strong",
+        "matched_phrase": "Ontologist",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "concept_label": "Ontologist",
+        "concept_scheme": "Job Roles",
+        "strength": "strong",
+        "matched_phrase": "Ontologist",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-owl",
+        "concept_label": "OWL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "OWL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-owl",
+        "concept_label": "OWL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "OWL",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f003",
+    "test_url": "test://kg-jobs/fixtures/f003",
+    "title": "Senior Data Engineer",
+    "description": "We're building our product knowledge graph using RDF and SPARQL to power search and recommendations across our online storefront.",
+    "hiringOrganization": "Brightmart Retail Group",
+    "classification": "qualified",
+    "location": "Columbus, OH, USA",
+    "remote": true,
+    "datePosted": "2026-06-05",
+    "qualifications": "Strong SQL and Python; comfort with graph data models is a plus.",
+    "responsibilities": "Extend ETL pipelines that feed the product knowledge graph; collaborate with search on SPARQL query performance.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "knowledge graph",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "knowledge graph",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f004",
+    "test_url": "test://kg-jobs/fixtures/f004",
+    "title": "Metadata Specialist",
+    "description": "The Department of Civic Records is hiring a Metadata Specialist to lead taxonomy management for our public records catalog.",
+    "hiringOrganization": "Department of Civic Records",
+    "classification": "review",
+    "location": "Sacramento, CA, USA",
+    "remote": false,
+    "datePosted": "2026-06-06",
+    "qualifications": "Experience with controlled vocabularies and records management standards.",
+    "responsibilities": "Own metadata standards for civic datasets; run taxonomy management workshops with records staff.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-metadata-specialist",
+        "concept_label": "Metadata Specialist",
+        "concept_scheme": "Job Roles",
+        "strength": "contextual",
+        "matched_phrase": "Metadata Specialist",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-taxonomy-management",
+        "concept_label": "Taxonomy Management",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "taxonomy management",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-metadata-specialist",
+        "concept_label": "Metadata Specialist",
+        "concept_scheme": "Job Roles",
+        "strength": "contextual",
+        "matched_phrase": "Metadata Specialist",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-taxonomy-management",
+        "concept_label": "Taxonomy Management",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "taxonomy management",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f005",
+    "test_url": "test://kg-jobs/fixtures/f005",
+    "title": "Research Data Steward",
+    "description": "Ashcombe University Library seeks a Research Data Steward with experience using SKOS and linked data to describe our institutional repository.",
+    "hiringOrganization": "Ashcombe University Library",
+    "classification": "qualified",
+    "location": "Leeds, UK",
+    "remote": false,
+    "datePosted": "2026-06-07",
+    "qualifications": "Familiarity with library metadata standards and controlled vocabularies.",
+    "responsibilities": "Publish repository metadata as linked data; maintain SKOS vocabularies for subject classification.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-linked-data",
+        "concept_label": "Linked Data",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "linked data",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-skos",
+        "concept_label": "SKOS",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SKOS",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-linked-data",
+        "concept_label": "Linked Data",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "linked data",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-skos",
+        "concept_label": "SKOS",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SKOS",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f006",
+    "test_url": "test://kg-jobs/fixtures/f006",
+    "title": "Semantic Web Architect",
+    "description": "Northbridge Consulting Partners is looking for a Semantic Web Architect to lead client engagements spanning OWL modeling and SHACL validation.",
+    "hiringOrganization": "Northbridge Consulting Partners",
+    "classification": "qualified",
+    "location": "Boston, MA, USA",
+    "remote": true,
+    "datePosted": "2026-06-08",
+    "qualifications": "Client-facing consulting experience; deep knowledge of W3C semantic web standards.",
+    "responsibilities": "Design OWL ontologies for clients; define SHACL shapes to validate delivered RDF datasets.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web",
+        "concept_label": "Semantic Web",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Semantic Web",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-owl",
+        "concept_label": "OWL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "OWL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web",
+        "concept_label": "Semantic Web",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Semantic Web",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-shacl",
+        "concept_label": "SHACL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SHACL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web",
+        "concept_label": "Semantic Web",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "semantic web",
+        "source_field": "qualifications",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-owl",
+        "concept_label": "OWL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "OWL",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-shacl",
+        "concept_label": "SHACL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SHACL",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f007",
+    "test_url": "test://kg-jobs/fixtures/f007",
+    "title": "Quality Assurance Technician",
+    "description": "Ferrostal Industrial Works needs a Quality Assurance Technician to inspect steel components against tolerance specifications on the shop floor.",
+    "hiringOrganization": "Ferrostal Industrial Works",
+    "classification": "not_match",
+    "location": "Pittsburgh, PA, USA",
+    "remote": false,
+    "datePosted": "2026-06-09",
+    "qualifications": "Experience with calipers, gauges, and standard QA inspection procedures.",
+    "responsibilities": "Perform incoming and in-process inspections; log nonconformances and support root-cause analysis.",
+    "evidence": []
+  },
+  {
+    "id": "f008",
+    "test_url": "test://kg-jobs/fixtures/f008",
+    "title": "Supply Chain Analyst",
+    "description": "Vantage Freight Logistics is hiring a Supply Chain Analyst to build graph analytics dashboards tracking shipment routes and delays.",
+    "hiringOrganization": "Vantage Freight Logistics",
+    "classification": "not_match",
+    "location": "Memphis, TN, USA",
+    "remote": false,
+    "datePosted": "2026-06-10",
+    "qualifications": "Strong Excel and BI tooling skills; SQL a plus.",
+    "responsibilities": "Build and maintain routing dashboards; present graph analytics summaries to operations leadership weekly.",
+    "evidence": []
+  },
+  {
+    "id": "f009",
+    "test_url": "test://kg-jobs/fixtures/f009",
+    "title": "Taxonomy Librarian",
+    "description": "Meridian Broadcasting Archive seeks a Taxonomy Librarian responsible for maintaining our editorial content taxonomy and tagging guidelines.",
+    "hiringOrganization": "Meridian Broadcasting Archive",
+    "classification": "not_match",
+    "location": "Atlanta, GA, USA",
+    "remote": false,
+    "datePosted": "2026-06-11",
+    "qualifications": "MLIS or equivalent library science background.",
+    "responsibilities": "Curate the editorial content taxonomy; train editorial staff on consistent tagging practices.",
+    "evidence": []
+  },
+  {
+    "id": "f010",
+    "test_url": "test://kg-jobs/fixtures/f010",
+    "title": "Data & Insights Coordinator",
+    "description": "The role focuses on owl population monitoring near wetland habitats and compiling field survey data for our annual report.",
+    "hiringOrganization": "Clearwater Conservation Trust",
+    "classification": "not_match",
+    "location": "Portland, OR, USA",
+    "remote": false,
+    "datePosted": "2026-06-12",
+    "qualifications": "Fieldwork experience and comfort with spreadsheets; wildlife biology background preferred.",
+    "responsibilities": "Coordinate volunteer owl survey teams; compile and summarize seasonal population counts.",
+    "evidence": []
+  },
+  {
+    "id": "f011",
+    "test_url": "test://kg-jobs/fixtures/f011",
+    "title": "Knowledge Graph Architect",
+    "description": "Solstice Mutual Insurance is hiring a Knowledge Graph Architect to design the RDFS and SHACL foundations of our claims data model.",
+    "hiringOrganization": "Solstice Mutual Insurance",
+    "classification": "qualified",
+    "location": "Hartford, CT, USA",
+    "remote": true,
+    "datePosted": "2026-06-13",
+    "qualifications": "Experience architecting large-scale RDF systems; strong stakeholder communication skills.",
+    "responsibilities": "Define RDFS class hierarchies for claims entities; author SHACL shapes enforcing data quality.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-kg-architect",
+        "concept_label": "Knowledge Graph Architect",
+        "concept_scheme": "Job Roles",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph Architect",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-kg-architect",
+        "concept_label": "Knowledge Graph Architect",
+        "concept_scheme": "Job Roles",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph Architect",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdfs",
+        "concept_label": "RDFS",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDFS",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-shacl",
+        "concept_label": "SHACL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SHACL",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "qualifications",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdfs",
+        "concept_label": "RDFS",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDFS",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-shacl",
+        "concept_label": "SHACL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SHACL",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f012",
+    "test_url": "test://kg-jobs/fixtures/f012",
+    "title": "Entity Resolution Specialist",
+    "description": "Arcstream Telecom is hiring an Entity Resolution Specialist to lead semantic integration of customer records across billing systems.",
+    "hiringOrganization": "Arcstream Telecom",
+    "classification": "review",
+    "location": "Dallas, TX, USA",
+    "remote": true,
+    "datePosted": "2026-06-14",
+    "qualifications": "Experience with record matching and deduplication techniques.",
+    "responsibilities": "Design entity resolution rules for customer identity; drive semantic integration between billing and CRM systems.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-entity-resolution",
+        "concept_label": "Entity Resolution",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "Entity Resolution",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-entity-resolution",
+        "concept_label": "Entity Resolution",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "Entity Resolution",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-semantic-integration",
+        "concept_label": "Semantic Integration",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "semantic integration",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-entity-resolution",
+        "concept_label": "Entity Resolution",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "entity resolution",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-semantic-integration",
+        "concept_label": "Semantic Integration",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "semantic integration",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f013",
+    "test_url": "test://kg-jobs/fixtures/f013",
+    "title": "Energy Grid Analyst",
+    "description": "Helios Grid Energy is hiring an Energy Grid Analyst. No SPARQL experience is required for this role; we primarily use SQL for reporting.",
+    "hiringOrganization": "Helios Grid Energy",
+    "classification": "not_match",
+    "location": "Denver, CO, USA",
+    "remote": false,
+    "datePosted": "2026-06-15",
+    "qualifications": "Strong SQL skills; experience with utility load forecasting a plus.",
+    "responsibilities": "Build SQL reports on grid load and outage trends; support the analytics team with ad hoc queries.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-sparql",
+        "concept_label": "SPARQL",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "SPARQL",
+        "source_field": "description",
+        "negated": true
+      }
+    ]
+  },
+  {
+    "id": "f014",
+    "test_url": "test://kg-jobs/fixtures/f014",
+    "title": "Knowledge Graph Intern",
+    "description": "Fieldsense Agritech is hiring a Knowledge Graph Intern to help model crop and soil sensor data as RDF for our research team.",
+    "hiringOrganization": "Fieldsense Agritech",
+    "classification": "qualified",
+    "location": "Ames, IA, USA",
+    "remote": false,
+    "datePosted": "2026-06-16",
+    "qualifications": "Currently pursuing a degree in computer science or a related field.",
+    "responsibilities": "Assist in modeling sensor readings as RDF triples; support small internal knowledge graph demos.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "Knowledge Graph",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph",
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "knowledge graph",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f015",
+    "test_url": "test://kg-jobs/fixtures/f015",
+    "title": "Contracts Administrator",
+    "description": "Whitfield & Moore LLP is hiring a Contracts Administrator to manage vendor agreements and renewal timelines for the firm.",
+    "hiringOrganization": "Whitfield & Moore LLP",
+    "classification": "not_match",
+    "location": "Chicago, IL, USA",
+    "remote": false,
+    "datePosted": "2026-06-17",
+    "qualifications": "Paralegal certificate or equivalent contracts administration experience.",
+    "responsibilities": "Track contract renewal deadlines; maintain the firm's vendor agreement filing system.",
+    "evidence": []
+  },
+  {
+    "id": "f016",
+    "test_url": "test://kg-jobs/fixtures/f016",
+    "title": "Guest Experience Manager",
+    "description": "GraphPoint Hospitality Group is hiring a Guest Experience Manager to oversee front-desk operations and guest satisfaction programs.",
+    "hiringOrganization": "GraphPoint Hospitality Group",
+    "classification": "not_match",
+    "location": "Orlando, FL, USA",
+    "remote": false,
+    "datePosted": "2026-06-18",
+    "qualifications": "3+ years of hotel front-desk or guest services management experience.",
+    "responsibilities": "Manage front-desk staff scheduling; resolve guest escalations and oversee loyalty program enrollment.",
+    "evidence": []
+  },
+  {
+    "id": "f017",
+    "test_url": "test://kg-jobs/fixtures/f017",
+    "title": "GIS & Data Modeler",
+    "description": "Cornerstone Realty Analytics is hiring you to act as our Semantic Data Modeler, connecting property records through a graph database layer.",
+    "hiringOrganization": "Cornerstone Realty Analytics",
+    "classification": "review",
+    "location": "Phoenix, AZ, USA",
+    "remote": true,
+    "datePosted": "2026-06-19",
+    "qualifications": "Experience with GIS data and relational or graph data modeling.",
+    "responsibilities": "Design the semantic layer linking property, parcel, and ownership records; evaluate graph database options for the platform.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-semantic-data-modeler",
+        "concept_label": "Semantic Data Modeler",
+        "concept_scheme": "Job Roles",
+        "strength": "contextual",
+        "matched_phrase": "Semantic Data Modeler",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-graph-database",
+        "concept_label": "Graph Database",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "graph database",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-graph-database",
+        "concept_label": "Graph Database",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "graph database",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f018",
+    "test_url": "test://kg-jobs/fixtures/f018",
+    "title": "LinkML Schema Developer",
+    "description": "Transit Systems Authority is hiring a LinkML Schema Developer to define linked-data schemas for our regional transit data platform.",
+    "hiringOrganization": "Transit Systems Authority",
+    "classification": "qualified",
+    "location": "Seattle, WA, USA",
+    "remote": true,
+    "datePosted": "2026-06-20",
+    "qualifications": "Experience with schema modeling tools and linked-data serializations.",
+    "responsibilities": "Author and maintain LinkML schemas for transit datasets; generate RDF and JSON Schema outputs from those schemas.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-linkml",
+        "concept_label": "LinkML",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "LinkML",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-linkml",
+        "concept_label": "LinkML",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "LinkML",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-linkml",
+        "concept_label": "LinkML",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "LinkML",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-rdf",
+        "concept_label": "RDF",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "strong",
+        "matched_phrase": "RDF",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f019",
+    "test_url": "test://kg-jobs/fixtures/f019",
+    "title": "Taxonomist",
+    "description": "Bramwell Academic Publishing is hiring a Taxonomist to lead taxonomy management initiatives across our editorial catalog.",
+    "hiringOrganization": "Bramwell Academic Publishing",
+    "classification": "review",
+    "location": "New York, NY, USA",
+    "remote": false,
+    "datePosted": "2026-06-21",
+    "qualifications": "Experience governing controlled vocabularies in a publishing or content environment.",
+    "responsibilities": "Own taxonomy management processes including term creation, deprecation, and mapping across catalog systems.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-taxonomist",
+        "concept_label": "Taxonomist",
+        "concept_scheme": "Job Roles",
+        "strength": "contextual",
+        "matched_phrase": "Taxonomist",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-taxonomy-management",
+        "concept_label": "Taxonomy Management",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "taxonomy management",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/role-taxonomist",
+        "concept_label": "Taxonomist",
+        "concept_scheme": "Job Roles",
+        "strength": "contextual",
+        "matched_phrase": "Taxonomist",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/activity-taxonomy-management",
+        "concept_label": "Taxonomy Management",
+        "concept_scheme": "KG Activities",
+        "strength": "contextual",
+        "matched_phrase": "taxonomy management",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  },
+  {
+    "id": "f020",
+    "test_url": "test://kg-jobs/fixtures/f020",
+    "title": "GraphRAG Engineer",
+    "description": "Solace AI Labs is hiring a GraphRAG Engineer to build retrieval pipelines using GraphRAG techniques backed by a Neo4j graph store.",
+    "hiringOrganization": "Solace AI Labs",
+    "classification": "review",
+    "location": "Austin, TX, USA",
+    "remote": true,
+    "datePosted": "2026-06-22",
+    "qualifications": "Experience with LLM retrieval pipelines and graph-backed retrieval techniques.",
+    "responsibilities": "Build and evaluate GraphRAG retrieval pipelines; operate the team's Neo4j deployment.",
+    "evidence": [
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-graphrag",
+        "concept_label": "GraphRAG",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "GraphRAG",
+        "source_field": "title",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-graphrag",
+        "concept_label": "GraphRAG",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "GraphRAG",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-graphrag",
+        "concept_label": "GraphRAG",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "GraphRAG",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-neo4j",
+        "concept_label": "Neo4j",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "Neo4j",
+        "source_field": "description",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-graphrag",
+        "concept_label": "GraphRAG",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "GraphRAG",
+        "source_field": "responsibilities",
+        "negated": false
+      },
+      {
+        "concept_uri": "https://openknowledgegraphs.com/jobs/vocab/skill-neo4j",
+        "concept_label": "Neo4j",
+        "concept_scheme": "KG Skills and Technologies",
+        "strength": "contextual",
+        "matched_phrase": "Neo4j",
+        "source_field": "responsibilities",
+        "negated": false
+      }
+    ]
+  }
+]

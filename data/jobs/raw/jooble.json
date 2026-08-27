@@ -2,10 +2,10 @@
   "sourceKey": "jooble",
   "responses": [
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-rdf",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf",
       "query": "rdf",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-rdf"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-rdf"
       ],
       "payload": {
         "totalCount": 233,
@@ -254,11 +254,11 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-ontology",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology",
       "query": "ontology",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
       ],
       "payload": {
         "totalCount": 1229,
@@ -507,10 +507,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-sparql",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql",
       "query": "sparql",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
       ],
       "payload": {
         "totalCount": 171,
@@ -759,10 +759,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-skos",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos",
       "query": "skos",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-skos"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-skos"
       ],
       "payload": {
         "totalCount": 59,
@@ -1011,10 +1011,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-shacl",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl",
       "query": "shacl",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-shacl"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-shacl"
       ],
       "payload": {
         "totalCount": 53,
@@ -1263,10 +1263,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-linkml",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-linkml",
       "query": "linkml",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-linkml"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
       ],
       "payload": {
         "totalCount": 4,
@@ -1323,10 +1323,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-semantic-web",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web",
       "query": "semantic web",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
       ],
       "payload": {
         "totalCount": 756948,
@@ -1575,10 +1575,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/jooble-query-knowledge-graph",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph",
       "query": "knowledge graph",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
       ],
       "payload": {
         "totalCount": 1036330,

@@ -1,113 +1,519 @@
-@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix okg:     <https://openknowledgegraphs.com/ontology#> .
-@prefix prov:    <http://www.w3.org/ns/prov#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix src:     <https://openknowledgegraphs.com/sources#> .
-@prefix wd:      <http://www.wikidata.org/entity/> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix kgjobs: <https://openknowledgegraphs.com/jobs/ontology#> .
+@prefix kgjs: <https://openknowledgegraphs.com/jobs/source/> .
+@prefix kgjv: <https://openknowledgegraphs.com/jobs/vocab/> .
+@prefix okg: <https://openknowledgegraphs.com/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix src: <https://openknowledgegraphs.com/sources#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-src:WikidataDataset
-    a dcat:Dataset, prov:Entity ;
-    dcterms:title "Wikidata"@en ;
-    dcterms:description "The collaboratively edited knowledge base queried by OKG for catalog source facts."@en ;
-    dcterms:identifier "Wikidata" ;
-    dcat:landingPage <https://www.wikidata.org/> .
+kgjs:adzuna a dcat:Dataset ;
+    dcterms:description "Keyed job-search aggregator API (free tier: 25 requests/minute, 250/day, 1,000/week, 2,500/month). Registered against Adzuna's \"us\" country endpoint only. Authenticates via app_id/app_key query parameters issued instantly on signup at https://developer.adzuna.com/ -- real per-account credentials, never stored in this registry -- scripts/live_sources.py reads them from the ADZUNA_APP_ID / ADZUNA_APP_KEY environment variables at request time. Adzuna's terms of service require every page displaying its listings to show a \"Jobs by Adzuna\" attribution (min 116x23px) linked to adzuna.co.uk, unconditionally -- not only when the canonical listing URL points off-host, unlike Arbeitnow's attribution rule."@en ;
+    dcterms:identifier "adzuna" ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Adzuna" ] ;
+    dcterms:title "Adzuna Job Search API"@en ;
+    dcat:distribution kgjs:adzuna-api-distribution ;
+    dcat:landingPage <https://developer.adzuna.com/> ;
+    kgjobs:adapter "adzuna" ;
+    kgjobs:allowedHost "api.adzuna.com" ;
+    kgjobs:attributionText "Adzuna" ;
+    kgjobs:attributionURL <https://www.adzuna.co.uk/> ;
+    kgjobs:maxRecordsPerRun 200 ;
+    kgjobs:maxRequestsPerRun 4 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 21600.0 ;
+    kgjobs:networkFree false ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:searchEnabled true ;
+    kgjobs:sourceQuery kgjs:adzuna-query-knowledge-graph,
+        kgjs:adzuna-query-ontology,
+        kgjs:adzuna-query-semantic-web,
+        kgjs:adzuna-query-sparql ;
+    kgjobs:termsURL <https://developer.adzuna.com/docs/terms_of_service> .
 
-<https://openknowledgegraphs.com/datasets/ontologies>
-    a dcat:Dataset, prov:Entity ;
-    dcterms:title "Open Knowledge Graphs ontology and vocabulary catalog"@en ;
-    dcterms:description "Authoritative RDF catalog of ontologies, controlled vocabularies, taxonomies, knowledge graphs, and ontology languages published by OKG."@en ;
-    dcterms:issued "2026-08-13"^^xsd:date ;
-    prov:wasDerivedFrom src:WikidataDataset ;
-    dcat:distribution src:OntologiesTurtleDistribution, src:OntologiesJsonDistribution .
+kgjs:arbeitnow a dcat:Dataset ;
+    dcterms:description "Public job-board feed retained as an optional local-only comparison source. Original Arbeitnow listing links and visible attribution are retained."@en ;
+    dcterms:identifier "arbeitnow" ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Arbeitnow" ] ;
+    dcterms:title "Arbeitnow Job Board API"@en ;
+    dcat:distribution kgjs:arbeitnow-api-distribution ;
+    dcat:landingPage <https://www.arbeitnow.com/blog/job-board-api> ;
+    kgjobs:adapter "arbeitnow" ;
+    kgjobs:allowedHost "www.arbeitnow.com" ;
+    kgjobs:attributionText "Arbeitnow" ;
+    kgjobs:attributionURL <https://www.arbeitnow.com/> ;
+    kgjobs:maxRecordsPerRun 300 ;
+    kgjobs:maxRequestsPerRun 3 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 3600.0 ;
+    kgjobs:networkFree false ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:retrievalMode "paginated-feed-api" ;
+    kgjobs:searchEnabled true ;
+    kgjobs:sourceQuery kgjs:arbeitnow-query-all-active ;
+    kgjobs:termsURL <https://www.arbeitnow.com/terms> .
 
-src:OntologiesTurtleDistribution
-    a dcat:Distribution ;
-    dcterms:title "OKG ontology catalog in Turtle"@en ;
-    dcat:downloadURL <https://openknowledgegraphs.com/data/ontologies.ttl> ;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+kgjs:first-party-eccenca a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://html.spec.whatwg.org/multipage/> ;
+    dcterms:identifier "first-party-eccenca" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/eccenca/> ;
+    dcterms:title "eccenca same-site jobs page"@en ;
+    dcat:endpointURL <https://eccenca.com/about-us/jobs> ;
+    dcat:landingPage <https://eccenca.com/about-us/jobs> ;
+    kgjobs:adapter "firstparty-eccenca" ;
+    kgjobs:allowedHost "eccenca.com" ;
+    kgjobs:attributionText "Careers at eccenca" ;
+    kgjobs:attributionURL <https://eccenca.com/about-us/jobs> ;
+    kgjobs:careerProvider "same-site" ;
+    kgjobs:extractionMode "bounded-eccenca-html-detail" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 2 ;
+    kgjobs:maxRequestsPerRun 3 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://eccenca.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "eccenca.com" ;
+    kgjobs:termsURL <https://eccenca.com/privacy-policy> .
 
-src:OntologiesJsonDistribution
-    a dcat:Distribution ;
-    dcterms:title "Derived OKG ontology catalog JSON projection"@en ;
-    dcat:downloadURL <https://openknowledgegraphs.com/data/ontologies.json> ;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> .
+kgjs:first-party-enterprise-knowledge a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo schema:JobPosting ;
+    dcterms:identifier "first-party-enterprise-knowledge" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/enterprise-knowledge/> ;
+    dcterms:title "Enterprise Knowledge same-site openings"@en ;
+    dcat:endpointURL <https://enterprise-knowledge.com/careers/current-openings/> ;
+    dcat:landingPage <https://enterprise-knowledge.com/careers/current-openings/> ;
+    kgjobs:adapter "firstparty-schema" ;
+    kgjobs:allowedHost "enterprise-knowledge.com" ;
+    kgjobs:attributionText "Careers at Enterprise Knowledge" ;
+    kgjobs:attributionURL <https://enterprise-knowledge.com/careers/current-openings/> ;
+    kgjobs:careerProvider "same-site" ;
+    kgjobs:extractionMode "bounded-schema.org-jobposting" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://enterprise-knowledge.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "enterprise-knowledge.com" ;
+    kgjobs:termsURL <https://enterprise-knowledge.com/privacy-policy/> .
 
-<https://openknowledgegraphs.com/datasets/software>
-    a dcat:Dataset, prov:Entity ;
-    dcterms:title "Open Knowledge Graphs software catalog"@en ;
-    dcterms:description "Authoritative RDF catalog of semantic-web and knowledge-graph software published by OKG."@en ;
-    dcterms:issued "2026-08-13"^^xsd:date ;
-    prov:wasDerivedFrom src:WikidataDataset ;
-    dcat:distribution src:SoftwareTurtleDistribution, src:SoftwareJsonDistribution .
+kgjs:first-party-graphwise a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developer.wordpress.org/rest-api/reference/posts/> ;
+    dcterms:identifier "first-party-graphwise" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/graphwise/> ;
+    dcterms:title "Graphwise same-site careers page"@en ;
+    dcat:endpointURL <https://graphwise.ai/careers/> ;
+    dcat:landingPage <https://graphwise.ai/careers/> ;
+    kgjobs:adapter "firstparty-graphwise" ;
+    kgjobs:allowedHost "graphwise.ai" ;
+    kgjobs:attributionText "Careers at Graphwise" ;
+    kgjobs:attributionURL <https://graphwise.ai/careers/> ;
+    kgjobs:careerProvider "same-site" ;
+    kgjobs:extractionMode "bounded-graphwise-html-wordpress" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 2 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://graphwise.ai/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "graphwise.ai" ;
+    kgjobs:termsURL <https://graphwise.ai/privacy-policy/> .
 
-src:SoftwareTurtleDistribution
-    a dcat:Distribution ;
-    dcterms:title "OKG software catalog in Turtle"@en ;
-    dcat:downloadURL <https://openknowledgegraphs.com/data/software.ttl> ;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+kgjs:first-party-metaphacts a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo schema:JobPosting ;
+    dcterms:identifier "first-party-metaphacts" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/metaphacts/> ;
+    dcterms:title "metaphacts same-site career page"@en ;
+    dcat:endpointURL <https://metaphacts.com/about/about-us/career> ;
+    dcat:landingPage <https://metaphacts.com/about/about-us/career> ;
+    kgjobs:adapter "firstparty-schema" ;
+    kgjobs:allowedHost "metaphacts.com" ;
+    kgjobs:attributionText "Careers at metaphacts" ;
+    kgjobs:attributionURL <https://metaphacts.com/about/about-us/career> ;
+    kgjobs:careerProvider "same-site" ;
+    kgjobs:extractionMode "bounded-schema.org-jobposting" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://metaphacts.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "metaphacts.com" ;
+    kgjobs:termsURL <https://metaphacts.com/imprint> .
 
-src:SoftwareJsonDistribution
-    a dcat:Distribution ;
-    dcterms:title "Derived OKG software catalog JSON projection"@en ;
-    dcat:downloadURL <https://openknowledgegraphs.com/data/software.json> ;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> .
+kgjs:first-party-neo4j a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
+    dcterms:identifier "first-party-neo4j" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/neo4j-inc/> ;
+    dcterms:title "Neo4j public Greenhouse job board"@en ;
+    dcat:endpointURL <https://boards-api.greenhouse.io/v1/boards/neo4j/jobs> ;
+    dcat:landingPage <https://neo4j.com/careers/> ;
+    kgjobs:adapter "firstparty-greenhouse" ;
+    kgjobs:allowedHost "boards-api.greenhouse.io" ;
+    kgjobs:attributionText "Jobs at Neo4j" ;
+    kgjobs:attributionURL <https://neo4j.com/careers/> ;
+    kgjobs:careerProvider "greenhouse" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "neo4j" ;
+    kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
 
-# Source class mappings. Python owns traversal mechanics; these records own source IDs,
-# target OKG classes, and the stable JSON type values used by compatibility projections.
+kgjs:first-party-relationalai a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
+    dcterms:identifier "first-party-relationalai" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/relationalai/> ;
+    dcterms:title "RelationalAI public Greenhouse job board"@en ;
+    dcat:endpointURL <https://boards-api.greenhouse.io/v1/boards/relationalai/jobs> ;
+    dcat:landingPage <https://www.relational.ai/careers> ;
+    kgjobs:adapter "firstparty-greenhouse" ;
+    kgjobs:allowedHost "boards-api.greenhouse.io" ;
+    kgjobs:attributionText "Jobs at RelationalAI" ;
+    kgjobs:attributionURL <https://www.relational.ai/careers> ;
+    kgjobs:careerProvider "greenhouse" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "relationalai" ;
+    kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
 
-src:class-Q324254 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q324254" ; okg:targetTerm okg:Ontology ; okg:projectionValue "Ontology" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 1 .
-src:class-Q1469824 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q1469824" ; okg:targetTerm okg:ControlledVocabulary ; okg:projectionValue "ControlledVocabulary" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 2 .
-src:class-Q8269924 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q8269924" ; okg:targetTerm okg:Taxonomy ; okg:projectionValue "Taxonomy" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 3 .
-src:class-Q33002955 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q33002955" ; okg:targetTerm okg:KnowledgeGraph ; okg:projectionValue "KnowledgeGraph" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 4 .
-src:class-Q7095059 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q7095059" ; okg:targetTerm okg:OntologyLanguage ; okg:projectionValue "OntologyLanguage" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 5 .
-src:class-Q7247749 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q7247749" ; okg:targetTerm okg:ControlledVocabulary ; okg:projectionValue "ControlledVocabulary" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 6 .
+kgjs:first-party-stardog a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://github.com/lever/postings-api> ;
+    dcterms:identifier "first-party-stardog" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/stardog-union/> ;
+    dcterms:title "Stardog public Lever postings feed"@en ;
+    dcat:endpointURL <https://api.lever.co/v0/postings/stardog> ;
+    dcat:landingPage <https://www.stardog.com/company/careers/> ;
+    kgjobs:adapter "firstparty-lever" ;
+    kgjobs:allowedHost "api.lever.co" ;
+    kgjobs:attributionText "Jobs at Stardog" ;
+    kgjobs:attributionURL <https://www.stardog.com/company/careers/> ;
+    kgjobs:careerProvider "lever" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://api.lever.co/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "stardog" ;
+    kgjobs:termsURL <https://github.com/lever/postings-api> .
 
-# Q54872 is a reviewed, standalone W3C standard. It is included explicitly
-# because traversing every data model or technical standard would broaden the
-# ontology catalog far beyond its intended scope.
-src:include-Q54872
-    a okg:SourceInclusion ;
-    okg:sourceDataset src:WikidataDataset ;
-    okg:sourceEntity wd:Q54872 ;
-    okg:targetTerm okg:Standard ;
-    okg:projectionValue "Standard" ;
+kgjs:first-party-tigergraph a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
+    dcterms:identifier "first-party-tigergraph" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/tigergraph/> ;
+    dcterms:title "TigerGraph public Greenhouse job board"@en ;
+    dcat:endpointURL <https://boards-api.greenhouse.io/v1/boards/tigergraph/jobs> ;
+    dcat:landingPage <https://www.tigergraph.com/join-us/> ;
+    kgjobs:adapter "firstparty-greenhouse" ;
+    kgjobs:allowedHost "boards-api.greenhouse.io" ;
+    kgjobs:attributionText "Jobs at TigerGraph" ;
+    kgjobs:attributionURL <https://www.tigergraph.com/join-us/> ;
+    kgjobs:careerProvider "greenhouse" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "tigergraph" ;
+    kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
+
+kgjs:first-party-topquadrant a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://ats.rippling.com/> ;
+    dcterms:identifier "first-party-topquadrant" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/topquadrant/> ;
+    dcterms:title "TopQuadrant Rippling-hosted career board"@en ;
+    dcat:endpointURL <https://ats.rippling.com/api/v2/board/topquadrant/jobs?groupJobsByLocation=true&page=0&pageSize=2> ;
+    dcat:landingPage <https://www.topquadrant.com/careers/> ;
+    kgjobs:adapter "firstparty-rippling" ;
+    kgjobs:allowedHost "ats.rippling.com" ;
+    kgjobs:attributionText "Careers at TopQuadrant" ;
+    kgjobs:attributionURL <https://www.topquadrant.com/careers/> ;
+    kgjobs:careerProvider "rippling" ;
+    kgjobs:extractionMode "bounded-rippling-public-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 2 ;
+    kgjobs:maxRequestsPerRun 3 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://ats.rippling.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "topquadrant" ;
+    kgjobs:termsURL <https://app.rippling.com/legal/user> .
+
+kgjs:first-party-w3c a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo schema:JobPosting ;
+    dcterms:identifier "first-party-w3c" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/world-wide-web-consortium/> ;
+    dcterms:title "W3C same-site careers page"@en ;
+    dcat:endpointURL <https://www.w3.org/careers/> ;
+    dcat:landingPage <https://www.w3.org/careers/> ;
+    kgjobs:adapter "firstparty-schema" ;
+    kgjobs:allowedHost "www.w3.org" ;
+    kgjobs:attributionText "Careers at W3C" ;
+    kgjobs:attributionURL <https://www.w3.org/careers/> ;
+    kgjobs:careerProvider "same-site" ;
+    kgjobs:extractionMode "bounded-schema.org-jobposting" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://www.w3.org/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "www.w3.org" ;
+    kgjobs:termsURL <https://www.w3.org/policies/> .
+
+kgjs:first-party-weaviate a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.ashbyhq.com/docs/public-job-posting-api> ;
+    dcterms:identifier "first-party-weaviate" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/weaviate/> ;
+    dcterms:title "Weaviate public Ashby job-posting API"@en ;
+    dcat:endpointURL <https://api.ashbyhq.com/posting-api/job-board/weaviate> ;
+    dcat:landingPage <https://weaviate.io/company/careers> ;
+    kgjobs:adapter "firstparty-ashby" ;
+    kgjobs:allowedHost "api.ashbyhq.com" ;
+    kgjobs:attributionText "Jobs at Weaviate" ;
+    kgjobs:attributionURL <https://weaviate.io/company/careers> ;
+    kgjobs:careerProvider "ashby" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://api.ashbyhq.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "weaviate" ;
+    kgjobs:termsURL <https://developers.ashbyhq.com/docs/public-job-posting-api> .
+
+kgjs:first-party-wikimedia a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
+    dcterms:identifier "first-party-wikimedia" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/wikimedia-foundation/> ;
+    dcterms:title "Wikimedia Foundation public Greenhouse job board"@en ;
+    dcat:endpointURL <https://boards-api.greenhouse.io/v1/boards/wikimedia/jobs> ;
+    dcat:landingPage <https://wikimediafoundation.org/about/jobs/> ;
+    kgjobs:adapter "firstparty-greenhouse" ;
+    kgjobs:allowedHost "boards-api.greenhouse.io" ;
+    kgjobs:attributionText "Jobs at Wikimedia Foundation" ;
+    kgjobs:attributionURL <https://wikimediafoundation.org/about/jobs/> ;
+    kgjobs:careerProvider "greenhouse" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-26"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "wikimedia" ;
+    kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
+
+kgjs:generated-data a dcat:Dataset ;
+    dcterms:description "The classifier's deterministic output: schema:JobPosting instances with kgjobs:classification and kgjobs:hasEvidence, generated from the synthetic fixture corpus. Regenerating against unchanged fixtures and vocabulary must produce semantically identical RDF and byte-identical JSON."@en ;
+    dcterms:title "KG Jobs Generated RDF and JSON Projection"@en ;
+    dcat:distribution [ a dcat:Distribution ;
+            dcterms:title "Generated RDF"@en ;
+            dcat:downloadURL <https://openknowledgegraphs.com/jobs/data/jobs.ttl> ;
+            dcat:mediaType "text/turtle" ],
+        [ a dcat:Distribution ;
+            dcterms:title "Generated JSON projection"@en ;
+            dcat:downloadURL <https://openknowledgegraphs.com/jobs/data/jobs.json> ;
+            dcat:mediaType "application/json" ] ;
+    prov:wasDerivedFrom kgjs:synthetic-fixtures ;
+    prov:wasGeneratedBy kgjs:generation-activity .
+
+kgjs:himalayas a dcat:Dataset ;
+    dcterms:description "Official no-authentication keyword-search API used as the preferred source for explicit local-only KG-job discovery. A small reviewed family of high-precision queries is declared here rather than issuing one request for every taxonomy term."@en ;
+    dcterms:identifier "himalayas" ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Himalayas" ] ;
+    dcterms:title "Himalayas Remote Jobs API"@en ;
+    dcat:distribution kgjs:himalayas-api-distribution ;
+    dcat:landingPage <https://himalayas.app/jobs/api> ;
+    kgjobs:adapter "himalayas" ;
+    kgjobs:allowedHost "himalayas.app" ;
+    kgjobs:attributionText "Himalayas" ;
+    kgjobs:attributionURL <https://himalayas.app/> ;
+    kgjobs:maxRecordsPerRun 80 ;
+    kgjobs:maxRequestsPerRun 4 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400.0 ;
+    kgjobs:networkFree false ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:searchEnabled true ;
+    kgjobs:sourceQuery kgjs:himalayas-query-knowledge-graph,
+        kgjs:himalayas-query-ontology,
+        kgjs:himalayas-query-semantic-web,
+        kgjs:himalayas-query-sparql ;
+    kgjobs:termsURL <https://himalayas.app/docs/remote-jobs-api> .
+
+kgjs:jobicy a dcat:Dataset ;
+    dcterms:description "Official no-authentication remote-jobs JSON API. Its `tag` parameter is a genuine keyword search, verified against the live API with a true-negative control query (a nonsense term correctly returned zero results). A small reviewed family of high-precision queries is declared here, the same pattern as Himalayas -- except the bare single words 'knowledge' and 'owl', which were found to silently fall back to an unfiltered result set rather than actually filtering, so 'knowledge graph' and 'ontology' are queried instead. Local RDF vocabulary classification remains the sole eligibility decision regardless."@en ;
+    dcterms:identifier "jobicy" ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Jobicy" ] ;
+    dcterms:title "Jobicy Remote Jobs API"@en ;
+    dcat:distribution kgjs:jobicy-api-distribution ;
+    dcat:landingPage <https://jobi.cy/apidocs> ;
+    kgjobs:adapter "jobicy" ;
+    kgjobs:allowedHost "jobicy.com" ;
+    kgjobs:attributionText "Jobicy" ;
+    kgjobs:attributionURL <https://jobicy.com/> ;
+    kgjobs:maxRecordsPerRun 160 ;
+    kgjobs:maxRequestsPerRun 8 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 3600.0 ;
+    kgjobs:networkFree false ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:searchEnabled true ;
+    kgjobs:sourceQuery kgjs:jobicy-query-knowledge-graph,
+        kgjs:jobicy-query-linkml,
+        kgjs:jobicy-query-ontology,
+        kgjs:jobicy-query-rdf,
+        kgjs:jobicy-query-semantic-web,
+        kgjs:jobicy-query-shacl,
+        kgjs:jobicy-query-skos,
+        kgjs:jobicy-query-sparql ;
+    kgjobs:termsURL <https://jobi.cy/apidocs> .
+
+kgjs:jooble a dcat:Dataset ;
+    dcterms:description "Keyed job-search aggregator API (500 requests on the free tier). The API key is issued instantly on request but is a real per-account credential, never stored in this registry -- scripts/live_pipeline.py reads it from the JOOBLE_API_KEY environment variable at request time. Jooble requires a POST request with a JSON body (verified directly: a GET with the same parameters returns nothing), so it is fetched through a dedicated code path in scripts/live_sources.py rather than the shared GET fetcher."@en ;
+    dcterms:identifier "jooble" ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Jooble" ] ;
+    dcterms:title "Jooble Job Search API"@en ;
+    dcat:distribution kgjs:jooble-api-distribution ;
+    dcat:landingPage <https://jooble.org/api/about> ;
+    kgjobs:adapter "jooble" ;
+    kgjobs:allowedHost "jooble.org" ;
+    kgjobs:attributionText "Jooble" ;
+    kgjobs:attributionURL <https://jooble.org/> ;
+    kgjobs:maxPostingAgeDays 45 ;
+    kgjobs:maxRecordsPerRun 240 ;
+    kgjobs:maxRequestsPerRun 8 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 21600.0 ;
+    kgjobs:networkFree false ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:retrievalMode "keyword-search-api" ;
+    kgjobs:searchEnabled true ;
+    kgjobs:sourceQuery kgjs:jooble-query-knowledge-graph,
+        kgjs:jooble-query-linkml,
+        kgjs:jooble-query-ontology,
+        kgjs:jooble-query-rdf,
+        kgjs:jooble-query-semantic-web,
+        kgjs:jooble-query-shacl,
+        kgjs:jooble-query-skos,
+        kgjs:jooble-query-sparql ;
+    kgjobs:termsURL <https://jooble.org/api/about> .
+
+kgjs:remotive a dcat:Dataset ;
+    dcterms:description "Public remote-job search API available to explicit KG Jobs ingestion. Remotive attribution and original listing links must be retained."@en ;
+    dcterms:identifier "remotive" ;
+    dcterms:publisher [ a foaf:Agent ;
+            foaf:name "Remotive" ] ;
+    dcterms:title "Remotive Public Remote Jobs API"@en ;
+    dcat:distribution kgjs:remotive-api-distribution ;
+    dcat:landingPage <https://remotive.com/remote-jobs/api> ;
+    kgjobs:adapter "remotive" ;
+    kgjobs:allowedHost "remotive.com" ;
+    kgjobs:attributionText "Remotive" ;
+    kgjobs:attributionURL <https://remotive.com/> ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 21600.0 ;
+    kgjobs:networkFree false ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:retrievalMode "search-api" ;
+    kgjobs:searchEnabled true ;
+    kgjobs:sourceQuery kgjs:remotive-query-knowledge-graph ;
+    kgjobs:termsURL <https://remotive.com/remote-jobs/api> .
+
+src:WikidataOntologyEligibilityPolicy a okg:SourceEligibilityPolicy ;
     okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
-    dcterms:description "Standalone Resource Description Framework standard required as a page-backed semantic-web catalog resource."@en ;
-    dcterms:source <https://www.w3.org/RDF/> .
-
-src:class-Q124653107 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q124653107" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 10 .
-src:class-Q140639670 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q140639670" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 11 .
-src:class-Q595971 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q595971" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 12 .
-src:class-Q137916409 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q137916409" ; okg:targetTerm okg:Software ; okg:projectionValue "Software" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 13 .
-
-src:class-Q5 a okg:SourceClassMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourceClassId "Q5" ; okg:targetTerm okg:Person ; okg:projectionValue "Person" ; okg:sortOrder 20 .
-
-# Narrow ontology-catalog eligibility policy. These are direct Wikidata P31
-# markers only; generic components, subclass inference, labels, descriptions,
-# and URL shapes remain audit signals and never trigger automatic exclusion.
-
-src:WikidataOntologyEligibilityPolicy
-    a okg:SourceEligibilityPolicy ;
     okg:sourceDataset src:WikidataDataset ;
-    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
-    okg:termComponentMarker wd:Q1969448, wd:Q137426747, wd:Q7095057 ;
-    okg:sourceExclusion
+    okg:sourceExclusion src:exclude-Q116185807,
+        src:exclude-Q116185838,
+        src:exclude-Q124134779,
         src:exclude-Q124134874,
         src:exclude-Q124134880,
         src:exclude-Q124134885,
-        src:exclude-Q124135010,
-        src:exclude-Q124135003,
         src:exclude-Q124134971,
-        src:exclude-Q124134998,
-        src:exclude-Q124134995,
-        src:exclude-Q124134989,
         src:exclude-Q124134976,
-        src:exclude-Q124134779,
-        src:exclude-Q116185807,
-        src:exclude-Q116185838,
+        src:exclude-Q124134989,
+        src:exclude-Q124134995,
+        src:exclude-Q124134998,
+        src:exclude-Q124135003,
+        src:exclude-Q124135010,
         src:exclude-Q16511225,
         src:exclude-Q17005183,
         src:exclude-Q24024806,
@@ -123,62 +529,713 @@ src:WikidataOntologyEligibilityPolicy
         src:exclude-Q5571802,
         src:exclude-Q63254594,
         src:exclude-Q63254622,
-        src:exclude-Q70789890 .
+        src:exclude-Q70789890 ;
+    okg:termComponentMarker wd:Q137426747,
+        wd:Q1969448,
+        wd:Q7095057 .
 
-src:exclude-Q124134874 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134874 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134880 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134880 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134885 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134885 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124135010 a okg:SourceExclusion ; okg:sourceEntity wd:Q124135010 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124135003 a okg:SourceExclusion ; okg:sourceEntity wd:Q124135003 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134971 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134971 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134998 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134998 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134995 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134995 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134989 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134989 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134976 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134976 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q124134779 a okg:SourceExclusion ; okg:sourceEntity wd:Q124134779 ; dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> .
-src:exclude-Q116185807 a okg:SourceExclusion ; okg:sourceEntity wd:Q116185807 ; dcterms:description "Individual Homosaurus term, not a standalone controlled vocabulary."@en ; dcterms:source <https://homosaurus.org/> .
-src:exclude-Q116185838 a okg:SourceExclusion ; okg:sourceEntity wd:Q116185838 ; dcterms:description "Individual Homosaurus term, not a standalone controlled vocabulary."@en ; dcterms:source <https://homosaurus.org/> .
-src:exclude-Q16511225 a okg:SourceExclusion ; okg:sourceEntity wd:Q16511225 ; dcterms:description "N-Z section of the German nautical terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q16511225> .
-src:exclude-Q17005183 a okg:SourceExclusion ; okg:sourceEntity wd:Q17005183 ; dcterms:description "D-F section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q17005183> .
-src:exclude-Q24024806 a okg:SourceExclusion ; okg:sourceEntity wd:Q24024806 ; dcterms:description "Appendix abbreviation table, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q24024806> .
-src:exclude-Q2957606 a okg:SourceExclusion ; okg:sourceEntity wd:Q2957606 ; dcterms:description "Charadriidae classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ; dcterms:source <https://www.wikidata.org/wiki/Q2957606> .
-src:exclude-Q2972287 a okg:SourceExclusion ; okg:sourceEntity wd:Q2972287 ; dcterms:description "Ciconiiformes classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ; dcterms:source <https://www.wikidata.org/wiki/Q2972287> .
-src:exclude-Q3546270 a okg:SourceExclusion ; okg:sourceEntity wd:Q3546270 ; dcterms:description "Tyrannidae classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ; dcterms:source <https://www.wikidata.org/wiki/Q3546270> .
-src:exclude-Q5571732 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571732 ; dcterms:description "A section of the baseball glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571732> .
-src:exclude-Q5571794 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571794 ; dcterms:description "A-C section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571794> .
-src:exclude-Q5571796 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571796 ; dcterms:description "G-L section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571796> .
-src:exclude-Q5571798 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571798 ; dcterms:description "M-O section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571798> .
-src:exclude-Q5571799 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571799 ; dcterms:description "P-R section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571799> .
-src:exclude-Q5571800 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571800 ; dcterms:description "S section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571800> .
-src:exclude-Q5571802 a okg:SourceExclusion ; okg:sourceEntity wd:Q5571802 ; dcterms:description "T-Z section of the education terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q5571802> .
-src:exclude-Q63254594 a okg:SourceExclusion ; okg:sourceEntity wd:Q63254594 ; dcterms:description "French- and Italian-origin terms section of the music glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q63254594> .
-src:exclude-Q63254622 a okg:SourceExclusion ; okg:sourceEntity wd:Q63254622 ; dcterms:description "German-origin terms section of the music glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q63254622> .
-src:exclude-Q70789890 a okg:SourceExclusion ; okg:sourceEntity wd:Q70789890 ; dcterms:description "A-M section of the German nautical terms glossary, not a standalone controlled vocabulary."@en ; dcterms:source <https://www.wikidata.org/wiki/Q70789890> .
+src:class-Q124653107 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:projectionValue "Software" ;
+    okg:sortOrder 10 ;
+    okg:sourceClassId "Q124653107" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Software .
 
-# Source property mappings. normalizedField is the stable internal extraction name;
-# valueKind and cardinality make source assumptions inspectable without encoding query syntax.
+src:class-Q137916409 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:projectionValue "Software" ;
+    okg:sortOrder 13 ;
+    okg:sourceClassId "Q137916409" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Software .
 
-src:property-P31 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P31" ; okg:normalizedField "instanceOf" ; okg:targetTerm rdf:type ; okg:valueKind "iri" ; okg:cardinality "required-many" ; okg:sortOrder 1 .
-src:property-P31-source-type a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P31" ; okg:normalizedField "sourceType" ; okg:targetTerm okg:sourceType ; okg:valueKind "iri" ; okg:cardinality "required-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 2 .
-src:property-P279 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P279" ; okg:normalizedField "subclassOf" ; okg:targetTerm rdfs:subClassOf ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:sortOrder 2 .
-src:property-P856 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P856" ; okg:normalizedField "officialWebsite" ; okg:targetTerm okg:homepage ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 10 .
-src:property-P1324 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P1324" ; okg:normalizedField "sourceCodeRepo" ; okg:targetTerm okg:sourceRepo ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 11 .
-src:property-P7510 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P7510" ; okg:normalizedField "namespaceURI" ; okg:targetTerm okg:namespaceURI ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sortOrder 12 .
-src:property-P275 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P275" ; okg:normalizedField "license" ; okg:targetTerm okg:hasLicense ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 13 .
-src:property-P361 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P361" ; okg:normalizedField "partOfEntity" ; okg:targetTerm dcterms:isPartOf ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 14 .
-src:property-P2283 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P2283" ; okg:normalizedField "usesEntity" ; okg:targetTerm okg:uses ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 15 .
-src:property-P170 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P170" ; okg:normalizedField "creator" ; okg:targetTerm okg:creator ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 20 .
-src:property-P50 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P50" ; okg:normalizedField "creator" ; okg:targetTerm okg:creator ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>, <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 21 .
-src:property-P178 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P178" ; okg:normalizedField "creator" ; okg:targetTerm okg:creator ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 22 .
-src:property-P277 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P277" ; okg:normalizedField "programmingLanguage" ; okg:targetTerm okg:programmingLanguage ; okg:valueKind "iri" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 30 .
-src:property-P348 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P348" ; okg:normalizedField "version" ; okg:targetTerm okg:latestVersion ; okg:valueKind "string" ; okg:cardinality "optional-many" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 31 .
-src:property-P577 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P577" ; okg:normalizedField "publicationDate" ; okg:targetTerm okg:releaseDate ; okg:valueKind "date-time" ; okg:cardinality "optional-one-per-version" ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ; okg:sortOrder 32 .
-src:property-P2037 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P2037" ; okg:normalizedField "github" ; okg:targetTerm okg:githubProfile ; okg:valueKind "external-identifier" ; okg:cardinality "optional-one" ; okg:sortOrder 40 .
-src:property-P1960 a okg:SourcePropertyMapping ; okg:sourceDataset src:WikidataDataset ; okg:sourcePropertyId "P1960" ; okg:normalizedField "scholar" ; okg:targetTerm okg:googleScholarProfile ; okg:valueKind "external-identifier" ; okg:cardinality "optional-one" ; okg:sortOrder 41 .
+src:class-Q140639670 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:projectionValue "Software" ;
+    okg:sortOrder 11 ;
+    okg:sourceClassId "Q140639670" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Software .
 
-# Reviewed recommendation exemplars. They are enforced only while both records,
-# the exact source claim, and page-independent similarity eligibility remain present.
-src:recommendation-relations-ontology-bfo a okg:RecommendationExemplar ; rdfs:label "Relations Ontology uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q28729320 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
-src:recommendation-chemical-information-ontology-bfo a okg:RecommendationExemplar ; rdfs:label "Chemical Information Ontology uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q55118298 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
-src:recommendation-foodon-bfo a okg:RecommendationExemplar ; rdfs:label "FoodOn uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q55118395 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
-src:recommendation-environment-ontology-bfo a okg:RecommendationExemplar ; rdfs:label "Environment Ontology uses Basic Formal Ontology"@en ; okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ; okg:sourceEntity wd:Q31110555 ; okg:sourcePropertyMapping src:property-P2283 ; okg:sourceObject wd:Q4866972 .
+src:class-Q1469824 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "ControlledVocabulary" ;
+    okg:sortOrder 2 ;
+    okg:sourceClassId "Q1469824" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:ControlledVocabulary .
+
+src:class-Q324254 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "Ontology" ;
+    okg:sortOrder 1 ;
+    okg:sourceClassId "Q324254" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Ontology .
+
+src:class-Q33002955 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "KnowledgeGraph" ;
+    okg:sortOrder 4 ;
+    okg:sourceClassId "Q33002955" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:KnowledgeGraph .
+
+src:class-Q5 a okg:SourceClassMapping ;
+    okg:projectionValue "Person" ;
+    okg:sortOrder 20 ;
+    okg:sourceClassId "Q5" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Person .
+
+src:class-Q595971 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:projectionValue "Software" ;
+    okg:sortOrder 12 ;
+    okg:sourceClassId "Q595971" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Software .
+
+src:class-Q7095059 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "OntologyLanguage" ;
+    okg:sortOrder 5 ;
+    okg:sourceClassId "Q7095059" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:OntologyLanguage .
+
+src:class-Q7247749 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "ControlledVocabulary" ;
+    okg:sortOrder 6 ;
+    okg:sourceClassId "Q7247749" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:ControlledVocabulary .
+
+src:class-Q8269924 a okg:SourceClassMapping ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "Taxonomy" ;
+    okg:sortOrder 3 ;
+    okg:sourceClassId "Q8269924" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:targetTerm okg:Taxonomy .
+
+src:include-Q54872 a okg:SourceInclusion ;
+    dcterms:description "Standalone Resource Description Framework standard required as a page-backed semantic-web catalog resource."@en ;
+    dcterms:source <https://www.w3.org/RDF/> ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:projectionValue "Standard" ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourceEntity wd:Q54872 ;
+    okg:targetTerm okg:Standard .
+
+src:property-P1324 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "sourceCodeRepo" ;
+    okg:sortOrder 11 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P1324" ;
+    okg:targetTerm okg:sourceRepo ;
+    okg:valueKind "iri" .
+
+src:property-P170 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "creator" ;
+    okg:sortOrder 20 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P170" ;
+    okg:targetTerm okg:creator ;
+    okg:valueKind "iri" .
+
+src:property-P178 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "creator" ;
+    okg:sortOrder 22 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P178" ;
+    okg:targetTerm okg:creator ;
+    okg:valueKind "iri" .
+
+src:property-P1960 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-one" ;
+    okg:normalizedField "scholar" ;
+    okg:sortOrder 41 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P1960" ;
+    okg:targetTerm okg:googleScholarProfile ;
+    okg:valueKind "external-identifier" .
+
+src:property-P2037 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-one" ;
+    okg:normalizedField "github" ;
+    okg:sortOrder 40 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P2037" ;
+    okg:targetTerm okg:githubProfile ;
+    okg:valueKind "external-identifier" .
+
+src:property-P275 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "license" ;
+    okg:sortOrder 13 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P275" ;
+    okg:targetTerm okg:hasLicense ;
+    okg:valueKind "iri" .
+
+src:property-P277 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "programmingLanguage" ;
+    okg:sortOrder 30 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P277" ;
+    okg:targetTerm okg:programmingLanguage ;
+    okg:valueKind "iri" .
+
+src:property-P279 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:normalizedField "subclassOf" ;
+    okg:sortOrder 2 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P279" ;
+    okg:targetTerm rdfs:subClassOf ;
+    okg:valueKind "iri" .
+
+src:property-P31 a okg:SourcePropertyMapping ;
+    okg:cardinality "required-many" ;
+    okg:normalizedField "instanceOf" ;
+    okg:sortOrder 1 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P31" ;
+    okg:targetTerm rdf:type ;
+    okg:valueKind "iri" .
+
+src:property-P31-source-type a okg:SourcePropertyMapping ;
+    okg:cardinality "required-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "sourceType" ;
+    okg:sortOrder 2 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P31" ;
+    okg:targetTerm okg:sourceType ;
+    okg:valueKind "iri" .
+
+src:property-P348 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "version" ;
+    okg:sortOrder 31 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P348" ;
+    okg:targetTerm okg:latestVersion ;
+    okg:valueKind "string" .
+
+src:property-P361 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "partOfEntity" ;
+    okg:sortOrder 14 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P361" ;
+    okg:targetTerm dcterms:isPartOf ;
+    okg:valueKind "iri" .
+
+src:property-P50 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "creator" ;
+    okg:sortOrder 21 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P50" ;
+    okg:targetTerm okg:creator ;
+    okg:valueKind "iri" .
+
+src:property-P577 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-one-per-version" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "publicationDate" ;
+    okg:sortOrder 32 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P577" ;
+    okg:targetTerm okg:releaseDate ;
+    okg:valueKind "date-time" .
+
+src:property-P7510 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:normalizedField "namespaceURI" ;
+    okg:sortOrder 12 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P7510" ;
+    okg:targetTerm okg:namespaceURI ;
+    okg:valueKind "iri" .
+
+src:property-P856 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "officialWebsite" ;
+    okg:sortOrder 10 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P856" ;
+    okg:targetTerm okg:homepage ;
+    okg:valueKind "iri" .
+
+src:recommendation-chemical-information-ontology-bfo a okg:RecommendationExemplar ;
+    rdfs:label "Chemical Information Ontology uses Basic Formal Ontology"@en ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:sourceEntity wd:Q55118298 ;
+    okg:sourceObject wd:Q4866972 ;
+    okg:sourcePropertyMapping src:property-P2283 .
+
+src:recommendation-environment-ontology-bfo a okg:RecommendationExemplar ;
+    rdfs:label "Environment Ontology uses Basic Formal Ontology"@en ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:sourceEntity wd:Q31110555 ;
+    okg:sourceObject wd:Q4866972 ;
+    okg:sourcePropertyMapping src:property-P2283 .
+
+src:recommendation-foodon-bfo a okg:RecommendationExemplar ;
+    rdfs:label "FoodOn uses Basic Formal Ontology"@en ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:sourceEntity wd:Q55118395 ;
+    okg:sourceObject wd:Q4866972 ;
+    okg:sourcePropertyMapping src:property-P2283 .
+
+src:recommendation-relations-ontology-bfo a okg:RecommendationExemplar ;
+    rdfs:label "Relations Ontology uses Basic Formal Ontology"@en ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies> ;
+    okg:sourceEntity wd:Q28729320 ;
+    okg:sourceObject wd:Q4866972 ;
+    okg:sourcePropertyMapping src:property-P2283 .
+
+kgjs:adzuna-api-distribution a dcat:Distribution ;
+    dcterms:title "Adzuna keyed job-search JSON endpoint (us)"@en ;
+    dcat:accessURL <https://api.adzuna.com/v1/api/jobs/us/search/1> ;
+    dcat:mediaType "application/json" .
+
+kgjs:adzuna-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-knowledge-graph ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryOrder 1 ;
+    kgjobs:queryText "knowledge graph" .
+
+kgjs:adzuna-query-ontology a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:role-ontologist,
+        kgjv:role-ontology-engineer ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryOrder 2 ;
+    kgjobs:queryText "ontology" .
+
+kgjs:adzuna-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-semantic-web ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryOrder 3 ;
+    kgjobs:queryText "semantic web" .
+
+kgjs:adzuna-query-sparql a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-sparql ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryOrder 4 ;
+    kgjobs:queryText "SPARQL" .
+
+kgjs:arbeitnow-api-distribution a dcat:Distribution ;
+    dcterms:title "Arbeitnow public job-board JSON endpoint"@en ;
+    dcat:accessURL <https://www.arbeitnow.com/api/job-board-api> ;
+    dcat:mediaType "application/json" .
+
+kgjs:arbeitnow-query-all-active a kgjobs:QueryFamily ;
+    dcterms:description "The Arbeitnow adapter retrieves a bounded active-posting feed; the RDF vocabulary, not this retrieval scope, determines KG relevance."@en ;
+    dcterms:title "All active postings feed scope"@en ;
+    kgjobs:queryOrder 1 ;
+    kgjobs:queryText "all active postings; KG relevance classified locally" .
+
+kgjs:fixture-schema a dcterms:Standard ;
+    dcterms:description "Each fixture record has: id (string, stable fixture identifier), test_url (string, a test:// scheme canonical URL -- never a real URL), title, hiringOrganization, location (nullable), datePosted (nullable, ISO date), description, qualifications (nullable), responsibilities (nullable), expected_classification (one of qualified, review, not_match), and expected_concepts (array of kg-jobs.ttl concept local names, e.g. skill-rdf)."@en ;
+    dcterms:title "KG Jobs fixture record schema"@en .
+
+kgjs:generation-activity a prov:Activity ;
+    dcterms:description "Deterministic, network-free run of scripts/generate.py: loads match terms and strengths from vocabularies/kg-jobs.ttl, classifies each fixture, and writes data/jobs.ttl and data/jobs.json."@en ;
+    dcterms:title "kg-jobs classification run"@en ;
+    prov:used kgjs:synthetic-fixtures,
+        <https://openknowledgegraphs.com/jobs/vocab> .
+
+kgjs:himalayas-api-distribution a dcat:Distribution ;
+    dcterms:title "Himalayas official keyword-search JSON endpoint"@en ;
+    dcat:accessURL <https://himalayas.app/jobs/api/search> ;
+    dcat:mediaType "application/json" .
+
+kgjs:himalayas-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-knowledge-graph ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryOrder 1 ;
+    kgjobs:queryText "knowledge graph" .
+
+kgjs:himalayas-query-ontology a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:role-ontologist,
+        kgjv:role-ontology-engineer ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryOrder 2 ;
+    kgjobs:queryText "ontology" .
+
+kgjs:himalayas-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-semantic-web ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryOrder 3 ;
+    kgjobs:queryText "semantic web" .
+
+kgjs:himalayas-query-sparql a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-sparql ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryOrder 4 ;
+    kgjobs:queryText "SPARQL" .
+
+kgjs:jobicy-api-distribution a dcat:Distribution ;
+    dcterms:title "Jobicy public remote-jobs JSON endpoint"@en ;
+    dcat:accessURL <https://jobicy.com/api/v2/remote-jobs> ;
+    dcat:mediaType "application/json" .
+
+kgjs:jobicy-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-knowledge-graph ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryOrder 8 ;
+    kgjobs:queryText "knowledge graph" .
+
+kgjs:jobicy-query-linkml a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-linkml ;
+    dcterms:title "LinkML jobs query"@en ;
+    kgjobs:queryOrder 6 ;
+    kgjobs:queryText "linkml" .
+
+kgjs:jobicy-query-ontology a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:role-ontologist,
+        kgjv:role-ontology-engineer ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryOrder 2 ;
+    kgjobs:queryText "ontology" .
+
+kgjs:jobicy-query-rdf a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-rdf ;
+    dcterms:title "RDF jobs query"@en ;
+    kgjobs:queryOrder 1 ;
+    kgjobs:queryText "rdf" .
+
+kgjs:jobicy-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-semantic-web ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryOrder 7 ;
+    kgjobs:queryText "semantic web" .
+
+kgjs:jobicy-query-shacl a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-shacl ;
+    dcterms:title "SHACL jobs query"@en ;
+    kgjobs:queryOrder 5 ;
+    kgjobs:queryText "shacl" .
+
+kgjs:jobicy-query-skos a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-skos ;
+    dcterms:title "SKOS jobs query"@en ;
+    kgjobs:queryOrder 4 ;
+    kgjobs:queryText "skos" .
+
+kgjs:jobicy-query-sparql a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-sparql ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryOrder 3 ;
+    kgjobs:queryText "sparql" .
+
+kgjs:jooble-api-distribution a dcat:Distribution ;
+    dcterms:title "Jooble keyed job-search JSON endpoint"@en ;
+    dcat:accessURL <https://jooble.org/api/> ;
+    dcat:mediaType "application/json" .
+
+kgjs:jooble-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-knowledge-graph ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryOrder 8 ;
+    kgjobs:queryText "knowledge graph" .
+
+kgjs:jooble-query-linkml a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-linkml ;
+    dcterms:title "LinkML jobs query"@en ;
+    kgjobs:queryOrder 6 ;
+    kgjobs:queryText "linkml" .
+
+kgjs:jooble-query-ontology a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:role-ontologist,
+        kgjv:role-ontology-engineer ;
+    dcterms:title "Ontology jobs query"@en ;
+    kgjobs:queryOrder 2 ;
+    kgjobs:queryText "ontology" .
+
+kgjs:jooble-query-rdf a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-rdf ;
+    dcterms:title "RDF jobs query"@en ;
+    kgjobs:queryOrder 1 ;
+    kgjobs:queryText "rdf" .
+
+kgjs:jooble-query-semantic-web a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-semantic-web ;
+    dcterms:title "Semantic web jobs query"@en ;
+    kgjobs:queryOrder 7 ;
+    kgjobs:queryText "semantic web" .
+
+kgjs:jooble-query-shacl a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-shacl ;
+    dcterms:title "SHACL jobs query"@en ;
+    kgjobs:queryOrder 5 ;
+    kgjobs:queryText "shacl" .
+
+kgjs:jooble-query-skos a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-skos ;
+    dcterms:title "SKOS jobs query"@en ;
+    kgjobs:queryOrder 4 ;
+    kgjobs:queryText "skos" .
+
+kgjs:jooble-query-sparql a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-sparql ;
+    dcterms:title "SPARQL jobs query"@en ;
+    kgjobs:queryOrder 3 ;
+    kgjobs:queryText "sparql" .
+
+kgjs:remotive-api-distribution a dcat:Distribution ;
+    dcterms:title "Remotive public jobs JSON endpoint"@en ;
+    dcat:accessURL <https://remotive.com/api/remote-jobs> ;
+    dcat:mediaType "application/json" .
+
+kgjs:remotive-query-knowledge-graph a kgjobs:QueryFamily ;
+    dcterms:subject kgjv:skill-knowledge-graph ;
+    dcterms:title "Knowledge graph jobs query"@en ;
+    kgjobs:queryOrder 1 ;
+    kgjobs:queryText "knowledge graph" .
+
+kgjs:synthetic-fixtures-distribution a dcat:Distribution ;
+    dcterms:conformsTo kgjs:fixture-schema ;
+    dcterms:title "Fixture JSON file"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/jobs/fixtures/jobs.json> ;
+    dcat:mediaType "application/json" .
+
+src:OntologiesJsonDistribution a dcat:Distribution ;
+    dcterms:title "Derived OKG ontology catalog JSON projection"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/ontologies.json> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> .
+
+src:OntologiesTurtleDistribution a dcat:Distribution ;
+    dcterms:title "OKG ontology catalog in Turtle"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/ontologies.ttl> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+
+src:SoftwareJsonDistribution a dcat:Distribution ;
+    dcterms:title "Derived OKG software catalog JSON projection"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/software.json> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> .
+
+src:SoftwareTurtleDistribution a dcat:Distribution ;
+    dcterms:title "OKG software catalog in Turtle"@en ;
+    dcat:downloadURL <https://openknowledgegraphs.com/data/software.ttl> ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+
+src:exclude-Q116185807 a okg:SourceExclusion ;
+    dcterms:description "Individual Homosaurus term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://homosaurus.org/> ;
+    okg:sourceEntity wd:Q116185807 .
+
+src:exclude-Q116185838 a okg:SourceExclusion ;
+    dcterms:description "Individual Homosaurus term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://homosaurus.org/> ;
+    okg:sourceEntity wd:Q116185838 .
+
+src:exclude-Q124134779 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134779 .
+
+src:exclude-Q124134874 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134874 .
+
+src:exclude-Q124134880 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134880 .
+
+src:exclude-Q124134885 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134885 .
+
+src:exclude-Q124134971 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134971 .
+
+src:exclude-Q124134976 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134976 .
+
+src:exclude-Q124134989 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134989 .
+
+src:exclude-Q124134995 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134995 .
+
+src:exclude-Q124134998 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124134998 .
+
+src:exclude-Q124135003 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124135003 .
+
+src:exclude-Q124135010 a okg:SourceExclusion ;
+    dcterms:description "Individual accessibility vocabulary term, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.w3.org/2021/a11y-discov-vocab/latest/> ;
+    okg:sourceEntity wd:Q124135010 .
+
+src:exclude-Q16511225 a okg:SourceExclusion ;
+    dcterms:description "N-Z section of the German nautical terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q16511225> ;
+    okg:sourceEntity wd:Q16511225 .
+
+src:exclude-Q17005183 a okg:SourceExclusion ;
+    dcterms:description "D-F section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q17005183> ;
+    okg:sourceEntity wd:Q17005183 .
+
+src:exclude-Q24024806 a okg:SourceExclusion ;
+    dcterms:description "Appendix abbreviation table, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q24024806> ;
+    okg:sourceEntity wd:Q24024806 .
+
+src:exclude-Q2957606 a okg:SourceExclusion ;
+    dcterms:description "Charadriidae classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2957606> ;
+    okg:sourceEntity wd:Q2957606 .
+
+src:exclude-Q2972287 a okg:SourceExclusion ;
+    dcterms:description "Ciconiiformes classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q2972287> ;
+    okg:sourceEntity wd:Q2972287 .
+
+src:exclude-Q3546270 a okg:SourceExclusion ;
+    dcterms:description "Tyrannidae classification entry within the Sibley-Ahlquist taxonomy, not a standalone taxonomy."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q3546270> ;
+    okg:sourceEntity wd:Q3546270 .
+
+src:exclude-Q5571732 a okg:SourceExclusion ;
+    dcterms:description "A section of the baseball glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571732> ;
+    okg:sourceEntity wd:Q5571732 .
+
+src:exclude-Q5571794 a okg:SourceExclusion ;
+    dcterms:description "A-C section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571794> ;
+    okg:sourceEntity wd:Q5571794 .
+
+src:exclude-Q5571796 a okg:SourceExclusion ;
+    dcterms:description "G-L section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571796> ;
+    okg:sourceEntity wd:Q5571796 .
+
+src:exclude-Q5571798 a okg:SourceExclusion ;
+    dcterms:description "M-O section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571798> ;
+    okg:sourceEntity wd:Q5571798 .
+
+src:exclude-Q5571799 a okg:SourceExclusion ;
+    dcterms:description "P-R section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571799> ;
+    okg:sourceEntity wd:Q5571799 .
+
+src:exclude-Q5571800 a okg:SourceExclusion ;
+    dcterms:description "S section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571800> ;
+    okg:sourceEntity wd:Q5571800 .
+
+src:exclude-Q5571802 a okg:SourceExclusion ;
+    dcterms:description "T-Z section of the education terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q5571802> ;
+    okg:sourceEntity wd:Q5571802 .
+
+src:exclude-Q63254594 a okg:SourceExclusion ;
+    dcterms:description "French- and Italian-origin terms section of the music glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63254594> ;
+    okg:sourceEntity wd:Q63254594 .
+
+src:exclude-Q63254622 a okg:SourceExclusion ;
+    dcterms:description "German-origin terms section of the music glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q63254622> ;
+    okg:sourceEntity wd:Q63254622 .
+
+src:exclude-Q70789890 a okg:SourceExclusion ;
+    dcterms:description "A-M section of the German nautical terms glossary, not a standalone controlled vocabulary."@en ;
+    dcterms:source <https://www.wikidata.org/wiki/Q70789890> ;
+    okg:sourceEntity wd:Q70789890 .
+
+kgjs:synthetic-fixtures a dcat:Dataset ;
+    dcterms:created "2026-08-17"^^xsd:date ;
+    dcterms:creator [ a foaf:Agent ;
+            foaf:name "OKG KG Jobs test generator" ] ;
+    dcterms:description "20 invented job-posting records used only to exercise and test the KG Jobs classifier. Not live vacancies, not scraped, not sourced from any employer or job board."@en ;
+    dcterms:identifier "kg-jobs-fixtures-v1" ;
+    dcterms:title "KG Jobs Synthetic Fixture Corpus"@en ;
+    dcterms:type "synthetic-test-data"@en ;
+    dcat:distribution kgjs:synthetic-fixtures-distribution ;
+    kgjobs:networkFree true ;
+    kgjobs:retrievalMode "local-file" .
+
+src:property-P2283 a okg:SourcePropertyMapping ;
+    okg:cardinality "optional-many" ;
+    okg:catalogDataset <https://openknowledgegraphs.com/datasets/ontologies>,
+        <https://openknowledgegraphs.com/datasets/software> ;
+    okg:normalizedField "usesEntity" ;
+    okg:sortOrder 15 ;
+    okg:sourceDataset src:WikidataDataset ;
+    okg:sourcePropertyId "P2283" ;
+    okg:targetTerm okg:uses ;
+    okg:valueKind "iri" .
+
+<https://openknowledgegraphs.com/datasets/software> a dcat:Dataset,
+        prov:Entity ;
+    dcterms:description "Authoritative RDF catalog of semantic-web and knowledge-graph software published by OKG."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    dcterms:title "Open Knowledge Graphs software catalog"@en ;
+    dcat:distribution src:SoftwareJsonDistribution,
+        src:SoftwareTurtleDistribution ;
+    prov:wasDerivedFrom src:WikidataDataset .
+
+<https://openknowledgegraphs.com/datasets/ontologies> a dcat:Dataset,
+        prov:Entity ;
+    dcterms:description "Authoritative RDF catalog of ontologies, controlled vocabularies, taxonomies, knowledge graphs, and ontology languages published by OKG."@en ;
+    dcterms:issued "2026-08-13"^^xsd:date ;
+    dcterms:title "Open Knowledge Graphs ontology and vocabulary catalog"@en ;
+    dcat:distribution src:OntologiesJsonDistribution,
+        src:OntologiesTurtleDistribution ;
+    prov:wasDerivedFrom src:WikidataDataset .
+
+src:WikidataDataset a dcat:Dataset,
+        prov:Entity ;
+    dcterms:description "The collaboratively edited knowledge base queried by OKG for catalog source facts."@en ;
+    dcterms:identifier "Wikidata" ;
+    dcterms:title "Wikidata"@en ;
+    dcat:landingPage <https://www.wikidata.org/> .

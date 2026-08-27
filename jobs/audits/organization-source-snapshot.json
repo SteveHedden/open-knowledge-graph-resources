@@ -1,0 +1,5763 @@
+{
+  "candidates": [
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q65211158",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Valencian Terminology Portal",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/valencian-terminology-portal/",
+          "resourceWikidataId": "Q65211158",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "Valencian academic institution",
+      "name": "Acadèmia Valenciana de la Llengua",
+      "officialWebsites": [],
+      "qid": "Q1468503",
+      "reviewReason": "Wikidata type requires manual organization review: language regulator, cultural institution, learned society",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "language regulator",
+          "qid": "Q2093358"
+        },
+        {
+          "label": "cultural institution",
+          "qid": "Q3152824"
+        },
+        {
+          "label": "learned society",
+          "qid": "Q955824"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1468503"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q52050038",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "ASC Leiden Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/asc-leiden-thesaurus/",
+          "resourceWikidataId": "Q52050038",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "institute for social-science research on Sub-Saharan Africa",
+      "name": "African Studies Centre Leiden",
+      "officialWebsites": [
+        "https://www.ascleiden.nl"
+      ],
+      "qid": "Q2174585",
+      "reviewReason": "Wikidata organization typing reviewed: publishing house, research institute",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q2174585"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q2597810",
+          "producerRoles": [
+            "author",
+            "publisher",
+            "maintainer",
+            "operator",
+            "owner"
+          ],
+          "resourceTitle": "SUDOC",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/sudoc/",
+          "resourceWikidataId": "Q2597810",
+          "sourceProperties": [
+            "P50",
+            "P123",
+            "P126",
+            "P137",
+            "P127"
+          ]
+        }
+      ],
+      "description": "French public establishment",
+      "name": "Agence bibliographique de l'enseignement supérieur",
+      "officialWebsites": [
+        "https://abes.fr/"
+      ],
+      "qid": "Q2826570",
+      "reviewReason": "Wikidata organization typing reviewed: organization",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q2826570"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q131232034",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Allotrope Data Format",
+          "resourceUrl": "https://openknowledgegraphs.com/software/allotrope-data-format/",
+          "resourceWikidataId": "Q131232034",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "international consortium of pharmaceutical, biopharmaceutical, and other scientific research-intensive industries",
+      "name": "Allotrope Foundation",
+      "officialWebsites": [
+        "https://www.allotrope.org/"
+      ],
+      "qid": "Q108730224",
+      "reviewReason": "Wikidata organization typing reviewed: foundation, organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "foundation",
+          "qid": "Q157031"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q108730224"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q64351785",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Nomenclature for Museum Cataloging",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/nomenclature-for-museum-cataloging/",
+          "resourceWikidataId": "Q64351785",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "organization",
+      "name": "American Association for State and Local History",
+      "officialWebsites": [
+        "https://aaslh.org/"
+      ],
+      "qid": "Q4743036",
+      "reviewReason": "Wikidata organization typing reviewed: nonprofit organization, historical society",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "historical society",
+          "qid": "Q5774403"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4743036"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q60217212",
+          "producerRoles": [
+            "author",
+            "maintainer"
+          ],
+          "resourceTitle": "American Folklore Society Ethnographic Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/american-folklore-society-ethnographic-thesaurus/",
+          "resourceWikidataId": "Q60217212",
+          "sourceProperties": [
+            "P50",
+            "P126"
+          ]
+        }
+      ],
+      "description": "U.S. Congress designated national center for folklife documentation and research at the Library of Congress",
+      "name": "American Folklife Center",
+      "officialWebsites": [
+        "https://www.loc.gov/folklife/"
+      ],
+      "qid": "Q4743795",
+      "reviewReason": "Wikidata organization typing reviewed: reading room, research center",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "reading room",
+          "qid": "Q1753764"
+        },
+        {
+          "label": "research center",
+          "qid": "Q7315155"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4743795"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q60217212",
+          "producerRoles": [
+            "author",
+            "publisher",
+            "maintainer"
+          ],
+          "resourceTitle": "American Folklore Society Ethnographic Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/american-folklore-society-ethnographic-thesaurus/",
+          "resourceWikidataId": "Q60217212",
+          "sourceProperties": [
+            "P50",
+            "P123",
+            "P126"
+          ]
+        }
+      ],
+      "description": "academic society that gathers the work of folklorists in the United States",
+      "name": "American Folklore Society",
+      "officialWebsites": [],
+      "qid": "Q4743796",
+      "reviewReason": "Wikidata organization typing reviewed: nonprofit organization, learned society",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "learned society",
+          "qid": "Q955824"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4743796"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q201561",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Diagnostic and Statistical Manual of Mental Disorders",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/diagnostic-and-statistical-manual-of-mental-disorders/",
+          "resourceWikidataId": "Q201561",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "United States organization of psychiatrists",
+      "name": "American Psychiatric Association",
+      "officialWebsites": [
+        "https://www.psychiatry.org/"
+      ],
+      "qid": "Q466524",
+      "reviewReason": "Wikidata organization typing reviewed: professional association, learned society",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "professional association",
+          "qid": "Q829080"
+        },
+        {
+          "label": "learned society",
+          "qid": "Q955824"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q466524"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q97322747",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "The Andalusian Historical Heritage Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/the-andalusian-historical-heritage-thesaurus/",
+          "resourceWikidataId": "Q97322747",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "institution for heritage protection in Andalusia, Spain",
+      "name": "Andalusian Institute of Historical Heritage",
+      "officialWebsites": [],
+      "qid": "Q5917182",
+      "reviewReason": "Wikidata organization typing reviewed: office for the preservation of historical monuments, public research institution in Spain, public enterprise, archaeological service, scientific archive",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "office for the preservation of historical monuments",
+          "qid": "Q1188075"
+        },
+        {
+          "label": "public research institution in Spain",
+          "qid": "Q130369075"
+        },
+        {
+          "label": "public enterprise",
+          "qid": "Q17990971"
+        },
+        {
+          "label": "archaeological service",
+          "qid": "Q27031016"
+        },
+        {
+          "label": "scientific archive",
+          "qid": "Q27032095"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q5917182"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q109376461",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Apache Jena Fuseki",
+          "resourceUrl": "https://openknowledgegraphs.com/software/apache-jena-fuseki/",
+          "resourceWikidataId": "Q109376461",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q1686799",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Apache Jena",
+          "resourceUrl": "https://openknowledgegraphs.com/software/apache-jena/",
+          "resourceWikidataId": "Q1686799",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q16928009",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Apache Marmotta",
+          "resourceUrl": "https://openknowledgegraphs.com/software/apache-marmotta/",
+          "resourceWikidataId": "Q16928009",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q28915769",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Apache Rya",
+          "resourceUrl": "https://openknowledgegraphs.com/software/apache-rya/",
+          "resourceWikidataId": "Q28915769",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q97348917",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "HugeGraph",
+          "resourceUrl": "https://openknowledgegraphs.com/software/hugegraph/",
+          "resourceWikidataId": "Q97348917",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "American nonprofit open-source software community",
+      "name": "Apache Software Foundation",
+      "officialWebsites": [
+        "https://www.apache.org"
+      ],
+      "qid": "Q489709",
+      "reviewReason": "Wikidata organization typing reviewed: open-source project, foundation",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "open-source project",
+          "qid": "Q109860256"
+        },
+        {
+          "label": "foundation",
+          "qid": "Q157031"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q489709"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q113997665",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "ArcadeDB",
+          "resourceUrl": "https://openknowledgegraphs.com/software/arcadedb/",
+          "resourceWikidataId": "Q113997665",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "database company",
+      "name": "Arcade Data Ltd",
+      "officialWebsites": [],
+      "qid": "Q113997707",
+      "reviewReason": "Wikidata organization typing reviewed: company",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "company",
+          "qid": "Q783794"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q113997707"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q17154059",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "The Art Genome Project",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/the-art-genome-project/",
+          "resourceWikidataId": "Q17154059",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "online platform designed to connect collectors to art",
+      "name": "Artsy",
+      "officialWebsites": [
+        "https://www.artsy.net/"
+      ],
+      "qid": "Q4796642",
+      "reviewReason": "Wikidata type is not an organization: website, business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "website",
+          "qid": "Q35127"
+        },
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4796642"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105550536",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "AIATSIS Place Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/aiatsis-place-thesaurus/",
+          "resourceWikidataId": "Q105550536",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105536068",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "AIATSIS Subject Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/aiatsis-subject-thesaurus/",
+          "resourceWikidataId": "Q105536068",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q72699439",
+          "producerRoles": [
+            "creator",
+            "publisher",
+            "operator"
+          ],
+          "resourceTitle": "Pathways",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/pathways/",
+          "resourceWikidataId": "Q72699439",
+          "sourceProperties": [
+            "P170",
+            "P123",
+            "P137"
+          ]
+        }
+      ],
+      "description": "Australian research institute",
+      "name": "Australian Institute of Aboriginal and Torres Strait Islander Studies",
+      "officialWebsites": [],
+      "qid": "Q781523",
+      "reviewReason": "Wikidata organization typing reviewed: Government body of Australia, archives, research institute",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Government body of Australia",
+          "qid": "Q110376455"
+        },
+        {
+          "label": "archives",
+          "qid": "Q166118"
+        },
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q781523"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q97348917",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "HugeGraph",
+          "resourceUrl": "https://openknowledgegraphs.com/software/hugegraph/",
+          "resourceWikidataId": "Q97348917",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "Chinese web services company",
+      "name": "Baidu",
+      "officialWebsites": [
+        "https://www.baidu.com/",
+        "https://www.百度网站.中国"
+      ],
+      "qid": "Q14772",
+      "reviewReason": "Wikidata organization typing reviewed: search engine, organization, business, online community, enterprise, public company",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-informal-open-source-community",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "search engine",
+          "qid": "Q4182287"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        },
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        },
+        {
+          "label": "online community",
+          "qid": "Q6576792"
+        },
+        {
+          "label": "enterprise",
+          "qid": "Q6881511"
+        },
+        {
+          "label": "public company",
+          "qid": "Q891723"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q14772"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106501879",
+          "producerRoles": [
+            "creator",
+            "developer",
+            "maintainer"
+          ],
+          "resourceTitle": "RBMS Controlled Vocabularies: Controlled Vocabularies for Use in Rare Book and Special Collections Cataloging",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/rbms-controlled-vocabularies-controlled-vocabularies-for-use-in-rare-book-and-special-collections-cataloging/",
+          "resourceWikidataId": "Q106501879",
+          "sourceProperties": [
+            "P170",
+            "P178",
+            "P126"
+          ]
+        }
+      ],
+      "description": "committee of the ACRL Rare Books and Manuscripts Section",
+      "name": "Bibliographic Standards Committee of the Rare Books and Manuscripts Section",
+      "officialWebsites": [],
+      "qid": "Q106501953",
+      "reviewReason": "Wikidata organization typing reviewed: committee",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "committee",
+          "qid": "Q865588"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q106501953"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q136795726",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "BNE ontology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/bne-ontology/",
+          "resourceWikidataId": "Q136795726",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "library in Spain",
+      "name": "Biblioteca Nacional de España",
+      "officialWebsites": [
+        "https://bne.es"
+      ],
+      "qid": "Q750403",
+      "reviewReason": "Wikidata organization typing reviewed: main library, national library, public library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "main library",
+          "qid": "Q12317349"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "public library",
+          "qid": "Q28564"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q750403"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q107620287",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Norwegian thesaurus on genre and form",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/norwegian-thesaurus-on-genre-and-form/",
+          "resourceWikidataId": "Q107620287",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "partner and service supplier for Norwegian public and school libraries",
+      "name": "Biblioteksentralen",
+      "officialWebsites": [
+        "https://www.bibsent.no/"
+      ],
+      "qid": "Q4903496",
+      "reviewReason": "Wikidata organization typing reviewed: business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4903496"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q3456268",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "Répertoire de vedettes-matière",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/repertoire-de-vedettes-matiere/",
+          "resourceWikidataId": "Q3456268",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        }
+      ],
+      "description": "academic library",
+      "name": "Bibliothèque de l'Université Laval",
+      "officialWebsites": [
+        "https://www5.bibl.ulaval.ca"
+      ],
+      "qid": "Q16506987",
+      "reviewReason": "Wikidata organization typing reviewed: research library, publishing house, academic library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research library",
+          "qid": "Q1438040"
+        },
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "academic library",
+          "qid": "Q856234"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q16506987"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q19938912",
+          "producerRoles": [
+            "author",
+            "operator",
+            "owner"
+          ],
+          "resourceTitle": "BnF authorities",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/bnf-authorities/",
+          "resourceWikidataId": "Q19938912",
+          "sourceProperties": [
+            "P50",
+            "P137",
+            "P127"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q19938912",
+          "producerRoles": [
+            "author",
+            "operator",
+            "owner"
+          ],
+          "resourceTitle": "BnF authorities",
+          "resourceUrl": "https://openknowledgegraphs.com/software/bnf-authorities/",
+          "resourceWikidataId": "Q19938912",
+          "sourceProperties": [
+            "P50",
+            "P137",
+            "P127"
+          ]
+        }
+      ],
+      "description": "national library of France in Paris",
+      "name": "Bibliothèque nationale de France",
+      "officialWebsites": [
+        "https://www.bnf.fr/",
+        "https://www.bnf.fr/en"
+      ],
+      "qid": "Q193563",
+      "reviewReason": "Wikidata organization typing reviewed: publishing house, national library, catalog, organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "catalog",
+          "qid": "Q2352616"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q193563"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140287679",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "GMEOW",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/gmeow/",
+          "resourceWikidataId": "Q140287679",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        }
+      ],
+      "description": "Canadian federal business corporation",
+      "name": "Blackcat Informatics Inc.",
+      "officialWebsites": [
+        "https://blackcatinformatics.ca/"
+      ],
+      "qid": "Q140285712",
+      "reviewReason": "Wikidata organization typing reviewed: business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q140285712"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q18785969",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "British Museum person-institution thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/british-museum-person-institution-thesaurus/",
+          "resourceWikidataId": "Q18785969",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q28693488",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "British Museum place thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/british-museum-place-thesaurus/",
+          "resourceWikidataId": "Q28693488",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q28693490",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "British Museum thesauri",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/british-museum-thesauri/",
+          "resourceWikidataId": "Q28693490",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "national museum in London, United Kingdom",
+      "name": "British Museum",
+      "officialWebsites": [
+        "https://www.britishmuseum.org/"
+      ],
+      "qid": "Q6373",
+      "reviewReason": "Wikidata organization typing reviewed: national museum, art museum, non-departmental public body, museum, charitable organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national museum",
+          "qid": "Q17431399"
+        },
+        {
+          "label": "art museum",
+          "qid": "Q207694"
+        },
+        {
+          "label": "non-departmental public body",
+          "qid": "Q3343298"
+        },
+        {
+          "label": "museum",
+          "qid": "Q33506"
+        },
+        {
+          "label": "charitable organization",
+          "qid": "Q708676"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q6373"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q64351785",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "Nomenclature for Museum Cataloging",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/nomenclature-for-museum-cataloging/",
+          "resourceWikidataId": "Q64351785",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        }
+      ],
+      "description": "Special Operating Agency of Canadian Heritage working on museum standards",
+      "name": "Canadian Heritage Information Network",
+      "officialWebsites": [
+        "https://www.canada.ca/chin",
+        "https://www.canada.ca/rcip"
+      ],
+      "qid": "Q3456610",
+      "reviewReason": "Wikidata organization typing reviewed: government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "government agency",
+          "qid": "Q327333"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q3456610"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q65962598",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Vocabulary of Technical Terms: Fabric",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/vocabulary-of-technical-terms-fabric/",
+          "resourceWikidataId": "Q65962598",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "international organization supporting historical textile research",
+      "name": "Centre International d’Etude des Textiles Anciens",
+      "officialWebsites": [
+        "https://cieta.fr/",
+        "https://cieta.fr/the-cieta/"
+      ],
+      "qid": "Q10444919",
+      "reviewReason": "Wikidata organization typing reviewed: nonprofit organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q10444919"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140870185",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "PICO Ontology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/pico-ontology/",
+          "resourceWikidataId": "Q140870185",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": "British nonprofit for reviews of medical research (formed 1993)",
+      "name": "Cochrane",
+      "officialWebsites": [
+        "https://www.cochrane.org/"
+      ],
+      "qid": "Q1105202",
+      "reviewReason": "Wikidata organization typing reviewed: nonprofit organization, publishing house, healthcare provider",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "healthcare provider",
+          "qid": "Q23905463"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1105202"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q29433586",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "Dr. Cecilia Grierson's Dictionary of Argentinian Scientists",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/dr-cecilia-grierson-s-dictionary-of-argentinian-scientists/",
+          "resourceWikidataId": "Q29433586",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": "organisation involved in scholarly research",
+      "name": "Consejo Nacional de Investigaciones Científicas y Técnicas, Centro Argentino de Información Científica y Tecnológica",
+      "officialWebsites": [
+        "https://www.caicyt-conicet.gov.ar"
+      ],
+      "qid": "Q24214058",
+      "reviewReason": "Wikidata organization typing reviewed: research institute, government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        },
+        {
+          "label": "government agency",
+          "qid": "Q327333"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q24214058"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q22975461",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Autores.uy",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/autores-uy/",
+          "resourceWikidataId": "Q22975461",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "Uruguay Creative Commons Affiliate Team",
+      "name": "Creative Commons Uruguay",
+      "officialWebsites": [],
+      "qid": "Q22972975",
+      "reviewReason": "Wikidata organization typing reviewed: organization",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q22972975"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105599672",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "DBC",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/dbc/",
+          "resourceWikidataId": "Q105599672",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "Danish company maintaining bibliographic information",
+      "name": "Danish Bibliographic Centre",
+      "officialWebsites": [
+        "https://www.dbc.dk/english"
+      ],
+      "qid": "Q12307383",
+      "reviewReason": "Wikidata organization typing reviewed: public enterprise, organization, business, enterprise",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "public enterprise",
+          "qid": "Q17990971"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        },
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        },
+        {
+          "label": "enterprise",
+          "qid": "Q6881511"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q12307383"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q141112432",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "data.world Data Catalog Platform",
+          "resourceUrl": "https://openknowledgegraphs.com/software/data-world-data-catalog-platform/",
+          "resourceWikidataId": "Q141112432",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "Public benefit data and analytics company",
+      "name": "data.world",
+      "officialWebsites": [
+        "https://data.world"
+      ],
+      "qid": "Q91143628",
+      "reviewReason": "Wikidata type requires manual organization review: public-benefit corporation",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "public-benefit corporation",
+          "qid": "Q78443472"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q91143628"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q141108893",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "OntoBricks",
+          "resourceUrl": "https://openknowledgegraphs.com/software/ontobricks/",
+          "resourceWikidataId": "Q141108893",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "American technology company",
+      "name": "Databricks",
+      "officialWebsites": [],
+      "qid": "Q18350420",
+      "reviewReason": "Wikidata type is not an organization: software company, business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "software company",
+          "qid": "Q1058914"
+        },
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q18350420"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q108458292",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Product and Service Code",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/product-and-service-code/",
+          "resourceWikidataId": "Q108458292",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "government agency",
+      "name": "Defense Logistics Agency",
+      "officialWebsites": [
+        "https://www.dla.mil/"
+      ],
+      "qid": "Q843327",
+      "reviewReason": "Wikidata organization typing reviewed: standards organization, Combat support agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "standards organization",
+          "qid": "Q1328899"
+        },
+        {
+          "label": "Combat support agency",
+          "qid": "Q16827539"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q843327"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q131323408",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Glossary of Election Terminology - French",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/glossary-of-election-terminology-french/",
+          "resourceWikidataId": "Q131323408",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q131323290",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Glossary of Election Terminology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/glossary-of-election-terminology-q131323290/",
+          "resourceWikidataId": "Q131323290",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q131323055",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Glossary of Election Terminology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/glossary-of-election-terminology/",
+          "resourceWikidataId": "Q131323055",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "independent agency of the United States government",
+      "name": "Election Assistance Commission",
+      "officialWebsites": [
+        "https://www.eac.gov/"
+      ],
+      "qid": "Q860051",
+      "reviewReason": "Wikidata organization typing reviewed: government commission, independent agency of the United States government",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "government commission",
+          "qid": "Q17456916"
+        },
+        {
+          "label": "independent agency of the United States government",
+          "qid": "Q1752939"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q860051"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105754767",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "ERRR",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/errr/",
+          "resourceWikidataId": "Q105754767",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "organization based in Estonia",
+      "name": "ELNET Consortium",
+      "officialWebsites": [],
+      "qid": "Q12361408",
+      "reviewReason": "Wikidata organization typing reviewed: organization, library consortium",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        },
+        {
+          "label": "library consortium",
+          "qid": "Q6542557"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q12361408"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q905695",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "UniProt",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/uniprot/",
+          "resourceWikidataId": "Q905695",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q905695",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "UniProt",
+          "resourceUrl": "https://openknowledgegraphs.com/software/uniprot/",
+          "resourceWikidataId": "Q905695",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        }
+      ],
+      "description": "scientific research centre based in the United Kingdom",
+      "name": "EMBL's European Bioinformatics Institute",
+      "officialWebsites": [
+        "https://www.ebi.ac.uk/"
+      ],
+      "qid": "Q1341845",
+      "reviewReason": "Wikidata organization typing reviewed: facility, research infrastructure, intergovernmental organization, research institute, organization, international organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "facility",
+          "qid": "Q13226383"
+        },
+        {
+          "label": "research infrastructure",
+          "qid": "Q1438053"
+        },
+        {
+          "label": "intergovernmental organization",
+          "qid": "Q245065"
+        },
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        },
+        {
+          "label": "international organization",
+          "qid": "Q484652"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1341845"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q1500936",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Common Procurement Vocabulary",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/common-procurement-vocabulary/",
+          "resourceWikidataId": "Q1500936",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q130626355",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "ERA Knowledge Graph",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/era-knowledge-graph/",
+          "resourceWikidataId": "Q130626355",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "executive branch of the European Union",
+      "name": "European Commission",
+      "officialWebsites": [
+        "https://commission.europa.eu/"
+      ],
+      "qid": "Q8880",
+      "reviewReason": "Wikidata type requires manual organization review: executive branch, institutions of the European Union",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "executive branch",
+          "qid": "Q35798"
+        },
+        {
+          "label": "institutions of the European Union",
+          "qid": "Q748720"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q8880"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q51278630",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "EHRI authority control",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/ehri-authority-control/",
+          "resourceWikidataId": "Q51278630",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "EU research project under the Framework Programmes",
+      "name": "European Holocaust Research Infrastructure",
+      "officialWebsites": [
+        "https://ehri-project.eu/"
+      ],
+      "qid": "Q21755493",
+      "reviewReason": "Wikidata type requires manual organization review: science project, virtual research environment, working group",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "science project",
+          "qid": "Q1298668"
+        },
+        {
+          "label": "virtual research environment",
+          "qid": "Q1674651"
+        },
+        {
+          "label": "working group",
+          "qid": "Q27493"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q21755493"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q124325139",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "Gender Equality Glossary and Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/gender-equality-glossary-and-thesaurus/",
+          "resourceWikidataId": "Q124325139",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        }
+      ],
+      "description": "agency of the European Union",
+      "name": "European Institute for Gender Equality",
+      "officialWebsites": [
+        "https://eige.europa.eu/"
+      ],
+      "qid": "Q48718",
+      "reviewReason": "Wikidata organization typing reviewed: decentralised agency of the European Union",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "decentralised agency of the European Union",
+          "qid": "Q112827555"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q48718"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q29016777",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Europeana Fashion Vocabulary",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/europeana-fashion-vocabulary/",
+          "resourceWikidataId": "Q29016777",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "website",
+      "name": "Europeana Fashion",
+      "officialWebsites": [],
+      "qid": "Q28152171",
+      "reviewReason": "Wikidata type is not an organization: website",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "website",
+          "qid": "Q35127"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q28152171"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q117022198",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Finnish Ontology for Judicial Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/",
+          "resourceWikidataId": "Q117022198",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "general interest association prducing terminology services",
+      "name": "Finnish Terminology Centre TSK",
+      "officialWebsites": [],
+      "qid": "Q94778608",
+      "reviewReason": "Wikidata organization typing reviewed: cultural institution, voluntary association",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "cultural institution",
+          "qid": "Q3152824"
+        },
+        {
+          "label": "voluntary association",
+          "qid": "Q48204"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q94778608"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q4731408",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "AllegroGraph",
+          "resourceUrl": "https://openknowledgegraphs.com/software/allegrograph/",
+          "resourceWikidataId": "Q4731408",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": null,
+      "name": "Franz Inc.",
+      "officialWebsites": [],
+      "qid": "Q11333728",
+      "reviewReason": "Wikidata organization typing reviewed: business, company",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        },
+        {
+          "label": "company",
+          "qid": "Q783794"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q11333728"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q56861590",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "ontop",
+          "resourceUrl": "https://openknowledgegraphs.com/software/ontop/",
+          "resourceWikidataId": "Q56861590",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "university",
+      "name": "Free University of Bozen-Bolzano",
+      "officialWebsites": [
+        "https://www.unibz.it"
+      ],
+      "qid": "Q1231433",
+      "reviewReason": "Wikidata organization typing reviewed: university, organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "university",
+          "qid": "Q3918"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1231433"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q109673015",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Subject thesaurus for indexing local archives",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/subject-thesaurus-for-indexing-local-archives/",
+          "resourceWikidataId": "Q109673015",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "governmental service in France",
+      "name": "French Interministerial Service of Archives",
+      "officialWebsites": [
+        "https://www.francearchives.fr/"
+      ],
+      "qid": "Q3480450",
+      "reviewReason": "Wikidata type requires manual organization review: public service, patrimonial administration",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "public service",
+          "qid": "Q161837"
+        },
+        {
+          "label": "patrimonial administration",
+          "qid": "Q43371125"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q3480450"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q108458292",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Product and Service Code",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/product-and-service-code/",
+          "resourceWikidataId": "Q108458292",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "US government agency, formed 1949",
+      "name": "General Services Administration",
+      "officialWebsites": [
+        "https://www.gsa.gov/"
+      ],
+      "qid": "Q1501657",
+      "reviewReason": "Wikidata organization typing reviewed: independent agency of the United States government, central purchasing body, contracting authority",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "independent agency of the United States government",
+          "qid": "Q1752939"
+        },
+        {
+          "label": "central purchasing body",
+          "qid": "Q21192992"
+        },
+        {
+          "label": "contracting authority",
+          "qid": "Q3968796"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1501657"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q63464453",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Geologic Unit Type",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/geologic-unit-type/",
+          "resourceWikidataId": "Q63464453",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "working group of the Commission for the Management and Application of Geoscience Information",
+      "name": "Geoscience Terminology Working Group",
+      "officialWebsites": [],
+      "qid": "Q63461270",
+      "reviewReason": "Wikidata type requires manual organization review: working group",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "working group",
+          "qid": "Q27493"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q63461270"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q36578",
+          "producerRoles": [
+            "author",
+            "operator"
+          ],
+          "resourceTitle": "Integrated Authority File",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/integrated-authority-file/",
+          "resourceWikidataId": "Q36578",
+          "sourceProperties": [
+            "P50",
+            "P137"
+          ]
+        }
+      ],
+      "description": "central archival library and national bibliographic centre for the Federal Republic of Germany",
+      "name": "German National Library",
+      "officialWebsites": [
+        "https://www.dnb.de/"
+      ],
+      "qid": "Q27302",
+      "reviewReason": "Wikidata type is not an organization: bibliographic database, national library, archival library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "bibliographic database",
+          "qid": "Q1789476"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "archival library",
+          "qid": "Q25504402"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q27302"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q611299",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Art & Architecture Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/art-architecture-thesaurus/",
+          "resourceWikidataId": "Q611299",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q11409212",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Cultural Objects Name Authority",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/cultural-objects-name-authority/",
+          "resourceWikidataId": "Q11409212",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q1520117",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Getty Thesaurus of Geographic Names",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/getty-thesaurus-of-geographic-names/",
+          "resourceWikidataId": "Q1520117",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q54877414",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Getty Vocabulary Program ontology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/getty-vocabulary-program-ontology/",
+          "resourceWikidataId": "Q54877414",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q25344041",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "Thesaurus of Geographic Names LOD Dataset",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/thesaurus-of-geographic-names-lod-dataset/",
+          "resourceWikidataId": "Q25344041",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q2494649",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Union List of Artist Names",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/union-list-of-artist-names/",
+          "resourceWikidataId": "Q2494649",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "organization with archives and databases for art history and provenance research",
+      "name": "Getty Research Institute",
+      "officialWebsites": [],
+      "qid": "Q11203476",
+      "reviewReason": "Wikidata organization typing reviewed: research institute, organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q11203476"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q58425577",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Ontotext GraphDB",
+          "resourceUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/",
+          "resourceWikidataId": "Q58425577",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "Enterprise AI software company",
+      "name": "Graphwise",
+      "officialWebsites": [
+        "https://www.graphwise.ai"
+      ],
+      "qid": "Q133503461",
+      "reviewReason": "Wikidata organization typing reviewed: enterprise",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "enterprise",
+          "qid": "Q6881511"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q133503461"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106573395",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "SEKO - Finnish medium of performance thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/seko-finnish-medium-of-performance-thesaurus/",
+          "resourceWikidataId": "Q106573395",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "university library",
+      "name": "Helsinki University Library",
+      "officialWebsites": [
+        "https://www.helsinki.fi/en/helsinki-university-library",
+        "https://www.helsinki.fi/fi/helsingin-yliopiston-kirjasto",
+        "https://www.helsinki.fi/sv/helsingfors-universitets-bibliotek"
+      ],
+      "qid": "Q1382220",
+      "reviewReason": "Wikidata organization typing reviewed: academic library",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "academic library",
+          "qid": "Q856234"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1382220"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q1686799",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Apache Jena",
+          "resourceUrl": "https://openknowledgegraphs.com/software/apache-jena/",
+          "resourceWikidataId": "Q1686799",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "Research and development division of HP Inc.",
+      "name": "HP Labs",
+      "officialWebsites": [],
+      "qid": "Q266936",
+      "reviewReason": "Wikidata organization typing reviewed: research institute",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q266936"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q64784883",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "COURAGE Knowledge Graph",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/courage-knowledge-graph/",
+          "resourceWikidataId": "Q64784883",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "learned society of Hungary",
+      "name": "Hungarian Academy of Sciences",
+      "officialWebsites": [
+        "https://mta.hu",
+        "https://mta.hu/english"
+      ],
+      "qid": "Q265058",
+      "reviewReason": "Wikidata organization typing reviewed: public body, national academy, academy of sciences, organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "public body",
+          "qid": "Q1126018"
+        },
+        {
+          "label": "national academy",
+          "qid": "Q1966910"
+        },
+        {
+          "label": "academy of sciences",
+          "qid": "Q414147"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q265058"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q138858299",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "IAB Content Taxonomy",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/iab-content-taxonomy/",
+          "resourceWikidataId": "Q138858299",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "research and development organization",
+      "name": "IAB Technology Laboratory",
+      "officialWebsites": [
+        "https://iabtechlab.com"
+      ],
+      "qid": "Q135643489",
+      "reviewReason": "Wikidata organization typing reviewed: organization",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q135643489"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q100269536",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "ILO Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/ilo-thesaurus/",
+          "resourceWikidataId": "Q100269536",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        }
+      ],
+      "description": "library of the International Labour Office",
+      "name": "ILO Library",
+      "officialWebsites": [
+        "https://www.ilo.org/inform/lang--en/index.htm",
+        "https://www.ilo.org/inform/lang--fr/index.htm"
+      ],
+      "qid": "Q100269543",
+      "reviewReason": "Wikidata organization typing reviewed: special library",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "special library",
+          "qid": "Q385994"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q100269543"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q113673155",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "IEEE Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/ieee-thesaurus/",
+          "resourceWikidataId": "Q113673155",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        }
+      ],
+      "description": "American professional association for electronic engineering and electrical engineering",
+      "name": "Institute of Electrical and Electronics Engineers",
+      "officialWebsites": [
+        "https://www.ieee.org/"
+      ],
+      "qid": "Q131566",
+      "reviewReason": "Wikidata organization typing reviewed: engineering society, standards organization, trade union federation, nonprofit organization, publishing house, open-access publisher, charitable organization, professional association, learned society",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "engineering society",
+          "qid": "Q106760956"
+        },
+        {
+          "label": "standards organization",
+          "qid": "Q1328899"
+        },
+        {
+          "label": "trade union federation",
+          "qid": "Q1391517"
+        },
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        },
+        {
+          "label": "charitable organization",
+          "qid": "Q708676"
+        },
+        {
+          "label": "professional association",
+          "qid": "Q829080"
+        },
+        {
+          "label": "learned society",
+          "qid": "Q955824"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q131566"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q108928644",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "Open Science Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/open-science-thesaurus/",
+          "resourceWikidataId": "Q108928644",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        }
+      ],
+      "description": "French research Institute",
+      "name": "Institute of Scientific and Technical Information",
+      "officialWebsites": [
+        "https://www.inist.fr/"
+      ],
+      "qid": "Q3152021",
+      "reviewReason": "Wikidata organization typing reviewed: research institute",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q3152021"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110040015",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Chinese thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/chinese-thesaurus/",
+          "resourceWikidataId": "Q110040015",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "government organization in Beijing, China",
+      "name": "Institute of Scientific and Technical Information of China",
+      "officialWebsites": [
+        "https://www.istic.ac.cn/"
+      ],
+      "qid": "Q30262675",
+      "reviewReason": "Wikidata organization typing reviewed: government agency, research center",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "government agency",
+          "qid": "Q327333"
+        },
+        {
+          "label": "research center",
+          "qid": "Q7315155"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q30262675"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110305490",
+          "producerRoles": [
+            "creator",
+            "publisher",
+            "maintainer"
+          ],
+          "resourceTitle": "ICPSR Geographic Names Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icpsr-geographic-names-thesaurus/",
+          "resourceWikidataId": "Q110305490",
+          "sourceProperties": [
+            "P170",
+            "P123",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110305378",
+          "producerRoles": [
+            "creator",
+            "publisher",
+            "maintainer"
+          ],
+          "resourceTitle": "ICPSR Organization Names Authority List",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icpsr-organization-names-authority-list/",
+          "resourceWikidataId": "Q110305378",
+          "sourceProperties": [
+            "P170",
+            "P123",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110305257",
+          "producerRoles": [
+            "creator",
+            "publisher",
+            "maintainer"
+          ],
+          "resourceTitle": "ICPSR Personal Names Authority List",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icpsr-personal-names-authority-list/",
+          "resourceWikidataId": "Q110305257",
+          "sourceProperties": [
+            "P170",
+            "P123",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110298807",
+          "producerRoles": [
+            "creator",
+            "publisher",
+            "maintainer"
+          ],
+          "resourceTitle": "ICPSR Subject Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icpsr-subject-thesaurus/",
+          "resourceWikidataId": "Q110298807",
+          "sourceProperties": [
+            "P170",
+            "P123",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110305220",
+          "producerRoles": [
+            "creator",
+            "publisher",
+            "maintainer"
+          ],
+          "resourceTitle": "ICPSR Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icpsr-thesaurus/",
+          "resourceWikidataId": "Q110305220",
+          "sourceProperties": [
+            "P170",
+            "P123",
+            "P126"
+          ]
+        }
+      ],
+      "description": "organization of research institutions",
+      "name": "Inter-university Consortium for Political and Social Research",
+      "officialWebsites": [
+        "https://www.icpsr.umich.edu/sites/icpsr/home",
+        "https://www.icpsr.umich.edu/web/pages/"
+      ],
+      "qid": "Q6044782",
+      "reviewReason": "Wikidata organization typing reviewed: research consortium, research institute, international organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research consortium",
+          "qid": "Q20747412"
+        },
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        },
+        {
+          "label": "international organization",
+          "qid": "Q484652"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q6044782"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q64148880",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "International Chronostratigraphic Chart data set",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/international-chronostratigraphic-chart-data-set-q64148880/",
+          "resourceWikidataId": "Q64148880",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q63468524",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "International Chronostratigraphic Chart data set",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/international-chronostratigraphic-chart-data-set/",
+          "resourceWikidataId": "Q63468524",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "commission of the IUGS tasked with the scientific definitions of geological stratigraphy of the Earth",
+      "name": "International Commission on Stratigraphy",
+      "officialWebsites": [
+        "https://stratigraphy.org/"
+      ],
+      "qid": "Q402104",
+      "reviewReason": "Wikidata organization typing reviewed: international non-governmental organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "international non-governmental organization",
+          "qid": "Q1194093"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q402104"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q28915769",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Apache Rya",
+          "resourceUrl": "https://openknowledgegraphs.com/software/apache-rya/",
+          "resourceWikidataId": "Q28915769",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "US government research facility at the University of Maryland College Park campus",
+      "name": "Laboratory for Telecommunication Sciences",
+      "officialWebsites": [
+        "https://www.ltsnet.net/"
+      ],
+      "qid": "Q106472263",
+      "reviewReason": "Wikidata organization typing reviewed: laboratory",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "laboratory",
+          "qid": "Q483242"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q106472263"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q108679444",
+          "producerRoles": [
+            "author",
+            "owner"
+          ],
+          "resourceTitle": "Canadiana Name Authority File",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/canadiana-name-authority-file/",
+          "resourceWikidataId": "Q108679444",
+          "sourceProperties": [
+            "P50",
+            "P127"
+          ]
+        }
+      ],
+      "description": "national library and archives of Canada",
+      "name": "Library and Archives Canada",
+      "officialWebsites": [
+        "https://bibliotheque-archives.canada.ca/fra",
+        "https://www.bac-lac.gc.ca/",
+        "https://www.canada.ca/en/library-archives.html",
+        "https://www.canada.ca/fr/bibliotheque-archives.html"
+      ],
+      "qid": "Q913250",
+      "reviewReason": "Wikidata organization typing reviewed: national archives, national library, library, open-access repository",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national archives",
+          "qid": "Q2122214"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "library",
+          "qid": "Q7075"
+        },
+        {
+          "label": "open-access repository",
+          "qid": "Q7096323"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q913250"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q19696495",
+          "producerRoles": [
+            "creator",
+            "maintainer",
+            "owner"
+          ],
+          "resourceTitle": "RERO",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/rero/",
+          "resourceWikidataId": "Q19696495",
+          "sourceProperties": [
+            "P170",
+            "P126",
+            "P127"
+          ]
+        }
+      ],
+      "description": "library network of Western Switzerland",
+      "name": "Library Network of Western Switzerland",
+      "officialWebsites": [
+        "https://www.rero.ch/"
+      ],
+      "qid": "Q3456783",
+      "reviewReason": "Wikidata organization typing reviewed: library network",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "library network",
+          "qid": "Q26271642"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q3456783"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q98713532",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Library of Congress Children's Subject Headings",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/",
+          "resourceWikidataId": "Q98713532",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q620946",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Library of Congress Control Number",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-control-number/",
+          "resourceWikidataId": "Q620946",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q100903833",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Library of Congress Demographic Group Terms",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-demographic-group-terms/",
+          "resourceWikidataId": "Q100903833",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q47537953",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Library of Congress Genre/Form Terms",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-genre-form-terms/",
+          "resourceWikidataId": "Q47537953",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q97739256",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Library of Congress Medium of Performance Thesaurus for Music",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-medium-of-performance-thesaurus-for-music/",
+          "resourceWikidataId": "Q97739256",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q18912790",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Library of Congress Name Authority File",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-name-authority-file/",
+          "resourceWikidataId": "Q18912790",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q1823134",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Library of Congress Subject Headings",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/library-of-congress-subject-headings/",
+          "resourceWikidataId": "Q1823134",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q52441805",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Thesaurus for Graphic Materials",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/thesaurus-for-graphic-materials/",
+          "resourceWikidataId": "Q52441805",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "(de facto) national library of the United States of America",
+      "name": "Library of Congress",
+      "officialWebsites": [
+        "https://loc.gov/"
+      ],
+      "qid": "Q131454",
+      "reviewReason": "Wikidata organization typing reviewed: United Nations Depository Library, legislative branch agency, national library, parliamentary archives",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "United Nations Depository Library",
+          "qid": "Q11422631"
+        },
+        {
+          "label": "legislative branch agency",
+          "qid": "Q115456878"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "parliamentary archives",
+          "qid": "Q53251146"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q131454"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q56856628",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "JanusGraph",
+          "resourceUrl": "https://openknowledgegraphs.com/software/janusgraph/",
+          "resourceWikidataId": "Q56856628",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "non-profit technology consortium for development of Linux and open source",
+      "name": "Linux Foundation",
+      "officialWebsites": [
+        "https://www.linuxfoundation.org/"
+      ],
+      "qid": "Q858851",
+      "reviewReason": "Wikidata organization typing reviewed: foundation, mutual-benefit nonprofit corporation",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "foundation",
+          "qid": "Q157031"
+        },
+        {
+          "label": "mutual-benefit nonprofit corporation",
+          "qid": "Q6944143"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q858851"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105566566",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Catálogo de autoridades BNMM",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/catalogo-de-autoridades-bnmm/",
+          "resourceWikidataId": "Q105566566",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "national library of Argentina",
+      "name": "Mariano Moreno National Library",
+      "officialWebsites": [
+        "https://www.bn.gov.ar/"
+      ],
+      "qid": "Q1319177",
+      "reviewReason": "Wikidata organization typing reviewed: national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1319177"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q29364583",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "MarkLogic",
+          "resourceUrl": "https://openknowledgegraphs.com/software/marklogic/",
+          "resourceWikidataId": "Q29364583",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "American software company",
+      "name": "MarkLogic",
+      "officialWebsites": [],
+      "qid": "Q6766381",
+      "reviewReason": "Wikidata organization typing reviewed: business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q6766381"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q136023607",
+          "producerRoles": [
+            "author",
+            "publisher",
+            "operator"
+          ],
+          "resourceTitle": "SemOpenAlex",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/semopenalex/",
+          "resourceWikidataId": "Q136023607",
+          "sourceProperties": [
+            "P50",
+            "P123",
+            "P137"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q23831237",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "metaphactory",
+          "resourceUrl": "https://openknowledgegraphs.com/software/metaphactory/",
+          "resourceWikidataId": "Q23831237",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "German software company",
+      "name": "metaphacts",
+      "officialWebsites": [],
+      "qid": "Q22132500",
+      "reviewReason": "Wikidata type is not an organization: software company, business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "software company",
+          "qid": "Q1058914"
+        },
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q22132500"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q56526177",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "graphd",
+          "resourceUrl": "https://openknowledgegraphs.com/software/graphd/",
+          "resourceWikidataId": "Q56526177",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "company",
+      "name": "Metaweb",
+      "officialWebsites": [],
+      "qid": "Q1575434",
+      "reviewReason": "Wikidata organization typing reviewed: business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1575434"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q112669741",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Met Museum constituent ID",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/met-museum-constituent-id/",
+          "resourceWikidataId": "Q112669741",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106729628",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Metropolitan Museum of Art Constituent Database",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/metropolitan-museum-of-art-constituent-database/",
+          "resourceWikidataId": "Q106729628",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106727050",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Metropolitan Museum of Art Tagging Vocabulary",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/metropolitan-museum-of-art-tagging-vocabulary/",
+          "resourceWikidataId": "Q106727050",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "art museum in New York City, United States",
+      "name": "Metropolitan Museum of Art",
+      "officialWebsites": [
+        "https://www.metmuseum.org/"
+      ],
+      "qid": "Q160236",
+      "reviewReason": "Wikidata organization typing reviewed: production company, nonprofit organization, art museum, publishing house, museum",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "production company",
+          "qid": "Q11396960"
+        },
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "art museum",
+          "qid": "Q207694"
+        },
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "museum",
+          "qid": "Q33506"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q160236"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q62056662",
+          "producerRoles": [
+            "creator",
+            "maintainer",
+            "operator"
+          ],
+          "resourceTitle": "Microsoft Academic Graph",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/microsoft-academic-graph/",
+          "resourceWikidataId": "Q62056662",
+          "sourceProperties": [
+            "P170",
+            "P126",
+            "P137"
+          ]
+        }
+      ],
+      "description": "research division of Microsoft Corporation",
+      "name": "Microsoft Research",
+      "officialWebsites": [],
+      "qid": "Q1144725",
+      "reviewReason": "Wikidata type requires manual organization review: department, division",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "department",
+          "qid": "Q2366457"
+        },
+        {
+          "label": "division",
+          "qid": "Q334453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1144725"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q117022198",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Finnish Ontology for Judicial Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/",
+          "resourceWikidataId": "Q117022198",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "justice ministry of Finland",
+      "name": "Ministry of Justice",
+      "officialWebsites": [
+        "https://oikeusministerio.fi/en/frontpage",
+        "https://oikeusministerio.fi/ru/glavnaa-stranica",
+        "https://oikeusministerio.fi/se/ovdasiidu",
+        "https://oikeusministerio.fi/sv/framsida"
+      ],
+      "qid": "Q4294879",
+      "reviewReason": "Wikidata organization typing reviewed: ministry of Finland, justice ministry",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "ministry of Finland",
+          "qid": "Q10495402"
+        },
+        {
+          "label": "justice ministry",
+          "qid": "Q1413677"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4294879"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q97732428",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Tesauro Museus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/tesauro-museus/",
+          "resourceWikidataId": "Q97732428",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "museum in Brazil",
+      "name": "Museum of the City of Rio de Janeiro",
+      "officialWebsites": [],
+      "qid": "Q10333503",
+      "reviewReason": "Wikidata organization typing reviewed: museum",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "museum",
+          "qid": "Q33506"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q10333503"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106691619",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Libraries Australia Authorities",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/libraries-australia-authorities/",
+          "resourceWikidataId": "Q106691619",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "national reference library in Canberra, Australia",
+      "name": "National Library of Australia",
+      "officialWebsites": [
+        "https://www.nla.gov.au/"
+      ],
+      "qid": "Q623578",
+      "reviewReason": "Wikidata organization typing reviewed: Government body of Australia, United Nations Depository Library, history museum, art museum, national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Government body of Australia",
+          "qid": "Q110376455"
+        },
+        {
+          "label": "United Nations Depository Library",
+          "qid": "Q11422631"
+        },
+        {
+          "label": "history museum",
+          "qid": "Q16735822"
+        },
+        {
+          "label": "art museum",
+          "qid": "Q207694"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q623578"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106088265",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Authority file of the National Library of Brazil",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/authority-file-of-the-national-library-of-brazil/",
+          "resourceWikidataId": "Q106088265",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "Brazilian national library",
+      "name": "National Library of Brazil",
+      "officialWebsites": [
+        "https://gov.br/bn"
+      ],
+      "qid": "Q948882",
+      "reviewReason": "Wikidata organization typing reviewed: national library, public library, library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "public library",
+          "qid": "Q28564"
+        },
+        {
+          "label": "library",
+          "qid": "Q7075"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q948882"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q199303",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Llista d'encapçalaments de matèria en català",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/llista-d-encapcalaments-de-materia-en-catala/",
+          "resourceWikidataId": "Q199303",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "national library in Catalonia",
+      "name": "National Library of Catalonia",
+      "officialWebsites": [
+        "https://www.bnc.cat/"
+      ],
+      "qid": "Q1200925",
+      "reviewReason": "Wikidata organization typing reviewed: digital library, national library, open-access publisher",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "digital library",
+          "qid": "Q212805"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1200925"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q120198151",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Authority Catalogue of the National Library of Colombia",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/authority-catalogue-of-the-national-library-of-colombia/",
+          "resourceWikidataId": "Q120198151",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q139581797",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Q139581797",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/q139581797/",
+          "resourceWikidataId": "Q139581797",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "national library in Bogota, Colombia",
+      "name": "National Library of Colombia",
+      "officialWebsites": [
+        "https://bibliotecanacional.gov.co/"
+      ],
+      "qid": "Q2901472",
+      "reviewReason": "Wikidata organization typing reviewed: national library, library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "library",
+          "qid": "Q7075"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q2901472"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q117022198",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Finnish Ontology for Judicial Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/",
+          "resourceWikidataId": "Q117022198",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q109376231",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "Finnish Ontology for Public Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-public-administration/",
+          "resourceWikidataId": "Q109376231",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106573395",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "SEKO - Finnish medium of performance thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/seko-finnish-medium-of-performance-thesaurus/",
+          "resourceWikidataId": "Q106573395",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        }
+      ],
+      "description": "foremost research library in Finland",
+      "name": "National Library of Finland",
+      "officialWebsites": [
+        "https://www.kansalliskirjasto.fi/",
+        "https://www.kansalliskirjasto.fi/en"
+      ],
+      "qid": "Q420747",
+      "reviewReason": "Wikidata organization typing reviewed: national library, academic library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "academic library",
+          "qid": "Q856234"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q420747"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q71384796",
+          "producerRoles": [
+            "author",
+            "operator"
+          ],
+          "resourceTitle": "National Library of Luxembourg ID",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/national-library-of-luxembourg-id/",
+          "resourceWikidataId": "Q71384796",
+          "sourceProperties": [
+            "P50",
+            "P137"
+          ]
+        }
+      ],
+      "description": "national library of Luxembourg",
+      "name": "National Library of Luxembourg",
+      "officialWebsites": [],
+      "qid": "Q856651",
+      "reviewReason": "Wikidata organization typing reviewed: Luxembourg National Cultural Institutions, national library, government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Luxembourg National Cultural Institutions",
+          "qid": "Q122762732"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "government agency",
+          "qid": "Q327333"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q856651"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q107620287",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Norwegian thesaurus on genre and form",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/norwegian-thesaurus-on-genre-and-form/",
+          "resourceWikidataId": "Q107620287",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "Norwegian national library",
+      "name": "National Library of Norway",
+      "officialWebsites": [
+        "https://nasjonalbiblioteket.no",
+        "https://nb.no"
+      ],
+      "qid": "Q924551",
+      "reviewReason": "Wikidata organization typing reviewed: depository library, national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "depository library",
+          "qid": "Q16693585"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q924551"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106158560",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "OpenData BNP",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/opendata-bnp/",
+          "resourceWikidataId": "Q106158560",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "Portuguese national library, fulfilling the function of legal deposit and copyright",
+      "name": "National Library of Portugal",
+      "officialWebsites": [],
+      "qid": "Q245966",
+      "reviewReason": "Wikidata organization typing reviewed: national library, public library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "public library",
+          "qid": "Q28564"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q245966"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q128694254",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "National Library of Romania authority file",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/national-library-of-romania-authority-file/",
+          "resourceWikidataId": "Q128694254",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "national library",
+      "name": "National Library of Romania",
+      "officialWebsites": [],
+      "qid": "Q622012",
+      "reviewReason": "Wikidata organization typing reviewed: national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q622012"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q110923611",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Authority Author Files at Russian National Library",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/authority-author-files-at-russian-national-library/",
+          "resourceWikidataId": "Q110923611",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "one of the national libraries in Saint Petersburg, Russia",
+      "name": "National Library of Russia",
+      "officialWebsites": [],
+      "qid": "Q267566",
+      "reviewReason": "Wikidata organization typing reviewed: archives, national library, public library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "archives",
+          "qid": "Q166118"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "public library",
+          "qid": "Q28564"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q267566"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q135216794",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Database of Czech Librarians",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/database-of-czech-librarians/",
+          "resourceWikidataId": "Q135216794",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106982540",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Personal Authority Wikibase of the Czech Republic",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/personal-authority-wikibase-of-the-czech-republic/",
+          "resourceWikidataId": "Q106982540",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q133454630",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Wikibase TDKIV",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/wikibase-tdkiv/",
+          "resourceWikidataId": "Q133454630",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "central library of the Czech Republic",
+      "name": "National Library of the Czech Republic",
+      "officialWebsites": [
+        "https://nkp.cz"
+      ],
+      "qid": "Q1967876",
+      "reviewReason": "Wikidata organization typing reviewed: Czech research institution, university library, national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Czech research institution",
+          "qid": "Q108935461"
+        },
+        {
+          "label": "university library",
+          "qid": "Q1622062"
+        },
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1967876"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q126919021",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "authority file of the National Library of Uruguay",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/authority-file-of-the-national-library-of-uruguay/",
+          "resourceWikidataId": "Q126919021",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "national library of Uruguay",
+      "name": "National Library of Uruguay",
+      "officialWebsites": [
+        "https://www.bibna.gub.uy/"
+      ],
+      "qid": "Q3308862",
+      "reviewReason": "Wikidata organization typing reviewed: national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q3308862"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q107923517",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "NEKTÁR",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/nektar/",
+          "resourceWikidataId": "Q107923517",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "Hungarian national library",
+      "name": "National Széchényi Library",
+      "officialWebsites": [],
+      "qid": "Q1063819",
+      "reviewReason": "Wikidata organization typing reviewed: national library, library building",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "library building",
+          "qid": "Q856584"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1063819"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q59220789",
+          "producerRoles": [
+            "author",
+            "publisher"
+          ],
+          "resourceTitle": "NWCG Glossary of Wildland Fire",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/nwcg-glossary-of-wildland-fire/",
+          "resourceWikidataId": "Q59220789",
+          "sourceProperties": [
+            "P50",
+            "P123"
+          ]
+        }
+      ],
+      "description": "organization in the United States responsible for national interagency wildland fire operations",
+      "name": "National Wildfire Coordinating Group",
+      "officialWebsites": [],
+      "qid": "Q6979416",
+      "reviewReason": "Wikidata organization typing reviewed: consortium, government organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "consortium",
+          "qid": "Q15783838"
+        },
+        {
+          "label": "government organization",
+          "qid": "Q2659904"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q6979416"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q130362252",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "Culture Knowledge Graph",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/culture-knowledge-graph/",
+          "resourceWikidataId": "Q130362252",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": "NFDI consortium for research data on material and immaterial cultural heritage",
+      "name": "NFDI4Culture",
+      "officialWebsites": [
+        "https://nfdi4culture.de"
+      ],
+      "qid": "Q98276929",
+      "reviewReason": "Wikidata organization typing reviewed: science project, disciplinary research data infrastructure, accepted NFDI consortium",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "science project",
+          "qid": "Q1298668"
+        },
+        {
+          "label": "disciplinary research data infrastructure",
+          "qid": "Q96678469"
+        },
+        {
+          "label": "accepted NFDI consortium",
+          "qid": "Q98270496"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q98276929"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140909448",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "Financial Industry Business Ontology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/financial-industry-business-ontology/",
+          "resourceWikidataId": "Q140909448",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": "technology standards consortium",
+      "name": "Object Management Group",
+      "officialWebsites": [
+        "https://www.omg.org/"
+      ],
+      "qid": "Q252733",
+      "reviewReason": "Wikidata organization typing reviewed: standards organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "standards organization",
+          "qid": "Q1328899"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q252733"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q56861590",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "ontop",
+          "resourceUrl": "https://openknowledgegraphs.com/software/ontop/",
+          "resourceWikidataId": "Q56861590",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q141112435",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Ontopic Suite",
+          "resourceUrl": "https://openknowledgegraphs.com/software/ontopic-suite/",
+          "resourceWikidataId": "Q141112435",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "Software company focussing on Virtual Knowledge Graphs",
+      "name": "Ontopic",
+      "officialWebsites": [
+        "https://ontopic.ai"
+      ],
+      "qid": "Q115740336",
+      "reviewReason": "Wikidata type is not an organization: software company, enterprise",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "software company",
+          "qid": "Q1058914"
+        },
+        {
+          "label": "enterprise",
+          "qid": "Q6881511"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q115740336"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q54877414",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Getty Vocabulary Program ontology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/getty-vocabulary-program-ontology/",
+          "resourceWikidataId": "Q54877414",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q58425577",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Ontotext GraphDB",
+          "resourceUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/",
+          "resourceWikidataId": "Q58425577",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "software company",
+      "name": "Ontotext",
+      "officialWebsites": [
+        "https://www.ontotext.com/"
+      ],
+      "qid": "Q7095072",
+      "reviewReason": "Wikidata type is not an organization: software company, company",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "software company",
+          "qid": "Q1058914"
+        },
+        {
+          "label": "company",
+          "qid": "Q783794"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q7095072"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q7935239",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Virtuoso Universal Server",
+          "resourceUrl": "https://openknowledgegraphs.com/software/virtuoso-universal-server/",
+          "resourceWikidataId": "Q7935239",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "software company based in Burlingtion Massachusetts",
+      "name": "OpenLink Software",
+      "officialWebsites": [
+        "https://www.openlinksw.com/"
+      ],
+      "qid": "Q5848375",
+      "reviewReason": "Wikidata organization typing reviewed: business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q5848375"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q109376231",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Finnish Ontology for Public Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-public-administration/",
+          "resourceWikidataId": "Q109376231",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "Ministry supporting the Finnish Prime Minister and Government",
+      "name": "Prime Minister's Office",
+      "officialWebsites": [
+        "https://vnk.fi/",
+        "https://vnk.fi/en/frontpage",
+        "https://vnk.fi/sv/forstasidan"
+      ],
+      "qid": "Q10677814",
+      "reviewReason": "Wikidata organization typing reviewed: ministry of Finland, ministry",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "ministry of Finland",
+          "qid": "Q10495402"
+        },
+        {
+          "label": "ministry",
+          "qid": "Q192350"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q10677814"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q905695",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "UniProt",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/uniprot/",
+          "resourceWikidataId": "Q905695",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q905695",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "UniProt",
+          "resourceUrl": "https://openknowledgegraphs.com/software/uniprot/",
+          "resourceWikidataId": "Q905695",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        }
+      ],
+      "description": "database and bioinformatics resource",
+      "name": "Protein Information Resource",
+      "officialWebsites": [
+        "https://proteininformationresource.org/"
+      ],
+      "qid": "Q1256927",
+      "reviewReason": "Wikidata type is not an organization: nonprofit organization, biological database",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "biological database",
+          "qid": "Q4117139"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1256927"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q111585368",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "PLOS Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/plos-thesaurus/",
+          "resourceWikidataId": "Q111585368",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "nonprofit open-access publisher",
+      "name": "Public Library of Science",
+      "officialWebsites": [
+        "https://plos.org/"
+      ],
+      "qid": "Q233358",
+      "reviewReason": "Wikidata type is not an organization: nonprofit organization, website, open-access publisher, academic publisher",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "website",
+          "qid": "Q35127"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        },
+        {
+          "label": "academic publisher",
+          "qid": "Q96888669"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q233358"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q141014591",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "CELLAR",
+          "resourceUrl": "https://openknowledgegraphs.com/software/cellar/",
+          "resourceWikidataId": "Q141014591",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "academic publisher",
+      "name": "Publications Office of the European Union",
+      "officialWebsites": [
+        "https://op.europa.eu/",
+        "https://publications.europa.eu/"
+      ],
+      "qid": "Q480222",
+      "reviewReason": "Wikidata organization typing reviewed: service department of the European Commission, Interinstitutional Service of the European Union, open-access publisher",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "service department of the European Commission",
+          "qid": "Q107671432"
+        },
+        {
+          "label": "Interinstitutional Service of the European Union",
+          "qid": "Q112842785"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q480222"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q107620287",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Norwegian thesaurus on genre and form",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/norwegian-thesaurus-on-genre-and-form/",
+          "resourceWikidataId": "Q107620287",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": null,
+      "name": "Q107620349",
+      "officialWebsites": [
+        "https://www.bokbasen.no/"
+      ],
+      "qid": "Q107620349",
+      "reviewReason": "Wikidata organization typing reviewed: company",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "company",
+          "qid": "Q783794"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q107620349"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q502480",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Logical Observation Identifiers Names and Codes",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/logical-observation-identifiers-names-and-codes/",
+          "resourceWikidataId": "Q502480",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": null,
+      "name": "Regenstrief Institute",
+      "officialWebsites": [
+        "https://www.regenstrief.org/"
+      ],
+      "qid": "Q7308063",
+      "reviewReason": "Wikidata organization typing reviewed: nonprofit organization, institute",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "institute",
+          "qid": "Q1664720"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q7308063"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140876601",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "ROBOKOP",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/robokop/",
+          "resourceWikidataId": "Q140876601",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": null,
+      "name": "Renaissance Computing Institute",
+      "officialWebsites": [],
+      "qid": "Q7312413",
+      "reviewReason": "Wikidata organization typing reviewed: research institute",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q7312413"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q124795416",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "RERO+",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/rero-q124795416/",
+          "resourceWikidataId": "Q124795416",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "Swiss competence centre for libraries",
+      "name": "RERO+",
+      "officialWebsites": [
+        "https://www.rero.ch/"
+      ],
+      "qid": "Q109251004",
+      "reviewReason": "Wikidata organization typing reviewed: organization",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q109251004"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q130565902",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Rhein-Kreis Neuss Street Directory",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/rhein-kreis-neuss-street-directory/",
+          "resourceWikidataId": "Q130565902",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "district in North Rhine-Westphalia, Germany",
+      "name": "Rhein-Kreis Neuss",
+      "officialWebsites": [
+        "https://www.rhein-kreis-neuss.de/"
+      ],
+      "qid": "Q6253",
+      "reviewReason": "Wikidata type requires manual organization review: rural district of North Rhine-Westphalia",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "rural district of North Rhine-Westphalia",
+          "qid": "Q20738811"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q6253"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q136724142",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "RIMAnt Multilingual Instrument Nomenclature",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/rimant-multilingual-instrument-nomenclature/",
+          "resourceWikidataId": "Q136724142",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "research project that aims to list, document, study, and catalog all the archaeological remains of musical instruments from Egyptian and Greco-Roman antiquity",
+      "name": "RIMAnt (Repertorium Instrumentorum Musicorum Antiquorum)",
+      "officialWebsites": [
+        "https://rimant.hypotheses.org/"
+      ],
+      "qid": "Q136716648",
+      "reviewReason": "Wikidata type requires manual organization review: research group, science project, research",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "research group",
+          "qid": "Q1241025"
+        },
+        {
+          "label": "science project",
+          "qid": "Q1298668"
+        },
+        {
+          "label": "research",
+          "qid": "Q42240"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q136716648"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q107835800",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Thesaurus of archaeological monument types",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/thesaurus-of-archaeological-monument-types-q107835800/",
+          "resourceWikidataId": "Q107835800",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q104963894",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Thesaurus of Archaeological Monument Types",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/thesaurus-of-archaeological-monument-types/",
+          "resourceWikidataId": "Q104963894",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "U.K. Government advisory body",
+      "name": "Royal Commission on the Historical Monuments of England",
+      "officialWebsites": [],
+      "qid": "Q7374044",
+      "reviewReason": "Wikidata organization typing reviewed: government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "government agency",
+          "qid": "Q327333"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q7374044"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q130899034",
+          "producerRoles": [
+            "creator",
+            "publisher"
+          ],
+          "resourceTitle": "Sage Social Science Thesaurus",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/sage-social-science-thesaurus/",
+          "resourceWikidataId": "Q130899034",
+          "sourceProperties": [
+            "P170",
+            "P123"
+          ]
+        }
+      ],
+      "description": "U.S. scientific publisher",
+      "name": "Sage Publishing",
+      "officialWebsites": [
+        "https://us.sagepub.com/en-us/nam/home",
+        "https://www.linkedin.com/company/sagepublishing/",
+        "https://www.sagepub.com"
+      ],
+      "qid": "Q251266",
+      "reviewReason": "Wikidata organization typing reviewed: book publisher, open-access publisher, academic publisher",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "book publisher",
+          "qid": "Q1320047"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        },
+        {
+          "label": "academic publisher",
+          "qid": "Q96888669"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q251266"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q117022198",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Finnish Ontology for Judicial Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-judicial-administration/",
+          "resourceWikidataId": "Q117022198",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q109376231",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Finnish Ontology for Public Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-public-administration/",
+          "resourceWikidataId": "Q109376231",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "Aalto University, School of Science, Department of Computer Science, Finland",
+      "name": "Semantic Computing Research Group",
+      "officialWebsites": [],
+      "qid": "Q28942361",
+      "reviewReason": "Wikidata organization typing reviewed: university research group",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "university research group",
+          "qid": "Q28863779"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q28942361"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q28136436",
+          "producerRoles": [
+            "developer",
+            "owner"
+          ],
+          "resourceTitle": "PoolParty Semantic Suite",
+          "resourceUrl": "https://openknowledgegraphs.com/software/poolparty-semantic-suite/",
+          "resourceWikidataId": "Q28136436",
+          "sourceProperties": [
+            "P178",
+            "P127"
+          ]
+        }
+      ],
+      "description": "company in Vienna, Austria",
+      "name": "Semantic Web Company",
+      "officialWebsites": [],
+      "qid": "Q30291990",
+      "reviewReason": "Wikidata organization typing reviewed: business",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "business",
+          "qid": "Q4830453"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q30291990"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140764069",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Traqula",
+          "resourceUrl": "https://openknowledgegraphs.com/software/traqula/",
+          "resourceWikidataId": "Q140764069",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": null,
+      "name": "SGF: SPARQL Updates over Decentralized Knowledge Graphs without Access Path Dependencies",
+      "officialWebsites": [],
+      "qid": "Q137242347",
+      "reviewReason": "Wikidata type requires manual organization review: chapter",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "chapter",
+          "qid": "Q1980247"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q137242347"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q905695",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "UniProt",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/uniprot/",
+          "resourceWikidataId": "Q905695",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q905695",
+          "producerRoles": [
+            "creator",
+            "operator"
+          ],
+          "resourceTitle": "UniProt",
+          "resourceUrl": "https://openknowledgegraphs.com/software/uniprot/",
+          "resourceWikidataId": "Q905695",
+          "sourceProperties": [
+            "P170",
+            "P137"
+          ]
+        }
+      ],
+      "description": "scientific institute",
+      "name": "SIB Swiss Institute of Bioinformatics",
+      "officialWebsites": [
+        "https://www.sib.swiss/"
+      ],
+      "qid": "Q3152521",
+      "reviewReason": "Wikidata organization typing reviewed: ELIXIR Node, nonprofit organization, research institute, research center",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "ELIXIR Node",
+          "qid": "Q109490328"
+        },
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "research institute",
+          "qid": "Q31855"
+        },
+        {
+          "label": "research center",
+          "qid": "Q7315155"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q3152521"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q107922512",
+          "producerRoles": [
+            "creator",
+            "maintainer",
+            "owner"
+          ],
+          "resourceTitle": "SNK authority file",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/snk-authority-file/",
+          "resourceWikidataId": "Q107922512",
+          "sourceProperties": [
+            "P170",
+            "P126",
+            "P127"
+          ]
+        }
+      ],
+      "description": "national library of Slovakia",
+      "name": "Slovak National Library",
+      "officialWebsites": [
+        "https://snk.sk/en",
+        "https://snk.sk/sk"
+      ],
+      "qid": "Q620899",
+      "reviewReason": "Wikidata organization typing reviewed: national library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q620899"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q19186351",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Smithsonian American Art Museum person/institution ID",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/smithsonian-american-art-museum-person-institution-id/",
+          "resourceWikidataId": "Q19186351",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "fine arts museum in Washington, D.C., a division of the Smithsonian Institution",
+      "name": "Smithsonian American Art Museum",
+      "officialWebsites": [],
+      "qid": "Q1192305",
+      "reviewReason": "Wikidata type is not an organization: art museum, database",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "art museum",
+          "qid": "Q3196771"
+        },
+        {
+          "label": "database",
+          "qid": "Q8513"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q1192305"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q132649587",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Excel 2 RDF",
+          "resourceUrl": "https://openknowledgegraphs.com/software/excel-2-rdf/",
+          "resourceWikidataId": "Q132649587",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q132649561",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "SHACL Play!",
+          "resourceUrl": "https://openknowledgegraphs.com/software/shacl-play/",
+          "resourceWikidataId": "Q132649561",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q132649592",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "SKOS Play!",
+          "resourceUrl": "https://openknowledgegraphs.com/software/skos-play/",
+          "resourceWikidataId": "Q132649592",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q132649560",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Sparnatural",
+          "resourceUrl": "https://openknowledgegraphs.com/software/sparnatural/",
+          "resourceWikidataId": "Q132649560",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "SPARNA is a French IT company, specialized in semantic web, knowledge organization, semantic annotation, resource indexing, open data use & reuse.",
+      "name": "Sparna",
+      "officialWebsites": [],
+      "qid": "Q117319690",
+      "reviewReason": "Wikidata organization typing reviewed: organization",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q117319690"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q2066865",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Protégé",
+          "resourceUrl": "https://openknowledgegraphs.com/software/protege/",
+          "resourceWikidataId": "Q2066865",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q50308925",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "WebProtégé",
+          "resourceUrl": "https://openknowledgegraphs.com/software/webprotege/",
+          "resourceWikidataId": "Q50308925",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "medical school of Stanford University in California",
+      "name": "Stanford University School of Medicine",
+      "officialWebsites": [
+        "https://med.stanford.edu/"
+      ],
+      "qid": "Q4115969",
+      "reviewReason": "Wikidata organization typing reviewed: medical school",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "medical school",
+          "qid": "Q494230"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q4115969"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q109376231",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Finnish Ontology for Public Administration",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/finnish-ontology-for-public-administration/",
+          "resourceWikidataId": "Q109376231",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "Finnish government agency",
+      "name": "State Treasury",
+      "officialWebsites": [
+        "https://www.statskontoret.fi/",
+        "https://www.valtiokonttori.fi/"
+      ],
+      "qid": "Q11900270",
+      "reviewReason": "Wikidata organization typing reviewed: ämbetsverk, Finnish government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "ämbetsverk",
+          "qid": "Q10444915"
+        },
+        {
+          "label": "Finnish government agency",
+          "qid": "Q68312351"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q11900270"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q124620705",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Glossary of Procurement Terms",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/glossary-of-procurement-terms/",
+          "resourceWikidataId": "Q124620705",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "Swedish administrative authority",
+      "name": "Swedish Competition Authority",
+      "officialWebsites": [
+        "https://www.konkurrensverket.se"
+      ],
+      "qid": "Q15209927",
+      "reviewReason": "Wikidata organization typing reviewed: Swedish government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Swedish government agency",
+          "qid": "Q68295960"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q15209927"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q64808948",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Swedish Basic Vocabulary for Interpreters",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/swedish-basic-vocabulary-for-interpreters/",
+          "resourceWikidataId": "Q64808948",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "Swedish government agency",
+      "name": "Swedish Institute for Language and Folklore",
+      "officialWebsites": [
+        "https://www.isof.se/",
+        "https://www.sprakochfolkminnen.se"
+      ],
+      "qid": "Q7654721",
+      "reviewReason": "Wikidata organization typing reviewed: Swedish government agency",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Swedish government agency",
+          "qid": "Q68295960"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q7654721"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140432020",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Monarch Knowledge Graph",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/monarch-knowledge-graph/",
+          "resourceWikidataId": "Q140432020",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "biological database and online resource for integrating genotype and phenotype data",
+      "name": "The Monarch Initiative",
+      "officialWebsites": [
+        "https://monarchinitiative.org"
+      ],
+      "qid": "Q34645736",
+      "reviewReason": "Wikidata type is not an organization: biological database",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "biological database",
+          "qid": "Q4117139"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q34645736"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q104843592",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Computer Science Ontology",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/computer-science-ontology/",
+          "resourceWikidataId": "Q104843592",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "university in Milton Keynes, UK",
+      "name": "The Open University",
+      "officialWebsites": [],
+      "qid": "Q2413375",
+      "reviewReason": "Wikidata organization typing reviewed: higher education institution, organization, open-access publisher, educational organization, public university",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "higher education institution",
+          "qid": "Q38723"
+        },
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        },
+        {
+          "label": "educational organization",
+          "qid": "Q5341295"
+        },
+        {
+          "label": "public university",
+          "qid": "Q875538"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q2413375"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q116847674",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "qEndpoint",
+          "resourceUrl": "https://openknowledgegraphs.com/software/qendpoint/",
+          "resourceWikidataId": "Q116847674",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "Company specialised in Question Answering technologies",
+      "name": "The QA Company",
+      "officialWebsites": [
+        "https://the-qa-company.com"
+      ],
+      "qid": "Q100501108",
+      "reviewReason": "Wikidata organization typing reviewed: organization",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "organization",
+          "qid": "Q43229"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q100501108"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q114893193",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Yasgui",
+          "resourceUrl": "https://openknowledgegraphs.com/software/yasgui/",
+          "resourceWikidataId": "Q114893193",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "semantic web company",
+      "name": "Triply",
+      "officialWebsites": [
+        "https://triply.cc/"
+      ],
+      "qid": "Q110891877",
+      "reviewReason": "Wikidata organization typing reviewed: company",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "company",
+          "qid": "Q783794"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q110891877"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q139694513",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Glossary of Terms for the Standardization of Geographical Names",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/glossary-of-terms-for-the-standardization-of-geographical-names/",
+          "resourceWikidataId": "Q139694513",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "expert group on toponyms",
+      "name": "United Nations Group of Experts on Geographical Names",
+      "officialWebsites": [
+        "https://unstats.un.org/unsd/ungegn/"
+      ],
+      "qid": "Q838685",
+      "reviewReason": "Wikidata organization typing reviewed: international organization, expert group",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "international organization",
+          "qid": "Q484652"
+        },
+        {
+          "label": "expert group",
+          "qid": "Q59140288"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q838685"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q199897",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Medical Subject Headings",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/medical-subject-headings/",
+          "resourceWikidataId": "Q199897",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "medical library operated by the U.S. federal government",
+      "name": "United States National Library of Medicine",
+      "officialWebsites": [
+        "https://www.nlm.nih.gov/"
+      ],
+      "qid": "Q611833",
+      "reviewReason": "Wikidata organization typing reviewed: national library, medical library",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "national library",
+          "qid": "Q22806"
+        },
+        {
+          "label": "medical library",
+          "qid": "Q6150991"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q611833"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q59422377",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "SANSA",
+          "resourceUrl": "https://openknowledgegraphs.com/software/sansa/",
+          "resourceWikidataId": "Q59422377",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "public research university located in Bonn, Germany",
+      "name": "University of Bonn",
+      "officialWebsites": [
+        "https://www.uni-bonn.de",
+        "https://www.uni-bonn.de/en"
+      ],
+      "qid": "Q152171",
+      "reviewReason": "Wikidata organization typing reviewed: University of Excellence, comprehensive university, publishing house, public research university, local Internet registry, public university",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "University of Excellence",
+          "qid": "Q115427560"
+        },
+        {
+          "label": "comprehensive university",
+          "qid": "Q1767829"
+        },
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "public research university",
+          "qid": "Q62078547"
+        },
+        {
+          "label": "local Internet registry",
+          "qid": "Q641347"
+        },
+        {
+          "label": "public university",
+          "qid": "Q875538"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q152171"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q9371786",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Pellet",
+          "resourceUrl": "https://openknowledgegraphs.com/software/pellet/",
+          "resourceWikidataId": "Q9371786",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "public research university in the city of College Park in Prince George's County, Maryland, USA",
+      "name": "University of Maryland",
+      "officialWebsites": [
+        "https://umd.edu"
+      ],
+      "qid": "Q503415",
+      "reviewReason": "Wikidata organization typing reviewed: publishing house, public educational institution of the United States, land-grant university, public research university",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "publishing house",
+          "qid": "Q2085381"
+        },
+        {
+          "label": "public educational institution of the United States",
+          "qid": "Q23002039"
+        },
+        {
+          "label": "land-grant university",
+          "qid": "Q615150"
+        },
+        {
+          "label": "public research university",
+          "qid": "Q62078547"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q503415"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140876601",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "ROBOKOP",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/robokop/",
+          "resourceWikidataId": "Q140876601",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": "public research university in Chapel Hill, North Carolina, United States",
+      "name": "University of North Carolina at Chapel Hill",
+      "officialWebsites": [
+        "https://unc.edu"
+      ],
+      "qid": "Q192334",
+      "reviewReason": "Wikidata organization typing reviewed: public educational institution of the United States, public research university",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-academic-research",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "public educational institution of the United States",
+          "qid": "Q23002039"
+        },
+        {
+          "label": "public research university",
+          "qid": "Q62078547"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q192334"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q127257982",
+          "producerRoles": [
+            "creator",
+            "maintainer"
+          ],
+          "resourceTitle": "Authority file of the Valencian Library",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/authority-file-of-the-valencian-library/",
+          "resourceWikidataId": "Q127257982",
+          "sourceProperties": [
+            "P170",
+            "P126"
+          ]
+        }
+      ],
+      "description": "library in Valencia, Spain",
+      "name": "Valencian Library",
+      "officialWebsites": [],
+      "qid": "Q8247561",
+      "reviewReason": "Wikidata organization typing reviewed: main library, library",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "main library",
+          "qid": "Q12317349"
+        },
+        {
+          "label": "library",
+          "qid": "Q7075"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q8247561"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q2013",
+          "producerRoles": [
+            "creator",
+            "author"
+          ],
+          "resourceTitle": "Wikidata",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/wikidata/",
+          "resourceWikidataId": "Q2013",
+          "sourceProperties": [
+            "P170",
+            "P50"
+          ]
+        }
+      ],
+      "description": "the set of people who work on Wikidata",
+      "name": "Wikidata editors",
+      "officialWebsites": [],
+      "qid": "Q28859214",
+      "reviewReason": "Wikidata type is not an organization: group of humans",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "rejected",
+      "wikidataTypes": [
+        {
+          "label": "group of humans",
+          "qid": "Q16334295"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q28859214"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q2013",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "Wikidata",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/wikidata/",
+          "resourceWikidataId": "Q2013",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "community of participants in Wikimedia movement",
+      "name": "Wikimedia community",
+      "officialWebsites": [
+        "https://meta.wikimedia.org"
+      ],
+      "qid": "Q56035565",
+      "reviewReason": "Wikidata organization typing reviewed: community, virtual community",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-informal-open-source-community",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "community",
+          "qid": "Q177634"
+        },
+        {
+          "label": "virtual community",
+          "qid": "Q210980"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q56035565"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q106982540",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Personal Authority Wikibase of the Czech Republic",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/personal-authority-wikibase-of-the-czech-republic/",
+          "resourceWikidataId": "Q106982540",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "Wikimedia movement chapter in Czech Republic",
+      "name": "Wikimedia Czech Republic",
+      "officialWebsites": [
+        "https://www.wikimedia.cz/"
+      ],
+      "qid": "Q15735556",
+      "reviewReason": "Wikidata organization typing reviewed: Wikimedia chapter, nonprofit organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-nonprofit-foundation",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "Wikimedia chapter",
+          "qid": "Q15924535"
+        },
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q15735556"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q2013",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "Wikidata",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/wikidata/",
+          "resourceWikidataId": "Q2013",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q16354758",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Wikibase",
+          "resourceUrl": "https://openknowledgegraphs.com/software/wikibase/",
+          "resourceWikidataId": "Q16354758",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "Wikimedia chapter in Germany",
+      "name": "Wikimedia Deutschland",
+      "officialWebsites": [
+        "https://www.wikimedia.de"
+      ],
+      "qid": "Q8288",
+      "reviewReason": "Wikidata organization typing reviewed: charitable corporation, Wikimedia chapter, nonprofit organization, non-governmental organization",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "charitable corporation",
+          "qid": "Q113805953"
+        },
+        {
+          "label": "Wikimedia chapter",
+          "qid": "Q15924535"
+        },
+        {
+          "label": "nonprofit organization",
+          "qid": "Q163740"
+        },
+        {
+          "label": "non-governmental organization",
+          "qid": "Q79913"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q8288"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q22975461",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Autores.uy",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/autores-uy/",
+          "resourceWikidataId": "Q22975461",
+          "sourceProperties": [
+            "P170"
+          ]
+        }
+      ],
+      "description": "former Wikimedia affiliate",
+      "name": "Wikimedia Uruguay‎",
+      "officialWebsites": [],
+      "qid": "Q18559903",
+      "reviewReason": "Wikidata type requires manual organization review: Wikimedia chapter",
+      "suggestedKind": null,
+      "suggestedReviewStatus": "unresolved",
+      "wikidataTypes": [
+        {
+          "label": "Wikimedia chapter",
+          "qid": "Q15924535"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q18559903"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q45127",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "ICD-10",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icd-10/",
+          "resourceWikidataId": "Q45127",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q55695727",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "ICD-11",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/icd-11/",
+          "resourceWikidataId": "Q55695727",
+          "sourceProperties": [
+            "P50"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q917426",
+          "producerRoles": [
+            "author"
+          ],
+          "resourceTitle": "International Classification of Functioning, Disability and Health",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/international-classification-of-functioning-disability-and-health/",
+          "resourceWikidataId": "Q917426",
+          "sourceProperties": [
+            "P50"
+          ]
+        }
+      ],
+      "description": "United Nations agency concerned with international public health",
+      "name": "World Health Organization",
+      "officialWebsites": [
+        "https://www.who.int",
+        "https://www.who.int/ar",
+        "https://www.who.int/es",
+        "https://www.who.int/fr",
+        "https://www.who.int/pt",
+        "https://www.who.int/ru",
+        "https://www.who.int/zh"
+      ],
+      "qid": "Q7817",
+      "reviewReason": "Wikidata organization typing reviewed: specialized agency of the United Nations, open-access publisher, international organization, academic publisher",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-public-intergovernmental",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "specialized agency of the United Nations",
+          "qid": "Q15925165"
+        },
+        {
+          "label": "open-access publisher",
+          "qid": "Q45400320"
+        },
+        {
+          "label": "international organization",
+          "qid": "Q484652"
+        },
+        {
+          "label": "academic publisher",
+          "qid": "Q96888669"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q7817"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105817820",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Annotea Annotation Schema",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/annotea-annotation-schema/",
+          "resourceWikidataId": "Q105817820",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q105817776",
+          "producerRoles": [
+            "creator"
+          ],
+          "resourceTitle": "Annotea Bookmark Schema",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/annotea-bookmark-schema/",
+          "resourceWikidataId": "Q105817776",
+          "sourceProperties": [
+            "P170"
+          ]
+        },
+        {
+          "catalog": "ontologies",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q54872",
+          "producerRoles": [
+            "creator",
+            "developer"
+          ],
+          "resourceTitle": "Resource Description Framework",
+          "resourceUrl": "https://openknowledgegraphs.com/resource/resource-description-framework/",
+          "resourceWikidataId": "Q54872",
+          "sourceProperties": [
+            "P170",
+            "P178"
+          ]
+        }
+      ],
+      "description": "main international standards organization for the World Wide Web",
+      "name": "World Wide Web Consortium",
+      "officialWebsites": [
+        "https://w3.org/",
+        "https://www.chinaw3c.org/",
+        "https://www.w3.org/",
+        "https://www.w3.org/ja/",
+        "https://www.w3.org/zh-hans/",
+        "https://www.w3c.fr/"
+      ],
+      "qid": "Q37033",
+      "reviewReason": "Wikidata organization typing reviewed: standards organization, voluntary association, academic publisher",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-consortium-association",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "standards organization",
+          "qid": "Q1328899"
+        },
+        {
+          "label": "voluntary association",
+          "qid": "Q48204"
+        },
+        {
+          "label": "academic publisher",
+          "qid": "Q96888669"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q37033"
+    },
+    {
+      "catalogRelationships": [
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140676343",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "rdf-validate-shacl",
+          "resourceUrl": "https://openknowledgegraphs.com/software/rdf-validate-shacl/",
+          "resourceWikidataId": "Q140676343",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q140676266",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "SHACL Playground",
+          "resourceUrl": "https://openknowledgegraphs.com/software/shacl-playground/",
+          "resourceWikidataId": "Q140676266",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q114893193",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Yasgui",
+          "resourceUrl": "https://openknowledgegraphs.com/software/yasgui/",
+          "resourceWikidataId": "Q114893193",
+          "sourceProperties": [
+            "P178"
+          ]
+        },
+        {
+          "catalog": "software",
+          "evidenceUrl": "https://www.wikidata.org/wiki/Q141112434",
+          "producerRoles": [
+            "developer"
+          ],
+          "resourceTitle": "Zazuko Trifid",
+          "resourceUrl": "https://openknowledgegraphs.com/software/zazuko-trifid/",
+          "resourceWikidataId": "Q141112434",
+          "sourceProperties": [
+            "P178"
+          ]
+        }
+      ],
+      "description": "IT-Company providing products and services for Knowledge Graphs.",
+      "name": "Zazuko",
+      "officialWebsites": [
+        "https://zazuko.com"
+      ],
+      "qid": "Q93230157",
+      "reviewReason": "Wikidata organization typing reviewed: enterprise",
+      "suggestedKind": "https://openknowledgegraphs.com/jobs/organization-vocabulary/kind-commercial-enterprise",
+      "suggestedReviewStatus": "evidence-reviewed",
+      "wikidataTypes": [
+        {
+          "label": "enterprise",
+          "qid": "Q6881511"
+        }
+      ],
+      "wikidataUrl": "https://www.wikidata.org/wiki/Q93230157"
+    }
+  ],
+  "catalogCounts": {
+    "apparentOrganizationCandidates": 129,
+    "catalogRecords": 3324,
+    "catalogRelationships": 185,
+    "linkedCatalogRecords": 157
+  },
+  "generatedAt": "2026-08-26T17:02:48Z",
+  "schemaVersion": 1,
+  "verifiedOn": "2026-08-26"
+}

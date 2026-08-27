@@ -1,0 +1,44 @@
+{
+  "artifact": {
+    "archiveName": "first-party-diagnostics-33034495838 (1).zip",
+    "artifactId": "9631740022",
+    "githubActionsRunId": "33034495838",
+    "githubActionsRunNumber": 183,
+    "sha256": "2dbf4332812c64fa1dd03738834603cbea06ad61f62f7c75f28e6e5be2c0adec"
+  },
+  "expected": {
+    "classificationCounts": {
+      "not_match": 19,
+      "qualified": 13,
+      "review": 50
+    },
+    "recordCount": 82,
+    "uniqueRecordCount": 82
+  },
+  "files": {
+    "raw/first-party-eccenca.json": "0f1b2b360cb784d4eda9ea96e1f09a149c2c3156c5ff5269535513e058bf8523",
+    "raw/first-party-enterprise-knowledge.json": "98fdc0b18b5e98e682fa7f301583562953f2857ce5e76e9b8c8fae78faf3a46b",
+    "raw/first-party-graphwise.json": "9d3bab5f87272991af20e75c806706b846f6f0ce74e5e9daaa506848ed22d4e3",
+    "raw/first-party-metaphacts.json": "655f681e1c372ba9b087bde4cad9667b52c8d2d99fb624cb9fdafecf867a6ba8",
+    "raw/first-party-neo4j.json": "ec3715f3106c89213b13820d61adc4d8c78d610e631e4ca4b4d40eada0e665a6",
+    "raw/first-party-relationalai.json": "700986c40e0de43557196a03338882d42c7da599e0a084153503282ffd5eccef",
+    "raw/first-party-stardog.json": "a19641748f7012b8713e25f14a82f37a762628741403141db1910d933e96f233",
+    "raw/first-party-tigergraph.json": "185c34ca1e3f6e074da79a575d8c555fe0162c0734dd4233cd5eed704c1bc25f",
+    "raw/first-party-topquadrant.json": "99875a7f56f41309f4a850d9c4fd3ec0168daa17a70dda043af1990750569069",
+    "raw/first-party-w3c.json": "3949cf71c09c04db89504abfd36ce21b7afa60a41cab3e160db5ea773da22dc3",
+    "raw/first-party-weaviate.json": "4a58a072c1576a48fb9c660f7418425463c84472e1a35d4a145d6442b16f6452",
+    "raw/first-party-wikimedia.json": "e2d23c555e63b9a89ad06530ba2a6d9bff680648cb5414f01e742cebc8396d8c",
+    "sources/first-party-eccenca.json": "31e50d0fd4ef6c2f08213b9d745479132c89d5ec98249a1351f7f64b0a32c8ff",
+    "sources/first-party-enterprise-knowledge.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sources/first-party-graphwise.json": "12b72fdcd91ebcf295e9cd28f7ff56b2d1e32317d6f159478e06208218545e9f",
+    "sources/first-party-metaphacts.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sources/first-party-neo4j.json": "85d6b8635bd53e0e0aaf0554a4efe3b361eff179df0cec2b1ba188cbb3384473",
+    "sources/first-party-relationalai.json": "a13bf9c98305f5e5b53119bb37e1dc19c7d5224f42eeb89c020729fe9ae4aa20",
+    "sources/first-party-stardog.json": "b4414a239e366876f92a909eac2b45929008372b03b11210af9f7c1eda6d2c42",
+    "sources/first-party-tigergraph.json": "9d84b803d47ec09681d53bb5acf05b520fd14a16dfe9c1d09abc839e328fabdc",
+    "sources/first-party-topquadrant.json": "a7e8763399373c1a61e41af26a28dc244d0d4fcdce9f3b2fb23d0a923506778d",
+    "sources/first-party-w3c.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "sources/first-party-weaviate.json": "a7d7b7a0c82f9cc663797f1bbf5e95598aec0491cd78efb5f1f1866e1d40bdb7",
+    "sources/first-party-wikimedia.json": "62db15707fabcc7ff307d3cf02a5373fc49618915b9663cd18aa2854280ae5c3"
+  }
+}

@@ -1,0 +1,411 @@
+@prefix kgjv:    <https://openknowledgegraphs.com/jobs/vocab/> .
+@prefix kgjobs:  <https://openknowledgegraphs.com/jobs/ontology#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# KG Jobs controlled vocabulary
+#
+# Single Turtle file containing three distinct skos:ConceptScheme
+# resources: Job Roles, KG Skills and Technologies, and KG Activities.
+# Compact and reviewable by design, not comprehensive. Every matching
+# concept carries a local kgjobs:matchStrength ("strong" or
+# "contextual") and one or more kgjobs:MatchTerm nodes the classifier
+# in scripts/classifier.py loads directly -- no vocabulary is
+# duplicated in source code.
+#
+# Scope: jobs/ only.
+#################################################################
+
+kgjv:JobRolesScheme a skos:ConceptScheme ;
+    dcterms:title "Job Roles"@en ;
+    skos:prefLabel "Job Roles"@en ;
+    rdfs:label "Job Roles"@en ;
+    skos:definition "Job titles and role labels that are themselves a strong or contextual signal of knowledge-graph-related work."@en .
+
+kgjv:SkillsScheme a skos:ConceptScheme ;
+    dcterms:title "KG Skills and Technologies"@en ;
+    skos:prefLabel "KG Skills and Technologies"@en ;
+    rdfs:label "KG Skills and Technologies"@en ;
+    skos:definition "Standards, languages, and technologies associated with building or operating knowledge graphs."@en .
+
+kgjv:ActivitiesScheme a skos:ConceptScheme ;
+    dcterms:title "KG Activities"@en ;
+    skos:prefLabel "KG Activities"@en ;
+    rdfs:label "KG Activities"@en ;
+    skos:definition "Tasks and practices that are characteristic of knowledge-graph-related work without naming a specific role or technology."@en .
+
+#################################################################
+# Job Roles
+#################################################################
+
+kgjv:role-ontologist a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Ontologist"@en ;
+    skos:altLabel "Ontology Specialist"@en ;
+    skos:definition "A specialist who designs, builds, and maintains formal ontologies to represent a domain's concepts and relationships."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Ontologist" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Ontology Specialist" ; kgjobs:caseSensitive false ] .
+
+kgjv:role-ontology-engineer a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Ontology Engineer"@en ;
+    skos:altLabel "Ontology Developer"@en ;
+    skos:definition "An engineer who implements and maintains ontologies and their supporting tooling in production systems."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Ontology Engineer" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Ontology Developer" ; kgjobs:caseSensitive false ] .
+
+kgjv:role-kg-engineer a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Knowledge Graph Engineer"@en ;
+    skos:altLabel "KG Engineer"@en ;
+    skos:definition "An engineer who builds and operates knowledge graph infrastructure and data pipelines."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Knowledge Graph Engineer" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "KG Engineer" ; kgjobs:caseSensitive false ] .
+
+kgjv:role-kg-architect a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Knowledge Graph Architect"@en ;
+    skos:altLabel "KG Architect"@en ;
+    skos:definition "An architect responsible for the design of an organization's knowledge graph data model and platform."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Knowledge Graph Architect" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "KG Architect" ; kgjobs:caseSensitive false ] .
+
+kgjv:role-semantic-data-modeler a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Semantic Data Modeler"@en ;
+    skos:altLabel "Semantic Modeler"@en ;
+    skos:definition "A modeler who designs semantic data models, typically using RDF-based schemas, to represent an organization's data."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Semantic Data Modeler" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Semantic Modeler" ; kgjobs:caseSensitive false ] .
+
+kgjv:role-taxonomist a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Taxonomist"@en ;
+    skos:altLabel "Taxonomy Specialist"@en ;
+    skos:definition "A specialist who designs and governs controlled vocabularies and classification schemes."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Taxonomist" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Taxonomy Specialist" ; kgjobs:caseSensitive false ] .
+
+kgjv:role-metadata-specialist a skos:Concept ;
+    skos:inScheme kgjv:JobRolesScheme ;
+    skos:prefLabel "Metadata Specialist"@en ;
+    skos:altLabel "Metadata Manager"@en ;
+    skos:definition "A specialist responsible for defining and governing metadata standards and records."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Metadata Specialist" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Metadata Manager" ; kgjobs:caseSensitive false ] .
+
+#################################################################
+# KG Skills and Technologies
+#################################################################
+
+kgjv:skill-knowledge-graph a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "Knowledge Graph"@en ;
+    skos:definition "A graph-structured knowledge base that models entities and their relationships, typically using RDF."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Knowledge Graph" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-semantic-web a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "Semantic Web"@en ;
+    skos:definition "The W3C vision and stack of standards (RDF, OWL, SPARQL, and related specifications) for machine-readable, linked data on the web."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Semantic Web" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-linked-data a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "Linked Data"@en ;
+    skos:altLabel "Linked Open Data"@en ;
+    skos:definition "A method of publishing structured data using RDF and dereferenceable URIs so that it can be interlinked and queried."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Linked Data" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Linked Open Data" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-rdf a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "RDF"@en ;
+    skos:altLabel "Resource Description Framework"@en ;
+    skos:definition "The W3C standard graph data model for representing statements about resources as subject-predicate-object triples."@en ;
+    skos:exactMatch <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "RDF" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Resource Description Framework" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-rdfs a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "RDFS"@en ;
+    skos:altLabel "RDF Schema"@en ;
+    skos:definition "The W3C vocabulary for describing classes and properties of RDF resources, layered directly on RDF."@en ;
+    skos:broader kgjv:skill-rdf ;
+    skos:exactMatch <http://www.w3.org/2000/01/rdf-schema#> ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "RDFS" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "RDF Schema" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-owl a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "OWL"@en ;
+    skos:altLabel "Web Ontology Language"@en ;
+    skos:definition "The W3C ontology language for defining rich, logically formal class and property axioms over RDF data."@en ;
+    skos:broader kgjv:skill-rdfs ;
+    skos:exactMatch <http://www.w3.org/2002/07/owl#> ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "OWL" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Web Ontology Language" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-sparql a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "SPARQL"@en ;
+    skos:altLabel "SPARQL Query Language"@en ;
+    skos:definition "The W3C query language and protocol for retrieving and manipulating data stored as RDF."@en ;
+    skos:broader kgjv:skill-rdf ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "SPARQL" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "SPARQL Query Language" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-shacl a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "SHACL"@en ;
+    skos:altLabel "Shapes Constraint Language"@en ;
+    skos:definition "The W3C language for validating RDF graphs against a set of structural conditions expressed as shapes."@en ;
+    skos:broader kgjv:skill-rdf ;
+    skos:exactMatch <http://www.w3.org/ns/shacl#> ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "SHACL" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Shapes Constraint Language" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-skos a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "SKOS"@en ;
+    skos:altLabel "Simple Knowledge Organization System"@en ;
+    skos:definition "The W3C RDF vocabulary for representing controlled vocabularies such as thesauri, taxonomies, and classification schemes."@en ;
+    skos:broader kgjv:skill-rdf ;
+    skos:exactMatch <http://www.w3.org/2004/02/skos/core#> ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "SKOS" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Simple Knowledge Organization System" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-linkml a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "LinkML"@en ;
+    skos:definition "A modeling language and toolkit for defining linked-data schemas that can generate RDF, JSON Schema, and SQL representations."@en ;
+    kgjobs:matchStrength "strong" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "LinkML" ; kgjobs:caseSensitive true ] .
+
+kgjv:skill-graph-database a skos:Concept, kgjobs:PolicyConcept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "Graph Database"@en ;
+    skos:definition "A database that stores data as nodes and edges and is optimized for traversing relationships."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Graph Database" ; kgjobs:caseSensitive false ] .
+
+kgjv:skill-neo4j a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "Neo4j"@en ;
+    skos:definition "A popular property-graph database product."@en ;
+    skos:broader kgjv:skill-graph-database ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Neo4j" ; kgjobs:caseSensitive true ] .
+
+kgjv:skill-graphrag a skos:Concept ;
+    skos:inScheme kgjv:SkillsScheme ;
+    skos:prefLabel "GraphRAG"@en ;
+    skos:altLabel "Graph Retrieval-Augmented Generation"@en ;
+    skos:definition "A retrieval-augmented generation technique that grounds large language model responses in a knowledge graph."@en ;
+    skos:broader kgjv:skill-knowledge-graph ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "GraphRAG" ; kgjobs:caseSensitive true ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Graph Retrieval-Augmented Generation" ; kgjobs:caseSensitive false ] .
+
+#################################################################
+# KG Activities
+#################################################################
+
+kgjv:activity-entity-resolution a skos:Concept ;
+    skos:inScheme kgjv:ActivitiesScheme ;
+    skos:prefLabel "Entity Resolution"@en ;
+    skos:altLabel "Record Linkage"@en ;
+    skos:definition "The task of determining when different data records refer to the same real-world entity."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Entity Resolution" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Record Linkage" ; kgjobs:caseSensitive false ] .
+
+kgjv:activity-semantic-integration a skos:Concept ;
+    skos:inScheme kgjv:ActivitiesScheme ;
+    skos:prefLabel "Semantic Integration"@en ;
+    skos:definition "The task of reconciling data from heterogeneous sources into a shared semantic model."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Semantic Integration" ; kgjobs:caseSensitive false ] .
+
+kgjv:activity-taxonomy-management a skos:Concept ;
+    skos:inScheme kgjv:ActivitiesScheme ;
+    skos:prefLabel "Taxonomy Management"@en ;
+    skos:altLabel "Vocabulary Management"@en ;
+    skos:definition "The ongoing governance of a controlled vocabulary or classification scheme, including term creation, deprecation, and mapping."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Taxonomy Management" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Vocabulary Management" ; kgjobs:caseSensitive false ] .
+
+#################################################################
+# Reviewed first-party contextual qualification policy
+#
+# These terms are deliberately separate from kgjobs:hasMatchTerm so the
+# aggregator classifier and its emitted bytes remain unchanged. They apply
+# only after reviewed first-party boilerplate has been removed.
+#################################################################
+
+kgjv:first-party-contextual-policy a kgjobs:FirstPartyQualificationPolicy ;
+    dcterms:title "First-party contextual qualification policy"@en ;
+    kgjobs:approvedRoleFamily
+        kgjv:family-architecture,
+        kgjv:family-consulting,
+        kgjv:family-data-analytics,
+        kgjv:family-developer-relations,
+        kgjv:family-product,
+        kgjv:family-research,
+        kgjv:family-solutions,
+        kgjv:family-technical ;
+    kgjobs:excludedTitleTerm
+        "account executive", "collections", "communications", "finance",
+        "fundraising", "human resources", "legal", "marketing", "recruiter",
+        "sales manager", "sales representative", "security manager" ;
+    kgjobs:placeholderTitleTerm
+        "don't see what you're looking for", "don’t see what you’re looking for",
+        "future openings", "general application", "join our talent network",
+        "stay in touch", "talent pool" ;
+    kgjobs:contextualPolicyTerm
+        kgjv:policy-term-cypher,
+        kgjv:policy-term-database-core,
+        kgjv:policy-term-database-sharding,
+        kgjv:policy-term-gds,
+        kgjv:policy-term-graph-based-ai,
+        kgjv:policy-term-graph-algorithm,
+        kgjv:policy-term-graph-algorithms,
+        kgjv:policy-term-graph-analytics,
+        kgjv:policy-term-connected-data-analytics,
+        kgjv:policy-term-graph-data,
+        kgjv:policy-term-graph-databases,
+        kgjv:policy-term-graph-query,
+        kgjv:policy-term-graph-queries,
+        kgjv:policy-term-hume .
+
+kgjv:family-technical a kgjobs:RoleFamily ;
+    rdfs:label "Technical"@en ;
+    kgjobs:roleFamilyTerm "developer", "devops", "engineer", "engineering", "infrastructure", "platform", "reliability", "tech lead" .
+
+kgjv:family-architecture a kgjobs:RoleFamily ;
+    rdfs:label "Architecture"@en ;
+    kgjobs:roleFamilyTerm "architect", "architecture" .
+
+kgjv:family-data-analytics a kgjobs:RoleFamily ;
+    rdfs:label "Data and analytics"@en ;
+    kgjobs:roleFamilyTerm "analytics", "data", "database", "machine learning" .
+
+kgjv:family-product a kgjobs:RoleFamily ;
+    rdfs:label "Product"@en ;
+    kgjobs:roleFamilyTerm "product" .
+
+kgjv:family-research a kgjobs:RoleFamily ;
+    rdfs:label "Research"@en ;
+    kgjobs:roleFamilyTerm "research", "scientist" .
+
+kgjv:family-developer-relations a kgjobs:RoleFamily ;
+    rdfs:label "Developer relations"@en ;
+    kgjobs:roleFamilyTerm "developer advocate", "developer relations" .
+
+kgjv:family-consulting a kgjobs:RoleFamily ;
+    rdfs:label "Consulting"@en ;
+    kgjobs:roleFamilyTerm "consultant", "consulting" .
+
+kgjv:family-solutions a kgjobs:RoleFamily ;
+    rdfs:label "Solutions"@en ;
+    kgjobs:roleFamilyTerm "engagement manager", "presales", "professional services", "solution engineer", "solutions engineer" .
+
+kgjv:policy-concept-cypher a kgjobs:PolicyConcept ; skos:prefLabel "Cypher"@en ; skos:definition "Neo4j's graph query language."@en .
+kgjv:policy-concept-database-core a kgjobs:PolicyConcept ; skos:prefLabel "Database core"@en ; skos:definition "Implementation of graph database kernel or core internals."@en .
+kgjv:policy-concept-database-sharding a kgjobs:PolicyConcept ; skos:prefLabel "Database sharding"@en ; skos:definition "Partitioning a graph database across distributed storage and query execution."@en .
+kgjv:policy-concept-gds a kgjobs:PolicyConcept ; skos:prefLabel "Graph Data Science"@en ; skos:definition "Graph data science products and workflows."@en .
+kgjv:policy-concept-graph-based-ai a kgjobs:PolicyConcept ; skos:prefLabel "Graph-based AI"@en ; skos:definition "AI architectures that directly use graph structure or graph-based reasoning."@en .
+kgjv:policy-concept-graph-algorithm a kgjobs:PolicyConcept ; skos:prefLabel "Graph algorithms"@en ; skos:definition "Algorithms operating on graph structures."@en .
+kgjv:policy-concept-graph-analytics a kgjobs:PolicyConcept ; skos:prefLabel "Graph analytics"@en ; skos:definition "Analytics performed over graph-structured data."@en .
+kgjv:policy-concept-graph-data a kgjobs:PolicyConcept ; skos:prefLabel "Graph data"@en ; skos:definition "Data represented and processed as a graph."@en .
+kgjv:policy-concept-graph-query a kgjobs:PolicyConcept ; skos:prefLabel "Graph query"@en ; skos:definition "Query languages and execution over graph data."@en .
+kgjv:policy-concept-hume a kgjobs:PolicyConcept ; skos:prefLabel "GraphAware Hume"@en ; skos:definition "GraphAware's knowledge-graph product Hume."@en .
+
+kgjv:policy-term-cypher a kgjobs:PolicyTerm ; kgjobs:termText "Cypher" ; kgjobs:caseSensitive true ; kgjobs:policyConcept kgjv:policy-concept-cypher .
+kgjv:policy-term-database-core a kgjobs:PolicyTerm ; kgjobs:termText "database core" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-database-core .
+kgjv:policy-term-database-sharding a kgjobs:PolicyTerm ; kgjobs:termText "database sharding" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-database-sharding .
+kgjv:policy-term-gds a kgjobs:PolicyTerm ; kgjobs:termText "Graph Data Science" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-gds .
+kgjv:policy-term-graph-based-ai a kgjobs:PolicyTerm ; kgjobs:termText "graph-based AI" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-based-ai .
+kgjv:policy-term-graph-algorithm a kgjobs:PolicyTerm ; kgjobs:termText "graph algorithm" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-algorithm .
+kgjv:policy-term-graph-algorithms a kgjobs:PolicyTerm ; kgjobs:termText "graph algorithms" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-algorithm .
+kgjv:policy-term-graph-analytics a kgjobs:PolicyTerm ; kgjobs:termText "graph analytics" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-analytics .
+kgjv:policy-term-connected-data-analytics a kgjobs:PolicyTerm ; kgjobs:termText "connected data analytics" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-analytics .
+kgjv:policy-term-graph-data a kgjobs:PolicyTerm ; kgjobs:termText "graph data" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-data .
+kgjv:policy-term-graph-databases a kgjobs:PolicyTerm ; kgjobs:termText "graph databases" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:skill-graph-database .
+kgjv:policy-term-graph-query a kgjobs:PolicyTerm ; kgjobs:termText "graph query" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-query .
+kgjv:policy-term-graph-queries a kgjobs:PolicyTerm ; kgjobs:termText "graph queries" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-graph-query .
+kgjv:policy-term-hume a kgjobs:PolicyTerm ; kgjobs:termText "GraphAware Hume" ; kgjobs:caseSensitive false ; kgjobs:policyConcept kgjv:policy-concept-hume .
+
+kgjv:neo4j-boilerplate-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-neo4j> ;
+    kgjobs:identityConcept kgjv:skill-neo4j ;
+    kgjobs:stripPrefixThrough
+        "About the Role:", "Job Description:", "Job Title:", "Position :", "Position:", "The Role:", "The Role ",
+        "We created, drive and lead the graph database category, and we’re disrupting how organizations leverage their data to innovate and stay competitive." ;
+    kgjobs:stripSuffixFrom "Why Join Neo4j?" .
+
+kgjv:eccenca-boilerplate-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-eccenca> ;
+    kgjobs:stripPrefixThrough "The Role", "YOUR PROFILE" .
+
+kgjv:stardog-boilerplate-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-stardog> ;
+    kgjobs:stripPrefixThrough "We are looking for" .
+
+kgjv:tigergraph-boilerplate-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-tigergraph> ;
+    kgjobs:stripPrefixThrough "Join the graph and analytics revolution!", "Job Responsibilities", "Responsibilities" .
+
+kgjv:activity-graph-reasoning a skos:Concept ;
+    skos:inScheme kgjv:ActivitiesScheme ;
+    skos:prefLabel "Graph Reasoning"@en ;
+    skos:altLabel "Ontological Reasoning"@en ;
+    skos:definition "Deriving new facts from a graph using logical inference over its ontology, such as OWL entailments."@en ;
+    kgjobs:matchStrength "contextual" ;
+    kgjobs:hasMatchTerm
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Graph Reasoning" ; kgjobs:caseSensitive false ] ,
+        [ a kgjobs:MatchTerm ; kgjobs:termText "Ontological Reasoning" ; kgjobs:caseSensitive false ] .

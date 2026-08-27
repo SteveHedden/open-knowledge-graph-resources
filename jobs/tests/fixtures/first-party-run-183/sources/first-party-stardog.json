@@ -1,0 +1,63 @@
+[
+  {
+    "active": true,
+    "attributionText": "Jobs at Stardog",
+    "attributionUrl": "https://www.stardog.com/company/careers/",
+    "canonicalFingerprint": "3da6f43cbb693f89ab9a7c0d1093ba06c5f5ff8c9a1970e491fd967fe7cf7f33",
+    "canonicalUrl": "https://jobs.lever.co/stardog/a06b356b-263a-4524-adc6-98bb06baf2a4/apply",
+    "classification": "qualified",
+    "datePosted": "2026-07-30",
+    "description": "Stardog, the leading Enterprise Knowledge Graph platform, turns data into knowledge to power more effective digital transformations. Industry leaders including Bosch, NASA, and Raytheon use Stardog to create a flexible data layer that can support countless applications. One of Fast Company's prestigious Most Innovative Companies, Stardog is a fast-growing venture-backed company with a globally distributed team. We are looking for a motivated and skilled Solution Architect to join our growing team. In this role, you will be responsible for delivering technology solutions that align with business goals and technical requirements. You will work closely with stakeholders, including business leaders, project managers, developers, and other architects, to ensure the successful design and implementation of solutions across multiple platforms. You will handle multiple concurrent projects. You need to be comfortable with and have experience working remotely. You must have strong communication skills as much of our interactions will be over email and chat where it is harder to get your point across. Stardog is proud to be an Equal Employment Opportunity Employer. Individuals seeking employment at Stardog are considered without regard to race, color, religion, sex, age, national origin, disability, veteran status or any other characteristic protected by law.",
+    "discoveredBy": [
+      "first-party-stardog"
+    ],
+    "employmentType": "Remote",
+    "evidence": [
+      {
+        "concept_label": "Knowledge Graph",
+        "concept_scheme": "KG Skills and Technologies",
+        "concept_uri": "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph",
+        "matched_phrase": "Knowledge Graph",
+        "negated": false,
+        "source_field": "description",
+        "strength": "strong"
+      }
+    ],
+    "firstParty": true,
+    "firstSeenAt": "2026-08-27T02:56:28Z",
+    "hiringOrganization": "Stardog",
+    "id": "firstparty:first-party-stardog:a06b356b-263a-4524-adc6-98bb06baf2a4",
+    "lastSeenAt": "2026-08-27T02:56:28Z",
+    "location": "Rome, NY",
+    "locationKeys": [
+      "ny",
+      "rome"
+    ],
+    "organizationIri": "https://openknowledgegraphs.com/organization/stardog-union/",
+    "provider": "lever",
+    "qualifications": null,
+    "remote": false,
+    "requisitionId": "a06b356b-263a-4524-adc6-98bb06baf2a4",
+    "responsibilities": null,
+    "retrievedAt": "2026-08-27T02:56:28Z",
+    "sourceAttributionUrl": "https://www.stardog.com/company/careers/",
+    "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-stardog",
+    "sourceName": "Jobs at Stardog",
+    "sourceOccurrences": [
+      {
+        "firstParty": true,
+        "provider": "lever",
+        "sourceDataset": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/first-party-stardog",
+        "sourceRecordId": "a06b356b-263a-4524-adc6-98bb06baf2a4",
+        "sourceUrl": "https://jobs.lever.co/stardog/a06b356b-263a-4524-adc6-98bb06baf2a4/apply",
+        "tenant": "stardog"
+      }
+    ],
+    "sourceRecordId": "a06b356b-263a-4524-adc6-98bb06baf2a4",
+    "sourceUrl": "https://jobs.lever.co/stardog/a06b356b-263a-4524-adc6-98bb06baf2a4/apply",
+    "tenant": "stardog",
+    "title": "Solutions Architect AFRL - Rome, NY",
+    "validThrough": null,
+    "workplaceMode": "onsite"
+  }
+]

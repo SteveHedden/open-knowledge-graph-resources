@@ -2,10 +2,10 @@
   "sourceKey": "himalayas",
   "responses": [
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-knowledge-graph",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/himalayas-query-knowledge-graph",
       "query": "knowledge graph",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-knowledge-graph"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
@@ -942,11 +942,11 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-ontology",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/himalayas-query-ontology",
       "query": "ontology",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/role-ontology-engineer"
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
@@ -1870,10 +1870,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-semantic-web",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/himalayas-query-semantic-web",
       "query": "semantic web",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-semantic-web"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",
@@ -2791,10 +2791,10 @@
       }
     },
     {
-      "queryUri": "https://openknowledgegraphs.com/prototypes/kg-jobs/source/himalayas-query-sparql",
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/himalayas-query-sparql",
       "query": "SPARQL",
       "queryConcepts": [
-        "https://openknowledgegraphs.com/prototypes/kg-jobs/vocab/skill-sparql"
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
       ],
       "payload": {
         "comments": "21/08/2026: Cursor pagination is now available and is the preferred way to page through the feed. Pass the nextCursor value from each response back as ?cursor=. It is faster than offset and will never return the same job twice. The offset parameter is deprecated and will be removed in a future release. 13/03/2026: The API has been updated to include the companySlug field in the response.",

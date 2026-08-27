@@ -41,7 +41,7 @@ GENERATION_ID_RE = re.compile(r"^\d{8}T\d{6}Z-[0-9a-f]{12}$")
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
-DEPLOYED_ROOT_FILES = ("ontology.ttl", "sources.ttl")
+DEPLOYED_ROOT_FILES = ("ontology.ttl", "organizations.ttl", "sources.ttl")
 DEPLOYED_DIRECTORIES = ("data", "curation", "vocabularies", "site")
 DIRECTORY_TREE_PATHS = ("site/resource", "site/software")
 STAGING_SUPPORT_FILES = (
@@ -203,6 +203,8 @@ def deployed_files(root: Path, include_manifest: bool = True) -> list[str]:
             for relative in unique
             if relative in tracked
             or relative == MANIFEST_PATH
+            or relative == "data/organizations.json"
+            or relative == "organizations.ttl"
             or _generated_detail_page(relative)
         ]
     return unique
