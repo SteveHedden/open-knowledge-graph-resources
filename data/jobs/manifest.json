@@ -2,11 +2,11 @@
   "artifacts": [
     {
       "path": "data/jobs/jobs.json",
-      "sha256": "552fe6ff70be668e53330cc35a5da4758cbf93df25257bdb1a8e30ded35b8711"
+      "sha256": "e4965701bbf1adafb0128b43462008ef0168cce01e144f4e36fa1f44fc4bef38"
     },
     {
       "path": "data/jobs/jobs.ttl",
-      "sha256": "25f24c31755814974c71ebc123964b118af3a3c3e12f39e5818822ea2e2df3f1"
+      "sha256": "3ea484e36a2868a0206f5401350d8fdc547da7e7071ffd52512b33d994ad2849"
     },
     {
       "path": "data/jobs/raw/adzuna.json",
@@ -14,28 +14,28 @@
     },
     {
       "path": "data/jobs/raw/arbeitnow.json",
-      "sha256": "54cfb20430318f8afc9f19ff4d754b200dc05520a5f5d25c563a4d43ea7aefbe"
+      "sha256": "82e1a3828b7a62e035303a7d4f2a34540f10497997732c9cc63ad6b6eabb9aa2"
     },
     {
       "path": "data/jobs/raw/himalayas.json",
-      "sha256": "7fd7d9f54a738af52416c8f245524303357be209ee5b4ee697fcd6dea514767d"
+      "sha256": "b02222c15d0d65f37db0137d3da85036818b8a68cc4bee040f2214f5836212a2"
     },
     {
       "path": "data/jobs/raw/jobicy.json",
-      "sha256": "b70cd853216c93cedf9e05a81cafab72c9c0dbbea46b0539cefcbf9c47b8a9cf"
+      "sha256": "af262a76fada1bf34b52b21e540f31445dc3822ca9ee85814a924e71000e1d67"
     },
     {
       "path": "data/jobs/raw/jooble.json",
-      "sha256": "e53cc7e3fab0f388f911b88dc1b78b1857c04b2e83063c4b450747d67f4ee1db"
+      "sha256": "9e0656e52b9909541b2a59246cbbc09a68baf4cf373c6df14f3ad974190c8343"
     },
     {
       "path": "data/jobs/run.json",
-      "sha256": "919dbca40697b637b732a6e8b8f2001c8414d3dbb33bccd7a2d67f26df8b33e5"
+      "sha256": "14892115d4a994725d975b343f3ec104afb7506fdf52df87666840e16d5a2529"
     }
   ],
-  "completedAt": "2026-08-28T01:30:24Z",
-  "generationId": "20260828T013024Z-e345860436b7",
+  "completedAt": "2026-08-28T13:51:30Z",
+  "generationId": "20260828T135130Z-4824f74b1fcb",
   "schemaVersion": "1.0.0",
-  "sourceRetrievedAt": "2026-08-28T01:28:25Z",
-  "startedAt": "2026-08-28T01:23:05Z"
+  "sourceRetrievedAt": "2026-08-28T13:20:05Z",
+  "startedAt": "2026-08-28T13:19:56Z"
 }
