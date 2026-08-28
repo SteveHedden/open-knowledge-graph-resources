@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T14:36:21Z",
+  "generatedAt": "2026-08-28T18:33:35Z",
   "items": [
     {
       "title": "4store",
@@ -4900,7 +4900,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rdf-playground/",
-      "description": "web interface for Linked Data courses, tailored for CC7220 \\",
+      "description": "web application for Linked Data courses, built for CC7220, a course at Universidad de Chile",
       "aliases": [],
       "sourceRepo": "https://github.com/RDFPlaygroundProject/RDFPlayground",
       "licenses": [
@@ -4910,7 +4910,8 @@
       "releaseDate": "2020-10-27",
       "softwareType": "SPARQL Tooling",
       "programmingLanguages": [
-        "HTML"
+        "HTML",
+        "Kotlin"
       ]
     },
     {
@@ -5827,8 +5828,10 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/shactor/",
-      "description": "SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes",
-      "aliases": [],
+      "description": "software for improving the quality of large-scale knowledge graphs",
+      "aliases": [
+        "SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes"
+      ],
       "homepage": "https://relweb.cs.aau.dk/qse/shactor/",
       "sourceRepo": "https://github.com/dkw-aau/demo-shactor",
       "licenses": [

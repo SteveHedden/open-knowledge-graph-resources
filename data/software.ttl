@@ -2113,10 +2113,11 @@
 
 <https://openknowledgegraphs.com/software/rdf-playground/> a okg:Software ;
     rdfs:label "RDF Playground" ;
-    okg:description "web interface for Linked Data courses, tailored for CC7220 \\" ;
+    okg:description "web application for Linked Data courses, built for CC7220, a course at Universidad de Chile" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:latestVersion "1.0" ;
-    okg:programmingLanguage "HTML" ;
+    okg:programmingLanguage "HTML",
+        "Kotlin" ;
     okg:releaseDate "2020-10-27"^^xsd:date ;
     okg:softwareType okg:SparqlTooling ;
     okg:sourceRepo <https://github.com/RDFPlaygroundProject/RDFPlayground> ;
@@ -2524,7 +2525,8 @@
 
 <https://openknowledgegraphs.com/software/shactor/> a okg:Software ;
     rdfs:label "SHACTOR" ;
-    okg:description "SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes" ;
+    okg:alias "SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes" ;
+    okg:description "software for improving the quality of large-scale knowledge graphs" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_NonCommercial_NoDerivatives_Q6937225,
         okg:License_proprietary_license_Q3238057 ;
     okg:homepage <https://relweb.cs.aau.dk/qse/shactor/> ;

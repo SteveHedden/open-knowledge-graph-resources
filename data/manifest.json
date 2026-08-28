@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260828T143702Z-602d37004b30",
-  "startedAt": "2026-08-28T14:33:28Z",
-  "sourceRetrievedAt": "2026-08-28T14:36:20Z",
-  "completedAt": "2026-08-28T14:37:02Z",
+  "generationId": "20260828T183423Z-8a3ca6474606",
+  "startedAt": "2026-08-28T18:26:10Z",
+  "sourceRetrievedAt": "2026-08-28T18:33:34Z",
+  "completedAt": "2026-08-28T18:34:23Z",
   "counts": {
     "records": {
       "resources": 3012,
@@ -12,8 +12,8 @@
     },
     "triples": {
       "ontologies": 31487,
-      "software": 4716,
-      "total": 36203
+      "software": 4718,
+      "total": 36205
     }
   },
   "versions": {
@@ -38,7 +38,7 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "9d8edfe58e4bb2d0b2c31e7e7c5a20a150e71f001a33b623f6f89c7b81d9ce1b"
+      "sha256": "9421bcf121160bc62c0aaf24a8a699d399c35e152e93fcb2076bad09d18a32bc"
     },
     {
       "path": "data/ontologies.ttl",
@@ -54,11 +54,11 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "6ad1cf80ec49850ccc984e8e64fab3670311bb6ee07cfc4da804ac1006e2a8be"
+      "sha256": "1a2154698aec1bb514bf419ea9eb464f8ba248c1c9efd545d6d57383b0b064e0"
     },
     {
       "path": "data/software.ttl",
-      "sha256": "6a3748164eaba13b87fc438eb930a7e66dd99f2c3b94586e491951f15be5f53c"
+      "sha256": "18a3ec46d679712dba58995f0e9856c854b187068feac5b999eb306943f28864"
     },
     {
       "path": "data/software_types.json",
@@ -141,7 +141,7 @@
     },
     {
       "path": "site/software",
-      "sha256": "4b426b0dcfb71dc0398b554ffcab692490e64e799e1ecf200a9d96685235e478",
+      "sha256": "ecab7e2aaf1169679bcd479c55f8c2838865efdbaa671c248e300707d6678bc2",
       "fileCount": 211
     }
   ]
