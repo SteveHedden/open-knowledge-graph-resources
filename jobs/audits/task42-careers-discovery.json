@@ -1,0 +1,3673 @@
+{
+  "bounds": {
+    "maxRedirects": 5,
+    "maxResponseBytes": 2000000,
+    "maxSecondaryProbesPerCareersPage": 2,
+    "requestTimeoutSeconds": 20,
+    "requestsPerCareersPageMaximum": 3
+  },
+  "capturedAt": "2026-08-28T01:43:03Z",
+  "careersPages": [
+    {
+      "careersPage": "https://careers.universiteitleiden.nl/search/",
+      "contentSha256": "f7b9e8a4d9ab91807a5b820a7a134aeb31c8a94005472e1836d0524ab684c1f2",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:successfactors",
+      "finalUrl": "https://careers.universiteitleiden.nl/search/",
+      "httpStatus": 200,
+      "identifier": "african-studies-centre-leiden",
+      "jobPostingCount": 0,
+      "linkCount": 82,
+      "providerCandidates": [
+        {
+          "endpoint": "https://rmkcdn.successfactors.com/240eb92a/155e6850-7d70-4aa0-a9a8-9.ico",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://rmkcdn.successfactors.com/240eb92a/4b0d0fee-3d62-4252-9aac-f.png",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://rmkcdn.successfactors.com/240eb92a/d2ee3315-0987-4220-bc01-b.css",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        }
+      ],
+      "responseBytes": 97808,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "f8034bf63625573c7d016810a88266bf4bccb9faad1465bf1db4f982267ba545",
+          "contentType": "text/html",
+          "finalUrl": "https://career5.successfactors.eu/",
+          "httpStatus": 404,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://career5.successfactors.eu",
+          "responseBytes": 28168,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "fb73b5530d0366384dcfd07be03a55040d1d0b638bf6ecc3355ce9635fd7b974",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://careers.universiteitleiden.nl/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 69,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://careers.universiteitleiden.nl/",
+          "responseBytes": 70311,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://abes.fr/l-abes/abes-pratique/l-abes-recrute/",
+      "contentSha256": "35c15fdb55c6224e18ba02e5f9d0cf2fc698e0bb4fe05951346e1bc421972a9b",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-334-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://abes.fr/l-abes/abes-pratique/l-abes-recrute/",
+      "httpStatus": 200,
+      "identifier": "agence-bibliographique-de-l-enseignement-superieur",
+      "jobPostingCount": 0,
+      "linkCount": 334,
+      "providerCandidates": [],
+      "responseBytes": 321000,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "1ebcd4777691b8d2a662d6bc1ec97ef54c173233bdfe563a3288d97c0aa9496e",
+          "contentType": "application/pdf",
+          "finalUrl": "https://abes.fr/wp-content/uploads/2025/02/offre-emploi-abes-adjoint-dsim.pdf",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://abes.fr/offre-emploi-abes-adjoint-dsim/",
+          "responseBytes": 459187,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "16db017b0f754a386616813302e856ea05a362ca74e139d5ff076305f31374e5",
+          "contentType": "application/pdf",
+          "finalUrl": "https://abes.fr/wp-content/uploads/2022/11/ABES-Offre_Emploi-GestRessNum-2023.pdf",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://abes.fr/abes-offre_emploi-gestressnum-2023/",
+          "responseBytes": 417820,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.loc.gov/careers/",
+      "contentSha256": "bdbce4704031b9aa98c978271e77bf7d3e7c28e13e198b0377fa66a5b6cf50c8",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.loc.gov/careers/",
+      "httpStatus": 403,
+      "identifier": "american-folklife-center",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5557,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.psychiatry.org/about-apa/work-at-apa",
+      "contentSha256": "c55f527e536de44c7980fecece7428ae5a765647495e47008a8a54fa1e434736",
+      "contentType": "text/html",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.psychiatry.org/about-apa/work-at-apa",
+      "httpStatus": 403,
+      "identifier": "american-psychiatric-association",
+      "jobPostingCount": 0,
+      "linkCount": 2,
+      "providerCandidates": [],
+      "responseBytes": 1233,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.juntadeandalucia.es/organismos/iaph/estructura/transparencia/empleo-publico/ofertas-empleo.html",
+      "contentSha256": "135fa1fe76726b375dc379d7de99db55f82a6ad2188d89e858a383997f1aa6b9",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-203-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.juntadeandalucia.es/organismos/iaph/estructura/transparencia/empleo-publico/ofertas-empleo.html",
+      "httpStatus": 200,
+      "identifier": "andalusian-institute-of-historical-heritage",
+      "jobPostingCount": 0,
+      "linkCount": 203,
+      "providerCandidates": [],
+      "responseBytes": 143405,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://aiatsis.gov.au/about/work-us/current-vacancies",
+      "contentSha256": "0b3a4c903a79070db47458e494d2b6cf35a8ade5fed00805b6037ab02b6b64c1",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://aiatsis.gov.au/about/work-us/current-vacancies",
+      "httpStatus": 403,
+      "identifier": "australian-institute-of-aboriginal-and-torres-strait-islander-studies",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5669,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://talent.baidu.com/jobs/",
+      "contentSha256": "80262fd4e5166a98427db79362f44d538065ad69c2873d223be256f435127af5",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-29-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://talent.baidu.com/jobs/",
+      "httpStatus": 200,
+      "identifier": "baidu",
+      "jobPostingCount": 0,
+      "linkCount": 29,
+      "providerCandidates": [],
+      "responseBytes": 138772,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.ala.org/aboutala/contactus/workatala",
+      "contentSha256": "1569a4e1c9d8eda422e66916bd318cb625dcfd3f3b309c21b1a4dea954ffd16e",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:ukg",
+      "finalUrl": "https://www.ala.org/aboutala/contactus/workatala",
+      "httpStatus": 200,
+      "identifier": "bibliographic-standards-committee-of-the-rare-books-and-manuscripts-section",
+      "jobPostingCount": 0,
+      "linkCount": 218,
+      "providerCandidates": [
+        {
+          "endpoint": "https://recruiting.ultipro.com/AME1043ALA/JobBoard/dfe6e811-9bc3-4dec-9055-a545370be9fa/?q=&amp;o=postedDateDesc",
+          "organizationFilter": {
+            "q": ""
+          },
+          "provider": "ukg"
+        },
+        {
+          "endpoint": "https://recruiting.ultipro.com/AME1043ALA/JobBoard/dfe6e811-9bc3-4dec-9055-a545370be9fa/?q=&o=postedDateDesc",
+          "organizationFilter": {
+            "q": ""
+          },
+          "provider": "ukg"
+        }
+      ],
+      "responseBytes": 166904,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "a732ea5d041658e809c7461fe462ffeb3e16d02dc2412040f144ed36ba029316",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://recruiting.ultipro.com/AME1043ALA/JobBoard/dfe6e811-9bc3-4dec-9055-a545370be9fa/?q=&o=postedDateDesc",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 27,
+          "organizationFilter": {
+            "q": ""
+          },
+          "provider": "ukg",
+          "requestedUrl": "https://recruiting.ultipro.com/AME1043ALA/JobBoard/dfe6e811-9bc3-4dec-9055-a545370be9fa/?q=&o=postedDateDesc",
+          "responseBytes": 441162,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "536ea69761d5b335328c6ac333073ff33d4f30a9fe3e4ee0275543619e7acb11",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://recruiting.ultipro.com/AME1043ALA/JobBoard/dfe6e811-9bc3-4dec-9055-a545370be9fa/?q=&amp;o=postedDateDesc",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 27,
+          "organizationFilter": {
+            "q": ""
+          },
+          "provider": "ukg",
+          "requestedUrl": "https://recruiting.ultipro.com/AME1043ALA/JobBoard/dfe6e811-9bc3-4dec-9055-a545370be9fa/?q=&amp;o=postedDateDesc",
+          "responseBytes": 441166,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.bne.es/convocatorias",
+      "contentSha256": "0c13dc81f3be3f5b9ecc26f5deb14cabb3a749ace10dcfc120db14c6f38d4478",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.bne.es/convocatorias",
+      "httpStatus": 403,
+      "identifier": "biblioteca-nacional-de-espana",
+      "jobPostingCount": 0,
+      "linkCount": 9,
+      "providerCandidates": [],
+      "responseBytes": 1310845,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.rh.ulaval.ca/travailler-a-luniversite-laval/carriere-en-ressources-informationnelles-et-archivistiques",
+      "contentSha256": "fa2203b437f3825cd02551c36ac3156408d52708c072bf1d141c2ce7c1e0753c",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-51-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.rh.ulaval.ca/travailler-a-luniversite-laval/carriere-en-ressources-informationnelles-et-archivistiques",
+      "httpStatus": 200,
+      "identifier": "bibliotheque-de-l-universite-laval",
+      "jobPostingCount": 0,
+      "linkCount": 51,
+      "providerCandidates": [],
+      "responseBytes": 63645,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "86985d6e2e846379d8be9c1e835189646a3fc2a22f2774787910e179cb136115",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rh.ulaval.ca/emplois-disponibles",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 40,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rh.ulaval.ca/emplois-disponibles",
+          "responseBytes": 63900,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "131377649c3436347c5f29d87223a5ae7c1e452afa31d24adee0a6406a79bbd3",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rh.ulaval.ca/emplois-disponibles/personnel-administratif",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 44,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rh.ulaval.ca/emplois-disponibles/personnel-administratif",
+          "responseBytes": 71040,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://emploi.bnf.fr/",
+      "contentSha256": "208d1f28381359b4bd0ac517cc36ce8033be57644eb7009cf3aa7a1e98a6d1cd",
+      "contentType": "text/html; charset=US-ASCII",
+      "discoveryReason": "retrieved-html-with-0-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://emploi.bnf.fr/",
+      "httpStatus": 200,
+      "identifier": "bibliotheque-nationale-de-france",
+      "jobPostingCount": 0,
+      "linkCount": 0,
+      "providerCandidates": [],
+      "responseBytes": 280,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.britishmuseum.org/about-us/jobs",
+      "contentSha256": "04ad8528667f6ea1c0ad956b356a2e74103b84adc3f30ec14148fae902d74f14",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.britishmuseum.org/about-us/jobs",
+      "httpStatus": 403,
+      "identifier": "british-museum",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5579,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440?classificationInfos=&departments=93&locationsFilter=&log=false&officialLanguage=&search=Search+jobs&selectionProcessNumber=&tab=2&title=&toggleLanguage=en",
+      "contentSha256": "228cbbf8f3d11cff0448ebb7dcf9e4fce733dcf7ddfd02bce0b2bd5dd1b520c3",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-50-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440?classificationInfos=&departments=93&locationsFilter=&log=false&officialLanguage=&search=Search+jobs&selectionProcessNumber=&tab=2&title=&toggleLanguage=en",
+      "httpStatus": 200,
+      "identifier": "canadian-heritage-information-network",
+      "jobPostingCount": 0,
+      "linkCount": 50,
+      "providerCandidates": [],
+      "responseBytes": 150608,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "b7220873fa43a3e0ebe10a162364c47c08f3667dbdc07911b7288237a40fef64",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440;jsessionid=5EE4F02F3B3A6623F218FA6D9782CA53?classificationInfos=&departments=93&locationsFilter=&log=false&officialLanguage=&search=Search+jobs&selectionProcessNumber=&tab=2&title=&toggleLanguage=fr",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 27,
+          "organizationFilter": {
+            "departments": "93",
+            "search": "Search jobs"
+          },
+          "provider": null,
+          "requestedUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440;jsessionid=5EE4F02F3B3A6623F218FA6D9782CA53?classificationInfos=&departments=93&locationsFilter=&log=false&officialLanguage=&search=Search+jobs&selectionProcessNumber=&tab=2&title=&toggleLanguage=fr",
+          "responseBytes": 150879,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "962020a78edda123ea87277b8eeeb952a10736674c6b31d9a43dd10bfd7166de",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page100080?search=Search+jobs&helpBackAction=%2Fpsrs-srfp%2Fapplicant%2Fpage2440%3Bjsessionid%3D5EE4F02F3B3A6623F218FA6D9782CA53&officialLanguage=&tab=2&log=false&locationsFilter=&toggleLanguage=en&departments=93&selectionProcessNumber=&title=&classificationInfos=&helpPage=help/jobSearch.jsp",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 28,
+          "organizationFilter": {
+            "departments": "93",
+            "search": "Search jobs"
+          },
+          "provider": null,
+          "requestedUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page100080?search=Search+jobs&helpBackAction=%2Fpsrs-srfp%2Fapplicant%2Fpage2440%3Bjsessionid%3D5EE4F02F3B3A6623F218FA6D9782CA53&officialLanguage=&tab=2&log=false&locationsFilter=&toggleLanguage=en&departments=93&selectionProcessNumber=&title=&classificationInfos=&helpPage=help/jobSearch.jsp",
+          "responseBytes": 153989,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.cochrane.org/about-us/jobs",
+      "contentSha256": "c83f429ed4d5b308adede1ed9575c7f21d7e41a277d009ff4974e052de4706dd",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-74-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.cochrane.org/about-us/jobs",
+      "httpStatus": 200,
+      "identifier": "cochrane",
+      "jobPostingCount": 0,
+      "linkCount": 74,
+      "providerCandidates": [],
+      "responseBytes": 64838,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "4669e0f63f6d56ca5ebd50f7a40846859f1d398df59c6dd2066af50dd13e9436",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.cochrane.org/de/about-us/jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 72,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.cochrane.org/de/about-us/jobs",
+          "responseBytes": 67203,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "270873d1f6aecdda88b0bf846f09a337d661a26a656aa41af942372a7205e05a",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.cochrane.org/es/about-us/jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 72,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.cochrane.org/es/about-us/jobs",
+          "responseBytes": 67178,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://convocatorias.conicet.gov.ar/",
+      "contentSha256": "ea26df2129f178ce9413d6ec90001e3fdce501f63c9a8a03e5c68d10e97bd7b1",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-101-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://convocatorias.conicet.gov.ar/",
+      "httpStatus": 200,
+      "identifier": "consejo-nacional-de-investigaciones-cientificas-y-tecnicas-centro-argentino-de-informacion-cientifica-y-tecnologica",
+      "jobPostingCount": 0,
+      "linkCount": 101,
+      "providerCandidates": [],
+      "responseBytes": 48291,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "ea26df2129f178ce9413d6ec90001e3fdce501f63c9a8a03e5c68d10e97bd7b1",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://convocatorias.conicet.gov.ar/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 89,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://convocatorias.conicet.gov.ar",
+          "responseBytes": 48291,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "c9d3b1ba7c97ea2708e253c4900462f43c7e1be6a45105a5255db154bd9c3a5d",
+          "contentType": "text/xml; charset=UTF-8",
+          "finalUrl": "https://convocatorias.conicet.gov.ar/feed/",
+          "httpStatus": 500,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://convocatorias.conicet.gov.ar/feed/",
+          "responseBytes": 339,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://dbcdigital.dk/karriere/",
+      "contentSha256": "710a07867ac87c0903e87f7ba424ca83764c7bd34bbcb181565404022267b0f3",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:emply",
+      "finalUrl": "https://dbcdigital.dk/karriere/",
+      "httpStatus": 200,
+      "identifier": "danish-bibliographic-centre",
+      "jobPostingCount": 0,
+      "linkCount": 267,
+      "providerCandidates": [
+        {
+          "endpoint": "https://dbc.career.emply.com/apply/uopfordrede-ansogninger/i8t069",
+          "organizationFilter": null,
+          "provider": "emply"
+        },
+        {
+          "endpoint": "https://dbc.career.emply.com/ledige-stillinger",
+          "organizationFilter": null,
+          "provider": "emply"
+        }
+      ],
+      "responseBytes": 110284,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "354bd1e8e4c79c756e140d4e9d8a94676269a2c315a0aae3a4e0124964426c1b",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://dbc.career.emply.com/ledige-stillinger",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 14,
+          "organizationFilter": null,
+          "provider": "emply",
+          "requestedUrl": "https://dbc.career.emply.com/ledige-stillinger",
+          "responseBytes": 100309,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "7f1f632a21bd044e248b526585e22e9eabcdb892bbb08ed265ac2fb1f61def83",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://dbc.career.emply.com/apply/uopfordrede-ansogninger/i8t069",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 20,
+          "organizationFilter": null,
+          "provider": "emply",
+          "requestedUrl": "https://dbc.career.emply.com/apply/uopfordrede-ansogninger/i8t069",
+          "responseBytes": 82781,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://data.world/company/careers/",
+      "contentSha256": "8fa2d3fb5189341952980d2d5e346d3cbd0a42f4298bb0013066d4ffa311c498",
+      "contentType": "text/html",
+      "discoveryReason": "retrieved-recognized-provider:greenhouse",
+      "finalUrl": "https://data.world/company/careers/",
+      "httpStatus": 200,
+      "identifier": "data-world",
+      "jobPostingCount": 0,
+      "linkCount": 81,
+      "providerCandidates": [
+        {
+          "endpoint": "https://boards.greenhouse.io/embed/job_board/js?for=dataworld",
+          "organizationFilter": null,
+          "provider": "greenhouse"
+        }
+      ],
+      "responseBytes": 270309,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "4b6af5c83559e6e1bb8191ea7c69488900c02a9af4b95ea10acec4a330987e3b",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://boards.greenhouse.io/embed/job_board/js?for=dataworld",
+          "httpStatus": 404,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": "greenhouse",
+          "requestedUrl": "https://boards.greenhouse.io/embed/job_board/js?for=dataworld",
+          "responseBytes": 43,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.dla.mil/careers/",
+      "contentSha256": "5888053f177246829c3e255066a1e5416aaf9588ce8a92514f1b66e1a0be1b2a",
+      "contentType": "text/html",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.dla.mil/careers/",
+      "httpStatus": 403,
+      "identifier": "defense-logistics-agency",
+      "jobPostingCount": 0,
+      "linkCount": 0,
+      "providerCandidates": [],
+      "responseBytes": 377,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.ebi.ac.uk/careers/",
+      "contentSha256": "31103b09da743883b3a2d9c39c72e1c3890d31ac7612f28e1d49d675aab75e3b",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:workday",
+      "finalUrl": "https://www.ebi.ac.uk/careers/",
+      "httpStatus": 200,
+      "identifier": "embl-s-european-bioinformatics-institute",
+      "jobPostingCount": 0,
+      "linkCount": 103,
+      "providerCandidates": [
+        {
+          "endpoint": "https://embl.wd103.myworkdayjobs.com/en-US/EMBL/?locations=e80afa7e65f5100729542eddd1ff0000",
+          "organizationFilter": null,
+          "provider": "workday"
+        }
+      ],
+      "responseBytes": 40922,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "f19231d4dec5574f05fa6f190b44db4e24d61572e13b61fe76debef3986b8547",
+          "contentType": "text/html",
+          "finalUrl": "https://embl.wd103.myworkdayjobs.com/en-US/EMBL/?locations=e80afa7e65f5100729542eddd1ff0000",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 1,
+          "organizationFilter": null,
+          "provider": "workday",
+          "requestedUrl": "https://embl.wd103.myworkdayjobs.com/en-US/EMBL/?locations=e80afa7e65f5100729542eddd1ff0000",
+          "responseBytes": 7391,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "31103b09da743883b3a2d9c39c72e1c3890d31ac7612f28e1d49d675aab75e3b",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.ebi.ac.uk/careers/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 66,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.ebi.ac.uk/careers",
+          "responseBytes": 40922,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://commission.europa.eu/get-involved/jobs-european-commission_en",
+      "contentSha256": "6ad476510b2dee200c5b9d2a1c464bd548fe4e553be80424a8a4ea6e39a9d509",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-208-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://commission.europa.eu/get-involved/jobs-european-commission_en",
+      "httpStatus": 200,
+      "identifier": "european-commission",
+      "jobPostingCount": 0,
+      "linkCount": 208,
+      "providerCandidates": [],
+      "responseBytes": 151831,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "993146951db045684e585064333b6c6f6198acca37ed6e6cf92de319874c951b",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://eu-careers.europa.eu/en/how-apply",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 79,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://eu-careers.europa.eu/en/how-apply",
+          "responseBytes": 39873,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "142cf6df5dc0470e451a6d099822882129a5a7d1f468fea23242be3290fa8eee",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://eu-careers.europa.eu/en/eu_career_profiles",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 91,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://eu-careers.europa.eu/en/eu_career_profiles",
+          "responseBytes": 50371,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://eige.europa.eu/about/recruitment",
+      "contentSha256": "ecfc15467f3015c3584b5ff194faf510b1b3bc8042540482bd8503fcb78810e4",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-112-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://eige.europa.eu/about/recruitment",
+      "httpStatus": 200,
+      "identifier": "european-institute-for-gender-equality",
+      "jobPostingCount": 0,
+      "linkCount": 112,
+      "providerCandidates": [],
+      "responseBytes": 72851,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "ecfc15467f3015c3584b5ff194faf510b1b3bc8042540482bd8503fcb78810e4",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://eige.europa.eu/about/recruitment",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 107,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://eige.europa.eu/recruitment",
+          "responseBytes": 72851,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "82b37057b721d1e6005d7d75a8e130675d6879d33cef43b8ae460642c19eb4c6",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://eige.europa.eu/about/recruitment/faqs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 109,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://eige.europa.eu/about/recruitment/faqs",
+          "responseBytes": 86232,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://sanastokeskus.fi/tsk/fi/avoimet_ty%C3%B6paikat-35.html",
+      "contentSha256": "837ff3e9df4cbf5d4b1d9f0f1ecfb1f45254eae32505fdea4e5d8774a719dad6",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-86-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://sanastokeskus.fi/tsk/fi/avoimet_ty%C3%B6paikat-35.html",
+      "httpStatus": 200,
+      "identifier": "finnish-terminology-centre-tsk",
+      "jobPostingCount": 0,
+      "linkCount": 86,
+      "providerCandidates": [],
+      "responseBytes": 30848,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.unibz.it/it/home/position-calls/",
+      "contentSha256": "9ef0492b0c191a866c6cfff1d7710e152d75595e9b6c5de430a81558445838d2",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-169-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.unibz.it/it/home/position-calls",
+      "httpStatus": 200,
+      "identifier": "free-university-of-bozen-bolzano",
+      "jobPostingCount": 0,
+      "linkCount": 169,
+      "providerCandidates": [],
+      "responseBytes": 70734,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "8532adda68dfad67539072217961e6dede43dc2e2906f17a7e4c9f259484c638",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.unibz.it/de/home/position-calls",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 160,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.unibz.it/de/home/position-calls",
+          "responseBytes": 70809,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "623f896e8d916e74f54807fb45ebceb525f5a7eef29a4d6cd82787e4b154aaec",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.unibz.it/en/home/position-calls",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 160,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.unibz.it/en/home/position-calls",
+          "responseBytes": 70602,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://francearchives.gouv.fr/fr/emplois",
+      "contentSha256": "1b756bd92a671476c2f85eb641f78448d635fbbe296fd97b31bd9aa5a57de380",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-146-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://francearchives.gouv.fr/fr/emplois",
+      "httpStatus": 200,
+      "identifier": "french-interministerial-service-of-archives",
+      "jobPostingCount": 0,
+      "linkCount": 146,
+      "providerCandidates": [],
+      "responseBytes": 75217,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": null,
+          "contentType": null,
+          "finalUrl": null,
+          "httpStatus": null,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.place-emploi-public.gouv.fr/",
+          "responseBytes": 0,
+          "retrievalError": "ConnectionError:HTTPSConnectionPool(host='www.place-emploi-public.gouv.fr', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.place-emploi-public.gouv.fr', port=443): Failed to resolve 'www.place-emploi-public.gouv.fr' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        },
+        {
+          "contentSha256": "7bde0b6655030b5f574d1e142851cbae382c92918c7ae88c04c6a44f2df314a3",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://francearchives.gouv.fr/de/emplois",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 143,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://francearchives.gouv.fr/de/emplois",
+          "responseBytes": 74940,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.gsa.gov/about-gsa/find-apply-for-and-land-a-job-at-gsa",
+      "contentSha256": "ff3b849b454dca66d37fe29a4bce1e4fa17c5d72ca8548caa3b065034eb51e16",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-260-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.gsa.gov/about-gsa/find-apply-for-and-land-a-job-at-gsa",
+      "httpStatus": 200,
+      "identifier": "general-services-administration",
+      "jobPostingCount": 0,
+      "linkCount": 260,
+      "providerCandidates": [],
+      "responseBytes": 183543,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "01a83adf43eec545325df174cdf707019dbd7725ceabada82b2dd2986ef4111a",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://sam.gov/opportunities?topnav=sell-to-government",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 61,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://sam.gov/opportunities?topnav=sell-to-government",
+          "responseBytes": 59369,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "863b523db573169cc26105365c29239b966238798c22f16d19e777191357d9d7",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.gsa.gov/small-business/find-opportunities?topnav=small-business",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 248,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.gsa.gov/small-business/find-opportunities?topnav=small-business",
+          "responseBytes": 204537,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.dnb.de/sinnvollesschaffen",
+      "contentSha256": "d402da2e862295e7b218d6133d0c8c68c55fa1c38c0a5793f3c9da442ea8404d",
+      "contentType": "text/html;charset=utf-8",
+      "discoveryReason": "retrieved-html-with-65-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.dnb.de/DE/Beruf-Karriere/berufKarriere_node.html",
+      "httpStatus": 200,
+      "identifier": "german-national-library",
+      "jobPostingCount": 0,
+      "linkCount": 65,
+      "providerCandidates": [],
+      "responseBytes": 49840,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "a5dcf4c8810a1bd563261b12003c0bc77aef3adaeb964226a4e5ba12f303e88f",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.dnb.de/DE/Beruf-Karriere/DE/Beruf-Karriere/stellenangebote/stellenangebote_node.html",
+          "httpStatus": 404,
+          "jobPostingCount": 0,
+          "linkCount": 51,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.dnb.de/DE/Beruf-Karriere/DE/Beruf-Karriere/stellenangebote/stellenangebote_node.html",
+          "responseBytes": 38061,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://jobs-getty.icims.com/jobs/intro",
+      "contentSha256": "25456224afd98405dda405762123b6ec916d79a26a50f9b4f3cc8e9a69234813",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:icims",
+      "finalUrl": "https://jobs-getty.icims.com/jobs/intro",
+      "httpStatus": 200,
+      "identifier": "getty-research-institute",
+      "jobPostingCount": 0,
+      "linkCount": 82,
+      "providerCandidates": [
+        {
+          "endpoint": "https://cdn02.icims.com/a/images.icims.com/content/platform_187.0.0.260824-b8a8b19bd26-11-pg-5/script/common/icims.js",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://cdn02.icims.com/a/images.icims.com/content/platform_187.0.0.260824-b8a8b19bd26-11-pg-5/script/lib/domreplacement/domReplacement.js",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://cdn02.icims.com/a/images.icims.com/content/platform_187.0.0.260824-b8a8b19bd26-11-pg-5/script/portal/utils.js",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/Search/",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/contact_us.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/getty/founder.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/getty/getty_evolves.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/getty/index.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/bylaws.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/caag_report.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/committees.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/finance.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/indenture.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/officers.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/policies.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/trustees.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/governance/trustreport/",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/index.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/mission.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/opportunities/",
+          "organizationFilter": null,
+          "provider": "icims"
+        },
+        {
+          "endpoint": "https://jobs-getty.icims.com/about/opportunities/intern_opps.html",
+          "organizationFilter": null,
+          "provider": "icims"
+        }
+      ],
+      "responseBytes": 19674,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "91ae8b94aa04d334345800958f1390e2dd146d385b1861e97fc831b45ce2af82",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://jobs-getty.icims.com/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 72,
+          "organizationFilter": null,
+          "provider": "icims",
+          "requestedUrl": "https://jobs-getty.icims.com",
+          "responseBytes": 19653,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "91ae8b94aa04d334345800958f1390e2dd146d385b1861e97fc831b45ce2af82",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://jobs-getty.icims.com/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 72,
+          "organizationFilter": null,
+          "provider": "icims",
+          "requestedUrl": "https://jobs-getty.icims.com/",
+          "responseBytes": 19653,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.helsinki.fi/en/about-us/careers/open-positions",
+      "contentSha256": "9395961b35451039198a439075e529a8b0e903ed60699f8fb84843d740880e9d",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-130-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.helsinki.fi/en/about-us/careers/open-positions",
+      "httpStatus": 200,
+      "identifier": "helsinki-university-library",
+      "jobPostingCount": 0,
+      "linkCount": 130,
+      "providerCandidates": [],
+      "responseBytes": 300529,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "edb710995604d33b87e1752be7907f11a682abfc6011126724008832c9e8c3fc",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.helsinki.fi/en/about-us/careers",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 112,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.helsinki.fi/en/about-us/careers",
+          "responseBytes": 312932,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "485e0cfd1e0dbd5d79300673d047c375ddcf7b99b4b6e0f37915bb2cb4ef131c",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.helsinki.fi/en/about-us/careers/open-positions/summer-jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 114,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.helsinki.fi/en/about-us/careers/open-positions/summer-jobs",
+          "responseBytes": 310005,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://jobs.hp.com/",
+      "contentSha256": "7f1b0989862cd4fcc4efda6f70cff0915cb6c869636d2e427dffcd36ca866630",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-201-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://jobs.hp.com/",
+      "httpStatus": 200,
+      "identifier": "hp-labs",
+      "jobPostingCount": 0,
+      "linkCount": 201,
+      "providerCandidates": [],
+      "responseBytes": 237768,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "7f1b0989862cd4fcc4efda6f70cff0915cb6c869636d2e427dffcd36ca866630",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://jobs.hp.com/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 98,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://jobs.hp.com",
+          "responseBytes": 237768,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "3197a531c5d72b1ad1fbadce4adce94ceef6906d5e23f9b78bdc7186b96b0f5c",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://jobs.hp.com/fr/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 97,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://jobs.hp.com/fr/",
+          "responseBytes": 243455,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://mta.hu/allasok",
+      "contentSha256": "858d3624e8cc4f4c5a4ef637135d7c344268c262deb72b324ee93c39ad551de7",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-173-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://mta.hu/allasok",
+      "httpStatus": 200,
+      "identifier": "hungarian-academy-of-sciences",
+      "jobPostingCount": 0,
+      "linkCount": 173,
+      "providerCandidates": [],
+      "responseBytes": 45871,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "858d3624e8cc4f4c5a4ef637135d7c344268c262deb72b324ee93c39ad551de7",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://mta.hu/allasok",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 166,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "http://mta.hu/allasok",
+          "responseBytes": 45871,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "2519b5ce5d9e2017f8dea89df637c598da7a01347a75f71ce54274977333cecf",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://mta.hu/mta_hirei/a-magyar-tudomanyos-akademia-testuleteinek-allasfoglalasai-112518",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 190,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://mta.hu/mta_hirei/a-magyar-tudomanyos-akademia-testuleteinek-allasfoglalasai-112518",
+          "responseBytes": 60101,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://iabtechlab.com/tech-lab-careers/",
+      "contentSha256": "84382e6a39b3b8dd74a10aa34a581adedaab1bcd053922b212b8d8d8863cf59a",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-160-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://iabtechlab.com/tech-lab-careers/",
+      "httpStatus": 200,
+      "identifier": "iab-technology-laboratory",
+      "jobPostingCount": 0,
+      "linkCount": 160,
+      "providerCandidates": [],
+      "responseBytes": 139608,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "89b8366433bffde883c3d51d75f81f5ec73934c9b4223ee76e1413c157eef3ca",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.iab.com/careers/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 148,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.iab.com/careers/",
+          "responseBytes": 142262,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "b7c0de68077242e75af83093e05b1fa557c4ef3790816248ee2520c3926f5458",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://iabtechlab.com/jobs-in-adtech/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 131,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://iabtechlab.com/jobs-in-adtech/",
+          "responseBytes": 92112,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.ilo.org/about-ilo/employment-opportunities",
+      "contentSha256": "1c9b018e27ffc303323ff4edd689531417430a98a2db1be2a772e309672940cf",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.ilo.org/about-ilo/employment-opportunities",
+      "httpStatus": 403,
+      "identifier": "ilo-library",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5674,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://ieee.taleo.net/careersection/2/jobsearch.ftl?lang=en",
+      "contentSha256": "9e52f4878773f09eea67cee2429e0ec686bafadfa9b223245a0e34ab9eb62f2b",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:taleo",
+      "finalUrl": "https://ieee.taleo.net/careersection/2/jobsearch.ftl?lang=en",
+      "httpStatus": 200,
+      "identifier": "institute-of-electrical-and-electronics-engineers",
+      "jobPostingCount": 0,
+      "linkCount": 33,
+      "providerCandidates": [
+        {
+          "endpoint": "https://ieee.taleo.net",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2/jobsearch.ftl?lang=en",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2/mysearches.ftl",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/UIStyleSheet.dcss?styleSheet=FSIEEE+Theme+v4&timestamp=1787871913818",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/advanced-search-panel.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/faceted_search.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/footer_panel.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/header_panel.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/jquery-ui.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/quick_filter_panel.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/result_list_panel.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/css/see_all_olf_popup.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/js/common/json2.js",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/js/common/require.js",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/2026PRD.1.2.7.3.0/js/integration/iframes_communication.js",
+          "organizationFilter": null,
+          "provider": "taleo"
+        },
+        {
+          "endpoint": "https://ieee.taleo.net/careersection/theme/421/1774639882716/en/theme/css/ieeestyle.css",
+          "organizationFilter": null,
+          "provider": "taleo"
+        }
+      ],
+      "responseBytes": 53502,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "1859ab6563b9f40fce850a6347b1433659b8cefd08f94d66824ff898fc7d8097",
+          "contentType": "text/html",
+          "finalUrl": "https://ieee.taleo.net/smartorg/smartorg/common/toc.jsf?lang=en",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": "taleo",
+          "requestedUrl": "https://ieee.taleo.net",
+          "responseBytes": 1446,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "ada86be4c491075a497fa024c6a10379f17f86587e546275a19654db93e8ed8c",
+          "contentType": "text/html",
+          "finalUrl": "https://ieee.taleo.net/careersection/2/mysearches.ftl",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": "taleo",
+          "requestedUrl": "https://ieee.taleo.net/careersection/2/mysearches.ftl",
+          "responseBytes": 1422,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.inist.fr/qui/inist-recrute/",
+      "contentSha256": "7578fa015632f4e2378b73cb4ce6d2a37f9700f8ea24367cee5a9bb3edda1d04",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-135-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.inist.fr/qui/inist-recrute/",
+      "httpStatus": 200,
+      "identifier": "institute-of-scientific-and-technical-information",
+      "jobPostingCount": 0,
+      "linkCount": 135,
+      "providerCandidates": [],
+      "responseBytes": 57550,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "a2a615d2102178e837acd8b087e542d9839e721fa8cc7a23817839dffc51027f",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://emploi.cnrs.fr/Unites/UAR76/Offres.aspx",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 41,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://emploi.cnrs.fr/Unites/UAR76/Offres.aspx",
+          "responseBytes": 25736,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "15ca5ec21bc658744dd737a94ec9e468a6c9d6c14c2aa7cbba2944cac6cd5139",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://emploi.cnrs.fr/Offres/CDD/UAR76-FLOLAM-054/Default.aspx",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 42,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://emploi.cnrs.fr/Offres/CDD/UAR76-FLOLAM-054/Default.aspx",
+          "responseBytes": 43149,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.icpsr.umich.edu/sites/icpsr/about/careers",
+      "contentSha256": "75e5aeb4c70569b0b8c9839a006bb23ce5fdf99b0491aa93628e21511f2e5287",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-109-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.icpsr.umich.edu/sites/icpsr/about/careers",
+      "httpStatus": 200,
+      "identifier": "inter-university-consortium-for-political-and-social-research",
+      "jobPostingCount": 0,
+      "linkCount": 109,
+      "providerCandidates": [],
+      "responseBytes": 41118,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "682d4ecadf53843efb9747eb1459c3334efe0b2940015146e97cfc3628acbb99",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://careers.umich.edu/search-jobs?career_interest=All&work_location=All&position=All&regular_temporary=All&job_id=&department=icpsr&title=&keyword=",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 72,
+          "organizationFilter": {
+            "department": "icpsr"
+          },
+          "provider": null,
+          "requestedUrl": "https://myumi.ch/ICPSR-jobs",
+          "responseBytes": 27131,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "3b7975a560d24d2a373f7da39fb74b4ad8ea24914e2fa24273890b7d697ac6e2",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://careers.umich.edu/benefits",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 77,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "http://careers.umich.edu/benefits/",
+          "responseBytes": 21051,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.ltsnet.net/careers.html",
+      "contentSha256": "b166758c592abb2353754361529bfd592eefd5c770b3611f7e412eeabac56bff",
+      "contentType": "text/html",
+      "discoveryReason": "retrieved-html-with-41-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.ltsnet.net/careers.html",
+      "httpStatus": 200,
+      "identifier": "laboratory-for-telecommunication-sciences",
+      "jobPostingCount": 0,
+      "linkCount": 41,
+      "providerCandidates": [],
+      "responseBytes": 15742,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": null,
+          "contentType": null,
+          "finalUrl": null,
+          "httpStatus": null,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://ltsnet.net/careers.html",
+          "responseBytes": 0,
+          "retrievalError": "SSLError:HTTPSConnectionPool(host='ltsnet.net', port=443): Max retries exceeded with url: /careers.html (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'ltsnet.net'. (_ssl.c:1082)\")))"
+        },
+        {
+          "contentSha256": "672711270bb795c35cdcda50055e4d72154460b5a28c7484bad06e8bc5eca90d",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://apply.intelligencecareers.gov/home",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 7,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://apply.intelligencecareers.gov/home",
+          "responseBytes": 1050,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.canada.ca/en/library-archives/corporate/join-team/career.html",
+      "contentSha256": "5e738d1372e55d53d36006e3b6f5d47254c31bb64da5b1e77e6d6a3efa4b7fd6",
+      "contentType": "text/html;charset=utf-8",
+      "discoveryReason": "retrieved-html-with-61-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.canada.ca/en/library-archives/corporate/join-team/career.html",
+      "httpStatus": 200,
+      "identifier": "library-and-archives-canada",
+      "jobPostingCount": 0,
+      "linkCount": 61,
+      "providerCandidates": [],
+      "responseBytes": 26137,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "cbac230f618feacab4d6372493d76d74e08bbef0f1875b98451db5bbb5a8c9fb",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440?classificationInfos=&locationsFilter=&officialLanguage=&title=&tab=1&search=Chercher%20un%20emploi&selectionProcessNumber=&departments=1084&log=false&toggleLanguage=en",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 27,
+          "organizationFilter": {
+            "departments": "1084",
+            "search": "Chercher un emploi"
+          },
+          "provider": null,
+          "requestedUrl": "https://emploisfp-psjobs.cfp-psc.gc.ca/psrs-srfp/applicant/page2440?classificationInfos=&locationsFilter=&officialLanguage=&title=&tab=1&search=Chercher%20un%20emploi&selectionProcessNumber=&departments=1084&log=false&toggleLanguage=en",
+          "responseBytes": 150630,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "37a04ca91997a83a48d65ca0abe0c50c793e5503a57ac6fea1cf844a9e4c97d2",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.canada.ca/en/services/jobs.html",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 91,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.canada.ca/en/services/jobs.html",
+          "responseBytes": 28531,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.rero.ch/en/a-propos/jobs",
+      "contentSha256": "234acb11e0d5fe965faec32cde6f6ca27124932c009ed68cc0d3a43eb7af3c90",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-36-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.rero.ch/en/a-propos/jobs",
+      "httpStatus": 200,
+      "identifier": "library-network-of-western-switzerland",
+      "jobPostingCount": 0,
+      "linkCount": 36,
+      "providerCandidates": [],
+      "responseBytes": 20594,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "d89a72ba106abab1dde647afaaecdda74a563b3d8b504c5423e2dbd35785011a",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rero.ch/de/about/jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 36,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rero.ch/de/about/jobs",
+          "responseBytes": 20772,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "234acb11e0d5fe965faec32cde6f6ca27124932c009ed68cc0d3a43eb7af3c90",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rero.ch/en/about/jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 36,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rero.ch/en/about/jobs",
+          "responseBytes": 20594,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.loc.gov/careers/",
+      "contentSha256": "d8a7e62ed6f96de6ab8c405cc649484ea6e281781c00acd2844d7a2f2f185474",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.loc.gov/careers/",
+      "httpStatus": 403,
+      "identifier": "library-of-congress",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5557,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://careers.linuxfoundation.org/",
+      "contentSha256": "4f4edc854de5ceaab391e3519627a4300d18aa1d061a1057465931229a8a67cb",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-recognized-provider:teamtailor",
+      "finalUrl": "https://careers.linuxfoundation.org/",
+      "httpStatus": 200,
+      "identifier": "linux-foundation",
+      "jobPostingCount": 0,
+      "linkCount": 48,
+      "providerCandidates": [
+        {
+          "endpoint": "https://www.teamtailor.com/?utm_campaign=poweredby&amp;utm_content=careers.linuxfoundation.org&amp;utm_medium=referral&amp;utm_source=career-site",
+          "organizationFilter": null,
+          "provider": "teamtailor"
+        },
+        {
+          "endpoint": "https://www.teamtailor.com/?utm_campaign=poweredby&utm_content=careers.linuxfoundation.org&utm_medium=referral&utm_source=career-site",
+          "organizationFilter": null,
+          "provider": "teamtailor"
+        }
+      ],
+      "responseBytes": 59757,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "94406a06df6b941af9ba6780c12f60868dbdb8e24acfa2b63e436f57dae74b1c",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.teamtailor.com/en/?utm_campaign=poweredby&utm_content=careers.linuxfoundation.org&utm_medium=referral&utm_source=career-site",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 63,
+          "organizationFilter": null,
+          "provider": "teamtailor",
+          "requestedUrl": "https://www.teamtailor.com/?utm_campaign=poweredby&utm_content=careers.linuxfoundation.org&utm_medium=referral&utm_source=career-site",
+          "responseBytes": 264711,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "94406a06df6b941af9ba6780c12f60868dbdb8e24acfa2b63e436f57dae74b1c",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.teamtailor.com/en/?utm_campaign=poweredby&amp;utm_content=careers.linuxfoundation.org&amp;utm_medium=referral&amp;utm_source=career-site",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 63,
+          "organizationFilter": null,
+          "provider": "teamtailor",
+          "requestedUrl": "https://www.teamtailor.com/?utm_campaign=poweredby&amp;utm_content=careers.linuxfoundation.org&amp;utm_medium=referral&amp;utm_source=career-site",
+          "responseBytes": 264711,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.metmuseum.org/opportunities/careers",
+      "contentSha256": "95af7c3199bcfba75cd83eb1c4e90272642c9ac530d7e9f7d967155b0ab232b0",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "careers-page-http-429",
+      "finalUrl": "https://www.metmuseum.org/opportunities/careers",
+      "httpStatus": 429,
+      "identifier": "metropolitan-museum-of-art",
+      "jobPostingCount": 0,
+      "linkCount": 2,
+      "providerCandidates": [],
+      "responseBytes": 33794,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.microsoft.com/en-us/research/careers/",
+      "contentSha256": "f1c3b3f4935cbf70b6c9aeb13a41fa36e8c532e2b4be9d15da88091068f4fa2a",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:microsoft-careers",
+      "finalUrl": "https://www.microsoft.com/en-us/research/careers/",
+      "httpStatus": 200,
+      "identifier": "microsoft-research",
+      "jobPostingCount": 0,
+      "linkCount": 408,
+      "providerCandidates": [
+        {
+          "endpoint": "https://apply.careers.microsoft.com/careers/job/1970393556940405",
+          "organizationFilter": null,
+          "provider": "microsoft-careers"
+        },
+        {
+          "endpoint": "https://apply.careers.microsoft.com/careers/job/1970393556957953",
+          "organizationFilter": null,
+          "provider": "microsoft-careers"
+        },
+        {
+          "endpoint": "https://apply.careers.microsoft.com/careers/job/1970393556972877",
+          "organizationFilter": null,
+          "provider": "microsoft-careers"
+        },
+        {
+          "endpoint": "https://apply.careers.microsoft.com/careers/job/1970393556972956",
+          "organizationFilter": null,
+          "provider": "microsoft-careers"
+        },
+        {
+          "endpoint": "https://apply.careers.microsoft.com/careers/job/1970393556978221",
+          "organizationFilter": null,
+          "provider": "microsoft-careers"
+        },
+        {
+          "endpoint": "https://apply.careers.microsoft.com/careers/job/1970393556979045",
+          "organizationFilter": null,
+          "provider": "microsoft-careers"
+        }
+      ],
+      "responseBytes": 259302,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "7339485ed027dd60329941e217c3c56de2cc844a346677a0ece9da562226a7b4",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://apply.careers.microsoft.com/careers/job/1970393556940405",
+          "httpStatus": 200,
+          "jobPostingCount": 1,
+          "linkCount": 56,
+          "organizationFilter": null,
+          "provider": "microsoft-careers",
+          "requestedUrl": "https://apply.careers.microsoft.com/careers/job/1970393556940405",
+          "responseBytes": 697925,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "af498a31978f55063951e402be016f454a0876f8f76a933a1af33fc95432caa5",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://apply.careers.microsoft.com/careers/job/1970393556957953",
+          "httpStatus": 200,
+          "jobPostingCount": 1,
+          "linkCount": 56,
+          "organizationFilter": null,
+          "provider": "microsoft-careers",
+          "requestedUrl": "https://apply.careers.microsoft.com/careers/job/1970393556957953",
+          "responseBytes": 694796,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://valtiolle.fi/en/employers/ministry-for-justice/",
+      "contentSha256": "2b013f937c61ca62258e73b6109cfced65572145be2d2c9bf3b950d7cd66d692",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-41-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://valtiolle.fi/en/employers/ministry-for-justice/",
+      "httpStatus": 200,
+      "identifier": "ministry-of-justice",
+      "jobPostingCount": 0,
+      "linkCount": 41,
+      "providerCandidates": [],
+      "responseBytes": 399737,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "f6b6573517b1e00b413374466d4ad57a6ff2eac24430e8b64c63064fa6ee01bf",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://valtiolle.fi/en/forms/valtiolle.fi-recruitment-service-feedback/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 17,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://valtiolle.fi/en/forms/valtiolle.fi-recruitment-service-feedback/",
+          "responseBytes": 224203,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://rio.rj.gov.br/web/portaldeconcursos/home",
+      "contentSha256": "415592662316eb125ce8327c896807362cc945ebd59ace8694faf47f25be41a9",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-101-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://rio.rj.gov.br/web/portaldeconcursos/home",
+      "httpStatus": 200,
+      "identifier": "museum-of-the-city-of-rio-de-janeiro",
+      "jobPostingCount": 0,
+      "linkCount": 101,
+      "providerCandidates": [],
+      "responseBytes": 147341,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "de814a86d46e5f94c62827c87df1603cf19fa619739e61a743bda4d06b6c803b",
+          "contentType": "text/html",
+          "finalUrl": "http://concurso.rio.rj.gov.br/insctexto.htm",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "http://concurso.rio.rj.gov.br/insctexto.htm",
+          "responseBytes": 12866,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "943bcb0358d15c3255b5fe5dae046ea93cf21acd5a2c5296db8114b2d41a6e56",
+          "contentType": "text/html",
+          "finalUrl": "http://concurso.rio.rj.gov.br/formulario.asp",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 1,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "http://concurso.rio.rj.gov.br/formulario.asp",
+          "responseBytes": 4414,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.library.gov.au/visit/about-us/work-us",
+      "contentSha256": "e91d222b6bd057691ba3297243b8fa4d824d6e327c7674543639334d5fcfb915",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:nga",
+      "finalUrl": "https://www.library.gov.au/visit/about-us/work-us",
+      "httpStatus": 200,
+      "identifier": "national-library-of-australia",
+      "jobPostingCount": 0,
+      "linkCount": 229,
+      "providerCandidates": [
+        {
+          "endpoint": "https://nla.nga.net.au/cp/",
+          "organizationFilter": null,
+          "provider": "nga"
+        }
+      ],
+      "responseBytes": 243880,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "db0c9083abc5e4def0b133543db5d9faabe0e1480deb7d362c77d0b22822f814",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://nla.nga.net.au/cp/",
+          "httpStatus": 405,
+          "jobPostingCount": 0,
+          "linkCount": 2,
+          "organizationFilter": null,
+          "provider": "nga",
+          "requestedUrl": "https://nla.nga.net.au/cp/",
+          "responseBytes": 2113,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.gov.br/bn/pt-br/acesso-a-informacao-2/servidores",
+      "contentSha256": "730b521b358e0a48fc983ced3ecb4a6bbedca95eb6c74ec575f2f6adcc12bd8a",
+      "contentType": "text/html;charset=utf-8",
+      "discoveryReason": "retrieved-html-with-300-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.gov.br/bn/pt-br/acesso-a-informacao-2/servidores",
+      "httpStatus": 200,
+      "identifier": "national-library-of-brazil",
+      "jobPostingCount": 0,
+      "linkCount": 300,
+      "providerCandidates": [],
+      "responseBytes": 121263,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "349166a7456d356b7352f64e68df17df0d70053453e8f28396ff22fd18fdae35",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.gov.br/bn/pt-br/acesso-a-informacao-2/servidores/concursos-publicos",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 262,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.gov.br/bn/pt-br/acesso-a-informacao-2/servidores/concursos-publicos",
+          "responseBytes": 124519,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.bnc.cat/Treballar-a-la-BC",
+      "contentSha256": null,
+      "contentType": null,
+      "discoveryReason": "retrieval-failed:SSLError:HTTPSConnectionPool(host='www.bnc.cat', port=443): Max retries exceeded with url: /Treballar-a-la-BC (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))",
+      "finalUrl": null,
+      "httpStatus": null,
+      "identifier": "national-library-of-catalonia",
+      "jobPostingCount": 0,
+      "linkCount": 0,
+      "providerCandidates": [],
+      "responseBytes": 0,
+      "retrievalError": "SSLError:HTTPSConnectionPool(host='www.bnc.cat', port=443): Max retries exceeded with url: /Treballar-a-la-BC (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1082)')))",
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://mincultura.gov.co/secretaria-general/grupo-de-gestion-humana/Paginas/default.aspx",
+      "contentSha256": "748d1eb441b7d9512d34f353b0e9fa4879c2d05e8de7ae6705e753c476d6a027",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-114-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://mincultura.gov.co/secretaria-general/grupo-de-gestion-humana/Paginas/default.aspx",
+      "httpStatus": 200,
+      "identifier": "national-library-of-colombia",
+      "jobPostingCount": 0,
+      "linkCount": 114,
+      "providerCandidates": [],
+      "responseBytes": 109726,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "e425e4158c4143bd35929b53fe3b3a671eac44b8837667b24c923d32dec404db",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://sistemaconvocatorias.mincultura.gov.co/dashboard?estado=1&programas%5B%5D=0&estimulos%5B%5D=0&subsectores%5B%5D=0&perfiles%5B%5D=0&search=",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 35,
+          "organizationFilter": {
+            "search": ""
+          },
+          "provider": null,
+          "requestedUrl": "https://sistemaconvocatorias.mincultura.gov.co/dashboard?estado=1&programas%5B%5D=0&estimulos%5B%5D=0&subsectores%5B%5D=0&perfiles%5B%5D=0&search=",
+          "responseBytes": 650391,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "fd06d3830297402b9bfed22d8fff3081cb0bff8b908c2e2f88f79465a8bc09f5",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://mincultura.gov.co/secretaria-general/grupo-de-gestion-humana/Paginas/servicios-informacion/convocatorias-externas-cnsc.aspx",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 188,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://mincultura.gov.co/secretaria-general/grupo-de-gestion-humana/Paginas/servicios-informacion/convocatorias-externas-cnsc.aspx",
+          "responseBytes": 134211,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.kansalliskirjasto.fi/fi/tietoa-kansalliskirjastosta/kansalliskirjasto-tyonantajana",
+      "contentSha256": "cfd45f8b45e8e373bb89abddf49063eb72e58da3a4f7c0d136ba0a3168685269",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.kansalliskirjasto.fi/fi/tietoa-kansalliskirjastosta/kansalliskirjasto-tyonantajana",
+      "httpStatus": 403,
+      "identifier": "national-library-of-finland",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5811,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://bnl.public.lu/fr/support/offres-emploi.html",
+      "contentSha256": "af8bb13d21c6aaccde900d07e18f52e55f49cec42ed4c7d779ef734e79584876",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-97-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://bnl.public.lu/fr/support/offres-emploi.html",
+      "httpStatus": 200,
+      "identifier": "national-library-of-luxembourg",
+      "jobPostingCount": 0,
+      "linkCount": 97,
+      "providerCandidates": [],
+      "responseBytes": 116868,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "e822cd92eb40c6741dd4b1d9bab47d8a7a7e998623f9db1c4dc180bbfbcaf25a",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://bnl.public.lu:443/fr/support/offres-emploi.html",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 92,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "http://bnl.public.lu/fr/support/offres-emploi.html",
+          "responseBytes": 116866,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "b0da76a94e49a7fa03bb192f392455b78734f1fa23cacdd50efba8d86a4216e0",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://bnl.public.lu/fr/a-la-une/expositions.html",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 119,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://bnl.public.lu/fr/a-la-une/expositions.html",
+          "responseBytes": 171650,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.nb.no/om-nb/ledige-stillinger/",
+      "contentSha256": "1adaae8071cd578cabb4c6b06832ae6ace255e944f15e7d5ae8a061398995328",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:webcruiter",
+      "finalUrl": "https://www.nb.no/om-nb/ledige-stillinger/",
+      "httpStatus": 200,
+      "identifier": "national-library-of-norway",
+      "jobPostingCount": 0,
+      "linkCount": 149,
+      "providerCandidates": [
+        {
+          "endpoint": "https://candidate.webcruiter.com/nb-no/Home/companyadverts?&",
+          "organizationFilter": null,
+          "provider": "webcruiter"
+        },
+        {
+          "endpoint": "https://candidate.webcruiter.com/nb-no/Home/companyadverts?&link_source_ID=0&companylock=810013",
+          "organizationFilter": {
+            "companylock": "810013"
+          },
+          "provider": "webcruiter"
+        }
+      ],
+      "responseBytes": 133257,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "c51e224ecde4298fdfcc0168dea9e11f3254a478b45ccff045bf6139535317f5",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://candidate.webcruiter.com/nb-no/Home/companyadverts?&link_source_ID=0&companylock=810013",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 18,
+          "organizationFilter": {
+            "companylock": "810013"
+          },
+          "provider": "webcruiter",
+          "requestedUrl": "https://candidate.webcruiter.com/nb-no/Home/companyadverts?&link_source_ID=0&companylock=810013",
+          "responseBytes": 58528,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "29e6d17dee55b25c6732b28b5747e3b345d37bf9bdf26d4d1d9bfa65948d5d7d",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://candidate.webcruiter.com/nb-no/Home/companyadverts?&",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 18,
+          "organizationFilter": null,
+          "provider": "webcruiter",
+          "requestedUrl": "https://candidate.webcruiter.com/nb-no/Home/companyadverts?&",
+          "responseBytes": 57491,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.bnportugal.gov.pt/index.php?option=com_content&view=article&id=83&Itemid=92&lang=pt",
+      "contentSha256": "9ed28a8da9848a4e4ace65af58f6144428e7ffb4c3c75cbd3322984016f13e5d",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-320-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.bnportugal.gov.pt/index.php?option=com_content&view=article&id=83&Itemid=92&lang=pt",
+      "httpStatus": 200,
+      "identifier": "national-library-of-portugal",
+      "jobPostingCount": 0,
+      "linkCount": 320,
+      "providerCandidates": [],
+      "responseBytes": 98770,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://bibnat.ro/angajari/",
+      "contentSha256": "02ffade35ba86e509ed2232cd9ba7d52f60f9609764b2da62a09fa075b06f607",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-268-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://bibnat.ro/angajari/",
+      "httpStatus": 200,
+      "identifier": "national-library-of-romania",
+      "jobPostingCount": 0,
+      "linkCount": 268,
+      "providerCandidates": [],
+      "responseBytes": 227683,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "2c3e7a42a05fd4a63d2d87391f05d747a71bfa79f1cf35c6b1650ff002b04298",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://bibnat.ro/cariera-voluntariat/anunt-concursuri-conform-memorandum-nr-20-30160-m-nov-dec-2022/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 296,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://bibnat.ro/cariera-voluntariat/anunt-concursuri-conform-memorandum-nr-20-30160-m-nov-dec-2022/",
+          "responseBytes": 256860,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "26971448c27c7d710b3f1a3c1d5f5525f6c155ad0a429082464ad73a950d8380",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://bibnat.ro/cariera-voluntariat/anunt-privind-scoaterea-la-concurs-a-postului-de-executie-conservator-grad-profesional-s-i-in-cadrul-directiei-filiala-batthyaneum-alba-iulia/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 229,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://bibnat.ro/cariera-voluntariat/anunt-privind-scoaterea-la-concurs-a-postului-de-executie-conservator-grad-profesional-s-i-in-cadrul-directiei-filiala-batthyaneum-alba-iulia/",
+          "responseBytes": 220360,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://nlr.ru/nlr_visit/RA4698/vakansii",
+      "contentSha256": "57e603cac593f5f68f398c7f6156137e4c92b61933da5e99e9ce91c30ce7905b",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-56-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://nlr.ru/nlr_visit/RA4698/vakansii",
+      "httpStatus": 200,
+      "identifier": "national-library-of-russia",
+      "jobPostingCount": 0,
+      "linkCount": 56,
+      "providerCandidates": [],
+      "responseBytes": 17626,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "2ec8993021b7e4b9cd36f247078d4462b7c976c00424eddc8c1d6b43e0f1de4c",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://expositions.nlr.ru/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 30,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "http://expositions.nlr.ru",
+          "responseBytes": 12885,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.nkp.cz/kontakty/kariera",
+      "contentSha256": "b0e1eb0c23f77ae45cff9f6eb64a356750c9a6d7b87016a52e44d4cb0798b901",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-95-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.nkp.cz/kontakty/kariera",
+      "httpStatus": 200,
+      "identifier": "national-library-of-the-czech-republic",
+      "jobPostingCount": 0,
+      "linkCount": 95,
+      "providerCandidates": [],
+      "responseBytes": 52617,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.gub.uy/ministerio-educacion-cultura/institucional/concursos",
+      "contentSha256": "1b1ad6271eb270ee4cd8b24c40c63e19de88e0beebefa546d80139e39e0409e1",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-98-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.gub.uy/ministerio-educacion-cultura/institucional/concursos",
+      "httpStatus": 200,
+      "identifier": "national-library-of-uruguay",
+      "jobPostingCount": 0,
+      "linkCount": 98,
+      "providerCandidates": [],
+      "responseBytes": 36141,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "4374f409c1e7b185a3e88fc9cb1e48749414ebe456021d0ddc0c0230819ae361",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://uruguayconcursa.gub.uy/llamado/42678",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 7,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://uruguayconcursa.gub.uy/llamado/42678",
+          "responseBytes": 699,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "4374f409c1e7b185a3e88fc9cb1e48749414ebe456021d0ddc0c0230819ae361",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://uruguayconcursa.gub.uy/llamado/42679",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 7,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://uruguayconcursa.gub.uy/llamado/42679",
+          "responseBytes": 699,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://oszk.hu/en/allas",
+      "contentSha256": "b1179e9cad2a213902feafc9c80a23996461237932e9031e84542cbb9e070625",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "careers-page-http-404",
+      "finalUrl": "https://oszk.hu/en/allas",
+      "httpStatus": 404,
+      "identifier": "national-szechenyi-library",
+      "jobPostingCount": 0,
+      "linkCount": 135,
+      "providerCandidates": [],
+      "responseBytes": 23731,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.nifc.gov/careers",
+      "contentSha256": "d880be0def6474c4d927c7f8fdf38012b253b45928049b42acbb3cee3e102636",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:usajobs",
+      "finalUrl": "https://www.nifc.gov/careers",
+      "httpStatus": 200,
+      "identifier": "national-wildfire-coordinating-group",
+      "jobPostingCount": 0,
+      "linkCount": 409,
+      "providerCandidates": [
+        {
+          "endpoint": "https://doifirescareers.usajobs.gov/",
+          "organizationFilter": null,
+          "provider": "usajobs"
+        },
+        {
+          "endpoint": "https://doifirescareers.usajobs.gov/search/results/?d=IN&amp;j=0150&amp;j=0193&amp;j=0301&amp;j=0343&amp;j=0391&amp;j=0404&amp;j=0408&amp;j=0456&amp;j=0462&amp;j=0499&amp;j=0560&amp;j=0856&amp;j=5716&amp;k=wildland+fire&amp;s=startdate&amp;sd=desc&amp;p=1",
+          "organizationFilter": null,
+          "provider": "usajobs"
+        },
+        {
+          "endpoint": "https://doifirescareers.usajobs.gov/search/results/?d=IN&j=0150&j=0193&j=0301&j=0343&j=0391&j=0404&j=0408&j=0456&j=0462&j=0499&j=0560&j=0856&j=5716&k=wildland+fire&s=startdate&sd=desc&p=1",
+          "organizationFilter": null,
+          "provider": "usajobs"
+        },
+        {
+          "endpoint": "https://help.usajobs.gov/faq/application/documents/resume/page-limit",
+          "organizationFilter": null,
+          "provider": "usajobs"
+        }
+      ],
+      "responseBytes": 112970,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "7a90c68644cc4b118b95a01eba909e76b386a38a14de139edec8c06d36c8c720",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://doifirescareers.usajobs.gov/search/results",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 52,
+          "organizationFilter": null,
+          "provider": "usajobs",
+          "requestedUrl": "https://doifirescareers.usajobs.gov/",
+          "responseBytes": 311735,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "c71b1bd73be410ba3df4cbb93de20602464d592e3d960e81afe42da8ea624e41",
+          "contentType": "text/html",
+          "finalUrl": "https://help.usajobs.gov/faq/application/documents/resume/page-limit",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 1,
+          "organizationFilter": null,
+          "provider": "usajobs",
+          "requestedUrl": "https://help.usajobs.gov/faq/application/documents/resume/page-limit",
+          "responseBytes": 394,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.nfdi.de/jobs/",
+      "contentSha256": "ad2111e6bbf5890d4b39519c94818a4e241bfe6563d650d96aab3ddee1673951",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:hrworks",
+      "finalUrl": "https://www.nfdi.de/jobs/",
+      "httpStatus": 200,
+      "identifier": "nfdi4culture",
+      "jobPostingCount": 0,
+      "linkCount": 150,
+      "providerCandidates": [
+        {
+          "endpoint": "https://jobapplication.hrworks.de/?companyId=ar4a5c39",
+          "organizationFilter": {
+            "companyId": "ar4a5c39"
+          },
+          "provider": "hrworks"
+        }
+      ],
+      "responseBytes": 161619,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "cf1a501f4f17b58b07ddd44d2555a4b57fb0b1743f04c4a56531c410a131bd66",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://jobapplication.hrworks.de/en?companyId=ar4a5c39",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 57,
+          "organizationFilter": {
+            "companyId": "ar4a5c39"
+          },
+          "provider": "hrworks",
+          "requestedUrl": "https://jobapplication.hrworks.de/?companyId=ar4a5c39",
+          "responseBytes": 94485,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "0ad775fb8046a44c2e1813d75cef56797540d076726b0f3c23227a715d3083ec",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.nfdi.de/jobs/?lang=en",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 131,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.nfdi.de/jobs/?lang=en",
+          "responseBytes": 159172,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://valtiolle.fi/en/employers/prime-ministers-office/",
+      "contentSha256": "08aaaf07d87f4f5ce496152b68a0995461d0f29b719bc638fb1dd3dc14df577a",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-42-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://valtiolle.fi/en/employers/prime-ministers-office/",
+      "httpStatus": 200,
+      "identifier": "prime-minister-s-office",
+      "jobPostingCount": 0,
+      "linkCount": 42,
+      "providerCandidates": [],
+      "responseBytes": 401668,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "f6b6573517b1e00b413374466d4ad57a6ff2eac24430e8b64c63064fa6ee01bf",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://valtiolle.fi/en/forms/valtiolle.fi-recruitment-service-feedback/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 17,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://valtiolle.fi/en/forms/valtiolle.fi-recruitment-service-feedback/",
+          "responseBytes": 224203,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://careers.georgetown.edu/",
+      "contentSha256": "67974804508e37e011bbe5396546850234267e46faad38f4381f1a5acefdfd8f",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:interfolio,workday",
+      "finalUrl": "https://careers.georgetown.edu/",
+      "httpStatus": 200,
+      "identifier": "protein-information-resource",
+      "jobPostingCount": 0,
+      "linkCount": 93,
+      "providerCandidates": [
+        {
+          "endpoint": "https://apply.interfolio.com/11780/positions",
+          "organizationFilter": null,
+          "provider": "interfolio"
+        },
+        {
+          "endpoint": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+          "organizationFilter": null,
+          "provider": "workday"
+        }
+      ],
+      "responseBytes": 93226,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "cea550379ce5d6b2dd43e7addb426eb8bd46661e5b9fd11c3ee6291e5d9d0023",
+          "contentType": "text/html",
+          "finalUrl": "https://apply.interfolio.com/11780/positions",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 18,
+          "organizationFilter": null,
+          "provider": "interfolio",
+          "requestedUrl": "https://apply.interfolio.com/11780/positions",
+          "responseBytes": 8874,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "d63237b03e0ea64834af270947e48f3bd0b66c2ec2b227119cf430fda15a4863",
+          "contentType": "text/html",
+          "finalUrl": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 1,
+          "organizationFilter": null,
+          "provider": "workday",
+          "requestedUrl": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+          "responseBytes": 7619,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://plos.org/careers/",
+      "contentSha256": "6dff720674a084a2dc4d44b2f0d722dcbc680dbf4a118d1c9de2396bb46ee63c",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:greenhouse",
+      "finalUrl": "https://plos.org/careers/",
+      "httpStatus": 200,
+      "identifier": "public-library-of-science",
+      "jobPostingCount": 0,
+      "linkCount": 141,
+      "providerCandidates": [
+        {
+          "endpoint": "https://job-boards.eu.greenhouse.io/plos",
+          "organizationFilter": null,
+          "provider": "greenhouse"
+        }
+      ],
+      "responseBytes": 251452,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "87467854d40d851d6871835f4e095d4d69c61e901f2b8c8e119c966a55a261da",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://job-boards.eu.greenhouse.io/plos",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 18,
+          "organizationFilter": null,
+          "provider": "greenhouse",
+          "requestedUrl": "https://job-boards.eu.greenhouse.io/plos",
+          "responseBytes": 27013,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "03b40a3945931bce213ce0d31b0405cf790d4de68ca04fde3d9b800c080b9977",
+          "contentType": "application/json; charset=UTF-8",
+          "finalUrl": "https://plos.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fplos.org%2Fcareers%2F",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://plos.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fplos.org%2Fcareers%2F",
+          "responseBytes": 2268,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://eu-careers.europa.eu/en",
+      "contentSha256": "8be5617510aee14795f9616612f8bc6629b4b0373afad1eea7088b216db3cfd8",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-92-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://eu-careers.europa.eu/en",
+      "httpStatus": 200,
+      "identifier": "publications-office-of-the-european-union",
+      "jobPostingCount": 0,
+      "linkCount": 92,
+      "providerCandidates": [],
+      "responseBytes": 57437,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "8be5617510aee14795f9616612f8bc6629b4b0373afad1eea7088b216db3cfd8",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://eu-careers.europa.eu/en",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 91,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://eu-careers.europa.eu",
+          "responseBytes": 57437,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "e1280df3495da0b0a51dac4b19928e737fdd9071294a503213e8a2feee7b36bd",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://eu-careers.europa.eu/bg",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 91,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://eu-careers.europa.eu/bg",
+          "responseBytes": 59480,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.regenstrief.org/careers/",
+      "contentSha256": "e9f6dac1401fc528c828567c1589130ed6610830ebd54ec6402a7a09e33bfe35",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:peopleadmin,ukg",
+      "finalUrl": "https://www.regenstrief.org/careers/",
+      "httpStatus": 200,
+      "identifier": "regenstrief-institute",
+      "jobPostingCount": 0,
+      "linkCount": 213,
+      "providerCandidates": [
+        {
+          "endpoint": "https://indiana.peopleadmin.com/postings/31396",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://recruiting2.ultipro.com/REG1003REGE/JobBoard/56d8ed29-910c-43cc-8539-a82becf08c7f/Opportunity/OpportunityDetail?opportunityId=337968c0-2fa1-482e-899b-0c1b95535bad",
+          "organizationFilter": null,
+          "provider": "ukg"
+        },
+        {
+          "endpoint": "https://recruiting2.ultipro.com/REG1003REGE/JobBoard/56d8ed29-910c-43cc-8539-a82becf08c7f/Opportunity/OpportunityDetail?opportunityId=508a1298-2d75-4867-b9ad-bd85b6b16985",
+          "organizationFilter": null,
+          "provider": "ukg"
+        },
+        {
+          "endpoint": "https://recruiting2.ultipro.com/REG1003REGE/JobBoard/56d8ed29-910c-43cc-8539-a82becf08c7f/Opportunity/OpportunityDetail?opportunityId=acabfa52-8b8a-48a7-bc35-01ee8611c3e2",
+          "organizationFilter": null,
+          "provider": "ukg"
+        }
+      ],
+      "responseBytes": 245024,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "d1485a4bde0a1903e737f0470536082bd977368f4a41d6811e6ba9d2211d5bd1",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://indiana.peopleadmin.com/postings/31396",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 47,
+          "organizationFilter": null,
+          "provider": "peopleadmin",
+          "requestedUrl": "https://indiana.peopleadmin.com/postings/31396",
+          "responseBytes": 32010,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "088057f4d7d8d4dbd7ac901ba0e22ca36536c9ac37357300ecb9480a49933e32",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://recruiting2.ultipro.com/REG1003REGE/JobBoard/56d8ed29-910c-43cc-8539-a82becf08c7f/OpportunityDetail?opportunityId=337968c0-2fa1-482e-899b-0c1b95535bad",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 25,
+          "organizationFilter": null,
+          "provider": "ukg",
+          "requestedUrl": "https://recruiting2.ultipro.com/REG1003REGE/JobBoard/56d8ed29-910c-43cc-8539-a82becf08c7f/Opportunity/OpportunityDetail?opportunityId=337968c0-2fa1-482e-899b-0c1b95535bad",
+          "responseBytes": 40776,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://renci.org/about/careers/",
+      "contentSha256": "62367787cc2ca1589de14a707099aaa95ce6b48c21cb66559264078a2f3bd4ef",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-144-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://renci.org/about/careers/",
+      "httpStatus": 200,
+      "identifier": "renaissance-computing-institute",
+      "jobPostingCount": 0,
+      "linkCount": 144,
+      "providerCandidates": [],
+      "responseBytes": 179306,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "74967494353351bd2f6ac21091ba6375980f84fc7485bfb44632cb0a3dab8598",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://unc.peopleadmin.com/postings/search?utf8=%E2%9C%93&query=&query_v0_posted_at_date=&query_organizational_tier_3_id[]=2571&commit=Search",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 45,
+          "organizationFilter": null,
+          "provider": "peopleadmin",
+          "requestedUrl": "https://bit.ly/RENCIcareers",
+          "responseBytes": 138945,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "c5dce8b83fef425fdc7ac3b78df2cf2e0e4f2b7a5a4cf1d02399ddd6e372f884",
+          "contentType": "application/json; charset=UTF-8",
+          "finalUrl": "https://renci.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frenci.org%2Fabout%2Fcareers%2F",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://renci.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frenci.org%2Fabout%2Fcareers%2F",
+          "responseBytes": 2418,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.rero.ch/en/a-propos/jobs",
+      "contentSha256": "234acb11e0d5fe965faec32cde6f6ca27124932c009ed68cc0d3a43eb7af3c90",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-36-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.rero.ch/en/a-propos/jobs",
+      "httpStatus": 200,
+      "identifier": "rero",
+      "jobPostingCount": 0,
+      "linkCount": 36,
+      "providerCandidates": [],
+      "responseBytes": 20594,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "d89a72ba106abab1dde647afaaecdda74a563b3d8b504c5423e2dbd35785011a",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rero.ch/de/about/jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 36,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rero.ch/de/about/jobs",
+          "responseBytes": 20772,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "234acb11e0d5fe965faec32cde6f6ca27124932c009ed68cc0d3a43eb7af3c90",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rero.ch/en/about/jobs",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 36,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rero.ch/en/about/jobs",
+          "responseBytes": 20594,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.rhein-kreis-neuss.de/de/verwaltung-politik/ausbildung-und-karriere/",
+      "contentSha256": "b875c9f3e10c20a3c36f831ee39d48252c9aedbb0a12fd04eda82de226edd8fc",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-794-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.rhein-kreis-neuss.de/de/verwaltung-politik/ausbildung-und-karriere/",
+      "httpStatus": 200,
+      "identifier": "rhein-kreis-neuss",
+      "jobPostingCount": 0,
+      "linkCount": 794,
+      "providerCandidates": [],
+      "responseBytes": 275188,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "ac9eb87d5028610b341b8b50abe8494b274b826d1f60aeb6d78fc0bc5ce5b93a",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rhein-kreis-neuss.de/de/verwaltung-politik/ausbildung-und-karriere/stellenausschreibungen/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 61,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rhein-kreis-neuss.de/de/verwaltung-politik/ausbildung-und-karriere/stellenausschreibungen/",
+          "responseBytes": 258433,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "6d43e2cc75807b5a6f63ecf7326784fe5f0e3a6e6f46f28e76827219c019695b",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.rhein-kreis-neuss.de/de/verwaltung-politik/aemterliste/jugendamt/abteilungen-dienststellen/familienbuero/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 70,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.rhein-kreis-neuss.de/de/verwaltung-politik/aemterliste/jugendamt/abteilungen-dienststellen/familienbuero/",
+          "responseBytes": 278303,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.unibo.it/en/university/work-with-us",
+      "contentSha256": "0e886baf498f891cd1fad973988555c13cdcfa0563f96d07f99e88b82d8f3076",
+      "contentType": "text/html;charset=utf-8",
+      "discoveryReason": "retrieved-html-with-240-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.unibo.it/en/university/work-with-us",
+      "httpStatus": 200,
+      "identifier": "rimant-repertorium-instrumentorum-musicorum-antiquorum",
+      "jobPostingCount": 0,
+      "linkCount": 240,
+      "providerCandidates": [],
+      "responseBytes": 500874,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "24f5d85a8e82a57ac7242eb6ae8b5775cd07724802117de73d354f6304920a51",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.unibo.it/en/study/towards-the-job-market",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 124,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.unibo.it/en/study/towards-the-job-market",
+          "responseBytes": 485429,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "ea8d7b07186a02c2622c1a30073db8fbaba1a0e0beff8c3e410791eaba0ffe2b",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.unibo.it/en/university/work-with-us/work-with-us",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 151,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.unibo.it/en/university/work-with-us/work-with-us",
+          "responseBytes": 500993,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.aalto.fi/en/careers-at-aalto",
+      "contentSha256": "5c87fc5cca8fb2262f266d3db8c998a9ebef1e9e6ed3c10d1fe16ec4059281b6",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-197-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.aalto.fi/en/careers-at-aalto",
+      "httpStatus": 200,
+      "identifier": "semantic-computing-research-group",
+      "jobPostingCount": 0,
+      "linkCount": 197,
+      "providerCandidates": [],
+      "responseBytes": 127248,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "84caab67bd41f98b7788e8814840b9d451a47632acd6262ccf127c3bd5d23ea7",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.aalto.fi/en/open-positions",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 207,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.aalto.fi/en/open-positions",
+          "responseBytes": 127916,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "ac1e070302415b5c17a59ce03de3544cf8e405ef0c642d805aeb56cfc68ab025",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.aalto.fi/en/careers-at-aalto/careers",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 193,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.aalto.fi/en/careers-at-aalto/careers",
+          "responseBytes": 115454,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.sib.swiss/careers",
+      "contentSha256": "ea463273036dd89d7acd0e47e707b19a657817cb0c576a9401ce17bc5591dc7f",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:refline",
+      "finalUrl": "https://www.sib.swiss/careers",
+      "httpStatus": 200,
+      "identifier": "sib-swiss-institute-of-bioinformatics",
+      "jobPostingCount": 0,
+      "linkCount": 92,
+      "providerCandidates": [
+        {
+          "endpoint": "https://apply.refline.ch/499599/jobmail.html",
+          "organizationFilter": null,
+          "provider": "refline"
+        },
+        {
+          "endpoint": "https://apply.refline.ch/499599/search.html",
+          "organizationFilter": null,
+          "provider": "refline"
+        }
+      ],
+      "responseBytes": 271276,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "a1d4178f997c8d5203fbace9665a250850f81be0e803472a8ae859b8a15fa1a9",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://apply.refline.ch/499599/search.html",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 15,
+          "organizationFilter": null,
+          "provider": "refline",
+          "requestedUrl": "https://apply.refline.ch/499599/search.html",
+          "responseBytes": 18893,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "5a10e6e432637e4571fe1bb568d7d81e0b4f0b76e54a5bb0fa45a09d2930b728",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://apply.refline.ch/499599/jobmail.html",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 11,
+          "organizationFilter": null,
+          "provider": "refline",
+          "requestedUrl": "https://apply.refline.ch/499599/jobmail.html",
+          "responseBytes": 7002,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://snk.sk/en/o-nas",
+      "contentSha256": "2fac74c405fe240c6e66a1292c0a57952249821f375ea759158ebd797f9ca5ca",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-108-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://snk.sk/en/o-nas",
+      "httpStatus": 200,
+      "identifier": "slovak-national-library",
+      "jobPostingCount": 0,
+      "linkCount": 108,
+      "providerCandidates": [],
+      "responseBytes": 141447,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.si.edu/ohr/jobs",
+      "contentSha256": "b570cf7e83e5326dd60abaaf971114175ee2d473e6a90cbeec4d66efa44c7617",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.si.edu/ohr/jobs",
+      "httpStatus": 403,
+      "identifier": "smithsonian-american-art-museum",
+      "jobPostingCount": 0,
+      "linkCount": 3,
+      "providerCandidates": [],
+      "responseBytes": 46450,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://medcareers.stanford.edu/search-jobs?orgIds=27938",
+      "contentSha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880",
+      "contentType": "text/html; charset=iso-8859-1",
+      "discoveryReason": "careers-page-http-404",
+      "finalUrl": "https://careersearch.stanford.edu/search-jobs?orgIds=27938",
+      "httpStatus": 404,
+      "identifier": "stanford-university-school-of-medicine",
+      "jobPostingCount": 0,
+      "linkCount": 0,
+      "providerCandidates": [],
+      "responseBytes": 196,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://valtiolle.fi/en/employers/state-treasury/",
+      "contentSha256": "f8d93a3dc3731ac3c83c3125265f63cf1b5f905258b94c130c58821ae6048c24",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-43-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://valtiolle.fi/en/employers/state-treasury/",
+      "httpStatus": 200,
+      "identifier": "state-treasury",
+      "jobPostingCount": 0,
+      "linkCount": 43,
+      "providerCandidates": [],
+      "responseBytes": 401393,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "f6b6573517b1e00b413374466d4ad57a6ff2eac24430e8b64c63064fa6ee01bf",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://valtiolle.fi/en/forms/valtiolle.fi-recruitment-service-feedback/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 17,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://valtiolle.fi/en/forms/valtiolle.fi-recruitment-service-feedback/",
+          "responseBytes": 224203,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "bb9669842417c0fa237fa9f4d3a45c9b0a3dd38f0dd72b3f7047719221ee45b2",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://www.valtiokonttori.fi/en/state-treasury-in-brief/come-work-with-us-at-the-state-treasury/",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 111,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.valtiokonttori.fi/en/state-treasury-in-brief/come-work-with-us-at-the-state-treasury/",
+          "responseBytes": 77149,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.konkurrensverket.se/om-oss/jobba-hos-oss/lediga-jobb/",
+      "contentSha256": "9ac3fba44ec6b5d88219692b7408fb5bd2f9e1502fd3966458892b493f4ca08e",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "careers-page-http-403",
+      "finalUrl": "https://www.konkurrensverket.se/om-oss/jobba-hos-oss/lediga-jobb/",
+      "httpStatus": 403,
+      "identifier": "swedish-competition-authority",
+      "jobPostingCount": 0,
+      "linkCount": 1,
+      "providerCandidates": [],
+      "responseBytes": 5662,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.isof.se/aktuellt/lediga-tjanster",
+      "contentSha256": "0b2b2fb17af02ced35ad610fc2cd8f31bf5986a4b627f36b1bb4f819f60d7668",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-209-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.isof.se/aktuellt/lediga-tjanster",
+      "httpStatus": 200,
+      "identifier": "swedish-institute-for-language-and-folklore",
+      "jobPostingCount": 0,
+      "linkCount": 209,
+      "providerCandidates": [],
+      "responseBytes": 54312,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "2aa09b2a3b4077c42edea6894a31fb77f1cfe264f6ec6c0fbcea52bca450919a",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://www.isof.se/aktuellt/lediga-tjanster/att-jobba-pa-isof",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 204,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.isof.se/aktuellt/lediga-tjanster/att-jobba-pa-isof",
+          "responseBytes": 74515,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://jobs.open.ac.uk/",
+      "contentSha256": "f3f4f31ba0dc9527fcb4c1a39caba8c88b411cf51801db62eccdec2c921d513d",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:successfactors",
+      "finalUrl": "https://jobs.open.ac.uk/",
+      "httpStatus": 200,
+      "identifier": "the-open-university",
+      "jobPostingCount": 0,
+      "linkCount": 73,
+      "providerCandidates": [
+        {
+          "endpoint": "https://jobs.open.ac.uk/",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/?locale=cy_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Academic-and-research-roles/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Accessibility-Statement/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Application-Guidance/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Associate-Lecturer/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Equality-Diversity-and-Inclusion/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/OU-Locations/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Partners-and-Subsidiaries/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Pre-employment-screening/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Professional-Management-and-Support/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Right-to-Work-in-the-UK-and-RoI/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/content/Staff-benefits-at-the-Open-University/?locale=en_GB",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/js/override.js?locale=en_GB&i=1786217302",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/bootstrap/3.4.8_NES/css/bootstrap.min.css",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/bootstrap/3.4.8_NES/js/bootstrap.min.js",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/bootstrap/3.4.8_NES/js/lib/dompurify/purify.min.js",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/csb/css/header1.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/css/j2w/min/BS3ColumnizedSearch.min.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/css/j2w/min/bootstrapV3.global.responsive.min.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/css/j2w/min/sitebuilderframework.min.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/css/j2w/min/sitebuilderframework.tileSearch.min.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/css/j2w/min/sitebuilderframeworkunify.min.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        },
+        {
+          "endpoint": "https://jobs.open.ac.uk/platform/fontawesome4.7/css/font-awesome-4.7.0.min.css?h=6ef0353d",
+          "organizationFilter": null,
+          "provider": "successfactors"
+        }
+      ],
+      "responseBytes": 71979,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "39ba163fcac79bd7541771d3d06b05a8949c6f073000500624bc20222c145ead",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://jobs.open.ac.uk/?locale=cy_GB",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 67,
+          "organizationFilter": null,
+          "provider": "successfactors",
+          "requestedUrl": "https://jobs.open.ac.uk/?locale=cy_GB",
+          "responseBytes": 73277,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "db5c2f5bfacd591ab14dfaa679be18b6e1515c5dfca086c4b7dcb88582de743c",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://jobs.open.ac.uk/?locale=en_GB",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 67,
+          "organizationFilter": null,
+          "provider": "successfactors",
+          "requestedUrl": "https://jobs.open.ac.uk/?locale=en_GB",
+          "responseBytes": 71979,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://careers.un.org/jobs",
+      "contentSha256": "ba6cd17fa20ea91c97b2ed8d97ff8700c61589535e84543e890f0a1e27637e84",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-61-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://careers.un.org/jobs",
+      "httpStatus": 200,
+      "identifier": "united-nations-group-of-experts-on-geographical-names",
+      "jobPostingCount": 0,
+      "linkCount": 61,
+      "providerCandidates": [],
+      "responseBytes": 120074,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://www.nlm.nih.gov/careers/jobopenings.html",
+      "contentSha256": "abb718eeb4fbd3b275518c0784054ffec884e9e7154f9dab2c2330e44d68a91d",
+      "contentType": "text/html",
+      "discoveryReason": "retrieved-html-with-62-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.nlm.nih.gov/careers/jobopenings.html",
+      "httpStatus": 200,
+      "identifier": "united-states-national-library-of-medicine",
+      "jobPostingCount": 0,
+      "linkCount": 62,
+      "providerCandidates": [],
+      "responseBytes": 16419,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "8f97c95a28236caaa66a9c3e51139d96594a9575da8a5ee4d047cf93919c692c",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://hr.nih.gov/careers/open-positions",
+          "httpStatus": 403,
+          "jobPostingCount": 0,
+          "linkCount": 0,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://hr.nih.gov/careers/open-positions",
+          "responseBytes": 5637,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "b13f906ea01cfdfd7b659a1c7444eae2dab6ac8b305adcbac32c2abfc8588ce2",
+          "contentType": "text/html",
+          "finalUrl": "https://www.nlm.nih.gov/careers/careers.html",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 53,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.nlm.nih.gov/careers/careers.html",
+          "responseBytes": 16556,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.uni-bonn.de/en/university/working-at-the-university/job-opportunities?set_language=en",
+      "contentSha256": "17df0b55c42abbf42c2a83c4bb38171048aa35418006da9257883dd1262d8d8f",
+      "contentType": "text/html;charset=utf-8",
+      "discoveryReason": "retrieved-html-with-114-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.uni-bonn.de/en/university/working-at-the-university/job-opportunities?set_language=en",
+      "httpStatus": 200,
+      "identifier": "university-of-bonn",
+      "jobPostingCount": 0,
+      "linkCount": 114,
+      "providerCandidates": [],
+      "responseBytes": 114597,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "59f40f45fddeb4422ce709f3059aec72aca5fb8b4d60c12c5215151377cf893a",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.uni-bonn.de/en/university/working-at-the-university/job-opportunities",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 66,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.uni-bonn.de/en/university/working-at-the-university/job-opportunities",
+          "responseBytes": 114594,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "bb57fd15349d03df32c958c90cb87fc8d06e8eebb091dbb89da843108ad54a48",
+          "contentType": "text/html;charset=utf-8",
+          "finalUrl": "https://www.uni-bonn.de/de/universitaet/arbeiten-an-der-uni/stellenangebote/stellenangebote",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 87,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.uni-bonn.de/de/universitaet/arbeiten-an-der-uni/stellenangebote/stellenangebote",
+          "responseBytes": 124121,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://ejobs.umd.edu/",
+      "contentSha256": "022a5d96c838e619d7ad235e9d7fea533b9665c9541ec11fcde68901e874e755",
+      "contentType": "text/html; charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:workday",
+      "finalUrl": "https://uhr.umd.edu/work_at_umd",
+      "httpStatus": 200,
+      "identifier": "university-of-maryland",
+      "jobPostingCount": 0,
+      "linkCount": 90,
+      "providerCandidates": [
+        {
+          "endpoint": "https://umd.wd1.myworkdayjobs.com/UMCP",
+          "organizationFilter": null,
+          "provider": "workday"
+        }
+      ],
+      "responseBytes": 33826,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "4b9ca72b0c2c0cd9a80fd13f853d85e8ad4c9eeb3a1337471da58d0e42e494eb",
+          "contentType": "text/html",
+          "finalUrl": "https://umd.wd1.myworkdayjobs.com/UMCP",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 1,
+          "organizationFilter": null,
+          "provider": "workday",
+          "requestedUrl": "https://umd.wd1.myworkdayjobs.com/UMCP",
+          "responseBytes": 7963,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "402f9891baabbbb54fb27b65e393453218bd13b6c10785610ad537dfd3674011",
+          "contentType": "text/html; charset=UTF-8",
+          "finalUrl": "https://uhr.umd.edu/learn-and-grow/learning-opportunities",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 91,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://uhr.umd.edu/learn-and-grow/learning-opportunities",
+          "responseBytes": 39204,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://unc.peopleadmin.com/",
+      "contentSha256": "59d163e63fe6cb0d4a7a9419b9ada8e1b62c2b628ca80f8383bfee051b79e8d1",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-recognized-provider:peopleadmin",
+      "finalUrl": "https://unc.peopleadmin.com/",
+      "httpStatus": 200,
+      "identifier": "university-of-north-carolina-at-chapel-hill",
+      "jobPostingCount": 0,
+      "linkCount": 59,
+      "providerCandidates": [
+        {
+          "endpoint": "https://unc.peopleadmin.com/",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=2130521443",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-114x114-12eb9ffc9a189e9c3f086a238e858881c3097539060b6519a0685bf2deeae913.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-120x120-e6767333cbd4199a1d490a91eb0cf09b4725b7bdca6b7c60b7e89bcd3cf289dd.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-144x144-a1a71c2c40cfaf673a230121655d171d71fbc87b05f1996160d10e903e3746ed.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-152x152-78d4aa836f86cae596a448201cb6750e073bcf737661e30ed72617617e8a31fa.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-180x180-aca6ee064d5ee2105e7fffa672ad8f9df9136f194491adb7c85dc2159c07aec5.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-192x192-a3287ee3c5499c16ba428f569fcb1949ca2bf00598ea119279f8b7376696414a.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-45bbabc7cbc15c6689066cb751a59252c08ee84bd423844a9e842624c4906287.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-57x57-45bbabc7cbc15c6689066cb751a59252c08ee84bd423844a9e842624c4906287.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-72x72-c66a6ed23c4045f4568d13c4e7a511edea74bc82a3f908d6e5cf1bc3f5dfd45d.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-76x76-ef0de3cb33d271e0140ad4129a72f37d5c55c3e8a0c30b31e9e0f921290e4e91.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/apple-touch-icon-precomposed-45bbabc7cbc15c6689066cb751a59252c08ee84bd423844a9e842624c4906287.png",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/application-1d1baa5082bf21576d8d04734f2c32dd779653c1dc6ef34ea6a180f62de5a2f4.js",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/application-9168a9eee3ce8df5ff07fcf669699149596b742410dfdd34ac3da7daa145cd70.css",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/application-responsive-43628f7536e4b21ac6dd4cf77f643ceec4d9b52132512c577ee8f625f402ce19.css",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/bootstrap3-97d1ea709d80a3ee43121546c13e5a765210b42361abf6cb57307411d17aa154.css",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/assets/svg-2752e8a56ecf198be7590e4a240900e4c255280448319c25d6695d9583d286c7.css",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/interest_cards",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/login",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/postings/search",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/postings/search?;query=&query_v0_posted_at_date=&1826=3&1827=&query_position_type_id=&526=&query_organizational_tier_2_id=any&query_organizational_tier_3_id=any&commit=Search",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/postings/search?;query=&query_v0_posted_at_date=&1826=4&1827=&query_position_type_id=&526=&query_organizational_tier_2_id=any&query_organizational_tier_3_id=any&commit=Search",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/postings/search?;query=&query_v0_posted_at_date=&1826=5&1827=&query_position_type_id=&526=&query_organizational_tier_2_id=any&query_organizational_tier_3_id=any&commit=Search",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        },
+        {
+          "endpoint": "https://unc.peopleadmin.com/postings/search?utf8=✓&query=&query_v0_posted_at_date=&1826%5B%5D=1&1826%5B%5D=2&commit=Search",
+          "organizationFilter": null,
+          "provider": "peopleadmin"
+        }
+      ],
+      "responseBytes": 18284,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "d3c2e48b3726654a8b9c626361d057b405eee7a31f8006bedbc61255f9f38786",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://unc.peopleadmin.com/login",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 41,
+          "organizationFilter": null,
+          "provider": "peopleadmin",
+          "requestedUrl": "https://unc.peopleadmin.com/login",
+          "responseBytes": 12927,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "3d4a03ee21b5f367273039b96cc7cc5ab4c6be8e04cb3fb9ce5f6f80b7113942",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://unc.peopleadmin.com/interest_cards",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 38,
+          "organizationFilter": null,
+          "provider": "peopleadmin",
+          "requestedUrl": "https://unc.peopleadmin.com/interest_cards",
+          "responseBytes": 30812,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://sede.gva.es/es/cercador-ocupacio-publica",
+      "contentSha256": "5051982eb06d2043e317e0d17e7fdd6820fa17693dc07c2c6a972850f38a4f29",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-html-with-154-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://sede.gva.es/es/cercador-ocupacio-publica",
+      "httpStatus": 200,
+      "identifier": "valencian-library",
+      "jobPostingCount": 0,
+      "linkCount": 154,
+      "providerCandidates": [],
+      "responseBytes": 177880,
+      "retrievalError": null,
+      "secondaryProbes": []
+    },
+    {
+      "careersPage": "https://wikimedia-deutschland.softgarden.io/en/vacancies",
+      "contentSha256": "d8533dccc3428acc5d8bc583bdaf440121b3ca12428799554b67a31ca37b3058",
+      "contentType": "text/html;charset=UTF-8",
+      "discoveryReason": "retrieved-recognized-provider:softgarden",
+      "finalUrl": "https://wikimedia-deutschland.softgarden.io/en/vacancies",
+      "httpStatus": 200,
+      "identifier": "wikimedia-deutschland",
+      "jobPostingCount": 0,
+      "linkCount": 30,
+      "providerCandidates": [
+        {
+          "endpoint": "https://app.softgarden.io/assets/public/media/get/6447f1a1-9457-4f2c-9461-fa405b6121f1/1689775592349/0x45/logo.png",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://app.softgarden.io/assets/public/media/get/71d4e6db-c91d-4645-a6b5-c959fa1dd243/1747322076914/1100x0/Banner_Wir_befreien_Wissen_gruen.png",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://app.softgarden.io/assets/public/media/get/71d4e6db-c91d-4645-a6b5-c959fa1dd243/1747322076914/1100x576P/Banner_Wir_befreien_Wissen_gruen.png",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/de/vacancies",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/en/data-security",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/en/imprint",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/en/vacancies",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/en/vacancies?-1.-jobSearch-jobSearchContainer-internalLink",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/en/vacancies?-1.-jobSearch-jobSearchContainer-jobAboLink",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/en/vacancies?-1.-navigationPanel-languageContainer-langNavRepeater-1-langNavLink",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/job/66319753/Freelance-Project-Generative-AI-Product-Researcher-all-genders-for-NGO-Landscape-Impact-Analysis?jobDbPVId=283025755&l=en",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/job/66488958/Teamassistenz-Governance-Movement-Relations-all-genders-?jobDbPVId=280674403&l=en",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/job/66580113/Manager-in-Community-Growth-Wikipedia-all-genders-?jobDbPVId=281004953&l=en",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/job/66647013/Empfangskraft-Office-Assistenz-all-genders-?jobDbPVId=281396538&l=en",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/sign-in?l=en",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/sign-up?l=en",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/thirdparty/jquery/query/jquery.query-2.2.3.js",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/wicket/resource/com.softgarden.staffit.webclient.webfrontend.core.WebFrontendApplication/core-ver-46480A77CA2574AB851CD35B365719CA.js",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/wicket/resource/com.softgarden.staffit.webclient.webfrontend.pages.main.css.CssReference/webfrontend-v2-ver-43A1AC82AFCD5886A1CA5380FB3BB30B.css",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/wicket/resource/com.softgarden.staffit.webclient.webfrontend.pages.main.js.JavaScriptReference/jobSearchLive-ver-DF58093895DAE1EA109A34586D3118B6.js",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        },
+        {
+          "endpoint": "https://wikimedia-deutschland.softgarden.io/wicket/resource/com.softgarden.staffit.webclient.webfrontend.pages.main.js.JavaScriptReference/modernizr-ver-BBD564F40D2D602049100DC76FE17C37.js",
+          "organizationFilter": null,
+          "provider": "softgarden"
+        }
+      ],
+      "responseBytes": 24069,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "c92cf8a2ea83c2916b5f8b6f2352fb83c6555587f67858a056302f7bda963b51",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://wikimedia-deutschland.softgarden.io/en/imprint",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 17,
+          "organizationFilter": null,
+          "provider": "softgarden",
+          "requestedUrl": "https://wikimedia-deutschland.softgarden.io/en/imprint",
+          "responseBytes": 10776,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "021dca2bb262ad13c16cb3f69eaa85fafaeb4973cccb1587d869cf1660391753",
+          "contentType": "text/html;charset=UTF-8",
+          "finalUrl": "https://wikimedia-deutschland.softgarden.io/de/vacancies",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 25,
+          "organizationFilter": null,
+          "provider": "softgarden",
+          "requestedUrl": "https://wikimedia-deutschland.softgarden.io/de/vacancies",
+          "responseBytes": 24276,
+          "retrievalError": null
+        }
+      ]
+    },
+    {
+      "careersPage": "https://www.who.int/careers",
+      "contentSha256": "77ca09a584ae49130113310b3a3514e8ba209bc81682fe7a80a546bc0135e3cd",
+      "contentType": "text/html; charset=utf-8",
+      "discoveryReason": "retrieved-html-with-242-links:no-recognized-provider-or-jobposting",
+      "finalUrl": "https://www.who.int/careers",
+      "httpStatus": 200,
+      "identifier": "world-health-organization",
+      "jobPostingCount": 0,
+      "linkCount": 242,
+      "providerCandidates": [],
+      "responseBytes": 124616,
+      "retrievalError": null,
+      "secondaryProbes": [
+        {
+          "contentSha256": "2b28da896120cdc1bda493c330fbfd7728961d26eb0d20c4cff0600ac89febd7",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.who.int/ar/careers",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 148,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.who.int/ar/careers",
+          "responseBytes": 120082,
+          "retrievalError": null
+        },
+        {
+          "contentSha256": "7d4805d8ce2ffaf5cc87749ed41947d1ff8e54422ad81659cabd0190a08e6d5e",
+          "contentType": "text/html; charset=utf-8",
+          "finalUrl": "https://www.who.int/es/careers",
+          "httpStatus": 200,
+          "jobPostingCount": 0,
+          "linkCount": 142,
+          "organizationFilter": null,
+          "provider": null,
+          "requestedUrl": "https://www.who.int/es/careers",
+          "responseBytes": 115850,
+          "retrievalError": null
+        }
+      ]
+    }
+  ],
+  "count": 85,
+  "supplementalChecks": [
+    {
+      "contentSha256": "87df68b620d789adbc43cc2780c191b581d3c7d7e17adb06eab3f764246d47ea",
+      "httpStatus": 200,
+      "identifier": "defense-logistics-agency",
+      "method": "GET",
+      "responseBytes": 266066,
+      "resultCount": null,
+      "retrievalError": null,
+      "reviewConclusion": "unsupported: branded DLA portal is dynamic and the bounded USAJobs data API requires credentials",
+      "url": "https://dla.usajobs.gov/search/results"
+    },
+    {
+      "contentSha256": "05a4656425493df04e7b1a1eb257cbf8e73c0b0d9e0ffcd578e352841b7443b4",
+      "httpStatus": 200,
+      "identifier": "helsinki-university-library",
+      "method": "GET",
+      "responseBytes": 75331,
+      "resultCount": null,
+      "retrievalError": null,
+      "reviewConclusion": "unsupported: SuccessFactors board is University of Helsinki-wide and exposes no reviewed library organization filter",
+      "url": "https://jobs.helsinki.fi/?locale=en_GB"
+    },
+    {
+      "contentSha256": "4cd2b28b1c5e799b207fff6bd8e2f2a7e79823318edc7429439ad586c34a2a89",
+      "httpStatus": 403,
+      "identifier": "library-of-congress",
+      "method": "GET",
+      "responseBytes": 5760,
+      "resultCount": null,
+      "retrievalError": null,
+      "reviewConclusion": "unsupported: exact LOC careers collection endpoint returns HTTP 403 to the bounded client; USAJobs data API requires credentials",
+      "url": "https://www.loc.gov/search/?fa=partof:careers&fo=json&c=1"
+    },
+    {
+      "contentSha256": "5b6e04e93beccb45d15dddc55b9d739477b961d40070b36e3b729d5bf9afb6c1",
+      "httpStatus": 200,
+      "identifier": "metropolitan-museum-of-art",
+      "method": "POST",
+      "responseBytes": 4907,
+      "resultCount": 12,
+      "retrievalError": null,
+      "reviewConclusion": "supported: exact Met Workday tenant/site CXS endpoint",
+      "url": "https://metmuseum.wd5.myworkdayjobs.com/wday/cxs/metmuseum/metmuseumcareers/jobs"
+    },
+    {
+      "contentSha256": "d80bc85e62869222e2cd8b86a8a76c3ecf5bdf994252bf82eff56ae34530594b",
+      "httpStatus": 200,
+      "identifier": "stanford-university-school-of-medicine",
+      "method": "GET",
+      "responseBytes": 217854,
+      "resultCount": null,
+      "retrievalError": null,
+      "reviewConclusion": "unsupported: prior orgIds=27938 portal redirects to HTTP 404 and the replacement page does not preserve an exact School of Medicine filter",
+      "url": "https://stanford.referrals.selectminds.com/page/school-of-medicine-65"
+    }
+  ]
+}

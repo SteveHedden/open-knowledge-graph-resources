@@ -149,6 +149,9 @@ def build_projection(
             raise OrganizationRegistryError(f"{subject} requires cited inclusion evidence")
 
         homepage = _one(graph, subject, SCHEMA.url, "official homepage", required=False)
+        careers_page = _one(
+            graph, subject, KGJOBS.careersPage, "official careers page", required=False
+        )
         description = _one(graph, subject, DCTERMS.description, "description", required=False)
         review_reason = _one(graph, subject, KGJOBS.reviewReason, "review reason", required=False)
         qid = _qid(graph, subject)
@@ -159,6 +162,7 @@ def build_projection(
                 relationships.get(iri, []),
                 key=lambda row: (row["resourceUrl"], row["producerRoles"], row["sourceProperties"]),
             ),
+            "careersPage": str(careers_page) if careers_page is not None else None,
             "description": str(description) if description is not None else None,
             "ecosystemRoles": [{"uri": uri, "label": roles[uri]} for uri in ecosystem_roles],
             "evidence": evidence,
@@ -173,11 +177,6 @@ def build_projection(
             "reviewReason": str(review_reason) if review_reason is not None else None,
             "reviewStatus": review_status,
         })
-    if enabled_count != 12:
-        raise OrganizationRegistryError(
-            f"expected 12 jobs-enabled organizations, found {enabled_count}"
-        )
-
     try:
         audit = json.loads(audit_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:

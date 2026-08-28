@@ -1,0 +1,28 @@
+{
+  "landingHtml": "<main><div class=\"results_content jResultsContent\" data-jsid=\"22500001\" data-location-ids=\"\"><a data-href=\"/ajax/jobs/22500001/add/location/79\">School of Medicine, Stanford, California, United States (1)</a></div></main>",
+  "facetResponse": {
+    "Result": "22500002",
+    "Status": "OK",
+    "UserMessage": "1"
+  },
+  "listingPages": [
+    {
+      "html": "<div class=\"results_content jResultsContent\" data-jsid=\"22500002\" data-location-ids=\"79\"><div id=\"job_list_30994\"><a class=\"job_link font_bold\" href=\"https://stanford.referrals.selectminds.com/jobs/ontology-data-engineer-30994\">Ontology Data Engineer</a><span class=\"location\">School of Medicine, Stanford, California, United States</span></div><div id=\"jPaginateNumPages\">1.0</div><div id=\"jPaginateCurrPage\">1</div></div>",
+      "page": 1,
+      "url": "https://stanford.referrals.selectminds.com/ajax/content/job_results?JobSearch.id=22500002&site-name=default1696&include_site=true&uid=2"
+    }
+  ],
+  "details": [
+    {
+      "html": "<html><head><script>var job = { id: \"30994\", location: { name: \"School of Medicine, Stanford, California, United States\", id: \"79\" } };</script></head><body><input type=\"hidden\" name=\"Job.id\" value=\"30994\"><input type=\"hidden\" name=\"Job.taleo_job_number\" value=\"109041\"><h1 class=\"title\">Ontology Data Engineer</h1><h4 class=\"primary_location\">School of Medicine, Stanford, California, United States</h4><div class=\"job_description\"><p>Build biomedical ontologies, RDF knowledge graphs, SHACL validation rules, and SPARQL services for clinical research data interoperability.</p></div></body></html>",
+      "url": "https://stanford.referrals.selectminds.com/jobs/ontology-data-engineer-30994"
+    }
+  ],
+  "requestBatches": [
+    {
+      "batch": 1,
+      "detailRequests": 1,
+      "listingRequests": 3
+    }
+  ]
+}

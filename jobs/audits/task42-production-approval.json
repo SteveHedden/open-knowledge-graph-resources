@@ -1,0 +1,46 @@
+{
+  "approvedFirstPartyPublicationPolicy": "qualified-only",
+  "approvedQualifiedPostings": [
+    {
+      "id": "firstparty:first-party-embl-ebi:JR4207",
+      "sourceKey": "first-party-embl-ebi",
+      "title": "BioImaging Bioinformatician"
+    },
+    {
+      "id": "firstparty:first-party-university-of-maryland:JR104812",
+      "sourceKey": "first-party-university-of-maryland",
+      "title": "AI Research Assistant"
+    }
+  ],
+  "approvedSourceCount": 17,
+  "approvedSourceKeys": [
+    "first-party-danish-bibliographic-centre",
+    "first-party-embl-ebi",
+    "first-party-institute-of-scientific-and-technical-information",
+    "first-party-inter-university-consortium-for-political-and-social-research",
+    "first-party-linux-foundation",
+    "first-party-metropolitan-museum-of-art",
+    "first-party-microsoft-research",
+    "first-party-national-library-of-norway",
+    "first-party-public-library-of-science",
+    "first-party-regenstrief-institute",
+    "first-party-renaissance-computing-institute",
+    "first-party-sib-swiss-institute-of-bioinformatics",
+    "first-party-stanford-university-school-of-medicine",
+    "first-party-the-open-university",
+    "first-party-university-of-maryland",
+    "first-party-university-of-north-carolina-at-chapel-hill",
+    "first-party-wikimedia-deutschland"
+  ],
+  "deploymentTriggered": false,
+  "heldReviewPostings": [
+    {
+      "id": "firstparty:first-party-embl-ebi:JR3997",
+      "sourceKey": "first-party-embl-ebi",
+      "title": "Bioinformatician"
+    }
+  ],
+  "publicJobsSnapshotModified": false,
+  "schemaVersion": 1,
+  "status": "production-wiring-complete-pending-final-review"
+}

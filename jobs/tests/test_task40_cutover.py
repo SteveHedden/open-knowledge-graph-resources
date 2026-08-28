@@ -20,7 +20,9 @@ from first_party_classifier import (  # noqa: E402
     classify_first_party_record,
     load_first_party_policy,
 )
-from first_party_sources import load_first_party_sources  # noqa: E402
+from first_party_sources import (  # noqa: E402
+    load_first_party_sources, load_production_first_party_sources,
+)
 import live_pipeline  # noqa: E402
 
 OKG = Namespace("https://openknowledgegraphs.com/ontology#")
@@ -137,7 +139,8 @@ def test_pinned_placeholders_and_unrelated_wikimedia_records_remain_out():
 def test_root_sources_distinguish_aggregators_from_first_party_career_services():
     graph = Graph().parse(REPO_ROOT / "sources.ttl", format="turtle")
     careers = set(graph.subjects(RDF.type, OKG.CareerSource))
-    assert len(careers) == 12
+    assert len(careers) == len(load_first_party_sources())
+    assert len(load_production_first_party_sources()) < len(careers)
     for source in careers:
         assert (source, RDF.type, DCAT.DataService) in graph
         assert len(list(graph.objects(source, DCTERMS.publisher))) == 1

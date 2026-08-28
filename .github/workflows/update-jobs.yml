@@ -2,33 +2,14 @@ name: Update KG Jobs Data
 
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
       source:
-        description: Refresh one approved source; default refreshes all 17
+        description: Production source identifier from sources.ttl; default refreshes all in bounded batches
         required: false
         default: all
-        type: choice
-        options:
-          - all
-          - himalayas
-          - jobicy
-          - jooble
-          - arbeitnow
-          - adzuna
-          - first-party-neo4j
-          - first-party-relationalai
-          - first-party-tigergraph
-          - first-party-wikimedia
-          - first-party-stardog
-          - first-party-weaviate
-          - first-party-graphwise
-          - first-party-enterprise-knowledge
-          - first-party-metaphacts
-          - first-party-topquadrant
-          - first-party-eccenca
-          - first-party-w3c
+        type: string
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false
@@ -46,7 +27,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 150
     defaults:
       run:
         working-directory: jobs
@@ -88,42 +69,29 @@ jobs:
           fi
           exit 0
 
-      - name: Refresh each production-cleared source
+      - name: Restore private last-good first-party evidence
+        id: restore_private_state
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            jobs/runtime/sources
+            jobs/runtime/raw/first-party-*.json
+          key: kg-jobs-private-last-good-${{ github.ref_name }}-${{ github.run_id }}
+          restore-keys: |
+            kg-jobs-private-last-good-${{ github.ref_name }}-
+
+      - name: Build one bounded-parallel production snapshot
         id: refresh
-        shell: bash
-        run: |
-          set +e
-          requested="${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
-          if [ "$requested" = "all" ]; then
-            sources=(
-              himalayas jobicy jooble arbeitnow adzuna
-              first-party-neo4j first-party-relationalai first-party-tigergraph
-              first-party-wikimedia first-party-stardog first-party-weaviate
-              first-party-graphwise first-party-enterprise-knowledge
-              first-party-metaphacts first-party-topquadrant first-party-eccenca
-              first-party-w3c
-            )
-          else
-            sources=("$requested")
-          fi
-          failures=0
-          for source in "${sources[@]}"; do
-            echo "::group::Refreshing $source"
-            if [ "$source" = "jooble" ]; then
-              JOOBLE_API_KEY="${{ secrets.JOOBLE_API_KEY }}" python scripts/live_pipeline.py --live --source jooble
-            elif [ "$source" = "adzuna" ]; then
-              ADZUNA_APP_ID="${{ secrets.ADZUNA_APP_ID }}" ADZUNA_APP_KEY="${{ secrets.ADZUNA_APP_KEY }}" python scripts/live_pipeline.py --live --source adzuna
-            else
-              python scripts/live_pipeline.py --live --source "$source"
-            fi
-            status=$?
-            echo "::endgroup::"
-            if [ "$status" -ne 0 ]; then
-              echo "::error::$source refresh failed (exit $status) -- see log above"
-              failures=$((failures + 1))
-            fi
-          done
-          echo "failures=$failures" >> "$GITHUB_OUTPUT"
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+          JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
+        run: >-
+          python scripts/task42_nightly.py
+          --live
+          --runtime-dir runtime
+          --source "${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
+          --github-output "$GITHUB_OUTPUT"
 
       - name: Retain first-party diagnostics outside the public Pages artifact
         if: always()
@@ -133,20 +101,26 @@ jobs:
           path: |
             jobs/runtime/raw/first-party-*.json
             jobs/runtime/sources/first-party-*.json
+            jobs/runtime/careers-discovery/run.json
+            jobs/runtime/nightly-run.json
           if-no-files-found: ignore
           retention-days: 30
 
+      - name: Save private last-good first-party evidence
+        if: steps.refresh.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            jobs/runtime/sources
+            jobs/runtime/raw/first-party-*.json
+          key: kg-jobs-private-last-good-${{ github.ref_name }}-${{ github.run_id }}
+
       - name: Publish snapshot to the committed data path
         if: github.event_name != 'workflow_dispatch' || inputs.dry_run != true
-        run: |
-          mkdir -p ../data/jobs/raw
-          cp runtime/jobs.json ../data/jobs/jobs.json
-          cp runtime/jobs.ttl ../data/jobs/jobs.ttl
-          cp runtime/run.json ../data/jobs/run.json
-          rm -f ../data/jobs/raw/*.json
-          for source in himalayas jobicy jooble arbeitnow adzuna; do
-            [ -f "runtime/raw/$source.json" ] && cp "runtime/raw/$source.json" ../data/jobs/raw/
-          done
+        run: >-
+          python scripts/promote_jobs_snapshot.py
+          --runtime runtime
+          --destination ../data/jobs
 
       - name: Detect published snapshot changes
         id: changes
@@ -171,8 +145,8 @@ jobs:
 
       - name: Regenerate and verify the data/jobs/ manifest
         # Only regenerate when data/jobs/ actually changed this run: most
-        # sources are gated by their own minRefreshIntervalSeconds and skip
-        # most hourly runs, so sourceRetrievedAt (the newest known-good
+        # sources are gated by their own minRefreshIntervalSeconds and may skip
+        # a nightly run, so sourceRetrievedAt (the newest known-good
         # per-source fetch time) can be well before this run started. The
         # manifest schema requires startedAt <= sourceRetrievedAt, which
         # only holds when this run itself is the one that produced the

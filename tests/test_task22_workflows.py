@@ -57,33 +57,14 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
         type: boolean""",
         JOBS_PATH: """on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 3 * * *"
   workflow_dispatch:
     inputs:
       source:
-        description: Refresh one approved source; default refreshes all 17
+        description: Production source identifier from sources.ttl; default refreshes all in bounded batches
         required: false
         default: all
-        type: choice
-        options:
-          - all
-          - himalayas
-          - jobicy
-          - jooble
-          - arbeitnow
-          - adzuna
-          - first-party-neo4j
-          - first-party-relationalai
-          - first-party-tigergraph
-          - first-party-wikimedia
-          - first-party-stardog
-          - first-party-weaviate
-          - first-party-graphwise
-          - first-party-enterprise-knowledge
-          - first-party-metaphacts
-          - first-party-topquadrant
-          - first-party-eccenca
-          - first-party-w3c
+        type: string
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false

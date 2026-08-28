@@ -130,6 +130,14 @@ def _fixture_payload(directory: Path, source: FirstPartySource):
     suffix = ".json" if source.adapter in {
         "firstparty-greenhouse", "firstparty-lever", "firstparty-ashby",
         "firstparty-graphwise", "firstparty-rippling", "firstparty-eccenca",
+        "firstparty-teamtailor", "firstparty-same-site-detail",
+        "firstparty-workday", "firstparty-webcruiter",
+        "firstparty-successfactors", "firstparty-ukg",
+        "firstparty-softgarden", "firstparty-refline", "firstparty-emply",
+        "firstparty-peopleadmin",
+        "firstparty-selectminds",
+        "firstparty-drupal-rss-detail", "firstparty-cnrs-unit-detail",
+        "firstparty-microsoft-research",
     } else ".html"
     fallback = {
         "firstparty-greenhouse": "greenhouse.json",
@@ -139,6 +147,20 @@ def _fixture_payload(directory: Path, source: FirstPartySource):
         "firstparty-graphwise": "first-party-graphwise.json",
         "firstparty-rippling": "rippling.json",
         "firstparty-eccenca": "first-party-eccenca.json",
+        "firstparty-teamtailor": "first-party-sage-publishing.json",
+        "firstparty-same-site-detail": "first-party-triply.json",
+        "firstparty-workday": "first-party-metropolitan-museum-of-art.json",
+        "firstparty-webcruiter": "first-party-national-library-of-norway.json",
+        "firstparty-successfactors": "first-party-the-open-university.json",
+        "firstparty-ukg": "first-party-regenstrief-institute.json",
+        "firstparty-softgarden": "first-party-wikimedia-deutschland.json",
+        "firstparty-refline": "first-party-sib-swiss-institute-of-bioinformatics.json",
+        "firstparty-emply": "first-party-danish-bibliographic-centre.json",
+        "firstparty-peopleadmin": "first-party-renaissance-computing-institute.json",
+        "firstparty-selectminds": "first-party-stanford-university-school-of-medicine.json",
+        "firstparty-drupal-rss-detail": "first-party-inter-university-consortium-for-political-and-social-research.json",
+        "firstparty-cnrs-unit-detail": "first-party-institute-of-scientific-and-technical-information.json",
+        "firstparty-microsoft-research": "first-party-microsoft-research.json",
     }[source.adapter]
     specific = directory / f"{source.key}{suffix}"
     path = specific if specific.exists() else directory / fallback
@@ -379,6 +401,7 @@ def run_pilot(
     *, live: bool = False, fixtures: Path | None = None,
     runtime_dir: Path = RUNTIME_DIR, retrieved_at: str | None = None,
     selected_sources: list[str] | None = None,
+    first_party_fetcher=None,
 ) -> dict:
     if live == bool(fixtures):
         raise PilotError("choose exactly one of live network mode or fixture mode")
@@ -415,7 +438,10 @@ def run_pilot(
             })
             continue
         try:
-            payload = fetch_source(source) if live else _fixture_payload(fixtures, source)
+            payload = (
+                (first_party_fetcher or fetch_source)(source)
+                if live else _fixture_payload(fixtures, source)
+            )
             normalized = records_from_payload(payload, source)
             classified = classify_first_party_records(
                 normalized, match_terms, qualification_policy
@@ -505,7 +531,7 @@ def run_pilot(
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     mode = parser.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--live", action="store_true", help="permit the 12 bounded reviewed requests")
+    mode.add_argument("--live", action="store_true", help="permit the selected bounded reviewed requests")
     mode.add_argument("--fixtures", type=Path, help="read one network-free fixture per source")
     parser.add_argument("--source", action="append", help="run only one declared source; repeatable")
     parser.add_argument(

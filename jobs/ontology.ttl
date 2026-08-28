@@ -198,6 +198,11 @@ kgjobs:searchEnabled a rdf:Property ;
     rdfs:comment "True when a source may be queried by an explicitly enabled local live-ingestion run."@en ;
     rdfs:range xsd:boolean .
 
+kgjobs:productionEnabled a rdf:Property ;
+    rdfs:label "production enabled"@en ;
+    rdfs:comment "Explicit aggregator publication gate. True admits the source to scheduled and default production runs; false keeps a search-enabled source available only for deliberate local review."@en ;
+    rdfs:range xsd:boolean .
+
 kgjobs:sourceQuery a rdf:Property ;
     rdfs:label "source query"@en ;
     rdfs:comment "Links a search source to one or more stable, bounded candidate-retrieval query families. Query families are provenance, not classification evidence; the RDF vocabulary remains the classifier authority."@en ;
@@ -279,7 +284,12 @@ kgjobs:maxRecordsPerRun a rdf:Property ;
 
 kgjobs:maxRequestsPerRun a rdf:Property ;
     rdfs:label "maximum requests per run"@en ;
-    rdfs:comment "Hard upper bound on paginated API requests made by one explicitly invoked local run."@en ;
+    rdfs:comment "Hard upper bound on every HTTP request made across one complete source invocation, including listing, pagination, redirect, and detail hydration requests."@en ;
+    rdfs:range xsd:integer .
+
+kgjobs:maxRequestsPerBatch a rdf:Property ;
+    rdfs:label "maximum requests per batch"@en ;
+    rdfs:comment "Optional upper bound for one internal request batch when a complete invocation is partitioned into smaller bounded batches; it never replaces or relaxes maxRequestsPerRun."@en ;
     rdfs:range xsd:integer .
 
 kgjobs:attributionText a rdf:Property ;
@@ -345,6 +355,12 @@ kgjobs:reviewReason a rdf:Property ;
 kgjobs:lastVerified a rdf:Property ;
     rdfs:label "last verified"@en ;
     rdfs:range xsd:date .
+
+kgjobs:careersPage a rdf:Property ;
+    rdfs:label "official careers page"@en ;
+    rdfs:comment "Human-facing official careers or employment page recorded for organization coverage review; this link alone does not enable ingestion or publication."@en ;
+    rdfs:domain schema:Organization ;
+    rdfs:range rdfs:Resource .
 
 kgjobs:catalogResource a rdf:Property ;
     rdfs:label "catalog resource"@en ;
@@ -648,6 +664,7 @@ kgjobs:SearchSourceShape a sh:NodeShape ;
     sh:targetSubjectsOf kgjobs:searchEnabled ;
     sh:class dcat:Dataset ;
     sh:property [ sh:path kgjobs:searchEnabled ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
+    sh:property [ sh:path kgjobs:productionEnabled ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
     sh:property [ sh:path dcterms:identifier ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path dcat:distribution ; sh:minCount 1 ; sh:maxCount 1 ] ;
     sh:property [ sh:path kgjobs:adapter ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
@@ -660,7 +677,8 @@ kgjobs:SearchSourceShape a sh:NodeShape ;
     sh:property [ sh:path kgjobs:requestTimeoutSeconds ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
     sh:property [ sh:path kgjobs:maxResponseBytes ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
     sh:property [ sh:path kgjobs:maxRecordsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
-    sh:property [ sh:path kgjobs:maxRequestsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] .
+    sh:property [ sh:path kgjobs:maxRequestsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxRequestsPerBatch ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] .
 
 kgjobs:QueryFamilyShape a sh:NodeShape ;
     sh:targetClass kgjobs:QueryFamily ;
@@ -685,6 +703,7 @@ kgjobs:ReviewedOrganizationShape a sh:NodeShape ;
     sh:property [ sh:path kgjobs:reviewStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "evidence-reviewed" ) ] ;
     sh:property [ sh:path kgjobs:active ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
     sh:property [ sh:path kgjobs:lastVerified ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:date ] ;
+    sh:property [ sh:path kgjobs:careersPage ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
     sh:property [ sh:path okg:jobsProductionEnabled ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:boolean ] ;
     sh:property [ sh:path owl:sameAs ; sh:maxCount 1 ; sh:nodeKind sh:IRI ] ;
     sh:sparql [
@@ -741,7 +760,18 @@ kgjobs:FirstPartyCareerSourceShape a sh:NodeShape ;
     sh:property [ sh:path kgjobs:maxResponseBytes ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
     sh:property [ sh:path kgjobs:maxRecordsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
     sh:property [ sh:path kgjobs:maxRequestsPerRun ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:integer ] ;
+    sh:property [ sh:path kgjobs:maxRequestsPerBatch ; sh:maxCount 1 ; sh:datatype xsd:integer ; sh:minInclusive 1 ] ;
     sh:property [ sh:path kgjobs:sourceReviewStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "evidence-reviewed" "unresolved" "rejected" ) ] ;
+    sh:sparql [
+        sh:message "A source request-batch cap cannot exceed its complete-run request cap." ;
+        sh:select """
+            SELECT $this WHERE {
+                $this kgjobs:maxRequestsPerRun ?run ;
+                      kgjobs:maxRequestsPerBatch ?batch .
+                FILTER (?batch > ?run)
+            }
+        """
+    ] ;
     sh:sparql [
         sh:message "A production-approved career source requires an active, evidence-reviewed, jobs-enabled publisher." ;
         sh:select """

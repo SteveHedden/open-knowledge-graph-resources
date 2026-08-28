@@ -18,7 +18,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import first_party_sources as fps  # noqa: E402
 import live_pipeline  # noqa: E402
-from live_sources import LivePipelineError, RefreshNotDueError  # noqa: E402
+import source_schedule  # noqa: E402
+from task42_source_audit import TASK42_SOURCE_KEYS  # noqa: E402
+from live_sources import (  # noqa: E402
+    LivePipelineError, RefreshNotDueError, load_production_source_registry,
+)
 
 
 APPROVED = {
@@ -53,9 +57,9 @@ def directory_digest(path: Path) -> str:
     return digest.hexdigest()
 
 
-def test_production_loader_admits_exactly_the_12_explicitly_approved_sources():
+def test_production_loader_admits_task39_and_task42_approved_sources():
     sources = fps.load_production_first_party_sources()
-    assert set(sources) == APPROVED
+    assert set(sources) == APPROVED | set(TASK42_SOURCE_KEYS)
     assert all(source.production_approved for source in sources.values())
     assert all(source.review_status == "evidence-reviewed" for source in sources.values())
     assert all(source.republication_status == "production-approved" for source in sources.values())
@@ -89,7 +93,9 @@ def test_every_approved_source_runs_end_to_end_through_production_pipeline(
     )
     assert run["sourceKey"] == source_key
     assert run["queryCount"] == 0
-    assert run["requestCount"] == source.max_requests_per_run
+    assert run["requestCount"] == fps.request_count_from_payload(
+        fixture_payload(source), source
+    )
     assert run["fetchedCount"] == {
         "first-party-graphwise": 2,
         "first-party-eccenca": 2,
@@ -261,17 +267,30 @@ def test_occurrence_provenance_has_json_rdf_parity(tmp_path):
     }
 
 
-def test_workflow_runs_all_17_sources_and_keeps_first_party_diagnostics_off_pages():
+def test_workflow_derives_production_sources_and_keeps_first_party_diagnostics_off_pages():
     workflow = (REPO_ROOT / ".github" / "workflows" / "update-jobs.yml").read_text()
-    for source in {
-        "himalayas", "jobicy", "jooble", "arbeitnow", "adzuna", *APPROVED,
-    }:
-        assert f"- {source}" in workflow or f" {source}" in workflow
+    expected = {
+        *load_production_source_registry(REPO_ROOT / "sources.ttl"),
+        *fps.load_production_first_party_sources(),
+    }
+    batches = source_schedule.bounded_batches()
+    assert {key for batch in batches for key in batch} == expected
+    assert all(
+        sum(source_schedule.production_source_weights()[key] for key in batch)
+        <= source_schedule.DEFAULT_BATCH_REQUEST_CAP
+        for batch in batches
+    )
+    assert "scripts/task42_nightly.py" in workflow
+    assert "--batch-request-cap" not in workflow  # runner owns the reviewed default
+    assert "sources=(" not in workflow
     assert "actions/upload-artifact@v4" in workflow
     assert "runtime/raw/first-party-*.json" in workflow
     assert "runtime/sources/first-party-*.json" in workflow
     assert "first-party-diagnostics-${{ github.run_id }}" in workflow
-    assert 'cp "runtime/raw/$source.json" ../data/jobs/raw/' in workflow
+    assert "actions/cache/restore@v4" in workflow
+    assert "actions/cache/save@v4" in workflow
+    assert "kg-jobs-private-last-good-${{ github.ref_name }}-" in workflow
+    assert "scripts/promote_jobs_snapshot.py" in workflow
     assert "data/jobs/sources" not in workflow
     assert "inputs.dry_run != true" in workflow
 

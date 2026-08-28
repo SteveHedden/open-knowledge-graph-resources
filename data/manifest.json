@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260827T175437Z-8f3a11783dd6",
-  "startedAt": "2026-08-27T17:50:45Z",
-  "sourceRetrievedAt": "2026-08-27T17:53:51Z",
-  "completedAt": "2026-08-27T17:54:37Z",
+  "generationId": "20260827T221000Z-0c070131a5d7",
+  "startedAt": "2026-08-27T19:15:06Z",
+  "sourceRetrievedAt": "2026-08-27T20:15:01Z",
+  "completedAt": "2026-08-27T22:10:00Z",
   "counts": {
     "records": {
       "resources": 3012,
@@ -46,7 +46,7 @@
     },
     {
       "path": "data/organizations.json",
-      "sha256": "7f9c9ec38869c40326b63358a8bff43f079862603c687e803ce298257c3962bd"
+      "sha256": "363e69cf0ec4f95362ef8af1edc86d21e67006e7f351c224fffe4280ac893a7a"
     },
     {
       "path": "data/page_qids.json",
@@ -74,7 +74,7 @@
     },
     {
       "path": "organizations.ttl",
-      "sha256": "3092fa07c8f7403e3d78ccfb1f7e81678b31a7e8bd2e8f8717563787aa522cab"
+      "sha256": "f37568ae8921b1b227dcf77a075cbf70be36017eb49dd2e78e97d2d29ac1a430"
     },
     {
       "path": "site/CNAME",
@@ -122,7 +122,7 @@
     },
     {
       "path": "sources.ttl",
-      "sha256": "6f1932a2eff89fa23a91fd86fe51d34e7ca4f26b543d15bd94fd39d7115fd1db"
+      "sha256": "f323f4fbfa5d7c54c93264f0430b0a23755f642fe7a0efe4cd432b539c052ef7"
     },
     {
       "path": "vocabularies/categories.ttl",

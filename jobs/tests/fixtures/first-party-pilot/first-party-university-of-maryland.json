@@ -1,0 +1,36 @@
+{
+  "details": [
+    {
+      "externalPath": "/job/University-of-Maryland-College-Park/Ontology-Engineer_JR104999",
+      "payload": {
+        "jobPostingInfo": {
+          "endDate": "2026-10-01",
+          "externalUrl": "https://umd.wd1.myworkdayjobs.com/UMCP/job/University-of-Maryland-College-Park/Ontology-Engineer_JR104999",
+          "jobDescription": "<p>Design ontologies and RDF knowledge graphs, publish SHACL constraints, and maintain SPARQL services for research data.</p>",
+          "jobReqId": "JR104999",
+          "location": "University of Maryland College Park",
+          "startDate": "2026-08-27",
+          "timeType": "Full time",
+          "title": "Ontology Engineer"
+        }
+      }
+    }
+  ],
+  "listingPages": [
+    {
+      "jobPostings": [
+        {
+          "bulletFields": ["JR104999"],
+          "externalPath": "/job/University-of-Maryland-College-Park/Ontology-Engineer_JR104999",
+          "locationsText": "University of Maryland College Park",
+          "postedOn": "Posted Today",
+          "title": "Ontology Engineer"
+        }
+      ],
+      "total": 1
+    }
+  ],
+  "requestBatches": [
+    {"batch": 1, "listingRequests": 1, "detailRequests": 1}
+  ]
+}

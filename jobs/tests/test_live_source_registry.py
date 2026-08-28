@@ -18,8 +18,12 @@ from live_sources import (  # noqa: E402
     LivePipelineError,
     build_feed_url,
     fetch_json_http,
+    load_production_source_registry,
     load_source_registry,
 )
+
+
+PRODUCTION_AGGREGATORS = {"adzuna", "arbeitnow", "himalayas", "jobicy", "jooble"}
 
 
 class FakeResponse:
@@ -55,6 +59,14 @@ def test_remotive_source_is_fully_registry_driven():
     assert source.attribution_text == "Remotive"
     assert source.attribution_url == "https://remotive.com/"
     assert source.terms_url == "https://remotive.com/remote-jobs/api"
+    assert source.production_enabled is False
+
+
+def test_production_gate_admits_exact_existing_aggregator_set_and_excludes_remotive():
+    sources = load_production_source_registry(REPO_ROOT / "sources.ttl")
+    assert set(sources) == PRODUCTION_AGGREGATORS
+    assert all(source.production_enabled for source in sources.values())
+    assert "remotive" not in sources
 
 
 def test_himalayas_is_default_ready_with_four_bounded_rdf_queries():
@@ -129,6 +141,17 @@ def test_search_enabled_requires_an_actual_xsd_boolean(tmp_path):
     registry = tmp_path / "sources.ttl"
     registry.write_text(invalid, encoding="utf-8")
     with pytest.raises(LivePipelineError, match="xsd:boolean"):
+        load_source_registry(registry)
+
+
+def test_production_enabled_requires_an_actual_xsd_boolean(tmp_path):
+    text = (REPO_ROOT / "sources.ttl").read_text(encoding="utf-8")
+    invalid = text.replace(
+        "kgjobs:productionEnabled true", 'kgjobs:productionEnabled "true"', 1
+    )
+    registry = tmp_path / "sources.ttl"
+    registry.write_text(invalid, encoding="utf-8")
+    with pytest.raises(LivePipelineError, match="productionEnabled must be an xsd:boolean"):
         load_source_registry(registry)
 
 

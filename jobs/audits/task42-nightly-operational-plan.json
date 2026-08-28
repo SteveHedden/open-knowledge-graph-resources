@@ -1,0 +1,37 @@
+{
+  "activationStatus": "production-wiring-complete-pending-final-review",
+  "catalogGenerationCron": "0 6 * * *",
+  "deploymentTriggered": false,
+  "discoveryMonitor": {
+    "maximumParallelPages": 8,
+    "pageCount": 68,
+    "publicationPerformed": false,
+    "requestTimeoutSeconds": 15,
+    "scheduledNightly": true
+  },
+  "fullIngestion": {
+    "batchCount": 10,
+    "batchRequestCap": 128,
+    "failurePolicy": "terminate a timed-out source, retain its last-good raw and normalized records, continue other sources, then atomically publish the complete candidate snapshot",
+    "maxParallelSources": 4,
+    "productionSourceCount": 34,
+    "refreshIntervalSeconds": 86400,
+    "sourceTimeoutSeconds": 720,
+    "task42ApprovedSourceCount": 17
+  },
+  "nightlyRunCount": 1,
+  "productionFlagsChanged": true,
+  "publicationPolicy": {
+    "aggregators": "existing-qualified-or-review-policy-unchanged",
+    "task42FirstParty": "qualified-only"
+  },
+  "repositoryPublicationPerformed": false,
+  "scheduleConfigured": true,
+  "schemaVersion": 2,
+  "targetCron": "0 3 * * *",
+  "targetWorkflow": ".github/workflows/update-jobs.yml",
+  "uncoveredOrganizations": 22,
+  "workflowOverheadBudgetSeconds": 720,
+  "workflowTimeoutSeconds": 9000,
+  "worstCaseSeconds": 7920
+}

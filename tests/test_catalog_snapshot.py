@@ -184,7 +184,7 @@ class JobsManifestIsolationTests(unittest.TestCase):
         covered = {entry["path"] for entry in manifest["artifacts"]}
         self.assertFalse(any(path.startswith("data/jobs/") for path in covered))
 
-    def test_core_manifest_content_is_stable_across_jobs_hourly_refresh(self):
+    def test_core_manifest_content_is_stable_across_independent_jobs_refresh(self):
         manifest_before = finalize(self.root)
         write(self.root / "data/jobs/jobs.json", '{"items": [{"title": "Changed"}]}\n')
         self.assertEqual(catalog_snapshot.verify_manifest(self.root), manifest_before)

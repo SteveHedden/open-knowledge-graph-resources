@@ -1,0 +1,25 @@
+{
+  "listingPages": [
+    {
+      "url": "https://unc.peopleadmin.com/postings/search?utf8=%E2%9C%93&query=&query_v0_posted_at_date=&1826%5B%5D=1&1826%5B%5D=2&commit=Search",
+      "html": "<main><a href=\"/postings/400001\">Library Metadata Engineer</a><a href=\"/postings/search?utf8=%E2%9C%93&amp;query=&amp;query_v0_posted_at_date=&amp;1826%5B%5D=1&amp;1826%5B%5D=2&amp;commit=Search&amp;page=2\">Next</a></main>"
+    },
+    {
+      "url": "https://unc.peopleadmin.com/postings/search?utf8=%E2%9C%93&query=&query_v0_posted_at_date=&1826%5B%5D=1&1826%5B%5D=2&commit=Search&page=2",
+      "html": "<main><a href=\"/postings/400002\">Administrative Coordinator</a></main>"
+    }
+  ],
+  "details": [
+    {
+      "url": "https://unc.peopleadmin.com/postings/400001",
+      "html": "<div><h2>Library Metadata Engineer</h2><table><tr><th>Posting Open Date</th><td>08/27/2026</td></tr><tr><th>Work Location</th><td>Chapel Hill, NC</td></tr><tr><th>Vacancy ID</th><td>STA400001</td></tr><tr><th>Position Summary</th><td>Build RDF knowledge graphs and ontology-backed metadata services for digital library collections.</td></tr><tr><th>Required Qualifications, Competencies, and Experience</th><td>Experience with SPARQL, SHACL, linked data, and semantic web engineering.</td></tr></table></div>"
+    },
+    {
+      "url": "https://unc.peopleadmin.com/postings/400002",
+      "html": "<div><h2>Administrative Coordinator</h2><table><tr><th>Posting Open Date</th><td>08/27/2026</td></tr><tr><th>Work Location</th><td>Chapel Hill, NC</td></tr><tr><th>Vacancy ID</th><td>STA400002</td></tr><tr><th>Position Summary</th><td>Coordinate calendars, purchasing, travel, event logistics, reports, and general office operations.</td></tr><tr><th>Required Qualifications, Competencies, and Experience</th><td>Strong written communication, scheduling, organizational, and customer-service skills.</td></tr></table></div>"
+    }
+  ],
+  "requestBatches": [
+    {"batch": 1, "listingRequests": 2, "detailRequests": 2}
+  ]
+}

@@ -76,6 +76,8 @@ class SourceConfig:
     max_response_bytes: int
     max_records_per_run: int
     max_requests_per_run: int
+    max_requests_per_batch: int
+    production_enabled: bool
     max_posting_age_days: int | None = None
 
     @property
@@ -115,20 +117,27 @@ def _optional_positive_int(value, label: str) -> int | None:
     return _positive_int(value, label)
 
 
+def _required_boolean(graph: Graph, subject, predicate, label: str) -> bool:
+    value = _one(graph, subject, predicate, label)
+    if (
+        not isinstance(value, Literal)
+        or value.datatype != XSD.boolean
+        or not isinstance(value.toPython(), bool)
+    ):
+        raise LivePipelineError(f"{label} must be an xsd:boolean")
+    return value.toPython()
+
+
 def load_source_registry(path: Path) -> dict[str, SourceConfig]:
     graph = Graph()
     graph.parse(path, format="turtle")
     sources: dict[str, SourceConfig] = {}
 
     for dataset in set(graph.subjects(KGJOBS.searchEnabled, None)):
-        enabled = _one(graph, dataset, KGJOBS.searchEnabled, "kgjobs:searchEnabled")
-        if (
-            not isinstance(enabled, Literal)
-            or enabled.datatype != XSD.boolean
-            or not isinstance(enabled.toPython(), bool)
-        ):
-            raise LivePipelineError("kgjobs:searchEnabled must be an xsd:boolean")
-        if not enabled.toPython():
+        enabled = _required_boolean(
+            graph, dataset, KGJOBS.searchEnabled, "kgjobs:searchEnabled"
+        )
+        if not enabled:
             continue
         if (dataset, RDF.type, DCAT.Dataset) not in graph:
             raise LivePipelineError(f"search-enabled source is not a dcat:Dataset: {dataset}")
@@ -224,6 +233,19 @@ def load_source_registry(path: Path) -> dict[str, SourceConfig]:
                 f"source {key} query-family order must be unique and contiguous from 1"
             )
 
+        max_requests_per_run = _positive_int(
+            _one(graph, dataset, KGJOBS.maxRequestsPerRun, "maximum requests per run"),
+            "maximum requests per run",
+        )
+        batch_value = graph.value(dataset, KGJOBS.maxRequestsPerBatch)
+        max_requests_per_batch = (
+            _positive_int(batch_value, "maximum requests per batch")
+            if batch_value is not None else max_requests_per_run
+        )
+        if max_requests_per_batch > max_requests_per_run:
+            raise LivePipelineError(
+                f"source {key} request batch cap exceeds its complete-run cap"
+            )
         config = SourceConfig(
             key=key,
             dataset_uri=str(dataset),
@@ -252,9 +274,10 @@ def load_source_registry(path: Path) -> dict[str, SourceConfig]:
                 _one(graph, dataset, KGJOBS.maxRecordsPerRun, "maximum records per run"),
                 "maximum records per run",
             ),
-            max_requests_per_run=_positive_int(
-                _one(graph, dataset, KGJOBS.maxRequestsPerRun, "maximum requests per run"),
-                "maximum requests per run",
+            max_requests_per_run=max_requests_per_run,
+            max_requests_per_batch=max_requests_per_batch,
+            production_enabled=_required_boolean(
+                graph, dataset, KGJOBS.productionEnabled, "kgjobs:productionEnabled"
             ),
             max_posting_age_days=_optional_positive_int(
                 graph.value(dataset, KGJOBS.maxPostingAgeDays), "maximum posting age in days"
@@ -276,6 +299,15 @@ def load_source_registry(path: Path) -> dict[str, SourceConfig]:
     if not sources:
         raise LivePipelineError("source registry contains no enabled search sources")
     return sources
+
+
+def load_production_source_registry(path: Path) -> dict[str, SourceConfig]:
+    """Return only aggregators explicitly admitted to public production runs."""
+    return {
+        key: source
+        for key, source in load_source_registry(path).items()
+        if source.production_enabled
+    }
 
 
 def build_feed_url(source: SourceConfig, request_number: int = 1) -> str:

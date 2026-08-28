@@ -20,16 +20,53 @@ from classifier import load_match_terms  # noqa: E402
 from first_party_pilot import _live_refresh_due, run_pilot  # noqa: E402
 from live_records import classify_records  # noqa: E402
 
+ORIGINAL_PRODUCTION_SOURCES = {
+    "first-party-neo4j", "first-party-relationalai", "first-party-tigergraph",
+    "first-party-wikimedia", "first-party-stardog", "first-party-weaviate",
+    "first-party-graphwise", "first-party-enterprise-knowledge",
+    "first-party-metaphacts", "first-party-topquadrant", "first-party-eccenca",
+    "first-party-w3c",
+}
+TASK41_REVIEW_SOURCES = {
+    "first-party-artsy", "first-party-databricks",
+    "first-party-sage-publishing", "first-party-triply",
+}
+TASK42_REVIEW_SOURCES = {
+    "first-party-danish-bibliographic-centre",
+    "first-party-embl-ebi",
+    "first-party-institute-of-scientific-and-technical-information",
+    "first-party-inter-university-consortium-for-political-and-social-research",
+    "first-party-linux-foundation",
+    "first-party-metropolitan-museum-of-art",
+    "first-party-microsoft-research",
+    "first-party-national-library-of-norway",
+    "first-party-public-library-of-science",
+    "first-party-regenstrief-institute",
+    "first-party-renaissance-computing-institute",
+    "first-party-sib-swiss-institute-of-bioinformatics",
+    "first-party-stanford-university-school-of-medicine",
+    "first-party-the-open-university",
+    "first-party-university-of-maryland",
+    "first-party-university-of-north-carolina-at-chapel-hill",
+    "first-party-wikimedia-deutschland",
+}
 
-def test_registry_has_12_reviewed_production_sources_and_all_caps():
+
+def test_registry_preserves_review_sources_and_approved_task42_sources():
     sources = fps.load_first_party_sources()
     production = fps.load_production_first_party_sources()
-    assert len(sources) == 12
-    assert production == sources
+    assert set(sources) == (
+        ORIGINAL_PRODUCTION_SOURCES | TASK41_REVIEW_SOURCES | TASK42_REVIEW_SOURCES
+    )
+    approved = ORIGINAL_PRODUCTION_SOURCES | TASK42_REVIEW_SOURCES
+    assert set(production) == approved
     assert {source.provider for source in sources.values()} == {
-        "greenhouse", "lever", "ashby", "rippling", "same-site"
+        "greenhouse", "lever", "ashby", "teamtailor", "workday",
+        "webcruiter", "rippling", "same-site", "successfactors", "ukg",
+        "softgarden", "refline", "emply",
+        "peopleadmin", "taleo-selectminds", "drupal-rss", "cnrs",
+        "microsoft-research",
     }
-    assert sum(source.max_requests_per_run for source in sources.values()) <= 60
     graph = Graph().parse(REPO_ROOT / "sources.ttl", format="turtle")
     kgjobs = Namespace("https://openknowledgegraphs.com/jobs/ontology#")
     assert all(
@@ -42,13 +79,19 @@ def test_registry_has_12_reviewed_production_sources_and_all_caps():
         assert source.robots_url.startswith("https://")
         assert source.attribution_url.startswith("https://")
         assert source.review_status == "evidence-reviewed"
-        assert source.republication_status == "production-approved"
-        assert source.production_approved is True
+        assert source.republication_status in {"production-approved", "local-review-only"}
+        assert source.production_approved is (source.key in approved)
         assert source.refresh_interval_seconds >= 86400
         assert source.timeout_seconds <= 20
-        assert source.max_response_bytes <= 5_000_000
-        assert source.max_requests_per_run <= 3
-        assert source.max_records_per_run <= 250
+        assert source.max_response_bytes <= 15_000_000
+        assert source.max_requests_per_batch <= source.max_requests_per_run
+        assert source.max_requests_per_batch <= 64
+        assert source.max_requests_per_run <= 800
+        assert source.max_records_per_run <= 1_000
+    for key in ORIGINAL_PRODUCTION_SOURCES:
+        assert sources[key].max_response_bytes <= 5_000_000
+        assert sources[key].max_requests_per_run <= 3
+        assert sources[key].max_records_per_run <= 250
 
 
 @pytest.mark.parametrize(

@@ -2,8 +2,8 @@
 """Pull one bounded registered source into a local snapshot.
 
 Network access is impossible unless the caller supplies ``--live``. In
-production this script runs on an hourly schedule (see
-``.github/workflows/update-jobs.yml``), once per registered source; each
+production this script is orchestrated by the nightly 04:00 UTC jobs workflow
+(see ``.github/workflows/update-jobs.yml``), once per due registered source; each
 source's own registry-declared refresh interval (``sources.ttl``) still
 governs how often it is actually fetched, and the resulting snapshot is
 committed to repo-root ``data/jobs/jobs.json`` / ``data/jobs/jobs.ttl`` (kept
@@ -49,6 +49,7 @@ from live_sources import (  # noqa: E402
     SourceConfig,
     build_feed_url,
     fetch_json_http,
+    load_production_source_registry,
     load_source_registry,
 )
 from arbeitnow_adapter import (  # noqa: E402
@@ -65,6 +66,7 @@ from first_party_sources import (  # noqa: E402
     FirstPartySourceError,
     fetch_source as fetch_first_party_source,
     load_production_first_party_sources,
+    request_count_from_payload as first_party_request_count,
     records_from_payload as first_party_records,
 )
 from first_party_classifier import (  # noqa: E402
@@ -263,10 +265,15 @@ def run_pipeline(
     fetcher: Fetcher = fetch_json_http,
     first_party_fetcher=fetch_first_party_source,
     catalog_root: Path | None = None,
+    include_review_aggregators: bool = False,
 ) -> dict:
     retrieved_at = retrieved_at or utc_now()
     repo_root = root.parent
-    sources = load_source_registry(repo_root / "sources.ttl")
+    sources = (
+        load_source_registry(repo_root / "sources.ttl")
+        if include_review_aggregators
+        else load_production_source_registry(repo_root / "sources.ttl")
+    )
     try:
         production_first_party = load_production_first_party_sources(
             repo_root / "sources.ttl", repo_root / "data" / "organizations.json"
@@ -289,7 +296,15 @@ def run_pipeline(
         "arbeitnow", "remotive", "himalayas", "jobicy", "jooble", "adzuna",
         "firstparty-greenhouse", "firstparty-lever", "firstparty-ashby",
         "firstparty-schema", "firstparty-graphwise", "firstparty-rippling",
-        "firstparty-eccenca",
+        "firstparty-eccenca", "firstparty-teamtailor",
+        "firstparty-same-site-detail",
+        "firstparty-workday", "firstparty-webcruiter",
+        "firstparty-successfactors", "firstparty-ukg",
+        "firstparty-softgarden", "firstparty-refline",
+        "firstparty-emply", "firstparty-peopleadmin",
+        "firstparty-selectminds",
+        "firstparty-drupal-rss-detail", "firstparty-cnrs-unit-detail",
+        "firstparty-microsoft-research",
     }
     if source.adapter not in supported:
         raise LivePipelineError(f"unsupported reviewed source adapter: {source.adapter!r}")
@@ -525,7 +540,10 @@ def run_pipeline(
                 else source.query_families
             ))
         ],
-        "requestCount": source.max_requests_per_run if is_first_party else len(payloads),
+        "requestCount": (
+            first_party_request_count(payloads[0], source)
+            if is_first_party else len(payloads)
+        ),
         "fetchedCount": fetched_count,
         "rejectedCount": 0,
         "deduplicatedCount": len(records),
@@ -603,8 +621,8 @@ def main(argv: list[str] | None = None) -> int:
     try:
         run = run_pipeline(source_key=args.source, runtime_dir=args.runtime_dir)
     except RefreshNotDueError as exc:
-        # Nothing to do yet -- an hourly scheduled caller legitimately hits
-        # this for slower-cadence sources on most runs. Exit 0 so it is
+        # Nothing to do yet -- a scheduled or manual caller can legitimately
+        # hit this before a source's cadence elapses. Exit 0 so it is
         # never mistaken for a fetch or validation failure.
         print(f"Skipping {args.source}: {exc}")
         return 0

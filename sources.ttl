@@ -30,6 +30,7 @@ kgjs:adzuna a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:minRefreshIntervalSeconds 21600.0 ;
     kgjobs:networkFree false ;
+    kgjobs:productionEnabled true ;
     kgjobs:requestTimeoutSeconds 20 ;
     kgjobs:retrievalMode "keyword-search-api" ;
     kgjobs:searchEnabled true ;
@@ -40,7 +41,7 @@ kgjs:adzuna a dcat:Dataset ;
     kgjobs:termsURL <https://developer.adzuna.com/docs/terms_of_service> .
 
 kgjs:arbeitnow a dcat:Dataset ;
-    dcterms:description "Public job-board feed retained as an optional local-only comparison source. Original Arbeitnow listing links and visible attribution are retained."@en ;
+    dcterms:description "Public job-board feed used by production KG Jobs ingestion. Original Arbeitnow listing links and visible attribution are retained."@en ;
     dcterms:identifier "arbeitnow" ;
     dcterms:publisher [ a foaf:Agent ;
             foaf:name "Arbeitnow" ] ;
@@ -56,11 +57,64 @@ kgjs:arbeitnow a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:minRefreshIntervalSeconds 3600.0 ;
     kgjobs:networkFree false ;
+    kgjobs:productionEnabled true ;
     kgjobs:requestTimeoutSeconds 20 ;
     kgjobs:retrievalMode "paginated-feed-api" ;
     kgjobs:searchEnabled true ;
     kgjobs:sourceQuery kgjs:arbeitnow-query-all-active ;
     kgjobs:termsURL <https://www.arbeitnow.com/terms> .
+
+kgjs:first-party-artsy a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.ashbyhq.com/docs/public-job-posting-api> ;
+    dcterms:identifier "first-party-artsy" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/artsy/> ;
+    dcterms:title "Artsy public Ashby job-posting API"@en ;
+    dcat:endpointURL <https://api.ashbyhq.com/posting-api/job-board/artsy> ;
+    dcat:landingPage <https://www.artsy.net/jobs> ;
+    kgjobs:adapter "firstparty-ashby" ;
+    kgjobs:allowedHost "api.ashbyhq.com" ;
+    kgjobs:attributionText "Jobs at Artsy" ;
+    kgjobs:attributionURL <https://www.artsy.net/jobs> ;
+    kgjobs:careerProvider "ashby" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "local-review-only" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://api.ashbyhq.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "artsy" ;
+    kgjobs:termsURL <https://developers.ashbyhq.com/docs/public-job-posting-api> .
+
+kgjs:first-party-databricks a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
+    dcterms:identifier "first-party-databricks" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/databricks/> ;
+    dcterms:title "Databricks public Greenhouse job board"@en ;
+    dcat:endpointURL <https://boards-api.greenhouse.io/v1/boards/databricks/jobs> ;
+    dcat:landingPage <https://www.databricks.com/company/careers/open-positions> ;
+    kgjobs:adapter "firstparty-greenhouse" ;
+    kgjobs:allowedHost "boards-api.greenhouse.io" ;
+    kgjobs:attributionText "Jobs at Databricks" ;
+    kgjobs:attributionURL <https://www.databricks.com/company/careers/open-positions> ;
+    kgjobs:careerProvider "greenhouse" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 1000 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 12000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "local-review-only" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "databricks" ;
+    kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
 
 kgjs:first-party-eccenca a dcat:DataService,
         okg:CareerSource ;
@@ -114,6 +168,32 @@ kgjs:first-party-enterprise-knowledge a dcat:DataService,
     kgjobs:tenantIdentifier "enterprise-knowledge.com" ;
     kgjobs:termsURL <https://enterprise-knowledge.com/privacy-policy/> .
 
+kgjs:first-party-embl-ebi a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-embl-ebi" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/embl-s-european-bioinformatics-institute/> ;
+    dcterms:title "EMBL-EBI location-filtered Workday board"@en ;
+    dcat:endpointURL <https://embl.wd103.myworkdayjobs.com/wday/cxs/embl/EMBL/jobs?locations=e80afa7e65f5100729542eddd1ff0000> ;
+    dcat:landingPage <https://www.ebi.ac.uk/careers/> ;
+    kgjobs:adapter "firstparty-workday" ;
+    kgjobs:allowedHost "embl.wd103.myworkdayjobs.com" ;
+    kgjobs:attributionText "Jobs at EMBL-EBI" ;
+    kgjobs:attributionURL <https://www.ebi.ac.uk/careers/> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-public-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 40 ;
+    kgjobs:maxRequestsPerRun 42 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://embl.wd103.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "embl" ;
+    kgjobs:termsURL <https://www.embl.org/about/info/privacy-policy/> .
+
 kgjs:first-party-graphwise a dcat:DataService,
         okg:CareerSource ;
     dcterms:conformsTo <https://developer.wordpress.org/rest-api/reference/posts/> ;
@@ -166,6 +246,401 @@ kgjs:first-party-metaphacts a dcat:DataService,
     kgjobs:tenantIdentifier "metaphacts.com" ;
     kgjobs:termsURL <https://metaphacts.com/imprint> .
 
+kgjs:first-party-linux-foundation a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://html.spec.whatwg.org/multipage/> ;
+    dcterms:identifier "first-party-linux-foundation" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/linux-foundation/> ;
+    dcterms:title "Linux Foundation Teamtailor careers page"@en ;
+    dcat:endpointURL <https://careers.linuxfoundation.org/jobs> ;
+    dcat:landingPage <https://careers.linuxfoundation.org/> ;
+    kgjobs:adapter "firstparty-teamtailor" ;
+    kgjobs:allowedHost "careers.linuxfoundation.org" ;
+    kgjobs:attributionText "Jobs at Linux Foundation" ;
+    kgjobs:attributionURL <https://careers.linuxfoundation.org/> ;
+    kgjobs:careerProvider "teamtailor" ;
+    kgjobs:extractionMode "bounded-teamtailor-html-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 50 ;
+    kgjobs:maxRequestsPerRun 64 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://careers.linuxfoundation.org/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "linuxfoundation" ;
+    kgjobs:termsURL <https://careers.linuxfoundation.org/data-privacy> .
+
+kgjs:first-party-metropolitan-museum-of-art a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-metropolitan-museum-of-art" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/metropolitan-museum-of-art/> ;
+    dcterms:title "Metropolitan Museum of Art Workday board"@en ;
+    dcat:endpointURL <https://metmuseum.wd5.myworkdayjobs.com/wday/cxs/metmuseum/metmuseumcareers/jobs> ;
+    dcat:landingPage <https://www.metmuseum.org/opportunities/careers> ;
+    kgjobs:adapter "firstparty-workday" ;
+    kgjobs:allowedHost "metmuseum.wd5.myworkdayjobs.com" ;
+    kgjobs:attributionText "Jobs at The Metropolitan Museum of Art" ;
+    kgjobs:attributionURL <https://www.metmuseum.org/opportunities/careers> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-public-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 40 ;
+    kgjobs:maxRequestsPerRun 42 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://metmuseum.wd5.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "metmuseum" ;
+    kgjobs:termsURL <https://www.metmuseum.org/policies/terms-and-conditions> .
+
+kgjs:first-party-university-of-maryland a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-university-of-maryland" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/university-of-maryland/> ;
+    dcterms:title "University of Maryland Workday board"@en ;
+    dcat:endpointURL <https://umd.wd1.myworkdayjobs.com/wday/cxs/umd/UMCP/jobs> ;
+    dcat:landingPage <https://ejobs.umd.edu/> ;
+    kgjobs:adapter "firstparty-workday" ;
+    kgjobs:allowedHost "umd.wd1.myworkdayjobs.com" ;
+    kgjobs:attributionText "Jobs at the University of Maryland" ;
+    kgjobs:attributionURL <https://ejobs.umd.edu/> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-public-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 300 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 315 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://umd.wd1.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "umd" ;
+    kgjobs:termsURL <https://umd.edu/privacy-notice> .
+
+kgjs:first-party-stanford-university-school-of-medicine a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://stanford.referrals.selectminds.com/jobs/search/> ;
+    dcterms:identifier "first-party-stanford-university-school-of-medicine" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/stanford-university-school-of-medicine/> ;
+    dcterms:title "Stanford University School of Medicine SelectMinds board"@en ;
+    dcat:endpointURL <https://stanford.referrals.selectminds.com/jobs/search/> ;
+    dcat:landingPage <https://stanford.referrals.selectminds.com/jobs/search/> ;
+    kgjobs:adapter "firstparty-selectminds" ;
+    kgjobs:allowedHost "stanford.referrals.selectminds.com" ;
+    kgjobs:attributionText "Jobs at Stanford University School of Medicine" ;
+    kgjobs:attributionURL <https://stanford.referrals.selectminds.com/jobs/search/> ;
+    kgjobs:careerProvider "taleo-selectminds" ;
+    kgjobs:extractionMode "bounded-selectminds-exact-location-facet-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 203 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://stanford.referrals.selectminds.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "default1696:location:79" ;
+    kgjobs:termsURL <https://www.stanford.edu/site/terms/> .
+
+kgjs:first-party-inter-university-consortium-for-political-and-social-research a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://www.rssboard.org/rss-specification> ;
+    dcterms:identifier "first-party-inter-university-consortium-for-political-and-social-research" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/inter-university-consortium-for-political-and-social-research/> ;
+    dcterms:title "ICPSR department-filtered University of Michigan jobs feed"@en ;
+    dcat:endpointURL <https://careers.umich.edu/search/feed/advanced?career_interest=All&department=icpsr&job_id=&keyword=&position=All&regular_temporary=All&title=&work_location=All> ;
+    dcat:landingPage <https://www.icpsr.umich.edu/sites/icpsr/about/careers> ;
+    kgjobs:adapter "firstparty-drupal-rss-detail" ;
+    kgjobs:allowedHost "careers.umich.edu" ;
+    kgjobs:attributionText "Jobs at ICPSR" ;
+    kgjobs:attributionURL <https://www.icpsr.umich.edu/sites/icpsr/about/careers> ;
+    kgjobs:careerProvider "drupal-rss" ;
+    kgjobs:extractionMode "bounded-drupal-department-rss-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 50 ;
+    kgjobs:maxRequestsPerRun 64 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://careers.umich.edu/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "umich:department:icpsr" ;
+    kgjobs:termsURL <https://umich.edu/about/privacy/> .
+
+kgjs:first-party-institute-of-scientific-and-technical-information a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://emploi.cnrs.fr/Unites/UAR76/Offres.aspx> ;
+    dcterms:identifier "first-party-institute-of-scientific-and-technical-information" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/institute-of-scientific-and-technical-information/> ;
+    dcterms:title "INIST-CNRS unit-scoped job board"@en ;
+    dcat:endpointURL <https://emploi.cnrs.fr/Unites/UAR76/Offres.aspx> ;
+    dcat:landingPage <https://www.inist.fr/qui/inist-recrute/> ;
+    kgjobs:adapter "firstparty-cnrs-unit-detail" ;
+    kgjobs:allowedHost "emploi.cnrs.fr" ;
+    kgjobs:attributionText "Jobs at INIST-CNRS" ;
+    kgjobs:attributionURL <https://www.inist.fr/qui/inist-recrute/> ;
+    kgjobs:careerProvider "cnrs" ;
+    kgjobs:extractionMode "bounded-cnrs-unit-listing-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 30 ;
+    kgjobs:maxRequestsPerRun 32 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://emploi.cnrs.fr/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "UAR76" ;
+    kgjobs:termsURL <https://www.cnrs.fr/fr/cgu> .
+
+kgjs:first-party-microsoft-research a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://www.microsoft.com/en-us/research/wp-json/microsoft-research/v1/faceted-search> ;
+    dcterms:identifier "first-party-microsoft-research" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/microsoft-research/> ;
+    dcterms:title "Microsoft Research faceted careers API"@en ;
+    dcat:endpointURL <https://www.microsoft.com/en-us/research/wp-json/microsoft-research/v1/faceted-search?facet%5Btax%5D%5Bmsr-post-type%5D=msr-job-opportunity&page=1&sort_by=most-recent> ;
+    dcat:landingPage <https://www.microsoft.com/en-us/research/careers/open-positions/> ;
+    kgjobs:adapter "firstparty-microsoft-research" ;
+    kgjobs:allowedHost "www.microsoft.com" ;
+    kgjobs:attributionText "Jobs at Microsoft Research" ;
+    kgjobs:attributionURL <https://www.microsoft.com/en-us/research/careers/open-positions/> ;
+    kgjobs:careerProvider "microsoft-research" ;
+    kgjobs:extractionMode "bounded-microsoft-research-faceted-api-complete-record" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 150 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 150 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://www.microsoft.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "microsoft-research:msr-job-opportunity" ;
+    kgjobs:termsURL <https://www.microsoft.com/en-us/legal/terms-of-use> .
+
+kgjs:first-party-national-library-of-norway a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://candidate.webcruiter.com/en-gb/userinfo> ;
+    dcterms:identifier "first-party-national-library-of-norway" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/national-library-of-norway/> ;
+    dcterms:title "National Library of Norway Webcruiter company board"@en ;
+    dcat:endpointURL <https://candidate.webcruiter.com/nb-no/Home/companyadverts?companylock=810013&link_source_ID=0> ;
+    dcat:landingPage <https://www.nb.no/om-nb/ledige-stillinger/> ;
+    kgjobs:adapter "firstparty-webcruiter" ;
+    kgjobs:allowedHost "candidate.webcruiter.com" ;
+    kgjobs:attributionText "Jobs at the National Library of Norway" ;
+    kgjobs:attributionURL <https://www.nb.no/om-nb/ledige-stillinger/> ;
+    kgjobs:careerProvider "webcruiter" ;
+    kgjobs:extractionMode "bounded-webcruiter-company-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 40 ;
+    kgjobs:maxRequestsPerRun 42 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://candidate.webcruiter.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "810013" ;
+    kgjobs:termsURL <https://candidate.webcruiter.com/en-gb/userinfo> .
+
+kgjs:first-party-danish-bibliographic-centre a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://dbc.career.emply.com/ledige-stillinger> ;
+    dcterms:identifier "first-party-danish-bibliographic-centre" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/danish-bibliographic-centre/> ;
+    dcterms:title "Danish Bibliographic Centre Emply board"@en ;
+    dcat:endpointURL <https://dbc.career.emply.com/ledige-stillinger> ;
+    dcat:landingPage <https://dbcdigital.dk/karriere/> ;
+    kgjobs:adapter "firstparty-emply" ;
+    kgjobs:allowedHost "dbc.career.emply.com" ;
+    kgjobs:attributionText "Jobs at Danish Bibliographic Centre" ;
+    kgjobs:attributionURL <https://dbcdigital.dk/karriere/> ;
+    kgjobs:careerProvider "emply" ;
+    kgjobs:extractionMode "bounded-emply-embedded-listing-html-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 20 ;
+    kgjobs:maxRequestsPerRun 21 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://dbc.career.emply.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "dbc" ;
+    kgjobs:termsURL <https://dbcdigital.dk/privatlivspolitik/> .
+
+kgjs:first-party-regenstrief-institute a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://recruiting2.ultipro.com/> ;
+    dcterms:identifier "first-party-regenstrief-institute" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/regenstrief-institute/> ;
+    dcterms:title "Regenstrief Institute UKG board"@en ;
+    dcat:endpointURL <https://recruiting2.ultipro.com/REG1003REGE/JobBoard/56d8ed29-910c-43cc-8539-a82becf08c7f/JobBoardView/LoadSearchResults> ;
+    dcat:landingPage <https://www.regenstrief.org/careers/> ;
+    kgjobs:adapter "firstparty-ukg" ;
+    kgjobs:allowedHost "recruiting2.ultipro.com" ;
+    kgjobs:attributionText "Jobs at Regenstrief Institute" ;
+    kgjobs:attributionURL <https://www.regenstrief.org/careers/> ;
+    kgjobs:careerProvider "ukg" ;
+    kgjobs:extractionMode "bounded-ukg-jobboard-api-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 20 ;
+    kgjobs:maxRequestsPerRun 21 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://recruiting2.ultipro.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "REG1003REGE" ;
+    kgjobs:termsURL <https://www.regenstrief.org/privacy-policy/> .
+
+kgjs:first-party-renaissance-computing-institute a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://unc.peopleadmin.com/postings/search> ;
+    dcterms:identifier "first-party-renaissance-computing-institute" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/renaissance-computing-institute/> ;
+    dcterms:title "RENCI organization-filtered PeopleAdmin board"@en ;
+    dcat:endpointURL <https://unc.peopleadmin.com/postings/search?utf8=%E2%9C%93&query=&query_v0_posted_at_date=&query_organizational_tier_3_id%5B%5D=2571&commit=Search> ;
+    dcat:landingPage <https://renci.org/about/careers/> ;
+    kgjobs:adapter "firstparty-peopleadmin" ;
+    kgjobs:allowedHost "unc.peopleadmin.com" ;
+    kgjobs:attributionText "Jobs at Renaissance Computing Institute" ;
+    kgjobs:attributionURL <https://renci.org/about/careers/> ;
+    kgjobs:careerProvider "peopleadmin" ;
+    kgjobs:extractionMode "bounded-peopleadmin-organization-filter-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 20 ;
+    kgjobs:maxRequestsPerBatch 21 ;
+    kgjobs:maxRequestsPerRun 40 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://unc.peopleadmin.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "unc:2571" ;
+    kgjobs:termsURL <https://unc.peopleadmin.com/> .
+
+kgjs:first-party-university-of-north-carolina-at-chapel-hill a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://unc.peopleadmin.com/postings/search> ;
+    dcterms:identifier "first-party-university-of-north-carolina-at-chapel-hill" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/university-of-north-carolina-at-chapel-hill/> ;
+    dcterms:title "University of North Carolina staff PeopleAdmin board"@en ;
+    dcat:endpointURL <https://unc.peopleadmin.com/postings/search?utf8=%E2%9C%93&query=&query_v0_posted_at_date=&1826%5B%5D=1&1826%5B%5D=2&commit=Search> ;
+    dcat:landingPage <https://hr.unc.edu/careers-at-carolina/> ;
+    kgjobs:adapter "firstparty-peopleadmin" ;
+    kgjobs:allowedHost "unc.peopleadmin.com" ;
+    kgjobs:attributionText "Jobs at the University of North Carolina at Chapel Hill" ;
+    kgjobs:attributionURL <https://hr.unc.edu/careers-at-carolina/> ;
+    kgjobs:careerProvider "peopleadmin" ;
+    kgjobs:extractionMode "bounded-peopleadmin-organization-board-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 400 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 800 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://unc.peopleadmin.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "unc:all-staff" ;
+    kgjobs:termsURL <https://unc.peopleadmin.com/> .
+
+kgjs:first-party-sib-swiss-institute-of-bioinformatics a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://apply.refline.ch/499599/search.html> ;
+    dcterms:identifier "first-party-sib-swiss-institute-of-bioinformatics" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/sib-swiss-institute-of-bioinformatics/> ;
+    dcterms:title "SIB organization-filtered Refline board"@en ;
+    dcat:endpointURL <https://apply.refline.ch/499599/search.html?target=search&department=sib> ;
+    dcat:landingPage <https://www.sib.swiss/careers> ;
+    kgjobs:adapter "firstparty-refline" ;
+    kgjobs:allowedHost "apply.refline.ch" ;
+    kgjobs:attributionText "Jobs at SIB Swiss Institute of Bioinformatics" ;
+    kgjobs:attributionURL <https://www.sib.swiss/careers> ;
+    kgjobs:careerProvider "refline" ;
+    kgjobs:extractionMode "bounded-refline-organization-filter-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 20 ;
+    kgjobs:maxRequestsPerRun 21 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://apply.refline.ch/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "499599:sib" ;
+    kgjobs:termsURL <https://www.sib.swiss/privacy-policy> .
+
+kgjs:first-party-the-open-university a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://jobs.open.ac.uk/> ;
+    dcterms:identifier "first-party-the-open-university" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/the-open-university/> ;
+    dcterms:title "Open University SuccessFactors board"@en ;
+    dcat:endpointURL <https://jobs.open.ac.uk/services/recruiting/v1/jobs> ;
+    dcat:landingPage <https://jobs.open.ac.uk/> ;
+    kgjobs:adapter "firstparty-successfactors" ;
+    kgjobs:allowedHost "jobs.open.ac.uk" ;
+    kgjobs:attributionText "Jobs at The Open University" ;
+    kgjobs:attributionURL <https://jobs.open.ac.uk/> ;
+    kgjobs:careerProvider "successfactors" ;
+    kgjobs:extractionMode "bounded-successfactors-rmk-api-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 20 ;
+    kgjobs:maxRequestsPerRun 21 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://jobs.open.ac.uk/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "open-university" ;
+    kgjobs:termsURL <https://www.open.ac.uk/privacy> .
+
+kgjs:first-party-wikimedia-deutschland a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo schema:JobPosting ;
+    dcterms:identifier "first-party-wikimedia-deutschland" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/wikimedia-deutschland/> ;
+    dcterms:title "Wikimedia Deutschland Softgarden board"@en ;
+    dcat:endpointURL <https://wikimedia-deutschland.softgarden.io/en/vacancies> ;
+    dcat:landingPage <https://wikimedia-deutschland.softgarden.io/en/vacancies> ;
+    kgjobs:adapter "firstparty-softgarden" ;
+    kgjobs:allowedHost "wikimedia-deutschland.softgarden.io" ;
+    kgjobs:attributionText "Jobs at Wikimedia Deutschland" ;
+    kgjobs:attributionURL <https://wikimedia-deutschland.softgarden.io/en/vacancies> ;
+    kgjobs:careerProvider "softgarden" ;
+    kgjobs:extractionMode "bounded-softgarden-html-schema-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 20 ;
+    kgjobs:maxRequestsPerRun 21 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://wikimedia-deutschland.softgarden.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "wikimedia-deutschland" ;
+    kgjobs:termsURL <https://wikimedia-deutschland.softgarden.io/en/data-security> .
+
 kgjs:first-party-neo4j a dcat:DataService,
         okg:CareerSource ;
     dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
@@ -190,6 +665,32 @@ kgjs:first-party-neo4j a dcat:DataService,
     kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
     kgjobs:sourceReviewStatus "evidence-reviewed" ;
     kgjobs:tenantIdentifier "neo4j" ;
+    kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
+
+kgjs:first-party-public-library-of-science a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://developers.greenhouse.io/job-board.html> ;
+    dcterms:identifier "first-party-public-library-of-science" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/public-library-of-science/> ;
+    dcterms:title "Public Library of Science public Greenhouse job board"@en ;
+    dcat:endpointURL <https://boards-api.greenhouse.io/v1/boards/plos/jobs> ;
+    dcat:landingPage <https://plos.org/careers/> ;
+    kgjobs:adapter "firstparty-greenhouse" ;
+    kgjobs:allowedHost "boards-api.greenhouse.io" ;
+    kgjobs:attributionText "Jobs at PLOS" ;
+    kgjobs:attributionURL <https://plos.org/careers/> ;
+    kgjobs:careerProvider "greenhouse" ;
+    kgjobs:extractionMode "documented-public-json-api" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 250 ;
+    kgjobs:maxRequestsPerRun 1 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://boards-api.greenhouse.io/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "plos" ;
     kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
 
 kgjs:first-party-relationalai a dcat:DataService,
@@ -217,6 +718,32 @@ kgjs:first-party-relationalai a dcat:DataService,
     kgjobs:sourceReviewStatus "evidence-reviewed" ;
     kgjobs:tenantIdentifier "relationalai" ;
     kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
+
+kgjs:first-party-sage-publishing a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://html.spec.whatwg.org/multipage/> ;
+    dcterms:identifier "first-party-sage-publishing" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/sage-publishing/> ;
+    dcterms:title "Sage Publishing Teamtailor career board"@en ;
+    dcat:endpointURL <https://careers.sagepub.com/jobs> ;
+    dcat:landingPage <https://careers.sagepub.com/> ;
+    kgjobs:adapter "firstparty-teamtailor" ;
+    kgjobs:allowedHost "careers.sagepub.com" ;
+    kgjobs:attributionText "Jobs at Sage Publishing" ;
+    kgjobs:attributionURL <https://careers.sagepub.com/> ;
+    kgjobs:careerProvider "teamtailor" ;
+    kgjobs:extractionMode "bounded-teamtailor-html-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 50 ;
+    kgjobs:maxRequestsPerRun 64 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "local-review-only" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://careers.sagepub.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "sagepub" ;
+    kgjobs:termsURL <https://careers.sagepub.com/data-privacy> .
 
 kgjs:first-party-stardog a dcat:DataService,
         okg:CareerSource ;
@@ -269,6 +796,32 @@ kgjs:first-party-tigergraph a dcat:DataService,
     kgjobs:sourceReviewStatus "evidence-reviewed" ;
     kgjobs:tenantIdentifier "tigergraph" ;
     kgjobs:termsURL <https://developers.greenhouse.io/job-board.html> .
+
+kgjs:first-party-triply a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://html.spec.whatwg.org/multipage/> ;
+    dcterms:identifier "first-party-triply" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/triply/> ;
+    dcterms:title "Triply same-site vacancy details"@en ;
+    dcat:endpointURL <https://triply.cc/en-US/join-us> ;
+    dcat:landingPage <https://triply.cc/en-US/join-us> ;
+    kgjobs:adapter "firstparty-same-site-detail" ;
+    kgjobs:allowedHost "triply.cc" ;
+    kgjobs:attributionText "Jobs at Triply" ;
+    kgjobs:attributionURL <https://triply.cc/en-US/join-us> ;
+    kgjobs:careerProvider "same-site" ;
+    kgjobs:extractionMode "bounded-same-site-html-detail" ;
+    kgjobs:lastVerified "2026-08-27"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 10 ;
+    kgjobs:maxRequestsPerRun 11 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "local-review-only" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://triply.cc/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "triply.cc" ;
+    kgjobs:termsURL <https://triply.cc/en-US/legal/terms-and-conditions> .
 
 kgjs:first-party-topquadrant a dcat:DataService,
         okg:CareerSource ;
@@ -405,6 +958,7 @@ kgjs:himalayas a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:minRefreshIntervalSeconds 86400.0 ;
     kgjobs:networkFree false ;
+    kgjobs:productionEnabled true ;
     kgjobs:requestTimeoutSeconds 20 ;
     kgjobs:retrievalMode "keyword-search-api" ;
     kgjobs:searchEnabled true ;
@@ -431,6 +985,7 @@ kgjs:jobicy a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:minRefreshIntervalSeconds 3600.0 ;
     kgjobs:networkFree false ;
+    kgjobs:productionEnabled true ;
     kgjobs:requestTimeoutSeconds 20 ;
     kgjobs:retrievalMode "keyword-search-api" ;
     kgjobs:searchEnabled true ;
@@ -462,6 +1017,7 @@ kgjs:jooble a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:minRefreshIntervalSeconds 21600.0 ;
     kgjobs:networkFree false ;
+    kgjobs:productionEnabled true ;
     kgjobs:requestTimeoutSeconds 20 ;
     kgjobs:retrievalMode "keyword-search-api" ;
     kgjobs:searchEnabled true ;
@@ -476,7 +1032,7 @@ kgjs:jooble a dcat:Dataset ;
     kgjobs:termsURL <https://jooble.org/api/about> .
 
 kgjs:remotive a dcat:Dataset ;
-    dcterms:description "Public remote-job search API available to explicit KG Jobs ingestion. Remotive attribution and original listing links must be retained."@en ;
+    dcterms:description "Public remote-job search API retained for explicit local review only. Remotive attribution and original listing links must be retained; the production gate remains false."@en ;
     dcterms:identifier "remotive" ;
     dcterms:publisher [ a foaf:Agent ;
             foaf:name "Remotive" ] ;
@@ -492,6 +1048,7 @@ kgjs:remotive a dcat:Dataset ;
     kgjobs:maxResponseBytes 5000000 ;
     kgjobs:minRefreshIntervalSeconds 21600.0 ;
     kgjobs:networkFree false ;
+    kgjobs:productionEnabled false ;
     kgjobs:requestTimeoutSeconds 20 ;
     kgjobs:retrievalMode "search-api" ;
     kgjobs:searchEnabled true ;

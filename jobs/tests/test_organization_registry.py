@@ -13,6 +13,7 @@ REPO_ROOT = ROOT.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from organization_registry import build_projection  # noqa: E402
+from first_party_sources import load_production_first_party_sources  # noqa: E402
 
 SCHEMA = Namespace("https://schema.org/")
 OKG = Namespace("https://openknowledgegraphs.com/ontology#")
@@ -73,10 +74,11 @@ def test_each_accepted_organization_has_permanent_identity_evidence_types_and_on
         assert {dimensions[value] for value in types if value in dimensions} >= {"kind", "role"}
         assert list(graph.objects(subject, KGJOBS.inclusionEvidence))
         assert list(map(str, graph.objects(subject, KGJOBS.reviewStatus))) == ["evidence-reviewed"]
-        assert not list(graph.objects(subject, KGJOBS.careersPage))
+        careers_pages = list(graph.objects(subject, KGJOBS.careersPage))
+        assert len(careers_pages) <= 1
         assert not list(graph.objects(subject, KGJOBS.productionApproved))
         assert not list(graph.objects(subject, KGJOBS.pilotSelected))
-    assert enabled == 12
+    assert enabled == len(load_production_first_party_sources())
 
 
 def test_json_is_only_a_deterministic_projection_of_the_root_turtle():
@@ -86,11 +88,11 @@ def test_json_is_only_a_deterministic_projection_of_the_root_turtle():
     assert committed["schemaVersion"] == 2
     assert committed["counts"] == {
         "accepted": 139,
-        "jobsProductionEnabled": 12,
+        "jobsProductionEnabled": len(load_production_first_party_sources()),
         "rejectedAuditOnly": 3,
         "unresolvedAuditOnly": 0,
     }
-    assert all("careersPage" not in row for row in committed["organizations"])
+    assert all("careersPage" in row for row in committed["organizations"])
     assert all("productionApproved" not in row for row in committed["organizations"])
 
 

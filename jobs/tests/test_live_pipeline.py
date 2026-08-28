@@ -315,6 +315,7 @@ def test_refresh_guard_is_preserved_when_switching_sources(tmp_path):
     )
     live_pipeline.run_pipeline(
         source_key="remotive", root=ROOT, runtime_dir=runtime,
+        include_review_aggregators=True,
         retrieved_at="2026-08-17T18:10:00Z",
         fetcher=lambda url, source: remotive_payload(),
     )
@@ -336,6 +337,7 @@ def test_complete_pull_replaces_snapshot_and_absent_jobs_disappear(tmp_path):
     runtime = tmp_path / "runtime"
     live_pipeline.run_pipeline(
         source_key="remotive", root=ROOT, runtime_dir=runtime,
+        include_review_aggregators=True,
         retrieved_at=NOW, fetcher=lambda url, source: remotive_payload(),
     )
     smaller = remotive_payload()
@@ -343,6 +345,7 @@ def test_complete_pull_replaces_snapshot_and_absent_jobs_disappear(tmp_path):
     smaller["job-count"] = 1
     live_pipeline.run_pipeline(
         source_key="remotive", root=ROOT, runtime_dir=runtime,
+        include_review_aggregators=True,
         retrieved_at="2026-08-18T01:00:00Z",
         fetcher=lambda url, source: smaller,
     )
@@ -386,6 +389,7 @@ def test_fetch_mapping_or_validation_failure_preserves_last_good_snapshot(tmp_pa
     runtime = tmp_path / "runtime"
     live_pipeline.run_pipeline(
         source_key="remotive", root=ROOT, runtime_dir=runtime,
+        include_review_aggregators=True,
         retrieved_at=NOW, fetcher=lambda url, source: remotive_payload(),
     )
     before = {
@@ -398,6 +402,7 @@ def test_fetch_mapping_or_validation_failure_preserves_last_good_snapshot(tmp_pa
         broken["jobs"][0].pop("title")
         live_pipeline.run_pipeline(
             source_key="remotive", root=ROOT, runtime_dir=runtime,
+            include_review_aggregators=True,
             retrieved_at="2026-08-18T01:00:00Z",
             fetcher=lambda url, source: broken,
         )
@@ -409,6 +414,7 @@ def test_fetch_mapping_or_validation_failure_preserves_last_good_snapshot(tmp_pa
     with pytest.raises(LivePipelineError, match="mock SHACL failure"):
         live_pipeline.run_pipeline(
             source_key="remotive", root=ROOT, runtime_dir=runtime,
+            include_review_aggregators=True,
             retrieved_at="2026-08-18T01:00:00Z",
             fetcher=lambda url, source: remotive_payload(),
         )

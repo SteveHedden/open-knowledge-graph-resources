@@ -1,0 +1,180 @@
+{
+  "archive": {
+    "bytes": 7412688,
+    "sha256": "f9a52f02c16ac8a4401f4e2209f72e5606141be21551a545007ec7e9c24b42c7"
+  },
+  "archiveFormat": "task42-live-review-replay-v1",
+  "entries": {
+    "raw/first-party-danish-bibliographic-centre.json": {
+      "bytes": 108912,
+      "sha256": "86292fe8af0b6f5a20e3fa3f8c620b8a039836fad02095e990e4b400e44ad9fe"
+    },
+    "raw/first-party-embl-ebi.json": {
+      "bytes": 255812,
+      "sha256": "b1952b1ac8477e1c1db39b6f410828d289c78ba07534a6ca077a603bfe1540d2"
+    },
+    "raw/first-party-institute-of-scientific-and-technical-information.json": {
+      "bytes": 119857,
+      "sha256": "8941a487f76a6eaa4933e40cbd45e8e82abcc260a63db9990dd1aa33a53379e1"
+    },
+    "raw/first-party-inter-university-consortium-for-political-and-social-research.json": {
+      "bytes": 456,
+      "sha256": "e9b8a6b57c2cdfe9a03612ec0de3753857350e82427801964ad0b2380fd93641"
+    },
+    "raw/first-party-linux-foundation.json": {
+      "bytes": 420889,
+      "sha256": "a728ef1620d82a7c1f8ced99ed31a161235e72bc1e33e3ce1d5a29e96cc3d21e"
+    },
+    "raw/first-party-metropolitan-museum-of-art.json": {
+      "bytes": 158583,
+      "sha256": "2dae7885fd0eba655f22ed9109d29116592a69d9493fe4b1401a625b98d5fa88"
+    },
+    "raw/first-party-microsoft-research.json": {
+      "bytes": 366238,
+      "sha256": "9f4d490e9a3e057444d68e256e8691031e3780db27ccb81b313e5c8b6ceaaf26"
+    },
+    "raw/first-party-national-library-of-norway.json": {
+      "bytes": 105140,
+      "sha256": "0c44c4e5e456b0f76d61b99dbe26a7766f67185a08b163461482e895e9ee6d14"
+    },
+    "raw/first-party-public-library-of-science.json": {
+      "bytes": 188812,
+      "sha256": "b364e7d8fc0b61091c56d9125dcc114eaee3175ef7c82e7426b4a023f890c750"
+    },
+    "raw/first-party-regenstrief-institute.json": {
+      "bytes": 13202,
+      "sha256": "23f970c75a76628f0b56724785802367dfee2cf4e854139a6cbc8e7d6f40b54e"
+    },
+    "raw/first-party-renaissance-computing-institute.json": {
+      "bytes": 170049,
+      "sha256": "16c2476b7cd33dde0e11ec29a05b57e3d5b98b3557836c4cffb36ecb2d0b1855"
+    },
+    "raw/first-party-sib-swiss-institute-of-bioinformatics.json": {
+      "bytes": 19432,
+      "sha256": "7019d601645c687219b0ca1b5e8f9fd030f70d1de5e3d8eaacdfbd3cda0b5cd6"
+    },
+    "raw/first-party-stanford-university-school-of-medicine.json": {
+      "bytes": 16675738,
+      "sha256": "18cc5f4c7f56da2b7671b748809efc3f7d772c153ee2d3c533b91ae4a891983f"
+    },
+    "raw/first-party-the-open-university.json": {
+      "bytes": 738954,
+      "sha256": "742225856753efec3bd77cc99df6cdc05a1e84f3116c679cb74f18b13fddb52a"
+    },
+    "raw/first-party-university-of-maryland.json": {
+      "bytes": 2659140,
+      "sha256": "003ac7a1ff752b0f6d3bdc93d7daa539a7ca47e3eecf91435e8533b65db8cca3"
+    },
+    "raw/first-party-university-of-north-carolina-at-chapel-hill.json": {
+      "bytes": 20470152,
+      "sha256": "2354893492c4d29218feffb3972155c8d3a9dcb7e3aba02d9c5cc704a1d700aa"
+    },
+    "raw/first-party-wikimedia-deutschland.json": {
+      "bytes": 197914,
+      "sha256": "d74f42624a2e3ed93a3fd3c90c18c6abea743757baeccddfaa30a234edd6d67e"
+    },
+    "run.json": {
+      "bytes": 37554,
+      "sha256": "9a3c4b7fa2a0442d57507e4bb4f37680d249850d6c39c2fd45706ec00e780e7d"
+    },
+    "source-contracts.json": {
+      "bytes": 17898,
+      "sha256": "942aa6d2c4b848429893defa85ac0e162501a0e23db1d55821cffed4f70ba2e0"
+    },
+    "sources/first-party-danish-bibliographic-centre.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sources/first-party-embl-ebi.json": {
+      "bytes": 137120,
+      "sha256": "75620811652c22f6bf9d7faa9a243a6b2776702e52a215aa8c318e0e01145daa"
+    },
+    "sources/first-party-institute-of-scientific-and-technical-information.json": {
+      "bytes": 17762,
+      "sha256": "703c2bd359c50b12d165f5bee1885c0eebb4ed11e7b584fec94e09edc320f387"
+    },
+    "sources/first-party-inter-university-consortium-for-political-and-social-research.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sources/first-party-linux-foundation.json": {
+      "bytes": 35135,
+      "sha256": "d500cf9c57224cd3e5d2f3751262f759a7ae5a2dadd4e07e86bbf9cc4a9ceb8b"
+    },
+    "sources/first-party-metropolitan-museum-of-art.json": {
+      "bytes": 123927,
+      "sha256": "cc851285826665a177b9e1812a9adbb0587e22421bbf0a2ecbd4be74ffa4526f"
+    },
+    "sources/first-party-microsoft-research.json": {
+      "bytes": 451159,
+      "sha256": "46e41be02f625d1b8aa2b8e2bd76f11cfc56289f9ffca98a026f9f611ff608db"
+    },
+    "sources/first-party-national-library-of-norway.json": {
+      "bytes": 24340,
+      "sha256": "171792bf669dbc33b353e14d0af9879cb9369c54b8f7a5a83674fc52f410cd1f"
+    },
+    "sources/first-party-public-library-of-science.json": {
+      "bytes": 64917,
+      "sha256": "13cfeac543f7317dece01b83d557731d03f74f8385d26eda7253e93610face3d"
+    },
+    "sources/first-party-regenstrief-institute.json": {
+      "bytes": 7814,
+      "sha256": "318cbbcaeeec5f3d3782e229c7afb5f3ffa4ede938d047c74c0420d8f43088df"
+    },
+    "sources/first-party-renaissance-computing-institute.json": {
+      "bytes": 5596,
+      "sha256": "dfc3fc89a0ddfed11c3c631905b22376a22f64d04c28ec5a3358717e6025ce7c"
+    },
+    "sources/first-party-sib-swiss-institute-of-bioinformatics.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "sources/first-party-stanford-university-school-of-medicine.json": {
+      "bytes": 725126,
+      "sha256": "031cf0e77801b083e45dc3a5c4bf3213ae9073ebdda7f7e32bad44550dd37ce9"
+    },
+    "sources/first-party-the-open-university.json": {
+      "bytes": 85429,
+      "sha256": "f7f99c8fa0fbca79ad36feadc5c99b09ffca3538508baaf383efe6b2e49152d9"
+    },
+    "sources/first-party-university-of-maryland.json": {
+      "bytes": 1816885,
+      "sha256": "f14bb9eb42ca5bbe88378d23053efb2ee1932a4fc88de99f60d04a0f8c247107"
+    },
+    "sources/first-party-university-of-north-carolina-at-chapel-hill.json": {
+      "bytes": 1328856,
+      "sha256": "217cda1926800e0781bd4c9586beeb98207759992584b8822e14c50d1ef88b5a"
+    },
+    "sources/first-party-wikimedia-deutschland.json": {
+      "bytes": 27203,
+      "sha256": "818750e541f5e0458d7a861e52bbf40af081515e8b9b144a04078f2b82cf6e9f"
+    }
+  },
+  "publicationPerformed": false,
+  "retrievedAt": "2026-08-28T03:24:25Z",
+  "sourceCount": 17,
+  "sources": [
+    "first-party-danish-bibliographic-centre",
+    "first-party-embl-ebi",
+    "first-party-institute-of-scientific-and-technical-information",
+    "first-party-inter-university-consortium-for-political-and-social-research",
+    "first-party-linux-foundation",
+    "first-party-metropolitan-museum-of-art",
+    "first-party-microsoft-research",
+    "first-party-national-library-of-norway",
+    "first-party-public-library-of-science",
+    "first-party-regenstrief-institute",
+    "first-party-renaissance-computing-institute",
+    "first-party-sib-swiss-institute-of-bioinformatics",
+    "first-party-stanford-university-school-of-medicine",
+    "first-party-the-open-university",
+    "first-party-university-of-maryland",
+    "first-party-university-of-north-carolina-at-chapel-hill",
+    "first-party-wikimedia-deutschland"
+  ],
+  "trackedDependencies": {
+    "catalogMentionPolicySha256": "2d60fd4e1d00a792c73126c412309d28d8061de338921adb13b1a01f12866c5f",
+    "classifierVocabularySha256": "d483245ec557ab7149d4cdf878eee79b06d5b13902676c66a9eea3ab6b5a5862",
+    "sourcesRegistrySha256": "f323f4fbfa5d7c54c93264f0430b0a23755f642fe7a0efe4cd432b539c052ef7"
+  }
+}
