@@ -1,14 +1,14 @@
 {
   "activeCount": 582,
   "classificationCounts": {
-    "not_match": 419,
-    "qualified": 162,
-    "review": 1
+    "not_match": 424,
+    "qualified": 158,
+    "review": 0
   },
   "completeSourceSnapshot": false,
   "deduplicatedCount": 582,
   "fetchedCount": 200,
-  "publicSourceCount": 163,
+  "publicSourceCount": 162,
   "publicationPolicy": "existing-aggregator-policy",
   "queries": [
     "knowledge graph",
@@ -57,7 +57,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-knowledge-graph",
       "returnedCount": 50,
-      "totalCount": 4541
+      "totalCount": 4516
     },
     {
       "complete": false,
@@ -68,7 +68,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-ontology",
       "returnedCount": 50,
-      "totalCount": 2701
+      "totalCount": 2677
     },
     {
       "complete": false,
@@ -78,7 +78,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-semantic-web",
       "returnedCount": 50,
-      "totalCount": 301
+      "totalCount": 294
     },
     {
       "complete": false,
@@ -88,7 +88,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/adzuna-query-sparql",
       "returnedCount": 50,
-      "totalCount": 525
+      "totalCount": 517
     }
   ],
   "reconciliation": {
@@ -101,29 +101,20 @@
   },
   "rejectedCount": 0,
   "requestCount": 4,
-  "retrievedAt": "2026-08-27T16:29:23Z",
-  "reviewedFirstPartyPromotion": {
-    "appliedAt": "2026-08-27T16:57:31Z",
-    "artifactId": "9631740022",
-    "audit": "jobs/audits/task40-first-party-qualification.json",
-    "baselineRecordCount": 82,
-    "githubActionsRunId": "33034495838",
-    "netQualifiedChange": 15,
-    "qualifiedPublished": 28
-  },
-  "runId": "20260827T162923Z-a399fca515b8",
+  "retrievedAt": "2026-08-28T01:28:25Z",
+  "runId": "20260828T012825Z-61a1f3f88d89",
   "sourceAttributionUrl": "https://www.adzuna.co.uk/",
   "sourceClassificationCounts": {
-    "not_match": 71,
-    "qualified": 92,
+    "not_match": 73,
+    "qualified": 89,
     "review": 0
   },
   "sourceDataset": "https://openknowledgegraphs.com/jobs/source/adzuna",
   "sourceKey": "adzuna",
   "sourceName": "Adzuna",
   "sourceRefreshes": {
-    "adzuna": "2026-08-27T16:29:23Z",
-    "arbeitnow": "2026-08-27T16:28:01Z",
+    "adzuna": "2026-08-28T01:28:25Z",
+    "arbeitnow": "2026-08-28T01:26:42Z",
     "first-party-eccenca": "2026-08-27T03:01:56Z",
     "first-party-enterprise-knowledge": "2026-08-27T02:59:12Z",
     "first-party-graphwise": "2026-08-27T02:58:16Z",
@@ -137,7 +128,7 @@
     "first-party-weaviate": "2026-08-27T02:57:22Z",
     "first-party-wikimedia": "2026-08-27T02:55:34Z",
     "himalayas": "2026-08-27T02:50:10Z",
-    "jobicy": "2026-08-27T16:25:19Z",
-    "jooble": "2026-08-27T16:26:41Z"
+    "jobicy": "2026-08-28T01:23:16Z",
+    "jooble": "2026-08-28T01:25:01Z"
   }
 }
