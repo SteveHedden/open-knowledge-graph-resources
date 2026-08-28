@@ -142,6 +142,46 @@ def test_malformed_payload_and_unapproved_redirect_are_rejected(monkeypatch):
         fps.fetch_source(source)
 
 
+def test_cnrs_accepts_empty_listing_with_exact_reviewed_unit_heading():
+    source = fps.load_first_party_sources()[
+        "first-party-institute-of-scientific-and-technical-information"
+    ]
+    payload = {
+        "listingHtml": (
+            "<html><body><h1>Les offres d'emploi de UAR76 (INIST)</h1>"
+            "<ul id='CphMain_UlUnitOffers'></ul></body></html>"
+        ),
+        "details": [],
+    }
+
+    assert fps.records_from_payload(payload, source) == []
+
+
+@pytest.mark.parametrize(
+    "listing_html",
+    [
+        (
+            "<html><body><h1>Les offres d'emploi de UAR75 (OTHER)</h1>"
+            "<p>Aucune offre</p></body></html>"
+        ),
+        (
+            "<html><body><p>Les offres d'emploi de UAR76 (INIST)</p>"
+            "</body></html>"
+        ),
+    ],
+)
+def test_cnrs_rejects_empty_listing_without_exact_reviewed_unit_heading(listing_html):
+    source = fps.load_first_party_sources()[
+        "first-party-institute-of-scientific-and-technical-information"
+    ]
+
+    with pytest.raises(fps.FirstPartySourceError, match="reviewed UAR76/INIST identity"):
+        fps.records_from_payload(
+            {"listingHtml": listing_html, "details": []},
+            source,
+        )
+
+
 def _graphwise_fixture():
     return json.loads((FIXTURES / "first-party-graphwise.json").read_text())
 

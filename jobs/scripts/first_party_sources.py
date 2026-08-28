@@ -2832,11 +2832,23 @@ class _CnrsListingParser(HTMLParser):
         super().__init__()
         self.source = source
         self.links: set[str] = set()
-        self.text: list[str] = []
+        self.heading_depth = 0
+        self.heading_parts: list[str] = []
+        self.headings: list[str] = []
 
     def handle_starttag(self, tag: str, attrs) -> None:
+        normalized_tag = tag.casefold()
+        nested = normalized_tag not in {
+            "area", "base", "br", "hr", "img", "input", "link", "meta",
+        }
+        if self.heading_depth:
+            self.heading_depth += int(nested)
+        elif normalized_tag == "h1":
+            self.heading_depth = 1
+            self.heading_parts = []
+
         href = dict(attrs).get("href")
-        if tag.casefold() != "a" or not href:
+        if normalized_tag != "a" or not href:
             return
         url = urljoin(self.source.endpoint, str(href))
         parsed = urlparse(url)
@@ -2851,13 +2863,23 @@ class _CnrsListingParser(HTMLParser):
         ):
             self.links.add(urlunparse(parsed))
 
+    def handle_endtag(self, tag: str) -> None:
+        if tag.casefold() in {
+            "area", "base", "br", "hr", "img", "input", "link", "meta",
+        }:
+            return
+        if self.heading_depth:
+            self.heading_depth -= 1
+            if not self.heading_depth:
+                self.headings.append(_strip_html(" ".join(self.heading_parts)))
+
     def handle_data(self, data: str) -> None:
-        self.text.append(data)
+        if self.heading_depth:
+            self.heading_parts.append(data)
 
     @property
-    def explicit_zero(self) -> bool:
-        value = _strip_html(" ".join(self.text)).casefold()
-        return "aucune offre" in value or "no job offers" in value
+    def reviewed_empty_identity(self) -> bool:
+        return "Les offres d'emploi de UAR76 (INIST)" in self.headings
 
 
 class _CnrsDetailParser(HTMLParser):
@@ -2914,8 +2936,10 @@ def cnrs_records(payload, source: FirstPartySource) -> list[dict]:
         raise FirstPartySourceError("CNRS payload requires listing HTML and details")
     listing = _CnrsListingParser(source)
     listing.feed(listing_html)
-    if not listing.links and not listing.explicit_zero:
-        raise FirstPartySourceError("CNRS unit listing yielded zero jobs without an exact marker")
+    if not listing.links and not listing.reviewed_empty_identity:
+        raise FirstPartySourceError(
+            "CNRS unit listing yielded zero jobs without its reviewed UAR76/INIST identity"
+        )
     _enforce_record_cap(list(listing.links), source, "CNRS unit listing")
     by_url = {
         str(row.get("url") or ""): row.get("html")

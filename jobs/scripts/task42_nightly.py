@@ -148,7 +148,10 @@ def _atomic_json(path: Path, value) -> None:
 
 def _source_worker(source_key: str, output: str) -> None:
     result = {"error": None, "rawPayload": None, "run": None}
-    worker_root = Path(output).parent / f"{source_key}-runtime"
+    # ``publish_snapshot`` recovers stale ``.kg-jobs-live-*`` stages by
+    # scanning the runtime's parent. Give every concurrent worker an exclusive
+    # parent so one source cannot remove another source's in-progress stage.
+    worker_root = Path(output).with_suffix("") / "runtime"
     try:
         run = run_pipeline(source_key=source_key, runtime_dir=worker_root)
         raw_path = worker_root / "raw" / f"{source_key}.json"

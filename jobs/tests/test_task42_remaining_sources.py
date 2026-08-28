@@ -6,6 +6,7 @@ import json
 import sys
 import hashlib
 import multiprocessing
+import tempfile
 import time
 import zipfile
 from copy import deepcopy
@@ -27,6 +28,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import first_party_sources as fps  # noqa: E402
 import live_pipeline  # noqa: E402
+import live_records  # noqa: E402
 import promote_jobs_snapshot  # noqa: E402
 import source_schedule  # noqa: E402
 import task42_nightly  # noqa: E402
@@ -837,6 +839,66 @@ def test_nightly_process_batch_hard_stops_a_slow_source(tmp_path):
     )
     assert outcome["slow-source"]["status"] == "timed-out"
     assert outcome["slow-source"]["rawPayload"] is None
+
+
+def test_nightly_parallel_workers_isolate_atomic_publication_parents(
+    tmp_path, monkeypatch,
+):
+    """A later worker's recovery must not delete an earlier worker's stage."""
+
+    first_ready = tmp_path / "first-stage-ready"
+    second_recovered = tmp_path / "second-worker-recovered"
+
+    def wait_for(path):
+        deadline = time.monotonic() + 3
+        while not path.exists():
+            if time.monotonic() >= deadline:
+                raise RuntimeError(f"timed out waiting for {path.name}")
+            time.sleep(0.01)
+
+    def fake_run_pipeline(*, source_key, runtime_dir):
+        if source_key == "source-two":
+            wait_for(first_ready)
+
+        runtime_dir.parent.mkdir(parents=True, exist_ok=True)
+        live_records._recover_interrupted_publication(runtime_dir)
+        stage = Path(
+            tempfile.mkdtemp(prefix=".kg-jobs-live-", dir=runtime_dir.parent)
+        )
+        (stage / "raw").mkdir()
+        (stage / "raw" / f"{source_key}.json").write_text(
+            json.dumps({"sourceKey": source_key}), encoding="utf-8"
+        )
+
+        if source_key == "source-one":
+            first_ready.write_text("ready\n", encoding="utf-8")
+            wait_for(second_recovered)
+        else:
+            second_recovered.write_text("recovered\n", encoding="utf-8")
+
+        live_records._atomic_replace_directory(stage, runtime_dir)
+        return {"sourceKey": source_key}
+
+    monkeypatch.setattr(task42_nightly, "run_pipeline", fake_run_pipeline)
+    outcomes = task42_nightly.execute_process_batch(
+        ["source-one", "source-two"],
+        tmp_path,
+        source_timeout_seconds=5,
+        context=multiprocessing.get_context("fork"),
+    )
+
+    assert {key: row["status"] for key, row in outcomes.items()} == {
+        "source-one": "fetched",
+        "source-two": "fetched",
+    }
+    assert {
+        key: row["rawPayload"]["sourceKey"] for key, row in outcomes.items()
+    } == {
+        "source-one": "source-one",
+        "source-two": "source-two",
+    }
+    assert (tmp_path / "source-one" / "runtime" / "raw" / "source-one.json").is_file()
+    assert (tmp_path / "source-two" / "runtime" / "raw" / "source-two.json").is_file()
 
 
 def test_nightly_bounds_cannot_be_relaxed_past_the_reviewed_budget(tmp_path):
