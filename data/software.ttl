@@ -1674,7 +1674,7 @@
     okg:alias "GraphDB" ;
     okg:creator okg:Creator_Graphwise_Q133503461,
         okg:Creator_Ontotext_Q7095072 ;
-    okg:description "A highly efficient and robust graph database system with RDF and SPARQL support" ;
+    okg:description "graph database system with RDF and SPARQL support" ;
     okg:hasLicense okg:License_proprietary_license_Q3238057 ;
     okg:homepage <http://graphdb.ontotext.com> ;
     okg:latestVersion "11.0.0" ;
@@ -2324,7 +2324,7 @@
 
 <https://openknowledgegraphs.com/software/rsp4j/> a okg:Software ;
     rdfs:label "RSP4J" ;
-    okg:description "RSP4J a library for RDF Stream Processing" ;
+    okg:description "library for RDF stream processing" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:latestVersion "1.1.7" ;
     okg:programmingLanguage "Java" ;
@@ -4470,13 +4470,13 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_or_later_Q27016762 a o
     okg:hasLicense okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232,
         okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
     okg:homepage <https://neo4j.com/> ;
-    okg:latestVersion "2026.07.1" ;
+    okg:latestVersion "5.26.30" ;
     okg:programmingLanguage "Java",
         "Scala" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/framework/>,
         <https://openknowledgegraphs.com/software/nebulagraph/>,
         <https://openknowledgegraphs.com/software/neosemantics/> ;
-    okg:releaseDate "2026-08-05"^^xsd:date ;
+    okg:releaseDate "2026-08-26"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/neo4j/neo4j> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
@@ -5064,14 +5064,14 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_Q27017232 a okg:Licens
     okg:description "open-source multi-model database system" ;
     okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://www.arangodb.com> ;
-    okg:latestVersion "3.12.10.1" ;
+    okg:latestVersion "3.12.11" ;
     okg:programmingLanguage "C++" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/marklogic/>,
         <https://openknowledgegraphs.com/software/nitrosbase/>,
         <https://openknowledgegraphs.com/software/orientdb/>,
         <https://openknowledgegraphs.com/software/polypheny/>,
         <https://openknowledgegraphs.com/software/surrealdb/> ;
-    okg:releaseDate "2026-08-12"^^xsd:date ;
+    okg:releaseDate "2026-08-27"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/arangodb/arangodb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,

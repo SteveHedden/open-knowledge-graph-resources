@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T17:53:53Z",
+  "generatedAt": "2026-08-28T14:36:21Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -13010,7 +13010,8 @@
       "title": "Galen Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q138494470",
       "types": [
-        "KnowledgeGraph"
+        "KnowledgeGraph",
+        "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494470/",
       "aliases": [],
@@ -21717,7 +21718,7 @@
       ],
       "category": "General / Cross-domain",
       "homepage": "https://www.ebi.ac.uk/ols4/ontologies/iao",
-      "sourceRepo": "https://github.com/information-artifact-ontology/IAO/",
+      "sourceRepo": "https://github.com/information-artifact-ontology/IAO",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
@@ -47036,6 +47037,8 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/yamato/",
       "description": "upper ontology providing foundational concepts for knowledge representation",
       "aliases": [
+        "YAMATO ontology",
+        "YATO",
         "Yet Another More Advanced Top-Level Ontology"
       ],
       "category": "General / Cross-domain",

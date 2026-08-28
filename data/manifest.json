@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260827T221000Z-0c070131a5d7",
-  "startedAt": "2026-08-27T19:15:06Z",
-  "sourceRetrievedAt": "2026-08-27T20:15:01Z",
-  "completedAt": "2026-08-27T22:10:00Z",
+  "generationId": "20260828T143702Z-602d37004b30",
+  "startedAt": "2026-08-28T14:33:28Z",
+  "sourceRetrievedAt": "2026-08-28T14:36:20Z",
+  "completedAt": "2026-08-28T14:37:02Z",
   "counts": {
     "records": {
       "resources": 3012,
@@ -11,9 +11,9 @@
       "total": 3324
     },
     "triples": {
-      "ontologies": 31483,
+      "ontologies": 31487,
       "software": 4716,
-      "total": 36199
+      "total": 36203
     }
   },
   "versions": {
@@ -38,11 +38,11 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "1094977178d30974193c14d5edcc9c32a11aa7ca2fbe95ee485fa4b12ff67e86"
+      "sha256": "9d8edfe58e4bb2d0b2c31e7e7c5a20a150e71f001a33b623f6f89c7b81d9ce1b"
     },
     {
       "path": "data/ontologies.ttl",
-      "sha256": "c31d653c8878adfe5bdf670e83b878ba8511962fb27fd632b277a3fe21316e1f"
+      "sha256": "df17fdc4d5f3fe61df09dbc167a3f7087c47c949b33db2c45275fa74aa6ae009"
     },
     {
       "path": "data/organizations.json",
@@ -54,11 +54,11 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "66269ddf2399d47585efdfc530c17ef9b655eea6142c0b2c2451040cd1cf26d3"
+      "sha256": "6ad1cf80ec49850ccc984e8e64fab3670311bb6ee07cfc4da804ac1006e2a8be"
     },
     {
       "path": "data/software.ttl",
-      "sha256": "0941bb14c8505fb7da9234fad256919f673cd31a3e613149b6b063aa51ad978d"
+      "sha256": "6a3748164eaba13b87fc438eb930a7e66dd99f2c3b94586e491951f15be5f53c"
     },
     {
       "path": "data/software_types.json",
@@ -136,12 +136,12 @@
   "directoryTrees": [
     {
       "path": "site/resource",
-      "sha256": "fda6628218c718ffa9143b1114654422b6f9a1741960d1129820013f9cf8b58a",
+      "sha256": "4ddda376feb032bf27f0aebcf78435935a15b8ed772d0eb8f3feafbafc9d1872",
       "fileCount": 802
     },
     {
       "path": "site/software",
-      "sha256": "b52daa9792a7c6bee7fd5d2b1126da5c35f56a537d17e14fae0209da7999d51d",
+      "sha256": "4b426b0dcfb71dc0398b554ffcab692490e64e799e1ecf200a9d96685235e478",
       "fileCount": 211
     }
   ]

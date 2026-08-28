@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T17:53:53Z",
+  "generatedAt": "2026-08-28T14:36:21Z",
   "items": [
     {
       "title": "4store",
@@ -394,8 +394,8 @@
       "licenses": [
         "Business Source License 1.1"
       ],
-      "latestVersion": "3.12.10.1",
-      "releaseDate": "2026-08-12",
+      "latestVersion": "3.12.11",
+      "releaseDate": "2026-08-27",
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "C++"
@@ -3289,8 +3289,8 @@
         "GNU Affero General Public License, version 3.0",
         "GNU General Public License, version 3.0"
       ],
-      "latestVersion": "2026.07.1",
-      "releaseDate": "2026-08-05",
+      "latestVersion": "5.26.30",
+      "releaseDate": "2026-08-26",
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java",
@@ -3924,7 +3924,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/ontotext-graphdb/",
-      "description": "A highly efficient and robust graph database system with RDF and SPARQL support",
+      "description": "graph database system with RDF and SPARQL support",
       "aliases": [
         "GraphDB"
       ],
@@ -5416,7 +5416,7 @@
         "Software"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/software/rsp4j/",
-      "description": "RSP4J a library for RDF Stream Processing",
+      "description": "library for RDF stream processing",
       "aliases": [],
       "sourceRepo": "https://github.com/streamreasoning/rsp4j",
       "licenses": [

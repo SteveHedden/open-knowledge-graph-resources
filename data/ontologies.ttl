@@ -7453,13 +7453,15 @@
     okg:title "FAST (Faceted Application of Subject Terminology) FormGenre facet" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138494469> .
 
-<https://openknowledgegraphs.com/resource/en-q138494470/> a okg:KnowledgeGraph ;
+<https://openknowledgegraphs.com/resource/en-q138494470/> a okg:KnowledgeGraph,
+        okg:Ontology ;
     rdfs:label "Galen Ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
     okg:category okg:GeneralCrossDomain ;
     okg:homepage <https://bioportal.bioontology.org/ontologies/GALEN> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Galen Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138494470> .
 
@@ -28667,7 +28669,9 @@
 
 <https://openknowledgegraphs.com/resource/yamato/> a okg:Ontology ;
     rdfs:label "YAMATO" ;
-    okg:alias "Yet Another More Advanced Top-Level Ontology" ;
+    okg:alias "YAMATO ontology",
+        "YATO",
+        "Yet Another More Advanced Top-Level Ontology" ;
     okg:category okg:GeneralCrossDomain ;
     okg:creator okg:Creator_Riichiro_Mizoguchi_Q112433082 ;
     okg:description "upper ontology providing foundational concepts for knowledge representation" ;
@@ -31510,7 +31514,7 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
         <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
         <https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/> ;
-    okg:sourceRepo <https://github.com/information-artifact-ontology/IAO/> ;
+    okg:sourceRepo <https://github.com/information-artifact-ontology/IAO> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254>,
         <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Information Artifact Ontology" ;
