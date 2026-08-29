@@ -50,7 +50,7 @@ from source_schedule import (  # noqa: E402
 from task42_source_audit import TASK42_SOURCE_KEYS  # noqa: E402
 
 TARGET_CRON = "0 3 * * *"
-CATALOG_CRON = "0 6 * * *"
+CATALOG_CRON = "23 6 * * *"
 TARGET_WORKFLOW = ".github/workflows/update-jobs.yml"
 REFRESH_INTERVAL_SECONDS = 86_400
 MAX_PARALLEL_SOURCES = DEFAULT_BATCH_SOURCE_CAP

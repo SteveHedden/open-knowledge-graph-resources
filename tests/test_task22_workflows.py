@@ -17,6 +17,7 @@ ROLLBACK_PATH = ROOT / ".github/workflows/deploy.yml"
 VALIDATE_PATH = ROOT / ".github/workflows/validate.yml"
 VERIFIER_PATH = ROOT / ".github/workflows/scripts/verify_task22_surfaces.py"
 WORKER_DEPLOYMENT_PATH = ROOT / ".github/workflows/scripts/worker_deployment.py"
+PUBLICATION_GATE_PATH = ROOT / ".github/workflows/scripts/catalog_publication_gate.py"
 
 
 def step_block(workflow: str, name: str) -> str:
@@ -47,7 +48,11 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
     EXPECTED_TRIGGERS = {
         PUBLISH_PATH: """on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "23 6 * * *"
+  workflow_run:
+    workflows: ["Update KG Jobs Data"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
     inputs:
       initialize_semantic_search:
@@ -97,13 +102,30 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
             concurrency_blocks,
         )
 
-    def test_schedules_and_manual_dispatch_inputs_are_unchanged(self) -> None:
+    def test_triggers_and_manual_dispatch_inputs_match_the_approved_contract(self) -> None:
         for path, workflow in self.workflows.items():
             self.assertEqual(
                 top_level_block(workflow, "on"),
                 self.EXPECTED_TRIGGERS[path],
                 path,
             )
+
+    def test_catalog_chains_only_from_a_successful_scheduled_jobs_run(self) -> None:
+        workflow = self.workflows[PUBLISH_PATH]
+        self.assertIn("actions: read", workflow)
+        for upstream_field in ("conclusion", "event", "head_branch"):
+            self.assertIn(
+                f"github.event.workflow_run.{upstream_field} || ''",
+                workflow,
+            )
+        self.assertIn("UPSTREAM_COMPLETED_AT:", workflow)
+        self.assertIn(
+            "python .github/workflows/scripts/catalog_publication_gate.py",
+            workflow,
+        )
+        self.assertTrue(PUBLICATION_GATE_PATH.is_file())
+        self.assertIn("needs: publication_gate", workflow)
+        self.assertIn("if: needs.publication_gate.outputs.should_publish == 'true'", workflow)
 
     def test_queued_runs_checkout_the_current_trigger_branch_tip(self) -> None:
         for path, workflow in self.workflows.items():

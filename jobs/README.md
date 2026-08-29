@@ -76,10 +76,11 @@ python jobs/scripts/audit_first_party_qualification.py
 
 ## Refresh cadence
 
-`.github/workflows/update-jobs.yml` runs nightly at `03:00 UTC`, three hours before
-catalog generation at `06:00 UTC`, with a 150-minute timeout. All 34 production
-sources are derived from `sources.ttl` and fetched in deterministic waves of at
-most four isolated processes and 128 declared per-batch requests. A source's
+`.github/workflows/update-jobs.yml` runs nightly at `03:00 UTC` with a 150-minute
+timeout. Its successful scheduled completion triggers catalog generation, while
+an independent `06:23 UTC` catalog cron remains as a staggered fallback. All 34
+production sources are derived from `sources.ttl` and fetched in deterministic
+waves of at most four isolated processes and 128 declared per-batch requests. A source's
 `maxRequestsPerRun` bounds its complete invocation; `maxRequestsPerBatch` is the
 separate scheduling weight for providers that page or hydrate in multiple
 batches. A manual dispatch may name one production-cleared source.

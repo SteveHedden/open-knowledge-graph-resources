@@ -73,7 +73,7 @@ and use the "Resource batch" issue template to propose and track a batch of cand
 
 ## Workflow and Deployment Notes
 
-- Data refresh workflow (`update-data.yml`) runs daily at 06:00 UTC.
+- Data refresh workflow (`update-data.yml`) follows a successful scheduled jobs refresh, with an independent daily 06:23 UTC fallback.
 - The refresh workflow stages, validates, manifests, commits, deploys, and live-verifies one complete generation under the shared publication concurrency group.
 - `deploy.yml` is a manual rollback path accepting a generation ID or Git ref; successful rollback moves catalog pointers without reverting repository history.
 - Do not move `catalog-generation/*` tags. They are immutable successful-publication records.

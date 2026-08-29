@@ -180,7 +180,7 @@ The first tracked manifest is a retrospective bootstrap around the catalog retri
 
 Catalog JSON and instance RDF retain their existing contracts; generation metadata lives only in the manifest. Refreshes whose normalized RDF, JSON items, registries, sitemap membership, and page content are unchanged retain the existing generation and its original timestamps.
 
-`data/jobs/` is deployed alongside the core catalog but tracked by its own colocated `data/jobs/manifest.json` instead of `data/manifest.json`. Its implementation lives in top-level `jobs/` and refreshes nightly at 03:00 UTC, three hours before the 06:00 UTC catalog generation; folding it into the core manifest would break `verify` whenever the jobs workflow updates independently. `catalog_snapshot.py verify` checks both manifests and confirms every deployed file belongs to exactly one of them (`finalize-jobs` / `verify-jobs` mirror `finalize` / `verify` for the jobs manifest alone). Because rollback checks out an old commit wholesale, `deploy.yml` explicitly restores the latest verified `data/jobs/` snapshot into the rollback worktree before building the Pages artifact, so rolling back the core catalog never regresses job listings to a stale historical snapshot.
+`data/jobs/` is deployed alongside the core catalog but tracked by its own colocated `data/jobs/manifest.json` instead of `data/manifest.json`. Its implementation lives in top-level `jobs/` and refreshes nightly at 03:00 UTC. A successful scheduled jobs run triggers catalog generation; an independent 06:23 UTC cron remains as a staggered fallback. Folding jobs into the core manifest would break `verify` whenever the jobs workflow updates independently. `catalog_snapshot.py verify` checks both manifests and confirms every deployed file belongs to exactly one of them (`finalize-jobs` / `verify-jobs` mirror `finalize` / `verify` for the jobs manifest alone). Because rollback checks out an old commit wholesale, `deploy.yml` explicitly restores the latest verified `data/jobs/` snapshot into the rollback worktree before building the Pages artifact, so rolling back the core catalog never regresses job listings to a stale historical snapshot.
 
 ### Run the Site Locally
 
@@ -327,8 +327,9 @@ Targets pruned by page eligibility are absent from all page projections.
 
 File: `.github/workflows/update-data.yml`
 
-- Trigger: daily at `0 6 * * *` (06:00 UTC) + manual dispatch
-- Uses the shared `catalog-publication` concurrency queue without canceling an active publication
+- Trigger: after a successful scheduled `Update KG Jobs Data` run, with a daily `23 6 * * *` (06:23 UTC) fallback and manual dispatch
+- Suppresses the redundant automatic run when the chained publication and fallback both arrive successfully
+- Uses the shared `repository-publication` concurrency queue without canceling an active publication
 - Generates the complete catalog in an isolated staging tree and validates it against the last live-verified generation
 - Creates and verifies `data/manifest.json`, then commits the complete snapshot only when normalized content changed
 - Builds the Pages artifact from that exact commit and performs cache-busting live verification for up to five minutes
@@ -404,7 +405,8 @@ Wikidata coverage is uneven. Optional fields (homepage, license, version, releas
 
 ### How often is data refreshed?
 
-Daily at 06:00 UTC via GitHub Actions, plus manual runs.
+After each successful scheduled jobs refresh, with an independent 06:23 UTC
+GitHub Actions fallback and manual runs.
 
 ## Contributing
 

@@ -792,7 +792,7 @@ def test_nightly_nonpublishing_monitor_revisits_every_unresolved_careers_page(tm
     assert "jobs/runtime/careers-discovery/run.json" in workflow_text
 
 
-def test_nightly_operational_contract_fits_jobs_workflow_before_catalog_generation():
+def test_nightly_operational_contract_chains_into_catalog_generation_with_fallback():
     sources = task42_nightly.production_sources()
     batches = task42_nightly.bounded_parallel_batches(sources)
     plan = json.loads(NIGHTLY_PLAN.read_text(encoding="utf-8"))
@@ -815,7 +815,12 @@ def test_nightly_operational_contract_fits_jobs_workflow_before_catalog_generati
     assert plan["uncoveredOrganizations"] == 22
     assert plan["targetCron"] == task42_nightly.TARGET_CRON == "0 3 * * *"
     assert 'cron: "0 3 * * *"' in jobs_workflow
-    assert 'cron: "0 6 * * *"' in catalog_workflow
+    assert plan["catalogGenerationCron"] == task42_nightly.CATALOG_CRON == "23 6 * * *"
+    assert 'cron: "23 6 * * *"' in catalog_workflow
+    assert 'workflows: ["Update KG Jobs Data"]' in catalog_workflow
+    assert "UPSTREAM_CONCLUSION:" in catalog_workflow
+    assert "UPSTREAM_EVENT:" in catalog_workflow
+    assert "catalog_publication_gate.py" in catalog_workflow
     assert "timeout-minutes: 150" in jobs_workflow
     assert plan["workflowOverheadBudgetSeconds"] == 720
     assert plan["worstCaseSeconds"] == task42_nightly.worst_case_seconds(

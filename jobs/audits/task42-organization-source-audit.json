@@ -8224,7 +8224,8 @@
   ],
   "operationalDesign": {
     "activationStatus": "production-wiring-complete-pending-final-review",
-    "catalogGenerationCron": "0 6 * * *",
+    "catalogGenerationCron": "23 6 * * *",
+    "catalogGenerationTrigger": "successful scheduled jobs workflow with a staggered cron fallback",
     "deploymentTriggered": false,
     "discoveryMonitor": {
       "maximumParallelPages": 8,
