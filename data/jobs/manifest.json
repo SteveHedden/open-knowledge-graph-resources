@@ -2,40 +2,40 @@
   "artifacts": [
     {
       "path": "data/jobs/jobs.json",
-      "sha256": "dbf19e682892534f948e8d78578f53fb34f9b7fb6250483b2cf966bf823aa8d1"
+      "sha256": "aae2652d5781a5ba3465cd8088de5d7a5b1ac163206f38c479cdac7131acd2cc"
     },
     {
       "path": "data/jobs/jobs.ttl",
-      "sha256": "f04a8043a3a1fcb55440b232ae7fb7a708d4a674a1490605aee269d964f1f984"
+      "sha256": "3c983f9d8aacb29408ccfbaefc0278ed40e26c14df0eda71576b4108636b0b41"
     },
     {
       "path": "data/jobs/raw/adzuna.json",
-      "sha256": "5eace64c4aaac2741c18f8558a48dbf9bd9497fa12ebcafea635ad980a6f7e42"
+      "sha256": "265e7b4b647c5a2b70d45339dcf517d3fab418d975ac3285818b0f8cfb4c15f5"
     },
     {
       "path": "data/jobs/raw/arbeitnow.json",
-      "sha256": "9fe2d53981f54eca7e669659e8da7624c1683fd9ff88327e2ee73191259e10e8"
+      "sha256": "04a5d3f6054fc696e9c39965edcbaf276f8353500ef534067d883f60df510d44"
     },
     {
       "path": "data/jobs/raw/himalayas.json",
-      "sha256": "b02222c15d0d65f37db0137d3da85036818b8a68cc4bee040f2214f5836212a2"
+      "sha256": "f5bb046ef52cabbdf77c0a303b58d9cb10ee5aa3982ebe25241217de65d81307"
     },
     {
       "path": "data/jobs/raw/jobicy.json",
-      "sha256": "b31a97c64ebda42d9bed2757a1105b4268b57094dcba8ba3b9308287e75264be"
+      "sha256": "b17b76360d709b906dbb7b503c884b26db7759e1c9e87066beea9987f8a7b09c"
     },
     {
       "path": "data/jobs/raw/jooble.json",
-      "sha256": "2f1ade2c125e8ddbb534dc33ca766bd2f0fe3e303fa01c50cbc3d4786870a1ff"
+      "sha256": "61fb8af58f751cc230e165c6271ce7d5a56a66e30cbb5db7f87a29a2d833519c"
     },
     {
       "path": "data/jobs/run.json",
-      "sha256": "e8277aee94736dce49f2d7854d947a87f93701440f7acd21d207ad8d8911bdff"
+      "sha256": "bcfd64c471d6bb0de9e197741c86db359a4cf91f96d9277ae81c978d16be309c"
     }
   ],
-  "completedAt": "2026-08-29T09:48:56Z",
-  "generationId": "20260829T094856Z-7c3ebe48cd96",
+  "completedAt": "2026-08-30T09:44:07Z",
+  "generationId": "20260830T094407Z-ed8c5db67a55",
   "schemaVersion": "1.0.0",
-  "sourceRetrievedAt": "2026-08-29T09:42:00Z",
-  "startedAt": "2026-08-29T09:41:49Z"
+  "sourceRetrievedAt": "2026-08-30T08:54:03Z",
+  "startedAt": "2026-08-30T08:53:53Z"
 }
