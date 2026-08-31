@@ -3578,8 +3578,8 @@ okg:Creator_University_of_Maryland_Q503415 a okg:Organization ;
     rdfs:label "University of Maryland" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q503415> .
 
-okg:Creator_Wikimedia_Deutschland_Q8288 a okg:Organization ;
-    rdfs:label "Wikimedia Deutschland" ;
+okg:Creator_Wikimedia_Germany_Q8288 a okg:Organization ;
+    rdfs:label "Wikimedia Germany" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q8288> .
 
 okg:Creator_Wilfried_Goesgens_Q122765389 a okg:Person ;
@@ -3955,7 +3955,7 @@ okg:License_open_access_Q232932 a okg:License ;
 <https://openknowledgegraphs.com/software/wikibase/> a okg:Software ;
     rdfs:label "Wikibase" ;
     okg:alias "Help:Wikibase" ;
-    okg:creator okg:Creator_Wikimedia_Deutschland_Q8288 ;
+    okg:creator okg:Creator_Wikimedia_Germany_Q8288 ;
     okg:description "collection of software (applications and libraries) for creating, managing and sharing structured data" ;
     okg:hasLicense okg:License_GNU_General_Public_License_version_2_0_or_later_Q27016752 ;
     okg:homepage <https://wikiba.se/> ;

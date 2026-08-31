@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T12:40:53Z",
+  "generatedAt": "2026-08-31T10:22:15Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -2255,7 +2255,7 @@
       "description": "top-level ontology developed to promote interoperability among domain ontologies",
       "aliases": [],
       "category": "General / Cross-domain",
-      "homepage": "http://basic-formal-ontology.org/",
+      "homepage": "https://bfo-ontology.github.io/",
       "sourceRepo": "https://github.com/bfo-ontology/BFO-2020",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "creators": [
@@ -2290,6 +2290,23 @@
           "title": "Information Artifact Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology/"
         }
+      ]
+    },
+    {
+      "title": "Basic Formal Ontology 1.1",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141222616",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology-1-1/",
+      "description": "version of BFO",
+      "aliases": [
+        "bfo1.1",
+        "bfo11"
+      ],
+      "category": "General / Cross-domain",
+      "licenses": [
+        "Creative Commons Attribution 3.0 Unported"
       ]
     },
     {
@@ -13819,6 +13836,20 @@
       ]
     },
     {
+      "title": "GeoCore Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141222138",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/geocore-ontology/",
+      "description": "general use ontology for geology",
+      "aliases": [],
+      "category": "Environment & Agriculture",
+      "licenses": [
+        "Creative Commons Attribution-NonCommercial 4.0 International"
+      ]
+    },
+    {
       "title": "Geographical Entity Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q81661641",
       "types": [
@@ -13911,6 +13942,22 @@
       "description": "type of dictionary",
       "aliases": [],
       "category": "Geospatial"
+    },
+    {
+      "title": "GeoScience Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141222183",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/geoscience-ontology/",
+      "aliases": [
+        "GSO"
+      ],
+      "category": "Environment & Agriculture",
+      "sourceRepo": "https://github.com/Loop3D/GKM/",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "GeoSciML",
@@ -39667,6 +39714,28 @@
       "sourceRepo": "https://github.com/w3c/vc-data-integrity"
     },
     {
+      "title": "SEEKER JAMES PUBLISHING | BIBLIOTHECA SEEKERISMS Vol. 1",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141222686",
+      "types": [
+        "ControlledVocabulary"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/seeker-james-publishing-bibliotheca-seekerisms-vol-1/",
+      "description": "The Official Glossary for legal and copyrighted terms for Seeker James Publishing,  and their trans media organisation",
+      "aliases": [
+        "BIBLIOTHECA SEEKERISMS Vol. 1",
+        "Seekerisms",
+        "Seekerium Glossary"
+      ],
+      "category": "Library & Cultural Heritage",
+      "creators": [
+        {
+          "name": "Seeker James",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q139740781"
+        }
+      ]
+    },
+    {
       "title": "segregate",
       "wikidataId": "https://www.wikidata.org/wiki/Q7446323",
       "types": [
@@ -41564,6 +41633,25 @@
       "description": "ontology for the description of student health records",
       "aliases": [],
       "category": "Life Sciences & Healthcare"
+    },
+    {
+      "title": "Stuff Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141222489",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/stuff-ontology/",
+      "aliases": [],
+      "category": "General / Cross-domain",
+      "homepage": "http://www.meteck.org/stuff.html",
+      "creators": [
+        {
+          "name": "C. Maria Keet",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q108817971",
+          "googleScholarProfile": "https://scholar.google.com/citations?user=lccln9YAAAAJ"
+        }
+      ]
     },
     {
       "title": "STW Thesaurus for Economics",
@@ -46751,7 +46839,7 @@
           "wikidataId": "https://www.wikidata.org/wiki/Q56035565"
         },
         {
-          "name": "Wikimedia Deutschland",
+          "name": "Wikimedia Germany",
           "type": "Organization",
           "wikidataId": "https://www.wikidata.org/wiki/Q8288"
         }
