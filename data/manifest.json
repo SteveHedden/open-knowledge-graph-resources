@@ -1,19 +1,19 @@
 {
   "schemaVersion": "1.0.0",
-  "generationId": "20260831T193456Z-8cedc0691c10",
-  "startedAt": "2026-08-31T10:18:44Z",
-  "sourceRetrievedAt": "2026-08-31T10:22:12Z",
-  "completedAt": "2026-08-31T19:34:56Z",
+  "generationId": "20260831T215002Z-10fa63f865cd",
+  "startedAt": "2026-08-31T21:46:08Z",
+  "sourceRetrievedAt": "2026-08-31T21:49:11Z",
+  "completedAt": "2026-08-31T21:50:02Z",
   "counts": {
     "records": {
       "resources": 3017,
-      "software": 312,
-      "total": 3329
+      "software": 313,
+      "total": 3330
     },
     "triples": {
       "ontologies": 31545,
-      "software": 4718,
-      "total": 36263
+      "software": 4738,
+      "total": 36283
     }
   },
   "versions": {
@@ -26,7 +26,7 @@
   "artifacts": [
     {
       "path": "curation/classifications.ttl",
-      "sha256": "85c93d5c5d2f1580afa213fbe16c37fedeab0499caf0770cf1cac2e1b355cab2"
+      "sha256": "15556640ef850cd868b40bae0bfca93776ef8567ae058c5dd02f640d2f8bafff"
     },
     {
       "path": "data/categories.json",
@@ -38,7 +38,7 @@
     },
     {
       "path": "data/ontologies.json",
-      "sha256": "a60623492e7d07372a39a4006994405c55375b205313b8add2c5580990f7d1cd"
+      "sha256": "a8f4db9fb0a9a5b5120c568b5a2928260aff17b8a8f65ad675fdcf6a6c2c00d6"
     },
     {
       "path": "data/ontologies.ttl",
@@ -54,19 +54,19 @@
     },
     {
       "path": "data/software.json",
-      "sha256": "803d659fed168b0dea79b7bc7095c35b1dd30e7edd2ab540fe1eaf09cbf4e406"
+      "sha256": "b8a29421fdd962a50326e6f43996a67d62784b07b182262a5083769115abd1e3"
     },
     {
       "path": "data/software.ttl",
-      "sha256": "0bf9a746c488e276b2a0ba7ec842f44cae9f2faf16816fdadc828f9d9cf9058e"
+      "sha256": "414644635a8d22b66afb60ed2b715d75b320f1d59f5a2edf651be49396de7705"
     },
     {
       "path": "data/software_types.json",
-      "sha256": "c938afc2005c8a7f16bac0b9eff102d31d87556f52d3047a23ff021adda1116c"
+      "sha256": "f2086d159e38c258ea0a9c0cb09c455ff4f9b9ad999397172b427b8fdde68d17"
     },
     {
       "path": "data/uri_registry.json",
-      "sha256": "f75ecbe535303b095b9f38e78559b3728fe8958aa3c43aac5afa1d944e431ad1"
+      "sha256": "4bad7b4bdbd3505781b303276f9b516e294b84a3873ec5db813360461a252a92"
     },
     {
       "path": "ontology.ttl",

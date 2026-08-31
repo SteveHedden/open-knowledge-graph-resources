@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T10:22:15Z",
+  "generatedAt": "2026-08-31T21:49:17Z",
   "items": [
     {
       "title": "4store",
@@ -2548,6 +2548,37 @@
       "latestVersion": "0.7.0-1138",
       "releaseDate": "2021-06-19",
       "softwareType": "Reasoning & Inference"
+    },
+    {
+      "title": "KONDA",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141237758",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/konda/",
+      "description": "LLM-based tool for semantic annotation and knowledge graph creation using ontologies for research data",
+      "aliases": [],
+      "sourceRepo": "https://github.com/dsma-org/konda",
+      "creators": [
+        {
+          "name": "Data Stream Management and Analysis",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q141237246"
+        },
+        {
+          "name": "Martin Görz",
+          "type": "Person",
+          "wikidataId": "https://www.wikidata.org/wiki/Q133888332",
+          "googleScholarProfile": "https://scholar.google.com/citations?user=lG6f_vEAAAAJ"
+        }
+      ],
+      "licenses": [
+        "GNU General Public License, version 3.0"
+      ],
+      "softwareType": "Knowledge Graph Construction",
+      "programmingLanguages": [
+        "Go"
+      ]
     },
     {
       "title": "KuzuDB",

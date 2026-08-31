@@ -1140,6 +1140,20 @@
     okg:title "Konclude" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140686380> .
 
+<https://openknowledgegraphs.com/software/konda/> a okg:Software ;
+    rdfs:label "KONDA" ;
+    okg:creator okg:Creator_Data_Stream_Management_and_Analysis_Q141237246,
+        okg:Creator_Martin_Gorz_Q133888332 ;
+    okg:description "LLM-based tool for semantic annotation and knowledge graph creation using ontologies for research data" ;
+    okg:hasLicense okg:License_GNU_General_Public_License_version_3_0_Q10513445 ;
+    okg:programmingLanguage "Go" ;
+    okg:softwareType okg:KnowledgeGraphConstruction ;
+    okg:sourceRepo <https://github.com/dsma-org/konda> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q189210> ;
+    okg:title "KONDA" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141237758> .
+
 <https://openknowledgegraphs.com/software/kuzudb/> a okg:Software ;
     rdfs:label "KuzuDB" ;
     okg:description "Embedded property graph database with vector and full-text search, implements Cypher" ;
@@ -3381,6 +3395,10 @@ okg:Creator_Dan_Connolly_Q3013037 a okg:Person ;
     okg:githubProfile <https://github.com/dckc> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3013037> .
 
+okg:Creator_Data_Stream_Management_and_Analysis_Q141237246 a okg:Organization ;
+    rdfs:label "Data Stream Management and Analysis" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141237246> .
+
 okg:Creator_Databricks_Q18350420 a okg:Organization ;
     rdfs:label "Databricks" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q18350420> .
@@ -3489,6 +3507,11 @@ okg:Creator_Maria_Poveda_Villalon_Q58990389 a okg:Person ;
 okg:Creator_MarkLogic_Q6766381 a okg:Organization ;
     rdfs:label "MarkLogic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q6766381> .
+
+okg:Creator_Martin_Gorz_Q133888332 a okg:Person ;
+    rdfs:label "Martin Görz" ;
+    okg:googleScholarProfile <https://scholar.google.com/citations?user=lG6f_vEAAAAJ> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q133888332> .
 
 okg:Creator_Metaweb_Q1575434 a okg:Organization ;
     rdfs:label "Metaweb" ;

@@ -10932,6 +10932,9 @@
 <https://openknowledgegraphs.com/software/konclude/> okg:softwareType okg:ReasoningInference ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140686380> .
 
+<https://openknowledgegraphs.com/software/konda/> okg:softwareType okg:KnowledgeGraphConstruction ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141237758> .
+
 <https://openknowledgegraphs.com/software/kuzudb/> okg:softwareType okg:GraphDatabase ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140900293> .
 
