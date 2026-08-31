@@ -1,12 +1,12 @@
 {
-  "activeCount": 567,
+  "activeCount": 908,
   "classificationCounts": {
-    "not_match": 412,
-    "qualified": 155,
+    "not_match": 417,
+    "qualified": 491,
     "review": 0
   },
   "completeSourceSnapshot": true,
-  "deduplicatedCount": 567,
+  "deduplicatedCount": 908,
   "fetchedCount": 146,
   "publicSourceCount": 0,
   "publicationPolicy": "existing-aggregator-policy",
@@ -89,7 +89,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf",
       "returnedCount": 20,
-      "totalCount": 243
+      "totalCount": 238
     },
     {
       "complete": true,
@@ -100,7 +100,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology",
       "returnedCount": 20,
-      "totalCount": 1344
+      "totalCount": 1285
     },
     {
       "complete": true,
@@ -110,7 +110,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql",
       "returnedCount": 20,
-      "totalCount": 173
+      "totalCount": 168
     },
     {
       "complete": true,
@@ -120,7 +120,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos",
       "returnedCount": 20,
-      "totalCount": 66
+      "totalCount": 65
     },
     {
       "complete": true,
@@ -130,7 +130,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl",
       "returnedCount": 20,
-      "totalCount": 63
+      "totalCount": 59
     },
     {
       "complete": true,
@@ -150,7 +150,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web",
       "returnedCount": 20,
-      "totalCount": 720504
+      "totalCount": 715837
     },
     {
       "complete": true,
@@ -160,21 +160,21 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph",
       "returnedCount": 20,
-      "totalCount": 974194
+      "totalCount": 959693
     }
   ],
   "reconciliation": {
-    "aggregatorRecords": 537,
+    "aggregatorRecords": 542,
     "ambiguous": [],
-    "firstPartyRecords": 30,
-    "inputRecords": 567,
+    "firstPartyRecords": 366,
+    "inputRecords": 908,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 567
+    "outputRecords": 908
   },
   "rejectedCount": 0,
   "requestCount": 8,
-  "retrievedAt": "2026-08-31T09:18:03Z",
-  "runId": "20260831T091803Z-3c027d24035b",
+  "retrievedAt": "2026-08-31T19:51:41Z",
+  "runId": "20260831T195141Z-bff9eca6e209",
   "sourceAttributionUrl": "https://jooble.org/",
   "sourceClassificationCounts": {
     "not_match": 0,
@@ -185,8 +185,12 @@
   "sourceKey": "jooble",
   "sourceName": "Jooble",
   "sourceRefreshes": {
-    "adzuna": "2026-08-31T09:18:03Z",
-    "arbeitnow": "2026-08-31T09:18:03Z",
+    "adzuna": "2026-08-31T19:51:41Z",
+    "arbeitnow": "2026-08-31T19:51:41Z",
+    "first-party-accenture": "2026-08-31T19:51:41Z",
+    "first-party-amazon": "2026-08-31T19:51:41Z",
+    "first-party-capital-one": "2026-08-31T19:51:41Z",
+    "first-party-crowdstrike": "2026-08-31T19:51:41Z",
     "first-party-danish-bibliographic-centre": "2026-08-31T09:18:03Z",
     "first-party-eccenca": "2026-08-31T09:18:03Z",
     "first-party-embl-ebi": "2026-08-31T09:18:03Z",
@@ -194,6 +198,7 @@
     "first-party-graphwise": "2026-08-31T09:18:03Z",
     "first-party-institute-of-scientific-and-technical-information": "2026-08-31T09:18:03Z",
     "first-party-inter-university-consortium-for-political-and-social-research": "2026-08-31T09:18:03Z",
+    "first-party-jpmorgan-chase": "2026-08-31T19:51:41Z",
     "first-party-linux-foundation": "2026-08-31T09:18:03Z",
     "first-party-metaphacts": "2026-08-31T09:18:03Z",
     "first-party-metropolitan-museum-of-art": "2026-08-31T09:18:03Z",
@@ -204,6 +209,7 @@
     "first-party-regenstrief-institute": "2026-08-31T09:18:03Z",
     "first-party-relationalai": "2026-08-31T09:18:03Z",
     "first-party-renaissance-computing-institute": "2026-08-31T09:18:03Z",
+    "first-party-sap": "2026-08-31T19:51:41Z",
     "first-party-sib-swiss-institute-of-bioinformatics": "2026-08-31T09:18:03Z",
     "first-party-stanford-university-school-of-medicine": "2026-08-31T09:18:03Z",
     "first-party-stardog": "2026-08-31T09:18:03Z",
@@ -217,7 +223,7 @@
     "first-party-wikimedia": "2026-08-31T09:18:03Z",
     "first-party-wikimedia-deutschland": "2026-08-31T09:18:03Z",
     "himalayas": "2026-08-31T09:18:03Z",
-    "jobicy": "2026-08-31T09:18:03Z",
-    "jooble": "2026-08-31T09:18:03Z"
+    "jobicy": "2026-08-31T19:51:41Z",
+    "jooble": "2026-08-31T19:51:41Z"
   }
 }

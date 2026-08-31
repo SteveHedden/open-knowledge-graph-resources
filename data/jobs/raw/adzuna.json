@@ -9,12 +9,12 @@
       ],
       "payload": {
         "__CLASS__": "Adzuna::API::Response::JobSearchResults",
-        "count": 4282,
-        "mean": 151618.74,
+        "count": 4291,
+        "mean": 151260.03,
         "results": [
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMzk5OTIxMiIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.m6V4CykUQBYCyIlm0BMJPPG3Tixwz_f-ZbDMHrLDhko",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODYzMDQzMzM4In0.uRsFQoLjfdZifSc_uuKXDxM8OPsMFATgkHkj8qPS4qg",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -22,11 +22,11 @@
             },
             "company": {
               "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "MphasiS Corporation USA"
+              "display_name": "IMR Soft LLC"
             },
-            "created": "2026-07-16T20:07:06Z",
-            "description": "Job title: Ontology/Knowledge Graph Engineer Berkeley heights, NJ (5days Onsite) FTE\\ skills: Ontology Ontology engineering Knowledge modeling OWL RDF SPARQL SHACL JSONLD Ontological inference Consistency checking Knowledge graphs Property graphs RDF graphs Graph data modeling Graph analytics Ontologydriven KG design Entity resolution Entity resolution Semantic modeling technologies: Protg TopBraid Composer OntoStudio Neo4j Stardog GraphDB Apache Jena Fuseki Blazegraph Virtuoso",
-            "id": "5803999212",
+            "created": "2026-08-31T12:04:08Z",
+            "description": "Job title: Knowledge Graph Engineer Berkeley heights, NJ (5days Onsite) 12 Months contract skills: Ontology Ontology engineering Knowledge modeling OWL RDF SPARQL SHACL JSON‑LD Ontological inference Consistency checking Knowledge graphs Property graphs RDF graphs Graph data modeling Graph analytics Ontology‑driven KG design Entity resolution Entity resolution Semantic modeling technologies: Protégé TopBraid Composer OntoStudio Neo4j Stardog GraphDB Apache Jena Fuseki Blazegraph Virtuoso",
+            "id": "5863043338",
             "latitude": 40.676603,
             "location": {
               "__CLASS__": "Adzuna::API::Response::Location",
@@ -39,15 +39,15 @@
               "display_name": "Berkeley Heights, Union County"
             },
             "longitude": -74.432146,
-            "redirect_url": "https://www.adzuna.com/land/ad/5803999212?se=uhj8yh2l8RGsw9UPhAJ2-A&utm_medium=api&utm_source=e5c57c17&v=541DEA7E919841E152A05DEB1BF9152B8A952815",
+            "redirect_url": "https://www.adzuna.com/land/ad/5863043338?se=QiCeMHel8RG0WvsdyV91jQ&utm_medium=api&utm_source=e5c57c17&v=BE905E1A84AFDFB6E7E7F7A936FFE2954DA9C8FA",
             "salary_is_predicted": "1",
-            "salary_max": 133151.89,
-            "salary_min": 133151.89,
-            "title": "Ontology/Knowledge Graph Engineer"
+            "salary_max": 196942.7,
+            "salary_min": 196942.7,
+            "title": "Knowledge Graph Engineer"
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTQxMzU0MSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.B7vX5m4D06GBG1f1ax_Wa_rwadcXFKzKtfhwKcnuaas",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODYzMDQ4NjM2In0.NKbbOFegTy7_fqowL6Cudm2SJ92aGjFYWpL7_q86pf0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -55,27 +55,32 @@
             },
             "company": {
               "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Empower Professionals"
+              "display_name": "Trilogy NextGen"
             },
-            "created": "2026-07-30T13:24:24Z",
-            "description": "Role: Senior Knowledge Graph Engineer Duration: 12 Months Location: Remote (For USA) Domain Life Sciences Basic Qualifications: We are looking for professionals with the required skills to achieve our goals: Masters degree in Biosciences, Biomedical Science, Biomedical Engineering, Biotechnology (with a life science/pharma application focus) 6 years of relevant knowledge graph work experience Specific hands-on experience contributing to Knowledge Graph development efforts, including entity mode…",
-            "id": "5821413541",
+            "created": "2026-08-31T12:05:10Z",
+            "description": "Job Description Company Description Trilogy NextGen designs, builds, and manages seamless digital experiences that help organizations modernize and scale their operations. The company combines cutting-edge technologies with deep systems integration expertise to deliver complete solutions tailored to complex environments. Its offerings span ATSC 3.0 datacasting, private 5G networks, Wi-Fi, intelligent robotics, and AI-driven analytics. Trilogy NextGen focuses on delivering innovative, secure, an…",
+            "id": "5863048636",
+            "latitude": 35.2268,
             "location": {
               "__CLASS__": "Adzuna::API::Response::Location",
               "area": [
-                "US"
+                "US",
+                "North Carolina",
+                "Mecklenburg County",
+                "Charlotte"
               ],
-              "display_name": "US"
+              "display_name": "Charlotte, Mecklenburg County"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5821413541?se=uhj8yh2l8RGsw9UPhAJ2-A&utm_medium=api&utm_source=e5c57c17&v=BA7EECB2CC73DF121926A42FEDB68B9FED0AEFD0",
+            "longitude": -80.8432,
+            "redirect_url": "https://www.adzuna.com/land/ad/5863048636?se=QiCeMHel8RG0WvsdyV91jQ&utm_medium=api&utm_source=e5c57c17&v=BFC1FE033DA593194DE91D6468A5C3DB223AC95A",
             "salary_is_predicted": "1",
-            "salary_max": 78631.8,
-            "salary_min": 78631.8,
-            "title": "Senior Knowledge Graph Engineer"
+            "salary_max": 168392.02,
+            "salary_min": 168392.02,
+            "title": "Senior Knowledge Graph & Semantic Data Architect - Onsite in Charlotte, NC"
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1ODU2MDM3ODAyIn0.DMpMqvmnOEauEEQ1RuWdLnDAiFDMBqgLl_868LGsmdw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NjAzNzgwMiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.EkqDy5NuJqKKBFonoHYyIoQ5JCx9YWILd_subjs2TEk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -95,7 +100,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5856037802?se=uhj8yh2l8RGsw9UPhAJ2-A&utm_medium=api&utm_source=e5c57c17&v=19A3BFFC48D7C8F59138F8507347A141071D1D51",
+            "redirect_url": "https://www.adzuna.com/land/ad/5856037802?se=QiCeMHel8RG0WvsdyV91jQ&utm_medium=api&utm_source=e5c57c17&v=19A3BFFC48D7C8F59138F8507347A141071D1D51",
             "salary_is_predicted": "1",
             "salary_max": 98031.1,
             "salary_min": 98031.1,
@@ -103,7 +108,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY5OTA4NTYxNyIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.GNKBHLVpPdFgke_bBx1YoRTJmUG0-HeJKQewBbNE0r8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY5OTA4NTYxNyIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.Nl7FTFJuKl1hkU9EA_lt9SZBwaH1ROviFMYAE5sCHmM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -129,7 +134,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5699085617?se=uhj8yh2l8RGsw9UPhAJ2-A&utm_medium=api&utm_source=e5c57c17&v=1082B48CAE5632FAB44C8086434A8EB0DF666063",
+            "redirect_url": "https://www.adzuna.com/land/ad/5699085617?se=QiCeMHel8RG0WvsdyV91jQ&utm_medium=api&utm_source=e5c57c17&v=1082B48CAE5632FAB44C8086434A8EB0DF666063",
             "salary_is_predicted": "1",
             "salary_max": 160871.38,
             "salary_min": 160871.38,
@@ -137,7 +142,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTcyNzgwODU3MyIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.TeOSiQ7Od6zOPD88EuQmLKXR_yMikdObBCrLeC41HbA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NzI3ODA4NTczIn0.J2CINOJbXafgT5ggtAFrThLxmOtop8jNTVaKqFkdTgM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -168,7 +173,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTA5NjUyOCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.UFFD2F39S9kK4Bz9W4o65_gHPkYq3Hfzt_M7Jp49OMI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODIxMDk2NTI4In0.SQXGdT46tlFfW1pT0Llmq1HnU_itUwSfDhiB8mrhGvQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -203,7 +208,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NDU2NTc4MiIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.wjFtIqrTycZyAnsxhMKJPdYD3HABeIuuvvCiVGhCPI8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NDU2NTc4MiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.pX6lzuqtVE9WA9wQR-qiVIeYyBin8E62JvC8vvZMx3M",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -229,7 +234,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5854565782?se=uhj8yh2l8RGsw9UPhAJ2-A&utm_medium=api&utm_source=e5c57c17&v=F82AC75EE6866843711802782253FBBB9DFBC357",
+            "redirect_url": "https://www.adzuna.com/land/ad/5854565782?se=QiCeMHel8RG0WvsdyV91jQ&utm_medium=api&utm_source=e5c57c17&v=F82AC75EE6866843711802782253FBBB9DFBC357",
             "salary_is_predicted": "1",
             "salary_max": 136993.81,
             "salary_min": 136993.81,
@@ -237,7 +242,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU2Mjk3MjU4OSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.h4xaJbIuI4phC_ZZYB1UZbxsA4yo73R99pnazUEz-ws",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU2Mjk3MjU4OSIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.qQVkmtjNv_ZdGWsY79mS17pZKK-YmZhWf4qyb-snL1c",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -270,7 +275,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1ODI0OTU0ODE2In0.uwcPhwiTxjOlg_WH9h-1Hr5U0Mxmvqpg2VlcQNCZAwU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyNDk1NDgxNiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.aU6j8Lo6ivRhnn63l339LiRG8Nm_FwuFKoCyd31yL8k",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -304,7 +309,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1ODU5MTc1NTMyIn0.3oBitIwbv-6DipuWSYCRXlWfHnb8MXSoN80na6afIEI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODU5MTc1NTMyIn0.LDJXoh94qTwfQHTT16hGWXdyBTnarLezTI5gp1ii1Vs",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -337,7 +342,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU2Mzc3Mzk3NCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.adcZ-xWUEwhVBtyIHv8o1omaqYVByS4AZHKarVslsD0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTYzNzczOTc0In0.eEAr8u_G5XJKP5ifSAkhEMi5Q-nJTOC0qLcZ8o5p2Rk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -370,7 +375,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NjMzMTQ5NCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.Qh1u2aElatnTlzRxHVbhjbosLkfXFasCUPATRIZ4d1Q",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODU2MzMxNDk0In0.oxNkYmiVxzKWCiHxcMRjRc6l6LaYHkm8LMt-idL1mdw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -404,7 +409,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NzQ5ODgxNTIxIn0.s27cZ6bYyXdZLzJl6SeVvnoYoYvIwjFwrNxWTXdJDcc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc0OTg4MTUyMSIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.ayEc50kw_6mmTYFi9siOU7GUYRsAUOK_qMl9QBqoXII",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -437,7 +442,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1ODYwNDUwNTE0In0.iKsXTbVZ9537dCidAudJSXAfCjN0gaUGdtyI1dyG-8A",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDQ1MDUxNCIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.IlAgKVsCdMjMrF5s6xOqcb2NYx1fj_8KOFzolGPS8IA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -470,7 +475,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTA2MjQyOSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.ODwegjlXDS0ysdGLDN66T8SJdcxdm3LfKuGSWxCNc1g",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTA2MjQyOSIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.cz64z1jkc500AVIUbiYooFOWPgD40ywZKTpJyRQJqUE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -498,7 +503,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc2OTMxNTMyNyIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.SbWpIt-niXlEH5_wzrj_YIyetG5R-zXLTXs69eecYLI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NzY5MzE1MzI3In0.biwFSZDpX3ziBGlsf8lKJGSO9qN9J9_P9tyTN1z7Qkc",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -533,7 +538,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NzU1NDA1MTQwIn0.dffq6X0GgnBoYf9gKpwjqQB8g5vA5AmUDvu1N6OYHvA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NTQwNTE0MCIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.YkWaqIzflPMR4QRgH4faMPT04QbJnpTafM-uj2ZF_Kw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -566,7 +571,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMTkyNzMxNyIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.4jdclpujEyWRSDWIZh95vQGJnPxf3ZZEtnPWs6-Kxbk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMTkyNzMxNyIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.d3nIvTvjchbrIYR0ecJ6t4XAuq3lAd1HlVNnnaHQgps",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -599,7 +604,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1ODAzOTgzODMwIn0.Ggk1hUhsgo3sgmfzpuEIv98oUFk3rioPKH9IGlmwm68",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODAzOTgzODMwIn0._yz-sSZEEuKg3a8sDDDlu5PhKr9UnB7bDzxNIRUnqMQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -632,7 +637,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc3MDE1NTQwMCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.bHxk67vTxtcl05kuqm1Ddc1pkEcHWkZX-UpvXuHFHnc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NzcwMTU1NDAwIn0.9ManF1k4aeIGWL4ichjG8C9vAtgRT3WqGpwCNe9Ljhw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -666,7 +671,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NzU1MjUyNTczIn0.dO3jTjl72UQJXyhRaADvvWd1Vj-rNaso5GnNH6gpCZE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NzU1MjUyNTczIn0.T2yMkxVuSxu0OllRzQ3PpDeHX4dVaLrdPaMLVDGslYI",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -699,41 +704,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMjkxMDk5NiIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.AD4h7YnrgV_FfFxwIxS-hCdj01DvW9Nvtz2LGEZ9Mlk",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "ASME INTERNATIONAL"
-            },
-            "contract_time": "full_time",
-            "created": "2026-08-07T23:14:16Z",
-            "description": "ASME is seeking a Principal AI & Knowledge Graph Architect to join our Information Technology team. The Principal AI & Knowledge Graph Architect will be responsible for leading ASME’s technical transformation of engineering standards into intelligent, machine-interpretable digital assets. This role combines expertise across AI systems architecture, knowledge engineering, ontology design, graph technologies, and enterprise-scale digital transformation. It requires balancing innovation with gover…",
-            "id": "5832910996",
-            "latitude": 40.765153,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "New Jersey",
-                "Hudson County",
-                "Meadows"
-              ],
-              "display_name": "Meadows, Hudson County"
-            },
-            "longitude": -73.985971,
-            "redirect_url": "https://www.adzuna.com/details/5832910996?utm_medium=api&utm_source=e5c57c17",
-            "salary_is_predicted": "0",
-            "salary_max": 180000,
-            "salary_min": 150000,
-            "title": "Principal AI & Knowledge Graph Architect"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NjIxODA2NCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.YyXHCc9FIiODAAUCvYboKxXcjDD0Nf1KwKfUiO8Xz7k",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1ODQ2MjE4MDY0In0._rwlpIYjkQLy0UzcX_O-uplLPN_Wvs19BR4pbc-tPDo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -765,7 +736,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NDkxOTIwNSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.aiNV8A-pEqi-1qbBpDI9iJyCOJkiJLimKxTn-7y9ngU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NDkxOTIwNSIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.YcWRHcUV_b9HUEsAfPoFv7hr2c7_IjF7O7Qhmb29mi0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -798,7 +769,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NDg2MjI4MSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.-k8Onvip2jfrDzyeT0mwxIqzgmi2s7h8s0ZpcvqA-oo",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ0ODYyMjgxIn0.ezbrFx-WjZhBqjvAb9noLRBKjZlCqxKxnviL1w2SQw8",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -832,7 +803,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAxOTU1NSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.VKT8h4UezeVkgvqsLcV-IHOZYSA43mUPru9RaoFisxA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAxOTU1NSIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.YTPa96BNbOUQy0tKtbIX6jKTAG2gOsQ2DSA60rVRZd4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -865,7 +836,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NzczMzk5MSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.CQhyhaRu0WSqbYdLlJAn0DpYEATYGiUTKe67eDJKQNg",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ3NzMzOTkxIn0.HYkGmCEeu4tIq4m_eMWKHQ8eI9U0C8IQ0BDCje9VywA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -899,7 +870,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ0OTcwOTM4In0.Qb1GO03dTX2zjPXjr1x_4gzvcL19I1XRZZ0RTC7JDG0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ0OTcwOTM4In0.0wnJDThPs8s2MthSapDpi1hSoCMKcUIDntRBYJW57KQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -932,7 +903,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDAzMDY2In0.RGzV5fpO60QHdWpBCzVJbTc2RepnaXYcpuvGINn7ebw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDAzMDY2In0.MDq46wzT3drcduDKVOjVh4UxTvypIbbJiO832TaHI7o",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -965,7 +936,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAzNTI4NSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.sAbc0WZ50v3M8QRmQMnRjoejoCIsZKU3nzL_h6YT8PI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDM1Mjg1In0.QnTglDWfDxJPEklCGn3LeHsDkckH-ADBJia5mjGs9dU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -998,7 +969,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDM2MTkyIn0.rAGjTEyPHq1xLfqcNfdbqY1wr2VCe6H59PqXt-5GKGs",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAzNjE5MiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.zp-9907zPAeS0TdRWUb_HGca6d9WzR0LIprOxQ11axU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1031,7 +1002,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAyNjg1OCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.NYvGVOJ-SZ3yJGDOHARiqLs8LaJDOxMUI5mSjd6Q9ks",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAyNjg1OCIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.qqow-1lrRYDberNWIII66Ph10pJW3hRKarforsBsJrQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1064,7 +1035,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ0OTk3NDA5In0.-wed12gBBq2FRMy8akEcpYJy0ZSteaeAUvkRr1dcBKE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ0OTk3NDA5In0.GmdOsu8g2ahHcpF0wWqDpSejdegmePL3AV8lzIVY4sw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1097,7 +1068,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDI3MjQ1In0.GPjI7nk1__hbjmX-YXQro_Khf31NSUbdjCnIOy4kmPY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDI3MjQ1In0.hnRIC0LCe0JMwuRZMT11z-OFmw_82pyofyYXbEYnJ-4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1130,7 +1101,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAwODk4NyIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.U_vYxjc4jZr80b6x9_ry8wIjXTQDQPB-PBVRy1y3X_Y",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAwODk4NyIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0._8ZVXoufumQrg6JulUiVaNrWgEFqFezHn_Fw85QvBZg",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1163,7 +1134,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ0ODYwNzU4In0.4VaR1PDJpxjqzTwK8DRwH8mHUksIaydR20AwX66iOUE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ0ODYwNzU4In0.sr_4ARiclLu1MEsa4Vc9JkLUjWHbp_PCLA28riL4I3k",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1196,7 +1167,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAwOTUzNyIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.GK4pUQcEA9owDIfDlYvqHaullHqqctZCgfXbi6jZhNc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAwOTUzNyIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.nuKMVq_4S3qhEFcROWCbJyvOWZ7-M73LEZWI8WyE9io",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1229,7 +1200,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ0OTkyOTg2In0.nC-ZF8l9Ve7Tr5QQn269Kwh1SEhBNcEzK5nfFTKAgp4",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ0OTkyOTg2In0.iDYx9vuc6pV_Ayl4Vj4KQzQZ54e9lF9kP0i3R7EYb2s",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1262,7 +1233,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTI1MTA0NiIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.9xh8tLWTKI4wYrUfVDo6rveRORa0SkjQ-GGN1VoedOA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTI1MTA0NiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.ucUpCyEaNlmUdDO6DoLAZBIZD04mIJCw15hk1-VW0WQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1295,7 +1266,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAzNTU2OSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.MqrkzstwNDPKSdLWXQWzLuNK_YX00zsCD16TOFF_XxY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDM1NTY5In0.a05bvJBuKWisVGwZBpG6s0xTT8Uq1xRiGVyv2IMJA4I",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1328,7 +1299,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDM1MzM2In0.FBfyuA3e0X0P0YE_kDS22CXmBsv2FBVe4Wg6WhgZ6yM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAzNTMzNiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.tCuDzqMoplks-i75roFGFQOQtrsgLyOgdGfRFHJUnuc",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1361,7 +1332,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDA0NjA4In0.bBSpGeg3a_q37XhULvYqnRfrk_3AIkW5o_QggneBgKk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAwNDYwOCIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.cpkf4kMBKKe0_iR7Vv8IhEvBtzHqgtlUZyGmHwBSpf0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1394,7 +1365,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NDgzMjM2NiIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.nOa9O4DJKsseoFIr7wyBRZJCpDa-DTGYJqqv46B-lwI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NDgzMjM2NiIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.EWilVa6W4UI7uKEpa0Vp4ihIyK1rc1W5sHGDkgNETc4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1427,7 +1398,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAyMDkyNCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.r2F5aL-FXi5Iee7Ohmla-BxwK9P-FmP6ft5LQfRmw0M",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDIwOTI0In0.FM9TbWgCpcs7QxOCHJXT4Upl-GsmvTGXI5qGYh-iKYw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1458,7 +1429,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAzOTkzNCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.lJwr167rYJFEPL7pi1zmpFnHr2DCgpXo084fAG6utZQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAzOTkzNCIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.m6CUNZZ1jsc0VwpY9Ogf2wecj-zC0IfP5KLeETH4Mpc",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1491,7 +1462,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTA0Nzg1OCIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.Mn6IJIcDO6zDy2LAxR59_DqiKv8qrFbegHYj9wAkopI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTA0Nzg1OCIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.paNKy_swfGG-8wKXZl5DPtH6PlkmAWi-TZ1SIIFjYtw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1524,7 +1495,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTA0Nzg1OSIsInMiOiJ1aGo4eWgybDhSR3N3OVVQaEFKMi1BIn0.4C6anKs6BCO5TDnfO9iTy0WSrKvhQP4wXKPpqstB9xc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDQ3ODU5In0.xjFuCaJbp6a9GicQph5F4cv9VErzomGh2mfIi6rCuRw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1557,7 +1528,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDEwNTEyIn0.k5f3YqHvAGifjm857CErg34IryNhK8pawnHoabIM2Aw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDEwNTEyIn0.8LL8cOf4CQCgo384K7jUr6sb980ovvX6PuHBQLBg9_A",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1590,7 +1561,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDQzNDQxIn0.cfcwI-qcWnulj6miKe80hfCt-uLCxQgApYOijBVrcds",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTA0MzQ0MSIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.x_J1cQKaiXizzLycpKeFBzdqw1mRX4n62lUzcVwsCpk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1623,7 +1594,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoidWhqOHloMmw4UkdzdzlVUGhBSjItQSIsImkiOiI1NTQ1MDE3NTIzIn0.SSo6qrWTg2JlILZc_WU9gMW1WmUJyvmi9wExB3T-fhk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTU0NTAxNzUyMyIsInMiOiJRaUNlTUhlbDhSRzBXdnNkeVY5MWpRIn0.WOsSXoW5wfZjQcTfZtY5R9TJ6hZ-krEoIIjQZnwuhwE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1653,6 +1624,39 @@
             "salary_max": 153123.66,
             "salary_min": 153123.66,
             "title": "Principal Presales Consultant - Knowledge Graph"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiUWlDZU1IZWw4UkcwV3ZzZHlWOTFqUSIsImkiOiI1NTQ1MDk0NDkzIn0.G9NRMDhPhxX1dSJlNTzoJVOXqH2oCqMUmVbbJakdA_Q",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Siemens"
+            },
+            "created": "2025-12-16T19:46:15Z",
+            "description": "Mendix is a low-code app development platform: First, what is low-code? Low-code is a visual approach to software development that enables you to abstract and automate every step of the application lifecycle. Gartner predicts that \"by 2024, low-code application development will be responsible for more than 65% of application development activity.\" Mendix, the global leader in enterprise low-code, is fundamentally reinventing the way applications are built. The Mendix platform was created to pro…",
+            "id": "5545094493",
+            "latitude": 40.21938,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "New Jersey",
+                "Mercer County",
+                "Trenton"
+              ],
+              "display_name": "Trenton, Mercer County"
+            },
+            "longitude": -74.73156,
+            "redirect_url": "https://www.adzuna.com/details/5545094493?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "1",
+            "salary_max": 148906.05,
+            "salary_min": 148906.05,
+            "title": "Principal Presales Consultant - Knowledge Graph"
           }
         ]
       }
@@ -1666,12 +1670,45 @@
       ],
       "payload": {
         "__CLASS__": "Adzuna::API::Response::JobSearchResults",
-        "count": 2341,
-        "mean": 174931.77,
+        "count": 2335,
+        "mean": 174246.46,
         "results": [
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODQwMjYyMTgyIn0.V-HFL6QgGtnJAgiHPV50ljNA6YfxOIxNB8PnYpLb6SY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MzA5MjI2MyIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.z_VmaJ7j7D8XgkRhnv9_qQNtYpkqT2EillKkWZCsp9s",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Vantor"
+            },
+            "created": "2026-08-31T13:14:44Z",
+            "description": "Vantor is seeking an Ontology Engineer to design and maintain knowledge graphs and semantic models for data‑driven software solutions supporting federal clients. In this TS/SCI with CI Poly role, you will model complex domains using OWL/RDF, define ontologies and taxonomies, and integrate structured and unstructured data into scalable, cloud‑based platforms. You will collaborate with engineers, data scientists, and product teams in an agile environment to improve data interoperability, discover…",
+            "id": "5863092263",
+            "latitude": 38.978,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Virginia",
+                "Fairfax County",
+                "Herndon"
+              ],
+              "display_name": "Herndon, Fairfax County"
+            },
+            "longitude": -77.387,
+            "redirect_url": "https://www.adzuna.com/land/ad/5863092263?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=43AD749795491FA2987F00D231108BCDCA67316B",
+            "salary_is_predicted": "1",
+            "salary_max": 106577.4,
+            "salary_min": 106577.4,
+            "title": "Ontology Engineer"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDI2MjE4MiIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.d9MYSDx9AGoqLgANq-C2rnsDrllVpIva9Qo8Pxbz0kI",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1696,7 +1733,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5840262182?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=A8F8B364691A93D192B1F497E5029941E4211D33",
+            "redirect_url": "https://www.adzuna.com/land/ad/5840262182?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=A8F8B364691A93D192B1F497E5029941E4211D33",
             "salary_is_predicted": "0",
             "salary_max": 190000,
             "salary_min": 150000,
@@ -1704,7 +1741,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDI0MTA5OCIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.QZ-KpK9T9RmvP9OXGgBuKGjAEVgpkClNBvcMrbf3-B4",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDI0MTA5OCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.MU9JW-nb6-SPFam6jTmOTFLaBvCDnT9H4xcy1L3sTs4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1729,7 +1766,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5840241098?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=C7A0976671257CF18C4D522E2B62935D065B387C",
+            "redirect_url": "https://www.adzuna.com/land/ad/5840241098?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=C7A0976671257CF18C4D522E2B62935D065B387C",
             "salary_is_predicted": "0",
             "salary_max": 180000,
             "salary_min": 140000,
@@ -1737,7 +1774,40 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODQ2NjY1MTYxIn0.NKYnImGoNc0Yx8b2Z07yF9Oy1YRvjW0gvICABFlUk1c",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODYzMDI2ODE2In0.jdhgexedhzNAoNs0nTthqCOsT5eDTe6wU6G-o4Jh01E",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "iTech US Inc"
+            },
+            "created": "2026-08-31T11:58:47Z",
+            "description": "Job Description This is Mohan from ITech US Inc. Below are the position details with one of our clients. We would like to know if you are interested or can recommend someone interested in this job. \\n \\n Ontology Engineers \\n Location: Cincinnati, OH \\n Duration: 12 Months \\n \\n Collaborate with data architects, ontology engineers, informaticians, and product teams to develop clinical ontologies and knowledge models. \\n Define, review, and validate clinical concepts, relationships, hierarchies,…",
+            "id": "5863026816",
+            "latitude": 39.13662,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Ohio",
+                "Hamilton County",
+                "Hyde Park"
+              ],
+              "display_name": "Hyde Park, Hamilton County"
+            },
+            "longitude": -84.43368,
+            "redirect_url": "https://www.adzuna.com/land/ad/5863026816?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=52DA44D0D8A2FB8E5990362EE4FDB1CBC41CF56B",
+            "salary_is_predicted": "1",
+            "salary_max": 106916.81,
+            "salary_min": 106916.81,
+            "title": "Ontology Engineers"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODQ2NjY1MTYxIn0.zeOarEeHtIAStHe2Y7lAQkybmFB10M-60MfWbO9MTiE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1762,7 +1832,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5846665161?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=814313E797595347D20C594F016A9E9A77B6B9A5",
+            "redirect_url": "https://www.adzuna.com/land/ad/5846665161?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=814313E797595347D20C594F016A9E9A77B6B9A5",
             "salary_is_predicted": "0",
             "salary_max": 165000,
             "salary_min": 120000,
@@ -1770,7 +1840,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODExNDczNzM1In0.rhbrL7RzgwRVNCbJUpw0ZPkuxIeuhuJNYg7Ili5P5Vg",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODExNDczNzM1In0.e81u3g-47vuRDw8ys1vNEpzc4xxT8UVQ89tDPPHmkto",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1795,7 +1865,7 @@
               "display_name": "State Farm, Arlington County"
             },
             "longitude": -77.097739,
-            "redirect_url": "https://www.adzuna.com/land/ad/5811473735?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=79A6A68A5BA19F6A07AC32080CF69D016CB5638C",
+            "redirect_url": "https://www.adzuna.com/land/ad/5811473735?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=79A6A68A5BA19F6A07AC32080CF69D016CB5638C",
             "salary_is_predicted": "1",
             "salary_max": 154946.8,
             "salary_min": 154946.8,
@@ -1803,41 +1873,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1Nzk5NzczNzE3In0.pcXpAoiSPhkZ-KXQOWKlTv1rbdhrWylQDWJqk0UO1hQ",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-07-14T04:55:45Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5799773717",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799773717?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=691B5B21504CF388C0D35BF8137661E8366B0557",
-            "salary_is_predicted": "1",
-            "salary_max": 163820.4,
-            "salary_min": 163820.4,
-            "title": "Ontology Engineer (TS/SCI)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODU2NjQ1Mjc1In0.vB-o9w9GGw04PkjdQWv9jeA7PQBHYCPO3fWuTKwvhoI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODU2NjQ1Mjc1In0.-The2HTk93NKLrZ-hVDhs2-qAfPmTn_u_vVYIDbn08I",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -1862,7 +1898,7 @@
               "display_name": "San Diego, San Diego County"
             },
             "longitude": -117.164709,
-            "redirect_url": "https://www.adzuna.com/land/ad/5856645275?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=902687B57E4003337A615B13D9A1D628EC4FF3C8",
+            "redirect_url": "https://www.adzuna.com/land/ad/5856645275?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=902687B57E4003337A615B13D9A1D628EC4FF3C8",
             "salary_is_predicted": "1",
             "salary_max": 120490.77,
             "salary_min": 120490.77,
@@ -1870,7 +1906,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDkxMTQ3NyIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.aBZq56In4CX3aCMwCT88kJJeJCj6xtIyXJD7h0pJBnE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDkxMTQ3NyIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.zGH8jpkhPxLRWxuScWRRnCJ1PdckUMuDbtUmCtMFBaM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1895,7 +1931,7 @@
               "display_name": "Pimmit, Fairfax County"
             },
             "longitude": -77.1786,
-            "redirect_url": "https://www.adzuna.com/land/ad/5840911477?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=1447269FA8AEF993198CE99CFD215651EECF5107",
+            "redirect_url": "https://www.adzuna.com/land/ad/5840911477?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=1447269FA8AEF993198CE99CFD215651EECF5107",
             "salary_is_predicted": "1",
             "salary_max": 115684.48,
             "salary_min": 115684.48,
@@ -1903,7 +1939,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1Nzc0Njk3MTMyIn0.W89P5ibISlbYN-CxjOirKB0jMvCc7eH7Q72Q6WQAC68",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc3NDY5NzEzMiIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.vzi3uYT00_Ump8uQkkYSop5pIjmO-r-lMMcopLlQfkg",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -1928,7 +1964,7 @@
               "display_name": "San Diego, San Diego County"
             },
             "longitude": -117.164709,
-            "redirect_url": "https://www.adzuna.com/land/ad/5774697132?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=6C7DDA6D27DA997031956368DD3DDB96B66A7627",
+            "redirect_url": "https://www.adzuna.com/land/ad/5774697132?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=6C7DDA6D27DA997031956368DD3DDB96B66A7627",
             "salary_is_predicted": "1",
             "salary_max": 110860.38,
             "salary_min": 110860.38,
@@ -1936,7 +1972,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0ODcxNzg2NyIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.m3l0OKvesp6aQidIvxkj-4-vtSyZbi8gp8b8p8miTvs",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODYzMDUxNDkwIn0.jWYt8pjsHzyTIY7Ot7qG0TNQvM7Yo5MzlB0eG9-rRvo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -1944,100 +1980,27 @@
             },
             "company": {
               "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
+              "display_name": "Sierra Business Solution LLC"
             },
-            "contract_time": "full_time",
-            "created": "2026-08-19T17:07:43Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5848717867",
-            "latitude": 38.97821,
+            "created": "2026-08-31T12:06:12Z",
+            "description": "Collaborate with data architects, ontology engineers, informaticians, and product teams to develop clinical ontologies and knowledge models. Define, review, and validate clinical concepts, relationships, hierarchies, and metadata. Ensure clinical accuracy and consistency across ontology models. Support development of healthcare knowledge graphs and semantic data models. Review clinical workflows and translate them into structured ontology frameworks. Participate in data governance, terminology …",
+            "id": "5863051490",
             "location": {
               "__CLASS__": "Adzuna::API::Response::Location",
               "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
+                "US"
               ],
-              "display_name": "Herndon, Fairfax County"
+              "display_name": "US"
             },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5848717867?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=719DEF27A2F8511BAB787E9DCC641A97484B4338",
+            "redirect_url": "https://www.adzuna.com/land/ad/5863051490?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=2445B50FCE2B0E057CDB6FA4DFD66796259E9C69",
             "salary_is_predicted": "1",
-            "salary_max": 244199.25,
-            "salary_min": 244199.25,
-            "title": "Ontology Software Developer (TS/SCI)"
+            "salary_max": 104956.2,
+            "salary_min": 104956.2,
+            "title": "Clinical Ontology Specialist Remote Location"
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODAzOTk5MjEyIn0.TD-l1BaLYOxDET_KX88RAOaB8oAg2Wn-REovTfRP7Og",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "Engineering Jobs",
-              "tag": "engineering-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "MphasiS Corporation USA"
-            },
-            "created": "2026-07-16T20:07:06Z",
-            "description": "Job title: Ontology/Knowledge Graph Engineer Berkeley heights, NJ (5days Onsite) FTE\\ skills: Ontology Ontology engineering Knowledge modeling OWL RDF SPARQL SHACL JSONLD Ontological inference Consistency checking Knowledge graphs Property graphs RDF graphs Graph data modeling Graph analytics Ontologydriven KG design Entity resolution Entity resolution Semantic modeling technologies: Protg TopBraid Composer OntoStudio Neo4j Stardog GraphDB Apache Jena Fuseki Blazegraph Virtuoso",
-            "id": "5803999212",
-            "latitude": 40.676603,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "New Jersey",
-                "Union County",
-                "Berkeley Heights"
-              ],
-              "display_name": "Berkeley Heights, Union County"
-            },
-            "longitude": -74.432146,
-            "redirect_url": "https://www.adzuna.com/land/ad/5803999212?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=541DEA7E919841E152A05DEB1BF9152B8A952815",
-            "salary_is_predicted": "1",
-            "salary_max": 133151.89,
-            "salary_min": 133151.89,
-            "title": "Ontology/Knowledge Graph Engineer"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5OTc3MzYzNSIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0._M7Bb3vU_cDFnw3OeWtE-LY5WrT-XEjWkkC6f427V5o",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-07-14T04:55:43Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5799773635",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799773635?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=47B8E93FC3B298C76343AF44C0A67E87AAE1C59B",
-            "salary_is_predicted": "1",
-            "salary_max": 201529.44,
-            "salary_min": 201529.44,
-            "title": "Ontology Engineer (TS/SCI with CI Poly)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTQxNTMwNCIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.L6klp3Bo7m58bpSzcCp3YcOzVI_hUFyjaRpdROVUr9A",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTQxNTMwNCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.d05neLUYPpwbxObdSC7DReifKz8XX4rkRhhRbO21Z2k",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2062,7 +2025,7 @@
               "display_name": "Highland Park, Dallas"
             },
             "longitude": -96.765058,
-            "redirect_url": "https://www.adzuna.com/land/ad/5821415304?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=53911C137E8F4B9D8A516AA51841BD7055C1B0CF",
+            "redirect_url": "https://www.adzuna.com/land/ad/5821415304?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=53911C137E8F4B9D8A516AA51841BD7055C1B0CF",
             "salary_is_predicted": "1",
             "salary_max": 142364.8,
             "salary_min": 142364.8,
@@ -2070,7 +2033,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1NzkyOTcyNDIzIn0.i66qaQZ2EUoJzykIdI_aGPKJZofV38C_EmVo5mnuVy8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NzkyOTcyNDIzIn0.5AQARkPbaxMl7f4onc7EjR6JVJSrqiJ34-W7HpRYKqA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2104,7 +2067,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODU3NjUyMDg1In0.4feQaJ1sT3-0giNPLyZErpd13ksmMUi38Q8a-kwEhCA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NzY1MjA4NSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.A9FFh-GdJRqZEYXJ_yGoSmzdAOBkgyOg0tkTunKRx_0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -2137,7 +2100,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTA1ODk2MyIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.02TqAPkjQCNne78DZBo5cDL6AmVBkrtTTzGiRCEl_9A",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTA1ODk2MyIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.U8cMxLvxbKkOBDnlsc9AmU85yT1jx36EZY6L8up7ZN0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2170,7 +2133,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1NzczMTgxNTM3In0.mhTOyGOP4OLc37pvg-fDbLdvH4ubaoFWObuExFRtZdw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NzczMTgxNTM3In0.J-2XsZp9njF5JFDZRBZxjMe1VfZygTGT2Pij96anyNM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2199,7 +2162,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODIyMDI0MTY1In0.UadeoRCjQQQhKX9qw2GsE423BalkAoY3H-0B-FX8Vok",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMjAyNDE2NSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.5Oem8IcvMoQhgJBb6K6_Zz5qaiDDiGDF_I8qF8hBMa4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -2227,7 +2190,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODMyODgyNzY1In0.EBEw1q-65R2A8PB4iqsaeN5JxRBaeG8_mZxaTVRpzBE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMjg4Mjc2NSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.eDRtL5RpszAKD7Ne9xzL-Oxwm7rLTBvvaqzow77YXpo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2261,7 +2224,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyODcyNzUzOSIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.kAlmPC2Bk_pDiNWWYrUzDToBRTP4lXcYw6rLcJT_Dx8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyODcyNzUzOSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.AIq9OwXFE6eKJ2-1uuKAl0IG7gzMn2veB7EqVwOMaS4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2293,7 +2256,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODM0NDQ1NzQ0In0.Jl17D_b_s2riav7es0SvciMTZxlQR0k51F4NRGUCkNw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODM0NDQ1NzQ0In0.Nv4Y9inCIHONfVFMWFoIhRIqLE7g8kUl1kR3OflHRMI",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2327,7 +2290,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODM0Mjc3ODYwIn0.VRJ0ovVFdQePXXY_uzlOVjwtm1mhaY67VEu08Y61DyM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODM0Mjc3ODYwIn0.gWnP8V584eM0Pr-bUQr8VoTZrVYEHZMI796XimAGyU4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2361,7 +2324,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODEzNTM3Mzk3In0.z31vHupJoQHvU6WvXGjUgkmnCF_uELKEMKuK1UTQ7zI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMzUzNzM5NyIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.kaecVpGL8umJX0qHpKurESzeCzrxv-cuHi9gUX_Ar1E",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2395,7 +2358,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1NzkwNjUzOTg0In0.eOXu0bJmd3EX5U_4n9xZtlECyylDuAycrKtmP8ocgW0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NzkwNjUzOTg0In0.J__FlH2W3W5_vvhl_M5OMYQKZW3Nl394dgdh2u8uz_4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -2424,7 +2387,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NDU2NTc4MiIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.XXm4uzEcVnffsHFQa3rgp95Z_wQzoLj0jajrsY4yusw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NDU2NTc4MiIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.YVkYGYDgukPXY3QDSAZl7BGFjAaEQF1vC7VMlbVzBNE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2450,7 +2413,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5854565782?se=VFaSyx2l8RGvTpx7KoFzbQ&utm_medium=api&utm_source=e5c57c17&v=F82AC75EE6866843711802782253FBBB9DFBC357",
+            "redirect_url": "https://www.adzuna.com/land/ad/5854565782?se=XkNFMXel8RGEeLI7Dotn4Q&utm_medium=api&utm_source=e5c57c17&v=F82AC75EE6866843711802782253FBBB9DFBC357",
             "salary_is_predicted": "1",
             "salary_max": 136993.81,
             "salary_min": 136993.81,
@@ -2458,7 +2421,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODUzNjMzMTI2In0.vHeXKc8Mvcf3f-raLNQfw6idXw_7sCwj6x1gi_6BQng",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODUzNjMzMTI2In0.y4r0Mpse6bgggEXkDx63QhAnODW8BYoxLxQPleSkP7A",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2486,7 +2449,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODAyMDEwMzk2In0.19iO5QRnTv_25hXRU6Gia1BTh7BEWbY33Arcsalo9Oc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODAyMDEwMzk2In0.qWxNO_Bl6wCqMUL8rcHLsqQ4VanmcHNO6csB-4x0tuM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2520,7 +2483,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODA3MDg0MTI1In0.DUR27SY2mjKk6ta_a6T-QfpyQLo9qYKfQ4KNHaip5MM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODA3MDg0MTI1In0.er1N9rmoGpLKJ-4LBdbaY3ZG999QgxEBUQZxmrH2aBA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2554,7 +2517,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODA4Njg5NjY5In0.d9rqfWm9CVFy_5kbe2kQQWTVMiuA77tDdCUyRZz__bY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODA4Njg5NjY5In0.n3cZ1pPnHt2k1KLIBYhVIUg0YwKKNABaGYr78Uoic8w",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2587,7 +2550,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc0OTg4MTUyMSIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.A0MEiptA1sK2zsvbbAG2mLg-vLccsQJckqWn_vdjt3w",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NzQ5ODgxNTIxIn0.WnsDg5N9vS-mj6rEk-wGv77ChAtDFYM8SZHs0CwPog8",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2620,7 +2583,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NTkyOTYzNCIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.IuWt4TCj0ZDETDp-IqL_MkvK2Hva6r55dxfn0tj2SIY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NTkyOTYzNCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.ppqw91OrCy0mdwDUcnGHG25OyiCnZmor3v6ZFdsES_s",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2654,7 +2617,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODU5MDYyNDI5In0.4rz3xsMYdYDMvYsfk4JLqGPVFrOSxRRqQmb0pZSJ_W0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODU5MDYyNDI5In0.l8NjFDYDUdB2fM4FiKDilfm3ZLTtx7aBePZVXjM44Xk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2682,7 +2645,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODU2NDAxMDcxIn0.cwtJO9JDu3N97KndDYVtUoim2Mgue_mLyDpoPMl-n04",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODU2NDAxMDcxIn0.7PpcpF3P2BI4b7wq-PKsc5IxtmrhSbQFr0TqpBZ4A74",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2716,7 +2679,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1NjY5NzM4MDc0In0.xFMQpLRzUodTH9ZVDOFmRIyjg9swjgO13NO_nw07kH8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NjY5NzM4MDc0In0.QQseCCWjX_ajVwky-rvJMKuu8khD2RtEYe2C8s9986w",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2750,7 +2713,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODQ4MjI4MjcwIn0.HGqP5G3XNnjvh-rDutPES-28xv_ca-MCpyszecTd7tk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0ODIyODI3MCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.LDOs4eJQnPZ2vrn4y7SApmE-TMa1dGE6ypH4WU-Zfj0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2783,7 +2746,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1NjcwMjIzNzU4In0.KAQ5P7-ytXjLebGUWpIKlr05Rt5hD3Pl6tJDcg3ainw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NjcwMjIzNzU4In0.gMlb0j3X-VUFRWaNOV5voTWk4JyDeTtfkIBzPFuwO6M",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2816,7 +2779,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwNjEwMzQzOCIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.C09DQfJ5kCNj2UP9Wy4qZCnKWDOe89P1OuQzFf576YY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwNjEwMzQzOCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.VQFK09bOMkWxtJctZJ0irSsllT4p6wtmnPUJrXB92qA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2850,7 +2813,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NTI1MjU3MyIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.4Mv4gtN77TLmQ_oj0uDsS-HqiOPQ9JceeYqwwndR4vo",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1NzU1MjUyNTczIn0.7NGjvB9NNcIAUOBLc03meLCjD2-SX3YkPSVWCse5cbk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -2883,7 +2846,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4ODYxNjAwNCIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.tiFKNEw8X64pdSd7nyfC7NXI_00KuFuyUSKyD-WM58s",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc4ODYxNjAwNCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.9_44HXKWsBejauagwmgR_DugvmDBr--4wEMLgVzPLtw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2916,7 +2879,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODYxOTczMDEyIn0.DuF0wvscqo3n3k3HxrzJoswXX7G91NLROpA_aw_tprQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODYxOTczMDEyIn0.9eqL6AmuiX33jvMYbWvtWlBA1U1YGWEeZlYpX0h3TFU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2950,7 +2913,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODYwMzI4MTYxIn0.DcMgVkepsz6-VvzeWB0ZfcgG_-pymeXb_aHJn7_dGxk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDMyODE2MSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.Wu2FXnVaAK4wf5StU1sHOKoazzBBeGt3hprYmDcleUs",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -2983,7 +2946,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODU4OTE5Nzg5In0.g3DuJjzHZXVHdOk7UFB7fyQTonQw2TPHrHYCm64D490",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODkxOTc4OSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.k-w2AgFgfCRjRbsd_Podt2BZly2DFHmnXJ4JUwS1W-E",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3016,7 +2979,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODMzMTU4MTI2In0.4Y3nHuGbGbt9n2iv0yq3h_dn4e3dAnG-bw1U6rpRbis",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMzE1ODEyNiIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.f_dLkvp5-2_OoWLAhMuecK_7T1J1ZwDlQ_MK4KOb1HM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -3050,7 +3013,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMTY2ODk1NiIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.Zj4pER_ZBuFD4t2PJlZO3EV7_hgDOdzRIXQIsJR3FLM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMTY2ODk1NiIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.1sI7jXFR3tDSqWmKyqkrezaCSeLLSM_uGKFbal1pNyI",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3085,7 +3048,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODMyOTU2MDg1In0.wwakQ1a7FH8G11TCRti4q1ixv-H05QPZo9Rl7cr2QOs",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMjk1NjA4NSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.dkqUqhc41EOp2Ip5ANgkAv1hP4bBS-9LUeJpE9wxkf4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3117,7 +3080,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODMxNDU4MzY0In0.9OxfD6n0lQLvp05c3vfQgz7YXyIOsp4CPogTzdvCRiU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzMTQ1ODM2NCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.8q34uyFLFWIhITFV9bUMMqe3iTLmSR2vzkjGczmBQJQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3150,7 +3113,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODkxOTc4NiIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.jqUZuehb2Ubb1x_qzrkYSeBMGdj14tkWZLOE90AyMvY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODkxOTc4NiIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.V7Jf16ODkcRbCK230Qn9R3jp1BKRJVQNnMywYcQuYG0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3183,7 +3146,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDMyODE2NSIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.sMg4MMVMVuFcAToQHOpqSFziD0vCSIOZ77dysQZWkQs",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDMyODE2NSIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.kvXfls6fqOXN1A7wVNitns5bx2tD7T5bzulv4XR3etM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3216,7 +3179,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDMyODE1OCIsInMiOiJWRmFTeXgybDhSR3ZUcHg3S29GemJRIn0.U9NX1VsETAcTsNg3nuPAIavL5Soz1PeDMzCVpFZThKQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODYwMzI4MTU4In0.ZyqwTCCAOi_tFb_n2Frzh8vpKXty5pYryumvbeST-3k",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3249,7 +3212,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODU4OTE5Nzg4In0.jrvIzPg5Q3Ephg0eYndWWLQWlAqB1aR7QLi7HvBrFVM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODkxOTc4OCIsInMiOiJYa05GTVhlbDhSR0VlTEk3RG90bjRRIn0.WM_zng_IKewK9-fLdHezUt8fQpzpVHaHvE7CuCcfc3U",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3282,7 +3245,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiVkZhU3l4Mmw4Ukd2VHB4N0tvRnpiUSIsImkiOiI1ODMzMDY4MDQ1In0.K2LCeDUdn5fwm1NsYIf1ersPu4XE49axbkruX2LzBhM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODMzMDY4MDQ1In0.px9tN7V2RIJCQjVCXGarQ63Z32W4_qawvW-1MCOdgwE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3308,6 +3271,40 @@
             "salary_max": 181379,
             "salary_min": 131910,
             "title": "Solution architect for product ontology and digital twins"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiWGtORk1YZWw4UkdFZUxJN0RvdG40USIsImkiOiI1ODUwNzkxNTQxIn0.KwihQwlUBTsjh8qgeAZwAf-3SAcUjTOfWtUSZQR1PuI",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "GEICO"
+            },
+            "contract_time": "full_time",
+            "created": "2026-08-21T05:28:03Z",
+            "description": "Why Join GEICO? At GEICO, we offer a rewarding career where your ambitions are met with endless possibilities. Every day we honor our iconic brand by offering quality coverage to millions of customers and being there when they need us most. We thrive on relentless innovation to exceed our customers' expectations while making a real impact on local communities nationwide. Founded in 1936, GEICO is a member of the Berkshire Hathaway family of companies and one of the largest auto insurers in the …",
+            "id": "5850791541",
+            "latitude": 39.003888,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Maryland",
+                "Montgomery County",
+                "Bethesda"
+              ],
+              "display_name": "Bethesda, Montgomery County"
+            },
+            "longitude": -77.105367,
+            "redirect_url": "https://www.adzuna.com/details/5850791541?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "0",
+            "salary_max": 157850,
+            "salary_min": 95325,
+            "title": "Product Manager, Enterprise Semantic and Ontology Layer"
           }
         ]
       }
@@ -3320,12 +3317,12 @@
       ],
       "payload": {
         "__CLASS__": "Adzuna::API::Response::JobSearchResults",
-        "count": 263,
+        "count": 259,
         "mean": 166252.64,
         "results": [
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDI2MjE4MiIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.TLRriGp77OAgpZvmXiqOElh_G7CCZDjojG8MJwYa378",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODQwMjYyMTgyIn0.f21LEwQ42BBlUOFlAf3ar2JB7FVZuOGZIwEMgF-a4Jc",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3350,7 +3347,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5840262182?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=A8F8B364691A93D192B1F497E5029941E4211D33",
+            "redirect_url": "https://www.adzuna.com/land/ad/5840262182?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=A8F8B364691A93D192B1F497E5029941E4211D33",
             "salary_is_predicted": "0",
             "salary_max": 190000,
             "salary_min": 150000,
@@ -3358,109 +3355,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1Nzk5NzczNzE3In0.iR_pR8AxlL9QhITlYR9nRSl4yyt84FdgoK231qZOcpM",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-07-14T04:55:45Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5799773717",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799773717?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=691B5B21504CF388C0D35BF8137661E8366B0557",
-            "salary_is_predicted": "1",
-            "salary_max": 163820.4,
-            "salary_min": 163820.4,
-            "title": "Ontology Engineer (TS/SCI)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1Nzk5NzczNjM1In0.DUKTVXj_-Z1x8A42Kmx5MOA1zNT5J1oDvGHRR6Tpgtc",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-07-14T04:55:43Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5799773635",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799773635?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=47B8E93FC3B298C76343AF44C0A67E87AAE1C59B",
-            "salary_is_predicted": "1",
-            "salary_max": 201529.44,
-            "salary_min": 201529.44,
-            "title": "Ontology Engineer (TS/SCI with CI Poly)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0ODcxNzg2NyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.RnwXHqAF_AhCanlRarfMzlYl7gzHGl2VlywITLMDG4s",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-08-19T17:07:43Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5848717867",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5848717867?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=719DEF27A2F8511BAB787E9DCC641A97484B4338",
-            "salary_is_predicted": "1",
-            "salary_max": 244199.25,
-            "salary_min": 244199.25,
-            "title": "Ontology Software Developer (TS/SCI)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODQ5NzQxNSIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.es367CS7RFW15oM6iZ_Wd0ygRF4BlNCm_Q3RHkMJQJM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODQ5NzQxNSIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.LpGZ8wUoLaqyD4vn9ESm_7Nk0ydc8cNpVGUR7LITx9Y",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3480,7 +3375,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5858497415?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=8A8C10FA5927735280EAC44331AB4FE49268D33C",
+            "redirect_url": "https://www.adzuna.com/land/ad/5858497415?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=8A8C10FA5927735280EAC44331AB4FE49268D33C",
             "salary_is_predicted": "1",
             "salary_max": 170373.89,
             "salary_min": 170373.89,
@@ -3488,7 +3383,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODEyNjYzNTEzIn0.QEEgtMG9XeaAnM388MXJ3Ox227AeuHPdd7jj05YfYoo",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODEyNjYzNTEzIn0.E36c2w1ODHjvz9aaN2l_EvdxTV4cfmD0od8JOxIvFVA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3513,7 +3408,7 @@
               "display_name": "Balcones, Travis County"
             },
             "longitude": -97.708694,
-            "redirect_url": "https://www.adzuna.com/land/ad/5812663513?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=B80AA9DD05E508EE8A69090680721A2B2DAB0C82",
+            "redirect_url": "https://www.adzuna.com/land/ad/5812663513?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=B80AA9DD05E508EE8A69090680721A2B2DAB0C82",
             "salary_is_predicted": "1",
             "salary_max": 148956.05,
             "salary_min": 148956.05,
@@ -3521,7 +3416,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU2ODc1MzE4In0.NnfgWnmcLTtZX1e-w5BHyrwKZHGXHPYNtIofEgI38qs",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1Njg3NTMxOCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.H9npZ8OB-ZJzPL2fYAeVJrjQxWFYqXehyh_6cyDHASE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3541,7 +3436,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5856875318?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=CB25A3A0388EBF23E1A785F743D8BC2D8E290759",
+            "redirect_url": "https://www.adzuna.com/land/ad/5856875318?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=CB25A3A0388EBF23E1A785F743D8BC2D8E290759",
             "salary_is_predicted": "1",
             "salary_max": 203132.33,
             "salary_min": 203132.33,
@@ -3549,35 +3444,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTQxMzU0MSIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.d-rH9bUWHH31_Ff2wxK7nDLnoeRPM2xugUrzLYFSqCE",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Empower Professionals"
-            },
-            "created": "2026-07-30T13:24:24Z",
-            "description": "Role: Senior Knowledge Graph Engineer Duration: 12 Months Location: Remote (For USA) Domain Life Sciences Basic Qualifications: We are looking for professionals with the required skills to achieve our goals: Masters degree in Biosciences, Biomedical Science, Biomedical Engineering, Biotechnology (with a life science/pharma application focus) 6 years of relevant knowledge graph work experience Specific hands-on experience contributing to Knowledge Graph development efforts, including entity mode…",
-            "id": "5821413541",
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US"
-              ],
-              "display_name": "US"
-            },
-            "redirect_url": "https://www.adzuna.com/land/ad/5821413541?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=BA7EECB2CC73DF121926A42FEDB68B9FED0AEFD0",
-            "salary_is_predicted": "1",
-            "salary_max": 78631.8,
-            "salary_min": 78631.8,
-            "title": "Senior Knowledge Graph Engineer"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU1ODMzODEyIn0.B5fHg-Lli-BJUH9BC-NadUAA9dfJy3DgOQw8uH7BW6U",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NTgzMzgxMiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.upNYSAEnty9m8jFX8SbwCNUwFtbd7zmR_7cnzUGyOE4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3597,7 +3464,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5855833812?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=DDC64B5B71BE43A960CC29973DD49EBC4D1B9AC2",
+            "redirect_url": "https://www.adzuna.com/land/ad/5855833812?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=DDC64B5B71BE43A960CC29973DD49EBC4D1B9AC2",
             "salary_is_predicted": "1",
             "salary_max": 141722.97,
             "salary_min": 141722.97,
@@ -3605,7 +3472,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5OTM3NDEwMyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.POFe5Ke1dbH6kh9ACodTLE-08xjLVwAJHc_PvkRWesg",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5OTM3NDEwMyIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.YON6g8hyAUPMw8eD046EtMyzJWgcuZilLrMv9V6Ini0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3630,7 +3497,7 @@
               "display_name": "Winter Garden, Orange County"
             },
             "longitude": -81.60529,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799374103?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=8710E50E2B5BF8FDD6DC0CC889398EDEAB8A9BB1",
+            "redirect_url": "https://www.adzuna.com/land/ad/5799374103?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=8710E50E2B5BF8FDD6DC0CC889398EDEAB8A9BB1",
             "salary_is_predicted": "1",
             "salary_max": 175238.81,
             "salary_min": 175238.81,
@@ -3638,7 +3505,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyNzM2Mjc1MiIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.6ZvuAWoqMAdYi4bA3MMTCGBeir-rbH3mOWG90mhqBX8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyNzM2Mjc1MiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.sc386o9Vvcnsy2k0qVaXE8ubqvNV18pauS3Vojpn3uU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3672,7 +3539,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzOTMwOTE3NSIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.lnf4P1OHw92tA-0JArNJD-MbgtCu9V3pwG83sEA8z0M",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODM5MzA5MTc1In0.tlzPDHXccteyChHM75972csAb1gjuvE4_hNsKfaT5xQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3705,7 +3572,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODQ2Mzg3MjUwIn0.Y0diNIhb1jDkKEN3xdk7bfsAk7uyfCqRL58iFsnxa3s",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODQ2Mzg3MjUwIn0.hvVa3dtcMYk9V8-UQXZDlZasMPKrOlwLDiFLypcIjk4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3739,7 +3606,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODUzNTk5MzAyIn0.KNAYESSB0b1_TJfrGZ-_816phg02XxWadDigNr4VGWw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MzU5OTMwMiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.LHb8Ic2nKkmOX2ZMK_OWuDYf1Qf2pyrr0eE2Q7VvQaU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3773,7 +3640,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyNzMxODEzMSIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.gfgu76Sr2BV2uV1l-ID9eXyZ2m4YjiVGCNLye-sP_xY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODI3MzE4MTMxIn0.xSC2Gg-5pLNtYCpotzu9vwF64d2p-anS5LW9kzVBD90",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3806,7 +3673,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MzYyMjUxOSIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.wMk96OaTiWeY35IaWaoYf569QbY94OgTwHTlZrzHwiE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MzYyMjUxOSIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.vZYQ1EiNNI1Ls0o81-gbnUMawiYFc9t0wiDnPsXcHDo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3840,7 +3707,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODI4ODE0Mzc1In0.xyI6zREGRlia6iVSXevn9yVKmXcE_c7JtPhPGVYlLyY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODI4ODE0Mzc1In0.is-2MOATOLBavy2R9sLnSal94ckvYKoXMeNnNAHIy6o",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3874,7 +3741,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODQ2MjE4MDY0In0.qP1bmK9cHvi0HuoG4_UbiALwAUPq16xAXz4rYGKqf44",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NjIxODA2NCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.VpS3W6OdYgXmbWXbGiUiFtDWJVdD2440spRGwIJKUUw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -3906,7 +3773,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5NDQ5NzgxMCIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.S8P0go_bo8ZkZZHd7chGbkya6qIJgwVLMTDBwn9WeTE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5NDQ5NzgxMCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.N32n_cWRN9cBBi64xd-GHVwDB1yoCH0ib6UjnEWfjKQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3931,7 +3798,7 @@
               "display_name": "Mount Rainier, Prince George's County"
             },
             "longitude": -76.990882,
-            "redirect_url": "https://www.adzuna.com/land/ad/5794497810?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=92787AEADD197115718B38FDAF1F9C5B3A2CC565",
+            "redirect_url": "https://www.adzuna.com/land/ad/5794497810?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=92787AEADD197115718B38FDAF1F9C5B3A2CC565",
             "salary_is_predicted": "1",
             "salary_max": 126689.62,
             "salary_min": 126689.62,
@@ -3939,7 +3806,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODA1MzY2NzIyIn0.2ZzS_geQ-3VQlKPSKRKz1BJkhHKm0ahiFJlEwYy6esY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwNTM2NjcyMiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.6_Ujhr2wj3WXt6xFSq8R-4LcS77pIWOrHpBAdCZYoLA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -3964,7 +3831,7 @@
               "display_name": "Mount Rainier, Prince George's County"
             },
             "longitude": -76.990882,
-            "redirect_url": "https://www.adzuna.com/land/ad/5805366722?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=363406681253DDA05C3CCB0BD2C6CB9D4315B256",
+            "redirect_url": "https://www.adzuna.com/land/ad/5805366722?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=363406681253DDA05C3CCB0BD2C6CB9D4315B256",
             "salary_is_predicted": "1",
             "salary_max": 127339.86,
             "salary_min": 127339.86,
@@ -3972,7 +3839,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNzgxMzcwMiIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0._vB8Ymgmodi_X93O8sfnhyI5fXmZE287lNHThh9l8Qk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNzgxMzcwMiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.s21x9IDrMbiFHgT0sVYzX_dmKe_AldscTZGmvXn0Yzo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4005,7 +3872,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU2MTQ2NjAzIn0.165qrX4gp_SyH6TEWko4FdCgAhSudvvRJIwM02jjkkc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NjE0NjYwMyIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.cC3dXoUpiZoaK2AJhptUMF54hOPn61-xqcTdFGTsscg",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4038,7 +3905,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MzAyMTAxMyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.3f6eJmf7gCHXxW_Q_RN-n5_v3LrUgZA2eDqL_nkaUQs",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MzAyMTAxMyIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.kgc27bE1LQG8NU_wTT1kCYIm0ueyjnBsXDjxadAhi3o",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4063,7 +3930,7 @@
               "display_name": "Aurora, Arapahoe County"
             },
             "longitude": -104.8377,
-            "redirect_url": "https://www.adzuna.com/land/ad/5843021013?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=06AFD2192F744260EFC7BABF80BDF98E579D1773",
+            "redirect_url": "https://www.adzuna.com/land/ad/5843021013?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=06AFD2192F744260EFC7BABF80BDF98E579D1773",
             "salary_is_predicted": "1",
             "salary_max": 217886.16,
             "salary_min": 217886.16,
@@ -4071,7 +3938,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODM3Mzc2MzAwIn0.6Yc5GNVBHhASHNk8Xy7Beken2w3nC1H8DpBWvLUS7C8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODM3Mzc2MzAwIn0.6diLMj0b3tNZAqgSUGn_iSuDZytcUhzpWfXcBd8w97g",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4096,7 +3963,7 @@
               "display_name": "Aurora, Arapahoe County"
             },
             "longitude": -104.8377,
-            "redirect_url": "https://www.adzuna.com/land/ad/5837376300?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=45C67C36259852E0DEF3516DA8FE8F2AC3F4FE7E",
+            "redirect_url": "https://www.adzuna.com/land/ad/5837376300?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=45C67C36259852E0DEF3516DA8FE8F2AC3F4FE7E",
             "salary_is_predicted": "1",
             "salary_max": 191462.08,
             "salary_min": 191462.08,
@@ -4104,7 +3971,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODYyMjE3NDYzIn0.dArmO-CmvkyB6NZjXqWJ13u2wy_r42f1uGHomGvktpQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MjIxNzQ2MyIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.IvYwIYWQzwtPNQ_6Fq-3Np63iEvIMo9xSM2mwtAS5uo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4138,7 +4005,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MTk3MzAxMiIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.Lq9D2OCN0jIaiVcAkIFunpwktMKHjzcAum772P-Jij0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYxOTczMDEyIn0.BAo_lRxA-bVjaH4smZlWzcnMRtwDAw7iJEqoJ8FCLe8",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4172,7 +4039,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODIxNDE1MzA0In0.ahM-pHIYhlCokCwhaXYTgN_iH-KXMtTC0i9FZspjk2w",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODIxNDE1MzA0In0.S81GfYCjOzIHIaoBAhb2dHS3eDzaiPJyKjBOFXZqMfU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4197,7 +4064,7 @@
               "display_name": "Highland Park, Dallas"
             },
             "longitude": -96.765058,
-            "redirect_url": "https://www.adzuna.com/land/ad/5821415304?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=53911C137E8F4B9D8A516AA51841BD7055C1B0CF",
+            "redirect_url": "https://www.adzuna.com/land/ad/5821415304?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=53911C137E8F4B9D8A516AA51841BD7055C1B0CF",
             "salary_is_predicted": "1",
             "salary_max": 142364.8,
             "salary_min": 142364.8,
@@ -4205,7 +4072,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODI3MzE4MTM2In0.-sZ8DGFs82iwKDcuhZI4EJwejN3IRdOp9HGZk49b7Tk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODI3MzE4MTM2In0.SrfyqwdD5S6-S9tg2LkHCbvammYcUrcRPNhu3SbbRyk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4238,7 +4105,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU3ODMxMTU4In0.JvcGbhurH9TTdAIE7uR856TJ1f42nkQsCQFnq9DaxTw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODU3ODMxMTU4In0.Q2salLa4laV38saXDZACJ6kI7J_Gz38y7rkyHU6EPCI",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4271,7 +4138,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODA1ODU0MDg4In0.zLHVf6otYy4VQ8qEx6FLKhKcDGjRz1Zx4N6eoTSfwig",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODA1ODU0MDg4In0.JFwdMv_k7Cc6AL2FopjPI2d-xL2-_J4C6I0HNECURGk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4304,7 +4171,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyNzQ1NzczMiIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.e5pbtuqDi38Q9DzM45clU_HSbeNaEQGYDTnivUJEzcc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODI3NDU3NzMyIn0.J_Fg__nmESTsgrT3XKMNx9_lQIMYSVPn3ML_t4Czb9I",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4338,7 +4205,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODUzMjc1MTkyIn0.7yhJnL6nNp0h8scUycFNvoTSc6mCgg24R2GlGkBSQs0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MzI3NTE5MiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.U6HGYzCztTmxVTkqKdJppa-0SH5hZGF8QVV6JkizptY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4372,7 +4239,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTY0NDEzNjIyNyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.l10CBsjRnqo2DPETm1qtONRG3rSCEr37-E7mBPz67to",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1NjQ0MTM2MjI3In0.KGBBs02UNgEcTiAitAgessYPWwog6nXPMB1d-TIGPGY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4406,7 +4273,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwNTg2MDY1NiIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.z9d-FAsHnUos1fcmq09mIwZDnia7cqn8hNokolsS8GY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODA1ODYwNjU2In0.MnSfThu_Zp5bHwigvl7YMY3fzxfJQyrcZ3j3gjCF7v8",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4439,7 +4306,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MTAwNTM5OCIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.KmbozOYFs-KtFMLZZcYawAJONKlXrPYqn0T3xkual00",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MTAwNTM5OCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0._9JooZ7YvjGku0u-Y9IbzO6ksrooP3a0RlyYccnODMk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4473,7 +4340,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDgxNjgwMjE1OCIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.0oMF4cwqRK-O_UWqt1qgT-reFu9bozmQS7W5pB79Kok",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDgxNjgwMjE1OCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.CjTB5b9JXWx_c5rbnhYMw0ovydqCJMucJA4DZqAIBhE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4506,7 +4373,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NzQyOTYzOTIwIn0.wsqKd9z4keIYIzQU_20hRSvER4uD0-Rxxr1NANgzRSQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc0Mjk2MzkyMCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.mgVaChbCJKJcwjYpf8uZh-KcXcv66m7I06jWUC49Z8E",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4540,7 +4407,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NzczODQ5OTYxIn0._thXrTqkg1hrwHzGsQowt--mZF3_AuTvrfYwCm4P4bE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc3Mzg0OTk2MSIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.Z6YeDbMexCbM9MlSxboppFFBH_xNmoe1oaqX9-X_GDY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4569,7 +4436,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwNTY5MjQ5NCIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.yFXgpkbAdRJEEKlBm0BnG_MNyS-I0qt9yp7ImvMKWE0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODA1NjkyNDk0In0.Lc89z_JlgT02YsO1xiHYezhKp7mAVE7oMXjkhFK4C3E",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4602,7 +4469,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI0ODA5ODg0MTk2In0.ANWYFdOsTYZkqILhQlYbNYKfjkJBT98Be4Uwx0pnpws",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNDgwOTg4NDE5NiIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.lUH6YTqrdtZfiEZSmmDEz-AcPk9Xti5MnXnUnSj_YiU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4635,7 +4502,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NTI1MjU3MyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.9rjs6R0wvZK6csvrP-PTUFTOHOWMCnw399T5cp_6TbM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1NzU1MjUyNTczIn0.7RGoVBHzdP1q8c9sHH42eiPjOxJ97AJK4akoxFJm4_w",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -4668,7 +4535,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NzAyNjU4OCIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.0eM3bNEXCiRtyBnEORCJJd_SaMTw1mVZ8Ptf8rRoHhg",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NzAyNjU4OCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.Fq3_DY3A9UCKnds4OZwbQ2XYwaI-GrXN1YzhcwnAS8w",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -4702,7 +4569,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5MzQ4OTE4NyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.J6NCjkKJijisbUrUj7mFYljKA7W1MhzoF1wDApZiuiU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1NzkzNDg5MTg3In0.MtCGaZzdK31JqXpqC0LluzR61aoAT1okOvklGUc6yd0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4735,7 +4602,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODA1NzA2NzM0In0.UNMWXvg_lxYstmsndgBsAN9JD57QEj2YLqlQXPpLego",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwNTcwNjczNCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.PjGqNz1XrUyw7b5qW9McZG5UAz4UeQroPIqGD-ipvDw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4768,7 +4635,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTcyNzgwODU3MyIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.XaxgFRDQSlIsWg70Ah-oiV-ACdqaS63n7nU-Gc8OI9g",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTcyNzgwODU3MyIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.1NrO1rQ4qSfNNucaM20f9mYEOJuEy3ORsARkHdlMs-o",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4799,7 +4666,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODUwODAwMDg0In0.y_Cn9XfvV4iAsII0LWNfm1A_BrRR5g6o6x-q43qxlMA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MDgwMDA4NCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.-6DCndZJXeQByW9z2Okj8OPaFTBW3gMaE0oUqUVtLx0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Healthcare & Nursing Jobs",
@@ -4831,7 +4698,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NTQwNTE0MCIsInMiOiJFZ3dVekIybDhSR0JvNVFJN080RDRRIn0.GkDLVlTEYuD1GGBTOqJYpS6ObfXn6ZT1AwFtONmScV0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1NzU1NDA1MTQwIn0.fOQVXWH-Zcy4bucCwjPWsM8kDZza_DnOBCEfjYJOtsk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -4864,7 +4731,40 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODYwODU1OTI0In0.6k_EkklSHJYKQc_jjGrVYu_8kFBM4oq4kWWnSbdfPVY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODU1MDg1MjQ4In0.yAwHXNl72AyZsnuO1J72eGeH0VMcQD3_eYgjCd2YXqA",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Redhorse Corporation"
+            },
+            "created": "2026-08-25T03:53:29Z",
+            "description": "About the Organization Now is a great time to join Redhorse Corporation. We are a solution-driven company delivering data insights and technology solutions to customers with missions critical to U.S. national interests. We're looking for thoughtful, skilled professionals who thrive as trusted partners building technology-agnostic solutions and want to apply their talents supporting customers with difficult and important mission sets. Now is an exciting time to join Redhorse Corporation. We are …",
+            "id": "5855085248",
+            "latitude": 38.886306,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Virginia",
+                "Arlington County",
+                "State Farm"
+              ],
+              "display_name": "State Farm, Arlington County"
+            },
+            "longitude": -77.097739,
+            "redirect_url": "https://www.adzuna.com/land/ad/5855085248?se=dO7JMXel8RGcfKYe_cIpvA&utm_medium=api&utm_source=e5c57c17&v=E52A1F2FE9E62CFE5C2EA8E67E995F8A85069FE9",
+            "salary_is_predicted": "1",
+            "salary_max": 180348.75,
+            "salary_min": 180348.75,
+            "title": "Graph Data Engineer"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDg1NTkyNCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.zVnJ5Qnpk1LkUDxSQDiEy5RwTz4jhqBLMXqAKS8XDkQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4893,40 +4793,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU1MDg1MjQ4In0.lHBLNoN4WCORCkfHlQFbiLHHkJEWve0RivCPJFml4Ug",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Redhorse Corporation"
-            },
-            "created": "2026-08-25T03:53:29Z",
-            "description": "About the Organization Now is a great time to join Redhorse Corporation. We are a solution-driven company delivering data insights and technology solutions to customers with missions critical to U.S. national interests. We're looking for thoughtful, skilled professionals who thrive as trusted partners building technology-agnostic solutions and want to apply their talents supporting customers with difficult and important mission sets. Now is an exciting time to join Redhorse Corporation. We are …",
-            "id": "5855085248",
-            "latitude": 38.886306,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Arlington County",
-                "State Farm"
-              ],
-              "display_name": "State Farm, Arlington County"
-            },
-            "longitude": -77.097739,
-            "redirect_url": "https://www.adzuna.com/land/ad/5855085248?se=EgwUzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=E52A1F2FE9E62CFE5C2EA8E67E995F8A85069FE9",
-            "salary_is_predicted": "1",
-            "salary_max": 180348.75,
-            "salary_min": 180348.75,
-            "title": "Graph Data Engineer"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiRWd3VXpCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODYxNzQ0OTY5In0.8h9yPDReqqxPmlL0KOzkjEC7UYAhd1eu37tL3I_QWCQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MTc0NDk2OSIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.lrLDqwn1lO1KKCK6qeTWQKpW1iqVJPJyXbon7-ya7NA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4956,6 +4823,122 @@
             "salary_max": 277526.7,
             "salary_min": 277526.7,
             "title": "Principal Software Engineer / Data Engineer (Onsite)"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYxOTc4MDQzIn0.UOYUj13WKlTtjmZGuGkdeaW0BEDjkUJm9IOPEk5Ohx0",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Prescient Edge"
+            },
+            "contract_time": "full_time",
+            "created": "2026-08-30T02:32:34Z",
+            "description": "Description Prescient Edge is seeking a Mid. Analytic Methodologist to support a federal government client. Please note that the availability of this position is contingent upon contract award. Benefits & Compensation: At Prescient Edge , we believe that acting with integrity and serving our employees is the key to everyone's success. To that end, we provide employees with a best-in-class benefits package that includes: A competitive salary with performance bonus opportunities. Comprehensive he…",
+            "id": "5861978043",
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US"
+              ],
+              "display_name": "US"
+            },
+            "redirect_url": "https://www.adzuna.com/details/5861978043?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "0",
+            "salary_max": 150000,
+            "salary_min": 140000,
+            "title": "Mid Analytic Methodologist (OBI)"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODYyMDIzNTkwIn0.NZCm_AjelVptJMehbfKF5OtB1Z3a-eKsUt9_2zVR18U",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Prescient Edge"
+            },
+            "contract_time": "full_time",
+            "created": "2026-08-30T04:42:07Z",
+            "description": "Description Prescient Edge is seeking a Sr. Analytic Methodologist (OBI) to support a federal government client. Please note that the availability of this position is contingent upon contract award. Sr. Analytic Methodologist (OBI) Benefits: At Prescient Edge , we believe that acting with integrity and serving our employees is the key to everyone's success. To that end, we provide employees with a best-in-class benefits package that includes: A competitive salary with performance bonus opportun…",
+            "id": "5862023590",
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US"
+              ],
+              "display_name": "US"
+            },
+            "redirect_url": "https://www.adzuna.com/details/5862023590?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "0",
+            "salary_max": 170000,
+            "salary_min": 130000,
+            "title": "Senior Analytic Methodologist (OBI)"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NDI5NDMxNCIsInMiOiJkTzdKTVhlbDhSR2NmS1llX2NJcHZBIn0.YHW47cCNQ3r0shJkvDOAbe4pBB8XunQKzs3FP64s0Rs",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "System"
+            },
+            "contract_type": "contract",
+            "created": "2026-06-06T06:29:27Z",
+            "description": "Welcome systems thinkers. System builds software to help the world see and solve anything as a system, starting in healthcare. We are a Public Benefit Corporation driven by purpose and shaped by values. We hire systems thinkers who are motivated by our purpose, share our values, and have the skills to advance our mission. At System, research is the origin of our most important ideas — and researchers work at the frontier of graph theory, clinical AI, causal inference, and knowledge representati…",
+            "id": "5754294314",
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US"
+              ],
+              "display_name": "US"
+            },
+            "redirect_url": "https://www.adzuna.com/details/5754294314?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "1",
+            "salary_max": 99084.55,
+            "salary_min": 99084.55,
+            "title": "Research & Science"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiZE83Sk1YZWw4UkdjZktZZV9jSXB2QSIsImkiOiI1ODU2NjAxODg3In0.VpGyuvlrwD7Xucb3bJY_fO7XAtWShlAOYxINyNjcqaE",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Novartis"
+            },
+            "contract_time": "full_time",
+            "created": "2026-08-26T04:57:23Z",
+            "description": "Job Description Summary LI-Hybrid Reporting to the Executive Director, Semantic and Knowledge Engineering, the Director, Semantic and Knowledge Engineering leads the design, implementation, and governance of enterprise semantic models, ontologies, knowledge graphs, and metadata frameworks that power NovaOS. This role partners across Applied AI, Data Science, Product, and Engineering to establish trusted semantic assets that enable interoperable data, AI reasoning, retrieval-augmented generation…",
+            "id": "5856601887",
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US"
+              ],
+              "display_name": "US"
+            },
+            "redirect_url": "https://www.adzuna.com/details/5856601887?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "0",
+            "salary_max": 361400,
+            "salary_min": 194600,
+            "title": "Director, Semantic & Knowledge Engineering"
           }
         ]
       }
@@ -4968,12 +4951,12 @@
       ],
       "payload": {
         "__CLASS__": "Adzuna::API::Response::JobSearchResults",
-        "count": 492,
-        "mean": 170113.98,
+        "count": 488,
+        "mean": 170068.39,
         "results": [
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODQwMjYyMTgyIn0.-4PB9Jn4QXq-X2HtK4BU3fo6UljW2bFwYtWbRLZli74",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDI2MjE4MiIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.I_pvSmcE2hGfCePndbCEnios_hjudym2UGIxLHNrPpY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -4998,7 +4981,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5840262182?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=A8F8B364691A93D192B1F497E5029941E4211D33",
+            "redirect_url": "https://www.adzuna.com/land/ad/5840262182?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=A8F8B364691A93D192B1F497E5029941E4211D33",
             "salary_is_predicted": "0",
             "salary_max": 190000,
             "salary_min": 150000,
@@ -5006,7 +4989,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODQwMjQxMDk4In0.A-wHb2FRq6QV5jGhwuSIBFa9JlrHyld2jv8sjG0pAr0",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MDI0MTA5OCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.RQ6jm1c8lJoWmwbaFyt6nni36KwkVm_p2Mpj_gB4Kis",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5031,7 +5014,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5840241098?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=C7A0976671257CF18C4D522E2B62935D065B387C",
+            "redirect_url": "https://www.adzuna.com/land/ad/5840241098?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=C7A0976671257CF18C4D522E2B62935D065B387C",
             "salary_is_predicted": "0",
             "salary_max": 180000,
             "salary_min": 140000,
@@ -5039,7 +5022,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NjY2NTE2MSIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.cY51AzWi_l8MPMX5io9SZ6QkFnuTzgjcJi08zcKCfEA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0NjY2NTE2MSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.cW69V2HpCN4V9CKDrQQmjxvpXfzAoJLiwX_zbqbRK3A",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5064,7 +5047,7 @@
               "display_name": "Herndon, Fairfax County"
             },
             "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5846665161?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=814313E797595347D20C594F016A9E9A77B6B9A5",
+            "redirect_url": "https://www.adzuna.com/land/ad/5846665161?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=814313E797595347D20C594F016A9E9A77B6B9A5",
             "salary_is_predicted": "0",
             "salary_max": 165000,
             "salary_min": 120000,
@@ -5072,7 +5055,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5OTc3MzcxNyIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.VfcG9-VFuV-9RWVInQWQvOJh-vNd0VsKvd7hTZYlfvQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MzEwNTgwMCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.wXynzv7ttHXkdA9hxxDKm46AyvNNkmqn6zZM-NdWZps",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5080,67 +5063,32 @@
             },
             "company": {
               "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
+              "display_name": "ADDSOURCE"
             },
-            "contract_time": "full_time",
-            "created": "2026-07-14T04:55:45Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5799773717",
-            "latitude": 38.97821,
+            "created": "2026-08-31T14:01:44Z",
+            "description": "Sr. Engineer with experience working in GraphDB, Stardog, Noe.JS to join our team in Chicago, IL Experience: -Min 8  Years Location: - Chicago, IL (Hybrid 3 days' Work from Office) Educational Qualifications: - Engineering Degree BE/ME/BTech/MTech/BSc/MSc. Technical certification in multiple technologies is desirable. Skills: - Mandatory skills Understand domain data and business relationships. Design semantic models and ontologies. Build and maintain knowledge graphs. Create source-to-graph ma…",
+            "id": "5863105800",
+            "latitude": 41.9613,
             "location": {
               "__CLASS__": "Adzuna::API::Response::Location",
               "area": [
                 "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
+                "Illinois",
+                "Cook County",
+                "Schiller Park"
               ],
-              "display_name": "Herndon, Fairfax County"
+              "display_name": "Schiller Park, Cook County"
             },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799773717?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=691B5B21504CF388C0D35BF8137661E8366B0557",
+            "longitude": -87.8849,
+            "redirect_url": "https://www.adzuna.com/land/ad/5863105800?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=8A8C448D47A334C0BCF11032DDCB533FCFC8FAED",
             "salary_is_predicted": "1",
-            "salary_max": 163820.4,
-            "salary_min": 163820.4,
-            "title": "Ontology Engineer (TS/SCI)"
+            "salary_max": 107799.05,
+            "salary_min": 107799.05,
+            "title": "Engineer"
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5OTc3MzYzNSIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.0XkyApmRmkzq7UD9oExuhZCH1eUF6Nc2_Ai-1w05wSs",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-07-14T04:55:43Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5799773635",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5799773635?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=47B8E93FC3B298C76343AF44C0A67E87AAE1C59B",
-            "salary_is_predicted": "1",
-            "salary_max": 201529.44,
-            "salary_min": 201529.44,
-            "title": "Ontology Engineer (TS/SCI with CI Poly)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NTgzMzgxMiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.LoMwLyiItz_ZWjDSE_Ktkmsa8lgrjYNnUL-3q2eZGoo",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODU1ODMzODEyIn0.pvyGZhkAJvwx8ejlIgiQ6FWekiyRKQDaHrXbO3_PjI4",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5160,7 +5108,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5855833812?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=DDC64B5B71BE43A960CC29973DD49EBC4D1B9AC2",
+            "redirect_url": "https://www.adzuna.com/land/ad/5855833812?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=DDC64B5B71BE43A960CC29973DD49EBC4D1B9AC2",
             "salary_is_predicted": "1",
             "salary_max": 141722.97,
             "salary_min": 141722.97,
@@ -5168,7 +5116,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1Njg3NTMxOCIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.wEufaWRlFKzhJmyxluY-6xCnjEO-4TfSf0IhfB0P2Uw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1Njg3NTMxOCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.zC6I58A_tjRPoaC0n-mIHxHFme4qVbzUEaH-aMRvDtE",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5188,7 +5136,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5856875318?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=CB25A3A0388EBF23E1A785F743D8BC2D8E290759",
+            "redirect_url": "https://www.adzuna.com/land/ad/5856875318?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=CB25A3A0388EBF23E1A785F743D8BC2D8E290759",
             "salary_is_predicted": "1",
             "salary_max": 203132.33,
             "salary_min": 203132.33,
@@ -5196,7 +5144,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMzk5OTIxMiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.6mi8eqLA4MhEOEX63Mgd34MTUiiP2DG7Qjsm8xcdQqk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MzA0MzMzOCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.vc8pu_flmsl64IuzkxyqiDr0l3ftyGzEJkWdDP-FAbs",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -5204,11 +5152,11 @@
             },
             "company": {
               "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "MphasiS Corporation USA"
+              "display_name": "IMR Soft LLC"
             },
-            "created": "2026-07-16T20:07:06Z",
-            "description": "Job title: Ontology/Knowledge Graph Engineer Berkeley heights, NJ (5days Onsite) FTE\\ skills: Ontology Ontology engineering Knowledge modeling OWL RDF SPARQL SHACL JSONLD Ontological inference Consistency checking Knowledge graphs Property graphs RDF graphs Graph data modeling Graph analytics Ontologydriven KG design Entity resolution Entity resolution Semantic modeling technologies: Protg TopBraid Composer OntoStudio Neo4j Stardog GraphDB Apache Jena Fuseki Blazegraph Virtuoso",
-            "id": "5803999212",
+            "created": "2026-08-31T12:04:08Z",
+            "description": "Job title: Knowledge Graph Engineer Berkeley heights, NJ (5days Onsite) 12 Months contract skills: Ontology Ontology engineering Knowledge modeling OWL RDF SPARQL SHACL JSON‑LD Ontological inference Consistency checking Knowledge graphs Property graphs RDF graphs Graph data modeling Graph analytics Ontology‑driven KG design Entity resolution Entity resolution Semantic modeling technologies: Protégé TopBraid Composer OntoStudio Neo4j Stardog GraphDB Apache Jena Fuseki Blazegraph Virtuoso",
+            "id": "5863043338",
             "latitude": 40.676603,
             "location": {
               "__CLASS__": "Adzuna::API::Response::Location",
@@ -5221,15 +5169,81 @@
               "display_name": "Berkeley Heights, Union County"
             },
             "longitude": -74.432146,
-            "redirect_url": "https://www.adzuna.com/land/ad/5803999212?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=541DEA7E919841E152A05DEB1BF9152B8A952815",
+            "redirect_url": "https://www.adzuna.com/land/ad/5863043338?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=BE905E1A84AFDFB6E7E7F7A936FFE2954DA9C8FA",
             "salary_is_predicted": "1",
-            "salary_max": 133151.89,
-            "salary_min": 133151.89,
-            "title": "Ontology/Knowledge Graph Engineer"
+            "salary_max": 196942.7,
+            "salary_min": 196942.7,
+            "title": "Knowledge Graph Engineer"
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU0NDczMDc3In0.LuFYCCkosQa7xg7J1KyKqDKM3gYT5cV7ft0xIXIEeoQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MzA0ODYzNiIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.dRvm2JJUxpWvfV2r-KiuVvVPfRgHp2qyntRazIH917Q",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Trilogy NextGen"
+            },
+            "created": "2026-08-31T12:05:10Z",
+            "description": "Job Description Company Description Trilogy NextGen designs, builds, and manages seamless digital experiences that help organizations modernize and scale their operations. The company combines cutting-edge technologies with deep systems integration expertise to deliver complete solutions tailored to complex environments. Its offerings span ATSC 3.0 datacasting, private 5G networks, Wi-Fi, intelligent robotics, and AI-driven analytics. Trilogy NextGen focuses on delivering innovative, secure, an…",
+            "id": "5863048636",
+            "latitude": 35.2268,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "North Carolina",
+                "Mecklenburg County",
+                "Charlotte"
+              ],
+              "display_name": "Charlotte, Mecklenburg County"
+            },
+            "longitude": -80.8432,
+            "redirect_url": "https://www.adzuna.com/land/ad/5863048636?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=BFC1FE033DA593194DE91D6468A5C3DB223AC95A",
+            "salary_is_predicted": "1",
+            "salary_max": 168392.02,
+            "salary_min": 168392.02,
+            "title": "Senior Knowledge Graph & Semantic Data Architect - Onsite in Charlotte, NC"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MzEwNjc4OSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.rIfE7ituY139vH1B0quoQNNkYrYfNRD4rLIW3bAURFc",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Keypixel Software Solutions"
+            },
+            "created": "2026-08-31T14:06:44Z",
+            "description": "Sr. Engineer – GraphDB / Stardog / Neo4j Introduction We are currently seeking a Sr. Engineer with expertise in GraphDB, Stardog, and Neo4j to join our team in Chicago, IL. This role will involve working with artificial intelligence, data mapping, and graph databases to support our projects. Responsibilities Utilize GraphDB, Stardog, and Neo4j to build and maintain knowledge graphs Work on semantic modeling and ontologies to enhance data representation Implement source-to-graph mapping and grap…",
+            "id": "5863106789",
+            "latitude": 41.9613,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Illinois",
+                "Cook County",
+                "Schiller Park"
+              ],
+              "display_name": "Schiller Park, Cook County"
+            },
+            "longitude": -87.8849,
+            "redirect_url": "https://www.adzuna.com/land/ad/5863106789?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=BDABE2DE603198D993F7A035E51C0E740E16A095",
+            "salary_is_predicted": "1",
+            "salary_max": 96633.77,
+            "salary_min": 96633.77,
+            "title": "Sr. Engineer – GraphDB / Stardog / Neo4j"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NDQ3MzA3NyIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.x9HcwV88NxW8OaBp9qOCa1vfT-44wLU1Rd10PLrGNLY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5254,7 +5268,7 @@
               "display_name": "Reston, Fairfax County"
             },
             "longitude": -77.338,
-            "redirect_url": "https://www.adzuna.com/land/ad/5854473077?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=41FF3FFDCD34F5341E1B39329EAA9F709BFDA1DC",
+            "redirect_url": "https://www.adzuna.com/land/ad/5854473077?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=41FF3FFDCD34F5341E1B39329EAA9F709BFDA1DC",
             "salary_is_predicted": "1",
             "salary_max": 224756.1,
             "salary_min": 224756.1,
@@ -5262,7 +5276,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NzYzMDA1NzQ5In0.vhibPHfdr4jrkqAePgOM92CqpADkYKaslEmXzXg1U_s",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzYzMDA1NzQ5In0.HHLKT09ARt6k61oTw7_KvxXZrzjD7Uo93-O1XElQzEY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5288,7 +5302,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5763005749?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=C6C4C4DCCE07BEFEB16DCE3159F10F858466D93B",
+            "redirect_url": "https://www.adzuna.com/land/ad/5763005749?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=C6C4C4DCCE07BEFEB16DCE3159F10F858466D93B",
             "salary_is_predicted": "1",
             "salary_max": 177280.3,
             "salary_min": 177280.3,
@@ -5296,35 +5310,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1ODQ5MjQ2NSIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.r6WLLQCBaEIiXxNPPp0O_Vp4wTEyz90gXz8v44Zdy8E",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "StoneGate-Technologies LLC"
-            },
-            "created": "2026-08-27T11:52:35Z",
-            "description": "Title: Principal / Senior Data Architect Active Metadata, Semantic Data & Data Governance Location: Menlo Park, CA Remote 12Month Contract Job Description 10 years in Enterprise Data Architecture, Data Strategy, Metadata Engineering, and Semantic Data Design. Architect SelfHealing Data Fabric and metadatadriven automation across enterprise platforms. Deep experience building Active Metadata Infrastructure and closedloop automation for data quality and governance. Implement metadatatriggered pip…",
-            "id": "5858492465",
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US"
-              ],
-              "display_name": "US"
-            },
-            "redirect_url": "https://www.adzuna.com/land/ad/5858492465?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=99FDB2E85D2D585EBEE1765FD0B9426B92EDFB62",
-            "salary_is_predicted": "1",
-            "salary_max": 237580.9,
-            "salary_min": 237580.9,
-            "title": "Principal / Senior Data Architect"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU4NDk3NDE1In0.p_e74RZnZa_nWiynYg9KDP_wIFuDk8tTL34zUvYcM24",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODU4NDk3NDE1In0.syyRE7psfitWnGcTP_UnlYn2E_7qrkG1IfrjlyQ4pKc",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5344,7 +5330,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5858497415?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=8A8C10FA5927735280EAC44331AB4FE49268D33C",
+            "redirect_url": "https://www.adzuna.com/land/ad/5858497415?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=8A8C10FA5927735280EAC44331AB4FE49268D33C",
             "salary_is_predicted": "1",
             "salary_max": 170373.89,
             "salary_min": 170373.89,
@@ -5352,7 +5338,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODQyMTQyMTI1In0.tl8mod6AWCITnsvKSP521PmHMg0W99zRMDw7wYEIguY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MjE0MjEyNSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.DPfPiWxSd6TJuXPvgmWH5ofaauGTE8nb16sCXi1r810",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5377,7 +5363,7 @@
               "display_name": "Trammells, Harris County"
             },
             "longitude": -95.4359,
-            "redirect_url": "https://www.adzuna.com/land/ad/5842142125?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=57CB3333F5567D00745301BAA75BB8AF8793A3EE",
+            "redirect_url": "https://www.adzuna.com/land/ad/5842142125?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=57CB3333F5567D00745301BAA75BB8AF8793A3EE",
             "salary_is_predicted": "1",
             "salary_max": 86394.49,
             "salary_min": 86394.49,
@@ -5385,7 +5371,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc2MzAwMDcyNSIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.CKw8B6It0lVtpN83LrOQqr-_7jePEUUCQzQan-gEGEE",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzYzMDAwNzI1In0.rTv9ubDdgnOWASABeFlLHPkhSfR7dkNcTHvLcJ9mcmA",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5405,7 +5391,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5763000725?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=B1C0A60D9271528666F5E9A41922D31C8B755BCB",
+            "redirect_url": "https://www.adzuna.com/land/ad/5763000725?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=B1C0A60D9271528666F5E9A41922D31C8B755BCB",
             "salary_is_predicted": "1",
             "salary_max": 153679.28,
             "salary_min": 153679.28,
@@ -5413,7 +5399,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU4MjA2MTI3In0.OdqGDwgFhOynUcdu_4xUgzSoB6Qxl36USMC_j4I_Tr4",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODU4MjA2MTI3In0.nCS29zVnsMuk0yrjOR0O5A3cogHydEX3inhqoHCLN2s",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -5438,7 +5424,7 @@
               "display_name": "Seattle, King County"
             },
             "longitude": -122.336407,
-            "redirect_url": "https://www.adzuna.com/land/ad/5858206127?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=1BFED6BFBA5D7B201BCDDFE8D1AC5B3EA40EEDA6",
+            "redirect_url": "https://www.adzuna.com/land/ad/5858206127?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=1BFED6BFBA5D7B201BCDDFE8D1AC5B3EA40EEDA6",
             "salary_is_predicted": "1",
             "salary_max": 316052.28,
             "salary_min": 316052.28,
@@ -5446,7 +5432,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjY2MzUxMyIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.yq6F6FkeJg4ZI7fzfcjk_UQRA_g4UTrYjj4ZsrKhCnU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODEyNjYzNTEzIn0.XpeDPt0TtO3ta6IdhBvQw790MoFKAwM39LwcxCjLJcY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5471,7 +5457,7 @@
               "display_name": "Balcones, Travis County"
             },
             "longitude": -97.708694,
-            "redirect_url": "https://www.adzuna.com/land/ad/5812663513?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=B80AA9DD05E508EE8A69090680721A2B2DAB0C82",
+            "redirect_url": "https://www.adzuna.com/land/ad/5812663513?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=B80AA9DD05E508EE8A69090680721A2B2DAB0C82",
             "salary_is_predicted": "1",
             "salary_max": 148956.05,
             "salary_min": 148956.05,
@@ -5479,7 +5465,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODQzMDIxMDEzIn0.tIkC7xdGZ30OvEMsqp_jR4VyRZyn_dOcOzFYJ8Z8KIo",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0MzAyMTAxMyIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.sUKA2F8YK31HvPOzS54jBmoomaunNd4ebVXYgvhSBU8",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5504,7 +5490,7 @@
               "display_name": "Aurora, Arapahoe County"
             },
             "longitude": -104.8377,
-            "redirect_url": "https://www.adzuna.com/land/ad/5843021013?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=06AFD2192F744260EFC7BABF80BDF98E579D1773",
+            "redirect_url": "https://www.adzuna.com/land/ad/5843021013?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=06AFD2192F744260EFC7BABF80BDF98E579D1773",
             "salary_is_predicted": "1",
             "salary_max": 217886.16,
             "salary_min": 217886.16,
@@ -5512,7 +5498,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgzNzM3NjMwMCIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.IGHwND04_dnRHUC3l40B7upMcjFi8vrDWVA1OZv7pKQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODM3Mzc2MzAwIn0.ANvPsHDwZvvPp7v_miF73OutXHlOl2pdcJkEqAPld-s",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5537,7 +5523,7 @@
               "display_name": "Aurora, Arapahoe County"
             },
             "longitude": -104.8377,
-            "redirect_url": "https://www.adzuna.com/land/ad/5837376300?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=45C67C36259852E0DEF3516DA8FE8F2AC3F4FE7E",
+            "redirect_url": "https://www.adzuna.com/land/ad/5837376300?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=45C67C36259852E0DEF3516DA8FE8F2AC3F4FE7E",
             "salary_is_predicted": "1",
             "salary_max": 191462.08,
             "salary_min": 191462.08,
@@ -5545,7 +5531,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjMwMDU2NiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.hJQ5K74Zoa_MibRMmvQhxD5s2QQlT5I0lg_Zsz7YKvI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgxMjMwMDU2NiIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.HBzccU-wWd3yWYtQv_BlNHtzBk8TbVXtr23mbj8GStQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5572,7 +5558,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5812300566?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=7C6BF06B137812174054BF3967F25BF947E05642",
+            "redirect_url": "https://www.adzuna.com/land/ad/5812300566?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=7C6BF06B137812174054BF3967F25BF947E05642",
             "salary_is_predicted": "1",
             "salary_max": 155068.02,
             "salary_min": 155068.02,
@@ -5580,7 +5566,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODIxNDE1MzA0In0.K-qM5MOcGmMTtKfkdUq5TAF8UeidDS9cR3YT4Uj_y_k",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgyMTQxNTMwNCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.V_xcP6inAVxK6vmVFDSzBo7OWY0H0rgHNMe0baXDvJ0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5605,7 +5591,7 @@
               "display_name": "Highland Park, Dallas"
             },
             "longitude": -96.765058,
-            "redirect_url": "https://www.adzuna.com/land/ad/5821415304?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=53911C137E8F4B9D8A516AA51841BD7055C1B0CF",
+            "redirect_url": "https://www.adzuna.com/land/ad/5821415304?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=53911C137E8F4B9D8A516AA51841BD7055C1B0CF",
             "salary_is_predicted": "1",
             "salary_max": 142364.8,
             "salary_min": 142364.8,
@@ -5613,35 +5599,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODIxNDEzNTQxIn0.RIniOCXm6tqwcKLUcA87DJbRo1MbBmTg-7FexupZTAk",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Empower Professionals"
-            },
-            "created": "2026-07-30T13:24:24Z",
-            "description": "Role: Senior Knowledge Graph Engineer Duration: 12 Months Location: Remote (For USA) Domain Life Sciences Basic Qualifications: We are looking for professionals with the required skills to achieve our goals: Masters degree in Biosciences, Biomedical Science, Biomedical Engineering, Biotechnology (with a life science/pharma application focus) 6 years of relevant knowledge graph work experience Specific hands-on experience contributing to Knowledge Graph development efforts, including entity mode…",
-            "id": "5821413541",
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US"
-              ],
-              "display_name": "US"
-            },
-            "redirect_url": "https://www.adzuna.com/land/ad/5821413541?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=BA7EECB2CC73DF121926A42FEDB68B9FED0AEFD0",
-            "salary_is_predicted": "1",
-            "salary_max": 78631.8,
-            "salary_min": 78631.8,
-            "title": "Senior Knowledge Graph Engineer"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU0NTY1NzgyIn0.X23JAKkdVbRi_e1RnlAKFUuu155_nu9PeAY2XRlBXrw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODU0NTY1NzgyIn0.2VKAjtXBzun9ErJQ7nPlMVSVyX98yCxBPUKfAKMhGlM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5667,7 +5625,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5854565782?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=F82AC75EE6866843711802782253FBBB9DFBC357",
+            "redirect_url": "https://www.adzuna.com/land/ad/5854565782?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=F82AC75EE6866843711802782253FBBB9DFBC357",
             "salary_is_predicted": "1",
             "salary_max": 136993.81,
             "salary_min": 136993.81,
@@ -5675,41 +5633,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg0ODcxNzg2NyIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.c9u8Htq3_Hi9fZyFrfRrHOJ5Leh_JbHd759le9iJLi0",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Vantor"
-            },
-            "contract_time": "full_time",
-            "created": "2026-08-19T17:07:43Z",
-            "description": "Vantor is forging the new frontier of spatial intelligence, helping decision makers and operators navigate what’s happening now and shape what’s coming next. Vantor is a place for problem solvers, changemakers, and go-getters—where people are working together to help our customers see the world differently, and in doing so, be seen differently. Come be part of a mission, not just a job, where you can: Shape your own future, build the next big thing, and change the world. To be eligible for this…",
-            "id": "5848717867",
-            "latitude": 38.97821,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Virginia",
-                "Fairfax County",
-                "Herndon"
-              ],
-              "display_name": "Herndon, Fairfax County"
-            },
-            "longitude": -77.38699,
-            "redirect_url": "https://www.adzuna.com/land/ad/5848717867?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=719DEF27A2F8511BAB787E9DCC641A97484B4338",
-            "salary_is_predicted": "1",
-            "salary_max": 244199.25,
-            "salary_min": 244199.25,
-            "title": "Ontology Software Developer (TS/SCI)"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODM4NTg1ODExIn0.9HD-9I2LBk47Gw7SrZe78WBF7lFkRaZr6mdx2QNFvRk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODM4NTg1ODExIn0.ftGl1GuuZGYuRrFsTH2cqS47Ua5XH31ZEU2YnUbeDfY",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5742,7 +5666,40 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NjE0NjYwMyIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.69dn_YV68YbuwLSosDpqEjOGJVlGpKugEeqJ_vFfJCM",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODUzNjA0NjI3In0.-XlSW6RamV2SS6441Aygd0-6qR7WlCmLIdtP7PC7CJA",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "Engineering Jobs",
+              "tag": "engineering-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Accenture"
+            },
+            "created": "2026-08-23T07:28:40Z",
+            "description": "hackajob is collaborating with Accenture to connect them with exceptional professionals for this role. We Are: Accenture is a global professional services and solutions company that helps leading organizations reinvent with digital, cloud, data, and AI capabilities, drawing on its large global workforce, industry expertise, and ecosystem partnerships to create 360° value. By combining hands-on engineering with deep industry context, we help organizations build their digital core, modernize oper…",
+            "id": "5853604627",
+            "latitude": 47.608492,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Washington",
+                "King County",
+                "Seattle"
+              ],
+              "display_name": "Seattle, King County"
+            },
+            "longitude": -122.336407,
+            "redirect_url": "https://www.adzuna.com/land/ad/5853604627?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=24A7CF1815D5A1AD21D607A6F71BAD3E52A372B2",
+            "salary_is_predicted": "1",
+            "salary_max": 217994.66,
+            "salary_min": 217994.66,
+            "title": "Knowledge Engineer - Back End"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NjE0NjYwMyIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.D-AadSnF6KiS_1swjZb-XbS3ja2yJe1JJADILHr5G0o",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5775,40 +5732,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODUzNjA0NjI3In0.Krx_xj7VcELaySQolYOvPaR-DtHyxXPomDcQ5ZhdKic",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "Engineering Jobs",
-              "tag": "engineering-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "Accenture"
-            },
-            "created": "2026-08-23T07:28:40Z",
-            "description": "hackajob is collaborating with Accenture to connect them with exceptional professionals for this role. We Are: Accenture is a global professional services and solutions company that helps leading organizations reinvent with digital, cloud, data, and AI capabilities, drawing on its large global workforce, industry expertise, and ecosystem partnerships to create 360° value. By combining hands-on engineering with deep industry context, we help organizations build their digital core, modernize oper…",
-            "id": "5853604627",
-            "latitude": 47.608492,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Washington",
-                "King County",
-                "Seattle"
-              ],
-              "display_name": "Seattle, King County"
-            },
-            "longitude": -122.336407,
-            "redirect_url": "https://www.adzuna.com/land/ad/5853604627?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=24A7CF1815D5A1AD21D607A6F71BAD3E52A372B2",
-            "salary_is_predicted": "1",
-            "salary_max": 217994.66,
-            "salary_min": 217994.66,
-            "title": "Knowledge Engineer - Back End"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODYwNDUwNTE0In0.WqG0GuexC3bvmJvVhUw6R8Zp2X4KI6P8eRZt5F3Vm8g",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MDQ1MDUxNCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.Ycdgc6vVOKatbs14w_HubYdRbqhOZimL5Bz6hNo4aQk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5841,7 +5765,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU3NTIwNjMxIn0.3wUek3z05XiWSiZP-NqnT5zt8REUcAHKuPDXZAoJnnU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NzUyMDYzMSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.FwqxMIsWo-OaQu6dAGRGZnvk2dedganiDJldqnAZUgU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5866,7 +5790,7 @@
               "display_name": "Pimmit, Fairfax County"
             },
             "longitude": -77.1786,
-            "redirect_url": "https://www.adzuna.com/land/ad/5857520631?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=68751C029B3253DEACB7919DA66E3EC402472147",
+            "redirect_url": "https://www.adzuna.com/land/ad/5857520631?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=68751C029B3253DEACB7919DA66E3EC402472147",
             "salary_is_predicted": "1",
             "salary_max": 137922.86,
             "salary_min": 137922.86,
@@ -5874,7 +5798,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODU3NjUyMDg1In0.WTvmjlBAEc_jC-mspZ77DOloJ1NX9nj-cYBkmTbSMHw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1NzY1MjA4NSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.4g7G1pVZlwfZkndAsjM5ZeYY630EIXmHIgNULe1w_is",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -5907,7 +5831,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1OTg2NjcxNiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.ekYiTfQj_Tp66kv6i_YkYWHwHcDuTjp5AbM73ZkJVBc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODU5ODY2NzE2In0.8wSh49111ThE7H5msj-mSHw4yUL7R3B_sQqT_NoOwro",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5927,7 +5851,7 @@
               ],
               "display_name": "US"
             },
-            "redirect_url": "https://www.adzuna.com/land/ad/5859866716?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=70A37C19C44D1EA3203C4B5076A2814BBB16B122",
+            "redirect_url": "https://www.adzuna.com/land/ad/5859866716?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=70A37C19C44D1EA3203C4B5076A2814BBB16B122",
             "salary_is_predicted": "1",
             "salary_max": 129565.54,
             "salary_min": 129565.54,
@@ -5935,7 +5859,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMDQ2NjcyNSIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.L_VZnAwsKepv5uT9WOeBc5DHIO08I2alZ2GWNJobFEk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODAwNDY2NzI1In0.yZIPgD8yrrgav0PyuN9eWhdQWkg8A7S8wTq78q00Vx0",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -5968,7 +5892,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NzgyNzY3NDEzIn0.Wvf3kXY_Y-VlB7RcN2sMUVG3MYoTOWdndTZG9dnfkkI",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzgyNzY3NDEzIn0.oDVqzmwS6cxloBRIDzbOrFDggFMZfPLIazMy9oNXrIo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6001,40 +5925,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODAwNTI1OTMxIn0.tHtl1BomoCzBHFceRODtc0uTr15ViAU2OVcyanD1bM4",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "SOS International LLC"
-            },
-            "created": "2026-07-14T20:57:58Z",
-            "description": "Remote, Remote, USA Full-time Clearance Requirement: None Compensation: USD 137004 - USD 284548 - yearly Company Description Founded in 1989, SOSi is among the largest private, founder-owned technology and services integrators in the defense and government services industry. We deliver tailored solutions, tested leadership, and trusted results to enable national security missions worldwide. Job Description  This position is contingent upon contract award  SOSi is seeking an Ontologist to suppor…",
-            "id": "5800525931",
-            "latitude": 31.76704,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "Texas",
-                "El Paso County",
-                "Fort Bliss"
-              ],
-              "display_name": "Fort Bliss, El Paso County"
-            },
-            "longitude": -106.42446,
-            "redirect_url": "https://www.adzuna.com/details/5800525931?utm_medium=api&utm_source=e5c57c17",
-            "salary_is_predicted": "1",
-            "salary_max": 101940.69,
-            "salary_min": 101940.69,
-            "title": "Ontologist"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMjM0MjE3NiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.kle_V7MC_oLYF7MKaGYXe9Y6rS-MlUWoIfVb8ygpQNU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMjM0MjE3NiIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.YvjEd_S7OAB_xnOnInp_s4HXwqk4BVxIQZc9TBhed38",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6067,7 +5958,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NzgyNjEyMjIyIn0.zdoVLwZ5s1ZssChVB2jmyZC68EUK_fxXca8VmBqHo7Q",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzgyNjEyMjIyIn0.GPv0-Ua0TuMNUNgCStR41b57IkCi_1wvS-qUTlbg_cQ",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6100,7 +5991,72 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTQ2NjExNDI0NiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.qfmEtSayMZPk79kGKQSEI6xFBmphzVJnnKuWfTmmh-c",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTgwMDUyNTkzMSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.NDZfpLdXyGfI3j4Bp9ybapKzBlRNJUUpCy1eIW1-aqg",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "SOS International LLC"
+            },
+            "created": "2026-07-14T20:57:58Z",
+            "description": "Remote, Remote, USA Full-time Clearance Requirement: None Compensation: USD 137004 - USD 284548 - yearly Company Description Founded in 1989, SOSi is among the largest private, founder-owned technology and services integrators in the defense and government services industry. We deliver tailored solutions, tested leadership, and trusted results to enable national security missions worldwide. Job Description  This position is contingent upon contract award  SOSi is seeking an Ontologist to suppor…",
+            "id": "5800525931",
+            "latitude": 31.76704,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Texas",
+                "El Paso County",
+                "Fort Bliss"
+              ],
+              "display_name": "Fort Bliss, El Paso County"
+            },
+            "longitude": -106.42446,
+            "redirect_url": "https://www.adzuna.com/details/5800525931?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "1",
+            "salary_max": 101940.69,
+            "salary_min": 101940.69,
+            "title": "Ontologist"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODE2MTYxMDE5In0.skgIxFyUyvglFwT2UNJ3RL7CicQzF1UkldpmjfYuFJs",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "IT Jobs",
+              "tag": "it-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "EXL"
+            },
+            "contract_time": "full_time",
+            "created": "2026-07-26T01:02:39Z",
+            "description": "Description We are seeking a Lead Engineer – GenAI, Agentic AI, and Knowledge Graph Architect to design, develop, and deploy enterprise‑scale intelligent systems that fuse Generative AI, autonomous agents, symbolic reasoning, and Knowledge Graphs. The ideal candidate will bring strong expertise in Python, LLM‑based systems, agentic frameworks, and knowledge‑centric AI, with hands‑on experience delivering production‑grade GenAI or agentic solutions grounded using Knowledge Graphs. As part of EXL…",
+            "id": "5816161019",
+            "latitude": 42.522869,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "New York"
+              ],
+              "display_name": "New York, US"
+            },
+            "longitude": -75.574677,
+            "redirect_url": "https://www.adzuna.com/details/5816161019?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "0",
+            "salary_max": 160000,
+            "salary_min": 100000,
+            "title": "Lead Engineer – GenAI, Agentic AI, and Knowledge Graph Architect"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NDY2MTE0MjQ2In0.t8kEq_9ksgO5o0ktudyf2qolV7S0JnK8lpER454OBMM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -6133,39 +6089,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODE2MTYxMDE5In0.jFHj_EiB0BRN7vgw61D2stpWu7GghTSB-slKaCdENsM",
-            "category": {
-              "__CLASS__": "Adzuna::API::Response::Category",
-              "label": "IT Jobs",
-              "tag": "it-jobs"
-            },
-            "company": {
-              "__CLASS__": "Adzuna::API::Response::Company",
-              "display_name": "EXL"
-            },
-            "contract_time": "full_time",
-            "created": "2026-07-26T01:02:39Z",
-            "description": "Description We are seeking a Lead Engineer – GenAI, Agentic AI, and Knowledge Graph Architect to design, develop, and deploy enterprise‑scale intelligent systems that fuse Generative AI, autonomous agents, symbolic reasoning, and Knowledge Graphs. The ideal candidate will bring strong expertise in Python, LLM‑based systems, agentic frameworks, and knowledge‑centric AI, with hands‑on experience delivering production‑grade GenAI or agentic solutions grounded using Knowledge Graphs. As part of EXL…",
-            "id": "5816161019",
-            "latitude": 42.522869,
-            "location": {
-              "__CLASS__": "Adzuna::API::Response::Location",
-              "area": [
-                "US",
-                "New York"
-              ],
-              "display_name": "New York, US"
-            },
-            "longitude": -75.574677,
-            "redirect_url": "https://www.adzuna.com/details/5816161019?utm_medium=api&utm_source=e5c57c17",
-            "salary_is_predicted": "0",
-            "salary_max": 160000,
-            "salary_min": 100000,
-            "title": "Lead Engineer – GenAI, Agentic AI, and Knowledge Graph Architect"
-          },
-          {
-            "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODA1MzczMzY3In0.gwovoEduf_MNDJRN8hm7xukeye6mSXsiEWnPn6JDshc",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODA1MzczMzY3In0.q1mZ4LfzapoQ2G8sTZHRWGxABjYRxie9aZvMma1uNVo",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6191,7 +6115,7 @@
               "display_name": "Grand Central, Manhattan"
             },
             "longitude": -73.97528,
-            "redirect_url": "https://www.adzuna.com/land/ad/5805373367?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=3F6D0DE6C584972195DA5743CA40E4000D4B36EF",
+            "redirect_url": "https://www.adzuna.com/land/ad/5805373367?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=3F6D0DE6C584972195DA5743CA40E4000D4B36EF",
             "salary_is_predicted": "1",
             "salary_max": 182488.92,
             "salary_min": 182488.92,
@@ -6199,7 +6123,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg1MTgyNzQwMiIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.CgZ6AKCRIBT6IhM7OcRwTiCSI5U6qAKN4l8lLdQFCmg",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODUxODI3NDAyIn0.3zfPROJzV9c0-9LgU0EBbqnnNMBKzT9X-f7Ho5JnSMk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6225,7 +6149,7 @@
               "display_name": "Schiller Park, Cook County"
             },
             "longitude": -87.8849,
-            "redirect_url": "https://www.adzuna.com/land/ad/5851827402?se=NuqOzB2l8RGBo5QI7O4D4Q&utm_medium=api&utm_source=e5c57c17&v=D0034C7A0C2277FB8021B91D7149ED754C648531",
+            "redirect_url": "https://www.adzuna.com/land/ad/5851827402?se=oiZAMnel8RGh0uOO8r4deQ&utm_medium=api&utm_source=e5c57c17&v=D0034C7A0C2277FB8021B91D7149ED754C648531",
             "salary_is_predicted": "1",
             "salary_max": 219048.53,
             "salary_min": 219048.53,
@@ -6233,7 +6157,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc1NTI1MjU3MyIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.dUlNz49KkjQUHZhjl4Jh1oGFXEeCN4wuyCofXQNAMgQ",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzU1MjUyNTczIn0.Ujerdyj3pBdzqG48nm0aPq4QJ_PZsll2J2HS_yyBUjU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Scientific & QA Jobs",
@@ -6266,7 +6190,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODExOTg4NDI0In0.JMCKMN3LApVSngZgGc7LmlZBJHWjexPp8qz_pC5yiVw",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODExOTg4NDI0In0.XI-hy-1p9SbF7LqJgC9J_lksHysVdsvQsF56C2hqSBM",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -6298,7 +6222,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODYxOTc4MDQzIn0.T8VSsLQLJGGnpEW2ILeWgKlkg2xT6dTOS52a64QxLpk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODYxOTc4MDQzIn0.BlikN-T-0gcZpM1AKRwqJVb5EEjVBsG26UbkjIOE4RU",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6327,7 +6251,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODYyMDIzNTkwIn0.PInjQ9E_m0jzgp2J9GfxYFCbmXXonalN7pbdQstEGIk",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTg2MjAyMzU5MCIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.vTcJFSyUZ_tqPRjFnZ3IBdd_7q_zXbBIl5Vi_fFVA5A",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6356,7 +6280,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODM3ODEzNzAyIn0.X6A9jZYDJK_4kxBRnI8--xpVVltMKQsCSNIUFeBmVQg",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODM3ODEzNzAyIn0.YMyPXNEDKp2w8D4-YK0Syo_J5kLBjQFOMc2K1FPDo4M",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6389,7 +6313,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1Nzk1NTU5MTgxIn0.sS46q-XVMFphJhTyXY5Xhu-wJzc4VoCtqPJ8qOxd7eY",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc5NTU1OTE4MSIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.9M-Eor5i4OoL4iTeW-wWNhFQJbVtqre6XqfI0y4Uhiw",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -6422,7 +6346,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NzMxMTMyNjMxIn0.MlW2AXGMxvtFmiEnR04SJfdF8mGcZSK--CLhfTqFwok",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzMxMTMyNjMxIn0.vn1JEZj-2DmV7FDOm3Z3XnEudTztKBEwrkazJc4cRzk",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6451,7 +6375,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1NjY5NzM4MDc0In0.40FJa31oW-0FbhMzUwn3eY1YBEfH0fro0uD41uXwLV8",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NjY5NzM4MDc0In0.i9CTnPNkeXZhfGOHGkh3gjVw3rmAVmHlO2hVjnv0ohI",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6485,7 +6409,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc0NjM2MDcyNyIsInMiOiJOdXFPekIybDhSR0JvNVFJN080RDRRIn0.INWCU4NE-2Zs3XxBq6RZAGqc_Wja0VNTJrica0gzNKA",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiNTc0NjM2MDcyNyIsInMiOiJvaVpBTW5lbDhSR2gwdU9POHI0ZGVRIn0.riTo7-tRDpD2hDfWJV_Li5FULf9hVwa1LoSuR9OZ5ts",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6519,7 +6443,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODI0OTU0ODE2In0.Gle2y3-ZG04g__VMSzV3Q5Q6cxgwfSchhPHtYkLYq3M",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODI0OTU0ODE2In0.jVLbxKT7I0OaGn_EG0b-YSi035cV8hTx8hvFQ1RF1ss",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "IT Jobs",
@@ -6553,7 +6477,7 @@
           },
           {
             "__CLASS__": "Adzuna::API::Response::Job",
-            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiTnVxT3pCMmw4UkdCbzVRSTdPNEQ0USIsImkiOiI1ODIyMDI0MTY1In0._5W67Sjlnf_-rfcCuDWQjDRgtPccP4TByRyM6PaA8FU",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODIyMDI0MTY1In0.NdK_wXFnQlD73dqSsmA2kdQEaw3-StXAaeTUpRH_Aws",
             "category": {
               "__CLASS__": "Adzuna::API::Response::Category",
               "label": "Engineering Jobs",
@@ -6578,6 +6502,72 @@
             "salary_max": 125339.58,
             "salary_min": 125339.58,
             "title": "Ontology Engineer"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1NzU1NDA1MTQwIn0.ze9je5sHFHjte2U4pnJyvg6S7JiP7HrEsv4lZepe8to",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "Engineering Jobs",
+              "tag": "engineering-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Samba"
+            },
+            "contract_time": "full_time",
+            "created": "2026-06-07T06:56:45Z",
+            "description": "Samba is a media intelligence company. We know what the world is watching, reading, and thinking about — in real time, at scale, across every screen. Our data exists with the consent of over a billion people, organized into the most complete picture of consumer attention ever built. The biggest brands in the world use that picture to make smarter decisions. We think it’s the most interesting data asset on the planet, because it’s the most culturally relevant. As Senior Ontologist on Samba TV's …",
+            "id": "5755405140",
+            "latitude": 37.798085,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "California",
+                "San Francisco"
+              ],
+              "display_name": "San Francisco, California"
+            },
+            "longitude": -122.466538,
+            "redirect_url": "https://www.adzuna.com/details/5755405140?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "0",
+            "salary_max": 230000,
+            "salary_min": 180000,
+            "title": "Senior Ontologist - Knowledge Graph & Identity"
+          },
+          {
+            "__CLASS__": "Adzuna::API::Response::Job",
+            "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoib2laQU1uZWw4UkdoMHVPTzhyNGRlUSIsImkiOiI1ODQyNTM1MTc1In0.FnRTzXuWj3V9VU4rVcqawBSt5lO4GByl7c5AC4_uIi8",
+            "category": {
+              "__CLASS__": "Adzuna::API::Response::Category",
+              "label": "Engineering Jobs",
+              "tag": "engineering-jobs"
+            },
+            "company": {
+              "__CLASS__": "Adzuna::API::Response::Company",
+              "display_name": "Accenture"
+            },
+            "created": "2026-08-14T21:47:34Z",
+            "description": "We are: The Advanced Technology Centers (ATCs) are the engine for reinvention in our clients' transformation journey. Powered by more than 255,000 people across 24 countries, ATCs provide our clients with seamless access to industry insights and innovative technology solutions. Stronger together! The Advanced Technology Centers (ATCs) make a tremendous impact in solving our clients' business problems by leveraging innovation, intelligence, industry insights, new IT, and new technology skills. W…",
+            "id": "5842535175",
+            "latitude": 27.77736,
+            "location": {
+              "__CLASS__": "Adzuna::API::Response::Location",
+              "area": [
+                "US",
+                "Florida",
+                "Pinellas County",
+                "Saint Petersburg"
+              ],
+              "display_name": "Saint Petersburg, Pinellas County"
+            },
+            "longitude": -82.65972,
+            "redirect_url": "https://www.adzuna.com/details/5842535175?utm_medium=api&utm_source=e5c57c17",
+            "salary_is_predicted": "1",
+            "salary_max": 300577.4,
+            "salary_min": 300577.4,
+            "title": "Senior Knowledge Engineer"
           }
         ]
       }
