@@ -852,6 +852,18 @@
     okg:title "Basic concepts of media art (Finnish)" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11881927> .
 
+<https://openknowledgegraphs.com/resource/basic-formal-ontology-1-1/> a okg:Ontology ;
+    rdfs:label "Basic Formal Ontology 1.1" ;
+    okg:alias "bfo1.1",
+        "bfo11" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "version of BFO" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
+    okg:sourceType <http://www.wikidata.org/entity/Q20826013>,
+        <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "Basic Formal Ontology 1.1" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141222616> .
+
 <https://openknowledgegraphs.com/resource/basic-geo-wgs84-lat-long-vocabulary/> a okg:ControlledVocabulary ;
     rdfs:label "Basic Geo (WGS84 lat/long) Vocabulary" ;
     okg:category okg:Geospatial ;
@@ -14945,6 +14957,15 @@
     okg:title "Genotype Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661639> .
 
+<https://openknowledgegraphs.com/resource/geocore-ontology/> a okg:Ontology ;
+    rdfs:label "GeoCore Ontology" ;
+    okg:category okg:EnvironmentAgriculture ;
+    okg:description "general use ontology for geology" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_NonCommercial_4_0_International_Q34179348 ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "GeoCore Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141222138> .
+
 <https://openknowledgegraphs.com/resource/geographical-entity-ontology/> a okg:Ontology ;
     rdfs:label "Geographical Entity Ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
@@ -14988,6 +15009,16 @@
     okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
     okg:title "geopolitical ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3112318> .
+
+<https://openknowledgegraphs.com/resource/geoscience-ontology/> a okg:Ontology ;
+    rdfs:label "GeoScience Ontology" ;
+    okg:alias "GSO" ;
+    okg:category okg:EnvironmentAgriculture ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:sourceRepo <https://github.com/Loop3D/GKM/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "GeoScience Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141222183> .
 
 <https://openknowledgegraphs.com/resource/geosciml/> a okg:KnowledgeGraph ;
     rdfs:label "GeoSciML" ;
@@ -25478,6 +25509,19 @@
     okg:title "Security Vocabulary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q120642197> .
 
+<https://openknowledgegraphs.com/resource/seeker-james-publishing-bibliotheca-seekerisms-vol-1/> a okg:ControlledVocabulary ;
+    rdfs:label "SEEKER JAMES PUBLISHING | BIBLIOTHECA SEEKERISMS Vol. 1" ;
+    okg:alias "BIBLIOTHECA SEEKERISMS Vol. 1",
+        "Seekerisms",
+        "Seekerium Glossary" ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:creator okg:Creator_Seeker_James_Q139740781 ;
+    okg:description "The Official Glossary for legal and copyrighted terms for Seeker James Publishing,  and their trans media organisation" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3331189>,
+        <http://www.wikidata.org/entity/Q859161> ;
+    okg:title "SEEKER JAMES PUBLISHING | BIBLIOTHECA SEEKERISMS Vol. 1" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141222686> .
+
 <https://openknowledgegraphs.com/resource/segregate/> a okg:Taxonomy ;
     rdfs:label "segregate" ;
     okg:alias "segregate taxon" ;
@@ -26265,6 +26309,15 @@
         <http://www.wikidata.org/entity/Q7094076> ;
     okg:title "Student Health Record" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q99546544> .
+
+<https://openknowledgegraphs.com/resource/stuff-ontology/> a okg:Ontology ;
+    rdfs:label "Stuff Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:creator okg:Creator_C_Maria_Keet_Q108817971 ;
+    okg:homepage <http://www.meteck.org/stuff.html> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Stuff Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141222489> .
 
 <https://openknowledgegraphs.com/resource/stw-thesaurus-for-economics/> a okg:ControlledVocabulary ;
     rdfs:label "STW Thesaurus for Economics" ;
@@ -28527,7 +28580,7 @@
         <http://www.wikidata.org/entity/Q54837> ;
     okg:category okg:GeneralCrossDomain ;
     okg:creator okg:Creator_Wikidata_editors_Q28859214,
-        okg:Creator_Wikimedia_Deutschland_Q8288,
+        okg:Creator_Wikimedia_Germany_Q8288,
         okg:Creator_Wikimedia_community_Q56035565 ;
     okg:description "free multilingual online knowledge graph" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043,
@@ -28951,6 +29004,11 @@ okg:Creator_Blackcat_Informatics_Inc_Q140285712 a okg:Organization ;
 okg:Creator_Bolette_Sandford_Pedersen_Q28152375 a okg:Person ;
     rdfs:label "Bolette Sandford Pedersen" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q28152375> .
+
+okg:Creator_C_Maria_Keet_Q108817971 a okg:Person ;
+    rdfs:label "C. Maria Keet" ;
+    okg:googleScholarProfile <https://scholar.google.com/citations?user=lccln9YAAAAJ> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q108817971> .
 
 okg:Creator_Canadian_Heritage_Information_Network_Q3456610 a okg:Organization ;
     rdfs:label "Canadian Heritage Information Network" ;
@@ -29538,6 +29596,10 @@ okg:Creator_Sean_Bechhofer_Q56513265 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=XRzaza0AAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56513265> .
 
+okg:Creator_Seeker_James_Q139740781 a okg:Person ;
+    rdfs:label "Seeker James" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q139740781> .
+
 okg:Creator_Shona_Whyte_Q58076037 a okg:Person ;
     rdfs:label "Shona Whyte" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q58076037> .
@@ -29665,8 +29727,8 @@ okg:Creator_Wikimedia_Czech_Republic_Q15735556 a okg:Organization ;
     rdfs:label "Wikimedia Czech Republic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q15735556> .
 
-okg:Creator_Wikimedia_Deutschland_Q8288 a okg:Organization ;
-    rdfs:label "Wikimedia Deutschland" ;
+okg:Creator_Wikimedia_Germany_Q8288 a okg:Organization ;
+    rdfs:label "Wikimedia Germany" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q8288> .
 
 okg:Creator_Wikimedia_Uruguay_Q18559903 a okg:Organization ;
@@ -29706,6 +29768,10 @@ okg:License_Creative_Commons_Attribution_3_0_Netherlands_Q53859967 a okg:License
 okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Intergovernmental_Organization_Q125536842 a okg:License ;
     rdfs:label "Creative Commons Attribution - NoDerivs 3.0 Intergovernmental Organization" ;
     okg:licenseName "Creative Commons Attribution - NoDerivs 3.0 Intergovernmental Organization" .
+
+okg:License_Creative_Commons_Attribution_NonCommercial_4_0_International_Q34179348 a okg:License ;
+    rdfs:label "Creative Commons Attribution-NonCommercial 4.0 International" ;
+    okg:licenseName "Creative Commons Attribution-NonCommercial 4.0 International" .
 
 okg:License_Creative_Commons_Attribution_NonCommercial_ShareAlike_2_0_Generic_Q28050835 a okg:License ;
     rdfs:label "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic" ;
@@ -34785,12 +34851,13 @@ okg:TechnologyWeb a okg:Category ;
         okg:Ontology ;
     rdfs:label "Basic Formal Ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
+        <http://www.wikidata.org/entity/Q4117183>,
+        <http://www.wikidata.org/entity/Q54837> ;
     okg:category okg:GeneralCrossDomain ;
     okg:creator okg:Creator_Barry_Smith_Q809101 ;
     okg:description "top-level ontology developed to promote interoperability among domain ontologies" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <http://basic-formal-ontology.org/> ;
+    okg:homepage <https://bfo-ontology.github.io/> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/afo-foundational-ontology/>,
         <https://openknowledgegraphs.com/resource/behavior-perspective-model/>,
@@ -34798,8 +34865,7 @@ okg:TechnologyWeb a okg:Category ;
         <https://openknowledgegraphs.com/resource/common-core-ontologies/>,
         <https://openknowledgegraphs.com/resource/information-artifact-ontology/> ;
     okg:sourceRepo <https://github.com/bfo-ontology/BFO-2020> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955>,
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
         <http://www.wikidata.org/entity/Q3882785> ;
     okg:title "Basic Formal Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q4866972> .
