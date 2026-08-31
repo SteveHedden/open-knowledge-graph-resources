@@ -107,17 +107,31 @@ but only `qualified` first-party records may enter the public snapshot. The
 EMBL-EBI BioImaging Bioinformatician and UMD AI Research Assistant are the two
 approved current postings; EMBL's Bioinformatician remains review-only.
 
+Issue 63 / Task 43 adds eight evidence-reviewed peer employers to the canonical
+organization registry. After manager approval, six exact, bounded sources are
+production-enabled:
+JPMorganChase Oracle Recruiting, Accenture/CrowdStrike/Capital One Workday,
+Amazon Jobs, and SAP SuccessFactors RMK. Siemens and Bloomberg are deferred
+because their Avature pages did not expose a deterministic public filtered
+contract. The compact live review (485 IDs, titles, links, classifications, and
+raw hashes) is tracked in `audits/task43-peer-employer-review.json`; regenerate
+it from the ignored isolated runtimes with
+`python jobs/scripts/build_task43_audit.py`. The approval is recorded in
+`audits/task43-production-approval.json`; only qualified first-party records are
+eligible for publication through the existing nightly pipeline.
+
 The production runner covers the five aggregators, the prior 12 first-party
-sources, and Task 42's 17 sources. It enforces a 720-second per-source wall-clock
+sources, Task 42's 17 sources, and Task 43's six approved sources. It enforces a
+720-second per-source wall-clock
 cap, validates successful workers by replaying their raw responses into one
 candidate runtime, retains failed sources' last-good normalized and raw data,
 and swaps the complete runtime atomically. The workflow then atomically promotes
 that validated directory into `data/jobs/`. In the same nightly invocation, the
 nonpublishing discovery monitor checks all 68 unresolved careers pages; the 22
 organizations without careers pages remain uncovered. Its results are uploaded
-as diagnostics and never contribute jobs. Ten source batches plus the explicit
-12-minute workflow-overhead allowance produce a 7,920-second (132-minute)
-worst-case budget, leaving 18 minutes of headroom inside the 150-minute timeout. The machine-readable
+as diagnostics and never contribute jobs. Thirteen source batches plus the explicit
+12-minute workflow-overhead allowance produce a 10,080-second (168-minute)
+worst-case budget, leaving 12 minutes of headroom inside the 180-minute timeout. The machine-readable
 contract is in
 `audits/task42-nightly-operational-plan.json`.
 

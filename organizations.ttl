@@ -4847,3 +4847,187 @@ orgtype:role-vocabulary-maintainer a owl:Class ;
     dcterms:description "Creates, maintains, or publishes an ontology, controlled vocabulary, or taxonomy."@en ;
     rdfs:subClassOf schema:Organization ;
     okg:classificationDimension "role" .
+
+<https://openknowledgegraphs.com/organization/jpmorgan-chase/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-kg-research-education,
+        schema:Organization ;
+    dcterms:description "American multinational banking and financial services holding company" ;
+    dcterms:identifier "jpmorgan-chase" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://careers.jpmorgan.com/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/jpmorgan-chase/evidence/f17ec009eb09b0c6> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q192314> ;
+    schema:name "JPMorganChase" ;
+    schema:url <https://www.jpmorganchase.com/> ;
+    skos:altLabel "J.P. Morgan",
+        "JPMorgan Chase",
+        "JPMorganChase" .
+
+<https://openknowledgegraphs.com/organization/jpmorgan-chase/evidence/f17ec009eb09b0c6> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "JPMorganChase's official 2026 technology-trends report documents context-driven architectures built around enterprise knowledge graphs." ;
+    dcterms:source <https://www.jpmorganchase.com/content/dam/jpmorganchase/documents/technology/2026-tech-trends-context-driven-architectures.pdf> .
+
+<https://openknowledgegraphs.com/organization/siemens/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-kg-consultancy-integrator,
+        schema:Organization ;
+    dcterms:description "German multinational technology company" ;
+    dcterms:identifier "siemens" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://jobs.siemens.com/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/siemens/evidence/987a9cbb82c10d08> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled false ;
+    owl:sameAs <http://www.wikidata.org/entity/Q81230> ;
+    schema:name "Siemens" ;
+    schema:url <https://www.siemens.com/> ;
+    skos:altLabel "Siemens AG" .
+
+<https://openknowledgegraphs.com/organization/siemens/evidence/987a9cbb82c10d08> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "Siemens' official solution page documents its knowledge-graph engineering and integration offering." ;
+    dcterms:source <https://www.siemens.com/en-us/solutions/data-analytics-artificial-intelligence/knowledge-graphs/> .
+
+<https://openknowledgegraphs.com/organization/sap/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-graph-platform-provider,
+        schema:Organization ;
+    dcterms:description "German enterprise software company" ;
+    dcterms:identifier "sap" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://jobs.sap.com/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/sap/evidence/8f6dea6af46d5f04> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q552581> ;
+    schema:name "SAP" ;
+    schema:url <https://www.sap.com/> ;
+    skos:altLabel "SAP SE" .
+
+<https://openknowledgegraphs.com/organization/sap/evidence/8f6dea6af46d5f04> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "SAP's official product page documents SAP Knowledge Graph as an enterprise knowledge-graph product." ;
+    dcterms:source <https://www.sap.com/products/artificial-intelligence/knowledge-graph.html> .
+
+<https://openknowledgegraphs.com/organization/amazon/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-graph-platform-provider,
+        schema:Organization ;
+    dcterms:description "American multinational technology company" ;
+    dcterms:identifier "amazon" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://www.amazon.jobs/en/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/amazon/evidence/d6e40a82ac58fbe0> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q3884> ;
+    schema:name "Amazon" ;
+    schema:url <https://www.amazon.com/> ;
+    skos:altLabel "Amazon Web Services",
+        "AWS" .
+
+<https://openknowledgegraphs.com/organization/amazon/evidence/d6e40a82ac58fbe0> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "AWS's official Neptune page documents Amazon's graph database and graph-AI platform offering." ;
+    dcterms:source <https://aws.amazon.com/neptune/graph-and-ai/> .
+
+<https://openknowledgegraphs.com/organization/accenture/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-kg-consultancy-integrator,
+        schema:Organization ;
+    dcterms:description "Multinational management consulting and technology-services company" ;
+    dcterms:identifier "accenture" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://www.accenture.com/us-en/careers> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/accenture/evidence/3cbb44dc775c583a> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q338825> ;
+    schema:name "Accenture" ;
+    schema:url <https://www.accenture.com/> .
+
+<https://openknowledgegraphs.com/organization/accenture/evidence/3cbb44dc775c583a> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "Accenture's official Intelligent Digital Brain research documents enterprise knowledge graphs and semantic integration." ;
+    dcterms:source <https://www.accenture.com/us-en/insights/data-ai/intelligent-digital-brain> .
+
+<https://openknowledgegraphs.com/organization/crowdstrike/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-kg-dataset-operator,
+        schema:Organization ;
+    dcterms:description "American cybersecurity technology company" ;
+    dcterms:identifier "crowdstrike" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://www.crowdstrike.com/en-us/careers/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/crowdstrike/evidence/0740c66e43773442> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q24890758> ;
+    schema:name "CrowdStrike" ;
+    schema:url <https://www.crowdstrike.com/> .
+
+<https://openknowledgegraphs.com/organization/crowdstrike/evidence/0740c66e43773442> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "CrowdStrike's official technical article documents its graph-backed cybersecurity data platform." ;
+    dcterms:source <https://www.crowdstrike.com/en-us/blog/big-data-graph-and-the-cloud-three-keys-to-stopping-todays-threats/> .
+
+<https://openknowledgegraphs.com/organization/bloomberg/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-kg-dataset-operator,
+        schema:Organization ;
+    dcterms:description "American multinational financial data and media company" ;
+    dcterms:identifier "bloomberg" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://www.bloomberg.com/company/careers/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/bloomberg/evidence/513818e40aac19c7> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled false ;
+    owl:sameAs <http://www.wikidata.org/entity/Q13977> ;
+    schema:name "Bloomberg L.P." ;
+    schema:url <https://www.bloomberg.com/> ;
+    skos:altLabel "Bloomberg" .
+
+<https://openknowledgegraphs.com/organization/bloomberg/evidence/513818e40aac19c7> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "Bloomberg's official OpenFIGI service publishes graph-relevant financial-instrument identifiers and mappings." ;
+    dcterms:source <https://www.openfigi.com/> .
+
+<https://openknowledgegraphs.com/organization/capital-one/> a prov:Entity,
+        okg:Organization,
+        orgtype:kind-commercial-enterprise,
+        orgtype:role-kg-research-education,
+        schema:Organization ;
+    dcterms:description "American bank holding company" ;
+    dcterms:identifier "capital-one" ;
+    kgjobs:active true ;
+    kgjobs:careersPage <https://www.capitalonecareers.com/> ;
+    kgjobs:inclusionEvidence <https://openknowledgegraphs.com/organization/capital-one/evidence/886589cb26022117> ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:reviewStatus "evidence-reviewed" ;
+    okg:jobsProductionEnabled true ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1034654> ;
+    schema:name "Capital One" ;
+    schema:url <https://www.capitalone.com/> .
+
+<https://openknowledgegraphs.com/organization/capital-one/evidence/886589cb26022117> a kgjobs:InclusionEvidence ;
+    dcterms:date "2026-08-31"^^xsd:date ;
+    dcterms:description "Capital One's official engineering publication documents research into financial graph embeddings." ;
+    dcterms:source <https://www.capitalone.com/tech/machine-learning/learning-embeddings-of-financial-graphs/> .

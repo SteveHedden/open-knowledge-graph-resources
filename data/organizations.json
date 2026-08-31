@@ -1,12 +1,12 @@
 {
   "counts": {
-    "accepted": 139,
-    "jobsProductionEnabled": 29,
+    "accepted": 147,
+    "jobsProductionEnabled": 35,
     "rejectedAuditOnly": 3,
     "unresolvedAuditOnly": 0
   },
-  "generatedAt": "2026-08-27T00:00:00Z",
-  "lastVerified": "2026-08-27",
+  "generatedAt": "2026-08-31T00:00:00Z",
+  "lastVerified": "2026-08-31",
   "organizations": [
     {
       "active": true,
@@ -51,6 +51,41 @@
         }
       ],
       "qid": "Q1468503",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [],
+      "careersPage": "https://www.accenture.com/us-en/careers",
+      "catalogRelationships": [],
+      "description": "Multinational management consulting and technology-services company",
+      "ecosystemRoles": [
+        {
+          "label": "KG consultancy or systems integrator",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-consultancy-integrator"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Accenture's official Intelligent Digital Brain research documents enterprise knowledge graphs and semantic integration.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.accenture.com/us-en/insights/data-ai/intelligent-digital-brain"
+        }
+      ],
+      "identifier": "accenture",
+      "iri": "https://openknowledgegraphs.com/organization/accenture/",
+      "jobsProductionEnabled": true,
+      "lastVerified": "2026-08-31",
+      "name": "Accenture",
+      "officialWebsite": "https://www.accenture.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q338825",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },
@@ -197,6 +232,44 @@
         }
       ],
       "qid": "Q108730224",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [
+        "AWS",
+        "Amazon Web Services"
+      ],
+      "careersPage": "https://www.amazon.jobs/en/",
+      "catalogRelationships": [],
+      "description": "American multinational technology company",
+      "ecosystemRoles": [
+        {
+          "label": "Graph database or KG platform provider",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-graph-platform-provider"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "AWS's official Neptune page documents Amazon's graph database and graph-AI platform offering.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://aws.amazon.com/neptune/graph-and-ai/"
+        }
+      ],
+      "identifier": "amazon",
+      "iri": "https://openknowledgegraphs.com/organization/amazon/",
+      "jobsProductionEnabled": true,
+      "lastVerified": "2026-08-31",
+      "name": "Amazon",
+      "officialWebsite": "https://www.amazon.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q3884",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },
@@ -1080,6 +1153,43 @@
     },
     {
       "active": true,
+      "aliases": [
+        "Bloomberg"
+      ],
+      "careersPage": "https://www.bloomberg.com/company/careers/",
+      "catalogRelationships": [],
+      "description": "American multinational financial data and media company",
+      "ecosystemRoles": [
+        {
+          "label": "Knowledge-graph or dataset publisher or operator",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-dataset-operator"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Bloomberg's official OpenFIGI service publishes graph-relevant financial-instrument identifiers and mappings.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.openfigi.com/"
+        }
+      ],
+      "identifier": "bloomberg",
+      "iri": "https://openknowledgegraphs.com/organization/bloomberg/",
+      "jobsProductionEnabled": false,
+      "lastVerified": "2026-08-31",
+      "name": "Bloomberg L.P.",
+      "officialWebsite": "https://www.bloomberg.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q13977",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
       "aliases": [],
       "careersPage": null,
       "catalogRelationships": [
@@ -1290,6 +1400,41 @@
     {
       "active": true,
       "aliases": [],
+      "careersPage": "https://www.capitalonecareers.com/",
+      "catalogRelationships": [],
+      "description": "American bank holding company",
+      "ecosystemRoles": [
+        {
+          "label": "KG research or education organization",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-research-education"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Capital One's official engineering publication documents research into financial graph embeddings.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.capitalone.com/tech/machine-learning/learning-embeddings-of-financial-graphs/"
+        }
+      ],
+      "identifier": "capital-one",
+      "iri": "https://openknowledgegraphs.com/organization/capital-one/",
+      "jobsProductionEnabled": true,
+      "lastVerified": "2026-08-31",
+      "name": "Capital One",
+      "officialWebsite": "https://www.capitalone.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q1034654",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [],
       "careersPage": null,
       "catalogRelationships": [
         {
@@ -1482,6 +1627,41 @@
         }
       ],
       "qid": "Q22972975",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [],
+      "careersPage": "https://www.crowdstrike.com/en-us/careers/",
+      "catalogRelationships": [],
+      "description": "American cybersecurity technology company",
+      "ecosystemRoles": [
+        {
+          "label": "Knowledge-graph or dataset publisher or operator",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-dataset-operator"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "CrowdStrike's official technical article documents its graph-backed cybersecurity data platform.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.crowdstrike.com/en-us/blog/big-data-graph-and-the-cloud-three-keys-to-stopping-todays-threats/"
+        }
+      ],
+      "identifier": "crowdstrike",
+      "iri": "https://openknowledgegraphs.com/organization/crowdstrike/",
+      "jobsProductionEnabled": true,
+      "lastVerified": "2026-08-31",
+      "name": "CrowdStrike",
+      "officialWebsite": "https://www.crowdstrike.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q24890758",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },
@@ -3157,6 +3337,45 @@
         }
       ],
       "qid": "Q402104",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [
+        "J.P. Morgan",
+        "JPMorgan Chase",
+        "JPMorganChase"
+      ],
+      "careersPage": "https://careers.jpmorgan.com/",
+      "catalogRelationships": [],
+      "description": "American multinational banking and financial services holding company",
+      "ecosystemRoles": [
+        {
+          "label": "KG research or education organization",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-research-education"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "JPMorganChase's official 2026 technology-trends report documents context-driven architectures built around enterprise knowledge graphs.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmorganchase/documents/technology/2026-tech-trends-context-driven-architectures.pdf"
+        }
+      ],
+      "identifier": "jpmorgan-chase",
+      "iri": "https://openknowledgegraphs.com/organization/jpmorgan-chase/",
+      "jobsProductionEnabled": true,
+      "lastVerified": "2026-08-31",
+      "name": "JPMorganChase",
+      "officialWebsite": "https://www.jpmorganchase.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q192314",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },
@@ -5638,6 +5857,43 @@
     },
     {
       "active": true,
+      "aliases": [
+        "SAP SE"
+      ],
+      "careersPage": "https://jobs.sap.com/",
+      "catalogRelationships": [],
+      "description": "German enterprise software company",
+      "ecosystemRoles": [
+        {
+          "label": "Graph database or KG platform provider",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-graph-platform-provider"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "SAP's official product page documents SAP Knowledge Graph as an enterprise knowledge-graph product.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.sap.com/products/artificial-intelligence/knowledge-graph.html"
+        }
+      ],
+      "identifier": "sap",
+      "iri": "https://openknowledgegraphs.com/organization/sap/",
+      "jobsProductionEnabled": true,
+      "lastVerified": "2026-08-31",
+      "name": "SAP",
+      "officialWebsite": "https://www.sap.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q552581",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
       "aliases": [],
       "careersPage": "https://www.aalto.fi/en/careers-at-aalto",
       "catalogRelationships": [
@@ -5806,6 +6062,43 @@
         }
       ],
       "qid": "Q3152521",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [
+        "Siemens AG"
+      ],
+      "careersPage": "https://jobs.siemens.com/",
+      "catalogRelationships": [],
+      "description": "German multinational technology company",
+      "ecosystemRoles": [
+        {
+          "label": "KG consultancy or systems integrator",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-consultancy-integrator"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Siemens' official solution page documents its knowledge-graph engineering and integration offering.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.siemens.com/en-us/solutions/data-analytics-artificial-intelligence/knowledge-graphs/"
+        }
+      ],
+      "identifier": "siemens",
+      "iri": "https://openknowledgegraphs.com/organization/siemens/",
+      "jobsProductionEnabled": false,
+      "lastVerified": "2026-08-31",
+      "name": "Siemens",
+      "officialWebsite": "https://www.siemens.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q81230",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },

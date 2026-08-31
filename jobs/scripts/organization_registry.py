@@ -90,9 +90,9 @@ def build_projection(
     organization_subjects = sorted(
         set(graph.subjects(RDF.type, OKG.Organization)), key=str
     )
-    if len(organization_subjects) != 139:
+    if len(organization_subjects) != 147:
         raise OrganizationRegistryError(
-            f"expected 139 accepted organizations, found {len(organization_subjects)}"
+            f"expected 147 accepted organizations, found {len(organization_subjects)}"
         )
 
     relationships = defaultdict(list)

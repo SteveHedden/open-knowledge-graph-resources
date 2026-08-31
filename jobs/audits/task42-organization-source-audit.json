@@ -8235,11 +8235,11 @@
       "scheduledNightly": true
     },
     "fullIngestion": {
-      "batchCount": 10,
+      "batchCount": 13,
       "batchRequestCap": 128,
       "failurePolicy": "terminate a timed-out source, retain its last-good raw and normalized records, continue other sources, then atomically publish the complete candidate snapshot",
       "maxParallelSources": 4,
-      "productionSourceCount": 34,
+      "productionSourceCount": 40,
       "refreshIntervalSeconds": 86400,
       "sourceTimeoutSeconds": 720,
       "task42ApprovedSourceCount": 17
@@ -8257,8 +8257,8 @@
     "targetWorkflow": ".github/workflows/update-jobs.yml",
     "uncoveredOrganizations": 22,
     "workflowOverheadBudgetSeconds": 720,
-    "workflowTimeoutSeconds": 9000,
-    "worstCaseSeconds": 7920
+    "workflowTimeoutSeconds": 10800,
+    "worstCaseSeconds": 10080
   },
   "organizations": [
     {

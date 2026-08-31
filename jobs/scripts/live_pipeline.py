@@ -299,6 +299,8 @@ def run_pipeline(
         "firstparty-eccenca", "firstparty-teamtailor",
         "firstparty-same-site-detail",
         "firstparty-workday", "firstparty-webcruiter",
+        "firstparty-workday-keyword", "firstparty-oracle-recruiting",
+        "firstparty-amazon-jobs", "firstparty-successfactors-rmk-html",
         "firstparty-successfactors", "firstparty-ukg",
         "firstparty-softgarden", "firstparty-refline",
         "firstparty-emply", "firstparty-peopleadmin",

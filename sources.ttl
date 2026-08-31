@@ -1578,6 +1578,167 @@ kgjs:remotive-query-knowledge-graph a kgjobs:QueryFamily ;
     kgjobs:queryOrder 1 ;
     kgjobs:queryText "knowledge graph" .
 
+kgjs:first-party-jpmorgan-chase a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://docs.oracle.com/en/cloud/saas/human-resources/farws/api-recruiting-ce-job-requisitions.html> ;
+    dcterms:identifier "first-party-jpmorgan-chase" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/jpmorgan-chase/> ;
+    dcterms:title "JPMorganChase Oracle Recruiting knowledge-graph search"@en ;
+    dcat:endpointURL <https://jpmc.fa.oraclecloud.com/hcmRestApi/resources/latest/recruitingCEJobRequisitions?keyword=knowledge%20graph&siteNumber=CX_1001> ;
+    dcat:landingPage <https://careers.jpmorgan.com/> ;
+    kgjobs:adapter "firstparty-oracle-recruiting" ;
+    kgjobs:allowedHost "jpmc.fa.oraclecloud.com" ;
+    kgjobs:attributionText "Careers at JPMorganChase" ;
+    kgjobs:attributionURL <https://careers.jpmorgan.com/> ;
+    kgjobs:careerProvider "oracle-recruiting" ;
+    kgjobs:extractionMode "bounded-oracle-recruiting-keyword-detail" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 102 ;
+    kgjobs:maxResponseBytes 10000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://jpmc.fa.oraclecloud.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "CX_1001" ;
+    kgjobs:termsURL <https://www.jpmorganchase.com/terms> .
+
+kgjs:first-party-accenture a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-accenture" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/accenture/> ;
+    dcterms:title "Accenture Workday ontology search"@en ;
+    dcat:endpointURL <https://accenture.wd103.myworkdayjobs.com/wday/cxs/accenture/AccentureCareers/jobs?searchText=ontology> ;
+    dcat:landingPage <https://www.accenture.com/us-en/careers> ;
+    kgjobs:adapter "firstparty-workday-keyword" ;
+    kgjobs:allowedHost "accenture.wd103.myworkdayjobs.com" ;
+    kgjobs:attributionText "Careers at Accenture" ;
+    kgjobs:attributionURL <https://www.accenture.com/us-en/careers> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-keyword-api" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 500 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 530 ;
+    kgjobs:maxResponseBytes 10000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://accenture.wd103.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "accenture" ;
+    kgjobs:termsURL <https://www.accenture.com/us-en/about/privacy-policy> .
+
+kgjs:first-party-crowdstrike a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-crowdstrike" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/crowdstrike/> ;
+    dcterms:title "CrowdStrike Workday semantics search"@en ;
+    dcat:endpointURL <https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs?searchText=semantics> ;
+    dcat:landingPage <https://www.crowdstrike.com/en-us/careers/> ;
+    kgjobs:adapter "firstparty-workday-keyword" ;
+    kgjobs:allowedHost "crowdstrike.wd5.myworkdayjobs.com" ;
+    kgjobs:attributionText "Careers at CrowdStrike" ;
+    kgjobs:attributionURL <https://www.crowdstrike.com/en-us/careers/> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-keyword-api" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 25 ;
+    kgjobs:maxRequestsPerBatch 26 ;
+    kgjobs:maxRequestsPerRun 27 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://crowdstrike.wd5.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "crowdstrike" ;
+    kgjobs:termsURL <https://www.crowdstrike.com/en-us/terms-conditions/> .
+
+kgjs:first-party-capital-one a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-capital-one" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/capital-one/> ;
+    dcterms:title "Capital One Workday knowledge-graph search"@en ;
+    dcat:endpointURL <https://capitalone.wd12.myworkdayjobs.com/wday/cxs/capitalone/Capital_One/jobs?searchText=knowledge%20graph> ;
+    dcat:landingPage <https://www.capitalonecareers.com/> ;
+    kgjobs:adapter "firstparty-workday-keyword" ;
+    kgjobs:allowedHost "capitalone.wd12.myworkdayjobs.com" ;
+    kgjobs:attributionText "Careers at Capital One" ;
+    kgjobs:attributionURL <https://www.capitalonecareers.com/> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-keyword-api" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 110 ;
+    kgjobs:maxResponseBytes 5000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://capitalone.wd12.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "capitalone" ;
+    kgjobs:termsURL <https://www.capitalone.com/digital/corporate-terms/> .
+
+kgjs:first-party-amazon a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://www.amazon.jobs/en/> ;
+    dcterms:identifier "first-party-amazon" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/amazon/> ;
+    dcterms:title "Amazon Jobs ontology search"@en ;
+    dcat:endpointURL <https://www.amazon.jobs/en/search.json?base_query=ontology&sort=relevant> ;
+    dcat:landingPage <https://www.amazon.jobs/en/> ;
+    kgjobs:adapter "firstparty-amazon-jobs" ;
+    kgjobs:allowedHost "www.amazon.jobs" ;
+    kgjobs:attributionText "Amazon Jobs" ;
+    kgjobs:attributionURL <https://www.amazon.jobs/en/> ;
+    kgjobs:careerProvider "amazon-jobs" ;
+    kgjobs:extractionMode "bounded-amazon-jobs-keyword-json" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerRun 2 ;
+    kgjobs:maxResponseBytes 15000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://www.amazon.jobs/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "amazon-global" ;
+    kgjobs:termsURL <https://www.amazon.jobs/en/privacy_page> .
+
+kgjs:first-party-sap a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://jobs.sap.com/> ;
+    dcterms:identifier "first-party-sap" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/sap/> ;
+    dcterms:title "SAP SuccessFactors RMK ontology search"@en ;
+    dcat:endpointURL <https://jobs.sap.com/search/?createNewAlert=false&locale=en_US&q=ontology> ;
+    dcat:landingPage <https://jobs.sap.com/> ;
+    kgjobs:adapter "firstparty-successfactors-rmk-html" ;
+    kgjobs:allowedHost "jobs.sap.com" ;
+    kgjobs:attributionText "Careers at SAP" ;
+    kgjobs:attributionURL <https://jobs.sap.com/> ;
+    kgjobs:careerProvider "successfactors" ;
+    kgjobs:extractionMode "bounded-successfactors-rmk-keyword-html-detail" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 100 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 105 ;
+    kgjobs:maxResponseBytes 10000000 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "production-approved" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://jobs.sap.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "sap:en_US" ;
+    kgjobs:termsURL <https://www.sap.com/about/legal/privacy.html> .
+
 kgjs:synthetic-fixtures-distribution a dcat:Distribution ;
     dcterms:conformsTo kgjs:fixture-schema ;
     dcterms:title "Fixture JSON file"@en ;

@@ -1,0 +1,21 @@
+{
+  "approvedFirstPartyPublicationPolicy": "qualified-only",
+  "approvedSourceCount": 6,
+  "approvedSourceKeys": [
+    "first-party-accenture",
+    "first-party-amazon",
+    "first-party-capital-one",
+    "first-party-crowdstrike",
+    "first-party-jpmorgan-chase",
+    "first-party-sap"
+  ],
+  "deferredOrganizations": [
+    "Bloomberg L.P.",
+    "Siemens"
+  ],
+  "deploymentAuthorized": true,
+  "managerApprovedAt": "2026-08-31",
+  "publicJobsSnapshotModifiedAtApproval": false,
+  "schemaVersion": 1,
+  "status": "approved-for-production"
+}

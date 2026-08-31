@@ -32,6 +32,10 @@ APPROVED = {
     "first-party-metaphacts", "first-party-topquadrant", "first-party-eccenca",
     "first-party-w3c",
 }
+TASK43_APPROVED = {
+    "first-party-accenture", "first-party-amazon", "first-party-capital-one",
+    "first-party-crowdstrike", "first-party-jpmorgan-chase", "first-party-sap",
+}
 
 
 def fixture_payload(source):
@@ -57,9 +61,9 @@ def directory_digest(path: Path) -> str:
     return digest.hexdigest()
 
 
-def test_production_loader_admits_task39_and_task42_approved_sources():
+def test_production_loader_admits_task39_task42_and_task43_approved_sources():
     sources = fps.load_production_first_party_sources()
-    assert set(sources) == APPROVED | set(TASK42_SOURCE_KEYS)
+    assert set(sources) == APPROVED | set(TASK42_SOURCE_KEYS) | TASK43_APPROVED
     assert all(source.production_approved for source in sources.values())
     assert all(source.review_status == "evidence-reviewed" for source in sources.values())
     assert all(source.republication_status == "production-approved" for source in sources.values())

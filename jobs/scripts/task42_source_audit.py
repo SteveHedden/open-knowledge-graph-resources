@@ -35,6 +35,12 @@ TASK39_PRODUCTION_12 = {
     "world-wide-web-consortium",
 }
 
+# Added after Task 42 closed; never let later registry growth rewrite its fixed cohort.
+TASK43_FIXED_8 = {
+    "accenture", "amazon", "bloomberg", "capital-one", "crowdstrike",
+    "jpmorgan-chase", "sap", "siemens",
+}
+
 TASK42_SOURCE_KEYS = frozenset({
     "first-party-danish-bibliographic-centre",
     "first-party-embl-ebi",
@@ -101,6 +107,7 @@ def fixed_cohort() -> list[dict]:
         if row.get("reviewStatus") == "evidence-reviewed"
         and row.get("identifier") not in TASK39_PRODUCTION_12
         and row.get("identifier") not in TASK41_FIXED_20
+        and row.get("identifier") not in TASK43_FIXED_8
     ]
     if len(rows) != 107:
         raise AuditError(f"Task 42 cohort drifted: expected 107, found {len(rows)}")

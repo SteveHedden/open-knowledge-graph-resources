@@ -38,7 +38,7 @@ from career_discovery_monitor import (  # noqa: E402
 from first_party_pilot import run_pilot  # noqa: E402
 from task42_discovery import SUPPLEMENTAL_PROBES, validate as validate_discovery  # noqa: E402
 from task42_source_audit import (  # noqa: E402
-    AuditError, TASK41_FIXED_20, build_audit, fixed_cohort,
+    AuditError, TASK41_FIXED_20, TASK43_FIXED_8, build_audit, fixed_cohort,
     task42_review_sources,
 )
 from task42_review_archive import build_archive  # noqa: E402
@@ -96,6 +96,7 @@ def test_fixed_cohort_is_exactly_107_and_preserves_the_85_22_baseline():
     assert sum(bool(row.get("careersPage")) for row in cohort) == 85
     assert sum(not row.get("careersPage") for row in cohort) == 22
     assert not identifiers & TASK41_FIXED_20
+    assert not identifiers & TASK43_FIXED_8
     approved = {
         source.organization_iri for source in task42_review_sources().values()
     }
@@ -803,9 +804,9 @@ def test_nightly_operational_contract_chains_into_catalog_generation_with_fallba
         REPO_ROOT / ".github" / "workflows" / "update-data.yml"
     ).read_text(encoding="utf-8")
 
-    assert len(sources) == plan["fullIngestion"]["productionSourceCount"] == 34
+    assert len(sources) == plan["fullIngestion"]["productionSourceCount"] == 40
     assert TASK42_SOURCE_KEYS <= set(sources)
-    assert len(batches) == plan["fullIngestion"]["batchCount"] == 10
+    assert len(batches) == plan["fullIngestion"]["batchCount"] == 13
     assert {key for batch in batches for key in batch} == set(sources)
     assert max(map(len, batches)) == plan["fullIngestion"]["maxParallelSources"] == 4
     assert plan["fullIngestion"]["refreshIntervalSeconds"] == 86400
@@ -821,13 +822,13 @@ def test_nightly_operational_contract_chains_into_catalog_generation_with_fallba
     assert "UPSTREAM_CONCLUSION:" in catalog_workflow
     assert "UPSTREAM_EVENT:" in catalog_workflow
     assert "catalog_publication_gate.py" in catalog_workflow
-    assert "timeout-minutes: 150" in jobs_workflow
+    assert "timeout-minutes: 180" in jobs_workflow
     assert plan["workflowOverheadBudgetSeconds"] == 720
     assert plan["worstCaseSeconds"] == task42_nightly.worst_case_seconds(
         source_batches=len(batches)
-    ) == 7920
-    assert plan["workflowTimeoutSeconds"] - plan["worstCaseSeconds"] == 1080
-    assert plan["worstCaseSeconds"] < plan["workflowTimeoutSeconds"] == 9000
+    ) == 10080
+    assert plan["workflowTimeoutSeconds"] - plan["worstCaseSeconds"] == 720
+    assert plan["worstCaseSeconds"] < plan["workflowTimeoutSeconds"] == 10800
     assert plan["activationStatus"] == "production-wiring-complete-pending-final-review"
     assert plan["scheduleConfigured"] is True
     assert plan["productionFlagsChanged"] is True

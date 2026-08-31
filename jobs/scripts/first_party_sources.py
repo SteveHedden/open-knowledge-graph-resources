@@ -43,6 +43,10 @@ TEAMTAILOR_ADAPTER = "firstparty-teamtailor"
 SAME_SITE_DETAIL_ADAPTER = "firstparty-same-site-detail"
 TRIPLY_CAREERS_URL = "https://triply.cc/en-US/join-us"
 WORKDAY_ADAPTER = "firstparty-workday"
+WORKDAY_QUERY_ADAPTER = "firstparty-workday-keyword"
+ORACLE_RECRUITING_ADAPTER = "firstparty-oracle-recruiting"
+AMAZON_JOBS_ADAPTER = "firstparty-amazon-jobs"
+SUCCESSFACTORS_RMK_ADAPTER = "firstparty-successfactors-rmk-html"
 WEBCRUITER_ADAPTER = "firstparty-webcruiter"
 SUCCESSFACTORS_ADAPTER = "firstparty-successfactors"
 UKG_ADAPTER = "firstparty-ukg"
@@ -170,9 +174,11 @@ def load_first_party_sources(
             "lever": {"firstparty-lever"},
             "ashby": {"firstparty-ashby"},
             "teamtailor": {TEAMTAILOR_ADAPTER},
-            "workday": {WORKDAY_ADAPTER},
+            "workday": {WORKDAY_ADAPTER, WORKDAY_QUERY_ADAPTER},
+            "oracle-recruiting": {ORACLE_RECRUITING_ADAPTER},
+            "amazon-jobs": {AMAZON_JOBS_ADAPTER},
             "webcruiter": {WEBCRUITER_ADAPTER},
-            "successfactors": {SUCCESSFACTORS_ADAPTER},
+            "successfactors": {SUCCESSFACTORS_ADAPTER, SUCCESSFACTORS_RMK_ADAPTER},
             "ukg": {UKG_ADAPTER},
             "softgarden": {SOFTGARDEN_ADAPTER},
             "refline": {REFLINE_ADAPTER},
@@ -225,29 +231,84 @@ def load_first_party_sources(
                 raise FirstPartySourceError(
                     "Teamtailor adapter requires its exact reviewed /jobs source contract"
                 )
-        if adapter == WORKDAY_ADAPTER:
+        if adapter in {WORKDAY_ADAPTER, WORKDAY_QUERY_ADAPTER}:
             endpoint_parts = urlparse(endpoint)
             endpoint_match = re.fullmatch(
                 r"/wday/cxs/([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)/jobs",
                 endpoint_parts.path,
             )
             query = parse_qsl(endpoint_parts.query, keep_blank_values=True)
+            tenant = str(_one(graph, subject, KGJOBS.tenantIdentifier, "tenant"))
+            mode = str(_one(graph, subject, KGJOBS.extractionMode, "extraction mode"))
+            if adapter == WORKDAY_ADAPTER:
+                valid = (
+                    endpoint_match
+                    and endpoint_match.group(1) == tenant
+                    and len(query) == len(dict(query))
+                    and all(
+                        re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]*", name)
+                        and re.fullmatch(r"[A-Fa-f0-9]{32}", value)
+                        for name, value in query
+                    )
+                    and mode == "bounded-workday-cxs-public-api"
+                )
+            else:
+                reviewed = {
+                    "first-party-accenture": (
+                        "accenture.wd103.myworkdayjobs.com", "accenture",
+                        "AccentureCareers", "ontology",
+                    ),
+                    "first-party-crowdstrike": (
+                        "crowdstrike.wd5.myworkdayjobs.com", "crowdstrike",
+                        "crowdstrikecareers", "semantics",
+                    ),
+                    "first-party-capital-one": (
+                        "capitalone.wd12.myworkdayjobs.com", "capitalone",
+                        "Capital_One", "knowledge graph",
+                    ),
+                }.get(key)
+                valid = bool(
+                    reviewed
+                    and endpoint_match
+                    and (host, tenant, endpoint_match.group(2), dict(query).get("searchText"))
+                    == reviewed
+                    and query == [("searchText", reviewed[3])]
+                    and mode == "bounded-workday-cxs-keyword-api"
+                )
+            if not valid:
+                raise FirstPartySourceError(
+                    "Workday adapter requires an exact reviewed tenant/site/filter contract"
+                )
+        if adapter == ORACLE_RECRUITING_ADAPTER:
+            endpoint_parts = urlparse(endpoint)
+            query = dict(parse_qsl(endpoint_parts.query, keep_blank_values=True))
             if (
-                not endpoint_match
-                or endpoint_match.group(1) != str(
-                    _one(graph, subject, KGJOBS.tenantIdentifier, "tenant")
-                )
-                or len(query) != len(dict(query))
-                or any(
-                    not re.fullmatch(r"[A-Za-z][A-Za-z0-9_-]*", key)
-                    or not re.fullmatch(r"[A-Fa-f0-9]{32}", value)
-                    for key, value in query
-                )
+                key != "first-party-jpmorgan-chase"
+                or host != "jpmc.fa.oraclecloud.com"
+                or endpoint_parts.path
+                != "/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+                or query != {"keyword": "knowledge graph", "siteNumber": "CX_1001"}
+                or str(_one(graph, subject, KGJOBS.tenantIdentifier, "tenant")) != "CX_1001"
                 or str(_one(graph, subject, KGJOBS.extractionMode, "extraction mode"))
-                != "bounded-workday-cxs-public-api"
+                != "bounded-oracle-recruiting-keyword-detail"
             ):
                 raise FirstPartySourceError(
-                    "Workday adapter requires an exact reviewed CXS jobs endpoint and facet filter"
+                    "Oracle Recruiting adapter requires JPMorganChase's exact reviewed site/query"
+                )
+        if adapter == AMAZON_JOBS_ADAPTER:
+            endpoint_parts = urlparse(endpoint)
+            if (
+                key != "first-party-amazon"
+                or host != "www.amazon.jobs"
+                or endpoint_parts.path != "/en/search.json"
+                or dict(parse_qsl(endpoint_parts.query, keep_blank_values=True))
+                != {"base_query": "ontology", "sort": "relevant"}
+                or str(_one(graph, subject, KGJOBS.tenantIdentifier, "tenant")) != "amazon-global"
+                or str(_one(graph, subject, KGJOBS.extractionMode, "extraction mode"))
+                != "bounded-amazon-jobs-keyword-json"
+            ):
+                raise FirstPartySourceError(
+                    "Amazon Jobs adapter requires its exact reviewed global ontology query"
                 )
         if adapter == WEBCRUITER_ADAPTER:
             endpoint_parts = urlparse(endpoint)
@@ -278,6 +339,21 @@ def load_first_party_sources(
             ):
                 raise FirstPartySourceError(
                     "SuccessFactors adapter requires the exact reviewed Open University contract"
+                )
+        if adapter == SUCCESSFACTORS_RMK_ADAPTER:
+            endpoint_parts = urlparse(endpoint)
+            if (
+                key != "first-party-sap"
+                or host != "jobs.sap.com"
+                or endpoint_parts.path != "/search/"
+                or dict(parse_qsl(endpoint_parts.query, keep_blank_values=True))
+                != {"createNewAlert": "false", "locale": "en_US", "q": "ontology"}
+                or str(_one(graph, subject, KGJOBS.tenantIdentifier, "tenant")) != "sap:en_US"
+                or str(_one(graph, subject, KGJOBS.extractionMode, "extraction mode"))
+                != "bounded-successfactors-rmk-keyword-html-detail"
+            ):
+                raise FirstPartySourceError(
+                    "SuccessFactors RMK adapter requires SAP's exact reviewed locale/query contract"
                 )
         if adapter == UKG_ADAPTER:
             endpoint_parts = urlparse(endpoint)
@@ -675,6 +751,8 @@ def _base_record(
         "ashby": {"jobs.ashbyhq.com"},
         "teamtailor": {source.allowed_host},
         "workday": {source.allowed_host},
+        "oracle-recruiting": {source.allowed_host},
+        "amazon-jobs": {source.allowed_host},
         "webcruiter": {f"{source.tenant}.webcruiter.no"},
         "successfactors": {source.allowed_host},
         "ukg": {source.allowed_host},
@@ -710,7 +788,7 @@ def _base_record(
             raise FirstPartySourceError(
                 "PLOS posting URL violates its exact Greenhouse tenant/path contract"
             )
-    if source.adapter == WORKDAY_ADAPTER:
+    if source.adapter in {WORKDAY_ADAPTER, WORKDAY_QUERY_ADAPTER}:
         endpoint_parts = urlparse(source.endpoint)
         site = endpoint_parts.path.split("/")[4]
         if (
@@ -720,6 +798,31 @@ def _base_record(
             or parsed.fragment
         ):
             raise FirstPartySourceError("Workday posting URL violates its exact site/path contract")
+    if source.adapter == ORACLE_RECRUITING_ADAPTER:
+        if (
+            parsed.path
+            != f"/hcmUI/CandidateExperience/en/sites/{source.tenant}/job/{source_id}/"
+            or parsed.params or parsed.query or parsed.fragment
+        ):
+            raise FirstPartySourceError(
+                "Oracle Recruiting posting URL violates its exact site/requisition contract"
+            )
+    if source.adapter == AMAZON_JOBS_ADAPTER:
+        if (
+            not re.fullmatch(rf"/en/jobs/{re.escape(source_id)}/[a-z0-9-]+", parsed.path)
+            or parsed.params or parsed.query or parsed.fragment
+        ):
+            raise FirstPartySourceError(
+                "Amazon posting URL violates its exact locale/job contract"
+            )
+    if source.adapter == SUCCESSFACTORS_RMK_ADAPTER:
+        if (
+            not re.fullmatch(rf"/job/[^?#]+/{re.escape(source_id)}/", parsed.path)
+            or parsed.params or parsed.query or parsed.fragment
+        ):
+            raise FirstPartySourceError(
+                "SuccessFactors RMK posting URL violates its exact job-detail contract"
+            )
     if source.adapter == WEBCRUITER_ADAPTER:
         query = dict(parse_qsl(parsed.query, keep_blank_values=True))
         if (
@@ -1700,7 +1803,7 @@ def same_site_detail_records(payload, source: FirstPartySource) -> list[dict]:
 
 
 def workday_records(payload, source: FirstPartySource) -> list[dict]:
-    if source.adapter != WORKDAY_ADAPTER:
+    if source.adapter not in {WORKDAY_ADAPTER, WORKDAY_QUERY_ADAPTER}:
         raise FirstPartySourceError("Workday records require the Workday adapter")
     if not isinstance(payload, dict):
         raise FirstPartySourceError("Workday payload must be an object")
@@ -1737,7 +1840,9 @@ def workday_records(payload, source: FirstPartySource) -> list[dict]:
             raise FirstPartySourceError("Workday listing total is malformed")
         if expected_total is None:
             expected_total = total
-        elif total != expected_total:
+        elif total != expected_total and not (
+            source.adapter == WORKDAY_QUERY_ADAPTER and total == 0
+        ):
             raise FirstPartySourceError("Workday listing total changed during pagination")
         for item in page["jobPostings"]:
             if not isinstance(item, dict):
@@ -1795,6 +1900,270 @@ def workday_records(payload, source: FirstPartySource) -> list[dict]:
             remote="remote" in location.casefold(),
             workplace_mode=location,
             employment_type=str(info.get("timeType") or "") or None,
+            requisition_id=source_id,
+        ))
+    return records
+
+
+def oracle_recruiting_records(payload, source: FirstPartySource) -> list[dict]:
+    if source.adapter != ORACLE_RECRUITING_ADAPTER or not isinstance(payload, dict):
+        raise FirstPartySourceError("Oracle Recruiting payload requires its reviewed adapter")
+    pages = payload.get("listingPages")
+    details = payload.get("details")
+    if not isinstance(pages, list) or not pages or not isinstance(details, list):
+        raise FirstPartySourceError("Oracle Recruiting payload requires listings and details")
+    if len(pages) + len(details) > source.max_requests_per_run:
+        raise FirstPartySourceError("Oracle Recruiting payload exceeds its request cap")
+    total = None
+    discovered = {}
+    for page in pages:
+        if not isinstance(page, dict) or not isinstance(page.get("requisitionList"), list):
+            raise FirstPartySourceError("Oracle Recruiting listing page is malformed")
+        if page.get("SiteNumber") != source.tenant or page.get("Keyword") != "knowledge graph":
+            raise FirstPartySourceError("Oracle Recruiting listing escaped its reviewed site/query")
+        if not isinstance(page.get("TotalJobsCount"), int) or page["TotalJobsCount"] < 0:
+            raise FirstPartySourceError("Oracle Recruiting total is malformed")
+        if total is None:
+            total = page["TotalJobsCount"]
+        elif page["TotalJobsCount"] != total:
+            raise FirstPartySourceError("Oracle Recruiting total changed during pagination")
+        for item in page["requisitionList"]:
+            source_id = str(item.get("Id") or "") if isinstance(item, dict) else ""
+            if not re.fullmatch(r"[1-9]\d*", source_id) or source_id in discovered:
+                raise FirstPartySourceError("Oracle Recruiting listing ID is invalid or duplicated")
+            discovered[source_id] = item
+    if total != len(discovered):
+        raise FirstPartySourceError(
+            f"Oracle Recruiting listing is partial ({len(discovered)} of {total})"
+        )
+    _enforce_record_cap(list(discovered), source, "Oracle Recruiting listing")
+    by_id = {}
+    for detail in details:
+        source_id = str(detail.get("Id") or "") if isinstance(detail, dict) else ""
+        if not re.fullmatch(r"[1-9]\d*", source_id) or source_id in by_id:
+            raise FirstPartySourceError("Oracle Recruiting detail is invalid or duplicated")
+        by_id[source_id] = detail
+    if set(by_id) != set(discovered):
+        raise FirstPartySourceError("Oracle Recruiting details do not match discovery")
+    records = []
+    for source_id in sorted(discovered, key=int):
+        detail = by_id[source_id]
+        description = str(detail.get("ExternalDescriptionStr") or "")
+        if len(_strip_html(description)) < 80:
+            raise FirstPartySourceError("Oracle Recruiting detail lacks a full external description")
+        url = (
+            f"https://{source.allowed_host}/hcmUI/CandidateExperience/en/sites/"
+            f"{source.tenant}/job/{source_id}/"
+        )
+        location = str(detail.get("PrimaryLocation") or "") or None
+        records.append(_base_record(
+            source, source_id=source_id, url=url,
+            title=str(detail.get("Title") or discovered[source_id].get("Title") or ""),
+            description=description, location=location,
+            date_posted=_iso_date(detail.get("ExternalPostedStartDate")),
+            valid_through=_iso_date(detail.get("ExternalPostedEndDate")),
+            remote="remote" in str(location or "").casefold(),
+            workplace_mode=str(detail.get("WorkplaceType") or "") or location,
+            employment_type=str(detail.get("JobSchedule") or "") or None,
+            requisition_id=source_id,
+        ))
+    return records
+
+
+def _english_month_date(value) -> str | None:
+    if not value:
+        return None
+    normalized = re.sub(r"\s+", " ", str(value)).strip()
+    for pattern in ("%b %d, %Y", "%a %b %d %H:%M:%S UTC %Y"):
+        try:
+            return datetime.strptime(normalized, pattern).date().isoformat()
+        except ValueError:
+            pass
+    return _iso_date(value)
+
+
+def amazon_jobs_records(payload, source: FirstPartySource) -> list[dict]:
+    if source.adapter != AMAZON_JOBS_ADAPTER or not isinstance(payload, dict):
+        raise FirstPartySourceError("Amazon Jobs payload requires its reviewed adapter")
+    pages = payload.get("listingPages")
+    if not isinstance(pages, list) or not pages:
+        raise FirstPartySourceError("Amazon Jobs payload requires listing pages")
+    if len(pages) > source.max_requests_per_run:
+        raise FirstPartySourceError("Amazon Jobs payload exceeds its request cap")
+    total = None
+    jobs = {}
+    for page in pages:
+        if not isinstance(page, dict) or not isinstance(page.get("jobs"), list):
+            raise FirstPartySourceError("Amazon Jobs listing page is malformed")
+        hits = page.get("hits")
+        if not isinstance(hits, int) or hits < 0:
+            raise FirstPartySourceError("Amazon Jobs total is malformed")
+        if total is None:
+            total = hits
+        elif hits != total:
+            raise FirstPartySourceError("Amazon Jobs total changed during pagination")
+        for item in page["jobs"]:
+            source_id = str(item.get("id_icims") or "") if isinstance(item, dict) else ""
+            if not re.fullmatch(r"[1-9]\d*", source_id) or source_id in jobs:
+                raise FirstPartySourceError("Amazon Jobs record ID is invalid or duplicated")
+            jobs[source_id] = item
+    if total != len(jobs):
+        raise FirstPartySourceError(f"Amazon Jobs listing is partial ({len(jobs)} of {total})")
+    _enforce_record_cap(list(jobs), source, "Amazon Jobs listing")
+    records = []
+    for source_id in sorted(jobs, key=int):
+        item = jobs[source_id]
+        path = str(item.get("job_path") or "")
+        if not re.fullmatch(rf"/en/jobs/{re.escape(source_id)}/[a-z0-9-]+", path):
+            raise FirstPartySourceError("Amazon Jobs record has an invalid canonical path")
+        description = "\n\n".join(
+            str(item.get(field) or "")
+            for field in ("description", "basic_qualifications", "preferred_qualifications")
+            if item.get(field)
+        )
+        if len(_strip_html(description)) < 80:
+            raise FirstPartySourceError("Amazon Jobs record lacks a full description")
+        location = str(item.get("location") or "") or None
+        records.append(_base_record(
+            source, source_id=source_id,
+            url=f"https://{source.allowed_host}{path}",
+            title=str(item.get("title") or ""), description=description,
+            location=location, date_posted=_english_month_date(item.get("posted_date")),
+            remote="remote" in str(location or "").casefold(),
+            employment_type=str(item.get("job_schedule_type") or "") or None,
+            requisition_id=source_id,
+        ))
+    return records
+
+
+class _SuccessFactorsRmkDetailParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.title_parts = []
+        self.description_parts = []
+        self.title_depth = 0
+        self.description_depth = 0
+        self.location = None
+        self.date_posted = None
+
+    def handle_starttag(self, tag: str, attrs) -> None:
+        values = {key.casefold(): value for key, value in attrs}
+        itemprop = (values.get("itemprop") or "").casefold()
+        if tag.casefold() == "meta" and itemprop == "streetaddress":
+            self.location = values.get("content")
+        elif tag.casefold() == "meta" and itemprop == "dateposted":
+            self.date_posted = values.get("content")
+        if self.title_depth:
+            self.title_depth += 1
+        elif itemprop == "title":
+            self.title_depth = 1
+        if self.description_depth:
+            self.description_depth += 1
+        elif itemprop == "description":
+            self.description_depth = 1
+
+    def handle_startendtag(self, tag: str, attrs) -> None:
+        self.handle_starttag(tag, attrs)
+        if self.title_depth:
+            self.title_depth -= 1
+        if self.description_depth:
+            self.description_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self.title_depth:
+            self.title_parts.append(data)
+        if self.description_depth:
+            self.description_parts.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if self.title_depth:
+            self.title_depth -= 1
+        if self.description_depth:
+            self.description_depth -= 1
+
+    @property
+    def title(self) -> str:
+        return _strip_html(" ".join(self.title_parts))
+
+    @property
+    def description(self) -> str:
+        return _strip_html(" ".join(self.description_parts))
+
+
+def _successfactors_rmk_links(listing_html: str, source: FirstPartySource) -> tuple[set[str], int]:
+    links = {
+        urljoin(source.endpoint, html.unescape(value))
+        for value in re.findall(
+            r'<a\b[^>]*\bclass="[^"]*\bjobTitle-link\b[^"]*"[^>]*\bhref="([^"]+)"',
+            listing_html, flags=re.IGNORECASE,
+        )
+    } | {
+        urljoin(source.endpoint, html.unescape(value))
+        for value in re.findall(
+            r'<a\b[^>]*\bhref="([^"]+)"[^>]*\bclass="[^"]*\bjobTitle-link\b[^"]*"',
+            listing_html, flags=re.IGNORECASE,
+        )
+    }
+    text = _strip_html(listing_html)
+    match = re.search(r"Results\s+\d+\s*[–-]\s*\d+\s+of\s+(\d+)", text)
+    if not match:
+        empty = re.search(r"Results\s+0\s+of\s+0", text)
+        if empty:
+            return set(), 0
+        raise FirstPartySourceError("SuccessFactors RMK listing lacks a stable result total")
+    for url in links:
+        parsed = urlparse(url)
+        if (
+            parsed.scheme != "https" or parsed.hostname != source.allowed_host
+            or not re.fullmatch(r"/job/[^?#]+/[1-9]\d*/", parsed.path)
+            or parsed.params or parsed.query or parsed.fragment
+        ):
+            raise FirstPartySourceError("SuccessFactors RMK listing escaped its exact detail path")
+    return links, int(match.group(1))
+
+
+def successfactors_rmk_records(payload, source: FirstPartySource) -> list[dict]:
+    if source.adapter != SUCCESSFACTORS_RMK_ADAPTER or not isinstance(payload, dict):
+        raise FirstPartySourceError("SuccessFactors RMK payload requires its reviewed adapter")
+    pages, details = payload.get("listingPages"), payload.get("details")
+    if not isinstance(pages, list) or not pages or not isinstance(details, list):
+        raise FirstPartySourceError("SuccessFactors RMK payload requires listings and details")
+    if len(pages) + len(details) > source.max_requests_per_run:
+        raise FirstPartySourceError("SuccessFactors RMK payload exceeds its request cap")
+    discovered = set()
+    total = None
+    for page in pages:
+        if not isinstance(page, str):
+            raise FirstPartySourceError("SuccessFactors RMK listing must be HTML")
+        links, page_total = _successfactors_rmk_links(page, source)
+        if total is None:
+            total = page_total
+        elif page_total != total:
+            raise FirstPartySourceError("SuccessFactors RMK total changed during pagination")
+        discovered.update(links)
+    if total != len(discovered):
+        raise FirstPartySourceError(
+            f"SuccessFactors RMK listing is partial ({len(discovered)} of {total})"
+        )
+    _enforce_record_cap(list(discovered), source, "SuccessFactors RMK listing")
+    by_url = {
+        str(row.get("url") or ""): row.get("html")
+        for row in details if isinstance(row, dict)
+    }
+    if set(by_url) != discovered or any(not isinstance(value, str) for value in by_url.values()):
+        raise FirstPartySourceError("SuccessFactors RMK details do not match discovery")
+    records = []
+    for url in sorted(discovered):
+        source_id = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1]
+        parser = _SuccessFactorsRmkDetailParser()
+        parser.feed(by_url[url])
+        if not parser.title or len(parser.description) < 80:
+            raise FirstPartySourceError("SuccessFactors RMK detail lacks title or job description")
+        records.append(_base_record(
+            source, source_id=source_id, url=url, title=parser.title,
+            description=parser.description, location=parser.location,
+            date_posted=_english_month_date(parser.date_posted),
+            remote="remote" in f"{parser.location or ''} {parser.description}".casefold(),
             requisition_id=source_id,
         ))
     return records
@@ -3081,12 +3450,18 @@ def records_from_payload(payload, source: FirstPartySource) -> list[dict]:
         return teamtailor_records(payload, source)
     if source.adapter == SAME_SITE_DETAIL_ADAPTER:
         return same_site_detail_records(payload, source)
-    if source.adapter == WORKDAY_ADAPTER:
+    if source.adapter in {WORKDAY_ADAPTER, WORKDAY_QUERY_ADAPTER}:
         return workday_records(payload, source)
+    if source.adapter == ORACLE_RECRUITING_ADAPTER:
+        return oracle_recruiting_records(payload, source)
+    if source.adapter == AMAZON_JOBS_ADAPTER:
+        return amazon_jobs_records(payload, source)
     if source.adapter == WEBCRUITER_ADAPTER:
         return webcruiter_records(payload, source)
     if source.adapter == SUCCESSFACTORS_ADAPTER:
         return successfactors_records(payload, source)
+    if source.adapter == SUCCESSFACTORS_RMK_ADAPTER:
+        return successfactors_rmk_records(payload, source)
     if source.adapter == UKG_ADAPTER:
         return ukg_records(payload, source)
     if source.adapter == SOFTGARDEN_ADAPTER:
@@ -3242,7 +3617,9 @@ def _bounded_request_batches(
 def _fetch_workday(source: FirstPartySource) -> dict:
     parsed = urlparse(source.endpoint)
     target = urlunparse(parsed._replace(query=""))
-    facets = {key: [value] for key, value in parse_qsl(parsed.query, keep_blank_values=True)}
+    query = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    search_text = query.pop("searchText", "")
+    facets = {key: [value] for key, value in query.items()}
     page_size = min(20, source.max_records_per_run)
     listings = []
     discovered: dict[str, dict] = {}
@@ -3258,7 +3635,7 @@ def _fetch_workday(source: FirstPartySource) -> dict:
                     "appliedFacets": facets,
                     "limit": page_size,
                     "offset": offset,
-                    "searchText": "",
+                    "searchText": search_text,
                 },
                 timeout=source.timeout_seconds,
                 allow_redirects=False,
@@ -3288,7 +3665,9 @@ def _fetch_workday(source: FirstPartySource) -> dict:
                     f"{source.key} Workday payload exceeds its record cap "
                     f"({total} > {source.max_records_per_run})"
                 )
-        elif page["total"] != total:
+        elif page["total"] != total and not (
+            source.adapter == WORKDAY_QUERY_ADAPTER and page["total"] == 0
+        ):
             raise FirstPartySourceError("Workday listing total changed during pagination")
         listings.append(page)
         for item in page["jobPostings"]:
@@ -3322,6 +3701,171 @@ def _fetch_workday(source: FirstPartySource) -> dict:
         "listingPages": listings,
         "details": details,
         "requestBatches": request_batches,
+    }
+
+
+def _request_json(source: FirstPartySource, endpoint: str, *, params: dict) -> dict:
+    _https_exact_host(endpoint, source.allowed_host, f"{source.key} request")
+    try:
+        response = requests.get(
+            endpoint, params=params, timeout=source.timeout_seconds,
+            allow_redirects=False,
+            headers={
+                "Accept": "application/json",
+                "User-Agent": "OKG-first-party-jobs/1.0 (+https://openknowledgegraphs.com/)",
+            },
+            stream=True,
+        )
+    except requests.RequestException as exc:
+        raise FirstPartySourceError(
+            f"{source.key} request failed: {type(exc).__name__}"
+        ) from exc
+    body = _response_body(source, response)
+    try:
+        payload = json.loads(body.decode("utf-8-sig"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise FirstPartySourceError(f"{source.key} returned malformed JSON") from exc
+    if not isinstance(payload, dict):
+        raise FirstPartySourceError(f"{source.key} returned a non-object JSON payload")
+    return payload
+
+
+def _fetch_oracle_recruiting(source: FirstPartySource) -> dict:
+    parsed = urlparse(source.endpoint)
+    target = urlunparse(parsed._replace(query=""))
+    query = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    page_size = min(100, source.max_records_per_run)
+    pages = []
+    discovered = {}
+    offset = 0
+    total = None
+    while total is None or offset < total:
+        payload = _request_json(source, target, params={
+            "onlyData": "true",
+            "expand": "requisitionList",
+            "finder": (
+                f"findReqs;siteNumber={source.tenant},limit={page_size},offset={offset},"
+                f"keyword={query['keyword']},useExactKeywordFlag=false"
+            ),
+        })
+        if not isinstance(payload.get("items"), list) or len(payload["items"]) != 1:
+            raise FirstPartySourceError("Oracle Recruiting listing response is malformed")
+        page = payload["items"][0]
+        if not isinstance(page, dict) or not isinstance(page.get("requisitionList"), list):
+            raise FirstPartySourceError("Oracle Recruiting listing response is malformed")
+        if total is None:
+            total = page.get("TotalJobsCount")
+            if not isinstance(total, int) or total < 0 or total > source.max_records_per_run:
+                raise FirstPartySourceError("Oracle Recruiting result exceeds its record cap")
+        elif page.get("TotalJobsCount") != total:
+            raise FirstPartySourceError("Oracle Recruiting total changed during pagination")
+        pages.append(page)
+        for item in page["requisitionList"]:
+            source_id = str(item.get("Id") or "") if isinstance(item, dict) else ""
+            if not source_id or source_id in discovered:
+                raise FirstPartySourceError("Oracle Recruiting listing contains a duplicate ID")
+            discovered[source_id] = item
+        offset += len(page["requisitionList"])
+        if offset < total and not page["requisitionList"]:
+            raise FirstPartySourceError("Oracle Recruiting pagination made no progress")
+    if len(pages) + len(discovered) > source.max_requests_per_run:
+        raise FirstPartySourceError("Oracle Recruiting invocation exceeds its request cap")
+    detail_target = target.replace(
+        "recruitingCEJobRequisitions", "recruitingCEJobRequisitionDetails"
+    )
+    details = []
+    for source_id in sorted(discovered, key=int):
+        payload = _request_json(source, detail_target, params={
+            "onlyData": "true", "expand": "all",
+            "finder": f'ById;Id="{source_id}",siteNumber={source.tenant}',
+        })
+        if not isinstance(payload.get("items"), list) or len(payload["items"]) != 1:
+            raise FirstPartySourceError("Oracle Recruiting detail response is incomplete")
+        details.append(payload["items"][0])
+    return {
+        "listingPages": pages,
+        "details": details,
+        "requestBatches": _bounded_request_batches(
+            len(pages), len(details), source.max_requests_per_batch
+        ),
+    }
+
+
+def _fetch_amazon_jobs(source: FirstPartySource) -> dict:
+    parsed = urlparse(source.endpoint)
+    target = urlunparse(parsed._replace(query=""))
+    base = dict(parse_qsl(parsed.query, keep_blank_values=True))
+    pages = []
+    offset = 0
+    total = None
+    page_size = min(100, source.max_records_per_run)
+    while total is None or offset < total:
+        if len(pages) + 1 > source.max_requests_per_run:
+            raise FirstPartySourceError("Amazon Jobs pagination exceeds its request cap")
+        page = _request_json(source, target, params={
+            **base, "offset": str(offset), "result_limit": str(page_size),
+        })
+        if not isinstance(page.get("jobs"), list) or not isinstance(page.get("hits"), int):
+            raise FirstPartySourceError("Amazon Jobs listing response is malformed")
+        if total is None:
+            total = page["hits"]
+            if total < 0 or total > source.max_records_per_run:
+                raise FirstPartySourceError("Amazon Jobs result exceeds its record cap")
+        elif page["hits"] != total:
+            raise FirstPartySourceError("Amazon Jobs total changed during pagination")
+        pages.append(page)
+        offset += len(page["jobs"])
+        if offset < total and not page["jobs"]:
+            raise FirstPartySourceError("Amazon Jobs pagination made no progress")
+    return {"listingPages": pages}
+
+
+def _fetch_successfactors_rmk(source: FirstPartySource) -> dict:
+    parsed = urlparse(source.endpoint)
+    base_query = list(parse_qsl(parsed.query, keep_blank_values=True))
+    pages = []
+    discovered = set()
+    offset = 0
+    total = None
+    while total is None or offset < total:
+        query = [*base_query]
+        if offset:
+            query.append(("startrow", str(offset)))
+        listing_url = urlunparse(parsed._replace(query=urlencode(query)))
+        body = _fetch_body(source, listing_url)
+        try:
+            listing_html = body.decode("utf-8-sig")
+        except UnicodeDecodeError as exc:
+            raise FirstPartySourceError("SuccessFactors RMK listing returned invalid UTF-8") from exc
+        links, page_total = _successfactors_rmk_links(listing_html, source)
+        if total is None:
+            total = page_total
+            if total > source.max_records_per_run:
+                raise FirstPartySourceError("SuccessFactors RMK result exceeds its record cap")
+        elif page_total != total:
+            raise FirstPartySourceError("SuccessFactors RMK total changed during pagination")
+        new_links = links - discovered
+        if offset < total and not new_links:
+            raise FirstPartySourceError("SuccessFactors RMK pagination made no progress")
+        discovered.update(new_links)
+        pages.append(listing_html)
+        offset = len(discovered)
+    if len(pages) + len(discovered) > source.max_requests_per_run:
+        raise FirstPartySourceError("SuccessFactors RMK invocation exceeds its request cap")
+    details = []
+    for url in sorted(discovered):
+        body = _fetch_body(source, url)
+        try:
+            detail_html = body.decode("utf-8-sig")
+        except UnicodeDecodeError as exc:
+            raise FirstPartySourceError("SuccessFactors RMK detail returned invalid UTF-8") from exc
+        details.append({"url": url, "html": detail_html})
+    return {
+        "listingPages": pages,
+        "details": details,
+        "requestBatches": _bounded_request_batches(
+            len(pages), len(details), source.max_requests_per_batch
+        ),
     }
 
 
@@ -3971,12 +4515,18 @@ def fetch_source(source: FirstPartySource):
     elif source.adapter == "firstparty-lever":
         params = [*parse_qsl(parsed.query, keep_blank_values=True), ("mode", "json")]
         endpoint = urlunparse(parsed._replace(query=urlencode(params)))
-    if source.adapter == WORKDAY_ADAPTER:
+    if source.adapter in {WORKDAY_ADAPTER, WORKDAY_QUERY_ADAPTER}:
         return _fetch_workday(source)
+    if source.adapter == ORACLE_RECRUITING_ADAPTER:
+        return _fetch_oracle_recruiting(source)
+    if source.adapter == AMAZON_JOBS_ADAPTER:
+        return _fetch_amazon_jobs(source)
     if source.adapter == WEBCRUITER_ADAPTER:
         return _fetch_webcruiter(source)
     if source.adapter == SUCCESSFACTORS_ADAPTER:
         return _fetch_successfactors(source)
+    if source.adapter == SUCCESSFACTORS_RMK_ADAPTER:
+        return _fetch_successfactors_rmk(source)
     if source.adapter == UKG_ADAPTER:
         return _fetch_ukg(source)
     if source.adapter == SOFTGARDEN_ADAPTER:

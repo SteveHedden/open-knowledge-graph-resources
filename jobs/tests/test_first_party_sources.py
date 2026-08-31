@@ -50,15 +50,22 @@ TASK42_REVIEW_SOURCES = {
     "first-party-university-of-north-carolina-at-chapel-hill",
     "first-party-wikimedia-deutschland",
 }
+TASK43_REVIEW_SOURCES = {
+    "first-party-accenture", "first-party-amazon", "first-party-capital-one",
+    "first-party-crowdstrike", "first-party-jpmorgan-chase", "first-party-sap",
+}
 
 
-def test_registry_preserves_review_sources_and_approved_task42_sources():
+def test_registry_preserves_review_sources_and_all_approved_sources():
     sources = fps.load_first_party_sources()
     production = fps.load_production_first_party_sources()
     assert set(sources) == (
-        ORIGINAL_PRODUCTION_SOURCES | TASK41_REVIEW_SOURCES | TASK42_REVIEW_SOURCES
+        ORIGINAL_PRODUCTION_SOURCES | TASK41_REVIEW_SOURCES
+        | TASK42_REVIEW_SOURCES | TASK43_REVIEW_SOURCES
     )
-    approved = ORIGINAL_PRODUCTION_SOURCES | TASK42_REVIEW_SOURCES
+    approved = (
+        ORIGINAL_PRODUCTION_SOURCES | TASK42_REVIEW_SOURCES | TASK43_REVIEW_SOURCES
+    )
     assert set(production) == approved
     assert {source.provider for source in sources.values()} == {
         "greenhouse", "lever", "ashby", "teamtailor", "workday",
@@ -66,6 +73,7 @@ def test_registry_preserves_review_sources_and_approved_task42_sources():
         "softgarden", "refline", "emply",
         "peopleadmin", "taleo-selectminds", "drupal-rss", "cnrs",
         "microsoft-research",
+        "oracle-recruiting", "amazon-jobs",
     }
     graph = Graph().parse(REPO_ROOT / "sources.ttl", format="turtle")
     kgjobs = Namespace("https://openknowledgegraphs.com/jobs/ontology#")
