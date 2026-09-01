@@ -1,189 +1,40 @@
 {
-  "activeCount": 909,
+  "activeCount": 911,
   "classificationCounts": {
     "not_match": 409,
-    "qualified": 500,
+    "qualified": 502,
     "review": 0
   },
   "completeSourceSnapshot": true,
-  "deduplicatedCount": 909,
-  "fetchedCount": 146,
-  "publicSourceCount": 0,
-  "publicationPolicy": "existing-aggregator-policy",
-  "queries": [
-    "rdf",
-    "ontology",
-    "sparql",
-    "skos",
-    "shacl",
-    "linkml",
-    "semantic web",
-    "knowledge graph"
-  ],
-  "queryCount": 8,
-  "queryFamilies": [
-    {
-      "query": "rdf",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-rdf"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf"
-    },
-    {
-      "query": "ontology",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology"
-    },
-    {
-      "query": "sparql",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql"
-    },
-    {
-      "query": "skos",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-skos"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos"
-    },
-    {
-      "query": "shacl",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-shacl"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl"
-    },
-    {
-      "query": "linkml",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-linkml"
-    },
-    {
-      "query": "semantic web",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web"
-    },
-    {
-      "query": "knowledge graph",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph"
-    }
-  ],
-  "queryResults": [
-    {
-      "complete": true,
-      "query": "rdf",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-rdf"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf",
-      "returnedCount": 20,
-      "totalCount": 236
-    },
-    {
-      "complete": true,
-      "query": "ontology",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
-        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology",
-      "returnedCount": 20,
-      "totalCount": 1259
-    },
-    {
-      "complete": true,
-      "query": "sparql",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql",
-      "returnedCount": 20,
-      "totalCount": 167
-    },
-    {
-      "complete": true,
-      "query": "skos",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-skos"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos",
-      "returnedCount": 20,
-      "totalCount": 66
-    },
-    {
-      "complete": true,
-      "query": "shacl",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-shacl"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl",
-      "returnedCount": 20,
-      "totalCount": 58
-    },
-    {
-      "complete": true,
-      "query": "linkml",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-linkml",
-      "returnedCount": 6,
-      "totalCount": 6
-    },
-    {
-      "complete": true,
-      "query": "semantic web",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web",
-      "returnedCount": 20,
-      "totalCount": 701634
-    },
-    {
-      "complete": true,
-      "query": "knowledge graph",
-      "queryConcepts": [
-        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
-      ],
-      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph",
-      "returnedCount": 20,
-      "totalCount": 954738
-    }
-  ],
+  "deduplicatedCount": 911,
+  "fetchedCount": 45,
+  "forceRefreshRequested": true,
+  "publicSourceCount": 41,
+  "publicationPolicy": "first-party-qualified-only",
+  "queries": [],
+  "queryCount": 0,
+  "queryFamilies": [],
   "reconciliation": {
     "aggregatorRecords": 543,
     "ambiguous": [],
-    "firstPartyRecords": 366,
-    "inputRecords": 909,
+    "firstPartyRecords": 368,
+    "inputRecords": 911,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 909
+    "outputRecords": 911
   },
   "rejectedCount": 0,
-  "requestCount": 8,
-  "retrievedAt": "2026-09-01T04:57:44Z",
-  "runId": "20260901T045744Z-db701034e93d",
-  "sourceAttributionUrl": "https://jooble.org/",
+  "requestCount": 47,
+  "retrievedAt": "2026-09-01T05:39:08Z",
+  "runId": "20260901T053908Z-7a06ec758f48",
+  "sourceAttributionUrl": "https://jobs.sap.com/",
   "sourceClassificationCounts": {
-    "not_match": 0,
-    "qualified": 0,
+    "not_match": 4,
+    "qualified": 41,
     "review": 0
   },
-  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/jooble",
-  "sourceKey": "jooble",
-  "sourceName": "Jooble",
+  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/first-party-sap",
+  "sourceKey": "first-party-sap",
+  "sourceName": "Careers at SAP",
   "sourceRefreshes": {
     "adzuna": "2026-09-01T04:57:44Z",
     "arbeitnow": "2026-09-01T04:57:44Z",
@@ -209,7 +60,7 @@
     "first-party-regenstrief-institute": "2026-08-31T09:18:03Z",
     "first-party-relationalai": "2026-08-31T09:18:03Z",
     "first-party-renaissance-computing-institute": "2026-08-31T09:18:03Z",
-    "first-party-sap": "2026-08-31T19:51:41Z",
+    "first-party-sap": "2026-09-01T05:39:08Z",
     "first-party-sib-swiss-institute-of-bioinformatics": "2026-08-31T09:18:03Z",
     "first-party-stanford-university-school-of-medicine": "2026-08-31T09:18:03Z",
     "first-party-stardog": "2026-08-31T09:18:03Z",
