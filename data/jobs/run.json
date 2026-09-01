@@ -1,12 +1,12 @@
 {
-  "activeCount": 908,
+  "activeCount": 909,
   "classificationCounts": {
-    "not_match": 417,
-    "qualified": 491,
+    "not_match": 409,
+    "qualified": 500,
     "review": 0
   },
   "completeSourceSnapshot": true,
-  "deduplicatedCount": 908,
+  "deduplicatedCount": 909,
   "fetchedCount": 146,
   "publicSourceCount": 0,
   "publicationPolicy": "existing-aggregator-policy",
@@ -89,7 +89,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf",
       "returnedCount": 20,
-      "totalCount": 238
+      "totalCount": 236
     },
     {
       "complete": true,
@@ -100,7 +100,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology",
       "returnedCount": 20,
-      "totalCount": 1285
+      "totalCount": 1259
     },
     {
       "complete": true,
@@ -110,7 +110,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql",
       "returnedCount": 20,
-      "totalCount": 168
+      "totalCount": 167
     },
     {
       "complete": true,
@@ -120,7 +120,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos",
       "returnedCount": 20,
-      "totalCount": 65
+      "totalCount": 66
     },
     {
       "complete": true,
@@ -130,7 +130,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl",
       "returnedCount": 20,
-      "totalCount": 59
+      "totalCount": 58
     },
     {
       "complete": true,
@@ -150,7 +150,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web",
       "returnedCount": 20,
-      "totalCount": 715837
+      "totalCount": 701634
     },
     {
       "complete": true,
@@ -160,21 +160,21 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph",
       "returnedCount": 20,
-      "totalCount": 959693
+      "totalCount": 954738
     }
   ],
   "reconciliation": {
-    "aggregatorRecords": 542,
+    "aggregatorRecords": 543,
     "ambiguous": [],
     "firstPartyRecords": 366,
-    "inputRecords": 908,
+    "inputRecords": 909,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 908
+    "outputRecords": 909
   },
   "rejectedCount": 0,
   "requestCount": 8,
-  "retrievedAt": "2026-08-31T19:51:41Z",
-  "runId": "20260831T195141Z-bff9eca6e209",
+  "retrievedAt": "2026-09-01T04:57:44Z",
+  "runId": "20260901T045744Z-db701034e93d",
   "sourceAttributionUrl": "https://jooble.org/",
   "sourceClassificationCounts": {
     "not_match": 0,
@@ -185,8 +185,8 @@
   "sourceKey": "jooble",
   "sourceName": "Jooble",
   "sourceRefreshes": {
-    "adzuna": "2026-08-31T19:51:41Z",
-    "arbeitnow": "2026-08-31T19:51:41Z",
+    "adzuna": "2026-09-01T04:57:44Z",
+    "arbeitnow": "2026-09-01T04:57:44Z",
     "first-party-accenture": "2026-08-31T19:51:41Z",
     "first-party-amazon": "2026-08-31T19:51:41Z",
     "first-party-capital-one": "2026-08-31T19:51:41Z",
@@ -223,7 +223,7 @@
     "first-party-wikimedia": "2026-08-31T09:18:03Z",
     "first-party-wikimedia-deutschland": "2026-08-31T09:18:03Z",
     "himalayas": "2026-08-31T09:18:03Z",
-    "jobicy": "2026-08-31T19:51:41Z",
-    "jooble": "2026-08-31T19:51:41Z"
+    "jobicy": "2026-09-01T04:57:44Z",
+    "jooble": "2026-09-01T04:57:44Z"
   }
 }
