@@ -281,6 +281,28 @@ def test_himalayas_refresh_guard_enforces_its_24_hour_registry_interval(tmp_path
     assert len(calls) == 8
 
 
+def test_manual_force_refresh_bypasses_cadence_and_records_provenance(tmp_path):
+    runtime = tmp_path / "runtime"
+    calls = []
+    fetcher = himalayas_fetcher(calls)
+    live_pipeline.run_pipeline(
+        root=ROOT, runtime_dir=runtime, retrieved_at=NOW, fetcher=fetcher
+    )
+
+    forced_at = "2026-08-17T19:00:00Z"
+    run = live_pipeline.run_pipeline(
+        root=ROOT,
+        runtime_dir=runtime,
+        retrieved_at=forced_at,
+        fetcher=fetcher,
+        force_refresh=True,
+    )
+
+    assert len(calls) == 8
+    assert run["sourceRefreshes"]["himalayas"] == forced_at
+    assert run["forceRefreshRequested"] is True
+
+
 def test_refresh_guard_blocks_before_network_then_allows_later_run(tmp_path):
     runtime = tmp_path / "runtime"
     calls = []

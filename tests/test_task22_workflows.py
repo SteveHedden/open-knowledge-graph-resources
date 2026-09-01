@@ -70,6 +70,11 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
         required: false
         default: all
         type: string
+      force_refresh:
+        description: Bypass cadence for one explicitly selected production source
+        required: false
+        default: false
+        type: boolean
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false
@@ -109,6 +114,15 @@ class Task37PublicationConcurrencyContractTests(unittest.TestCase):
                 self.EXPECTED_TRIGGERS[path],
                 path,
             )
+
+    def test_force_refresh_is_manual_and_explicitly_opted_in(self) -> None:
+        workflow = self.workflows[JOBS_PATH]
+        self.assertIn(
+            "github.event_name == 'workflow_dispatch' && inputs.force_refresh",
+            workflow,
+        )
+        self.assertIn('if [ "$FORCE_REFRESH" = "true" ]', workflow)
+        self.assertIn("args+=(--force-refresh)", workflow)
 
     def test_catalog_chains_only_from_a_successful_scheduled_jobs_run(self) -> None:
         workflow = self.workflows[PUBLISH_PATH]

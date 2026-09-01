@@ -238,7 +238,7 @@ def _default_batch_executor(batch, _sources, source_timeout_seconds):
 
 def _replay_source(
     source_key: str, source: object, raw_payload: object, candidate: Path,
-    retrieved_at: str,
+    retrieved_at: str, *, force_refresh: bool = False,
 ) -> dict:
     if isinstance(source, FirstPartySource):
         return run_pipeline(
@@ -246,6 +246,7 @@ def _replay_source(
             runtime_dir=candidate,
             retrieved_at=retrieved_at,
             first_party_fetcher=lambda _source: raw_payload,
+            force_refresh=force_refresh,
         )
     if (
         isinstance(raw_payload, dict)
@@ -271,6 +272,7 @@ def _replay_source(
         runtime_dir=candidate,
         retrieved_at=retrieved_at,
         fetcher=replay_fetcher,
+        force_refresh=force_refresh,
     )
     if queue:
         raise LivePipelineError(
@@ -306,6 +308,7 @@ def run_nightly(
     selected_source: str = "all", max_parallel: int = MAX_PARALLEL_SOURCES,
     batch_request_cap: int = BATCH_REQUEST_CAP,
     source_timeout_seconds: int = SOURCE_TIMEOUT_SECONDS,
+    force_refresh: bool = False,
     batch_executor=_default_batch_executor, monitor_runner=run_monitor,
 ) -> dict:
     """Prepare and atomically install one complete last-good production runtime."""
@@ -318,6 +321,10 @@ def run_nightly(
         selected = {selected_source: sources[selected_source]}
     else:
         selected = sources
+    if force_refresh and selected_source == "all":
+        raise NightlyRunError(
+            "forced refresh requires one explicit production source"
+        )
     planned_batches = bounded_parallel_batches(
         selected, request_cap=batch_request_cap, max_parallel=max_parallel
     )
@@ -335,7 +342,9 @@ def run_nightly(
     not_due = []
     for key, source in selected.items():
         try:
-            enforce_refresh_interval(runtime_dir, source, retrieved_at)
+            enforce_refresh_interval(
+                runtime_dir, source, retrieved_at, force_refresh=force_refresh
+            )
         except RefreshNotDueError:
             not_due.append(key)
         else:
@@ -364,7 +373,12 @@ def run_nightly(
             if not error:
                 try:
                     run = _replay_source(
-                        key, due[key], outcome.get("rawPayload"), candidate, retrieved_at
+                        key,
+                        due[key],
+                        outcome.get("rawPayload"),
+                        candidate,
+                        retrieved_at,
+                        force_refresh=force_refresh,
                     )
                 except (LivePipelineError, FirstPartySourceError, OSError, ValueError) as exc:
                     error = f"replay failed: {type(exc).__name__}: {exc}"
@@ -415,6 +429,7 @@ def run_nightly(
             "catalogCron": CATALOG_CRON,
             "targetWorkflow": TARGET_WORKFLOW,
             "refreshIntervalSeconds": REFRESH_INTERVAL_SECONDS,
+            "forceRefreshRequested": force_refresh,
             "productionSourceCount": len(sources),
             "selectedSourceCount": len(selected),
             "task42SourceCount": len(TASK42_SOURCE_KEYS),
@@ -446,6 +461,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--live", action="store_true")
     parser.add_argument("--runtime-dir", type=Path, default=DEFAULT_RUNTIME)
     parser.add_argument("--source", default="all")
+    parser.add_argument("--force-refresh", action="store_true")
     parser.add_argument("--max-parallel", type=int, default=MAX_PARALLEL_SOURCES)
     parser.add_argument("--batch-request-cap", type=int, default=BATCH_REQUEST_CAP)
     parser.add_argument(
@@ -462,6 +478,7 @@ def main(argv: list[str] | None = None) -> int:
             max_parallel=args.max_parallel,
             batch_request_cap=args.batch_request_cap,
             source_timeout_seconds=args.source_timeout_seconds,
+            force_refresh=args.force_refresh,
         )
     except (
         NightlyRunError, LivePipelineError, FirstPartySourceError,

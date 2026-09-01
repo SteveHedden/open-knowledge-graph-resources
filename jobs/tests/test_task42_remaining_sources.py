@@ -917,6 +917,94 @@ def test_nightly_bounds_cannot_be_relaxed_past_the_reviewed_budget(tmp_path):
         )
 
 
+def test_nightly_force_refresh_requires_one_explicit_source(tmp_path):
+    with pytest.raises(
+        task42_nightly.NightlyRunError,
+        match="requires one explicit production source",
+    ):
+        task42_nightly.run_nightly(
+            runtime_dir=tmp_path / "runtime",
+            selected_source="all",
+            force_refresh=True,
+        )
+
+
+@pytest.mark.parametrize(
+    ("force_refresh", "expected_batches", "expected_status"),
+    [
+        (False, [], "refresh-interval-retained"),
+        (True, [["first-party-sap"]], "refreshed"),
+    ],
+)
+def test_nightly_manual_force_controls_due_check_and_replay(
+    tmp_path, monkeypatch, force_refresh, expected_batches, expected_status,
+):
+    source_key = "first-party-sap"
+    runtime = tmp_path / ("forced" if force_refresh else "ordinary")
+    runtime.mkdir()
+    (runtime / "run.json").write_text(
+        json.dumps({
+            "sourceRefreshes": {source_key: "2026-09-01T04:00:00Z"},
+        }),
+        encoding="utf-8",
+    )
+    executed = []
+    replayed = []
+
+    def batch_executor(batch, _sources, _timeout_seconds):
+        executed.append(list(batch))
+        return {
+            source_key: {
+                "error": None,
+                "rawPayload": {"sourceKey": source_key},
+                "status": "fetched",
+            }
+        }
+
+    def replay_source(
+        key, _source, _raw_payload, _candidate, _retrieved_at, *,
+        force_refresh=False,
+    ):
+        replayed.append((key, force_refresh))
+        return {
+            "fetchedCount": 1,
+            "publicSourceCount": 1,
+            "sourceClassificationCounts": {
+                "qualified": 1,
+                "review": 0,
+                "not_match": 0,
+            },
+        }
+
+    monkeypatch.setattr(task42_nightly, "_replay_source", replay_source)
+    summary = task42_nightly.run_nightly(
+        runtime_dir=runtime,
+        retrieved_at="2026-09-01T05:00:00Z",
+        selected_source=source_key,
+        force_refresh=force_refresh,
+        batch_executor=batch_executor,
+        monitor_runner=lambda **_kwargs: {"counts": {"pages": 68}},
+    )
+
+    assert executed == expected_batches
+    assert replayed == ([(source_key, True)] if force_refresh else [])
+    assert summary["forceRefreshRequested"] is force_refresh
+    assert summary["sourceResults"] == [{
+        "sourceKey": source_key,
+        "status": expected_status,
+        "error": None,
+        **({
+            "fetchedCount": 1,
+            "publicSourceCount": 1,
+            "sourceClassificationCounts": {
+                "qualified": 1,
+                "review": 0,
+                "not_match": 0,
+            },
+        } if force_refresh else {}),
+    }]
+
+
 def test_nightly_run_batches_due_sources_and_preserves_failed_source_last_good(tmp_path):
     runtime = fixture_runtime(tmp_path)
     retained_key = "first-party-university-of-maryland"

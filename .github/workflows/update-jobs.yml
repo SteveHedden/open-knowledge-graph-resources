@@ -10,6 +10,11 @@ on:
         required: false
         default: all
         type: string
+      force_refresh:
+        description: Bypass cadence for one explicitly selected production source
+        required: false
+        default: false
+        type: boolean
       dry_run:
         description: Dry run -- refresh and log, but skip publishing to data/jobs/ and committing
         required: false
@@ -86,12 +91,19 @@ jobs:
           ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
           ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
           JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
-        run: >-
-          python scripts/task42_nightly.py
-          --live
-          --runtime-dir runtime
-          --source "${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
-          --github-output "$GITHUB_OUTPUT"
+          FORCE_REFRESH: ${{ github.event_name == 'workflow_dispatch' && inputs.force_refresh && 'true' || 'false' }}
+        run: |
+          args=(
+            scripts/task42_nightly.py
+            --live
+            --runtime-dir runtime
+            --source "${{ github.event_name == 'workflow_dispatch' && inputs.source || 'all' }}"
+            --github-output "$GITHUB_OUTPUT"
+          )
+          if [ "$FORCE_REFRESH" = "true" ]; then
+            args+=(--force-refresh)
+          fi
+          python "${args[@]}"
 
       - name: Retain first-party diagnostics outside the public Pages artifact
         if: always()
@@ -187,6 +199,7 @@ jobs:
             echo "## KG jobs live refresh"
             echo
             echo "- dryRun: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true }}"
+            echo "- forceRefresh: ${{ github.event_name == 'workflow_dispatch' && inputs.force_refresh == true }}"
             echo "- snapshotChanged: ${{ steps.commit.outputs.changed || 'skipped (dry run)' }}"
             echo "- sourcesWithHardFailures: ${{ steps.refresh.outputs.failures || 'unknown' }}"
           } >> "$GITHUB_STEP_SUMMARY"

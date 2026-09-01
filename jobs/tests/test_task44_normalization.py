@@ -397,9 +397,9 @@ def test_employer_audit_and_exact_baselines():
     assert fixture["details"][0]["externalPath"] == retained_feed["jobPostings"][0]["externalPath"]
 
     protected = {
-        "data/jobs/jobs.json": "142245ee2e4fd00019f51e320a592f713f7e5f5bea5464e3278dca7548ef1586",
-        "data/jobs/jobs.ttl": "0a42e17e969e9cccac073442715e0ba992e64e5d28941bc8a00f19758c4660e1",
-        "data/jobs/manifest.json": "ea45b687982291f9468fa2864bd5f2a372bd131152381bdf5ea9fdf42c7a03d0",
+        "data/jobs/jobs.json": "edda1266cb1c98b310f7f54068df7b64c1a6c42f36c08a8c3cac09c976c7d7a9",
+        "data/jobs/jobs.ttl": "ccf396217acf8e864d6496f02cf45d8c7d50f807950e34a33a4143b3e295f128",
+        "data/jobs/manifest.json": "7d46a848eee6985e86230bdbdfa853333bc6f1edf93e7bb929ebf566886b4d61",
         "data/manifest.json": "37c1fed52b7c73664f04905dce44ae9e8fa9c9c7de1345fce85562f0f9e39791",
     }
     for path, expected in protected.items():

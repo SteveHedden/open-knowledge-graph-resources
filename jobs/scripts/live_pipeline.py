@@ -100,6 +100,8 @@ def enforce_refresh_interval(
     runtime_dir: Path,
     source: SourceConfig,
     retrieved_at: str,
+    *,
+    force_refresh: bool = False,
 ) -> dict[str, str]:
     run_path = runtime_dir / "run.json"
     if not run_path.exists():
@@ -141,7 +143,7 @@ def enforce_refresh_interval(
     if elapsed < 0:
         raise LivePipelineError("current time precedes the previous successful refresh")
     remaining = int(source.min_refresh_interval_seconds - elapsed)
-    if remaining > 0:
+    if remaining > 0 and not force_refresh:
         raise RefreshNotDueError(
             f"{source.key} permits one refresh every "
             f"{int(source.min_refresh_interval_seconds)} seconds; retry in {remaining} seconds"
@@ -265,6 +267,7 @@ def run_pipeline(
     first_party_fetcher=fetch_first_party_source,
     catalog_root: Path | None = None,
     include_review_aggregators: bool = False,
+    force_refresh: bool = False,
 ) -> dict:
     retrieved_at = retrieved_at or utc_now()
     repo_root = root.parent
@@ -322,7 +325,9 @@ def run_pipeline(
     except CatalogMentionError as exc:
         raise LivePipelineError(str(exc)) from exc
 
-    source_refreshes = enforce_refresh_interval(runtime_dir, source, retrieved_at)
+    source_refreshes = enforce_refresh_interval(
+        runtime_dir, source, retrieved_at, force_refresh=force_refresh
+    )
 
     # Adapters that declare one query family per request (Himalayas, Jobicy)
     # search their own API with our reviewed vocabulary terms; local
@@ -562,6 +567,8 @@ def run_pipeline(
         "classificationCounts": classification_counts,
         "reconciliation": reconciliation_audit,
     }
+    if force_refresh:
+        run["forceRefreshRequested"] = True
     if is_multi_query:
         run["queryResults"] = query_results
     graph = build_graph(records, run, source)
