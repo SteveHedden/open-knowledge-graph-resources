@@ -1227,9 +1227,9 @@
     okg:description "The low-code Knowledge Graph application platform. Apache license." ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://atomgraph.github.io/LinkedDataHub/> ;
-    okg:latestVersion "5.9.1" ;
+    okg:latestVersion "5.10.0" ;
     okg:programmingLanguage "XSLT" ;
-    okg:releaseDate "2026-08-19"^^xsd:date ;
+    okg:releaseDate "2026-08-30"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/AtomGraph/LinkedDataHub> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
