@@ -1739,6 +1739,33 @@ kgjs:first-party-sap a dcat:DataService,
     kgjobs:tenantIdentifier "sap:en_US" ;
     kgjobs:termsURL <https://www.sap.com/about/legal/privacy.html> .
 
+kgjs:first-party-workday-employer-review a dcat:DataService,
+        okg:CareerSource ;
+    dcterms:conformsTo <https://community.workday.com/> ;
+    dcterms:identifier "first-party-workday-employer-review" ;
+    dcterms:publisher <https://openknowledgegraphs.com/organization/workday/> ;
+    dcterms:title "Workday employer knowledge-graph careers review"@en ;
+    dcat:endpointURL <https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs?searchText=knowledge%20graph> ;
+    dcat:landingPage <https://www.workday.com/en-us/company/careers/overview.html> ;
+    kgjobs:adapter "firstparty-workday-keyword" ;
+    kgjobs:allowedHost "workday.wd5.myworkdayjobs.com" ;
+    kgjobs:attributionText "Careers at Workday" ;
+    kgjobs:attributionURL <https://www.workday.com/en-us/company/careers/overview.html> ;
+    kgjobs:careerProvider "workday" ;
+    kgjobs:extractionMode "bounded-workday-cxs-keyword-api" ;
+    kgjobs:lastVerified "2026-08-31"^^xsd:date ;
+    kgjobs:maxRecordsPerRun 80 ;
+    kgjobs:maxRequestsPerBatch 64 ;
+    kgjobs:maxRequestsPerRun 84 ;
+    kgjobs:maxResponseBytes 8388608 ;
+    kgjobs:minRefreshIntervalSeconds 86400 ;
+    kgjobs:republicationStatus "local-review-only" ;
+    kgjobs:requestTimeoutSeconds 20 ;
+    kgjobs:robotsURL <https://workday.wd5.myworkdayjobs.com/robots.txt> ;
+    kgjobs:sourceReviewStatus "evidence-reviewed" ;
+    kgjobs:tenantIdentifier "workday" ;
+    kgjobs:termsURL <https://www.workday.com/en-us/privacy.html> .
+
 kgjs:synthetic-fixtures-distribution a dcat:Distribution ;
     dcterms:conformsTo kgjs:fixture-schema ;
     dcterms:title "Fixture JSON file"@en ;

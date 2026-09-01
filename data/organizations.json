@@ -1,6 +1,6 @@
 {
   "counts": {
-    "accepted": 147,
+    "accepted": 151,
     "jobsProductionEnabled": 35,
     "rejectedAuditOnly": 3,
     "unresolvedAuditOnly": 0
@@ -5263,6 +5263,43 @@
     },
     {
       "active": true,
+      "aliases": [
+        "Oracle Corporation"
+      ],
+      "careersPage": "https://www.oracle.com/careers/",
+      "catalogRelationships": [],
+      "description": "American database, cloud infrastructure, and enterprise software company",
+      "ecosystemRoles": [
+        {
+          "label": "Graph database or KG platform provider",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-graph-platform-provider"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Oracle's official product documentation describes the Property Graph feature of Oracle AI Database, including graph queries, APIs, analytics, and knowledge-network use cases.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://docs.oracle.com/en/database/oracle/property-graph/26.2/spgdg/introduction-property-graphs.html"
+        }
+      ],
+      "identifier": "oracle",
+      "iri": "https://openknowledgegraphs.com/organization/oracle/",
+      "jobsProductionEnabled": false,
+      "lastVerified": "2026-08-31",
+      "name": "Oracle",
+      "officialWebsite": "https://www.oracle.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q19900",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
       "aliases": [],
       "careersPage": "https://valtiolle.fi/en/employers/prime-ministers-office/",
       "catalogRelationships": [
@@ -5858,6 +5895,43 @@
     {
       "active": true,
       "aliases": [
+        "Salesforce, Inc."
+      ],
+      "careersPage": "https://careers.salesforce.com/en/jobs/",
+      "catalogRelationships": [],
+      "description": "American enterprise cloud software company",
+      "ecosystemRoles": [
+        {
+          "label": "KG research or education organization",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-research-education"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Salesforce's official careers site documents an Enterprise Knowledge Graph and AI engineering team building production knowledge-graph infrastructure.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://careers.salesforce.com/en/jobs/jr347480/data-engineer-smtslmts-knowledge-graph-ai/"
+        }
+      ],
+      "identifier": "salesforce",
+      "iri": "https://openknowledgegraphs.com/organization/salesforce/",
+      "jobsProductionEnabled": false,
+      "lastVerified": "2026-08-31",
+      "name": "Salesforce",
+      "officialWebsite": "https://www.salesforce.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q941127",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [
         "SAP SE"
       ],
       "careersPage": "https://jobs.sap.com/",
@@ -5998,6 +6072,43 @@
         }
       ],
       "qid": "Q30291990",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [
+        "ServiceNow, Inc."
+      ],
+      "careersPage": "https://careers.servicenow.com/",
+      "catalogRelationships": [],
+      "description": "American enterprise workflow and cloud software company",
+      "ecosystemRoles": [
+        {
+          "label": "Graph database or KG platform provider",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-graph-platform-provider"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "ServiceNow's official product documentation describes its Knowledge Graph application, semantic layer, schemas, and graph query builder.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.servicenow.com/docs/r/intelligent-experiences/knowledge-graph/exploring-knowledge-graph.html"
+        }
+      ],
+      "identifier": "servicenow",
+      "iri": "https://openknowledgegraphs.com/organization/servicenow/",
+      "jobsProductionEnabled": false,
+      "lastVerified": "2026-08-31",
+      "name": "ServiceNow",
+      "officialWebsite": "https://www.servicenow.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q7451239",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },
@@ -7433,6 +7544,43 @@
         }
       ],
       "qid": "Q18559903",
+      "reviewReason": null,
+      "reviewStatus": "evidence-reviewed"
+    },
+    {
+      "active": true,
+      "aliases": [
+        "Workday, Inc."
+      ],
+      "careersPage": "https://www.workday.com/en-us/company/careers/overview.html",
+      "catalogRelationships": [],
+      "description": "American enterprise human-capital and financial-management software company",
+      "ecosystemRoles": [
+        {
+          "label": "KG research or education organization",
+          "uri": "https://openknowledgegraphs.com/organization-type/role-kg-research-education"
+        }
+      ],
+      "evidence": [
+        {
+          "note": "Workday's official AI and machine-learning careers page identifies knowledge-graph design, deployment, and improvement as ongoing engineering work.",
+          "reviewedOn": "2026-08-31",
+          "url": "https://www.workday.com/en-us/company/careers/ai-machine-learning.html"
+        }
+      ],
+      "identifier": "workday",
+      "iri": "https://openknowledgegraphs.com/organization/workday/",
+      "jobsProductionEnabled": false,
+      "lastVerified": "2026-08-31",
+      "name": "Workday",
+      "officialWebsite": "https://www.workday.com/",
+      "organizationKinds": [
+        {
+          "label": "Commercial enterprise",
+          "uri": "https://openknowledgegraphs.com/organization-type/kind-commercial-enterprise"
+        }
+      ],
+      "qid": "Q8038616",
       "reviewReason": null,
       "reviewStatus": "evidence-reviewed"
     },

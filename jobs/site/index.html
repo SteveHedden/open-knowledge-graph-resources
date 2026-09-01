@@ -656,7 +656,7 @@
                 <th scope="col">Job</th>
                 <th scope="col"><button type="button" class="sort-button" data-sort="employer" aria-label="Sort by employer">Employer</button></th>
                 <th scope="col"><button type="button" class="sort-button" data-sort="location" aria-label="Sort by location">Location</button></th>
-                <th scope="col"><button type="button" class="sort-button" data-sort="remote" aria-label="Sort by remote status">Remote</button></th>
+                <th scope="col"><button type="button" class="sort-button" data-sort="remote" aria-label="Sort by workplace">Workplace</button></th>
                 <th scope="col"><button type="button" class="sort-button" data-sort="datePosted" aria-label="Sort by date posted">Posted</button></th>
               </tr>
             </thead>
@@ -729,10 +729,24 @@
         // field unset rather than implying on-site. record.remote is
         // therefore true / false / undefined, and each means something
         // different -- never collapse false and undefined into one label.
+        function workplaceMode(record) {
+          if (["remote", "hybrid", "onsite", "unknown"].includes(record.workplaceMode)) return record.workplaceMode;
+          if (record.remote === true) return "remote";
+          if (record.remote === false && Object.prototype.hasOwnProperty.call(record, "remote")) return "onsite";
+          return "unknown";
+        }
+
         function remoteLabel(record) {
-          if (record.remote === true) return "Remote available";
-          if (record.remote === false) return "On-site";
-          return "Remote status not reported";
+          return { remote: "Remote available", hybrid: "Hybrid", onsite: "On-site", unknown: "Not reported" }[workplaceMode(record)];
+        }
+
+        function salaryLabel(record) {
+          const value = record.combinedCompensation;
+          if (value && typeof value === "object") {
+            const format = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+            return `${value.currency} ${format.format(value.minValue)}–${format.format(value.maxValue)} annual combined compensation (base salary + target variable incentive)`;
+          }
+          return record.salary || "";
         }
 
         function formatDate(value) {
@@ -839,6 +853,14 @@
           `).join("")}</div>`;
         }
 
+        function jobTagChips(record) {
+          const tags = Array.isArray(record.jobTags) ? record.jobTags : [];
+          if (!tags.length) return "";
+          return `<div class="concept-list" aria-label="Job language tags">${tags.map((tag) =>
+            `<span class="concept-chip skill">${tag.relatedCatalogPage ? `<a href="${escapeHtml(tag.relatedCatalogPage)}">${escapeHtml(tag.label)}</a>` : escapeHtml(tag.label)}</span>`
+          ).join("")}</div>`;
+        }
+
         function evidenceDetails(record) {
           const evidence = record.evidence || [];
           const positiveCount = evidence.filter((item) => !item.negated).length;
@@ -876,6 +898,7 @@
                 <h3 class="job-title">${escapeHtml(record.title)}</h3>
                 <p class="job-description">${escapeHtml(summaryText(record))}</p>
                 ${conceptChips(record)}
+                ${jobTagChips(record)}
                 ${evidenceDetails(record)}
                 ${sourceActions(record)}
               </td>
@@ -886,7 +909,7 @@
               <td class="remote">${remoteLabel(record)}</td>
               <td class="posted">
                 <span class="posted-date">${escapeHtml(formatDate(record.datePosted))}</span>
-                ${record.salary ? `<span class="salary">${escapeHtml(record.salary)}</span>` : ""}
+                ${salaryLabel(record) ? `<span class="salary">${escapeHtml(salaryLabel(record))}</span>` : ""}
               </td>
             </tr>
           `;
@@ -902,10 +925,11 @@
                 <span><strong>${escapeHtml(record.hiringOrganization)}</strong></span>
                 <span>${escapeHtml(record.location || "Location not supplied")} · ${remoteLabel(record)}</span>
                 <span>Posted ${escapeHtml(formatDate(record.datePosted))}</span>
-                ${record.salary ? `<span class="salary">${escapeHtml(record.salary)}</span>` : ""}
+                ${salaryLabel(record) ? `<span class="salary">${escapeHtml(salaryLabel(record))}</span>` : ""}
               </div>
               <p class="job-description">${escapeHtml(summaryText(record))}</p>
               ${conceptChips(record)}
+              ${jobTagChips(record)}
               ${evidenceDetails(record)}
               ${sourceActions(record)}
             </article>
@@ -946,9 +970,7 @@
         // before undefined (not reported) -- an explicit "no" is still more
         // informative than no answer at all.
         function remoteRank(record) {
-          if (record.remote === true) return 0;
-          if (record.remote === false) return 1;
-          return 2;
+          return { remote: 0, hybrid: 1, onsite: 2, unknown: 3 }[workplaceMode(record)];
         }
 
         function compareRecords(a, b) {

@@ -41,6 +41,8 @@ TASK43_FIXED_8 = {
     "jpmorgan-chase", "sap", "siemens",
 }
 
+TASK44_FIXED_4 = {"oracle", "salesforce", "servicenow", "workday"}
+
 TASK42_SOURCE_KEYS = frozenset({
     "first-party-danish-bibliographic-centre",
     "first-party-embl-ebi",
@@ -108,6 +110,7 @@ def fixed_cohort() -> list[dict]:
         and row.get("identifier") not in TASK39_PRODUCTION_12
         and row.get("identifier") not in TASK41_FIXED_20
         and row.get("identifier") not in TASK43_FIXED_8
+        and row.get("identifier") not in TASK44_FIXED_4
     ]
     if len(rows) != 107:
         raise AuditError(f"Task 42 cohort drifted: expected 107, found {len(rows)}")

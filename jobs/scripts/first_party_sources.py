@@ -254,6 +254,10 @@ def load_first_party_sources(
                 )
             else:
                 reviewed = {
+                    "first-party-workday-employer-review": (
+                        "workday.wd5.myworkdayjobs.com", "workday",
+                        "Workday", "knowledge graph",
+                    ),
                     "first-party-accenture": (
                         "accenture.wd103.myworkdayjobs.com", "accenture",
                         "AccentureCareers", "ontology",
@@ -698,11 +702,11 @@ def _fingerprint(url: str) -> str:
 
 def _mode(remote=False, raw: str | None = None) -> str:
     text = str(raw or "").casefold()
-    if "hybrid" in text:
+    if re.search(r"(?<![a-z0-9])hybrid(?![a-z0-9])", text):
         return "hybrid"
-    if remote or "remote" in text or "telecommute" in text:
+    if remote or re.search(r"(?<![a-z0-9])(?:remote|telecommute)(?![a-z0-9])", text):
         return "remote"
-    if text:
+    if re.search(r"(?<![a-z0-9])(?:on[ _-]?site)(?![a-z0-9])", text):
         return "onsite"
     return "unknown"
 
@@ -874,7 +878,8 @@ def _base_record(
         "tenant": source.tenant,
         "firstParty": True,
     }
-    return {
+    mode = _mode(remote, workplace_mode)
+    record = {
         "id": record_id,
         "sourceDataset": source.dataset_uri,
         "sourceRecordId": str(source_id),
@@ -889,8 +894,7 @@ def _base_record(
         "organizationIri": source.organization_iri,
         "location": _strip_html(location) or None,
         "locationKeys": _location_keys(location),
-        "remote": remote,
-        "workplaceMode": _mode(remote, workplace_mode),
+        "workplaceMode": mode,
         "datePosted": date_posted,
         "validThrough": valid_through,
         "employmentType": employment_type,
@@ -905,6 +909,11 @@ def _base_record(
         "sourceName": source.attribution_text,
         "sourceAttributionUrl": source.attribution_url,
     }
+    if mode in {"remote", "hybrid"}:
+        record["remote"] = True
+    elif mode == "onsite":
+        record["remote"] = False
+    return record
 
 
 def _enforce_record_cap(items: list, source: FirstPartySource, label: str) -> None:
@@ -2037,6 +2046,8 @@ def amazon_jobs_records(payload, source: FirstPartySource) -> list[dict]:
 
 
 class _SuccessFactorsRmkDetailParser(HTMLParser):
+    _VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+
     def __init__(self) -> None:
         super().__init__()
         self.title_parts = []
@@ -2044,20 +2055,39 @@ class _SuccessFactorsRmkDetailParser(HTMLParser):
         self.title_depth = 0
         self.description_depth = 0
         self.location = None
+        self.address = {}
         self.date_posted = None
+        self.job_depth = 0
+        self.postal_depth = 0
 
     def handle_starttag(self, tag: str, attrs) -> None:
+        tag = tag.casefold()
         values = {key.casefold(): value for key, value in attrs}
         itemprop = (values.get("itemprop") or "").casefold()
-        if tag.casefold() == "meta" and itemprop == "streetaddress":
-            self.location = values.get("content")
-        elif tag.casefold() == "meta" and itemprop == "dateposted":
+        itemtype = (values.get("itemtype") or "").casefold()
+        if self.job_depth and tag not in self._VOID:
+            self.job_depth += 1
+        elif itemtype.endswith("/jobposting"):
+            self.job_depth = 1
+        if self.postal_depth and tag not in self._VOID:
+            self.postal_depth += 1
+        elif self.job_depth and itemtype.endswith("/postaladdress"):
+            self.postal_depth = 1
+        if tag == "meta" and self.job_depth and (
+            itemprop == "streetaddress" or self.postal_depth and itemprop in {
+                "addresslocality", "addressregion", "addresscountry", "postalcode"
+            }
+        ):
+            self.address[itemprop] = values.get("content")
+            if itemprop == "streetaddress":
+                self.location = values.get("content")
+        elif tag == "meta" and self.job_depth and itemprop == "dateposted":
             self.date_posted = values.get("content")
-        if self.title_depth:
+        if self.title_depth and tag not in self._VOID:
             self.title_depth += 1
         elif itemprop == "title":
             self.title_depth = 1
-        if self.description_depth:
+        if self.description_depth and tag not in self._VOID:
             self.description_depth += 1
         elif itemprop == "description":
             self.description_depth = 1
@@ -2080,6 +2110,10 @@ class _SuccessFactorsRmkDetailParser(HTMLParser):
             self.title_depth -= 1
         if self.description_depth:
             self.description_depth -= 1
+        if self.postal_depth:
+            self.postal_depth -= 1
+        if self.job_depth:
+            self.job_depth -= 1
 
     @property
     def title(self) -> str:
@@ -2088,6 +2122,54 @@ class _SuccessFactorsRmkDetailParser(HTMLParser):
     @property
     def description(self) -> str:
         return _strip_html(" ".join(self.description_parts))
+
+    @property
+    def resolved_location(self) -> str | None:
+        if self.location:
+            return _strip_html(self.location) or None
+        parts = [
+            self.address.get(key) for key in (
+                "addresslocality", "addressregion", "addresscountry", "postalcode"
+            )
+        ]
+        return ", ".join(_strip_html(part) for part in parts if _strip_html(part)) or None
+
+
+def _sap_combined_compensation(description: str) -> tuple[dict | None, str | None]:
+    if not re.search(r"\bcompensation\s+range\s+transparency\b", description, re.IGNORECASE):
+        return None, None
+    leads = re.findall(
+        r"targeted annual combined range for this position is\s+([^.]*)",
+        description, flags=re.IGNORECASE,
+    )
+    if not leads:
+        return None, "reviewed transparency wording lacks a combined-range value"
+    parsed = []
+    for raw_value in leads:
+        value = raw_value.strip()
+        numeric = r"(?:[0-9]+|[0-9]{1,3}(?:,[0-9]{3})+)"
+        match = re.fullmatch(
+            rf"\$?\s*({numeric})\s*-\s*\$?\s*({numeric})\s*\(?\s*(USD|CAD)\s*\)?",
+            value, flags=re.IGNORECASE,
+        )
+        if not match:
+            return None, f"ambiguous or unsupported combined compensation value: {value}"
+        minimum, maximum = (int(item.replace(",", "")) for item in match.group(1, 2))
+        if minimum <= 0 or maximum <= 0:
+            return None, "combined compensation bounds must be positive"
+        if minimum > maximum:
+            return None, "combined compensation minimum exceeds maximum"
+        parsed.append((minimum, maximum, match.group(3).upper()))
+    if len(set(parsed)) > 1:
+        return None, "conflicting reviewed combined compensation ranges"
+    minimum, maximum, currency = parsed[0]
+    return {
+        "minValue": minimum,
+        "maxValue": maximum,
+        "currency": currency,
+        "unitText": "annual",
+        "basis": "base-plus-variable-target",
+    }, None
 
 
 def _successfactors_rmk_links(listing_html: str, source: FirstPartySource) -> tuple[set[str], int]:
@@ -2159,13 +2241,29 @@ def successfactors_rmk_records(payload, source: FirstPartySource) -> list[dict]:
         parser.feed(by_url[url])
         if not parser.title or len(parser.description) < 80:
             raise FirstPartySourceError("SuccessFactors RMK detail lacks title or job description")
-        records.append(_base_record(
+        description = parser.description
+        requisition = re.search(r"\bRequisition ID:\s*([A-Za-z0-9-]+)", description)
+        employment = re.search(r"\bEmployment Type:\s*([^|]+?)(?:\s*\||$)", description)
+        marker = re.search(r"(?<![A-Za-z0-9])#LI-Hybrid(?![A-Za-z0-9])", description)
+        record = _base_record(
             source, source_id=source_id, url=url, title=parser.title,
-            description=parser.description, location=parser.location,
+            description=description, location=parser.resolved_location,
             date_posted=_english_month_date(parser.date_posted),
-            remote="remote" in f"{parser.location or ''} {parser.description}".casefold(),
-            requisition_id=source_id,
-        ))
+            workplace_mode="hybrid" if marker else None,
+            employment_type=_strip_html(employment.group(1)) if employment else None,
+            requisition_id=requisition.group(1) if requisition else None,
+        )
+        compensation, reason = _sap_combined_compensation(description)
+        if compensation:
+            record["combinedCompensation"] = compensation
+        elif reason:
+            record["normalizationDiagnostics"] = [{
+                "code": "sap-invalid-combined-compensation",
+                "sourceRecordId": source_id,
+                "sourceField": "description",
+                "reason": reason,
+            }]
+        records.append(record)
     return records
 
 

@@ -54,6 +54,7 @@ TASK43_REVIEW_SOURCES = {
     "first-party-accenture", "first-party-amazon", "first-party-capital-one",
     "first-party-crowdstrike", "first-party-jpmorgan-chase", "first-party-sap",
 }
+TASK44_REVIEW_SOURCES = {"first-party-workday-employer-review"}
 
 
 def test_registry_preserves_review_sources_and_all_approved_sources():
@@ -61,7 +62,7 @@ def test_registry_preserves_review_sources_and_all_approved_sources():
     production = fps.load_production_first_party_sources()
     assert set(sources) == (
         ORIGINAL_PRODUCTION_SOURCES | TASK41_REVIEW_SOURCES
-        | TASK42_REVIEW_SOURCES | TASK43_REVIEW_SOURCES
+        | TASK42_REVIEW_SOURCES | TASK43_REVIEW_SOURCES | TASK44_REVIEW_SOURCES
     )
     approved = (
         ORIGINAL_PRODUCTION_SOURCES | TASK42_REVIEW_SOURCES | TASK43_REVIEW_SOURCES

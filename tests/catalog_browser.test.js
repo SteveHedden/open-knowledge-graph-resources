@@ -9,6 +9,21 @@ const vm = require("node:vm");
 const ROOT = path.resolve(__dirname, "..");
 const APP_SOURCE = fs.readFileSync(path.join(ROOT, "site", "app.js"), "utf8");
 const STYLE_SOURCE = fs.readFileSync(path.join(ROOT, "site", "style.css"), "utf8");
+const SITE_SOURCE = fs.readFileSync(path.join(ROOT, "site", "index.html"), "utf8");
+const STANDALONE_SOURCE = fs.readFileSync(path.join(ROOT, "jobs", "site", "index.html"), "utf8");
+
+function namedFunctionSource(source, name) {
+  const start = source.indexOf(`function ${name}(`);
+  assert.notEqual(start, -1, `missing ${name}`);
+  const body = source.indexOf("{", start);
+  let depth = 0;
+  for (let index = body; index < source.length; index += 1) {
+    if (source[index] === "{") depth += 1;
+    if (source[index] === "}") depth -= 1;
+    if (depth === 0) return source.slice(start, index + 1);
+  }
+  throw new Error(`unterminated ${name}`);
+}
 
 function dataName(attribute) {
   return attribute
@@ -814,6 +829,118 @@ test("job catalog mentions render as accessible linked chips in rows and mobile 
   );
   assert.doesNotMatch(card.textContent, /Description text must remain internal/);
   assert.match(card.textContent, /View posting/);
+});
+
+test("Task 44 workplace, combined compensation, and language tags render in both main layouts", async () => {
+  assert.match(SITE_SOURCE, />\s*Workplace\s*<\/button>/);
+  const payloads = defaultPayloads(syntheticItems(1, "Resource"), syntheticItems(1, "Software"));
+  const expectedModes = [
+    ["A Remote", "remote", "Remote available"],
+    ["B Hybrid", "hybrid", "Hybrid"],
+    ["C On-site", "onsite", "On-site"],
+    ["D Unknown", "unknown", "Not reported"],
+  ];
+  const modes = [expectedModes[3], expectedModes[1], expectedModes[2], expectedModes[0]];
+  payloads.jobs = modes.map(([title, workplaceMode]) => ({
+    id: title, title, description: "Use Cypher and GQL.", hiringOrganization: "Fixture Labs",
+    location: "Palo Alto", workplaceMode,
+    datePosted: { remote: "2026-08-28", hybrid: "2026-08-29", onsite: "2026-08-30", unknown: "2026-08-31" }[workplaceMode],
+    canonicalUrl: `https://jobs.example.test/${title[0].toLowerCase()}`,
+    classification: "qualified", catalogMentions: [],
+    jobTags: [
+      { label: "Cypher", matchedPhrase: "Cypher", relatedCatalogPage: "https://openknowledgegraphs.com/software/neo4j/" },
+      { label: "GQL", matchedPhrase: "GQL" },
+    ],
+    ...(title === "B Hybrid" ? { combinedCompensation: {
+      currency: "USD", minValue: 106900, maxValue: 229400, unitText: "annual",
+      basis: "base-plus-variable-target",
+    }} : {}),
+  }));
+  const app = await createApp({ payloads });
+  app.document.getElementById("tab-jobs").click();
+
+  const rows = app.document.getElementById("jobs-table-body").children;
+  const byTitle = new Map(rows.map((row) => [row.children[0].textContent, row]));
+  expectedModes.forEach(([title, , label]) => assert.equal(byTitle.get(`${title}CypherGQL`).children[3].textContent, label));
+  const hybrid = byTitle.get("B HybridCypherGQL");
+  assert.equal(hybrid.children[5].textContent, "USD 106,900–229,400 annual combined compensation (base salary + target variable incentive)");
+  const tags = hybrid.querySelector(".catalog-mentions");
+  assert.equal(tags.getAttribute("aria-label"), "Job language tags");
+  assert.deepEqual(tags.children.map((entry) => entry.textContent), ["Cypher", "GQL"]);
+  assert.equal(tags.querySelector("a").href, "https://openknowledgegraphs.com/software/neo4j/");
+  assert.equal(tags.children[1].querySelector("a"), null);
+
+  const preClickOrder = app.document.getElementById("jobs-table-body").children.map(
+    (row) => row.children[3].textContent
+  );
+  assert.deepEqual(preClickOrder, ["Not reported", "On-site", "Hybrid", "Remote available"]);
+  assert.notDeepEqual(preClickOrder, ["Remote available", "Hybrid", "On-site", "Not reported"]);
+  app.document.querySelector('[data-sort="remote"]').click();
+  assert.deepEqual(
+    app.document.getElementById("jobs-table-body").children.map((row) => row.children[3].textContent),
+    ["Remote available", "Hybrid", "On-site", "Not reported"]
+  );
+
+  app.media.setWidth(760);
+  const cards = app.document.getElementById("jobs-cards").children;
+  assert.deepEqual(cards.map((card) => card.querySelectorAll(".card-row")[2].textContent), [
+    "Workplace: Remote available", "Workplace: Hybrid", "Workplace: On-site", "Workplace: Not reported",
+  ]);
+  const hybridCard = cards[1];
+  assert.match(hybridCard.textContent, /Salary: USD 106,900–229,400 annual combined compensation \(base salary \+ target variable incentive\)/);
+  const mobileTags = hybridCard.querySelector(".catalog-mentions");
+  assert.deepEqual(mobileTags.children.map((entry) => entry.textContent), ["Cypher", "GQL"]);
+  assert.equal(mobileTags.children[0].querySelector("a").href, "https://openknowledgegraphs.com/software/neo4j/");
+  assert.equal(mobileTags.children[1].querySelector("a"), null);
+});
+
+test("Task 44 standalone fixture executes desktop and mobile presentation contracts", () => {
+  assert.match(STANDALONE_SOURCE, />Workplace<\/button>/);
+  const context = vm.createContext({
+    Intl,
+    summaryText: () => "summary",
+    conceptChips: () => "",
+    evidenceDetails: () => "",
+    sourceActions: () => "",
+    formatDate: () => "Aug 31, 2026",
+  });
+  ["escapeHtml", "workplaceMode", "remoteLabel", "salaryLabel", "jobTagChips", "tableRow", "card",
+    "strongSignalCount", "rankDate", "remoteRank", "compareRecords"]
+    .forEach((name) => vm.runInContext(namedFunctionSource(STANDALONE_SOURCE, name), context));
+  context.records = [
+    { id: "unknown", workplaceMode: "unknown" }, { id: "onsite", workplaceMode: "onsite" },
+    { id: "hybrid", workplaceMode: "hybrid" }, { id: "remote", workplaceMode: "remote" },
+  ];
+  const expectedLabels = ["Not reported", "On-site", "Hybrid", "Remote available"];
+  assert.deepEqual(Array.from(vm.runInContext("records.map(remoteLabel)", context)), expectedLabels);
+  for (let index = 0; index < context.records.length; index += 1) {
+    context.record = {
+      ...context.records[index], title: context.records[index].id, description: "Cypher and GQL",
+      hiringOrganization: "Fixture Labs", location: "Palo Alto", datePosted: "2026-08-31",
+      jobTags: [
+        { label: "Cypher", relatedCatalogPage: "https://openknowledgegraphs.com/software/neo4j/" },
+        { label: "GQL" },
+      ],
+      ...(context.records[index].id === "hybrid" ? { combinedCompensation: {
+        currency: "USD", minValue: 106900, maxValue: 229400,
+      }} : {}),
+    };
+    for (const markup of [
+      vm.runInContext("tableRow(record)", context), vm.runInContext("card(record)", context),
+    ]) {
+      assert.match(markup, new RegExp(expectedLabels[index]));
+      assert.match(markup, /href="https:\/\/openknowledgegraphs.com\/software\/neo4j\/">Cypher<\/a>/);
+      assert.match(markup, />GQL<\/span>/);
+      if (context.record.id === "hybrid") {
+        assert.match(markup, /USD 106,900–229,400 annual combined compensation \(base salary \+ target variable incentive\)/);
+      }
+    }
+  }
+  context.currentSort = { key: "remote", direction: "asc" };
+  assert.deepEqual(Array.from(vm.runInContext("records.sort(compareRecords).map(record => record.id)", context)), [
+    "remote", "hybrid", "onsite", "unknown",
+  ]);
+  assert.deepEqual(Array.from(vm.runInContext("records.map(remoteRank)", context)), [0, 1, 2, 3]);
 });
 
 test("first-party jobs retain official source attribution in rows and mobile cards", async () => {

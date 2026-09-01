@@ -457,8 +457,9 @@
   // when its location field literally says "Remote" and otherwise leaves it
   // unset. Never collapse false and undefined into one label.
   function jobRemoteLabel(item) {
-    if (item.remote === true) return "Remote available";
-    if (item.remote === false) return "On-site";
+    if (item.workplaceMode === "remote") return "Remote available";
+    if (item.workplaceMode === "hybrid") return "Hybrid";
+    if (item.workplaceMode === "onsite") return "On-site";
     return "Not reported";
   }
 
@@ -466,9 +467,16 @@
   // undefined (not reported) -- an explicit "no" is still more informative
   // than no answer at all.
   function jobRemoteRank(item) {
-    if (item.remote === true) return 0;
-    if (item.remote === false) return 1;
-    return 2;
+    return { remote: 0, hybrid: 1, onsite: 2, unknown: 3 }[item.workplaceMode] ?? 3;
+  }
+
+  function jobSalaryLabel(item) {
+    const value = item.combinedCompensation;
+    if (value && typeof value === "object") {
+      const formatter = new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 });
+      return `${value.currency} ${formatter.format(value.minValue)}–${formatter.format(value.maxValue)} annual combined compensation (base salary + target variable incentive)`;
+    }
+    return item.salary || "—";
   }
 
   // Normalizes a structured baseSalary to an annual-equivalent midpoint so
@@ -486,7 +494,7 @@
   };
 
   function jobSalaryRank(item) {
-    const baseSalary = item.baseSalary;
+    const baseSalary = item.combinedCompensation || item.baseSalary;
     if (!baseSalary || typeof baseSalary !== "object") {
       return null;
     }
@@ -516,6 +524,14 @@
             typeof mention.canonicalUrl === "string" &&
             mention.canonicalUrl.trim()
         )
+      : [];
+    safeItem.workplaceMode = ["remote", "hybrid", "onsite", "unknown"].includes(record.workplaceMode)
+      ? record.workplaceMode
+      : record.remote === true ? "remote"
+      : record.remote === false && Object.prototype.hasOwnProperty.call(record, "remote") ? "onsite"
+      : "unknown";
+    safeItem.jobTags = Array.isArray(record.jobTags)
+      ? record.jobTags.filter((tag) => tag && typeof tag.label === "string" && typeof tag.matchedPhrase === "string")
       : [];
     safeItem._searchText = buildJobSearchText(safeItem);
     return safeItem;
@@ -925,6 +941,7 @@
     titleText.textContent = item.title;
     titleCell.appendChild(titleText);
     appendJobCatalogMentions(titleCell, item);
+    appendJobTags(titleCell, item);
     row.appendChild(titleCell);
 
     const employerCell = document.createElement("td");
@@ -944,7 +961,7 @@
     row.appendChild(postedCell);
 
     const salaryCell = document.createElement("td");
-    salaryCell.textContent = item.salary || "—";
+    salaryCell.textContent = jobSalaryLabel(item);
     row.appendChild(salaryCell);
 
     const linksCell = document.createElement("td");
@@ -1021,6 +1038,27 @@
       link.title = `${mention.title} — ${typeLabel} catalog page`;
       listItem.appendChild(link);
       list.appendChild(listItem);
+    });
+    container.appendChild(list);
+  }
+
+  function appendJobTags(container, item) {
+    if (!item.jobTags.length) return;
+    const list = document.createElement("ul");
+    list.className = "catalog-mentions";
+    list.setAttribute("aria-label", "Job language tags");
+    item.jobTags.forEach((tag) => {
+      const entry = document.createElement("li");
+      entry.className = "catalog-mention-chip";
+      if (tag.relatedCatalogPage) {
+        const link = document.createElement("a");
+        link.href = tag.relatedCatalogPage;
+        link.textContent = tag.label;
+        entry.appendChild(link);
+      } else {
+        entry.textContent = tag.label;
+      }
+      list.appendChild(entry);
     });
     container.appendChild(list);
   }
@@ -1181,16 +1219,17 @@
     title.textContent = item.title;
     card.appendChild(title);
     appendJobCatalogMentions(card, item);
+    appendJobTags(card, item);
 
     appendCardMetaLine(card, "Employer", item.hiringOrganization || "");
     appendCardMetaLine(card, "Location", item.location || "");
-    appendCardMetaLine(card, "Remote", jobRemoteLabel(item));
+    appendCardMetaLine(card, "Workplace", jobRemoteLabel(item));
     appendCardMetaLine(
       card,
       "Posted",
       item.datePosted ? formatDate(item.datePosted) : ""
     );
-    appendCardMetaLine(card, "Salary", item.salary || "");
+    appendCardMetaLine(card, "Salary", jobSalaryLabel(item));
 
     const links = document.createElement("p");
     links.className = "card-links";

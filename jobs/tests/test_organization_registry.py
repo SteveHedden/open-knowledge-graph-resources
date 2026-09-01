@@ -41,10 +41,10 @@ def test_root_registry_defines_exactly_six_kind_and_nine_role_classes():
         assert list(graph.objects(subject, RDFS.label))
 
 
-def test_registry_contains_147_accepted_organizations_and_rejections_are_audit_only():
+def test_registry_contains_151_accepted_organizations_and_rejections_are_audit_only():
     graph = registry_graph()
     subjects = set(graph.subjects(RDF.type, OKG.Organization))
-    assert len(subjects) == 147
+    assert len(subjects) == 151
     assert all(str(subject).startswith(ORG_BASE) for subject in subjects)
     audit = json.loads((ROOT / "audits" / "organization-registry-audit.json").read_text())
     assert audit["counts"]["accepted"] == 139
@@ -87,7 +87,7 @@ def test_json_is_only_a_deterministic_projection_of_the_root_turtle():
     assert committed == expected
     assert committed["schemaVersion"] == 2
     assert committed["counts"] == {
-        "accepted": 147,
+        "accepted": 151,
         "jobsProductionEnabled": len(load_production_first_party_sources()),
         "rejectedAuditOnly": 3,
         "unresolvedAuditOnly": 0,

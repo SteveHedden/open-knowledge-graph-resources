@@ -1,0 +1,69 @@
+{
+  "auditDate": "2026-09-01",
+  "constraints": {
+    "deploymentEnabled": false,
+    "productionSourceCount": 40,
+    "jobsEnabledOrganizationCount": 35,
+    "publicationEnabled": false,
+    "schedulingEnabled": false
+  },
+  "organizations": [
+    {
+      "blocker": "The official Salesforce careers result set includes separately branded acquired-company roles (for example Informatica), so employer-only publisher isolation is not proven for a bounded ingestion contract.",
+      "careersUrl": "https://careers.salesforce.com/en/jobs/",
+      "disposition": "deferred-cross-organization-scope",
+      "evidence": [
+        {"capturedPath": "audits/task44-evidence/salesforce-identity.html", "claimType": "identity", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The official Salesforce response identifies Salesforce and links its careers service.", "responseUrl": "https://www.salesforce.com/?bc=HL", "retrievedAt": "2026-09-01T03:25:43Z", "sha256": "99519258a3f05632b57f7430d966650152ae52c2e9289b0f5b5909410f6915f8", "url": "https://www.salesforce.com/"},
+        {"capturedPath": "audits/task44-evidence/salesforce-careers.html", "claimType": "careers", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The official careers landing response is public and contains the Salesforce jobs experience.", "responseUrl": "https://www.salesforce.com/company/careers/jobs/?bc=HL", "retrievedAt": "2026-09-01T03:25:51Z", "sha256": "642cfefa4b5002862b168daba3239145402578a66f010b8ed4ec0154709249a0", "url": "https://careers.salesforce.com/en/jobs/"},
+        {"capturedPath": "audits/task44-evidence/salesforce-feed-page-1.html", "claimType": "feed", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The page-one search response contains separately branded Informatica openings, so the publisher boundary is not Salesforce-only.", "responseUrl": "https://www.salesforce.com/company/careers/jobs/?page=1&bc=HL", "retrievedAt": "2026-09-01T03:25:50Z", "sha256": "9b0aa929dd7cd5333e5efbc2146c61440ef69bbb590a52b5474b971d25a02167", "url": "https://careers.salesforce.com/en/jobs/?page=1"}
+      ],
+      "identity": {"employer": "Salesforce", "organizationIri": "https://openknowledgegraphs.com/organization/salesforce/", "provider": "Salesforce careers"},
+      "blockerEvidenceClaimTypes": ["feed"],
+      "probeAttempts": [{"authentication": "none", "host": "careers.salesforce.com", "method": "GET", "pagination": {"kind": "page-query", "parameter": "page", "value": 1}, "path": "/en/jobs/", "query": {"page": "1"}, "result": "HTTP 200 after official redirect; retained page contains separately branded Informatica openings"}],
+      "reviewContract": null
+    },
+    {
+      "blocker": null,
+      "careersUrl": "https://www.workday.com/en-us/company/careers/overview.html",
+      "disposition": "viable-review-only",
+      "evidence": [
+        {"capturedPath": "audits/task44-evidence/workday-identity.html", "claimType": "identity", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The official company response identifies Workday as the employer, distinct from its ATS role.", "retrievedAt": "2026-09-01T03:25:50Z", "sha256": "45c5bb4897fb7ae211c97b9b23032d6276464e880861f80632d0874d1f705b07", "url": "https://www.workday.com/"},
+        {"capturedPath": "audits/task44-evidence/workday-careers.html", "claimType": "careers", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "Workday's official careers overview is public and links the employer job search.", "retrievedAt": "2026-09-01T03:25:49Z", "sha256": "9f7860c307df96e9c462657f202a1900159976522ccdec797a68573fc2e03b7d", "url": "https://www.workday.com/en-us/company/careers/overview.html"},
+        {"capturedPath": "audits/task44-evidence/workday-feed.json", "claimType": "feed", "detailProbe": {"authentication": "none", "capturedPath": "audits/task44-evidence/workday-detail.json", "httpStatus": 200, "method": "GET", "sha256": "ebac1434faf1d9e574a2ef10c348d02701b74bc86da2ecb36a0631ec3d45c9cd", "url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/job/USA-CA-Pleasanton/Director--Product-Manager--Context-Engine---Data-Cloud_JR-0109108"}, "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "An unauthenticated POST with the reviewed JSON body returned total=11 and public job summaries; an unauthenticated GET to the exact returned externalPath returned full detail JSON.", "request": {"authentication": "none", "body": {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": "knowledge graph"}, "method": "POST"}, "retrievedAt": "2026-09-01T03:23:51Z", "sha256": "d6d61b0f2c626a0ad2c49791166f45b59af875c820ec411641b70e49e64a9af8", "url": "https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"}
+      ],
+      "identity": {"employer": "Workday", "organizationIri": "https://openknowledgegraphs.com/organization/workday/", "provider": "Workday ATS"},
+      "reviewContract": {"adapter": "firstparty-workday-keyword", "authentication": "none", "detailPath": "/wday/cxs/workday/Workday{externalPath}", "employerIsolation": true, "endpointQuery": {"searchText": "knowledge graph"}, "feedPath": "/wday/cxs/workday/Workday/jobs", "fixedHost": "workday.wd5.myworkdayjobs.com", "pagination": {"limit": 20, "method": "POST", "offsetStart": 0, "rule": "increment offset by returned jobPostings length until offset reaches total", "totalField": "total"}, "publisher": "https://openknowledgegraphs.com/organization/workday/", "refreshIntervalHours": 24, "requestBody": {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": "knowledge graph"}, "requestCaps": {"maxBatchRequests": 64, "maxRecordsPerRun": 80, "maxRequestsPerRun": 84, "maxResponseBytes": 8388608, "timeoutSeconds": 20}, "site": "Workday", "tenant": "workday"}
+    },
+    {
+      "blocker": "The official identity and careers sitemap were retrieved successfully, but the distinct job-search page-one probe returned HTTP 403, so bounded completeness and employer-only publisher isolation are not established.",
+      "careersUrl": "https://careers.servicenow.com/",
+      "disposition": "deferred-no-bounded-public-feed",
+      "evidence": [
+        {"capturedPath": "audits/task44-evidence/servicenow-identity.html", "claimType": "identity", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The successfully retrieved official ServiceNow Community response identifies the ServiceNow-branded organization and service.", "retrievedAt": "2026-09-01T04:15:59Z", "sha256": "f6d38040aea8ad006aee32e253de37fcf91bf8b67b51d385897c0c3252bba2b8", "url": "https://www.servicenow.com/community/"},
+        {"capturedPath": "audits/task44-evidence/servicenow-careers-sitemap.xml", "claimType": "careers", "hashBasis": "retrieved-response-body", "httpStatus": 200, "landingUrl": "https://careers.servicenow.com/", "observedFact": "The official careers sitemap was retrieved successfully and enumerates the canonical careers landing URL plus public /jobs/{id}/{slug}/ detail URLs.", "retrievedAt": "2026-09-01T03:38:04Z", "sha256": "068a1b3734b7d4028b07ca1b6a2462350698a779152ee3345bcc486774fcb250", "url": "https://careers.servicenow.com/sitemap.xml"},
+        {"capturedPath": "audits/task44-evidence/servicenow-feed-probe.html", "claimType": "feed", "hashBasis": "retrieved-response-body", "httpStatus": 403, "observedFact": "The distinct /jobs/ page-one search probe returned HTTP 403; bounded completeness and employer isolation are therefore unverified.", "retrievedAt": "2026-09-01T03:27:49Z", "searchUrl": "https://careers.servicenow.com/jobs/", "sha256": "0e4da2b32f5b0eecd4c46a9adf71c10cc3500fcca7e74a08fa403cf1fc1808e3", "url": "https://careers.servicenow.com/jobs/?page=1&pagesize=20"}
+      ],
+      "identity": {"employer": "ServiceNow", "organizationIri": "https://openknowledgegraphs.com/organization/servicenow/", "provider": "ServiceNow careers"},
+      "blockerEvidenceClaimTypes": ["feed"],
+      "probeAttempts": [{"authentication": "none", "host": "careers.servicenow.com", "method": "GET", "pagination": {"kind": "page-and-pagesize-query", "page": 1, "pageSize": 20}, "path": "/jobs/", "query": {"page": "1", "pagesize": "20"}, "result": "HTTP 403; pagination, total-count completeness, and publisher isolation could not be verified"}],
+      "reviewContract": null
+    },
+    {
+      "blocker": "The official careers landing page did not expose a captured stable employer-scoped machine endpoint with a verified site number, total-count contract, and fixed Oracle Recruiting REST host; an unverified Oracle ATS endpoint is not admitted.",
+      "careersUrl": "https://www.oracle.com/careers/",
+      "disposition": "deferred-no-bounded-public-feed",
+      "evidence": [
+        {"capturedPath": "audits/task44-evidence/oracle-careers.html", "claimType": "identity", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The successfully retrieved official Oracle careers response identifies Oracle and its careers service.", "retrievedAt": "2026-09-01T03:25:48Z", "sha256": "b57dd7adc7efb4fa239f936be79381e9f93953b7ea488f45c1e82d51249bcf06", "url": "https://www.oracle.com/careers/"},
+        {"capturedPath": "audits/task44-evidence/oracle-careers.html", "claimType": "careers", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "Oracle's official careers landing response is public and links the candidate experience.", "retrievedAt": "2026-09-01T03:25:48Z", "sha256": "b57dd7adc7efb4fa239f936be79381e9f93953b7ea488f45c1e82d51249bcf06", "url": "https://www.oracle.com/careers/"},
+        {"capturedPath": "audits/task44-evidence/oracle-feed.html", "claimType": "feed", "hashBasis": "retrieved-response-body", "httpStatus": 200, "observedFact": "The distinct public candidate-experience response did not establish a captured REST host, site number, or bounded total-count contract.", "responseUrl": "https://careers.oracle.com/en/sites/jobsearch", "retrievedAt": "2026-09-01T03:25:48Z", "sha256": "703ed0146f1f2abe8416bfa2595ff368f2bfa7492f0127da6af7398466385db3", "url": "https://careers.oracle.com/"}
+      ],
+      "identity": {"employer": "Oracle", "organizationIri": "https://openknowledgegraphs.com/organization/oracle/", "provider": "Oracle Recruiting"},
+      "blockerEvidenceClaimTypes": ["feed"],
+      "probeAttempts": [{"authentication": "none", "host": "careers.oracle.com", "method": "GET", "pagination": {"kind": "unverified", "reason": "no retained public REST site-number and total-count contract"}, "path": "/en/sites/jobsearch", "query": {}, "result": "HTTP 200 candidate experience; no stable employer-scoped REST host/site/query completeness contract was discovered"}],
+      "reviewContract": null
+    }
+  ],
+  "reviewOnly": true,
+  "sha256Basis": "Exact bytes of each retained capturedPath response artifact; every sha256 is recomputed in the network-free test suite.",
+  "schemaVersion": 1
+}

@@ -74,6 +74,7 @@ from first_party_classifier import (  # noqa: E402
     load_first_party_policy,
 )
 from reconcile import reconcile_records  # noqa: E402
+from job_normalization import add_job_tags, normalize_workplace  # noqa: E402
 
 SOURCES_PATH = REPO_ROOT / "sources.ttl"
 VOCAB_PATH = ROOT / "vocabularies" / "kg-jobs.ttl"
@@ -235,16 +236,14 @@ def _prepare_for_reconciliation(
 ) -> list[dict]:
     output = []
     for source_record in records:
-        record = dict(source_record)
+        record = normalize_workplace(source_record)
+        record.pop("normalizationDiagnostics", None)
         record.setdefault("firstParty", False)
         record.setdefault(
             "provider",
             str(record.get("sourceDataset") or "").rstrip("/").rsplit("/", 1)[-1],
         )
         record.setdefault("tenant", None)
-        record.setdefault(
-            "workplaceMode", "remote" if record.get("remote") else "unknown"
-        )
         record.setdefault("locationKeys", _location_keys(record.get("location")))
         if not record.get("organizationIri"):
             organization_iri = organization_aliases.get(
@@ -507,10 +506,10 @@ def run_pipeline(
     reconciled, reconciliation_audit = reconcile_records(
         _prepare_for_reconciliation(unreconciled, organization_aliases)
     )
-    records = add_catalog_mentions(
+    records = add_job_tags(add_catalog_mentions(
         reconciled,
         mention_index,
-    )
+    ))
 
     classification_counts = {"qualified": 0, "review": 0, "not_match": 0}
     for record in records:

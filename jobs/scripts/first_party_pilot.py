@@ -36,9 +36,11 @@ from first_party_sources import (  # noqa: E402
 )
 from rdf_utils import write_deterministic_turtle  # noqa: E402
 from reconcile import reconcile_records  # noqa: E402
+from job_normalization import add_job_tags, normalize_workplace  # noqa: E402
 
 SCHEMA = Namespace("https://schema.org/")
 KGJOBS = Namespace("https://openknowledgegraphs.com/jobs/ontology#")
+KGJV = Namespace("https://openknowledgegraphs.com/jobs/vocab#")
 PILOT = Namespace("https://openknowledgegraphs.com/jobs/first-party-pilot/")
 
 
@@ -258,7 +260,7 @@ def _preserve_times(records: list[dict], prior: list[dict], retrieved_at: str) -
 def build_pilot_graph(records: list[dict], run: dict, organizations: dict) -> Graph:
     graph = Graph()
     for prefix, namespace in (
-        ("schema", SCHEMA), ("kgjobs", KGJOBS), ("pilot", PILOT),
+        ("schema", SCHEMA), ("kgjobs", KGJOBS), ("kgjv", KGJV), ("pilot", PILOT),
         ("prov", PROV), ("dcat", DCAT), ("dcterms", DCTERMS),
     ):
         graph.bind(prefix, namespace)
@@ -298,6 +300,28 @@ def build_pilot_graph(records: list[dict], run: dict, organizations: dict) -> Gr
         graph.add((job, KGJOBS.lastSeenAt, Literal(record["lastSeenAt"], datatype=XSD.dateTime)))
         graph.add((job, KGJOBS.active, Literal(bool(record.get("active")), datatype=XSD.boolean)))
         graph.add((job, DCTERMS.source, URIRef(record["sourceDataset"])))
+        workplace_type = {
+            "remote": "TELECOMMUTE", "hybrid": "HYBRID", "onsite": "ON_SITE",
+        }.get(record.get("workplaceMode"))
+        if workplace_type:
+            graph.add((job, SCHEMA.jobLocationType, Literal(workplace_type)))
+        compensation = record.get("combinedCompensation")
+        if isinstance(compensation, dict):
+            amount = URIRef(f"{job}/combined-compensation")
+            value = URIRef(f"{job}/combined-compensation/value")
+            graph.add((amount, RDF.type, SCHEMA.MonetaryAmount))
+            graph.add((value, RDF.type, SCHEMA.QuantitativeValue))
+            graph.add((amount, SCHEMA.currency, Literal(compensation["currency"])))
+            graph.add((value, SCHEMA.minValue, Literal(compensation["minValue"])))
+            graph.add((value, SCHEMA.maxValue, Literal(compensation["maxValue"])))
+            graph.add((value, SCHEMA.unitText, Literal("annual")))
+            graph.add((amount, SCHEMA.value, value))
+            graph.add((amount, KGJOBS.compensationBasis, KGJV["compensation-basis-base-plus-variable-target"]))
+            graph.add((job, KGJOBS.combinedCompensation, amount))
+        for tag in record.get("jobTags", []):
+            graph.add((job, SCHEMA.keywords, Literal(tag["label"])))
+            if tag.get("relatedCatalogPage"):
+                graph.add((job, KGJOBS.relatedCatalogPage, URIRef(tag["relatedCatalogPage"])))
         if record.get("datePosted"):
             graph.add((job, SCHEMA.datePosted, Literal(record["datePosted"], datatype=XSD.date)))
         if record.get("validThrough"):
@@ -488,7 +512,13 @@ def run_pilot(
         key=lambda row: row["id"],
     )
     aggregator_records = load_aggregator_records()
-    merged, reconciliation_audit = reconcile_records(first_party_records + aggregator_records)
+    public_candidates = []
+    for source_record in first_party_records + aggregator_records:
+        record = normalize_workplace(source_record)
+        record.pop("normalizationDiagnostics", None)
+        public_candidates.append(record)
+    merged, reconciliation_audit = reconcile_records(public_candidates)
+    merged = add_job_tags(merged)
     _, organizations = _organization_index()
     run_id = retrieved_at.replace("-", "").replace(":", "")
     run = {

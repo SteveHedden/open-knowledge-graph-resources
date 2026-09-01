@@ -24,6 +24,7 @@ from reconcile import merge_source_occurrences
 
 SCHEMA = Namespace("https://schema.org/")
 KGJOBS = Namespace("https://openknowledgegraphs.com/jobs/ontology#")
+KGJV = Namespace("https://openknowledgegraphs.com/jobs/vocab#")
 KGJDLIVE = Namespace("https://openknowledgegraphs.com/jobs/live/")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 DCAT = Namespace("http://www.w3.org/ns/dcat#")
@@ -223,7 +224,7 @@ def _evidence_to_rdf(graph: Graph, job, record: dict) -> None:
 def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -> Graph:
     graph = Graph()
     for prefix, namespace in (
-        ("schema", SCHEMA), ("kgjobs", KGJOBS), ("kgjlive", KGJDLIVE), ("kgjd", KGJD),
+        ("schema", SCHEMA), ("kgjobs", KGJOBS), ("kgjv", KGJV), ("kgjlive", KGJDLIVE), ("kgjd", KGJD),
         ("prov", PROV), ("dcat", DCAT), ("dcterms", DCTERMS),
     ):
         graph.bind(prefix, namespace)
@@ -301,8 +302,11 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -
             graph.add((area, RDF.type, SCHEMA.AdministrativeArea))
             graph.add((area, SCHEMA.name, Literal(requirement)))
             graph.add((job, SCHEMA.applicantLocationRequirements, area))
-        if record.get("remote"):
-            graph.add((job, SCHEMA.jobLocationType, Literal("TELECOMMUTE")))
+        workplace_type = {
+            "remote": "TELECOMMUTE", "hybrid": "HYBRID", "onsite": "ON_SITE",
+        }.get(record.get("workplaceMode"))
+        if workplace_type:
+            graph.add((job, SCHEMA.jobLocationType, Literal(workplace_type)))
         if record.get("datePosted"):
             graph.add((job, SCHEMA.datePosted, Literal(record["datePosted"], datatype=XSD.date)))
         if record.get("validThrough"):
@@ -311,8 +315,21 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -
             graph.add((job, SCHEMA.employmentType, Literal(record["employmentType"])))
         if record.get("seniority"):
             graph.add((job, SCHEMA.experienceRequirements, Literal(record["seniority"])))
+        combined_compensation = record.get("combinedCompensation")
         structured_salary = record.get("baseSalary")
-        if isinstance(structured_salary, dict):
+        if isinstance(combined_compensation, dict):
+            monetary_amount = URIRef(f"{job}/combined-compensation")
+            quantitative_value = URIRef(f"{job}/combined-compensation/value")
+            graph.add((monetary_amount, RDF.type, SCHEMA.MonetaryAmount))
+            graph.add((quantitative_value, RDF.type, SCHEMA.QuantitativeValue))
+            graph.add((monetary_amount, SCHEMA.currency, Literal(combined_compensation["currency"])))
+            graph.add((quantitative_value, SCHEMA.minValue, Literal(combined_compensation["minValue"])))
+            graph.add((quantitative_value, SCHEMA.maxValue, Literal(combined_compensation["maxValue"])))
+            graph.add((quantitative_value, SCHEMA.unitText, Literal("annual")))
+            graph.add((monetary_amount, SCHEMA.value, quantitative_value))
+            graph.add((monetary_amount, KGJOBS.compensationBasis, KGJV["compensation-basis-base-plus-variable-target"]))
+            graph.add((job, KGJOBS.combinedCompensation, monetary_amount))
+        elif isinstance(structured_salary, dict):
             monetary_amount = URIRef(f"{job}/salary")
             quantitative_value = URIRef(f"{job}/salary/value")
             graph.add((monetary_amount, RDF.type, SCHEMA.MonetaryAmount))
@@ -383,6 +400,12 @@ def build_graph(records: list[dict], run: dict, source: SourceConfig | object) -
             canonical_url = mention.get("canonicalUrl") if isinstance(mention, dict) else None
             if canonical_url:
                 graph.add((job, SCHEMA.mentions, URIRef(canonical_url)))
+        for tag in record.get("jobTags", []):
+            if not isinstance(tag, dict) or not tag.get("label"):
+                continue
+            graph.add((job, SCHEMA.keywords, Literal(tag["label"])))
+            if tag.get("relatedCatalogPage"):
+                graph.add((job, KGJOBS.relatedCatalogPage, URIRef(tag["relatedCatalogPage"])))
         graph.add((dataset, DCAT.resource, job))
         _evidence_to_rdf(graph, job, record)
     apply_confirmed_wikidata_matches(graph)

@@ -355,6 +355,8 @@ kgjv:family-solutions a kgjobs:RoleFamily ;
     kgjobs:roleFamilyTerm "engagement manager", "presales", "professional services", "solution engineer", "solutions engineer" .
 
 kgjv:policy-concept-cypher a kgjobs:PolicyConcept ; skos:prefLabel "Cypher"@en ; skos:definition "Neo4j's graph query language."@en .
+kgjv:compensation-basis-base-plus-variable-target a kgjobs:CompensationBasis ;
+    skos:prefLabel "Base salary plus target variable incentive"@en .
 kgjv:policy-concept-database-core a kgjobs:PolicyConcept ; skos:prefLabel "Database core"@en ; skos:definition "Implementation of graph database kernel or core internals."@en .
 kgjv:policy-concept-database-sharding a kgjobs:PolicyConcept ; skos:prefLabel "Database sharding"@en ; skos:definition "Partitioning a graph database across distributed storage and query execution."@en .
 kgjv:policy-concept-gds a kgjobs:PolicyConcept ; skos:prefLabel "Graph Data Science"@en ; skos:definition "Graph data science products and workflows."@en .

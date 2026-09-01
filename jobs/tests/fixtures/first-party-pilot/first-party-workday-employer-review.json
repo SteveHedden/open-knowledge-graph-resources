@@ -1,0 +1,47 @@
+{
+  "captureProvenance": {
+    "capturedFeedJobCount": 11,
+    "capturedFeedTotal": 11,
+    "derivation": "The fixture selects the first retained posting and its exact public detail fields for a bounded one-record normalization test.",
+    "detailResponseSha256": "ebac1434faf1d9e574a2ef10c348d02701b74bc86da2ecb36a0631ec3d45c9cd",
+    "derivedFixtureJobCount": 1,
+    "omittedCapturedJobs": 10,
+    "feedResponseSha256": "d6d61b0f2c626a0ad2c49791166f45b59af875c820ec411641b70e49e64a9af8",
+    "retrievedAt": "2026-09-01T03:23:51Z"
+  },
+  "details": [
+    {
+      "externalPath": "/job/USA-CA-Pleasanton/Director--Product-Manager--Context-Engine---Data-Cloud_JR-0109108",
+      "payload": {
+        "jobPostingInfo": {
+          "externalUrl": "https://workday.wd5.myworkdayjobs.com/Workday/job/USA-CA-Pleasanton/Director--Product-Manager--Context-Engine---Data-Cloud_JR-0109108",
+          "jobDescription": "The Data Cloud organization is seeking a visionary, deeply technical Director, Product Manager to lead the internal development of our Universal Context Engine. This individual will drive the product strategy and execution for bridging Workday’s structured enterprise data with unstructured documents, creating a unified knowledge graph and semantic layer for our AI platform.",
+          "jobReqId": "JR-0109108",
+          "location": "USA, CA, Pleasanton",
+          "remoteType": "Flex",
+          "startDate": "2026-08-28",
+          "timeType": "Full Time",
+          "title": "Director, Product Management - Context Engine, Data Cloud"
+        }
+      }
+    }
+  ],
+  "listingPages": [
+    {
+      "jobPostings": [
+        {
+          "bulletFields": ["JR-0109108"],
+          "externalPath": "/job/USA-CA-Pleasanton/Director--Product-Manager--Context-Engine---Data-Cloud_JR-0109108",
+          "locationsText": "USA, CA, Pleasanton",
+          "postedOn": "Posted 3 Days Ago",
+          "remoteType": "Flex",
+          "title": "Director, Product Management - Context Engine, Data Cloud"
+        }
+      ],
+      "total": 1
+    }
+  ],
+  "requestBatches": [
+    {"batch": 1, "detailRequests": 1, "listingRequests": 1}
+  ]
+}

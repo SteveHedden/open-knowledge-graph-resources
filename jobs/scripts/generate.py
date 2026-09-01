@@ -68,8 +68,15 @@ def build_graph(records_with_results: list[tuple[dict, str, list]]) -> Graph:
             g.add((place, RDF.type, SCHEMA.Place))
             g.add((place, SCHEMA.name, Literal(record["location"])))
             g.add((job, SCHEMA.jobLocation, place))
-        if record.get("remote") is not None:
-            g.add((job, SCHEMA.jobLocationType, Literal("TELECOMMUTE" if record["remote"] else "ON_SITE")))
+        workplace_type = {
+            "remote": "TELECOMMUTE", "hybrid": "HYBRID", "onsite": "ON_SITE",
+        }.get(record.get("workplaceMode"))
+        if workplace_type is None and record.get("remote") is True:
+            workplace_type = "TELECOMMUTE"
+        elif workplace_type is None and record.get("remote") is False and "remote" in record:
+            workplace_type = "ON_SITE"
+        if workplace_type:
+            g.add((job, SCHEMA.jobLocationType, Literal(workplace_type)))
         if record.get("datePosted"):
             g.add((job, SCHEMA.datePosted, Literal(record["datePosted"], datatype=XSD.date)))
         if record.get("qualifications"):

@@ -55,6 +55,10 @@ kgjobs:QueryExecution a rdfs:Class ;
     rdfs:label "Query Execution"@en ;
     rdfs:comment "One execution of a declared query family during a live-ingestion activity, with the exact executed text and bounded result counts."@en .
 
+kgjobs:CompensationBasis a rdfs:Class ;
+    rdfs:label "Compensation basis"@en ;
+    rdfs:comment "A controlled basis describing which pay components a MonetaryAmount combines."@en .
+
 kgjobs:InclusionEvidence a rdfs:Class ;
     rdfs:subClassOf prov:Entity ;
     rdfs:label "Organization inclusion evidence"@en ;
@@ -93,6 +97,20 @@ kgjobs:hasEvidence a rdf:Property ;
     rdfs:comment "Links a job posting to one piece of explainable match evidence."@en ;
     rdfs:domain schema:JobPosting ;
     rdfs:range kgjobs:Evidence .
+
+kgjobs:combinedCompensation a rdf:Property ;
+    rdfs:label "combined compensation"@en ;
+    rdfs:comment "Annual combined compensation inclusive of base salary and target variable incentive."@en ;
+    rdfs:domain schema:JobPosting ;
+    rdfs:range schema:MonetaryAmount .
+
+kgjobs:compensationBasis a rdf:Property ;
+    rdfs:label "compensation basis"@en ;
+    rdfs:domain schema:MonetaryAmount .
+
+kgjobs:relatedCatalogPage a rdf:Property ;
+    rdfs:label "related catalog page"@en ;
+    rdfs:domain schema:JobPosting .
 
 #################################################################
 # Properties on kgjobs:Evidence
