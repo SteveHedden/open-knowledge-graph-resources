@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "task": 46,
+  "reviewedAt": "2026-09-02T10:26:08Z",
+  "externalMutationPerformed": false,
+  "publicationPerformed": false,
+  "decision": "approval-required",
+  "reason": "The normal generated-page pipeline derives software descriptions and official homepages from Wikidata. The selected records lack the required Wikidata inputs, and Task 46 does not authorize external Wikidata edits.",
+  "anzograph": {
+    "qid": "Q124653370",
+    "canonicalSlug": "anzograph",
+    "currentEntityEvidence": {
+      "source": "https://www.wikidata.org/wiki/Special:EntityData/Q124653370.json",
+      "revision": 2131466577,
+      "modified": "2024-04-17T18:23:09Z",
+      "sha256": "b5ca2e56c9bf4be9d0eec253a2d317c09a5ef65636aadb2c6e51547a2f199e13",
+      "englishLabel": "AnzoGraph",
+      "englishDescription": null,
+      "officialWebsite": null
+    },
+    "officialEvidence": {
+      "source": "https://docs.cambridgesemantics.com/anzograph/v2.5/userdoc/features.htm",
+      "publisher": "Cambridge Semantics, Inc.",
+      "finding": "The official documentation identifies AnzoGraph DB as a native massively parallel graph OLAP database and documents RDF, SPARQL, and Cypher support."
+    },
+    "authorityReview": {
+      "cambridgeSemanticsAcquiredByAltair": {
+        "source": "https://news.siemens.com/sr-rs/altair-acquires-cambridge-semantics/",
+        "date": "2024-04-12",
+        "finding": "Altair acquired Cambridge Semantics and announced that its graph technology would be integrated into Altair RapidMiner."
+      },
+      "altairAcquiredBySiemens": {
+        "source": "https://news.siemens.com/en-us/siemens-altair-engineering-closing/",
+        "date": "2025-03-26",
+        "finding": "Siemens completed its acquisition of Altair; Altair technology is now within the Siemens industrial software portfolio."
+      },
+      "currentPortfolioIdentity": {
+        "source": "https://altair.com/altair-graph-studio?redirect=cs",
+        "finding": "The current Altair product page identifies Graph Studio as formerly Anzo by Cambridge Semantics; it does not establish the legacy AnzoGraph documentation URL as the current product homepage."
+      },
+      "legacyDocumentationRedirect": {
+        "source": "https://docs.cambridgesemantics.com/anzograph/v3.1/userdoc/Home.htm",
+        "observedAt": "2026-09-02",
+        "finding": "The URL still serves AnzoGraph DB 3.1 documentation with a 2025 Cambridge Semantics copyright and does not redirect to a current Siemens or Altair product authority."
+      },
+      "conclusion": "The ownership chain is established, but the current authoritative homepage for the AnzoGraph product entity is not. Do not write P856 from the legacy documentation URL without governed product-identity review."
+    },
+    "currentPageGates": {
+      "meaningfulDescription": false,
+      "officialHomepage": false,
+      "pageRegistry": false,
+      "generatedPage": false,
+      "linkedMentionAllowed": false
+    },
+    "proposedWikidataChange": {
+      "authorityRequired": true,
+      "englishDescription": "massively parallel graph OLAP database",
+      "officialWebsite": null,
+      "candidateUrls": [
+        "https://docs.cambridgesemantics.com/anzograph/v3.1/userdoc/Home.htm",
+        "https://altair.com/altair-graph-studio?redirect=cs"
+      ],
+      "requiredReview": "Resolve whether Q124653370 represents the legacy AnzoGraph DB product, the current Graph Lakehouse component, or a product subsumed by Graph Studio before selecting any P856. Then add sourced description/P856 statements and run the normal fetch, link-verification, page-generation, registry, metadata, and catalog-validation gates."
+    }
+  },
+  "neptune": {
+    "canonicalDecision": {
+      "selectedQid": "Q48843359",
+      "selectedLabel": "Amazon Neptune",
+      "canonicalSlug": "amazon-neptune",
+      "rejectedDuplicateQid": "Q124653384",
+      "rationale": "Q48843359 is the older, richer product record, is explicitly part of and operated by Amazon Web Services, has multiple identifiers and sitelinks, and matches AWS's official Amazon Neptune product name. Q124653384 is a sparse overlapping software-catalog record."
+    },
+    "currentEntityEvidence": [
+      {
+        "qid": "Q48843359",
+        "source": "https://www.wikidata.org/wiki/Special:EntityData/Q48843359.json",
+        "revision": 2532023444,
+        "modified": "2026-08-16T15:59:18Z",
+        "sha256": "f146fa62d92074cca2071f74007c7bbea4036fed16947edafd60a2367b0abf97",
+        "englishLabel": "Amazon Neptune",
+        "englishDescription": "graph database service offered as a service by Amazon Web Services",
+        "officialWebsite": null
+      },
+      {
+        "qid": "Q124653384",
+        "source": "https://www.wikidata.org/wiki/Special:EntityData/Q124653384.json",
+        "revision": 2532760188,
+        "modified": "2026-08-18T13:54:59Z",
+        "sha256": "b5657dd54825dd951083439ca2eb298455ce29be65d037e9f6452accb6fb1212",
+        "englishLabel": "AWS Neptune",
+        "englishDescription": "AWS graph database service",
+        "officialWebsite": null
+      }
+    ],
+    "officialEvidence": {
+      "source": "https://aws.amazon.com/neptune/",
+      "retrievedSha256": "86e18a3cdd9368141e72fc6177e749654e16578a347d83ae2b47f8bce025840f",
+      "finding": "AWS names the service Amazon Neptune and describes it as a graph database service for connected data."
+    },
+    "currentPageGates": {
+      "meaningfulDescription": true,
+      "officialHomepage": false,
+      "canonicalization": false,
+      "pageRegistry": false,
+      "generatedPage": false,
+      "linkedMentionAllowed": false
+    },
+    "uriCompatibility": {
+      "amazonNeptuneReservedSlug": "amazon-neptune",
+      "awsNeptuneReservedSlug": "aws-neptune",
+      "previouslyPublishedPageFound": false,
+      "action": "Keep both registry reservations. If later release evidence shows aws-neptune was public, add a tested redirect to the canonical amazon-neptune page; otherwise do not create an unnecessary public duplicate."
+    },
+    "proposedWikidataChange": {
+      "authorityRequired": true,
+      "canonicalQid": "Q48843359",
+      "officialWebsite": "https://aws.amazon.com/neptune/",
+      "duplicateAction": "Submit Q124653384 and Q48843359 for governed duplicate review/merge or redirect into Q48843359; preserve references and do not create two OKG pages.",
+      "requiredReview": "After external approval and correction, run the normal fetch, link-verification, page-generation, registry, semantic-metadata, redirect-if-needed, and catalog-validation gates before enabling Neptune mentions."
+    }
+  }
+}

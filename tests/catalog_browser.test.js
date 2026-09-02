@@ -784,20 +784,21 @@ test("job catalog mentions render as accessible linked chips in rows and mobile 
       classification: "qualified",
       catalogMentions: [
         {
-          title: "Web Ontology Language",
-          dataset: "resource",
-          qid: "Q826165",
-          canonicalUrl: "https://openknowledgegraphs.com/resource/web-ontology-language/",
-          matchedPhrase: "OWL",
+          title: "TQ Data Foundation",
+          dataset: "software",
+          qid: "Q140443441",
+          canonicalUrl: "https://openknowledgegraphs.com/software/tq-data-foundation/",
+          matchedPhrase: "TopQuadrant",
         },
         {
-          title: "Neo4j",
+          title: "data.world Data Catalog Platform",
           dataset: "software",
-          qid: "Q1628290",
-          canonicalUrl: "https://openknowledgegraphs.com/software/neo4j/",
-          matchedPhrase: "Neo4j",
+          qid: "Q141112432",
+          canonicalUrl: "https://openknowledgegraphs.com/software/data-world-data-catalog-platform/",
+          matchedPhrase: "data.world",
         },
       ],
+      jobTags: [{ label: "SPARQL", matchedPhrase: "SPARQL" }],
     },
   ];
   const app = await createApp({ payloads });
@@ -810,14 +811,20 @@ test("job catalog mentions render as accessible linked chips in rows and mobile 
     rowList.getAttribute("aria-label"),
     "Catalog resources mentioned in this posting"
   );
-  assert.deepEqual(rowLinks.map((link) => link.textContent), ["OWL", "Neo4j"]);
+  assert.deepEqual(rowLinks.map((link) => link.textContent), ["TopQuadrant", "data.world"]);
   assert.deepEqual(rowLinks.map((link) => link.href), [
-    "https://openknowledgegraphs.com/resource/web-ontology-language/",
-    "https://openknowledgegraphs.com/software/neo4j/",
+    "https://openknowledgegraphs.com/software/tq-data-foundation/",
+    "https://openknowledgegraphs.com/software/data-world-data-catalog-platform/",
   ]);
-  assert.match(rowLinks[0].getAttribute("aria-label"), /resource catalog page/);
-  assert.match(rowLinks[0].getAttribute("aria-label"), /Web Ontology Language/);
-  assert.match(rowLinks[0].title, /Web Ontology Language/);
+  assert.match(rowLinks[0].getAttribute("aria-label"), /software catalog page/);
+  assert.match(rowLinks[0].getAttribute("aria-label"), /TQ Data Foundation/);
+  assert.match(rowLinks[0].title, /TQ Data Foundation/);
+  assert.match(rowLinks[1].getAttribute("aria-label"), /data\.world Data Catalog Platform/);
+  assert.match(rowLinks[1].title, /data\.world Data Catalog Platform/);
+  const rowTags = row.querySelectorAll(".catalog-mentions")[1];
+  assert.equal(rowTags.getAttribute("aria-label"), "Job language tags");
+  assert.equal(rowTags.textContent, "SPARQL");
+  assert.equal(rowTags.querySelector("a"), null);
   assert.doesNotMatch(row.textContent, /Description text must remain internal/);
 
   app.media.setWidth(760);
@@ -825,8 +832,12 @@ test("job catalog mentions render as accessible linked chips in rows and mobile 
   const card = app.document.getElementById("jobs-cards").children[0];
   assert.deepEqual(
     card.querySelectorAll(".catalog-mention-chip a").map((link) => link.textContent),
-    ["OWL", "Neo4j"]
+    ["TopQuadrant", "data.world"]
   );
+  const mobileTags = card.querySelectorAll(".catalog-mentions")[1];
+  assert.equal(mobileTags.getAttribute("aria-label"), "Job language tags");
+  assert.equal(mobileTags.textContent, "SPARQL");
+  assert.equal(mobileTags.querySelector("a"), null);
   assert.doesNotMatch(card.textContent, /Description text must remain internal/);
   assert.match(card.textContent, /View posting/);
 });

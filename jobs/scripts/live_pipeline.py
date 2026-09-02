@@ -71,6 +71,7 @@ from first_party_sources import (  # noqa: E402
 )
 from first_party_classifier import (  # noqa: E402
     classify_first_party_records,
+    job_specific_text_projection,
     load_first_party_policy,
 )
 from reconcile import reconcile_records  # noqa: E402
@@ -461,11 +462,14 @@ def run_pipeline(
             )
     deduplicated = deduplicate(normalized)
     match_terms = load_match_terms(root / "vocabularies" / "kg-jobs.ttl")
+    qualification_policy = load_first_party_policy(
+        root / "vocabularies" / "kg-jobs.ttl"
+    )
     current = (
         classify_first_party_records(
             deduplicated,
             match_terms,
-            load_first_party_policy(root / "vocabularies" / "kg-jobs.ttl"),
+            qualification_policy,
         )
         if is_first_party
         else classify_records(deduplicated, match_terms)
@@ -511,10 +515,10 @@ def run_pipeline(
     reconciled, reconciliation_audit = reconcile_records(
         _prepare_for_reconciliation(unreconciled, organization_aliases)
     )
-    records = add_job_tags(add_catalog_mentions(
-        reconciled,
-        mention_index,
-    ))
+    projection = lambda record: job_specific_text_projection(record, qualification_policy)
+    records = add_job_tags(
+        add_catalog_mentions(reconciled, mention_index, text_projection=projection)
+    )
 
     classification_counts = {"qualified": 0, "review": 0, "not_match": 0}
     for record in records:

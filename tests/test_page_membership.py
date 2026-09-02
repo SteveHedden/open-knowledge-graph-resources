@@ -11,8 +11,11 @@ SCRIPTS = ROOT / "scripts"
 import sys
 
 sys.path.insert(0, str(SCRIPTS))
+sys.path.insert(0, str(ROOT / "jobs" / "scripts"))
 
 import generate_pages  # noqa: E402
+import validate_catalog  # noqa: E402
+from catalog_mentions import add_catalog_mentions, load_match_index  # noqa: E402
 
 
 def item(qid, slug, homepage, *, description="A complete catalog resource for testing."):
@@ -23,6 +26,19 @@ def item(qid, slug, homepage, *, description="A complete catalog resource for te
         "homepage": homepage,
         "wikidataId": f"https://www.wikidata.org/wiki/{qid}",
         "types": ["ControlledVocabulary"],
+    }
+
+
+def software_item(qid, slug, title, homepage, *, description=None):
+    return {
+        "canonicalUrl": f"https://openknowledgegraphs.com/software/{slug}/",
+        "title": title,
+        "description": description or f"{title} is graph software with a complete test description.",
+        "homepage": homepage,
+        "wikidataId": f"https://www.wikidata.org/wiki/{qid}",
+        "types": ["Software"],
+        "softwareType": "Graph Database",
+        "aliases": [],
     }
 
 
@@ -177,6 +193,89 @@ class PageMembershipBaselineTests(unittest.TestCase):
             {"Q1": "first", "Q2": "second"},
         )
         checker.assert_not_called()
+
+    def test_task46_page_admission_gates_enable_linked_mentions(self):
+        anzo = software_item(
+            "Q124653370", "anzograph", "AnzoGraph",
+            "https://docs.cambridgesemantics.com/anzograph/",
+        )
+        neptune = software_item(
+            "Q48843359", "amazon-neptune", "Amazon Neptune",
+            "https://aws.amazon.com/neptune/",
+        )
+        write_json(self.candidate / "data/ontologies.json", {"items": []})
+        write_json(
+            self.candidate / "data/software.json",
+            {"items": [anzo, neptune]},
+        )
+        policy_path = self.candidate / "catalog-mention-policy.json"
+        write_json(policy_path, {
+            "schemaVersion": 1,
+            "shortAcronymAllowlist": [],
+            "denylist": [],
+            "reviewedAliases": {},
+            "disambiguationOverrides": {},
+            "pageGatedAliases": {
+                "AWS Neptune": {"dataset": "software", "qid": "Q48843359"},
+                "Neptune": {"dataset": "software", "qid": "Q48843359"},
+            },
+            "contextRequiredAliases": ["Neptune"],
+            "employerGuardAliases": [],
+            "exactCaseVariants": {
+                "AWS Neptune": ["AWS Neptune"],
+                "Neptune": ["Neptune"],
+            },
+        })
+
+        rejected_checker = self.run_generator(good_urls=set())
+        self.assertEqual(self.page_registry()["software"], {})
+        self.assertFalse((self.candidate / "site/software/anzograph/index.html").exists())
+        self.assertFalse((self.candidate / "site/software/amazon-neptune/index.html").exists())
+        rejected_index = load_match_index(self.candidate, policy_path)
+        record = {
+            "id": "generated-pages", "title": "Engineer",
+            "description": "Use AnzoGraph and Amazon Neptune as graph database tools.",
+        }
+        self.assertEqual(
+            add_catalog_mentions([record], rejected_index)[0]["catalogMentions"],
+            [],
+        )
+        rejected_qids = {
+            entry["wikidataId"].rsplit("/", 1)[-1]
+            for entry in rejected_checker.call_args.args[0]
+        }
+        self.assertEqual(rejected_qids, {"Q124653370", "Q48843359"})
+
+        checker = self.run_generator(
+            good_urls={anzo["homepage"], neptune["homepage"]},
+        )
+        self.assertEqual(
+            self.page_registry()["software"],
+            {"Q124653370": "anzograph", "Q48843359": "amazon-neptune"},
+        )
+        checked_qids = {
+            entry["wikidataId"].rsplit("/", 1)[-1]
+            for entry in checker.call_args.args[0]
+        }
+        self.assertEqual(checked_qids, {"Q124653370", "Q48843359"})
+        self.assertTrue((self.candidate / "site/software/anzograph/index.html").is_file())
+        self.assertTrue((self.candidate / "site/software/amazon-neptune/index.html").is_file())
+
+        report = validate_catalog.ValidationReport()
+        validate_catalog.validate_page_contracts(
+            self.candidate,
+            {"resource": {"items": []}, "software": {"items": [anzo, neptune]}},
+            None,
+            report,
+        )
+        self.assertTrue(report.conforms, validate_catalog.render_report(report))
+
+        match_index = load_match_index(self.candidate, policy_path)
+        enriched = add_catalog_mentions([record], match_index)[0]
+        self.assertEqual(
+            [mention["qid"] for mention in enriched["catalogMentions"]],
+            ["Q124653370", "Q48843359"],
+        )
 
 
 if __name__ == "__main__":

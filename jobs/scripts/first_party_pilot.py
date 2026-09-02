@@ -111,8 +111,11 @@ def load_aggregator_records(path: Path = REPO_ROOT / "data" / "jobs" / "jobs.jso
         organization_iri = aliases.get(_normalize_name(record.get("hiringOrganization")))
         if organization_iri:
             record["organizationIri"] = organization_iri
-        record["firstParty"] = False
-        record["provider"] = str(record.get("sourceDataset") or "").rstrip("/").rsplit("/", 1)[-1]
+        record.setdefault("firstParty", False)
+        record.setdefault(
+            "provider",
+            str(record.get("sourceDataset") or "").rstrip("/").rsplit("/", 1)[-1],
+        )
         record.setdefault("tenant", None)
         record.setdefault("workplaceMode", "remote" if record.get("remote") else "unknown")
         record.setdefault("locationKeys", _location_keys(record.get("location")))
@@ -126,6 +129,21 @@ def load_aggregator_records(path: Path = REPO_ROOT / "data" / "jobs" / "jobs.jso
         }])
         output.append(record)
     return sorted(output, key=lambda row: row.get("id", ""))
+
+
+def preserve_partial_pilot_records(
+    refreshed_records: list[dict], committed_records: list[dict],
+    *, replaced_source_datasets: set[str] | None = None,
+) -> list[dict]:
+    """Replace refreshed source populations while retaining every other baseline."""
+    replaced = replaced_source_datasets or set()
+    candidates_by_id = {
+        record["id"]: record
+        for record in committed_records
+        if record.get("sourceDataset") not in replaced
+    }
+    candidates_by_id.update({record["id"]: record for record in refreshed_records})
+    return sorted(candidates_by_id.values(), key=lambda row: row["id"])
 
 
 def _fixture_payload(directory: Path, source: FirstPartySource):
@@ -512,8 +530,21 @@ def run_pilot(
         key=lambda row: row["id"],
     )
     aggregator_records = load_aggregator_records()
+    # The committed snapshot is the preservation baseline for this local,
+    # non-publishing pilot. Overlay refreshed records by stable ID so a fresh
+    # partial run retains unfetched records (including first-party provenance)
+    # without duplicating refreshed jobs or their RDF evidence nodes.
+    replaced_source_datasets = {
+        sources[result["sourceKey"]].dataset_uri
+        for result in source_report
+        if result["status"] == "refreshed"
+    }
     public_candidates = []
-    for source_record in first_party_records + aggregator_records:
+    for source_record in preserve_partial_pilot_records(
+        first_party_records,
+        aggregator_records,
+        replaced_source_datasets=replaced_source_datasets,
+    ):
         record = normalize_workplace(source_record)
         record.pop("normalizationDiagnostics", None)
         public_candidates.append(record)

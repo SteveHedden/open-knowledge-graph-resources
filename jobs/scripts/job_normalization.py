@@ -6,6 +6,13 @@ import re
 
 
 WORKPLACE_MODES = {"remote", "hybrid", "onsite", "unknown"}
+URL_RE = re.compile(
+    r"(?i)(?:\b(?:https?://|www\.)[^\s<>]+|"
+    r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b|"
+    r"\b(?:[A-Z0-9-]+\.)+[A-Z]{2,}(?:"
+    r":\d{1,5}(?:/[^\s<>?#]*)?(?:\?[^\s<>#]*)?(?:#[^\s<>]*)?|"
+    r"/[^\s<>]*|\?[^\s<>]+|#[^\s<>]+))"
+)
 
 
 def normalize_workplace(record: dict) -> dict:
@@ -29,25 +36,44 @@ def normalize_workplace(record: dict) -> dict:
 
 
 def add_job_tags(records: list[dict]) -> list[dict]:
-    """Add exact, case-sensitive description-only language tags."""
+    """Rebuild exact, case-sensitive language tags from displayed descriptions."""
     patterns = (
         ("Cypher", re.compile(r"(?<![A-Za-z0-9])Cypher(?![A-Za-z0-9])"),
          "https://openknowledgegraphs.com/software/neo4j/"),
         ("GQL", re.compile(r"(?<![A-Za-z0-9])GQL(?![A-Za-z0-9])"), None),
+        (
+            "SPARQL",
+            re.compile(r"(?<![A-Za-z0-9])SPARQL(?![A-Za-z0-9]|\.(?i:js))"),
+            None,
+        ),
     )
     output = []
     for source_record in records:
         record = dict(source_record)
         description = str(record.get("description") or "")
+        description = URL_RE.sub(lambda match: " " * len(match.group(0)), description)
+        visible_mentions = {
+            str(value).strip().casefold()
+            for mention in record.get("catalogMentions", [])
+            if isinstance(mention, dict)
+            for value in (mention.get("title"), mention.get("matchedPhrase"))
+            if value
+        }
         tags = []
+        existing_labels: set[str] = set()
         for label, pattern, related_page in patterns:
             match = pattern.search(description)
             if not match:
+                continue
+            if label.casefold() in visible_mentions:
+                continue
+            if label.casefold() in existing_labels:
                 continue
             tag = {"label": label, "matchedPhrase": match.group(0)}
             if related_page:
                 tag["relatedCatalogPage"] = related_page
             tags.append(tag)
+            existing_labels.add(label.casefold())
         if tags:
             record["jobTags"] = tags
         else:

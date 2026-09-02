@@ -37,6 +37,18 @@
     "The Lens"
   ],
   "reviewedAliases": {
+    "Data.World": {
+      "dataset": "software",
+      "qid": "Q141112432"
+    },
+    "data.world Data Catalog": {
+      "dataset": "software",
+      "qid": "Q141112432"
+    },
+    "data.world platform": {
+      "dataset": "software",
+      "qid": "Q141112432"
+    },
     "PoolParty": {
       "dataset": "software",
       "qid": "Q28136436"
@@ -44,7 +56,72 @@
     "PROV-O": {
       "dataset": "resource",
       "qid": "Q62213429"
+    },
+    "TopBraid EDG": {
+      "dataset": "software",
+      "qid": "Q140443441"
+    },
+    "TopBraid Enterprise Data Governance": {
+      "dataset": "software",
+      "qid": "Q140443441"
+    },
+    "TopQuadrant": {
+      "dataset": "software",
+      "qid": "Q140443441"
+    },
+    "TQ Data Foundation": {
+      "dataset": "software",
+      "qid": "Q140443441"
     }
   },
-  "disambiguationOverrides": {}
+  "disambiguationOverrides": {
+    "TopBraid EDG": {
+      "dataset": "software",
+      "qid": "Q140443441"
+    },
+    "TopBraid Enterprise Data Governance": {
+      "dataset": "software",
+      "qid": "Q140443441"
+    }
+  },
+  "pageGatedAliases": {
+    "AWS Neptune": {
+      "dataset": "software",
+      "qid": "Q48843359"
+    },
+    "Neptune": {
+      "dataset": "software",
+      "qid": "Q48843359"
+    }
+  },
+  "contextRequiredAliases": [
+    "data.world",
+    "Neptune",
+    "TopQuadrant"
+  ],
+  "employerGuardAliases": [
+    "data.world",
+    "data.world Data Catalog",
+    "data.world Data Catalog Platform",
+    "data.world platform",
+    "TopBraid EDG",
+    "TopBraid Enterprise Data Governance",
+    "TopQuadrant",
+    "TQ Data Foundation"
+  ],
+  "exactCaseVariants": {
+    "Amazon Neptune": [
+      "Amazon Neptune"
+    ],
+    "AWS Neptune": [
+      "AWS Neptune"
+    ],
+    "data.world": [
+      "data.world",
+      "Data.World"
+    ],
+    "Neptune": [
+      "Neptune"
+    ]
+  }
 }

@@ -64,6 +64,16 @@
         "title": "PoolParty Semantic Suite",
         "wikidataId": "https://www.wikidata.org/wiki/Q28136436",
         "aliases": []
+      },
+      {
+        "title": "TQ Data Foundation",
+        "wikidataId": "https://www.wikidata.org/wiki/Q140443441",
+        "aliases": []
+      },
+      {
+        "title": "data.world Data Catalog Platform",
+        "wikidataId": "https://www.wikidata.org/wiki/Q141112432",
+        "aliases": ["data.world Data Catalog", "data.world platform"]
       }
     ]
   },
@@ -82,6 +92,8 @@
       "Q60": "shared-software"
       ,"Q105745603": "rdfox"
       ,"Q28136436": "poolparty-semantic-suite"
+      ,"Q140443441": "tq-data-foundation"
+      ,"Q141112432": "data-world-data-catalog-platform"
     }
   }
 }

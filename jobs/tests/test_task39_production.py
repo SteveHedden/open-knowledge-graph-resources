@@ -115,7 +115,12 @@ def test_every_approved_source_runs_end_to_end_through_production_pipeline(
     assert all(len(record["sourceOccurrences"]) == 1 for record in records)
     assert (runtime / "raw" / f"{source_key}.json").is_file()
     assert (runtime / "sources" / f"{source_key}.json").is_file()
-    if records:
+    # Task 46 applies the reviewed boilerplate-stripped projection to all
+    # first-party mention matching. The eccenca fixture's only page-backed
+    # term is intentionally inside stripped company boilerplate.
+    if records and source_key == "first-party-eccenca":
+        assert all(not record.get("catalogMentions") for record in records)
+    elif records:
         assert any(record.get("catalogMentions") for record in records)
 
 

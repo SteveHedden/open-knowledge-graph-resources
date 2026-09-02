@@ -8,7 +8,7 @@ import tempfile
 from pathlib import Path
 from urllib.parse import quote
 
-from rdflib import Namespace
+from rdflib import Literal, Namespace, URIRef
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -21,6 +21,7 @@ from catalog_mentions import (  # noqa: E402
 )
 from live_records import build_graph  # noqa: E402
 from live_sources import load_source_registry  # noqa: E402
+from job_normalization import add_job_tags  # noqa: E402
 from rebuild_catalog_mentions import _publish_verified_snapshot  # noqa: E402
 
 REPO_ROOT = ROOT.parent
@@ -31,6 +32,7 @@ FIXTURE_PATH = ROOT / "tests" / "fixtures" / "catalog-mentions.json"
 POLICY_PATH = ROOT / "catalog-mention-policy.json"
 SCHEMA = Namespace("https://schema.org/")
 KGJDLIVE = Namespace("https://openknowledgegraphs.com/jobs/live/")
+KGJOBS = Namespace("https://openknowledgegraphs.com/jobs/ontology#")
 
 
 def fixture():
@@ -59,17 +61,17 @@ def test_required_mentions_resolve_to_current_detail_pages_in_stable_order():
         mention_index(),
     )[0]["catalogMentions"]
     assert [mention["title"] for mention in mentions] == [
-        "TopBraid EDG",
+        "TQ Data Foundation",
         "Neo4j",
         "SKOS",
         "Resource Description Framework",
     ]
     assert mentions == [
         {
-            "title": "TopBraid EDG",
+            "title": "TQ Data Foundation",
             "dataset": "software",
-            "qid": "Q141112436",
-            "canonicalUrl": "https://openknowledgegraphs.com/software/topbraid-edg/",
+            "qid": "Q140443441",
+            "canonicalUrl": "https://openknowledgegraphs.com/software/tq-data-foundation/",
             "matchedPhrase": "TopBraid EDG",
         },
         {
@@ -228,6 +230,43 @@ def test_catalog_mentions_are_additive_and_have_json_rdf_parity():
     assert rdf_mentions == {
         mention["canonicalUrl"] for mention in enriched["catalogMentions"]
     }
+
+
+def test_neo4j_catalog_mention_and_cypher_tag_coexist_in_json_and_rdf():
+    original = {
+        "id": "neo4j-cypher-coexistence",
+        "title": "Graph Engineer",
+        "description": "Build Neo4j applications using Cypher and SPARQL.",
+        "classification": "qualified",
+        "evidence": [],
+        "canonicalUrl": "https://jobs.example.test/neo4j-cypher",
+        "hiringOrganization": "Fixture Employer",
+        "sourceRecordId": "neo4j-cypher-coexistence",
+        "canonicalFingerprint": "fixture-neo4j-cypher",
+        "firstSeenAt": "2026-08-24T12:00:00Z",
+        "lastSeenAt": "2026-08-24T12:00:00Z",
+        "retrievedAt": "2026-08-24T12:00:00Z",
+        "active": True,
+        "sourceDataset": "https://openknowledgegraphs.com/jobs/source/himalayas",
+        "sourceUrl": "https://jobs.example.test/neo4j-cypher",
+    }
+    enriched = add_job_tags(add_catalog_mentions([original], mention_index()))[0]
+    assert any(row["qid"] == "Q1628290" for row in enriched["catalogMentions"])
+    assert [row["label"] for row in enriched["jobTags"]] == ["Cypher", "SPARQL"]
+
+    run = {
+        "runId": "neo4j-cypher-run",
+        "retrievedAt": "2026-08-24T12:00:00Z",
+        "queryResults": [],
+    }
+    source = load_source_registry(REPO_ROOT / "sources.ttl")["himalayas"]
+    graph = build_graph([enriched], run, source)
+    job = KGJDLIVE[f"job/{quote(enriched['id'], safe='')}"]
+    neo4j = URIRef("https://openknowledgegraphs.com/software/neo4j/")
+    assert (job, SCHEMA.mentions, neo4j) in graph
+    assert (job, SCHEMA.keywords, Literal("Cypher")) in graph
+    assert (job, SCHEMA.keywords, Literal("SPARQL")) in graph
+    assert (job, KGJOBS.relatedCatalogPage, neo4j) in graph
 
 
 def _manifest_fixture(root: Path) -> None:

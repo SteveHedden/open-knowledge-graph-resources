@@ -402,6 +402,118 @@ kgjv:tigergraph-boilerplate-policy a kgjobs:FirstPartyQualificationPolicy ;
     kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-tigergraph> ;
     kgjobs:stripPrefixThrough "Join the graph and analytics revolution!", "Job Responsibilities", "Responsibilities" .
 
+# Explicit reviewed no-strip projections. Their absence would fail closed for
+# alias matching. These cover every no-strip first-party source represented in
+# the protected review snapshot; newly introduced sources must declare their
+# projection before description text can produce catalog mentions or tags.
+kgjv:accenture-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-accenture> .
+
+kgjv:amazon-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-amazon> .
+
+kgjv:artsy-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-artsy> .
+
+kgjv:capital-one-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-capital-one> .
+
+kgjv:crowdstrike-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-crowdstrike> .
+
+kgjv:danish-bibliographic-centre-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-danish-bibliographic-centre> .
+
+kgjv:databricks-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-databricks> .
+
+kgjv:embl-ebi-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-embl-ebi> .
+
+kgjv:enterprise-knowledge-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-enterprise-knowledge> .
+
+kgjv:graphwise-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-graphwise> .
+
+kgjv:isti-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-institute-of-scientific-and-technical-information> .
+
+kgjv:icpsr-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-inter-university-consortium-for-political-and-social-research> .
+
+kgjv:jpmorgan-chase-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-jpmorgan-chase> .
+
+kgjv:linux-foundation-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-linux-foundation> .
+
+kgjv:metaphacts-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-metaphacts> .
+
+kgjv:metropolitan-museum-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-metropolitan-museum-of-art> .
+
+kgjv:microsoft-research-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-microsoft-research> .
+
+kgjv:national-library-norway-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-national-library-of-norway> .
+
+kgjv:plos-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-public-library-of-science> .
+
+kgjv:regenstrief-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-regenstrief-institute> .
+
+kgjv:relationalai-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-relationalai> .
+
+kgjv:renci-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-renaissance-computing-institute> .
+
+kgjv:sage-publishing-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-sage-publishing> .
+
+kgjv:sap-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-sap> .
+
+kgjv:sib-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-sib-swiss-institute-of-bioinformatics> .
+
+kgjv:stanford-medicine-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-stanford-university-school-of-medicine> .
+
+kgjv:open-university-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-the-open-university> .
+
+kgjv:topquadrant-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-topquadrant> .
+
+kgjv:triply-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-triply> .
+
+kgjv:university-of-maryland-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-university-of-maryland> .
+
+kgjv:unc-chapel-hill-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-university-of-north-carolina-at-chapel-hill> .
+
+kgjv:w3c-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-w3c> .
+
+kgjv:weaviate-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-weaviate> .
+
+kgjv:wikimedia-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-wikimedia> .
+
+kgjv:wikimedia-deutschland-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-wikimedia-deutschland> .
+
+kgjv:workday-employer-review-job-text-policy a kgjobs:FirstPartyQualificationPolicy ;
+    kgjobs:appliesToSource <https://openknowledgegraphs.com/jobs/source/first-party-workday-employer-review> .
+
 kgjv:activity-graph-reasoning a skos:Concept ;
     skos:inScheme kgjv:ActivitiesScheme ;
     skos:prefLabel "Graph Reasoning"@en ;

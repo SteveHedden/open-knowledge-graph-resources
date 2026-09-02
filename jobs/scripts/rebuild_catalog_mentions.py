@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
 
-from rdflib import Graph, URIRef
+from rdflib import Graph, Literal, URIRef
 
 ROOT = Path(__file__).resolve().parent.parent
 REPO_ROOT = ROOT.parent
@@ -26,7 +26,12 @@ from catalog_snapshot import (  # noqa: E402
     write_jobs_manifest,
 )
 from catalog_mentions import add_catalog_mentions, load_match_index  # noqa: E402
-from live_records import KGJDLIVE, SCHEMA, validate_graph  # noqa: E402
+from first_party_classifier import (  # noqa: E402
+    job_specific_text_projection,
+    load_first_party_policy,
+)
+from job_normalization import add_job_tags  # noqa: E402
+from live_records import KGJOBS, KGJDLIVE, SCHEMA, validate_graph  # noqa: E402
 from rdf_utils import write_deterministic_turtle  # noqa: E402
 
 
@@ -104,40 +109,54 @@ def _publish_verified_snapshot(
     return staged_manifest
 
 
-def rebuild(
+def build_candidate(
     repo_root: Path = REPO_ROOT,
     jobs_root: Path = ROOT,
     ttl_source: Path | None = None,
-    completed_at: str | None = None,
-) -> tuple[int, int, str]:
+) -> tuple[list[dict], bytes, bytes]:
+    """Build the exact reviewed JSON/RDF candidate used by review and publication."""
     jobs_path = repo_root / "data" / "jobs" / "jobs.json"
     ttl_path = repo_root / "data" / "jobs" / "jobs.ttl"
     records = json.loads(jobs_path.read_text(encoding="utf-8"))
     if not isinstance(records, list):
         raise ValueError("jobs JSON projection must contain an array")
 
-    before = {
-        record["id"]: (record.get("classification"), record.get("evidence"))
-        for record in records
-    }
-    index = load_match_index(
-        repo_root, jobs_root / "catalog-mention-policy.json"
+    index = load_match_index(repo_root, jobs_root / "catalog-mention-policy.json")
+    qualification_policy = load_first_party_policy(
+        jobs_root / "vocabularies" / "kg-jobs.ttl"
     )
-    enriched = add_catalog_mentions(records, index)
-    after = {
-        record["id"]: (record.get("classification"), record.get("evidence"))
-        for record in enriched
-    }
-    if before != after:
-        raise ValueError("catalog mention rebuilding changed classification evidence")
+    projection = lambda record: job_specific_text_projection(record, qualification_policy)
+    enriched = add_job_tags(
+        add_catalog_mentions(records, index, text_projection=projection)
+    )
 
-    graph = Graph()
-    graph.parse(ttl_source or ttl_path, format="turtle")
+    allowed = {"catalogMentions", "jobTags"}
+    if [record["id"] for record in records] != [record["id"] for record in enriched]:
+        raise ValueError("reviewed enrichment changed record ordering or identity")
+    for before, after in zip(records, enriched, strict=True):
+        stable_before = {key: value for key, value in before.items() if key not in allowed}
+        stable_after = {key: value for key, value in after.items() if key not in allowed}
+        if stable_before != stable_after:
+            raise ValueError(
+                f"reviewed enrichment changed a protected field on {before['id']}"
+            )
+
+    graph = Graph().parse(ttl_source or ttl_path, format="turtle")
     graph.remove((None, SCHEMA.mentions, None))
+    graph.remove((None, SCHEMA.keywords, None))
+    graph.remove((None, KGJOBS.relatedCatalogPage, None))
     for record in enriched:
         job = KGJDLIVE[f"job/{quote(record['id'], safe='')}"]
-        for mention in record["catalogMentions"]:
+        for mention in record.get("catalogMentions", []):
             graph.add((job, SCHEMA.mentions, URIRef(mention["canonicalUrl"])))
+        for tag in record.get("jobTags", []):
+            graph.add((job, SCHEMA.keywords, Literal(tag["label"])))
+            if tag.get("relatedCatalogPage"):
+                graph.add((
+                    job,
+                    KGJOBS.relatedCatalogPage,
+                    URIRef(tag["relatedCatalogPage"]),
+                ))
     validate_graph(graph, jobs_root)
 
     json_bytes = (
@@ -150,6 +169,20 @@ def rebuild(
         ttl_bytes = temporary_ttl.read_bytes()
     finally:
         temporary_ttl.unlink(missing_ok=True)
+    return enriched, json_bytes, ttl_bytes
+
+
+def rebuild(
+    repo_root: Path = REPO_ROOT,
+    jobs_root: Path = ROOT,
+    ttl_source: Path | None = None,
+    completed_at: str | None = None,
+) -> tuple[int, int, str]:
+    enriched, json_bytes, ttl_bytes = build_candidate(
+        repo_root=repo_root,
+        jobs_root=jobs_root,
+        ttl_source=ttl_source,
+    )
     manifest = _publish_verified_snapshot(
         repo_root,
         json_bytes,

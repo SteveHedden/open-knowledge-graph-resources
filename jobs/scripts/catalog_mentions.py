@@ -7,7 +7,7 @@ import re
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 BASE_URL = "https://openknowledgegraphs.com"
 QID_RE = re.compile(r"Q\d+$")
@@ -38,6 +38,8 @@ class MatchTerm:
     target: CatalogTarget
     case_sensitive: bool
     pattern: re.Pattern[str]
+    requires_context: bool = False
+    employer_guard: bool = False
 
 
 @dataclass(frozen=True)
@@ -96,7 +98,7 @@ def load_policy(path: Path) -> dict[str, Any]:
             not isinstance(value, str) or not _normalized(value) for value in values
         ):
             raise CatalogMentionError(f"catalog mention policy {field} must be a string array")
-    for field in ("reviewedAliases", "disambiguationOverrides"):
+    for field in ("reviewedAliases", "disambiguationOverrides", "pageGatedAliases"):
         mappings = policy.get(field)
         if not isinstance(mappings, dict):
             raise CatalogMentionError(f"catalog mention policy {field} must be an object")
@@ -109,6 +111,25 @@ def load_policy(path: Path) -> dict[str, Any]:
                 or not QID_RE.fullmatch(str(target.get("qid", "")))
             ):
                 raise CatalogMentionError(f"invalid {field} entry: {phrase!r}")
+    for field in ("contextRequiredAliases", "employerGuardAliases"):
+        values = policy.get(field, [])
+        if not isinstance(values, list) or any(
+            not isinstance(value, str) or not _normalized(value) for value in values
+        ):
+            raise CatalogMentionError(f"catalog mention policy {field} must be a string array")
+    variants = policy.get("exactCaseVariants", {})
+    if not isinstance(variants, dict):
+        raise CatalogMentionError("catalog mention policy exactCaseVariants must be an object")
+    for phrase, values in variants.items():
+        if (
+            not isinstance(phrase, str)
+            or not _normalized(phrase)
+            or not isinstance(values, list)
+            or not values
+            or any(not isinstance(value, str) or not _normalized(value) for value in values)
+            or any(_policy_key(value) != _policy_key(phrase) for value in values)
+        ):
+            raise CatalogMentionError(f"invalid exactCaseVariants entry: {phrase!r}")
     return policy
 
 
@@ -127,6 +148,20 @@ def build_match_index(
     reviewed_aliases = {
         _normalized(phrase): (target["dataset"], target["qid"])
         for phrase, target in policy["reviewedAliases"].items()
+    }
+    page_gated_aliases = {
+        _normalized(phrase): (target["dataset"], target["qid"])
+        for phrase, target in policy.get("pageGatedAliases", {}).items()
+    }
+    context_required = {
+        _policy_key(value) for value in policy.get("contextRequiredAliases", [])
+    }
+    employer_guard = {
+        _policy_key(value) for value in policy.get("employerGuardAliases", [])
+    }
+    exact_case_variants = {
+        _policy_key(phrase): tuple(_normalized(value) for value in values)
+        for phrase, values in policy.get("exactCaseVariants", {}).items()
     }
 
     surface_targets: dict[str, dict[tuple[str, str], tuple[str, CatalogTarget, bool]]] = {}
@@ -185,21 +220,61 @@ def build_match_index(
             short_acronym,
         )
 
+    for surface, target_key in page_gated_aliases.items():
+        target = targets.get(target_key)
+        if target is None:
+            continue
+        short_acronym = _is_short_acronym(surface)
+        if short_acronym and surface not in acronym_allowlist:
+            raise CatalogMentionError(
+                f"page-gated short alias {surface!r} is absent from the acronym allowlist"
+            )
+        surface_targets.setdefault(_policy_key(surface), {})[target.key] = (
+            surface,
+            target,
+            short_acronym,
+        )
+
     terms: list[MatchTerm] = []
     for key, target_map in surface_targets.items():
         selected = target_map
-        if len(target_map) > 1:
-            override = overrides.get(key)
-            if override is None or override not in target_map:
-                continue
+        override = overrides.get(key)
+        if override is not None:
+            if override not in target_map:
+                raise CatalogMentionError(
+                    f"disambiguation override {key!r} does not select a matching target"
+                )
             selected = {override: target_map[override]}
+        elif len(target_map) > 1:
+            if override is None:
+                continue
         for surface, target, case_sensitive in selected.values():
+            variants = exact_case_variants.get(key)
+            if variants:
+                escaped = "|".join(
+                    re.escape(value).replace(r"\ ", r"\s+") for value in variants
+                )
+                dotted = any("." in value for value in variants)
+                left_boundary = (
+                    r"(?<![A-Za-z0-9.])" if dotted else r"(?<![A-Za-z0-9])"
+                )
+                right_boundary = (
+                    r"(?![A-Za-z0-9]|\.[A-Za-z0-9])"
+                    if dotted
+                    else r"(?![A-Za-z0-9])"
+                )
+                pattern = re.compile(rf"{left_boundary}(?:{escaped}){right_boundary}")
+                case_sensitive = True
+            else:
+                pattern = _phrase_pattern(surface, case_sensitive=case_sensitive)
             terms.append(
                 MatchTerm(
                     text=surface,
                     target=target,
                     case_sensitive=case_sensitive,
-                    pattern=_phrase_pattern(surface, case_sensitive=case_sensitive),
+                    pattern=pattern,
+                    requires_context=key in context_required,
+                    employer_guard=key in employer_guard,
                 )
             )
     terms.sort(
@@ -225,10 +300,21 @@ def load_match_index(catalog_root: Path, policy_path: Path) -> CatalogMentionInd
             raise CatalogMentionError(f"catalog mention input must be an object: {path}")
         return payload
 
+    page_qids = read_json(catalog_root / "data" / "page_qids.json")
+    for dataset in DATASET_ORDER:
+        slugs = page_qids.get(dataset)
+        if not isinstance(slugs, dict):
+            continue
+        page_qids[dataset] = {
+            qid: slug
+            for qid, slug in slugs.items()
+            if isinstance(slug, str)
+            and (catalog_root / "site" / dataset / slug.strip("/") / "index.html").is_file()
+        }
     return build_match_index(
         read_json(catalog_root / "data" / "ontologies.json"),
         read_json(catalog_root / "data" / "software.json"),
-        read_json(catalog_root / "data" / "page_qids.json"),
+        page_qids,
         load_policy(policy_path),
     )
 
@@ -237,12 +323,88 @@ def _overlap(left: _Candidate, right: _Candidate) -> bool:
     return left.start < right.end and right.start < left.end
 
 
-def catalog_mentions(record: dict[str, Any], index: CatalogMentionIndex) -> list[dict[str, str]]:
+URL_EMAIL_RE = re.compile(
+    r"(?i)(?:\b(?:https?://|www\.)[^\s<>]+|"
+    r"\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b|"
+    r"\b(?:[A-Z0-9-]+\.)+[A-Z]{2,}/[^\s<>]*)"
+)
+CONTEXT_SEPARATOR_RE = re.compile(r"(?:[.!?](?=\s|$)|[;\n\r•])")
+CONTEXT_RE = re.compile(
+    r"(?i)(?:\b(?:tools?|technolog(?:y|ies)|skills?|experience|experienced|"
+    r"proficien(?:t|cy)|knowledge|familiar(?:ity)?|qualification|requirements?|"
+    r"using|use|work(?:ing)? with)\b|\b(?:RDF|RDFS|OWL|SKOS|SHACL|SPARQL|"
+    r"Cypher|GQL|ontology|ontologies|knowledge graph|linked data|semantic(?: web)?|"
+    r"graph database)\b)"
+)
+COMPANY_BOILERPLATE_RE = re.compile(
+    r"(?i)\b(?:about us|our company|our mission|we are|who we are|company overview|"
+    r"equal opportunity employer)\b"
+)
+NEPTUNE_FALSE_CONTEXT_RE = re.compile(
+    r"(?i)(?:\bNeptune\s+Energy\b|\bplanet\s+Neptune\b|"
+    r"\b(?:project|initiative|codename|code\s+name|person|colleague|candidate|"
+    r"customer|client|employee|engineer|developer|team)\s+"
+    r"(?:called\s+|named\s+)?Neptune\b|"
+    r"\bNeptune\s+is\s+(?:our|an?|the)\s+"
+    r"(?:project|initiative|codename|person|colleague|team|name)\b)"
+)
+
+
+def _mask_urls_and_emails(text: str) -> str:
+    return URL_EMAIL_RE.sub(lambda match: " " * (match.end() - match.start()), text)
+
+
+def _context_segment(text: str, start: int, end: int) -> str:
+    left = 0
+    right = len(text)
+    for separator in CONTEXT_SEPARATOR_RE.finditer(text):
+        if separator.end() <= start:
+            left = separator.end()
+        elif separator.start() >= end:
+            right = separator.start()
+            break
+    return text[left:right]
+
+
+def _context_allows(
+    record: dict[str, Any], term: MatchTerm, text: str, start: int, end: int
+) -> bool:
+    if not term.requires_context and not term.employer_guard:
+        return True
+    segment = _context_segment(text, start, end)
+    if term.requires_context and not CONTEXT_RE.search(segment):
+        return False
+    if _policy_key(term.text) == "neptune" and NEPTUNE_FALSE_CONTEXT_RE.search(segment):
+        return False
+    employer = _policy_key(str(record.get("hiringOrganization") or ""))
+    alias = _policy_key(term.text)
+    if term.employer_guard and employer and (alias in employer or employer in alias):
+        if record.get("firstParty"):
+            return False
+        self_employer = re.search(
+            rf"(?i)(?:\b(?:at|join)\s+{re.escape(term.text)}\b|"
+            rf"\b{re.escape(term.text)}\s+is\b)",
+            segment,
+        )
+        if COMPANY_BOILERPLATE_RE.search(segment) or self_employer:
+            return False
+    return True
+
+
+def catalog_mentions(
+    record: dict[str, Any],
+    index: CatalogMentionIndex,
+    projected_record: dict[str, Any] | None = None,
+) -> list[dict[str, str]]:
     selected: list[_Candidate] = []
     for field, field_rank in FIELD_ORDER:
         text = record.get(field)
         if not isinstance(text, str) or not text:
             continue
+        projected_text = projected_record.get(field) if projected_record else text
+        if not isinstance(projected_text, str) or not projected_text:
+            continue
+        match_text = _mask_urls_and_emails(projected_text)
         candidates = [
             _Candidate(
                 target=term.target,
@@ -252,7 +414,8 @@ def catalog_mentions(record: dict[str, Any], index: CatalogMentionIndex) -> list
                 end=match.end(),
             )
             for term in index.terms
-            for match in term.pattern.finditer(text)
+            for match in term.pattern.finditer(match_text)
+            if _context_allows(record, term, match_text, match.start(), match.end())
         ]
         # Prefer the longest phrase only when spans overlap. Non-overlapping
         # mentions remain independent even when one surface is globally longer.
@@ -306,11 +469,15 @@ def catalog_mentions(record: dict[str, Any], index: CatalogMentionIndex) -> list
 
 
 def add_catalog_mentions(
-    records: list[dict[str, Any]], index: CatalogMentionIndex
+    records: list[dict[str, Any]],
+    index: CatalogMentionIndex,
+    *,
+    text_projection: Callable[[dict[str, Any]], dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     output = []
     for record in records:
         enriched = dict(record)
-        enriched["catalogMentions"] = catalog_mentions(record, index)
+        matching_record = text_projection(record) if text_projection else None
+        enriched["catalogMentions"] = catalog_mentions(record, index, matching_record)
         output.append(enriched)
     return sorted(output, key=lambda record: record["id"])

@@ -148,6 +148,22 @@ def _strip_description(description: str, source_policy: SourceStripPolicy) -> tu
     return text, removed
 
 
+def job_specific_text_projection(record: dict, policy: FirstPartyPolicy) -> dict:
+    """Return matching-only title/description text with reviewed boilerplate removed."""
+    projected = dict(record)
+    if not record.get("firstParty"):
+        return projected
+    source_policy = policy.source_policies.get(str(record.get("sourceDataset") or ""))
+    if source_policy is None:
+        projected["title"] = ""
+        projected["description"] = ""
+        return projected
+    projected["description"] = _strip_description(
+        str(record.get("description") or ""), source_policy
+    )[0]
+    return projected
+
+
 def classify_first_party_record(
     record: dict,
     base_terms: list[MatchTerm],
@@ -157,9 +173,11 @@ def classify_first_party_record(
     if not record.get("firstParty"):
         raise FirstPartyPolicyError("first-party classifier received a non-first-party record")
     source_uri = str(record.get("sourceDataset") or "")
-    source_policy = policy.source_policies.get(
-        source_uri, SourceStripPolicy((), (), frozenset())
-    )
+    source_policy = policy.source_policies.get(source_uri)
+    if source_policy is None:
+        raise FirstPartyPolicyError(
+            f"first-party source {source_uri or '<missing>'} has no text projection policy"
+        )
     working = {field: record.get(field) for field in FIELD_ORDER}
     stripped_description, stripped_spans = _strip_description(
         str(record.get("description") or ""), source_policy
