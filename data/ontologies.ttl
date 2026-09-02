@@ -14881,12 +14881,12 @@
     okg:wikidataId <https://www.wikidata.org/wiki/Q99543645> .
 
 <https://openknowledgegraphs.com/resource/general-formal-ontology/> a okg:Ontology ;
-    rdfs:label "General formal ontology" ;
+    rdfs:label "General Formal Ontology" ;
     okg:alias "GFO" ;
     okg:category okg:GeneralCrossDomain ;
     okg:homepage <http://www.onto-med.de/ontologies/gfo> ;
     okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
-    okg:title "General formal ontology" ;
+    okg:title "General Formal Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q5532347> .
 
 <https://openknowledgegraphs.com/resource/general-multilingual-environmental-thesaurus/> a okg:ControlledVocabulary ;

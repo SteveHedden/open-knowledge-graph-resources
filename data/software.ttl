@@ -4765,14 +4765,14 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:hasLicense okg:License_Apache_License_Q616526,
         okg:License_Business_Source_License_1_1_Q121359688 ;
     okg:homepage <https://surrealdb.com> ;
-    okg:latestVersion "3.2.4" ;
+    okg:latestVersion "3.1.6" ;
     okg:programmingLanguage "Rust" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/arangodb/>,
         <https://openknowledgegraphs.com/software/arcadedb/>,
         <https://openknowledgegraphs.com/software/flockdb/>,
         <https://openknowledgegraphs.com/software/nitrosbase/>,
         <https://openknowledgegraphs.com/software/orientdb/> ;
-    okg:releaseDate "2026-08-17"^^xsd:date ;
+    okg:releaseDate "2026-09-01"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/surrealdb/surrealdb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q137916409>,
