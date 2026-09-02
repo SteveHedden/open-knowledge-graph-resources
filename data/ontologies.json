@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T08:28:35Z",
+  "generatedAt": "2026-09-02T11:33:45Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -3663,6 +3663,17 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
         }
       ]
+    },
+    {
+      "title": "Borhan Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141247525",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/borhan-ontology/",
+      "description": "upper ontology",
+      "aliases": [],
+      "category": "General / Cross-domain"
     },
     {
       "title": "boshra",
@@ -13954,7 +13965,7 @@
         "GSO"
       ],
       "category": "Environment & Agriculture",
-      "sourceRepo": "https://github.com/Loop3D/GKM/",
+      "sourceRepo": "https://github.com/Loop3D/GKM",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
       ]
@@ -39919,10 +39930,13 @@
       "title": "Semantic Types Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q138494225",
       "types": [
-        "KnowledgeGraph"
+        "KnowledgeGraph",
+        "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138494225/",
-      "aliases": [],
+      "aliases": [
+        "STY"
+      ],
       "category": "General / Cross-domain",
       "homepage": "https://bioportal.bioontology.org/ontologies/STY",
       "partOf": "BLOD: Biomedical Linked Open Datasets"

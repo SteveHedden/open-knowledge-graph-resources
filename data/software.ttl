@@ -1260,9 +1260,9 @@
     okg:description "fast, portable (JVM/JS/native), and robust implementation of the LinkML data modeling framework" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://linkml.neverblink.eu/> ;
-    okg:latestVersion "0.14.0" ;
+    okg:latestVersion "0.15.1" ;
     okg:programmingLanguage "Scala" ;
-    okg:releaseDate "2026-08-21"^^xsd:date ;
+    okg:releaseDate "2026-09-01"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/NeverBlink-OSS/linkml-scala> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -1469,8 +1469,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.6.0" ;
-    okg:releaseDate "2026-08-25"^^xsd:date ;
+    okg:latestVersion "2.7.2" ;
+    okg:releaseDate "2026-09-01"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1580,9 +1580,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.12.5" ;
+    okg:latestVersion "0.13.0" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-19"^^xsd:date ;
+    okg:releaseDate "2026-08-29"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1607,9 +1607,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
-    okg:latestVersion "0.8.0" ;
+    okg:latestVersion "0.11.0" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-21"^^xsd:date ;
+    okg:releaseDate "2026-08-29"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1859,9 +1859,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://oxigraph.org> ;
-    okg:latestVersion "0.5.9" ;
+    okg:latestVersion "0.5.10" ;
     okg:programmingLanguage "Rust" ;
-    okg:releaseDate "2026-06-18"^^xsd:date ;
+    okg:releaseDate "2026-08-30"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/oxigraph/oxigraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -2403,9 +2403,9 @@
     okg:description "RML-compliant engine for constructing RDF knowledge graphs from heterogeneous data" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://doi.org/10.5281/zenodo.3872103> ;
-    okg:latestVersion "4.7.5.15.1" ;
+    okg:latestVersion "4.7.5.15.2" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-07-31"^^xsd:date ;
+    okg:releaseDate "2026-08-31"^^xsd:date ;
     okg:softwareType okg:DataMappingETL ;
     okg:sourceRepo <https://github.com/SDM-TIB/SDM-RDFizer> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -2432,8 +2432,8 @@
     okg:description "Open-source framework for building knowledge graphs from unstructured data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://hawksight-ai.github.io/semantica/> ;
-    okg:latestVersion "0.6.6" ;
-    okg:releaseDate "2026-08-20"^^xsd:date ;
+    okg:latestVersion "0.6.7" ;
+    okg:releaseDate "2026-08-28"^^xsd:date ;
     okg:softwareType okg:KnowledgeGraphConstruction ;
     okg:sourceRepo <https://github.com/semantica-agi/semantica> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;

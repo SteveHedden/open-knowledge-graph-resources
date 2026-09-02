@@ -1509,6 +1509,16 @@
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118265> .
 
+<https://openknowledgegraphs.com/resource/borhan-ontology/> a okg:Ontology ;
+    rdfs:label "Borhan Ontology" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "upper ontology" ;
+    okg:sourceType <http://www.wikidata.org/entity/Q3882785> ;
+    okg:title "Borhan Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q111650164>,
+        <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141247525> .
+
 <https://openknowledgegraphs.com/resource/brazilian-national-registry-of-health-facilities/> a okg:ControlledVocabulary ;
     rdfs:label "Brazilian National Registry of Health Facilities" ;
     okg:alias "CNES",
@@ -6505,13 +6515,16 @@
     okg:title "Radiation Oncology Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138494125> .
 
-<https://openknowledgegraphs.com/resource/en-q138494225/> a okg:KnowledgeGraph ;
+<https://openknowledgegraphs.com/resource/en-q138494225/> a okg:KnowledgeGraph,
+        okg:Ontology ;
     rdfs:label "Semantic Types Ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
+    okg:alias "STY" ;
     okg:category okg:GeneralCrossDomain ;
     okg:homepage <https://bioportal.bioontology.org/ontologies/STY> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Semantic Types Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138494225> .
 
@@ -15015,7 +15028,7 @@
     okg:alias "GSO" ;
     okg:category okg:EnvironmentAgriculture ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:sourceRepo <https://github.com/Loop3D/GKM/> ;
+    okg:sourceRepo <https://github.com/Loop3D/GKM> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
     okg:title "GeoScience Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q141222183> .
