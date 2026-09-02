@@ -976,7 +976,7 @@
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 165,
+        "totalCount": 169,
         "updatedAt": 1788082288
       }
     },
@@ -1374,6 +1374,54 @@
               2
             ],
             "title": "Semantic Data Engineer"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/aptive/jobs/senior-health-informatics-standards-and-interoperability-consultant",
+            "categories": [
+              "Health-Informatics",
+              "Healthcare-Interoperability",
+              "Clinical-Informatics",
+              "Standards-Consulting",
+              "Veteran-Health-Consulting-Roles-On-VHA-Projects",
+              "Senior-Healthcare-Technology-Consultant",
+              "Health-Informatics-Consultant",
+              "Healthcare-Informatics-Consultant",
+              "Healthcare-Interoperability-Analyst",
+              "Senior-Clinical-Informatics-Specialist",
+              "Healthcare-Interoperability-Engineer",
+              "Clinical-Informatics-Consultant",
+              "Senior-Healthcare-IT-Specialist"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/l2darzf67rcc8e6bcb630jespoqj",
+            "companyName": "Aptive",
+            "companySlug": "aptive",
+            "currency": null,
+            "description": "<h3>Job Summary</h3><p><strong>Senior Health Informatics Standards and Interoperability Consultant</strong></p><p><a href=\"https://himalayas.app/companies/aptive\">Aptive</a> is seeking a Senior Health Informatics Standards and Interoperability Consultant to support the Veterans Health Administration (VHA) Office of Health Informatics (OHI), Clinical Informatics and Data Management Office (OCI), in advancing the enterprise standard of care through standardized, semantically consistent, and reliably exchanged health data across 170+ VA Medical Centers.</p><p>This role spans both the meaning of clinical data and the movement of it. You will develop the semantic infrastructure (metadata, ontology standards, terminology tooling, and knowledge management resources) that governs how clinical concepts are represented, and you will provide expert oversight across healthcare integration standards, standards implementation, data integration, systems integration, data modeling, and data warehousing. You will serve as the formal liaison and advisor between VHA architecture and analysis teams and standards bodies such as HL7, and provide expert guidance on scientific and medical informatics domains.</p><p>Work on this program is organized under the Scaled Agile Framework (SAFe). Semantic models, integration designs, data models, and analytical products are delivered as Features within quarterly Planning Intervals, demonstrated to the government on a two-week cadence, and tracked in Jira and Jira Align. The ideal candidate brings a decade of analysis and management experience in the health sciences, deep ontology and interoperability expertise, and the judgment to set technical direction that others will build against.</p><h3>Primary Responsibilities</h3><ul>\n<li>\n<strong>Semantic Infrastructure Development.</strong> Develop and maintain the semantic infrastructure supporting enterprise clinical data, including metadata, ontology standards, information models, reference data, and value sets used in the classification and standardization of clinical and medical data.</li>\n<li>\n<strong>Ontology Design and Governance.</strong> Design, extend, and govern ontologies and controlled vocabularies; establish modeling conventions, hierarchies, and post-coordination rules; and evaluate ontology quality, internal consistency, and fitness for intended use.</li>\n<li>\n<strong>Semantic Interoperability.</strong> Apply semantic interoperability concepts so clinical data can be exchanged and reused across systems without loss of meaning; develop, test, and validate mappings and crosswalks between local, national, and international code systems.</li>\n<li>\n<strong>Knowledge Management.</strong> Build and maintain knowledge management resources such as wikis, knowledge bases, data dictionaries, modeling guides, and decision repositories so that semantic and architectural decisions remain discoverable, auditable, and reusable.</li>\n<li>\n<strong>Healthcare Integration Standards Oversight.</strong> Provide expert oversight of healthcare integration standards across the program; establish which standards apply to which exchange scenarios, resolve conflicting interpretations, and set the technical direction that engineering and analysis teams build against.</li>\n<li>\n<strong>Standards Implementation.</strong> Guide implementation of HL7 v2, C-CDA, FHIR, SNOMED CT, LOINC, RxNorm, and CDISC; review interface specifications, conformance profiles, and implementation guides; and validate that delivered work conforms to both the standard and VHA requirements.</li>\n<li>\n<strong>Data Integration.</strong> Direct the design and oversight of data integration across clinical, administrative, and ancillary source systems; define transformation, reconciliation, and error-handling approaches; and assess integration quality, completeness, and semantic fidelity end to end.</li>\n<li>\n<strong>Systems Integration.</strong> Oversee integration between enterprise health systems and downstream consumers; evaluate interface engines, messaging patterns, and API strategies; and identify dependencies, failure modes, and performance constraints before they reach production.</li>\n<li>\n<strong>Data Modeling.</strong> Lead logical and physical data modeling for health information assets; govern model conventions, keys, and lineage; and ensure models support both operational exchange and downstream analytic use without rework.</li>\n<li>\n<strong>Data Warehousing.</strong> Provide oversight of health data warehouse design and evolution, including source-to-target mapping, dimensional and normalized modeling approaches, historization, and the controls needed to keep warehoused data trustworthy for reporting and decision support.</li>\n<li>\n<strong>High-Level Analysis.</strong> Perform high-level analytical duties on complex informatics, integration, and information management problems; evaluate options against cost, risk, and mission impact; and produce defensible recommendations for government decision-makers.</li>\n<li>\n<strong>Standards Body Liaison.</strong> Serve as liaison and advisor between the architecture and analysis team and standards bodies such as HL7, SNOMED International, and CDISC; track ballots, releases, and emerging specifications; represent VHA technical interests; and translate standards activity into concrete program guidance.</li>\n<li>\n<strong>Expert Domain Guidance.</strong> Provide expert guidance on scientific and medical informatics domains to clinical subject matter experts, engineers, data architects, and governance bodies, translating technical constraints into decisions leadership can act on.</li>\n<li>\n<strong>Leadership and Training in Health Standards.</strong> Provide leadership and training in health standards to architects, analysts, engineers, and clinical stakeholders; build reference materials and reusable guidance; and raise the standards fluency of the teams you support.</li>\n<li>\n<strong>Feature Delivery.</strong> Translate government-provided problem statements into epics, features, user stories, acceptance criteria, and non-functional requirements for semantic, integration, modeling, and warehousing work prioritized in Planning Interval planning.</li>\n<li>\n<strong>Agile Team Participation.</strong> Serve as the senior informatics and standards authority on interdisciplinary agile teams; participate in daily stand-ups, iteration planning, PI planning, retrospectives, roadmap updates, and biweekly demonstration ceremonies.</li>\n<li>\n<strong>Documentation and Artifacts.</strong> Produce information models, architecture depictions, interface specifications, mapping documents, data dictionaries, and technical documentation to a standard that supports government acceptance, audit, and reuse across teams.</li>\n<li>\n<strong>Risk, Quality, and Stakeholder Engagement.</strong> Identify, document, and track risks and issues related to data standards, terminology currency, integration, and semantic integrity; maintain risk registers; and engage stakeholders across VHACO, VISNs, VAMCs, OIT, and partner organizations to support change management for standards and integration decisions.</li>\n</ul><h3>Minimum Qualifications</h3><ul>\n<li>Master's degree in health or biomedical informatics, information or computer science, library and information science, a clinical discipline, or a related field.</li>\n<li>10 years of analysis and/or management experience in one or more of the disciplines associated with the health sciences.</li>\n<li>Within that experience, a minimum of 5 years in ontology and semantic interoperability concepts related to clinical or medical data classification and standardization.</li>\n<li>Demonstrated experience working with standards bodies or standards such as SNOMED, CDISC, HL7, and ASCO.</li>\n<li>Demonstrated experience developing semantic infrastructure, including metadata, ontology standards, terminology tooling, and knowledge management resources.</li>\n<li>Expert-level command of healthcare integration standards and standards implementation, including HL7 v2, C-CDA, and FHIR.</li>\n<li>Demonstrated depth across data integration, systems integration, data modeling, and data warehousing sufficient to provide oversight rather than execution alone.</li>\n<li>Experience performing high-level analytical duties on complex health information problems.</li>\n<li>Experience serving as a liaison or advisor between technical teams and health standards bodies such as HL7.</li>\n<li>Demonstrated ability to provide leadership and training in health standards to technical and non-technical audiences.</li>\n<li>Experience working in an Agile or Scaled Agile Framework (SAFe) environment, including backlog management and delivery tracking in Jira and/or Jira Align.</li>\n<li>Proficiency with Microsoft Office 365, including advanced Excel; familiarity with Power BI and the Power Platform.</li>\n<li>Strong written and verbal communication skills, with the ability to brief technical, clinical, and executive stakeholders and produce decision-quality documentation.</li>\n<li>Ability to work independently, manage multiple concurrent priorities, and deliver on a fixed iteration and Planning Interval cadence.</li>\n<li>Ability to obtain and maintain a public trust clearance.</li>\n<li>Position is located within the United States; legal authorization to work in the U.S. is required.</li>\n</ul><h3>Desired Qualifications</h3><ul>\n<li>Doctoral-level degree (PhD, MD, DO, PharmD) in a health science or informatics discipline.</li>\n<li>Clinical background such as physician, nurse, pharmacist, or allied health professional, with the ability to validate semantic and integration decisions against real clinical practice.</li>\n<li>HL7 certification (v2.x Control Specialist, CDA Specialist, or FHIR Proficiency) or SNOMED CT certification.</li>\n<li>Active participation in HL7, SNOMED International, LOINC, or CDISC work groups, ballot cycles, or connectathons.</li>\n<li>Hands-on experience with terminology and ontology tooling such as Apelon DTS, Protégé, Snowstorm, Ontoserver, or TermSpace.</li>\n<li>Hands-on experience with interface engines and integration platforms such as Mirth Connect, Rhapsody, or InterSystems.</li>\n<li>Experience with FHIR profiling and US Core, FHIR terminology service operations, and value set authoring or publication in VSAC.</li>\n<li>Experience with IHE profiles, national interoperability frameworks such as TEFCA, or health information exchange operations at scale.</li>\n<li>Experience with common data models or research data standards such as OMOP, i2b2, or CDISC SDTM and CDASH.</li>\n<li>Direct VA or VHA experience, including work with OHI, OCI, CPMO, EHRM, Corporate Data Warehouse (CDW), or VistA/CPRS.</li>\n<li>Hands-on experience with Oracle Health (Cerner Millennium) reference data, code sets, or interface configuration.</li>\n<li>Experience with knowledge representation technologies such as RDF, OWL, and SPARQL.</li>\n<li>Experience supporting data governance, master data management, or patient identity and record matching in a large health system.</li>\n<li>Experience mentoring or providing technical direction to informaticists, architects, and integration engineers.</li>\n</ul><h3>About <a href=\"https://himalayas.app/companies/aptive\">Aptive</a>\n</h3><p>About <a href=\"https://himalayas.app/companies/aptive\">Aptive</a>. <a href=\"https://himalayas.app/companies/aptive\">Aptive</a> partners with federal agencies to achieve their missions through improved performance, streamlined operations and enhanced service delivery. Based in Alexandria, Virginia, we support more than a dozen agencies including Veterans Affairs, Transportation, Defense, Homeland Security and the National Science Foundation. We specialize in applying technology, creativity and human-centered services to optimize mission delivery and improve experiences for millions of people who count on government services every day. Founded: 2012. Employees: 300+ nationwide.</p><h3>EEO Statement</h3><p><a href=\"https://himalayas.app/companies/aptive\">Aptive</a> is an equal opportunity employer. We consider all qualified applicants for employment without regard to race, color, national origin, religion, creed, sex, sexual orientation, gender identity, marital status, parental status, veteran status, age, disability, or any other protected class. Veterans, members of the Reserve and National Guard, and transitioning active-duty service members are highly encouraged to apply. About <a href=\"https://himalayas.app/companies/aptive\">Aptive</a>: <a href=\"https://himalayas.app/companies/aptive\">Aptive</a> partners with federal agencies to achieve their missions through improved performance, streamlined operations and enhanced service delivery. Based in Alexandria, Virginia, we support more than a dozen agencies including Veterans Affairs, Transportation, Defense, Homeland Security and the National Science Foundation. We specialize in applying technology, creativity and human-centered services to optimize mission delivery and improve experiences for millions of people who count on government services every day. Founded: 2012. Employees: 300+ nationwide.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "Job SummarySenior Health Informatics Standards and Interoperability Consultant Aptive is seeking a Senior Health Informatics Standards and Interoperability Consultant to support the Veterans Health Administration (VHA) Office of Health Informatics (OHI), Clinical Informatics and Data Management Office (OCI), in advancing the enterprise standard of care through standardized, semantically consistent, and reliably exchanged health data across 170+ VA Medical Centers.",
+            "expiryDate": 1793442875,
+            "guid": "https://himalayas.app/companies/aptive/jobs/senior-health-informatics-standards-and-interoperability-consultant",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [],
+            "pubDate": 1788258876,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "title": "Senior Health Informatics Standards and Interoperability Consultant"
           },
           {
             "applicationLink": "https://himalayas.app/companies/sayari/jobs/general-interest",
@@ -1901,8 +1949,8 @@
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 59,
-        "updatedAt": 1788069830
+        "totalCount": 60,
+        "updatedAt": 1788258876
       }
     },
     {
@@ -2708,51 +2756,6 @@
             "title": "Senior Software Developer"
           },
           {
-            "applicationLink": "https://himalayas.app/companies/abacus-consulting/jobs/senior-developer",
-            "categories": [
-              "Senior-Developer",
-              "Full-Stack-Developer",
-              "React-Developer",
-              "Frontend-Development",
-              "Backend-Development",
-              "Senior-Software-Developer",
-              "Senior-Developer-Jobs",
-              "Senior-Developer-Roles",
-              "Senior-Software-Development",
-              "Senior-Web-Developer",
-              "Senior-Application-Developer",
-              "Senior-Product-Developer",
-              "Senior-Programmer",
-              "Senior-Technical-Developer"
-            ],
-            "companyLogo": "",
-            "companyName": "Abacus Consulting",
-            "companySlug": "abacus-consulting",
-            "currency": "USD",
-            "description": "<h3>Role Summary</h3><p>The Senior Developer will be responsible for managing both front-end and back-end development processes implementing solutions from conception to final product according to business needs. The senior developer is required to implement and oversee the design, develop and maintenance of fully-fledged and functioning platforms</p><h3>Key Responsibilities</h3><ul><li>Work within a Software Development team, following Agile development methodologies.</li></ul><ul><li>Work with Project management and solution architects to estimate and scope out projects.</li></ul><ul><li>Work with Creative team during planning, discovery, and production phase.</li></ul><ul><li>Work with both front-end and back-end development teams to create and optimize solutions.</li></ul><ul><li>Optimizing code for performance.</li></ul><ul><li>Comment code and produce documentation to industry standards as needed.</li></ul><ul><li>Produce code to the highest standards while adhering to industry accepted architecture and design pattern techniques and methodologies (e.g., MVC, SOA, OOP, DI etc.)</li></ul><ul><li>Defining and developing API's.</li></ul><ul><li>Contribute to the analysis and design of software products and tools.</li></ul><ul><li>Evaluate and advise on the technical feasibility.</li></ul><ul><li>Create quality prototypes for a clearer understanding of UI designs.</li></ul><ul><li>Test and confirm software is fit for purpose with intended audiences.</li></ul><ul><li>Recommend and implement refinements and improvements.</li></ul><ul><li>Follow formal Software Engineering best-practices.</li></ul><ul><li>Mentoring and guiding team members</li></ul><ul><li>Monitoring and measuring customer experience and KPIs </li></ul><ul><li>Managing periodic reporting on the progress to the management and the customer</li></ul><h3>Qualifications</h3><ul><li>Bachelor's degree in computer science, engineering, or equivalent experience</li></ul><p><strong>Experience</strong></p><ul><li>At least 6+ years of experience in building Applications</li></ul><ul><li>At least 4+ years of experience with React, TypeScript</li></ul><ul><li>Good understanding of OOPs concepts.</li></ul><ul><li>Strong hands-on knowledge on HTML5, CSS3, ES6+</li></ul><ul><li>Strong understanding of the React Virtual DOM, JSX and API</li></ul><ul><li>Hands on experience on REST APIs, GraphQL and WebSocket</li></ul><ul><li>Experience with a State-management framework like Redux (with middleware) or MobX</li></ul><ul><li>Understanding of cloud-based technologies, Azure, SQL and relational databases, SOAP and REST Web-Services, JSON, XML, MSAL.</li></ul><ul><li>Comfortable with concepts like Container/Presentation components, Higher Order Components</li></ul><ul><li>Worked with UI libraries like Material-UI, Semantic UI, Bootstrap or similar</li></ul><ul><li>Good understanding of CSS in JS, aka scoped-css or Styled Components</li></ul><ul><li>Unit testing with Karma + Mocha or Jest</li></ul><ul><li>Experience on working with frontend build systems and automating the same using Grunt / Gulp</li></ul><ul><li>Experience on MVC frameworks (Backbone.js, or similar) and knowledge of common JavaScript design patterns will be good to have</li></ul><ul><li>Experience of working with server-side JavaScript frameworks based on Node.js </li></ul><ul><li>Exposure to Style Guides, Atomic Design</li></ul><ul><li>Exposure to Scrum and Agile methodologies.</li></ul><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "Role SummaryThe Senior Developer will be responsible for managing both front-end and back-end development processes implementing solutions from conception to final product according to business needs.",
-            "expiryDate": 1788312931,
-            "guid": "https://himalayas.app/companies/abacus-consulting/jobs/senior-developer",
-            "locationRestrictions": [
-              "Pakistan"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [
-              "Developer"
-            ],
-            "pubDate": 1785789134,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              5
-            ],
-            "title": "Senior Developer"
-          },
-          {
             "applicationLink": "https://himalayas.app/companies/liatrio/jobs/senior-application-modernization-engineer",
             "categories": [
               "Full-Stack-Developer",
@@ -2802,11 +2805,61 @@
               14
             ],
             "title": "Senior Application Modernization Engineer"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/xsolla/jobs/tech-lead-frontend-platform-team",
+            "categories": [
+              "Software-Engineer",
+              "Frontend-Engineer",
+              "Frontend-Development",
+              "Technical-Lead",
+              "Engineering-Management",
+              "Web-Development",
+              "Frontend-Tech-Lead",
+              "Tech-Lead-Front-End",
+              "Frontend-Engineering-Team-Lead",
+              "Frontend-Team-Lead-(Angular)",
+              "Lead-Web-Platform-Engineer",
+              "Platform-Tech-Lead",
+              "Lead-Frontend-Developer",
+              "Frontend-Lead-Developer"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/7vgihn46xneh0fp0rtrhg9hq8m63",
+            "companyName": "Xsolla",
+            "companySlug": "xsolla",
+            "currency": "CAD",
+            "description": "<h3>ABOUT YOU</h3><div>We are looking for a Tech Lead for the Frontend Platform Team provides technical leadership for <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a>’s core platform responsible for powering all user-facing experiences. This role combines deep engineering expertise with people leadership, guiding a team of approximately eight developers. The Tech Lead shapes the platform’s architecture, improves developer workflows, and ensures high-quality, scalable solutions that support storefronts, widgets, and other monetization-focused experiences used across the <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> ecosystem. </div><div>This position requires strong frontend and platform-level experience, the ability to lead complex technical initiatives, and the capability to support predictable, reliable delivery.</div><h3>ABOUT US</h3><div>\n<a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> is a global commerce company with robust tools and services to help developers solve the inherent challenges of the video game industry. From indie to AAA, companies partner with <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> to help them fund, distribute, market, and monetize their games. Grounded in the belief in the future of video games, <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> is resolute in the mission to bring opportunities together, and continually make new resources available to creators. Headquartered and incorporated in Los Angeles, California, <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> operates as the merchant of record and has helped over 1,500+ game developers to reach more players and grow their businesses around the world. With more paths to profits and ways to win, developers have all the things needed to enjoy the game.</div><div>For more information, visit xsolla.com.</div><h3>Responsibilities:</h3><ul>\n<li>Provide technical leadership for the <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> frontend platform, defining architecture, coding standards, and long-term technical direction.</li>\n<li>Coach, mentor, and manage a team of ~8 developers, supporting professional growth and maintaining a strong engineering culture.</li>\n<li>Partner closely with the other Tech Leads working on the same platform to ensure architectural alignment, consistent standards, and unified decision-making.</li>\n<li>Oversee planning and execution of platform features and improvements, ensuring smooth delivery and high-quality outcomes.</li>\n<li>Drive modernization, refactoring, and performance enhancements to keep the platform scalable, maintainable, and aligned with product goals.</li>\n<li>Establish and enforce engineering best practices across coding, documentation, testing, and review processes.</li>\n<li>Collaborate with product managers, designers, backend engineers, and platform teams to deliver cohesive partner-facing experiences.</li>\n<li>Ensure strong automated test coverage and reliable CI/CD workflows that reduce manual effort and improve delivery predictability.</li>\n<li>Leverage automation and AI-assisted tooling to accelerate development, improve consistency, and increase developer velocity.</li>\n<li>Own operational excellence, including incident response, root-cause analysis, and long-term reliability improvements.</li>\n<li>Advocate for scalability, performance, security, and observability across the platform’s architecture and tooling.</li>\n<li>Identify technical risks, estimate complexity, and communicate trade-offs to leadership and stakeholders.</li>\n<li>Foster alignment with other engineering teams on shared services, APIs, rendering pipelines, and platform interfaces.</li>\n</ul><h3>Qualifications &amp; Skills:</h3><ul>\n<li>8+ years of software development experience with strong expertise in modern frontend engineering at scale. At  least 3 years in a similar tech lead role.</li>\n<li>Deep hands-on knowledge of React including component architecture, SSR patterns, RSC, and complex UI data flows.</li>\n<li>Proficiency with  and MongoDB for server-side functionality.</li>\n<li>Strong understanding of modern styling systems and theming approaches (vanilla-extract, styled-components, design tokens).</li>\n<li>Solid TypeScript practices, including strict typing, shared contracts, and schema validation (Zod or equivalent).</li>\n<li>Experience with Module Federation</li>\n<li>Good understanding of bundling and compilation, experience with webpack/rollup/vite/esbuild.</li>\n<li>Experience with automated testing frameworks (Vitest/Jest) and end-to-end testing (Playwright/Cypress).</li>\n<li>Good understanding of backend integration patterns (REST, GraphQL, RPC-style APIs).</li>\n<li>Experience with CI/CD workflows (GitLab CI or similar), private registries, and secure artifact handling.</li>\n<li>Proven ability to lead engineers, own architectural decisions, and manage delivery for complex platform projects.</li>\n</ul><h3>Nice to Have: </h3><ul>\n<li>Experience building platforms or tooling used across multiple frontend teams (design systems, template engines, configuration frameworks). Experience with react-native/mobile experience</li>\n<li>Knowledge of performance optimization strategies for client-side and server-side rendering.</li>\n<li>Understanding of accessibility, internationalization, and semantic UI design best practices.</li>\n<li>Experience developing SDKs, CLI tools, or developer-facing automation.</li>\n<li>Familiarity with event-driven UI flows, real-time interfaces, or edge-rendering strategies.</li>\n<li>Background improving developer platforms, observability stacks, or performance monitoring systems.</li>\n<li>Comfort with UI-as-data approaches and leveraging AI-assisted/no-code tooling to accelerate feature delivery.</li>\n</ul><div><strong>Benefits:We are passionate about fostering a supportive environment for our team, so we prioritize the physical, mental, and emotional well-being of our employees and their families through a comprehensive Benefits Program. This includes medical, dental, and vision, PTO, and a personalized career roadmap for each employee. By investing in professional development through training and educational opportunities, we ensure that our team thrives both personally and professionally. Together, we’re not just building a business; we’re cultivating a community that values creativity, collaboration, and the transformative power of play. </strong></div><h3><strong>Equal Employment Opportunity Statement:</strong></h3><div><strong><a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based on race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, or any other characteristic protected by law.</strong></div><div><strong>We consider qualified applicants with criminal histories in accordance with the Fair Chance Act.</strong></div><h3><strong>Criminal History Consideration:</strong></h3><div><strong>For the Tech Lead - Frontend Platform Team, we will conduct a background check that may include the following:</strong></div><div><strong>Criminal history check</strong></div><div><strong>Employment verification</strong></div><div><strong>Education verification</strong></div><h3><strong>Relevance to Job Responsibilities:</strong></h3><div><strong>The background check is relevant to this position because of the following role responsibilities:</strong></div><div><strong>Accessing confidential company data</strong></div><div><strong>Ensuring compliance with regulatory requirements</strong></div><div><strong>Handling sensitive financial information/managing budgets/accessing funds</strong></div><h3><strong>Rights Under the Fair Chance Act:</strong></h3><div><strong>Applicants are encouraged to inquire about their rights under the Fair Chance Act. If you have questions regarding our hiring practices, please contact .</strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "ABOUT YOUWe are looking for a Tech Lead for the Frontend Platform Team provides technical leadership for Xsolla’s core platform responsible for powering all user-facing experiences.",
+            "expiryDate": 1788341538,
+            "guid": "https://himalayas.app/companies/xsolla/jobs/tech-lead-frontend-platform-team",
+            "locationRestrictions": [
+              "Canada"
+            ],
+            "maxSalary": 150000,
+            "minSalary": 130000,
+            "parentCategories": [
+              "Developer"
+            ],
+            "pubDate": 1783157539,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "timezoneRestrictions": [
+              -8,
+              -7,
+              -6,
+              -5,
+              -4,
+              -3.5
+            ],
+            "title": "Tech Lead – Frontend Platform Team"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 22,
+        "totalCount": 21,
         "updatedAt": 1788078287
       }
     },
