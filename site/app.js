@@ -359,12 +359,13 @@
     window.history[method]({}, "", nextUrl);
   }
 
-  async function fetchJsonWithFallback(paths) {
+  async function fetchJsonWithFallback(paths, options = {}) {
     let lastError = null;
 
     for (const path of paths) {
       try {
         const response = await window.fetch(path, {
+          ...options,
           headers: { Accept: "application/json" },
         });
         if (!response.ok) {
@@ -1749,7 +1750,10 @@
         fetchJsonWithFallback(DATA_PATHS.controlledVocabularies),
         fetchJsonWithFallback(DATA_PATHS.pageQids),
         fetchJsonWithFallback(DATA_PATHS.manifest),
-        fetchJsonWithFallback(DATA_PATHS.jobs),
+        // Jobs refresh independently of the catalog generation. Revalidate
+        // its ETag on every page load so a previously cached snapshot cannot
+        // survive a successful jobs publication.
+        fetchJsonWithFallback(DATA_PATHS.jobs, { cache: "no-cache" }),
       ]);
 
     if (vocabularyResult.status === "fulfilled") {

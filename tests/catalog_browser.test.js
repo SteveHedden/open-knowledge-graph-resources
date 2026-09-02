@@ -440,6 +440,7 @@ async function createApp({ payloads, failures = [], width = 1200, search = "" })
   const { document } = buildDocument();
   const media = makeMedia(width);
   const listeners = new Map();
+  const fetchRequests = [];
   const location = { pathname: "/", search };
   Object.defineProperty(location, "href", {
     get() {
@@ -466,7 +467,8 @@ async function createApp({ payloads, failures = [], width = 1200, search = "" })
     dispatchEvent(event) {
       for (const listener of listeners.get(event.type) || []) listener(event);
     },
-    async fetch(requestPath) {
+    async fetch(requestPath, options = {}) {
+      fetchRequests.push({ path: requestPath, options });
       const name = path.basename(requestPath, ".json");
       if (failures.includes(name) || !(name in payloads)) {
         return { ok: false, status: 404, async json() { return {}; } };
@@ -493,8 +495,18 @@ async function createApp({ payloads, failures = [], width = 1200, search = "" })
       break;
     }
   }
-  return { document, window, media };
+  return { document, window, media, fetchRequests };
 }
+
+test("jobs payload revalidates independently of the catalog cache", async () => {
+  const payloads = defaultPayloads([], []);
+  const app = await createApp({ payloads });
+  const jobsRequest = app.fetchRequests.find((request) =>
+    request.path.endsWith("/data/jobs/jobs.json")
+  );
+  assert.ok(jobsRequest);
+  assert.equal(jobsRequest.options.cache, "no-cache");
+});
 
 function recordCount(element) {
   return descendants(element).filter((node) => node.dataset.record === "true").length;
