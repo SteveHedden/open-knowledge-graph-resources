@@ -976,7 +976,7 @@
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 169,
+        "totalCount": 168,
         "updatedAt": 1788082288
       }
     },
@@ -1847,109 +1847,11 @@
               14
             ],
             "title": "Forward Deployed Engineer"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/crowdstrike/jobs/sr-software-engineer-vendor-semantics-and-developer-experience-8770560755",
-            "categories": [
-              "Software-Engineer",
-              "API-Engineering",
-              "Developer-Experience-Engineering",
-              "Backend-Engineering",
-              "Senior-Developer-Experience-Engineer",
-              "Senior-Developer-Experience-Platform-Engineer",
-              "Senior-Developer-Platform-Engineer",
-              "Senior-Developer-Relations-Engineer",
-              "Senior-Developer-Tools-Engineer"
-            ],
-            "companyLogo": "https://cdn-images.himalayas.app/95gzgg20hqvtq04pae5z2598mdmo",
-            "companyName": "Crowdstrike",
-            "companySlug": "crowdstrike",
-            "currency": "USD",
-            "description": "<p>As a global leader in cybersecurity, CrowdStrike protects the people, processes and technologies that drive modern organizations. Since 2011, our mission hasn’t changed — we’re here to stop breaches, and we’ve redefined modern security with the world’s most advanced AI-native platform. We work on large scale distributed systems, processing almost 3 trillion events per day and this traffic is growing daily. Our customers span all industries, and they count on CrowdStrike to keep their businesses running, their communities safe and their lives moving forward. We're proud to work for a mission-driven company leveraging AI to transform the way we work. CrowdStrikers drive their careers through flexibility and autonomy while also being expected to contribute to a culture of responsible AI adoption, experimentation, and innovation. We use an AI-first mindset as a force multiplier to proactively and continuously accelerate execution, build expertise, uncover insights, and solve complex problems. We’re always looking to add talented CrowdStrikers to the team who have limitless passion, a relentless focus on innovation and a fanatical commitment to our customers, our community and each other. Ready to join a mission that matters? The future of cybersecurity starts with you.</p><br><h3><b>About the Role:</b></h3><p>As the Senior Software Engineer, Vendor Semantics &amp; Developer Experience, you will be the primary builder of a system that treats global infrastructure as a formal graph, where every node and edge is traced back to a versioned source of truth. Our Ontologists design the formal architecture of what truth looks like. Our Knowledge Engineers build the frameworks and transformation engines that make that truth computable. You are the engineer who keeps that system honest and keeps it usable.</p><p>Your domain is vendor semantic data: the OpenAPI, Swagger, and Smithy specifications that describe what cloud providers, security tools, and infrastructure platforms expose to the world. You build the systems that parse, track, validate, and canonicalize that information into a reliable source of truth. And you build the developer tooling that makes it possible for downstream product and ingest teams to work confidently against that truth.</p><p>This role is for someone who cares deeply about correctness, not just \"does the code run\" but \"does the model mean what we think it means\", and who understands that great internal tooling is a force multiplier for every team that touches this platform.</p><h3>The Challenges You'll Solve</h3><p>Hundreds of vendors publish API specifications, and they change constantly, inconsistently, and without warning. How do you build a system that tracks those changes, detects when a vendor's schema evolution breaks ontological assumptions, and surfaces that signal before downstream teams ship on a stale model? How do you give engineers a development experience that makes working with a complex knowledge graph feel tractable rather than treacherous? </p><h3><b>What You'll Do:</b></h3><ul>\n<li><p>Own the Vendor Schema Registry: You will build and maintain the systems that ingest, parse, and version vendor API specifications like OpenAPI, Swagger, Smithy, and others. You will track schema evolution across providers, detect breaking and semantic changes, and ensure that the canonical ontological model stays synchronized with the ground truth of what vendors actually expose.</p></li>\n<li><p>Build the Semantic Validation Pipeline: Correctness, not throughput, is your SLO. You will implement the validation systems that verify new and updated vendor schemas against the canonical ontology, catching mapping gaps, type conflicts, and semantic regressions before they propagate into the graph and mislead downstream consumers.</p></li>\n<li><p>Build the Developer Experience: You will design and maintain the internal tooling, SDKs, scaffolding, and documentation systems that make it fast and safe for product teams and ingest engineers to work with this knowledge platform. When a team needs to understand what a vendor resource maps to in the graph, or how to add support for a new provider, you are the reason they can do it with confidence and without lengthy onboarding.</p></li>\n<li><p>Close the Loop Between Schema and Graph: You will work closely with the Knowledge Engineers and Ontologists to translate real-world vendor schema constraints and edge cases into actionable input for the canonical model. When the messy reality of vendor APIs requires the ontology to flex, you are the one who surfaces that tension clearly.</p></li>\n<li><p>Raise the Floor for Downstream Teams: Product groups and ingest teams build on top of what you maintain. You will invest in the documentation, tooling, and validation guardrails that allow those teams to move quickly without requiring deep knowledge of the underlying semantic systems.</p></li>\n</ul><h3><b>What You'll Need:</b></h3><ul>\n<li><p>A strong software engineering background with hands-on experience building systems that parse, validate, and transform structured specifications or schemas at scale.</p></li>\n<li><p>Proficiency in Go, Rust, and/or Python; comfort in polyglot environments.</p></li>\n<li><p>Deep experience with API specification formats -- OpenAPI/Swagger, Smithy, JSON Schema, or similar, including parsing, diffing, and reasoning about schema evolution.</p></li>\n<li><p>A practical understanding of graph data models and the downstream consequences of upstream schema decisions.</p></li>\n<li><p>A demonstrated instinct for developer experience , you have built internal tooling, SDKs, or frameworks that other engineers actually used, and you measure success by their productivity.</p></li>\n<li><p>A rigorous, correctness-first engineering mindset: you think in terms of invariants, edge cases, and what happens when a vendor silently changes something.</p></li>\n<li><p>Proven experience utilizing AI technologies to enhance decision-making, streamline workflows and processes, improve efficiency and drive business outcomes.</p></li>\n</ul><h3><b>Bonus Points:</b></h3><ul>\n<li><p>Experience building systems that track and diff API specification changes over time (schema registries, changelog automation, breaking-change detection).</p></li>\n<li><p>Familiarity with semantic web technologies (RDF, SHACL, OWL, SPARQL) or ontology engineering toolchains.</p></li>\n<li><p>A background in infrastructure, cloud platform engineering, or security tooling , you know how cloud providers think about their APIs.</p></li>\n<li><p>Experience with declarative configuration systems or code generation pipelines that translate high-level intent into low-level artifacts.</p></li>\n<li><p>A track record of making complex internal systems more approachable , you have been the person who writes the tool or guide that makes an entire team faster.</p></li>\n</ul><h3>Benefits of Working at CrowdStrike:</h3><ul>\n<li><p>Market leader in compensation and equity awards</p></li>\n<li><p>Comprehensive physical and mental wellness programs </p></li>\n<li><p>Competitive vacation and holidays for recharge  </p></li>\n<li><h3>Paid parental and adoption leaves</h3></li>\n<li><p>Professional development opportunities for all employees regardless of level or role</p></li>\n<li><p>Employee Networks, geographic neighborhood groups, and volunteer opportunities to build connections</p></li>\n<li><p>Vibrant office culture with world class amenities</p></li>\n<li><p>Great Place to Work Certified™ across the globe</p></li>\n</ul><p>CrowdStrike is proud to be an equal opportunity employer. We are committed to fostering a culture of belonging where everyone is valued for who they are and empowered to succeed. We support veterans and individuals with disabilities through our affirmative action program.</p><p>CrowdStrike is committed to providing equal employment opportunity for all employees and applicants for employment. The Company does not discriminate in employment opportunities or practices on the basis of race, color, creed, ethnicity, religion, sex (including pregnancy or pregnancy-related medical conditions), sexual orientation, gender identity, marital or family status, veteran status, age, national origin, ancestry, physical disability (including HIV and AIDS), mental disability, medical condition, genetic information, membership or activity in a local human rights commission, status with regard to public assistance, or any other characteristic protected by law. We base all employment decisions--including recruitment, selection, training, compensation, benefits, discipline, promotions, transfers, lay-offs, return from lay-off, terminations and social/recreational programs--on valid job requirements.</p><p>If you need assistance accessing or reviewing the information on this website or need help submitting an application for employment or requesting an accommodation, please contact us at  further assistance.</p><p>Find out more about your rights as an applicant.</p><p>CrowdStrike participates in the E-Verify program.</p><p>Notice of E-Verify Participation</p><p>Right to Work</p>CrowdStrike, Inc. is committed to fair and equitable compensation practices. Placement within the pay range is dependent on a variety of factors including, but not limited to, relevant work experience, skills, certifications, job level, supervisory status, and location. The base salary range for this position for all U.S. candidates is $145,000 - $220,000 per year, with eligibility for bonuses, equity grants and a comprehensive benefits package that includes health insurance, 401k and paid time off.<p>For detailed information about the U.S. benefits package, please click here. </p>Expected Close Date of Job Posting is:10-03-2026<p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "As a global leader in cybersecurity, CrowdStrike protects the people, processes and technologies that drive modern organizations.",
-            "expiryDate": 1791276694,
-            "guid": "https://himalayas.app/companies/crowdstrike/jobs/sr-software-engineer-vendor-semantics-and-developer-experience-8770560755",
-            "locationRestrictions": [
-              "United States"
-            ],
-            "maxSalary": 220000,
-            "minSalary": 145000,
-            "parentCategories": [
-              "Developer"
-            ],
-            "pubDate": 1786092695,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "title": "Sr. Software Engineer, Vendor Semantics and Developer Experience"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/hire-hangar/jobs/senior-ai-platform-engineer-8228704431",
-            "categories": [
-              "Senior-AI-Platform-Engineer",
-              "Senior-AI-Platform-Developer",
-              "Senior-ML-Platform-Engineer",
-              "Senior-AI-Engineer",
-              "Senior-AI-Infrastructure-Engineer",
-              "Senior-AI-Software-Engineer"
-            ],
-            "companyLogo": "",
-            "companyName": "Hire Hangar",
-            "companySlug": "hire-hangar",
-            "currency": "USD",
-            "description": "<p>Join <a href=\"https://himalayas.app/companies/hire-hangar\">Hire Hangar</a> and work with fast-growing global companies while building a long-term career.</p><p><strong>Job Title</strong> Senior AI Platform Engineer</p><p><strong>Location</strong> Remote</p><p><strong>Time Zone</strong> US Time Zones (PST - EST)</p><p><strong>Role Overview</strong> This role sits at the intersection of AI engineering and platform development. As a Senior AI Platform Engineer, you will own the contextual intelligence layer that powers our AI agents — ensuring they understand, reason, and act with precision across our SaaS ecosystem.</p><p>You will work at the cutting edge of how structured knowledge is used to make AI agents smarter and more reliable. This is a role for an engineer who thinks deeply about context, meaning, and how machines can be equipped to make better decisions — and who can also build the frontend surfaces that make those capabilities accessible to end users.</p><h3>Key Responsibilities</h3><ul>\n<li><p>Design and maintain semantic context layers — knowledge graphs, ontologies, and structured context stores — that inform agent behaviour</p></li>\n<li><p>Develop full stack features that allow users to configure, monitor, and control AI agents through intuitive interfaces</p></li>\n<li><p>Integrate RPA agents with semantic reasoning capabilities, enabling context-aware automation at scale</p></li>\n<li><p>Build and maintain data platform frontends that provide real-time visibility into agent activity and data flows</p></li>\n<li><p>Work closely with product and data science teams to translate business requirements into intelligent automation solutions</p></li>\n<li><p>Champion engineering quality through testing, documentation, and architectural consistency</p></li>\n</ul><h3>Required Qualifications</h3><ul>\n<li><p>Senior-level full stack engineering experience</p></li>\n<li><p>Deep understanding of semantic technologies — knowledge graphs, RDF/OWL, ontologies, or entity resolution</p></li>\n<li><p>Hands-on experience building or consuming AI agent frameworks</p></li>\n<li><p>Strong frontend skills with React or similar, including data visualisation libraries such as D3.js or Recharts</p></li>\n<li><p>Experience with Python-based backends and ML service integration</p></li>\n<li><p>Comfort working in fast-moving SaaS product environments</p></li>\n<li><p>Must have prior remote work experience and demonstrated ability to collaborate asynchronously across distributed teams</p></li>\n</ul><h3>Preferred Qualifications</h3><ul>\n<li><p>Experience with graph databases such as Neo4j or Amazon Neptune</p></li>\n<li><p>Exposure to NLP pipelines and named entity recognition (NER)</p></li>\n<li><p>Contributions to open-source AI or semantic tooling</p></li>\n<li><p>Experience with enterprise-scale knowledge management systems</p></li>\n</ul><h3>Tools &amp; Technology</h3><ul>\n<li><h3>Python / Node.js</h3></li>\n<li><h3>React / TypeScript</h3></li>\n<li><p>Graph or semantic databases (Neo4j, Amazon Neptune, or similar)</p></li>\n<li><p>LLM APIs and agent orchestration frameworks</p></li>\n<li><p>Data visualisation tooling (D3.js, Recharts, or similar)</p></li>\n<li><h3>Slack, Zoom, Google Workspace</h3></li>\n</ul><p><strong>Please Note</strong> It is crucial that you complete the application form in full. As part of the application process, you will be required to complete a short technical assessment. If your application is successful, you will receive an email confirming next steps. Applications that are not completed in full will not be considered for any open roles.</p><p>We connect top talent with vetted employers, competitive pay, and real growth opportunities.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Contractor",
-            "excerpt": "Join Hire Hangar and work with fast-growing global companies while building a long-term career.",
-            "expiryDate": 1792642781,
-            "guid": "https://himalayas.app/companies/hire-hangar/jobs/senior-ai-platform-engineer-8228704431",
-            "locationRestrictions": [
-              "Argentina",
-              "Bolivia",
-              "Colombia",
-              "Egypt",
-              "Honduras",
-              "Mexico",
-              "Nicaragua",
-              "Panama",
-              "Peru",
-              "Philippines",
-              "South Africa"
-            ],
-            "maxSalary": 7000,
-            "minSalary": 2500,
-            "parentCategories": [],
-            "pubDate": 1787458782,
-            "salaryPeriod": "monthly",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              -8,
-              -7,
-              -6,
-              -5,
-              -4,
-              -3,
-              2,
-              8
-            ],
-            "title": "Senior AI Platform Engineer"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 60,
+        "totalCount": 64,
         "updatedAt": 1788258876
       }
     },
@@ -2355,45 +2257,6 @@
             "title": "Digital Marketing Manager, Web & AI Search"
           },
           {
-            "applicationLink": "https://himalayas.app/companies/fpt-asia-pacific-pte-ltd/jobs/g66-full-stack-engineer",
-            "categories": [
-              "Software-Engineer",
-              "Full-Stack-Engineering",
-              "Backend-Development",
-              "Search-Engineering",
-              "Full-Stack-Engineer",
-              "Full-Stack-Developer",
-              "Full-Stack-Web-Developer",
-              "AI-ML-Engineer"
-            ],
-            "companyLogo": "",
-            "companyName": "FPT Asia Pacific Pte Ltd",
-            "companySlug": "fpt-asia-pacific-pte-ltd",
-            "currency": "USD",
-            "description": "<h3>Responsibilities </h3><h3>Software Engineering &amp; Platform Development</h3><ul>\n<li>Design, develop, and maintain scalable, secure, and high-performance full-stack applications.</li>\n<li>Build and enhance backend services, APIs, and frontend applications using modern development frameworks.</li>\n<li>Develop and integrate AI-powered capabilities into enterprise-grade applications.</li>\n<li>Contribute to architecture and technical design discussions for search and AI-driven platforms.</li>\n<li>Implement robust software engineering practices to ensure maintainability, reliability, and performance.</li>\n</ul><h3>Search &amp; Generative AI Solutions</h3><ul>\n<li>Collaborate with technical teams to evaluate and implement emerging AI technologies.</li>\n<li>Support the transition of AI solutions from proof-of-concept to production-ready systems.</li>\n<li>Contribute to AI governance initiatives, including evaluation, observability, monitoring, and security controls.</li>\n</ul><h3>Develop solutions leveraging:</h3><ul>\n<li>Large Language Models (LLMs) such as Azure OpenAI and OpenAI APIs</li>\n<li>Retrieval-Augmented Generation (RAG)</li>\n<li>Semantic search and vector databases</li>\n<li>Modern search architectures and relevance optimisation</li>\n</ul><h3>DevOps, Quality &amp; Engineering Excellence</h3><ul>\n<li>Build and maintain CI/CD pipelines to support efficient software delivery.</li>\n<li>Implement automated testing strategies, including unit, integration, and performance testing.</li>\n<li>Support DevOps practices, release automation, and infrastructure improvements.</li>\n<li>Troubleshoot technical issues and contribute to continuous improvement initiatives.</li>\n</ul><p><strong>Participate in code reviews and promote engineering best practices such as:</strong></p><ul>\n<li>Test-Driven Development (TDD)</li>\n<li>Pair Programming</li>\n<li>Refactoring</li>\n<li>Continuous Integration and Continuous Delivery (CI/CD)</li>\n</ul><h3>Collaboration &amp; Stakeholder Engagement</h3><ul>\n<li>Work closely with Product Owners, Business Analysts, UX Designers, and Delivery Managers to deliver business outcomes.</li>\n<li>Participate in technical discussions, solution estimation, and feasibility assessments.</li>\n<li>Collaborate with cross-functional teams to deliver high-quality solutions that meet user and business needs.</li>\n<li>Contribute to knowledge sharing and support the growth of engineering capabilities across the team.</li>\n</ul><h3>Requirements</h3><ul>\n<li>5+ years of experience in software engineering and web application development.</li>\n<li>Experience building and deploying scalable distributed applications.</li>\n<li>Familiarity with modern software architecture patterns and API design principles.</li>\n<li>Strong hands on experience with Node.js, TypeScript, Cloud platforms (Azure, AWS, or GCP), SQL and NoSQL databases, CI/CD pipelines, DevOps practices</li>\n</ul><h3>Search &amp; AI Experience</h3><p><strong>Experience working with one or more of the following:</strong></p><ul>\n<li>Search engines and search architectures</li>\n<li>Semantic search or vector search technologies</li>\n<li>Retrieval-Augmented Generation (RAG)</li>\n<li>LLM-powered applications</li>\n</ul><p><strong>Understanding of AI application challenges, including:</strong></p><ul>\n<li>Latency and performance optimisation</li>\n<li>Cost management</li>\n<li>Hallucination mitigation</li>\n<li>Prompt engineering</li>\n<li>Model evaluation and monitoring</li>\n</ul><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "Responsibilities Software Engineering & Platform Development• Design, develop, and maintain scalable, secure, and high-performance full-stack applications.",
-            "expiryDate": 1788487191,
-            "guid": "https://himalayas.app/companies/fpt-asia-pacific-pte-ltd/jobs/g66-full-stack-engineer",
-            "locationRestrictions": [
-              "Singapore"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [
-              "Developer"
-            ],
-            "pubDate": 1786048263,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Mid-level"
-            ],
-            "timezoneRestrictions": [
-              8
-            ],
-            "title": "G66 - Full Stack Engineer"
-          },
-          {
             "applicationLink": "https://himalayas.app/companies/drivetime/jobs/software-engineer",
             "categories": [
               "Software-Engineer",
@@ -2531,6 +2394,50 @@
               2
             ],
             "title": "Computational Linguist"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/crowdstrike/jobs/sr-ai-engineer-remote-ind-9007192965",
+            "categories": [
+              "AI-Engineering",
+              "Machine-Learning-Engineering",
+              "Salesforce-Development",
+              "Software-Engineer",
+              "AI-ML-Architecture",
+              "Remote-Senior-AI-Engineer",
+              "Senior-AI-Engineer",
+              "Senior-AI-Software-Engineer",
+              "Senior-Software-AI-Engineer",
+              "Senior-AI-ML-Engineer",
+              "Remote-AI-Engineer",
+              "AI-Engineer"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/95gzgg20hqvtq04pae5z2598mdmo",
+            "companyName": "Crowdstrike",
+            "companySlug": "crowdstrike",
+            "currency": null,
+            "description": "<p>As a global leader in cybersecurity, CrowdStrike protects the people, processes and technologies that drive modern organizations. Since 2011, our mission hasn’t changed — we’re here to stop breaches, and we’ve redefined modern security with the world’s most advanced AI-native platform. We work on large scale distributed systems, processing almost 3 trillion events per day and this traffic is growing daily. Our customers span all industries, and they count on CrowdStrike to keep their businesses running, their communities safe and their lives moving forward. We're proud to work for a mission-driven company leveraging AI to transform the way we work. CrowdStrikers drive their careers through flexibility and autonomy while also being expected to contribute to a culture of responsible AI adoption, experimentation, and innovation. We use an AI-first mindset as a force multiplier to proactively and continuously accelerate execution, build expertise, uncover insights, and solve complex problems. We’re always looking to add talented CrowdStrikers to the team who have limitless passion, a relentless focus on innovation and a fanatical commitment to our customers, our community and each other. Ready to join a mission that matters? The future of cybersecurity starts with you.</p><br><br><h3>About the Role: </h3><p>This role is part of CrowdStrike's Core Tech, Go To Market IT Apps Team — a team of Architects, Engineers, QA, BSAs, and Product Owners delivering highly Reliable, Scalable, and Secure Infrastructure and Automation Services across GTM Applications to Accelerate Business Velocity and Operational Excellence. As part of the GTM AI Pod, every member is expected to embrace Agentic AI technologies, operate with an open-source AI engineering mindset, and actively contribute to building the next generation of intelligent GTM workflows.</p><p>As a GTM AI Lead Engineer, you will lead hands-on engineering delivery of agentic AI solutions within the GTM technology stack. You will be a technical leader and mentor, driving the team from prototype to production-grade AI-powered systems across Salesforce, Slack, and intelligent workflow automation.</p><h3>Shift Time: 2.00 pm - 11.00 pm IST</h3><h3>What You'll Do: </h3><ul>\n<li><p>Lead engineering delivery for agentic AI capabilities for GTM stakeholders across its technology stack(Salesforce, Slack, 3rd party apps) and In-House Platforms.</p></li>\n<li><p>Design and build LLM-powered workflows, autonomous agents,multi-agent systems and AI-enhanced integrations using Agentcore, Slack, MCPs,Langchain</p></li>\n<li><p>Define scalable enterprise AI architecture patterns including model routing, orchestration,memory management and governance strategies</p></li>\n<li><p>Design and optimize Retrieval Augmented Generation(RAG) systems, semantic search pipelines,vector retrieval strategies and enterprise knowledge grounding frameworks.</p></li>\n<li><p>Build and maintain Apex, Lightning Web Components, Salesforce Platform Events, and Agentforce agent actions.</p></li>\n<li><p>Implement AI evaluation frameworks including prompt quality benchmarking, hallucination reduction and model performance monitoring</p></li>\n<li><p>Mentor senior and mid-level engineers; conduct code reviews and enforce AI engineering standards.</p></li>\n<li><p>Define error handling, fallback strategies, and graceful degradation patterns for non-deterministic AI systems.</p></li>\n<li><p>Retire legacy integrations and replace them with modern, agentic, event-driven patterns.</p></li>\n<li><p>Champion security-first AI engineering: input validation, output sanitization, and prompt injection hardening.</p></li>\n<li><p>Architect and implement CI/CD pipelines, deployment automation, and platform observability.</p></li>\n<li><p>Embrace Agentic AI and LLM-powered tooling as a core part of your engineering practice.</p></li>\n<li><p>Stay current with rapidly evolving AI/ML technologies and apply them pragmatically to GTM systems.</p></li>\n<li><p>Champion automation-first thinking — if it can be agentic, make it agentic.</p></li>\n<li><p>Build internal tools and apps to streamline data access and GTM decision-making.</p></li>\n<li><p>Implement data governance and monitoring frameworks to enhance GTM system quality.</p></li>\n<li><p>Evaluate vendors and AI platforms with a strategic build vs. buy mindset.</p></li>\n<li><p>Identify and automate manual processes to increase organizational leverage.</p></li>\n</ul><h3>What You'll Need: </h3><ul>\n<li><p>Bachelor's degree in Computer Science, Engineering, or related field.</p></li>\n<li><p>8+ years of software engineering experience, with 3+ years in a lead or principal role.</p></li>\n<li><p>Strong proficiency in Python and TypeScript/JavaScript for AI and integration development.</p></li>\n<li><p>Hands-on production experience with Agentic AI frameworks,  document parsing and structured extraction pipelines , building enterprise AI applications, autonomous agents and LLM powered systems.</p></li>\n<li><p>Experience with modern AI orchestration frameworks such as LangGraph, Semantic Kernel, CrewAI, AutoGen, MCP, Langchain and similar frameworks</p></li>\n<li><p>Salesforce development experience: Apex, LWC, REST/SOAP integrations, Platform Events, and Agentforce.</p></li>\n<li><p>Proficiency with vector databases and retrieval optimization techniques.</p></li>\n<li><p>Experience with cloud infrastructure including AWS bedrock,Vertex AI, workflow orchestration, CI/CD tooling (GitHub Actions, Copado, Jenkins) and DevOps practices.</p></li>\n<li><p>Solid understanding of LLM limitations, token economics, and model selection trade-offs.</p></li>\n<li><p>Proven experience utilizing AI technologies to enhance decision-making, streamline workflows and processes, improve efficiency and drive business outcomes.</p></li>\n</ul><h3>Bonus Points: </h3><ul>\n<li><p>Salesforce Platform Developer II or Application Architect certification.</p></li>\n<li><p>Experience building Slack apps, Slack Workflow Builder, or Slack-integrated agentic workflows.</p></li>\n<li><p>Hands-on experience with Salesforce Einstein / Agentforce platform development.</p></li>\n<li><p>Contributions to open-source AI frameworks (LangChain, LlamaIndex, or similar).</p></li>\n<li><p>Exposure to fine-tuning or model evaluation on domain-specific GTM datasets.</p></li>\n<li><p>Experience implementing model routing platforms or enterprise AI control planes</p></li>\n<li><p>Exposure to fine-tuning, model evaluation, synthetic data generation or GTM AI datasets</p></li>\n</ul><br><h3>Benefits of Working at CrowdStrike: </h3><ul>\n<li>Market leader in compensation and equity awards</li>\n<li>Comprehensive physical and mental wellness programs</li>\n<li>Competitive vacation and holidays for recharge</li>\n<li>Paid parental and adoption leaves</li>\n<li>Professional development opportunities for all employees regardless of level or role</li>\n<li>Employee Networks, geographic neighborhood groups, and volunteer opportunities to build connections</li>\n<li>Vibrant office culture with world class amenities</li>\n<li>Great Place to Work Certified™ across the globe </li>\n</ul><br><p>CrowdStrike is proud to be an equal opportunity employer. We are committed to fostering a culture of belonging where everyone is valued for who they are and empowered to succeed. We support veterans and individuals with disabilities through our affirmative action program.</p><br><p>CrowdStrike is committed to providing equal employment opportunity for all employees and applicants for employment. The Company does not discriminate in employment opportunities or practices on the basis of race, color, creed, ethnicity, religion, sex (including pregnancy or pregnancy-related medical conditions), sexual orientation, gender identity, marital or family status, veteran status, age, national origin, ancestry, physical disability (including HIV and AIDS), mental disability, medical condition, genetic information, membership or activity in a local human rights commission, status with regard to public assistance, or any other characteristic protected by law. We base all employment decisions--including recruitment, selection, training, compensation, benefits, discipline, promotions, transfers, lay-offs, return from lay-off, terminations and social/recreational programs--on valid job requirements.</p><br><p>If you need assistance accessing or reviewing the information on this website or need help submitting an application for employment or requesting an accommodation, please contact us at  for further assistance.</p><br><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "As a global leader in cybersecurity, CrowdStrike protects the people, processes and technologies that drive modern organizations.",
+            "expiryDate": 1793595014,
+            "guid": "https://himalayas.app/companies/crowdstrike/jobs/sr-ai-engineer-remote-ind-9007192965",
+            "locationRestrictions": [
+              "India"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [
+              "Developer",
+              "Data Science"
+            ],
+            "pubDate": 1788411015,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "timezoneRestrictions": [
+              5.5
+            ],
+            "title": "Sr. AI Engineer (Remote, IND)"
           },
           {
             "applicationLink": "https://himalayas.app/companies/samsara/jobs/senior-marketing-analytics-manager-bi-data-architecture",
@@ -2805,62 +2712,12 @@
               14
             ],
             "title": "Senior Application Modernization Engineer"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/xsolla/jobs/tech-lead-frontend-platform-team",
-            "categories": [
-              "Software-Engineer",
-              "Frontend-Engineer",
-              "Frontend-Development",
-              "Technical-Lead",
-              "Engineering-Management",
-              "Web-Development",
-              "Frontend-Tech-Lead",
-              "Tech-Lead-Front-End",
-              "Frontend-Engineering-Team-Lead",
-              "Frontend-Team-Lead-(Angular)",
-              "Lead-Web-Platform-Engineer",
-              "Platform-Tech-Lead",
-              "Lead-Frontend-Developer",
-              "Frontend-Lead-Developer"
-            ],
-            "companyLogo": "https://cdn-images.himalayas.app/7vgihn46xneh0fp0rtrhg9hq8m63",
-            "companyName": "Xsolla",
-            "companySlug": "xsolla",
-            "currency": "CAD",
-            "description": "<h3>ABOUT YOU</h3><div>We are looking for a Tech Lead for the Frontend Platform Team provides technical leadership for <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a>’s core platform responsible for powering all user-facing experiences. This role combines deep engineering expertise with people leadership, guiding a team of approximately eight developers. The Tech Lead shapes the platform’s architecture, improves developer workflows, and ensures high-quality, scalable solutions that support storefronts, widgets, and other monetization-focused experiences used across the <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> ecosystem. </div><div>This position requires strong frontend and platform-level experience, the ability to lead complex technical initiatives, and the capability to support predictable, reliable delivery.</div><h3>ABOUT US</h3><div>\n<a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> is a global commerce company with robust tools and services to help developers solve the inherent challenges of the video game industry. From indie to AAA, companies partner with <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> to help them fund, distribute, market, and monetize their games. Grounded in the belief in the future of video games, <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> is resolute in the mission to bring opportunities together, and continually make new resources available to creators. Headquartered and incorporated in Los Angeles, California, <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> operates as the merchant of record and has helped over 1,500+ game developers to reach more players and grow their businesses around the world. With more paths to profits and ways to win, developers have all the things needed to enjoy the game.</div><div>For more information, visit xsolla.com.</div><h3>Responsibilities:</h3><ul>\n<li>Provide technical leadership for the <a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> frontend platform, defining architecture, coding standards, and long-term technical direction.</li>\n<li>Coach, mentor, and manage a team of ~8 developers, supporting professional growth and maintaining a strong engineering culture.</li>\n<li>Partner closely with the other Tech Leads working on the same platform to ensure architectural alignment, consistent standards, and unified decision-making.</li>\n<li>Oversee planning and execution of platform features and improvements, ensuring smooth delivery and high-quality outcomes.</li>\n<li>Drive modernization, refactoring, and performance enhancements to keep the platform scalable, maintainable, and aligned with product goals.</li>\n<li>Establish and enforce engineering best practices across coding, documentation, testing, and review processes.</li>\n<li>Collaborate with product managers, designers, backend engineers, and platform teams to deliver cohesive partner-facing experiences.</li>\n<li>Ensure strong automated test coverage and reliable CI/CD workflows that reduce manual effort and improve delivery predictability.</li>\n<li>Leverage automation and AI-assisted tooling to accelerate development, improve consistency, and increase developer velocity.</li>\n<li>Own operational excellence, including incident response, root-cause analysis, and long-term reliability improvements.</li>\n<li>Advocate for scalability, performance, security, and observability across the platform’s architecture and tooling.</li>\n<li>Identify technical risks, estimate complexity, and communicate trade-offs to leadership and stakeholders.</li>\n<li>Foster alignment with other engineering teams on shared services, APIs, rendering pipelines, and platform interfaces.</li>\n</ul><h3>Qualifications &amp; Skills:</h3><ul>\n<li>8+ years of software development experience with strong expertise in modern frontend engineering at scale. At  least 3 years in a similar tech lead role.</li>\n<li>Deep hands-on knowledge of React including component architecture, SSR patterns, RSC, and complex UI data flows.</li>\n<li>Proficiency with  and MongoDB for server-side functionality.</li>\n<li>Strong understanding of modern styling systems and theming approaches (vanilla-extract, styled-components, design tokens).</li>\n<li>Solid TypeScript practices, including strict typing, shared contracts, and schema validation (Zod or equivalent).</li>\n<li>Experience with Module Federation</li>\n<li>Good understanding of bundling and compilation, experience with webpack/rollup/vite/esbuild.</li>\n<li>Experience with automated testing frameworks (Vitest/Jest) and end-to-end testing (Playwright/Cypress).</li>\n<li>Good understanding of backend integration patterns (REST, GraphQL, RPC-style APIs).</li>\n<li>Experience with CI/CD workflows (GitLab CI or similar), private registries, and secure artifact handling.</li>\n<li>Proven ability to lead engineers, own architectural decisions, and manage delivery for complex platform projects.</li>\n</ul><h3>Nice to Have: </h3><ul>\n<li>Experience building platforms or tooling used across multiple frontend teams (design systems, template engines, configuration frameworks). Experience with react-native/mobile experience</li>\n<li>Knowledge of performance optimization strategies for client-side and server-side rendering.</li>\n<li>Understanding of accessibility, internationalization, and semantic UI design best practices.</li>\n<li>Experience developing SDKs, CLI tools, or developer-facing automation.</li>\n<li>Familiarity with event-driven UI flows, real-time interfaces, or edge-rendering strategies.</li>\n<li>Background improving developer platforms, observability stacks, or performance monitoring systems.</li>\n<li>Comfort with UI-as-data approaches and leveraging AI-assisted/no-code tooling to accelerate feature delivery.</li>\n</ul><div><strong>Benefits:We are passionate about fostering a supportive environment for our team, so we prioritize the physical, mental, and emotional well-being of our employees and their families through a comprehensive Benefits Program. This includes medical, dental, and vision, PTO, and a personalized career roadmap for each employee. By investing in professional development through training and educational opportunities, we ensure that our team thrives both personally and professionally. Together, we’re not just building a business; we’re cultivating a community that values creativity, collaboration, and the transformative power of play. </strong></div><h3><strong>Equal Employment Opportunity Statement:</strong></h3><div><strong><a href=\"https://himalayas.app/companies/xsolla\">Xsolla</a> is an equal opportunity employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based on race, color, religion, sex, national origin, age, disability, sexual orientation, gender identity, or any other characteristic protected by law.</strong></div><div><strong>We consider qualified applicants with criminal histories in accordance with the Fair Chance Act.</strong></div><h3><strong>Criminal History Consideration:</strong></h3><div><strong>For the Tech Lead - Frontend Platform Team, we will conduct a background check that may include the following:</strong></div><div><strong>Criminal history check</strong></div><div><strong>Employment verification</strong></div><div><strong>Education verification</strong></div><h3><strong>Relevance to Job Responsibilities:</strong></h3><div><strong>The background check is relevant to this position because of the following role responsibilities:</strong></div><div><strong>Accessing confidential company data</strong></div><div><strong>Ensuring compliance with regulatory requirements</strong></div><div><strong>Handling sensitive financial information/managing budgets/accessing funds</strong></div><h3><strong>Rights Under the Fair Chance Act:</strong></h3><div><strong>Applicants are encouraged to inquire about their rights under the Fair Chance Act. If you have questions regarding our hiring practices, please contact .</strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "ABOUT YOUWe are looking for a Tech Lead for the Frontend Platform Team provides technical leadership for Xsolla’s core platform responsible for powering all user-facing experiences.",
-            "expiryDate": 1788341538,
-            "guid": "https://himalayas.app/companies/xsolla/jobs/tech-lead-frontend-platform-team",
-            "locationRestrictions": [
-              "Canada"
-            ],
-            "maxSalary": 150000,
-            "minSalary": 130000,
-            "parentCategories": [
-              "Developer"
-            ],
-            "pubDate": 1783157539,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              -8,
-              -7,
-              -6,
-              -5,
-              -4,
-              -3.5
-            ],
-            "title": "Tech Lead – Frontend Platform Team"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 21,
-        "updatedAt": 1788078287
+        "totalCount": 22,
+        "updatedAt": 1788411015
       }
     },
     {

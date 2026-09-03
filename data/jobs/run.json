@@ -1,80 +1,229 @@
 {
-  "activeCount": 903,
+  "activeCount": 927,
   "classificationCounts": {
-    "not_match": 402,
+    "not_match": 426,
     "qualified": 501,
     "review": 0
   },
   "completeSourceSnapshot": true,
-  "deduplicatedCount": 903,
-  "fetchedCount": 45,
-  "forceRefreshRequested": true,
-  "publicSourceCount": 41,
-  "publicationPolicy": "first-party-qualified-only",
-  "queries": [],
-  "queryCount": 0,
-  "queryFamilies": [],
+  "deduplicatedCount": 927,
+  "fetchedCount": 148,
+  "publicSourceCount": 19,
+  "publicationPolicy": "existing-aggregator-policy",
+  "queries": [
+    "rdf",
+    "ontology",
+    "sparql",
+    "skos",
+    "shacl",
+    "linkml",
+    "semantic web",
+    "knowledge graph"
+  ],
+  "queryCount": 8,
+  "queryFamilies": [
+    {
+      "query": "rdf",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-rdf"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf"
+    },
+    {
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology"
+    },
+    {
+      "query": "sparql",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql"
+    },
+    {
+      "query": "skos",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-skos"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos"
+    },
+    {
+      "query": "shacl",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-shacl"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl"
+    },
+    {
+      "query": "linkml",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-linkml"
+    },
+    {
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web"
+    },
+    {
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph"
+    }
+  ],
+  "queryResults": [
+    {
+      "complete": true,
+      "query": "rdf",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-rdf"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf",
+      "returnedCount": 20,
+      "totalCount": 233
+    },
+    {
+      "complete": true,
+      "query": "ontology",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontologist",
+        "https://openknowledgegraphs.com/jobs/vocab/role-ontology-engineer"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology",
+      "returnedCount": 20,
+      "totalCount": 1232
+    },
+    {
+      "complete": true,
+      "query": "sparql",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-sparql"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql",
+      "returnedCount": 20,
+      "totalCount": 163
+    },
+    {
+      "complete": true,
+      "query": "skos",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-skos"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos",
+      "returnedCount": 20,
+      "totalCount": 59
+    },
+    {
+      "complete": true,
+      "query": "shacl",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-shacl"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl",
+      "returnedCount": 20,
+      "totalCount": 62
+    },
+    {
+      "complete": true,
+      "query": "linkml",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-linkml",
+      "returnedCount": 8,
+      "totalCount": 8
+    },
+    {
+      "complete": true,
+      "query": "semantic web",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-semantic-web"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web",
+      "returnedCount": 20,
+      "totalCount": 685535
+    },
+    {
+      "complete": true,
+      "query": "knowledge graph",
+      "queryConcepts": [
+        "https://openknowledgegraphs.com/jobs/vocab/skill-knowledge-graph"
+      ],
+      "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph",
+      "returnedCount": 20,
+      "totalCount": 984998
+    }
+  ],
   "reconciliation": {
-    "aggregatorRecords": 529,
+    "aggregatorRecords": 554,
     "ambiguous": [],
-    "firstPartyRecords": 374,
-    "inputRecords": 903,
+    "firstPartyRecords": 373,
+    "inputRecords": 927,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 903
+    "outputRecords": 927
   },
   "rejectedCount": 0,
-  "requestCount": 47,
-  "retrievedAt": "2026-09-02T16:43:24Z",
-  "runId": "20260902T164324Z-298cc38ab230",
-  "sourceAttributionUrl": "https://jobs.sap.com/",
+  "requestCount": 8,
+  "retrievedAt": "2026-09-03T07:45:01Z",
+  "runId": "20260903T074501Z-f306940f434a",
+  "sourceAttributionUrl": "https://jooble.org/",
   "sourceClassificationCounts": {
-    "not_match": 4,
-    "qualified": 41,
+    "not_match": 14,
+    "qualified": 5,
     "review": 0
   },
-  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/first-party-sap",
-  "sourceKey": "first-party-sap",
-  "sourceName": "Careers at SAP",
+  "sourceDataset": "https://openknowledgegraphs.com/jobs/source/jooble",
+  "sourceKey": "jooble",
+  "sourceName": "Jooble",
   "sourceRefreshes": {
-    "adzuna": "2026-09-02T07:36:12Z",
-    "arbeitnow": "2026-09-02T07:36:12Z",
+    "adzuna": "2026-09-03T07:45:01Z",
+    "arbeitnow": "2026-09-03T07:45:01Z",
     "first-party-accenture": "2026-08-31T19:51:41Z",
-    "first-party-amazon": "2026-09-02T07:36:12Z",
-    "first-party-capital-one": "2026-09-02T07:36:12Z",
-    "first-party-crowdstrike": "2026-09-02T07:36:12Z",
-    "first-party-danish-bibliographic-centre": "2026-09-02T07:36:12Z",
-    "first-party-eccenca": "2026-09-02T07:36:12Z",
-    "first-party-embl-ebi": "2026-09-02T07:36:12Z",
-    "first-party-enterprise-knowledge": "2026-09-02T07:36:12Z",
-    "first-party-graphwise": "2026-09-02T07:36:12Z",
-    "first-party-institute-of-scientific-and-technical-information": "2026-09-02T07:36:12Z",
-    "first-party-inter-university-consortium-for-political-and-social-research": "2026-09-02T07:36:12Z",
-    "first-party-jpmorgan-chase": "2026-09-02T07:36:12Z",
-    "first-party-linux-foundation": "2026-09-02T07:36:12Z",
-    "first-party-metaphacts": "2026-09-02T07:36:12Z",
-    "first-party-metropolitan-museum-of-art": "2026-09-02T07:36:12Z",
-    "first-party-microsoft-research": "2026-09-02T07:36:12Z",
-    "first-party-national-library-of-norway": "2026-09-02T07:36:12Z",
-    "first-party-neo4j": "2026-09-02T07:36:12Z",
-    "first-party-public-library-of-science": "2026-09-02T07:36:12Z",
-    "first-party-regenstrief-institute": "2026-09-02T07:36:12Z",
-    "first-party-relationalai": "2026-09-02T07:36:12Z",
-    "first-party-renaissance-computing-institute": "2026-09-02T07:36:12Z",
+    "first-party-amazon": "2026-09-03T07:45:01Z",
+    "first-party-capital-one": "2026-09-03T07:45:01Z",
+    "first-party-crowdstrike": "2026-09-03T07:45:01Z",
+    "first-party-danish-bibliographic-centre": "2026-09-03T07:45:01Z",
+    "first-party-eccenca": "2026-09-03T07:45:01Z",
+    "first-party-embl-ebi": "2026-09-03T07:45:01Z",
+    "first-party-enterprise-knowledge": "2026-09-03T07:45:01Z",
+    "first-party-graphwise": "2026-09-03T07:45:01Z",
+    "first-party-institute-of-scientific-and-technical-information": "2026-09-03T07:45:01Z",
+    "first-party-inter-university-consortium-for-political-and-social-research": "2026-09-03T07:45:01Z",
+    "first-party-jpmorgan-chase": "2026-09-03T07:45:01Z",
+    "first-party-linux-foundation": "2026-09-03T07:45:01Z",
+    "first-party-metaphacts": "2026-09-03T07:45:01Z",
+    "first-party-metropolitan-museum-of-art": "2026-09-03T07:45:01Z",
+    "first-party-microsoft-research": "2026-09-03T07:45:01Z",
+    "first-party-national-library-of-norway": "2026-09-03T07:45:01Z",
+    "first-party-neo4j": "2026-09-03T07:45:01Z",
+    "first-party-public-library-of-science": "2026-09-03T07:45:01Z",
+    "first-party-regenstrief-institute": "2026-09-03T07:45:01Z",
+    "first-party-relationalai": "2026-09-03T07:45:01Z",
+    "first-party-renaissance-computing-institute": "2026-09-03T07:45:01Z",
     "first-party-sap": "2026-09-02T16:43:24Z",
-    "first-party-sib-swiss-institute-of-bioinformatics": "2026-09-02T07:36:12Z",
-    "first-party-stanford-university-school-of-medicine": "2026-09-02T07:36:12Z",
-    "first-party-stardog": "2026-09-02T07:36:12Z",
-    "first-party-the-open-university": "2026-09-02T07:36:12Z",
-    "first-party-tigergraph": "2026-09-02T07:36:12Z",
-    "first-party-topquadrant": "2026-09-02T07:36:12Z",
-    "first-party-university-of-maryland": "2026-09-02T07:36:12Z",
-    "first-party-university-of-north-carolina-at-chapel-hill": "2026-09-02T07:36:12Z",
-    "first-party-w3c": "2026-09-02T07:36:12Z",
-    "first-party-weaviate": "2026-09-02T07:36:12Z",
-    "first-party-wikimedia": "2026-09-02T07:36:12Z",
-    "first-party-wikimedia-deutschland": "2026-09-02T07:36:12Z",
-    "himalayas": "2026-09-02T07:36:12Z",
-    "jobicy": "2026-09-02T07:36:12Z",
-    "jooble": "2026-09-02T07:36:12Z"
+    "first-party-sib-swiss-institute-of-bioinformatics": "2026-09-03T07:45:01Z",
+    "first-party-stanford-university-school-of-medicine": "2026-09-03T07:45:01Z",
+    "first-party-stardog": "2026-09-03T07:45:01Z",
+    "first-party-the-open-university": "2026-09-03T07:45:01Z",
+    "first-party-tigergraph": "2026-09-03T07:45:01Z",
+    "first-party-topquadrant": "2026-09-03T07:45:01Z",
+    "first-party-university-of-maryland": "2026-09-03T07:45:01Z",
+    "first-party-university-of-north-carolina-at-chapel-hill": "2026-09-03T07:45:01Z",
+    "first-party-w3c": "2026-09-03T07:45:01Z",
+    "first-party-weaviate": "2026-09-03T07:45:01Z",
+    "first-party-wikimedia": "2026-09-03T07:45:01Z",
+    "first-party-wikimedia-deutschland": "2026-09-03T07:45:01Z",
+    "himalayas": "2026-09-03T07:45:01Z",
+    "jobicy": "2026-09-03T07:45:01Z",
+    "jooble": "2026-09-03T07:45:01Z"
   }
 }
