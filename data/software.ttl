@@ -1469,8 +1469,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.7.2" ;
-    okg:releaseDate "2026-09-01"^^xsd:date ;
+    okg:latestVersion "2.7.3" ;
+    okg:releaseDate "2026-09-02"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1580,9 +1580,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.13.0" ;
+    okg:latestVersion "0.13.3" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-29"^^xsd:date ;
+    okg:releaseDate "2026-09-02"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1607,9 +1607,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
-    okg:latestVersion "0.11.0" ;
+    okg:latestVersion "0.13.1" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-29"^^xsd:date ;
+    okg:releaseDate "2026-09-03"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1729,8 +1729,8 @@
     okg:description "Open-source ontology engine for RDF and OWL with SPARQL querying, SHACL validation, and OWL2-DL reasoning. Written in Rust and runs as a lightweight MCP server." ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/fabio-rovai/open-ontologies> ;
-    okg:latestVersion "1.2.0" ;
-    okg:releaseDate "2026-08-15"^^xsd:date ;
+    okg:latestVersion "1.2.1" ;
+    okg:releaseDate "2026-09-02"^^xsd:date ;
     okg:softwareType okg:ReasoningInference ;
     okg:sourceRepo <https://github.com/fabio-rovai/open-ontologies> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1859,9 +1859,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://oxigraph.org> ;
-    okg:latestVersion "0.5.10" ;
+    okg:latestVersion "0.5.11" ;
     okg:programmingLanguage "Rust" ;
-    okg:releaseDate "2026-08-30"^^xsd:date ;
+    okg:releaseDate "2026-09-02"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/oxigraph/oxigraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -5029,14 +5029,14 @@ okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:Licens
     okg:description "open source NoSQL database management system written in Java" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://orientdb.com> ;
-    okg:latestVersion "3.2.55" ;
+    okg:latestVersion "3.2.56" ;
     okg:programmingLanguage "Java" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/arangodb/>,
         <https://openknowledgegraphs.com/software/arcadedb/>,
         <https://openknowledgegraphs.com/software/flockdb/>,
         <https://openknowledgegraphs.com/software/marklogic/>,
         <https://openknowledgegraphs.com/software/polypheny/> ;
-    okg:releaseDate "2026-07-20"^^xsd:date ;
+    okg:releaseDate "2026-09-02"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/orientechnologies/orientdb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1130645>,
