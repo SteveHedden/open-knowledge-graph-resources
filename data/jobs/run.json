@@ -1,14 +1,14 @@
 {
-  "activeCount": 927,
+  "activeCount": 920,
   "classificationCounts": {
-    "not_match": 426,
-    "qualified": 501,
+    "not_match": 409,
+    "qualified": 511,
     "review": 0
   },
   "completeSourceSnapshot": true,
-  "deduplicatedCount": 927,
-  "fetchedCount": 148,
-  "publicSourceCount": 19,
+  "deduplicatedCount": 920,
+  "fetchedCount": 147,
+  "publicSourceCount": 0,
   "publicationPolicy": "existing-aggregator-policy",
   "queries": [
     "rdf",
@@ -89,7 +89,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-rdf",
       "returnedCount": 20,
-      "totalCount": 233
+      "totalCount": 230
     },
     {
       "complete": true,
@@ -100,7 +100,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-ontology",
       "returnedCount": 20,
-      "totalCount": 1232
+      "totalCount": 1211
     },
     {
       "complete": true,
@@ -110,7 +110,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-sparql",
       "returnedCount": 20,
-      "totalCount": 163
+      "totalCount": 162
     },
     {
       "complete": true,
@@ -120,7 +120,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-skos",
       "returnedCount": 20,
-      "totalCount": 59
+      "totalCount": 57
     },
     {
       "complete": true,
@@ -130,7 +130,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-shacl",
       "returnedCount": 20,
-      "totalCount": 62
+      "totalCount": 63
     },
     {
       "complete": true,
@@ -139,8 +139,8 @@
         "https://openknowledgegraphs.com/jobs/vocab/skill-linkml"
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-linkml",
-      "returnedCount": 8,
-      "totalCount": 8
+      "returnedCount": 7,
+      "totalCount": 7
     },
     {
       "complete": true,
@@ -150,7 +150,7 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-semantic-web",
       "returnedCount": 20,
-      "totalCount": 685535
+      "totalCount": 698267
     },
     {
       "complete": true,
@@ -160,33 +160,33 @@
       ],
       "queryUri": "https://openknowledgegraphs.com/jobs/source/jooble-query-knowledge-graph",
       "returnedCount": 20,
-      "totalCount": 984998
+      "totalCount": 995714
     }
   ],
   "reconciliation": {
-    "aggregatorRecords": 554,
+    "aggregatorRecords": 543,
     "ambiguous": [],
-    "firstPartyRecords": 373,
-    "inputRecords": 927,
+    "firstPartyRecords": 377,
+    "inputRecords": 920,
     "mergedAggregatorOccurrences": 0,
-    "outputRecords": 927
+    "outputRecords": 920
   },
   "rejectedCount": 0,
   "requestCount": 8,
-  "retrievedAt": "2026-09-03T07:45:01Z",
-  "runId": "20260903T074501Z-f306940f434a",
+  "retrievedAt": "2026-09-04T07:41:42Z",
+  "runId": "20260904T074142Z-64b071fa1e89",
   "sourceAttributionUrl": "https://jooble.org/",
   "sourceClassificationCounts": {
-    "not_match": 14,
-    "qualified": 5,
+    "not_match": 0,
+    "qualified": 0,
     "review": 0
   },
   "sourceDataset": "https://openknowledgegraphs.com/jobs/source/jooble",
   "sourceKey": "jooble",
   "sourceName": "Jooble",
   "sourceRefreshes": {
-    "adzuna": "2026-09-03T07:45:01Z",
-    "arbeitnow": "2026-09-03T07:45:01Z",
+    "adzuna": "2026-09-04T07:41:42Z",
+    "arbeitnow": "2026-09-04T07:41:42Z",
     "first-party-accenture": "2026-08-31T19:51:41Z",
     "first-party-amazon": "2026-09-03T07:45:01Z",
     "first-party-capital-one": "2026-09-03T07:45:01Z",
@@ -209,7 +209,7 @@
     "first-party-regenstrief-institute": "2026-09-03T07:45:01Z",
     "first-party-relationalai": "2026-09-03T07:45:01Z",
     "first-party-renaissance-computing-institute": "2026-09-03T07:45:01Z",
-    "first-party-sap": "2026-09-02T16:43:24Z",
+    "first-party-sap": "2026-09-04T07:41:42Z",
     "first-party-sib-swiss-institute-of-bioinformatics": "2026-09-03T07:45:01Z",
     "first-party-stanford-university-school-of-medicine": "2026-09-03T07:45:01Z",
     "first-party-stardog": "2026-09-03T07:45:01Z",
@@ -223,7 +223,7 @@
     "first-party-wikimedia": "2026-09-03T07:45:01Z",
     "first-party-wikimedia-deutschland": "2026-09-03T07:45:01Z",
     "himalayas": "2026-09-03T07:45:01Z",
-    "jobicy": "2026-09-03T07:45:01Z",
-    "jooble": "2026-09-03T07:45:01Z"
+    "jobicy": "2026-09-04T07:41:42Z",
+    "jooble": "2026-09-04T07:41:42Z"
   }
 }
