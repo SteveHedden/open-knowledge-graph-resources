@@ -1469,8 +1469,8 @@
     okg:description "JavaScript implementation of the RDF.js specification for handling RDF data" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/rdfjs/N3.js> ;
-    okg:latestVersion "2.7.3" ;
-    okg:releaseDate "2026-09-02"^^xsd:date ;
+    okg:latestVersion "2.7.4" ;
+    okg:releaseDate "2026-09-03"^^xsd:date ;
     okg:softwareType okg:DeveloperLibrary ;
     okg:sourceRepo <https://github.com/rdfjs/N3.js> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1607,7 +1607,7 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
-    okg:latestVersion "0.13.1" ;
+    okg:latestVersion "0.14.0" ;
     okg:programmingLanguage "Python" ;
     okg:releaseDate "2026-09-03"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
@@ -3098,9 +3098,9 @@
     okg:description "Open-source platform for grounding AI agents with explainable context via ontology-driven knowledge graphs (OWL, SHACL, RDF 1.2) combined with GraphRAG retrieval" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://trustgraph.ai/> ;
-    okg:latestVersion "2.9.2" ;
+    okg:latestVersion "2.9.4" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-08-24"^^xsd:date ;
+    okg:releaseDate "2026-09-03"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/trustgraph-ai/trustgraph> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,

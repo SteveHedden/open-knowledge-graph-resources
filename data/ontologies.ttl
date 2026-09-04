@@ -1041,6 +1041,7 @@
     okg:alias "BiRO" ;
     okg:category okg:LibraryCulturalHeritage ;
     okg:description "ontology meant to define bibliographic records, bibliographic references, and their compilation into bibliographic collections and bibliographic lists" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <http://www.sparontologies.net/ontologies/biro> ;
     okg:partOf "Semantic Publishing and Referencing Ontologies" ;
     okg:sourceRepo <https://github.com/sparontologies/biro> ;
@@ -2217,6 +2218,7 @@
         "CiTO ontology" ;
     okg:category okg:LibraryCulturalHeritage ;
     okg:description "ontology that enables characterization of the nature or type of citations" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <http://www.sparontologies.net/ontologies/cito> ;
     okg:partOf "Semantic Publishing and Referencing Ontologies" ;
     okg:sourceRepo <https://github.com/sparontologies/cito> ;
@@ -30384,6 +30386,7 @@ okg:License_hpo_license_Q112817130 a okg:License ;
 
 <https://openknowledgegraphs.com/resource/international-standard-name-identifier/> a okg:ControlledVocabulary ;
     rdfs:label "International Standard Name Identifier" ;
+    okg:alias "isni.org" ;
     okg:category okg:LibraryCulturalHeritage ;
     okg:description "authority file with 16-digit identifier for people and organisations" ;
     okg:homepage <https://isni.org> ;
@@ -34389,8 +34392,6 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
 <https://openknowledgegraphs.com/resource/virtual-international-authority-file/> a okg:ControlledVocabulary ;
     rdfs:label "Virtual International Authority File" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q54837> ;
-    okg:alias "VIAF: Virtual International Authority File",
-        "viaf.org" ;
     okg:category okg:LibraryCulturalHeritage ;
     okg:description "OCLC dataset and service that virtually combines multiple name authority files into a single name authority service" ;
     okg:hasLicense okg:License_Open_Data_Commons_Attribution_License_Q30940585 ;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T11:31:16Z",
+  "generatedAt": "2026-09-04T11:33:18Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -2629,7 +2629,10 @@
       "category": "Library & Cultural Heritage",
       "homepage": "http://www.sparontologies.net/ontologies/biro",
       "sourceRepo": "https://github.com/sparontologies/biro",
-      "partOf": "Semantic Publishing and Referencing Ontologies"
+      "partOf": "Semantic Publishing and Referencing Ontologies",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "Bibliothèque et Archives nationales du Québec identifier",
@@ -5710,7 +5713,10 @@
       "category": "Library & Cultural Heritage",
       "homepage": "http://www.sparontologies.net/ontologies/cito",
       "sourceRepo": "https://github.com/sparontologies/cito",
-      "partOf": "Semantic Publishing and Referencing Ontologies"
+      "partOf": "Semantic Publishing and Referencing Ontologies",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
     },
     {
       "title": "classification of fungi according to by William E. Dismukes et al.",
@@ -22421,7 +22427,9 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/international-standard-name-identifier/",
       "description": "authority file with 16-digit identifier for people and organisations",
-      "aliases": [],
+      "aliases": [
+        "isni.org"
+      ],
       "category": "Library & Cultural Heritage",
       "homepage": "https://isni.org",
       "relatedTools": [
@@ -46190,10 +46198,7 @@
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/virtual-international-authority-file/",
       "description": "OCLC dataset and service that virtually combines multiple name authority files into a single name authority service",
-      "aliases": [
-        "VIAF: Virtual International Authority File",
-        "viaf.org"
-      ],
+      "aliases": [],
       "category": "Library & Cultural Heritage",
       "homepage": "https://viaf.org/",
       "partOf": "Semantic Web",
