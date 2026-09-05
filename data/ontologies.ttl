@@ -15470,10 +15470,11 @@
     okg:wikidataId <https://www.wikidata.org/wiki/Q5571745> .
 
 <https://openknowledgegraphs.com/resource/glossary-of-basketball-terms/> a okg:ControlledVocabulary ;
-    rdfs:label "Glossary of basketball terms" ;
+    rdfs:label "glossary of basketball terms" ;
     okg:category okg:GeneralCrossDomain ;
+    okg:description "sports glossary" ;
     okg:sourceType <http://www.wikidata.org/entity/Q63254493> ;
-    okg:title "Glossary of basketball terms" ;
+    okg:title "glossary of basketball terms" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1532181> .
 
 <https://openknowledgegraphs.com/resource/glossary-of-bastion-fortification-french/> a okg:ControlledVocabulary ;

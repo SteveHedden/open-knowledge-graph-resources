@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T11:33:18Z",
+  "generatedAt": "2026-09-05T09:58:10Z",
   "items": [
     {
       "title": "4store",
@@ -444,8 +444,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "26.8.1",
-      "releaseDate": "2026-08-03",
+      "latestVersion": "26.9.1",
+      "releaseDate": "2026-09-03",
       "softwareType": "Graph Database",
       "programmingLanguages": [
         "Java"
@@ -775,8 +775,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "1.5.0",
-      "releaseDate": "2026-08-15",
+      "latestVersion": "1.5.4",
+      "releaseDate": "2026-09-04",
       "softwareType": "AI Agent Tooling",
       "programmingLanguages": [
         "Python"
@@ -797,6 +797,10 @@
         {
           "title": "RDF4J",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        },
+        {
+          "title": "SEAM",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/seam/"
         }
       ]
     },
@@ -1883,8 +1887,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
         },
         {
-          "title": "RDF4J",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+          "title": "SEAM",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/seam/"
         },
         {
           "title": "Zep",
@@ -3006,6 +3010,10 @@
         {
           "title": "RDF4J",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        },
+        {
+          "title": "SEAM",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/seam/"
         }
       ]
     },
@@ -3703,8 +3711,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "0.13.3",
-      "releaseDate": "2026-09-02",
+      "latestVersion": "0.13.6",
+      "releaseDate": "2026-09-04",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "TypeScript"
@@ -3750,8 +3758,8 @@
         "Apache Software License 2.0",
         "MIT License"
       ],
-      "latestVersion": "0.14.0",
-      "releaseDate": "2026-09-03",
+      "latestVersion": "0.14.2",
+      "releaseDate": "2026-09-04",
       "softwareType": "Ontology Engineering",
       "programmingLanguages": [
         "Python"
@@ -3845,12 +3853,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
         },
         {
-          "title": "Ontopic Suite",
-          "canonicalUrl": "https://openknowledgegraphs.com/software/ontopic-suite/"
-        },
-        {
           "title": "RDF4J",
           "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        },
+        {
+          "title": "SEAM",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/seam/"
         }
       ]
     },
@@ -4066,8 +4074,8 @@
       "licenses": [
         "MIT License"
       ],
-      "latestVersion": "1.2.1",
-      "releaseDate": "2026-09-02",
+      "latestVersion": "1.3.0",
+      "releaseDate": "2026-09-04",
       "softwareType": "Reasoning & Inference"
     },
     {
@@ -4171,8 +4179,8 @@
       "licenses": [
         "Apache Software License 2.0"
       ],
-      "latestVersion": "10.0.14",
-      "releaseDate": "2026-08-25",
+      "latestVersion": "10.0.15",
+      "releaseDate": "2026-09-04",
       "softwareType": "AI Agent Tooling",
       "programmingLanguages": [
         "TypeScript"
@@ -5578,6 +5586,58 @@
       "softwareType": "RDF Data Mapping / ETL",
       "programmingLanguages": [
         "Python"
+      ]
+    },
+    {
+      "title": "SEAM",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141291089",
+      "types": [
+        "Software"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/software/seam/",
+      "description": "local-first memory runtime providing durable, provenance-tracked memory for AI agents",
+      "aliases": [
+        "Surface Encoded Agent Memory",
+        "seam-runtime"
+      ],
+      "homepage": "https://canticle.cc",
+      "sourceRepo": "https://github.com/Canticle-AI-Research/Seam",
+      "creators": [
+        {
+          "name": "Canticle Research",
+          "type": "Organization",
+          "wikidataId": "https://www.wikidata.org/wiki/Q141292073"
+        }
+      ],
+      "licenses": [
+        "Business Source License 1.1"
+      ],
+      "latestVersion": "2.4.0",
+      "softwareType": "AI Agent Tooling",
+      "programmingLanguages": [
+        "Python"
+      ],
+      "relatedTools": [
+        {
+          "title": "Cognee",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/cognee/"
+        },
+        {
+          "title": "Graphiti",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/graphiti/"
+        },
+        {
+          "title": "Mem0",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/mem0/"
+        },
+        {
+          "title": "ontop",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/ontop/"
+        },
+        {
+          "title": "RDF4J",
+          "canonicalUrl": "https://openknowledgegraphs.com/software/rdf4j/"
+        }
       ]
     },
     {

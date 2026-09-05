@@ -1580,9 +1580,9 @@
     rdfs:label "Ontology Development Suite" ;
     okg:description "Visual Studio Code extension for authoring and validating OWL ontologies with local SPARQL/SHACL/OWL2-RL checks" ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
-    okg:latestVersion "0.13.3" ;
+    okg:latestVersion "0.13.6" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-09-02"^^xsd:date ;
+    okg:releaseDate "2026-09-04"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-webapp> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1607,9 +1607,9 @@
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927,
         okg:License_MIT_License_Q334661 ;
     okg:homepage <https://pypi.org/project/ontology-quality-suite/> ;
-    okg:latestVersion "0.14.0" ;
+    okg:latestVersion "0.14.2" ;
     okg:programmingLanguage "Python" ;
-    okg:releaseDate "2026-09-03"^^xsd:date ;
+    okg:releaseDate "2026-09-04"^^xsd:date ;
     okg:softwareType okg:OntologyEngineering ;
     okg:sourceRepo <https://github.com/pwin/consolidated-ontology-quality-suite-python> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1641,6 +1641,21 @@
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
     okg:title "OnToology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653423> .
+
+<https://openknowledgegraphs.com/software/ontopic-suite/> a okg:Software ;
+    rdfs:label "Ontopic Suite" ;
+    okg:alias "Ontopic Studio",
+        "Ontopic Studio Desktop" ;
+    okg:creator okg:Creator_Ontopic_Q115740336 ;
+    okg:description "no-code software platform for building and deploying virtual or materialized knowledge graphs from enterprise data" ;
+    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
+    okg:homepage <https://ontopic.ai/en/ontopic-suite/> ;
+    okg:latestVersion "2026.2" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/ontop/> ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
+    okg:title "Ontopic Suite" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141112435> .
 
 <https://openknowledgegraphs.com/software/ontopspark/> a okg:Software ;
     rdfs:label "OntopSpark" ;
@@ -1729,8 +1744,8 @@
     okg:description "Open-source ontology engine for RDF and OWL with SPARQL querying, SHACL validation, and OWL2-DL reasoning. Written in Rust and runs as a lightweight MCP server." ;
     okg:hasLicense okg:License_MIT_License_Q334661 ;
     okg:homepage <https://github.com/fabio-rovai/open-ontologies> ;
-    okg:latestVersion "1.2.1" ;
-    okg:releaseDate "2026-09-02"^^xsd:date ;
+    okg:latestVersion "1.3.0" ;
+    okg:releaseDate "2026-09-04"^^xsd:date ;
     okg:softwareType okg:ReasoningInference ;
     okg:sourceRepo <https://github.com/fabio-rovai/open-ontologies> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
@@ -1774,10 +1789,10 @@
     okg:description "open-source node software for persistent shared AI-agent memory on the OriginTrail Decentralized Knowledge Graph" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://docs.origintrail.io/> ;
-    okg:latestVersion "10.0.14" ;
+    okg:latestVersion "10.0.15" ;
     okg:partOf "OriginTrail Decentralized Knowledge Graph" ;
     okg:programmingLanguage "TypeScript" ;
-    okg:releaseDate "2026-08-25"^^xsd:date ;
+    okg:releaseDate "2026-09-04"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
     okg:sourceRepo <https://github.com/OriginTrail/dkg> ;
     okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
@@ -3381,6 +3396,10 @@ okg:Creator_Bryan_B_Thompson_Q124856586 a okg:Person ;
     rdfs:label "Bryan B. Thompson" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124856586> .
 
+okg:Creator_Canticle_Research_Q141292073 a okg:Organization ;
+    rdfs:label "Canticle Research" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141292073> .
+
 okg:Creator_Christophe_Debruyne_Q58043647 a okg:Person ;
     rdfs:label "Christophe Debruyne" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q58043647> .
@@ -3830,21 +3849,6 @@ okg:License_open_access_Q232932 a okg:License ;
         <http://www.wikidata.org/entity/Q125577535> ;
     okg:title "Node Quadstore" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124653372> .
-
-<https://openknowledgegraphs.com/software/ontopic-suite/> a okg:Software ;
-    rdfs:label "Ontopic Suite" ;
-    okg:alias "Ontopic Studio",
-        "Ontopic Studio Desktop" ;
-    okg:creator okg:Creator_Ontopic_Q115740336 ;
-    okg:description "no-code software platform for building and deploying virtual or materialized knowledge graphs from enterprise data" ;
-    okg:hasLicense okg:License_proprietary_license_Q3238057 ;
-    okg:homepage <https://ontopic.ai/en/ontopic-suite/> ;
-    okg:latestVersion "2026.2" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/ontop/> ;
-    okg:softwareType okg:DataMappingETL ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107> ;
-    okg:title "Ontopic Suite" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q141112435> .
 
 <https://openknowledgegraphs.com/software/open-knowledge-graphs/> a okg:Software ;
     rdfs:label "Open Knowledge Graphs" ;
@@ -4665,30 +4669,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q63241426> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q28915769> .
 
-<https://openknowledgegraphs.com/software/cognee/> a okg:Software ;
-    rdfs:label "Cognee" ;
-    okg:alias "Cognee AI memory",
-        "cognee" ;
-    okg:description "open-source framework that builds ontology-grounded knowledge graphs as persistent memory for AI agents" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://www.cognee.ai/> ;
-    okg:latestVersion "1.5.0" ;
-    okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/graphiti/>,
-        <https://openknowledgegraphs.com/software/mem0/>,
-        <https://openknowledgegraphs.com/software/ontop/>,
-        <https://openknowledgegraphs.com/software/rdf4j/> ;
-    okg:releaseDate "2026-08-15"^^xsd:date ;
-    okg:softwareType okg:AIAgentTooling ;
-    okg:sourceRepo <https://github.com/topoteretes/cognee> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q140639670>,
-        <http://www.wikidata.org/entity/Q271680> ;
-    okg:title "Cognee" ;
-    okg:uses <http://www.wikidata.org/entity/Q54872>,
-        <http://www.wikidata.org/entity/Q826165> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140639987> .
-
 <https://openknowledgegraphs.com/software/hugegraph/> a okg:Software ;
     rdfs:label "HugeGraph" ;
     okg:creator okg:Creator_Apache_Software_Foundation_Q489709,
@@ -4708,29 +4688,6 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q7397> ;
     okg:title "HugeGraph" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q97348917> .
-
-<https://openknowledgegraphs.com/software/mem0/> a okg:Software ;
-    rdfs:label "Mem0" ;
-    okg:alias "Mem0 AI memory",
-        "mem0",
-        "mem0ai" ;
-    okg:description "open-source software framework providing persistent memory for artificial intelligence agents" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://mem0.ai/> ;
-    okg:latestVersion "2.0.12" ;
-    okg:programmingLanguage "Python",
-        "TypeScript" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
-        <https://openknowledgegraphs.com/software/graphiti/>,
-        <https://openknowledgegraphs.com/software/ontop/>,
-        <https://openknowledgegraphs.com/software/rdf4j/> ;
-    okg:releaseDate "2026-07-13"^^xsd:date ;
-    okg:softwareType okg:AIAgentTooling ;
-    okg:sourceRepo <https://github.com/mem0ai/mem0> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q140639670>,
-        <http://www.wikidata.org/entity/Q271680> ;
-    okg:title "Mem0" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140639966> .
 
 <https://openknowledgegraphs.com/software/qlever/> a okg:Software ;
     rdfs:label "QLever" ;
@@ -4758,6 +4715,28 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q116859711>,
         <http://www.wikidata.org/entity/Q116867178> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111016295> .
+
+<https://openknowledgegraphs.com/software/seam/> a okg:Software ;
+    rdfs:label "SEAM" ;
+    okg:alias "Surface Encoded Agent Memory",
+        "seam-runtime" ;
+    okg:creator okg:Creator_Canticle_Research_Q141292073 ;
+    okg:description "local-first memory runtime providing durable, provenance-tracked memory for AI agents" ;
+    okg:hasLicense okg:License_Business_Source_License_1_1_Q121359688 ;
+    okg:homepage <https://canticle.cc> ;
+    okg:latestVersion "2.4.0" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
+        <https://openknowledgegraphs.com/software/graphiti/>,
+        <https://openknowledgegraphs.com/software/mem0/>,
+        <https://openknowledgegraphs.com/software/ontop/>,
+        <https://openknowledgegraphs.com/software/rdf4j/> ;
+    okg:softwareType okg:AIAgentTooling ;
+    okg:sourceRepo <https://github.com/Canticle-AI-Research/Seam> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q140639670>,
+        <http://www.wikidata.org/entity/Q271680> ;
+    okg:title "SEAM" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141291089> .
 
 <https://openknowledgegraphs.com/software/surrealdb/> a okg:Software ;
     rdfs:label "SurrealDB" ;
@@ -4815,10 +4794,6 @@ okg:Creator_Raphael_Troncy_Q50290708 a okg:Person ;
     okg:googleScholarProfile <https://scholar.google.com/citations?user=1BxhcigAAAAJ> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q50290708> .
 
-okg:License_Business_Source_License_1_1_Q121359688 a okg:License ;
-    rdfs:label "Business Source License 1.1" ;
-    okg:licenseName "Business Source License 1.1" .
-
 okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a okg:License ;
     rdfs:label "GNU Affero General Public License, version 3.0 or later" ;
     okg:licenseName "GNU Affero General Public License, version 3.0 or later" .
@@ -4872,14 +4847,14 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:description "multi-model graph database supporting SQL, Cypher, Gremlin, and MongoDB query language; conceptual fork of OrientDB" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
     okg:homepage <https://arcadedb.com> ;
-    okg:latestVersion "26.8.1" ;
+    okg:latestVersion "26.9.1" ;
     okg:programmingLanguage "Java" ;
     okg:relatedTo <https://openknowledgegraphs.com/software/arangodb/>,
         <https://openknowledgegraphs.com/software/flockdb/>,
         <https://openknowledgegraphs.com/software/marklogic/>,
         <https://openknowledgegraphs.com/software/orientdb/>,
         <https://openknowledgegraphs.com/software/polypheny/> ;
-    okg:releaseDate "2026-08-03"^^xsd:date ;
+    okg:releaseDate "2026-09-03"^^xsd:date ;
     okg:softwareType okg:GraphDatabase ;
     okg:sourceRepo <https://github.com/ArcadeData/arcadedb> ;
     okg:sourceType <http://www.wikidata.org/entity/Q1130645>,
@@ -4892,27 +4867,30 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:title "ArcadeDB" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q113997665> .
 
-<https://openknowledgegraphs.com/software/graphiti/> a okg:Software ;
-    rdfs:label "Graphiti" ;
-    okg:alias "Graphiti temporal knowledge graph",
-        "Zep Graphiti" ;
-    okg:description "open-source framework for building temporal knowledge graphs as evolving context for AI agents" ;
+<https://openknowledgegraphs.com/software/cognee/> a okg:Software ;
+    rdfs:label "Cognee" ;
+    okg:alias "Cognee AI memory",
+        "cognee" ;
+    okg:description "open-source framework that builds ontology-grounded knowledge graphs as persistent memory for AI agents" ;
     okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://help.getzep.com/graphiti> ;
-    okg:latestVersion "0.29.3" ;
+    okg:homepage <https://www.cognee.ai/> ;
+    okg:latestVersion "1.5.4" ;
     okg:programmingLanguage "Python" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
+    okg:relatedTo <https://openknowledgegraphs.com/software/graphiti/>,
         <https://openknowledgegraphs.com/software/mem0/>,
         <https://openknowledgegraphs.com/software/ontop/>,
         <https://openknowledgegraphs.com/software/rdf4j/>,
-        <https://openknowledgegraphs.com/software/zep/> ;
-    okg:releaseDate "2026-07-27"^^xsd:date ;
+        <https://openknowledgegraphs.com/software/seam/> ;
+    okg:releaseDate "2026-09-04"^^xsd:date ;
     okg:softwareType okg:AIAgentTooling ;
-    okg:sourceRepo <https://github.com/getzep/graphiti> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q140639670>,
+    okg:sourceRepo <https://github.com/topoteretes/cognee> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q140639670>,
         <http://www.wikidata.org/entity/Q271680> ;
-    okg:title "Graphiti" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q140639972> .
+    okg:title "Cognee" ;
+    okg:uses <http://www.wikidata.org/entity/Q54872>,
+        <http://www.wikidata.org/entity/Q826165> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140639987> .
 
 <https://openknowledgegraphs.com/software/marklogic/> a okg:Software ;
     rdfs:label "MarkLogic" ;
@@ -4935,6 +4913,30 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
         <http://www.wikidata.org/entity/Q7397> ;
     okg:title "MarkLogic" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29364583> .
+
+<https://openknowledgegraphs.com/software/mem0/> a okg:Software ;
+    rdfs:label "Mem0" ;
+    okg:alias "Mem0 AI memory",
+        "mem0",
+        "mem0ai" ;
+    okg:description "open-source software framework providing persistent memory for artificial intelligence agents" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://mem0.ai/> ;
+    okg:latestVersion "2.0.12" ;
+    okg:programmingLanguage "Python",
+        "TypeScript" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
+        <https://openknowledgegraphs.com/software/graphiti/>,
+        <https://openknowledgegraphs.com/software/ontop/>,
+        <https://openknowledgegraphs.com/software/rdf4j/>,
+        <https://openknowledgegraphs.com/software/seam/> ;
+    okg:releaseDate "2026-07-13"^^xsd:date ;
+    okg:softwareType okg:AIAgentTooling ;
+    okg:sourceRepo <https://github.com/mem0ai/mem0> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q140639670>,
+        <http://www.wikidata.org/entity/Q271680> ;
+    okg:title "Mem0" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140639966> .
 
 <https://openknowledgegraphs.com/software/nitrosbase/> a okg:Software ;
     rdfs:label "NitrosBase" ;
@@ -4959,36 +4961,6 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
         <http://www.wikidata.org/entity/Q82231> ;
     okg:title "NitrosBase" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q56296429> .
-
-<https://openknowledgegraphs.com/software/ontop/> a okg:Software ;
-    rdfs:label "ontop" ;
-    okg:alias "Ontop" ;
-    okg:creator okg:Creator_Free_University_of_Bozen_Bolzano_Q1231433,
-        okg:Creator_Ontopic_Q115740336 ;
-    okg:description "platform to query relational databases as Virtual RDF Knowledge Graphs using SPARQL" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <https://ontop-vkg.org> ;
-    okg:latestVersion "5.5.0" ;
-    okg:programmingLanguage "Java" ;
-    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
-        <https://openknowledgegraphs.com/software/graphiti/>,
-        <https://openknowledgegraphs.com/software/mem0/>,
-        <https://openknowledgegraphs.com/software/ontopic-suite/>,
-        <https://openknowledgegraphs.com/software/rdf4j/> ;
-    okg:releaseDate "2026-02-14"^^xsd:date ;
-    okg:softwareType okg:DataMappingETL ;
-    okg:sourceRepo <https://github.com/ontop/ontop> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
-        <http://www.wikidata.org/entity/Q1371279>,
-        <http://www.wikidata.org/entity/Q271680>,
-        <http://www.wikidata.org/entity/Q341>,
-        <http://www.wikidata.org/entity/Q55118556>,
-        <http://www.wikidata.org/entity/Q7397> ;
-    okg:title "ontop" ;
-    okg:uses <http://www.wikidata.org/entity/Q109734057>,
-        <http://www.wikidata.org/entity/Q54871>,
-        <http://www.wikidata.org/entity/Q5533918> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q56861590> .
 
 <https://openknowledgegraphs.com/software/rdf4j/> a okg:Software ;
     rdfs:label "RDF4J" ;
@@ -5015,6 +4987,10 @@ okg:License_GNU_Affero_General_Public_License_version_3_0_or_later_Q27020062 a o
     okg:title "RDF4J" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7455975> .
 
+okg:License_Business_Source_License_1_1_Q121359688 a okg:License ;
+    rdfs:label "Business Source License 1.1" ;
+    okg:licenseName "Business Source License 1.1" .
+
 okg:License_GNU_General_Public_License_version_2_0_Q10513450 a okg:License ;
     rdfs:label "GNU General Public License, version 2.0" ;
     okg:licenseName "GNU General Public License, version 2.0" .
@@ -5022,6 +4998,58 @@ okg:License_GNU_General_Public_License_version_2_0_Q10513450 a okg:License ;
 okg:License_GNU_Lesser_General_Public_License_version_3_0_Q18534393 a okg:License ;
     rdfs:label "GNU Lesser General Public License, version 3.0" ;
     okg:licenseName "GNU Lesser General Public License, version 3.0" .
+
+<https://openknowledgegraphs.com/software/graphiti/> a okg:Software ;
+    rdfs:label "Graphiti" ;
+    okg:alias "Graphiti temporal knowledge graph",
+        "Zep Graphiti" ;
+    okg:description "open-source framework for building temporal knowledge graphs as evolving context for AI agents" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://help.getzep.com/graphiti> ;
+    okg:latestVersion "0.29.3" ;
+    okg:programmingLanguage "Python" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
+        <https://openknowledgegraphs.com/software/mem0/>,
+        <https://openknowledgegraphs.com/software/ontop/>,
+        <https://openknowledgegraphs.com/software/seam/>,
+        <https://openknowledgegraphs.com/software/zep/> ;
+    okg:releaseDate "2026-07-27"^^xsd:date ;
+    okg:softwareType okg:AIAgentTooling ;
+    okg:sourceRepo <https://github.com/getzep/graphiti> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q140639670>,
+        <http://www.wikidata.org/entity/Q271680> ;
+    okg:title "Graphiti" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q140639972> .
+
+<https://openknowledgegraphs.com/software/ontop/> a okg:Software ;
+    rdfs:label "ontop" ;
+    okg:alias "Ontop" ;
+    okg:creator okg:Creator_Free_University_of_Bozen_Bolzano_Q1231433,
+        okg:Creator_Ontopic_Q115740336 ;
+    okg:description "platform to query relational databases as Virtual RDF Knowledge Graphs using SPARQL" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <https://ontop-vkg.org> ;
+    okg:latestVersion "5.5.0" ;
+    okg:programmingLanguage "Java" ;
+    okg:relatedTo <https://openknowledgegraphs.com/software/cognee/>,
+        <https://openknowledgegraphs.com/software/graphiti/>,
+        <https://openknowledgegraphs.com/software/mem0/>,
+        <https://openknowledgegraphs.com/software/rdf4j/>,
+        <https://openknowledgegraphs.com/software/seam/> ;
+    okg:releaseDate "2026-02-14"^^xsd:date ;
+    okg:softwareType okg:DataMappingETL ;
+    okg:sourceRepo <https://github.com/ontop/ontop> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q124653107>,
+        <http://www.wikidata.org/entity/Q1371279>,
+        <http://www.wikidata.org/entity/Q271680>,
+        <http://www.wikidata.org/entity/Q341>,
+        <http://www.wikidata.org/entity/Q55118556>,
+        <http://www.wikidata.org/entity/Q7397> ;
+    okg:title "ontop" ;
+    okg:uses <http://www.wikidata.org/entity/Q109734057>,
+        <http://www.wikidata.org/entity/Q54871>,
+        <http://www.wikidata.org/entity/Q5533918> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q56861590> .
 
 <https://openknowledgegraphs.com/software/orientdb/> a okg:Software ;
     rdfs:label "OrientDB" ;
