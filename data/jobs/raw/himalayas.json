@@ -251,8 +251,8 @@
             "expiryDate": 1793266288,
             "guid": "https://himalayas.app/companies/jimmy-technologies/jobs/senior-ai-engineer-llms-knowledge-graphs",
             "locationRestrictions": [],
-            "maxSalary": 38,
-            "minSalary": 35,
+            "maxSalary": null,
+            "minSalary": null,
             "parentCategories": [],
             "pubDate": 1788082288,
             "salaryPeriod": "hourly",
@@ -329,7 +329,8 @@
             "maxSalary": null,
             "minSalary": null,
             "parentCategories": [
-              "Data Science"
+              "Data Science",
+              "Developer"
             ],
             "pubDate": 1788575726,
             "salaryPeriod": "annual",
@@ -830,47 +831,6 @@
             "title": "Ontology Architect"
           },
           {
-            "applicationLink": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
-            "categories": [
-              "Knowledge-Engineering",
-              "Ontology",
-              "Semantic-Web",
-              "Data-Engineering",
-              "Data-Modeling",
-              "Knowledge-Management",
-              "Senior-Knowledge-Graph-Engineer",
-              "Remote-Senior-Ontology-Specialist",
-              "Senior-Semantic-Data-Consultant",
-              "Ontology-Specialist"
-            ],
-            "companyLogo": "https://cdn-images.himalayas.app/pghdpb1ckeql6pdxte70tcgm13ax",
-            "companyName": "digetiers",
-            "companySlug": "digetiers",
-            "currency": null,
-            "description": "<h3>wie du die welt von morgen prägen kannst</h3><p></p><ul>\n<li>\n<strong>Wissen modellieren: </strong>Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.  </li>\n<li>\n<strong>Brücken bauen:</strong> Du agierst als zentraler Übersetzer zwischen den Fachbereichen und und unserem Engineering Team. Du stellst sicher, dass das Wissensmodell sowohl die fachliche Realität abbildet als auch technisch exzellent umsetzbar ist. </li>\n<li>\n<strong>Konzepte gestalten: </strong>Du entwirfst und moderierst Workshops, um gemeinsam mit Stakeholdern ein einheitliches Verständnis (eine \"Shared Language\") für zentrale Geschäftskonzepte zu entwickeln und zu etablieren. </li>\n<li>\n<strong>Datenquellen integrieren:</strong> Du arbeitest eng mit unserem Engineering Team zusammen, um die Anbindung von Datenbanken, APIs und anderen Quellen an den Knowledge Graphen konzeptionell zu begleiten.</li>\n<li>\n<strong>Ontologien entwickeln und pflegen:</strong> Mit Standards wie OWL/RDF erstellst du nicht nur das Modell, sondern definierst auch die logischen Regeln und Constraints, die die Qualität und Konsistenz unseres Knowledge Graphen sicherstellen.</li>\n</ul><p></p><h3>was dich auszeichnet</h3><p></p><ul>\n<li>\n<strong>Leidenschaft für Struktur und Logik: </strong>Du denkst abstrakt und liebst es, komplexe Zusammenhänge in klare, formale Strukturen zu überführen. Deine Fähigkeit, vom Konkreten zum Abstrakten zu gelangen, zeichnet dich aus. </li>\n<li>\n<strong>Erfahrung in der Modellierung:</strong> Du hast bereits Erfahrung in der Modellierung, z. B. mit UML oder idealerweise bereits mit semantischen Technologien (RDF, OWL). </li>\n<li>\n<strong>Kommunikationsstärke: </strong>Du kannst komplexe technische und logische Modelle so erklären, dass sie sowohl für Fachexperten als auch für Entwickler verständlich und überzeugend sind. Du hörst exzellent zu und stellst die richtigen Fragen. </li>\n<li>\n<strong>Technisches Grundverständnis:</strong> Du weißt, wie Daten in Systemen fließen. Begriffe wie APIs, Datenbanken und Datenpipelines sind dir nicht fremd. Erste Erfahrungen mit Graph-Technologien (z. B. SPARQL, Cypher) sind ein großes Plus, aber kein Muss. </li>\n<li>\n<strong>Neugier und Gestaltungswille: </strong>Du hast den Antrieb, nicht nur bestehende Systeme zu verwalten, sondern eine neue Art der Wissensorganisation für KI von Grund auf mitzugestalten und voranzutreiben. </li>\n</ul><p></p><h3>dich erwartet ein team, das</h3><p></p><ul>\n<li>\n<strong>Vertrauen lebt.</strong> Wir glauben daran, dass du selbst am besten weißt, wie, wann und wo du produktiv bist. Ob Homeoffice, Co-Working-Space oder zeitweise im europäischen Ausland - du gestaltest deinen Arbeitsalltag nach deinen Bedürfnissen. Wenn wir uns treffen, sind unsere Events echte Highlights, die uns als Team noch enger zusammenbringen.</li>\n<li>\n<strong>Neugier fördert</strong>. Lernen hört bei uns nie auf. Wir unterstützen dich dabei, dich kontinuierlich weiterzuentwickeln - mit Zeit, Budget und einem Umfeld, das Austausch und Weiterdenken fördert. Neugier ist für uns kein \"Nice-to-have\", sondern ein zentraler Wert.</li>\n<li>\n<strong>Co-Creation inspiriert.</strong> Bei <a href=\"https://himalayas.app/companies/digetiers\">digetiers</a> gestaltest du nicht nur deine eigene Rolle, sondern auch unser Unternehmen aktiv mit. Ob in Projekten, Prozessen oder unserer Kultur - deine Ideen zählen. Wir glauben an mutige Mitgestaltung statt starrer Strukturen.</li>\n<li>\n<strong>Mit Leidenschaft professionell arbeitet.</strong> Wir lachen gerne - und liefern trotzdem auf höchstem Niveau. Spaß und Leistungsbereitschaft schließen sich bei uns nicht aus, sondern beflügeln sich gegenseitig.</li>\n<li>\n<strong>Als Musketiere zusammenhält.</strong> Einer für alle, alle für einen - bei <a href=\"https://himalayas.app/companies/digetiers\">digetiers</a> ist das nicht nur Ursprung unseres Namens, sondern gelebte Realität. Wir gewinnen als Team und halten uns gegenseitig den Rücken frei.</li>\n</ul><p></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "wie du die welt von morgen prägen kannst • Wissen modellieren: Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.",
-            "expiryDate": 1788644656,
-            "guid": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
-            "locationRestrictions": [
-              "Austria",
-              "Germany",
-              "Switzerland"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [],
-            "pubDate": 1783460656,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              1
-            ],
-            "title": "Knowledge Engineer / Ontologist (m/w/d)"
-          },
-          {
             "applicationLink": "https://himalayas.app/companies/pradeepit-consulting-services-pvt-ltd/jobs/nlp-engineer-_-machine-learning-engineer-5-years-remote",
             "categories": [
               "NLP-Engineer",
@@ -913,11 +873,94 @@
               14
             ],
             "title": "NLP Engineer _ Machine Learning Engineer|5+ years| Remote"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/ci-t/jobs/job-30900-master-data-developer-amazon-neptune-brazil",
+            "categories": [
+              "Graph-Database-Developer",
+              "Data-Developer",
+              "Database-Engineer",
+              "Data-Engineer",
+              "Knowledge-Graph-Engineer",
+              "Master-Data-Management-Engineer"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/gwceunf7j5byi79t5d5qq2yjvis9",
+            "companyName": "CI&T",
+            "companySlug": "ci-t",
+            "currency": null,
+            "description": "<p>At CI&amp;T, we help large enterprises transform the potential of AI into real business impact with AI Deployment, AI-native execution, and tech-integrated business solutions.</p><p>With 30 years of experience in technological transformation, we accelerate innovation with expertise in Agentic SDLC, Application modernization, Data &amp; AI, Martech and Business strategy.</p><p>We are 8,000 CI&amp;Ters across more than 25 countries, collaborating to build solutions with real impact. AI is already part of how we work, evolve, and innovate every day.</p><div>\n<p>As CI&amp;T grows its Data &amp; Analytics Center of Excellence, we seek a talented and experienced Graph Database Developer to join a specialized team building an AI-powered fashion advisory platform for a leading client in the fashion and retail industry. This role is central to turning unstructured editorial content into a structured knowledge graph that powers real-time, intelligent style recommendations for end users attending formal events.</p>\n<p>The Graph Database Developer will work in a staff augmentation model, integrating with a cross-functional team that includes a Machine Learning Developer and a GenAI Agent Developer. This is a hands-on technical position requiring strong ownership of the graph data layer — from schema design through ingestion, entity resolution, and query performance — with direct impact on what the AI agent recommends to users.</p>\n<h3>Responsibilities:</h3>\n<ul>\n<li><p><strong>Schema Design</strong>: Define node labels and edge types that represent the relationships between designers, garments, style attributes, trends, occasions, and editorial articles.</p></li>\n<li><p><strong>Entity Ingestion</strong>: Build workflows that consume structured JSON payloads from the upstream data pipeline and load them into the graph database in batch mode.</p></li>\n<li><p><strong>Probabilistic Entity Matching</strong>: Match extracted item mentions (for example, a bag described by type, color, and material) to the correct product node in a catalog of 50,000+ SKUs by scoring attribute overlap, assigning a match confidence, and creating the relationship only when it exceeds a defined threshold. Deduplicate items that appear inconsistently across different articles.</p></li>\n<li><p><strong>Editorial Signal Weighting</strong>: Assign weights to relationships based on how prominently an item or trend was featured, distinguishing a dedicated feature from a passing mention. These weights determine what the AI agent surfaces first in its recommendations.</p></li>\n<li><p><strong>Query Optimization</strong>: Design and tune openCypher traversal queries, including multi-hop queries, to return relevant results in under three seconds for downstream Amazon Bedrock Agents.</p></li>\n<li><p><strong>Cross-Functional Collaboration</strong>: Work alongside the Machine Learning Developer and GenAI Agent Developer to align the graph structure with the retrieval and recommendation needs of the AI agent.</p></li>\n<li><p><strong>Technical Validation</strong>: Support technical interviews and validation of new team members joining the graph database workstream, as needed.</p></li>\n</ul>\n<h3>Requirements:</h3>\n<ul>\n<li><p>Advanced English proficiency (C1 or above), with autonomy to communicate directly with international stakeholders</p></li>\n<li><p>Solid experience with Amazon Neptune and the property graph data model</p></li>\n<li><p>Experience writing and optimizing openCypher queries, including multi-hop traversals under latency constraints</p></li>\n<li><p>Experience designing graph schemas, evaluating trade-offs between different modeling approaches</p></li>\n<li><p>Experience building entity resolution logic, including fuzzy matching, scoring algorithms, and deduplication across data sources</p></li>\n<li><p>Strong Python skills for data engineering, including batch processing of structured data payloads</p></li>\n<li><p>Ability to work independently in a fast-paced, staff augmentation setting with an established client team</p></li>\n</ul>\n<h3>Nice to Have:</h3>\n<ul>\n<li><p>Prior experience in fashion, retail, or e-commerce catalogs</p></li>\n<li><p>AWS certification in databases or data analytics</p></li>\n<li><p>Experience integrating graph databases with generative AI agents (for example, Amazon Bedrock Agents)</p></li>\n<li><p>Familiarity with recommendation systems or ranking/weighting logic for content surfacing</p></li>\n</ul>\n</div><h3>Our benefits:</h3><div>-Health and dental insurance</div><div>-Meal and food allowance</div><div>-Childcare assistance</div><div>-Extended paternity leave</div><div>-Partnership with gyms and health and wellness professionals via Wellhub (Gympass) TotalPass;</div><div>-Profit Sharing and Results Participation (PLR);</div><div>-Life insurance</div><div>-Continuous learning platform (CI&amp;T University);</div><div>-Discount club</div><div>-Free online platform dedicated to physical, mental, and overall well-being</div><div>-Pregnancy and responsible parenting course</div><div>-Partnerships with online learning platforms</div><div>-Language learning platform</div><div>And many more!</div><div>More details about our benefits here: </div><div>At CI&amp;T, inclusion starts at the first contact. If you are a person with a disability, it is important<strong> to present your assessment during the selection process. </strong><em>See which data needs to be included in the report by clicking here</em>.This way, we can ensure the support and accommodations that you deserve. <strong>If you do not yet have the assessment, don't worry: we can support you in obtaining it.</strong>\n</div><div>We have a dedicated Health and Well-being team, inclusion specialists, and affinity groups who will be with you at every stage. Count on us to make this journey side by side.</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "At CI&T, we help large enterprises transform the potential of AI into real business impact with AI Deployment, AI-native execution, and tech-integrated business solutions.",
+            "expiryDate": 1792370851,
+            "guid": "https://himalayas.app/companies/ci-t/jobs/job-30900-master-data-developer-amazon-neptune-brazil",
+            "locationRestrictions": [
+              "Brazil"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [
+              "Developer",
+              "Data Science"
+            ],
+            "pubDate": 1787186852,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Mid-level"
+            ],
+            "timezoneRestrictions": [
+              -5,
+              -4,
+              -3,
+              -2
+            ],
+            "title": "[Job -  30900] Master Data Developer (Amazon Neptune), Brazil"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836",
+            "categories": [
+              "Software-Engineer",
+              "Data-Engineering",
+              "Semantic-Web",
+              "Knowledge-Graph-Engineering",
+              "Data-Modeling",
+              "Semantic-Data-Engineering",
+              "Senior-Semantic-Data-Consultant",
+              "Mid-Level-Semantic-Engineer",
+              "Semantic-Web-Developer",
+              "Semantic-Technologies-Specialist",
+              "Ontology-Engineer"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/fuoymd6w6l0yk5f0nvipf7zkxios",
+            "companyName": "EUROPEAN DYNAMICS",
+            "companySlug": "european-dynamics",
+            "currency": null,
+            "description": "<p>We are seeking a <strong>Semantic / Data Engineer</strong> to support a complex platform built around RDF data models, SPARQL queries, and structured datasets. You will be responsible for understanding, maintaining, and evolving the semantic layer of the system, working closely with backend engineers and architects. This role suits a specialist who enjoys data modelling, semantics, and knowledge representation in real-world production systems.</p><h3>What You'll Do:</h3><ul>\n<li>Analyse and maintain <strong>RDF/TTL data models</strong> and vocabularies;</li>\n<li>Develop, optimise, and maintain <strong>SPARQL queries;</strong>\n</li>\n<li>Support data ingestion, transformation, and validation workflows;</li>\n<li>Ensure consistency and correctness of semantic data across the platform;</li>\n<li>Collaborate with backend engineers to integrate semantic logic into application flows;</li>\n<li>Assist in documenting semantic models, assumptions, and constraints;</li>\n<li>Participate in troubleshooting data quality and reasoning issues.</li>\n</ul><h3>Requirements</h3><ul><li>\n<strong>3+ years of experience</strong> working with semantic or data-centric systems;</li></ul><ul><li>Strong knowledge of:</li></ul><ul>\n<ul>\n<li><strong>RDF, RDFS, OWL</strong></li>\n<li><strong>SPARQL</strong></li>\n</ul>\n<li>Experience with:</li>\n<ul>\n<li>Knowledge graphs or semantic interoperability platforms;</li>\n<li>Data modelling and ontology design;</li>\n</ul>\n<li>Comfortable working with structured data formats:</li>\n<ul><li>TTL, XML, JSON, CSV</li></ul>\n<li>Ability to analyse existing models and understand <strong>implicit domain logic.</strong>\n</li>\n</ul><h3>Nice-to-Have:</h3><ul>\n<li>Experience with triplestores or graph databases;</li>\n<li>Familiarity with EU data standards or interoperability frameworks;</li>\n<li>Python scripting for data processing and/or Apache Airflow;</li>\n<li>Experience in projects with regulatory or standards-driven constraints.</li>\n</ul><h3>Benefits</h3><p>We believe in rewarding talent and dedication. Here's what you can expect as part of our team:</p><ul>\n<li>Competitive full-time salary;</li>\n<li>Private Health Coverage on the Company’s group program;</li>\n<li>Flexible Working Hours;</li>\n<li>Top-of-the-Line Tools;</li>\n<li>Professional Development: Benefit from language courses, specialized training, and continuous learning opportunities;</li>\n<li>Career Growth: Work with some of the most innovative and exciting specialists in the industry;</li>\n<li>Dynamic Work Environment: Thrive in a setting that offers challenging goals, autonomy, and mentoring, fostering both personal and company growth.</li>\n</ul><p>If you want an exciting challenge, work with some of the coolest technologies, and enjoy your time doing it, then join us! Submit your detailed CV in English, quoting reference: (<strong>SDE/07/26</strong>).</p><p>You may also consider all our other open vacancies by visiting the career section of our website () and follow us on Twitter (@EURODYN_Careers) and LinkedIn.</p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> () is a leading European Software, Information, and Communication Technologies company, operating internationally (Athens, Brussels, Luxembourg, Copenhagen, Berlin, Stockholm, London, Nicosia, Valetta, Vienna, Den Haag, Hong Kong, etc.) The company employs over 1200 engineers, IT experts, and consultants (around 3% PhD, 41% MSc, and 54% BSc). We design and develop software applications using integrated, state-of-the-art technology. Our current IT projects have a value exceeding 300 million EURO. <a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> is a renowned supplier of IT services to European Union Institutions, international organizations, European Agencies, and national government Administrations in 40 countries and 4 continents.</p><p>As part of our dedication to the diversity of our workforce, we are committed to Equal Employment Opportunity without regard for race, colour, national origin, ethnicity, gender, disability, sexual orientation, gender identity, or religion.</p><p><img width=\"400px\" height=\"auto\"></p><p><strong><a href=\"https://himalayas.app/companies/european-dynamics\">EUROPEAN DYNAMICS</a> (ED)</strong> adheres to the General Data Protection Regulation principles by applying its Privacy Policy as published at . By submitting an application to this position and by sharing your personal data with ED, you acknowledge and accept its Policy and authorize ED to process your personal data for the purposes of the company's recruitment opportunities, in line with the Policy.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "We are seeking a Semantic / Data Engineer to support a complex platform built around RDF data models, SPARQL queries, and structured datasets.",
+            "expiryDate": 1790911321,
+            "guid": "https://himalayas.app/companies/european-dynamics/jobs/semantic-data-engineer-2589926836",
+            "locationRestrictions": [
+              "Greece"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [
+              "Developer"
+            ],
+            "pubDate": 1785727322,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "timezoneRestrictions": [
+              2
+            ],
+            "title": "Semantic Data Engineer"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 168,
+        "totalCount": 165,
         "updatedAt": 1788575726
       }
     },
@@ -1142,52 +1185,6 @@
             "title": "Ontology Expert - Remote (Dallas, TX, US)"
           },
           {
-            "applicationLink": "https://himalayas.app/companies/sosi/jobs/ontologist",
-            "categories": [
-              "Ontologist",
-              "Ontology-Engineer",
-              "Semantic-Technologies-Specialist",
-              "Knowledge-Engineer",
-              "Data-Integration-Specialist",
-              "Ontology-Expert",
-              "Ontology-Specialist",
-              "Ontology",
-              "Ontology-Development",
-              "Ontologies-And-Taxonomies",
-              "Remote-Senior-Ontology-Specialist"
-            ],
-            "companyLogo": "",
-            "companyName": "SOSi",
-            "companySlug": "sosi",
-            "currency": "USD",
-            "description": "<p><strong>*** This position is contingent upon contract award ***</strong></p><p><a href=\"https://himalayas.app/companies/sosi\">SOSi</a> is seeking an Ontologist to support mission requirements for a structured approach to further develop, integrate, and sustain a scalable, federated data ecosystem that enhances interoperability, governance, and mission-driven analytics for a DoD customer. The primary objective of the program is to bridge the operational gaps between DoD, IC, interagency, and non-traditional international partners to enable real-time information sharing, dynamic data integration, and mission-tailored analytical capabilities.</p><h3>Essential Job Duties:</h3><ul>\n<li>Develop, refine, and maintain domain-specific ontologies to support structured data integration, semantic search, and AI-assisted decision support.</li>\n<li>Enforce adherence to W3C standards and metadata alignment between Databricks Unity Catalog, GIS metadata systems, and operational data stores.</li>\n<li>Collaborate with data scientists and analysts to ensure ontology-driven tagging and entity resolution enhances the relevance of research outputs.</li>\n<li>Submit the Ontology Governance &amp; Standardization Report, detailing ontology updates, integrations, and compliance with metadata standards.</li>\n</ul><ul>\n<li>Master’s degree or higher (e.g., Ph.D.) in Computer Science, Information Science, Artificial Intelligence, Geospatial Science, GIS, Data Science, Business Analytics, Cognitive Science, or a closely related field; OR a minimum of 11+ years of experience in ontology development, semantic technologies.</li>\n<li>Possess the knowledge and capability to develop ontologies:<ul>\n<li>Proficiency in writing advanced SPARQL queries.</li>\n<li>Strong skills in the W3C Web Ontology Language (OWL).</li>\n<li>Solid understanding of Basic Formal Ontology (BFO) and Common Core Ontologies (CCO). </li>\n<li>Proficiency in both Java and Python for ontology-driven application development</li>\n<li>Experience with Bash scripting for automation tasks.</li>\n</ul>\n</li>\n<li>Hands-on experience with ESRI data tools, including ArcGIS.</li>\n<li>Background in DevSecOps practices, version control systems (e.g., Git) and CI/CD pipelines.</li>\n<li>Strong analytical skills, attention to detail, and the ability to work collaboratively.</li>\n<li>Demonstrated expertise in ontology design, semantic data modeling, and SPARQL query development, with proficiency in W3C standards (RDF, OWL, SHACL) and supporting frameworks like Basic Formal Ontology (BFO) and Common Core Ontologies (CCO). </li>\n</ul><h3>Working Conditions</h3><ul><li>Remote. Offsite. </li></ul><h3>Working at <a href=\"https://himalayas.app/companies/sosi\">SOSi</a>\n</h3><p>All interested individuals will receive consideration and will not be discriminated against for any reason.</p><p>Founded in 1989, <a href=\"https://himalayas.app/companies/sosi\">SOSi</a> is among the largest private, founder-owned technology and services integrators in the defense and government services industry. We deliver tailored solutions, tested leadership, and trusted results to enable national security missions worldwide.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "*** This position is contingent upon contract award *** SOSi is seeking an Ontologist to support mission requirements for a structured approach to further develop, integrate, and sustain a scalable, federated data ecosystem that enhances interoperability, governance, and mission-driven analytics for a DoD customer.",
-            "expiryDate": 1788659757,
-            "guid": "https://himalayas.app/companies/sosi/jobs/ontologist",
-            "locationRestrictions": [
-              "United States"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [],
-            "pubDate": 1786134667,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "title": "Ontologist"
-          },
-          {
             "applicationLink": "https://himalayas.app/companies/global-healthcare-exchange-ghx/jobs/senior-data-scientist-ontology",
             "categories": [
               "AI",
@@ -1233,6 +1230,56 @@
               14
             ],
             "title": "Senior Data Scientist - Ontology"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/lockheed-martin-corporation/jobs/ontology-agentic-software-engineer",
+            "categories": [
+              "Software-Engineer",
+              "AI-ML-Engineer",
+              "Autonomy-Software-Engineering",
+              "Robotics-Engineering",
+              "Agentic-AI-Engineering",
+              "Ontology-Engineer",
+              "AI-Agentic-Systems-Engineer",
+              "Ontology-Engineering",
+              "Agentic-Development-Engineer",
+              "Agentic-AI-Engineer",
+              "Senior-Agentic-Systems-Developer",
+              "Semantic-Web-Engineer",
+              "Developer"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/mh5r9chs1uiod2zqk2ldld9ihohp",
+            "companyName": "Lockheed Martin Corporation",
+            "companySlug": "lockheed-martin-corporation",
+            "currency": "USD",
+            "description": "<div>\n<div>\n<div><h2>Standard Job Description</h2></div>\n<div><p>Responsible for developing, integrating, and deploying autonomy and artificial intelligence algorithms for mission systems, supporting the technology development life cycle from requirements generation through development, integration, and testing, as well as research in some organizations.Develops, integrates, and implements algorithms to enable perception, motion/mission planning, controls, etc. functionality in LM products and platforms; Translates requirements and applies requirements to development code, integrating autonomy, AI or machine learning algorithms to LM products and platforms; Determines software methods to best acquire and execute knowledge; Implements algorithms into software to train systems to recognize patterns and perform specific functions; Responsible for various phases of developing and maintaining autonomy software from requirements generation, software design and development to integration, testing, troubleshooting and debugging, and implementation; Review test outcomes, conducts troubleshooting, and works to debug issues; Develops human-machine interface scenarios, breaking missions into tasks; Documents interface requirements and implements human-machine interfaces</p></div>\n</div>\n<div>\n<div><h2>Basic Qualifications</h2></div>\n<div><ul>\n<li>Bachelor's degree in Computer Science, Computer Engineering, Robotics, Applied Mathematics, or a related STEM field, and 9 years of relevant experience; or a Master's degree and 7 years; or a PhD and 4 years.</li>\n<li>Experience developing and implementing machine learning, AI, or autonomy algorithms, such as perception, planning, or controls.</li>\n<li>Proficiency programming in Python and/or C++.</li>\n<li>Experience taking algorithms from prototype through integration and test into a deployed or fielded software product.</li>\n<li>Experience translating requirements into software design and implementation.</li>\n</ul></div>\n</div>\n<div>\n<div><h2>Desired Skills</h2></div>\n<div><ul>\n<li>Deep learning frameworks such as PyTorch or TensorFlow.</li>\n<li>Applied LLM or generative AI experience on engineering or mission problems.</li>\n<li>MLOps: model deployment, monitoring, and CI/CD for ML systems.</li>\n<li>Robotics and autonomy stacks such as ROS, sensor fusion, or motion planning.</li>\n<li>Cloud ML platforms (AWS, Azure, or GCP).</li>\n<li>Human machine interface design experience.</li>\n<li>Model verification and validation, test, or safety-critical software process experience.</li>\n<li>Experience mentoring engineers or leading technical tasks.</li>\n</ul></div>\n</div>\n</div><h3>Pay Information</h3><p><strong>GeoZone Definition:</strong> GeoZones are geographic groupings created by Lockheed Martin to align compensation ranges with regional labor markets and cost-of-labor differences across the United States. Locations are assigned a Geo Zone based on the primary work location of the role.</p><ul>\n<li>Full-time salary range (GEOZONE 1): $150800.00 - $280000.00 <ul><li>Includes metropolitan areas such as Sunnyvale CA; Pal Alto, CA; New York City metropolitan area; Newark, New Jersey; etc.</li></ul>\n</li>\n<li>Full-time salary range (GEOZONE 2): $135700.00 - $251900.00 <ul><li>Includes metropolitan areas such as Denver, CO; King of Prussia, PA; Stratford, CT; Moorestown, NJ; etc.</li></ul>\n</li>\n<li>Full-time salary range (GEOZONE 3): $120600.00 - $224000.00<ul><li>Includes metropolitan areas such as Dallas–Fort Worth, TX; Orlando, FL; Grand Prairie, TX; Marietta, GA; etc.</li></ul>\n</li>\n<li>Full-time salary range (GEOZONE 4): $108600.00 - $201600.00<ul><li>Includes metropolitan areas such as Camden, AR; Lexington, KY; Ocala, FL; Lufkin, TX; etc.</li></ul>\n</li>\n</ul><p>At Lockheed Martin, we know mission success starts with taking care of our people. Our Total Rewards program is designed to attract top talent, support your well-being, and help you grow—both professionally and personally.</p><p>The salary range for this position is as listed on the requisition. Please note that the salary information listed is a general guideline only. <br>Lockheed Martin considers factors such as (but not limited to) scope and responsibilities of the position, candidate's work experience, education/ training, key skills as well as market(work location) and business considerations when extending an offer.</p><p><strong>Benefits offered:</strong> Medical, Dental, Vision, Flexible work arrangements and schedules (e.g., 4x10), 401(k) match, Paid time off, Holidays, Parental Leave, EAP, Flexible Spending Accounts, Education Assistance, Life Insurance, Short-Term Disability, and Long-Term Disability.</p><ul>\n<li>Annual short-term and/or long-term incentive compensation programs may be offered depending on the position. Payments under these annual programs are not guaranteed and can vary from year to year and are tied to a range of performance metrics.</li>\n<li>For (Washington state applicants only) Non-represented full-time employees: accrue at least 10 hours per month of Paid Time Off (PTO) to be used for incidental absences and other reasons; receive at least 90 hours for holidays. Represented full time employees accrue 6.67 hours of Vacation per month; accrue up to 52 hours of sick leave annually; receive at least 96 hours for holidays. PTO, Vacation, sick leave, and holiday hours are prorated based on start date during the calendar year.</li>\n</ul><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "Standard Job Description Responsible for developing, integrating, and deploying autonomy and artificial intelligence algorithms for mission systems, supporting the technology development life cycle from requirements generation through development, integration, and testing, as well as research in some organizations.",
+            "expiryDate": 1793790146,
+            "guid": "https://himalayas.app/companies/lockheed-martin-corporation/jobs/ontology-agentic-software-engineer",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "maxSalary": 280000,
+            "minSalary": 108600,
+            "parentCategories": [
+              "Developer"
+            ],
+            "pubDate": 1788606147,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "title": "Ontology Agentic Software Engineer"
           },
           {
             "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
@@ -1785,58 +1832,12 @@
               14
             ],
             "title": "Forward Deployed Engineer"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/crowdstrike/jobs/sr-software-engineer-vendor-semantics-and-developer-experience-8770560755",
-            "categories": [
-              "Software-Engineer",
-              "API-Engineering",
-              "Developer-Experience-Engineering",
-              "Backend-Engineering",
-              "Senior-Developer-Experience-Engineer",
-              "Senior-Developer-Experience-Platform-Engineer",
-              "Senior-Developer-Platform-Engineer",
-              "Senior-Developer-Relations-Engineer",
-              "Senior-Developer-Tools-Engineer"
-            ],
-            "companyLogo": "https://cdn-images.himalayas.app/95gzgg20hqvtq04pae5z2598mdmo",
-            "companyName": "Crowdstrike",
-            "companySlug": "crowdstrike",
-            "currency": "USD",
-            "description": "<p>As a global leader in cybersecurity, CrowdStrike protects the people, processes and technologies that drive modern organizations. Since 2011, our mission hasn’t changed — we’re here to stop breaches, and we’ve redefined modern security with the world’s most advanced AI-native platform. We work on large scale distributed systems, processing almost 3 trillion events per day and this traffic is growing daily. Our customers span all industries, and they count on CrowdStrike to keep their businesses running, their communities safe and their lives moving forward. We're proud to work for a mission-driven company leveraging AI to transform the way we work. CrowdStrikers drive their careers through flexibility and autonomy while also being expected to contribute to a culture of responsible AI adoption, experimentation, and innovation. We use an AI-first mindset as a force multiplier to proactively and continuously accelerate execution, build expertise, uncover insights, and solve complex problems. We’re always looking to add talented CrowdStrikers to the team who have limitless passion, a relentless focus on innovation and a fanatical commitment to our customers, our community and each other. Ready to join a mission that matters? The future of cybersecurity starts with you.</p><br><h3><b>About the Role:</b></h3><p>As the Senior Software Engineer, Vendor Semantics &amp; Developer Experience, you will be the primary builder of a system that treats global infrastructure as a formal graph, where every node and edge is traced back to a versioned source of truth. Our Ontologists design the formal architecture of what truth looks like. Our Knowledge Engineers build the frameworks and transformation engines that make that truth computable. You are the engineer who keeps that system honest and keeps it usable.</p><p>Your domain is vendor semantic data: the OpenAPI, Swagger, and Smithy specifications that describe what cloud providers, security tools, and infrastructure platforms expose to the world. You build the systems that parse, track, validate, and canonicalize that information into a reliable source of truth. And you build the developer tooling that makes it possible for downstream product and ingest teams to work confidently against that truth.</p><p>This role is for someone who cares deeply about correctness, not just \"does the code run\" but \"does the model mean what we think it means\", and who understands that great internal tooling is a force multiplier for every team that touches this platform.</p><h3>The Challenges You'll Solve</h3><p>Hundreds of vendors publish API specifications, and they change constantly, inconsistently, and without warning. How do you build a system that tracks those changes, detects when a vendor's schema evolution breaks ontological assumptions, and surfaces that signal before downstream teams ship on a stale model? How do you give engineers a development experience that makes working with a complex knowledge graph feel tractable rather than treacherous? </p><h3><b>What You'll Do:</b></h3><ul>\n<li><p>Own the Vendor Schema Registry: You will build and maintain the systems that ingest, parse, and version vendor API specifications like OpenAPI, Swagger, Smithy, and others. You will track schema evolution across providers, detect breaking and semantic changes, and ensure that the canonical ontological model stays synchronized with the ground truth of what vendors actually expose.</p></li>\n<li><p>Build the Semantic Validation Pipeline: Correctness, not throughput, is your SLO. You will implement the validation systems that verify new and updated vendor schemas against the canonical ontology, catching mapping gaps, type conflicts, and semantic regressions before they propagate into the graph and mislead downstream consumers.</p></li>\n<li><p>Build the Developer Experience: You will design and maintain the internal tooling, SDKs, scaffolding, and documentation systems that make it fast and safe for product teams and ingest engineers to work with this knowledge platform. When a team needs to understand what a vendor resource maps to in the graph, or how to add support for a new provider, you are the reason they can do it with confidence and without lengthy onboarding.</p></li>\n<li><p>Close the Loop Between Schema and Graph: You will work closely with the Knowledge Engineers and Ontologists to translate real-world vendor schema constraints and edge cases into actionable input for the canonical model. When the messy reality of vendor APIs requires the ontology to flex, you are the one who surfaces that tension clearly.</p></li>\n<li><p>Raise the Floor for Downstream Teams: Product groups and ingest teams build on top of what you maintain. You will invest in the documentation, tooling, and validation guardrails that allow those teams to move quickly without requiring deep knowledge of the underlying semantic systems.</p></li>\n</ul><h3><b>What You'll Need:</b></h3><ul>\n<li><p>A strong software engineering background with hands-on experience building systems that parse, validate, and transform structured specifications or schemas at scale.</p></li>\n<li><p>Proficiency in Go, Rust, and/or Python; comfort in polyglot environments.</p></li>\n<li><p>Deep experience with API specification formats -- OpenAPI/Swagger, Smithy, JSON Schema, or similar, including parsing, diffing, and reasoning about schema evolution.</p></li>\n<li><p>A practical understanding of graph data models and the downstream consequences of upstream schema decisions.</p></li>\n<li><p>A demonstrated instinct for developer experience , you have built internal tooling, SDKs, or frameworks that other engineers actually used, and you measure success by their productivity.</p></li>\n<li><p>A rigorous, correctness-first engineering mindset: you think in terms of invariants, edge cases, and what happens when a vendor silently changes something.</p></li>\n<li><p>Proven experience utilizing AI technologies to enhance decision-making, streamline workflows and processes, improve efficiency and drive business outcomes.</p></li>\n</ul><h3><b>Bonus Points:</b></h3><ul>\n<li><p>Experience building systems that track and diff API specification changes over time (schema registries, changelog automation, breaking-change detection).</p></li>\n<li><p>Familiarity with semantic web technologies (RDF, SHACL, OWL, SPARQL) or ontology engineering toolchains.</p></li>\n<li><p>A background in infrastructure, cloud platform engineering, or security tooling , you know how cloud providers think about their APIs.</p></li>\n<li><p>Experience with declarative configuration systems or code generation pipelines that translate high-level intent into low-level artifacts.</p></li>\n<li><p>A track record of making complex internal systems more approachable , you have been the person who writes the tool or guide that makes an entire team faster.</p></li>\n</ul><h3>Benefits of Working at CrowdStrike:</h3><ul>\n<li><p>Market leader in compensation and equity awards</p></li>\n<li><p>Comprehensive physical and mental wellness programs </p></li>\n<li><p>Competitive vacation and holidays for recharge  </p></li>\n<li><h3>Paid parental and adoption leaves</h3></li>\n<li><p>Professional development opportunities for all employees regardless of level or role</p></li>\n<li><p>Employee Networks, geographic neighborhood groups, and volunteer opportunities to build connections</p></li>\n<li><p>Vibrant office culture with world class amenities</p></li>\n<li><p>Great Place to Work Certified™ across the globe</p></li>\n</ul><p>CrowdStrike is proud to be an equal opportunity employer. We are committed to fostering a culture of belonging where everyone is valued for who they are and empowered to succeed. We support veterans and individuals with disabilities through our affirmative action program.</p><p>CrowdStrike is committed to providing equal employment opportunity for all employees and applicants for employment. The Company does not discriminate in employment opportunities or practices on the basis of race, color, creed, ethnicity, religion, sex (including pregnancy or pregnancy-related medical conditions), sexual orientation, gender identity, marital or family status, veteran status, age, national origin, ancestry, physical disability (including HIV and AIDS), mental disability, medical condition, genetic information, membership or activity in a local human rights commission, status with regard to public assistance, or any other characteristic protected by law. We base all employment decisions--including recruitment, selection, training, compensation, benefits, discipline, promotions, transfers, lay-offs, return from lay-off, terminations and social/recreational programs--on valid job requirements.</p><p>If you need assistance accessing or reviewing the information on this website or need help submitting an application for employment or requesting an accommodation, please contact us at  further assistance.</p><p>Find out more about your rights as an applicant.</p><p>CrowdStrike participates in the E-Verify program.</p><p>Notice of E-Verify Participation</p><p>Right to Work</p>CrowdStrike, Inc. is committed to fair and equitable compensation practices. Placement within the pay range is dependent on a variety of factors including, but not limited to, relevant work experience, skills, certifications, job level, supervisory status, and location. The base salary range for this position for all U.S. candidates is $145,000 - $220,000 per year, with eligibility for bonuses, equity grants and a comprehensive benefits package that includes health insurance, 401k and paid time off.<p>For detailed information about the U.S. benefits package, please click here. </p>Expected Close Date of Job Posting is:10-03-2026<p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "As a global leader in cybersecurity, CrowdStrike protects the people, processes and technologies that drive modern organizations.",
-            "expiryDate": 1791276694,
-            "guid": "https://himalayas.app/companies/crowdstrike/jobs/sr-software-engineer-vendor-semantics-and-developer-experience-8770560755",
-            "locationRestrictions": [
-              "United States"
-            ],
-            "maxSalary": 220000,
-            "minSalary": 145000,
-            "parentCategories": [
-              "Developer"
-            ],
-            "pubDate": 1786092695,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "title": "Sr. Software Engineer, Vendor Semantics and Developer Experience"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 62,
-        "updatedAt": 1788485913
+        "totalCount": 63,
+        "updatedAt": 1788606147
       }
     },
     {
@@ -2190,47 +2191,6 @@
               14
             ],
             "title": "Knowledge Graph Engineer"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
-            "categories": [
-              "Knowledge-Engineering",
-              "Ontology",
-              "Semantic-Web",
-              "Data-Engineering",
-              "Data-Modeling",
-              "Knowledge-Management",
-              "Senior-Knowledge-Graph-Engineer",
-              "Remote-Senior-Ontology-Specialist",
-              "Senior-Semantic-Data-Consultant",
-              "Ontology-Specialist"
-            ],
-            "companyLogo": "https://cdn-images.himalayas.app/pghdpb1ckeql6pdxte70tcgm13ax",
-            "companyName": "digetiers",
-            "companySlug": "digetiers",
-            "currency": null,
-            "description": "<h3>wie du die welt von morgen prägen kannst</h3><p></p><ul>\n<li>\n<strong>Wissen modellieren: </strong>Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.  </li>\n<li>\n<strong>Brücken bauen:</strong> Du agierst als zentraler Übersetzer zwischen den Fachbereichen und und unserem Engineering Team. Du stellst sicher, dass das Wissensmodell sowohl die fachliche Realität abbildet als auch technisch exzellent umsetzbar ist. </li>\n<li>\n<strong>Konzepte gestalten: </strong>Du entwirfst und moderierst Workshops, um gemeinsam mit Stakeholdern ein einheitliches Verständnis (eine \"Shared Language\") für zentrale Geschäftskonzepte zu entwickeln und zu etablieren. </li>\n<li>\n<strong>Datenquellen integrieren:</strong> Du arbeitest eng mit unserem Engineering Team zusammen, um die Anbindung von Datenbanken, APIs und anderen Quellen an den Knowledge Graphen konzeptionell zu begleiten.</li>\n<li>\n<strong>Ontologien entwickeln und pflegen:</strong> Mit Standards wie OWL/RDF erstellst du nicht nur das Modell, sondern definierst auch die logischen Regeln und Constraints, die die Qualität und Konsistenz unseres Knowledge Graphen sicherstellen.</li>\n</ul><p></p><h3>was dich auszeichnet</h3><p></p><ul>\n<li>\n<strong>Leidenschaft für Struktur und Logik: </strong>Du denkst abstrakt und liebst es, komplexe Zusammenhänge in klare, formale Strukturen zu überführen. Deine Fähigkeit, vom Konkreten zum Abstrakten zu gelangen, zeichnet dich aus. </li>\n<li>\n<strong>Erfahrung in der Modellierung:</strong> Du hast bereits Erfahrung in der Modellierung, z. B. mit UML oder idealerweise bereits mit semantischen Technologien (RDF, OWL). </li>\n<li>\n<strong>Kommunikationsstärke: </strong>Du kannst komplexe technische und logische Modelle so erklären, dass sie sowohl für Fachexperten als auch für Entwickler verständlich und überzeugend sind. Du hörst exzellent zu und stellst die richtigen Fragen. </li>\n<li>\n<strong>Technisches Grundverständnis:</strong> Du weißt, wie Daten in Systemen fließen. Begriffe wie APIs, Datenbanken und Datenpipelines sind dir nicht fremd. Erste Erfahrungen mit Graph-Technologien (z. B. SPARQL, Cypher) sind ein großes Plus, aber kein Muss. </li>\n<li>\n<strong>Neugier und Gestaltungswille: </strong>Du hast den Antrieb, nicht nur bestehende Systeme zu verwalten, sondern eine neue Art der Wissensorganisation für KI von Grund auf mitzugestalten und voranzutreiben. </li>\n</ul><p></p><h3>dich erwartet ein team, das</h3><p></p><ul>\n<li>\n<strong>Vertrauen lebt.</strong> Wir glauben daran, dass du selbst am besten weißt, wie, wann und wo du produktiv bist. Ob Homeoffice, Co-Working-Space oder zeitweise im europäischen Ausland - du gestaltest deinen Arbeitsalltag nach deinen Bedürfnissen. Wenn wir uns treffen, sind unsere Events echte Highlights, die uns als Team noch enger zusammenbringen.</li>\n<li>\n<strong>Neugier fördert</strong>. Lernen hört bei uns nie auf. Wir unterstützen dich dabei, dich kontinuierlich weiterzuentwickeln - mit Zeit, Budget und einem Umfeld, das Austausch und Weiterdenken fördert. Neugier ist für uns kein \"Nice-to-have\", sondern ein zentraler Wert.</li>\n<li>\n<strong>Co-Creation inspiriert.</strong> Bei <a href=\"https://himalayas.app/companies/digetiers\">digetiers</a> gestaltest du nicht nur deine eigene Rolle, sondern auch unser Unternehmen aktiv mit. Ob in Projekten, Prozessen oder unserer Kultur - deine Ideen zählen. Wir glauben an mutige Mitgestaltung statt starrer Strukturen.</li>\n<li>\n<strong>Mit Leidenschaft professionell arbeitet.</strong> Wir lachen gerne - und liefern trotzdem auf höchstem Niveau. Spaß und Leistungsbereitschaft schließen sich bei uns nicht aus, sondern beflügeln sich gegenseitig.</li>\n<li>\n<strong>Als Musketiere zusammenhält.</strong> Einer für alle, alle für einen - bei <a href=\"https://himalayas.app/companies/digetiers\">digetiers</a> ist das nicht nur Ursprung unseres Namens, sondern gelebte Realität. Wir gewinnen als Team und halten uns gegenseitig den Rücken frei.</li>\n</ul><p></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "wie du die welt von morgen prägen kannst • Wissen modellieren: Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.",
-            "expiryDate": 1788644656,
-            "guid": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
-            "locationRestrictions": [
-              "Austria",
-              "Germany",
-              "Switzerland"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [],
-            "pubDate": 1783460656,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              1
-            ],
-            "title": "Knowledge Engineer / Ontologist (m/w/d)"
           },
           {
             "applicationLink": "https://himalayas.app/companies/albert-invent/jobs/digital-marketing-manager-web-ai-search",
@@ -2689,57 +2649,93 @@
             "title": "Senior Marketing Analytics Manager - BI & Data Architecture"
           },
           {
-            "applicationLink": "https://himalayas.app/companies/parallels/jobs/senior-manager-seo-geo-4009046798",
+            "applicationLink": "https://himalayas.app/companies/ecosio/jobs/full-stack-developer-java-react-f-m-d",
             "categories": [
-              "SEO-Management",
-              "GEO",
-              "Search-Strategy",
-              "Digital-Marketing-Management",
-              "Content-Strategy",
-              "Organic-Growth",
-              "AI-Search-Strategy",
-              "Senior-SEO-and-GEO-Specialist",
-              "Senior-SEO-Manager",
-              "Senior-SEO-Strategist",
-              "Senior-SEO-Specialist",
-              "Senior-Digital-Marketing-Manager",
-              "Senior-SEO",
-              "Senior-Manager-Digital-Strategy",
-              "Marketing"
+              "Fullstack-Development",
+              "web-app-development",
+              "Frontend-Development",
+              "Backend-Development",
+              "Software-Engineer",
+              "Mid-Level-Fullstack-Engineer-(Java-+-React-Angular)",
+              "Mid-Level-Java-Fullstack-Developer-(Spring-Boot-+-React-Angular)",
+              "Full-Stack-Developer"
             ],
-            "companyLogo": "https://cdn-images.himalayas.app/syptemhzje7ebdwf1d5n4sf2jvr3",
-            "companyName": "Parallels",
-            "companySlug": "parallels",
-            "currency": "GBP",
-            "description": "<div>\n<h3>Senior Manager, SEO &amp; GEO</h3>\n<p>Search Engine Optimization &amp; Generative Engine Optimization | <a href=\"https://himalayas.app/companies/parallels\">Parallels</a></p>\n<p>Push the boundaries of discovery. In your sweatpants.</p>\n<p>We are looking for an experienced Senior Manager of SEO &amp; GEO to lead the next evolution of organic discovery at <a href=\"https://himalayas.app/companies/parallels\">Parallels</a>.</p>\n<p>This role will own our strategy across both traditional search engines and emerging AI-powered discovery platforms. SEO remains a critical growth engine for <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> - driving visibility, qualified traffic, customer acquisition, and category authority. At the same time, discovery is rapidly expanding into generative AI experiences, where customers increasingly ask tools like ChatGPT, Google AI Overviews, Gemini, Perplexity, Claude, and Copilot what to buy, how to solve problems, and which products to trust.</p>\n<p>The Senior Manager of SEO &amp; GEO will ensure <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> continues to win in search today while building a leadership position in the AI-driven discovery channels of tomorrow.</p>\n<p>This is a strategic, hands-on leadership role for someone who has deep SEO expertise and is excited to define the emerging GEO playbook. You will strengthen our technical SEO foundation, scale our content and authority strategy, and lead the company approach to improving how <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> is surfaced, summarized, cited, compared, and recommended by AI-powered platforms.</p>\n<p>You will partner closely with Product, Engineering, Product Marketing, Sales, Analytics, Communications, and Channel teams to make <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> more discoverable across the full customer journey - from traditional search queries to AI-generated recommendations.</p>\n<p>Your team is global and works across multiple time zones, so comfort with remote work and asynchronous collaboration is critical. Understanding the virtualization space, developer ecosystem, Apple ecosystem, enterprise productivity landscape, and partner routes-to-market will be a strong advantage.</p>\n<h3>Why This Role Matters</h3>\n<p>Search is not going away. It remains one of the most important ways customers discover, compare, and choose technology products.</p>\n<h3>But search is changing.</h3>\n<p>Customers are increasingly moving from keyword searches to AI-assisted recommendations, conversational answers, and generated product comparisons. That makes SEO more important, not less - because strong technical foundations, authoritative content, structured knowledge, and trusted third-party signals are also what help AI systems understand and recommend a brand.</p>\n<p>This role exists to help <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> win across both dimensions: the proven SEO channels that drive growth today and the emerging GEO channels that will shape customer discovery tomorrow.</p>\n<h3>What You Will Do</h3>\n<h3>Lead the Integrated SEO &amp; GEO Strategy</h3>\n<div><ul>\n<li>Own <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> global organic discovery strategy across traditional search engines and AI-powered discovery platforms.</li>\n<li>Set the roadmap for SEO and GEO initiatives tied to measurable business outcomes, including qualified traffic, conversion, pipeline influence, brand authority, and AI search visibility.</li>\n<li>Balance near-term SEO performance with long-term GEO leadership as discovery behavior evolves.</li>\n<li>Establish <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> operating model for how SEO, GEO, Product Marketing, Content, Engineering, PR, Channel, and Analytics work together.</li>\n<li>Lead prioritization, planning, reporting, and executive communication for SEO and GEO initiatives.</li>\n</ul></div>\n<h3>Build <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> GEO Leadership</h3>\n<div><ul>\n<li>Define and operationalize <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> Generative Engine Optimization strategy.</li>\n<li>Improve how <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> products are surfaced, summarized, cited, compared, and recommended in AI-powered discovery experiences.</li>\n<li>Monitor <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> presence across ChatGPT, Google AI Overviews, Gemini, Perplexity, Claude, Copilot, and emerging AI assistants.</li>\n<li>Build strategies around entity authority, semantic relevance, structured knowledge, citation visibility, AI retrievability, and recommendation share-of-voice.</li>\n<li>Partner with Product Marketing and Communications to increase high-quality third-party mentions, citations, and category authority.</li>\n<li>Develop practical measurement frameworks for GEO where attribution is still evolving.</li>\n<li>Identify how AI-driven discovery is changing customer journeys, competitive positioning, and purchase consideration.</li>\n</ul></div>\n<h3>Strengthen SEO as a Core Growth Engine</h3>\n<div><ul>\n<li>Lead technical SEO across crawlability, indexing, rendering, site architecture, Core Web Vitals, internal linking, structured data, and international SEO.</li>\n<li>Partner with Product and Engineering to ensure SEO requirements are embedded into product launches, site changes, and platform decisions.</li>\n<li>Drive content SEO strategy across priority audiences including prosumers, developers, power users, gamers, small and mid-size businesses, enterprise buyers, and channel partners.</li>\n<li>Improve organic acquisition through better intent mapping, content quality, conversion pathways, and authority building.</li>\n<li>Ensure <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> continues to perform strongly in traditional search while preparing for the future of AI-mediated discovery.</li>\n<li>Diagnose and resolve SEO performance issues across large-scale web properties.</li>\n</ul></div>\n<h3>Drive Content, Authority &amp; Discoverability</h3>\n<div><ul>\n<li>Partner with Product Marketing to translate product capabilities, launches, roadmap themes, and use cases into discoverable narratives.</li>\n<li>Build topic authority across virtualization, Windows on Mac, Apple enterprise adoption, developer workflows, gaming, productivity, managed devices, and cross-platform work.</li>\n<li>Create content and information architecture that serves both human buyers and AI retrieval systems.</li>\n<li>Support digital PR and partner/channel content strategies that increase trusted references to <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> across the web.</li>\n<li>Use AI tools responsibly to accelerate research, content optimization, competitive analysis, and workflow efficiency.</li>\n<li>Help simplify complex technical messages into clear, compelling stories for customers, partners, and search/discovery platforms.</li>\n</ul></div>\n<h3>Lead Measurement, Experimentation &amp; Executive Communication</h3>\n<div><ul>\n<li>Define clear KPIs for both SEO and GEO, including traffic, rankings, conversions, technical health, content performance, brand visibility, AI citations, and recommendation presence.</li>\n<li>Build test-and-learn frameworks for GEO experiments.</li>\n<li>Translate complex changes in search and AI discovery into clear business implications for executives.</li>\n<li>Use data to prioritize investments and communicate progress, risks, and opportunities.</li>\n<li>Manage SEO/GEO tools, vendors, agencies, and reporting systems as needed.</li>\n</ul></div>\n<h3>What You Bring</h3>\n<h3>Required</h3>\n<div><ul>\n<li>6+ years leading SEO, organic growth, search strategy, or discoverability programs.</li>\n<li>Deep technical SEO expertise with a proven record of improving organic growth at scale.</li>\n<li>Strong understanding of content strategy, authority building, information architecture, and search intent.</li>\n<li>Demonstrated curiosity and practical experience with AI-driven discovery, GEO, LLM-powered search, or emerging search experiences.</li>\n<li>Ability to define a new discipline while continuing to operate and improve a mature SEO function.</li>\n<li>Experience influencing Product, Engineering, Product Marketing, Content, Analytics, Communications, and executive stakeholders.</li>\n<li>Strong analytical skills and comfort building reporting frameworks where measurement is imperfect.</li>\n<li>Excellent communication skills with both technical and non-technical audiences.</li>\n<li>Hands-on familiarity with enterprise SEO and analytics tools such as Google Search Console, GA4, Looker/Tableau, Ahrefs, Semrush, Screaming Frog, Botify, Conductor, BrightEdge, Similarweb, or comparable platforms.</li>\n<li>Strong project management skills and ability to manage multiple initiatives across teams and time zones.</li>\n</ul></div>\n<h3>Strongly Preferred</h3>\n<div><ul>\n<li>Experience in SaaS, developer tools, virtualization, enterprise productivity, managed devices, or infrastructure technology.</li>\n<li>Understanding of Apple, Windows, Mac, developer, SMB, enterprise, and partner/channel ecosystems.</li>\n<li>Familiarity with semantic search, entity optimization, structured data, knowledge graphs, retrieval systems, and AI citation behavior.</li>\n<li>Experience working with GEO tools that monitor AI search visibility, brand mentions, citations, and recommendation share-of-voice across platforms such as ChatGPT, Google AI Overviews, Perplexity, Gemini, Claude, and Copilot.</li>\n<li>Experience using modern AI tools for research, content analysis, workflow automation, and experimentation.</li>\n<li>Experience managing agencies, vendors, or distributed teams.</li>\n<li>Comfort working in a global, remote-first environment with asynchronous collaboration.</li>\n</ul></div>\n<h3>What Success Looks Like</h3>\n<p>Within the first 12 months, this leader will:</p>\n<div><ul>\n<li>Maintain and improve SEO performance as a major organic acquisition channel.</li>\n<li>Establish a clear GEO strategy, measurement model, and operating rhythm.</li>\n<li>Improve <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> visibility and recommendation presence across AI-powered discovery platforms.</li>\n<li>Strengthen technical SEO foundations and content authority across priority product and audience segments.</li>\n<li>Build durable collaboration between SEO, GEO, Product Marketing, Engineering, Content, Communications, Channel, and Analytics.</li>\n<li>Create a repeatable experimentation framework for AI-driven discovery.</li>\n<li>Position <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> to win as traditional search and AI-driven discovery continue to converge.</li>\n</ul></div>\n<h3>About <a href=\"https://himalayas.app/companies/parallels\">Parallels</a>\n</h3>\n<p><a href=\"https://himalayas.app/companies/parallels\">Parallels</a> is a global leader in cross-platform solutions, enabling businesses and individuals to access and use the applications, files, and workflows they need on any device or operating system.</p>\n<p><a href=\"https://himalayas.app/companies/parallels\">Parallels</a> helps customers get the best out of the technology they choose - whether that is Windows, Linux, macOS, ChromeOS, iOS, Android, or the cloud. Our products serve individuals, developers, power users, small and mid-size businesses, enterprises, public sector organizations, and educators who need simple, reliable, and cost-effective ways to work across platforms.</p>\n<p><a href=\"https://himalayas.app/companies/parallels\">Parallels</a> is best known for making complex technology feel simple. We solve deep engineering and user-experience challenges so customers can run the applications they need, where and how they need them - from Windows on Mac to managed enterprise environments and flexible hybrid work setups.</p>\n<p>We have millions of users globally and decades of innovation behind us. Today, <a href=\"https://himalayas.app/companies/parallels\">Parallels</a> is focused on helping customers stay productive in a world where work happens across devices, operating systems, clouds, and increasingly AI-powered workflows.</p>\n<p>We offer a fully remote workspace and flexible hours because we believe great work can happen anywhere. Our team is global, collaborative, and built around motivated people who care about solving meaningful customer problems.</p>\n<h3>Equal Opportunity Statement</h3>\n<p><a href=\"https://himalayas.app/companies/parallels\">Parallels</a> is committed to building an inclusive, barrier-free recruitment and selection process and work environment. We offer equal employment opportunities to all qualified applicants and employees without regard to race, color, age, religion, national origin, sex, political affiliation, sexual orientation, marital status, disability, veteran status, genetics, or any other protected characteristic.</p>\n<p>If you are contacted for a job opportunity, please advise us of any accommodations required during the recruitment process. Appropriate accommodations will be provided upon request as required by applicable law and company policy. Any information received relating to accommodations will be treated as confidential.</p>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "companyLogo": "https://cdn-images.himalayas.app/mruq7ff3lwen5r1n0wi6mc94mk2h",
+            "companyName": "ecosio",
+            "companySlug": "ecosio",
+            "currency": null,
+            "description": "<div><h3>Company Description</h3></div><div class=\"wysiwyg\">\n<p><a href=\"https://himalayas.app/companies/ecosio\">ecosio</a> is a fast-growing, innovative service company and a leading provider of B2B integration, specialising in electronic data interchange (EDI), Web EDI and e-invoicing. <a href=\"https://himalayas.app/companies/ecosio\">ecosio</a> is part of Vertex, Inc., a leading global provider of indirect tax solutions listed on Nasdaq (VERX).<br><br>Our brand slogan is <em>Connections That Work</em> as we believe strong connections are central to successful business relationships - both external and internal. At <a href=\"https://himalayas.app/companies/ecosio\">ecosio</a>, we hire individuals from all backgrounds and are committed to creating an inclusive work environment. We are technology lovers, set the highest standards for our solutions, and put innovative ideas first.</p>\n<div><h3>Job Description</h3></div>\n<div class=\"wysiwyg\">\n<h3>You'll connect with the role if you enjoy...</h3>\n<ul>\n<li>Develop and maintain features for our web applications</li>\n<li>Take ownership of features, from ideation to deployment and ongoing maintenance</li>\n<li>Write comprehensive unit tests to ensure code quality and reliability</li>\n<li>Follow secure coding practices to protect our systems and user data</li>\n<li>Collaborate closely with product owners to translate requirements into actionable features</li>\n<li>Build efficient systems that enhance the productivity of our Onboarding &amp; Operations team</li>\n<li>Work with Java / Spring in the backend and TypeScript / React in the frontend</li>\n</ul>\n<p>Our current tech stack in the Web Application Team is: </p>\n<ul>\n<li>Infrastructure: AWS, Kubernetes, ArgoCD</li>\n<li>Java frameworks: Spring, SpringBoot, Apache Camel</li>\n<li>Java libraries: JUnit</li>\n<li>TypeScript / JavaScript libraries: React, Material UI, Semantic UI, React Final Form, TanStack Query, React Testing Library</li>\n<li>Data storage and querying: MongoDB, Cassandra, Redis, Elasticsearch</li>\n<li>Monitoring: Prometheus, Grafana</li>\n</ul>\n<div><h3>Qualifications</h3></div>\n<div class=\"wysiwyg\">\n<h3>To connect with <a href=\"https://himalayas.app/companies/ecosio\">ecosio</a> it is important to have…</h3>\n<ul>\n<li>experience in the field of computer science or engineering</li>\n<li>several years of work experience in the software development of enterprise web applications</li>\n<li>professional experience with JavaScript/Typescript and popular frameworks like React (Angular or Vue are also acceptable)</li>\n<li>relevant work experience with Java 11+, Spring / Spring Boot</li>\n<li>good knowledge in software design (e.g. design patterns)</li>\n<li>a good command of written and spoken technical English</li>\n</ul>\n<h3>And nice to have...</h3>\n<ul>\n<li>relevant knowledge of design systems (material UI, semantic UI, bootstrap, etc)</li>\n<li>an in-depth understanding of NoSQL DB systems (MongoDB, Elasticsearch, Redis)</li>\n</ul>\n<div><h3>Additional Information</h3></div>\n<div class=\"wysiwyg\">\n<h3>By connecting with us you will experience...</h3>\n<ul>\n<li>Our remote-first culture lets you work remotely from one of our designated countries</li>\n<li>Flexible working hours to suit your schedule and priorities</li>\n<li>Annual personal development budget to invest in conferences, courses, or career coaching</li>\n<li>Home office allowance to create a workspace that fits your needs</li>\n<li>Regular events and trips to connect, celebrate, and have fun with the team</li>\n<li>Workations of up to 90 days per year within the EU, combining travel and productivity</li>\n<li>Wellbeing support, including mental health resources and employee assistance programs</li>\n<li>Additional country-specific benefits based on your location </li>\n</ul>\n<p><strong>Sounds like a connection that works? Then apply now and we will get in touch soon!</strong><br><br><strong>As part of our hiring process at <a href=\"https://himalayas.app/companies/ecosio\">ecosio</a>, we conduct standard background checks. You can find more information about them by clicking</strong><strong>HERE</strong><strong>.</strong></p>\n<p>Our mission is to build Connections That Work by fostering a diverse and inclusive team. We are committed to making everyone feel valued and empowered to contribute their unique skills, experiences and perspectives. And now we want to connect with you</p>\n</div>\n</div>\n</div>\n</div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
             "employmentType": "Full Time",
-            "excerpt": "Senior Manager, SEO & GEOSearch Engine Optimization & Generative Engine Optimization | Parallels Push the boundaries of discovery.",
-            "expiryDate": 1793743025,
-            "guid": "https://himalayas.app/companies/parallels/jobs/senior-manager-seo-geo-4009046798",
+            "excerpt": "Company Description ecosio is a fast-growing, innovative service company and a leading provider of B2B integration, specialising in electronic data interchange (EDI), Web EDI and e-invoicing.",
+            "expiryDate": 1793262287,
+            "guid": "https://himalayas.app/companies/ecosio/jobs/full-stack-developer-java-react-f-m-d",
             "locationRestrictions": [
-              "United Kingdom"
+              "Croatia"
             ],
-            "maxSalary": 105000,
-            "minSalary": 95000,
+            "maxSalary": null,
+            "minSalary": null,
             "parentCategories": [
-              "Marketing"
+              "Developer"
             ],
-            "pubDate": 1788559026,
+            "pubDate": 1788078287,
             "salaryPeriod": "annual",
             "seniority": [
-              "Manager",
+              "Mid-level"
+            ],
+            "timezoneRestrictions": [
+              1
+            ],
+            "title": "Full Stack Developer - Java & React (f/m/d)"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/boardroom-appointments/jobs/senior-software-developer",
+            "categories": [
+              "Senior-Software-Developer",
+              "Frontend-Development",
+              "Fullstack-Development",
+              "Web-Development",
+              "Software-Engineer",
+              "Senior-Software-Development",
+              "Senior-Developer",
+              "Senior-Software-Developer-Positions",
+              "Senior-Software-Development-Jobs",
+              "Senior-Programmer",
+              "Senior-Application-Developer",
+              "Senior-Software-Development-Openings",
+              "Developer"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/vehlvi724tte8u7dse6r5es7qpev",
+            "companyName": "Boardroom Appointments",
+            "companySlug": "boardroom-appointments",
+            "currency": null,
+            "description": "<h3>Minimum ﻿Requirements: </h3><ul>\n<li>﻿﻿Matric </li>\n<li>Bachelors degree in computer science, engineering or equivalent experience</li>\n</ul><h3>Responsibilities:</h3><ul>\n<li>Work within a Software Development team, following Agile development methodologies</li>\n<li>Work with Project management and solution architects to estimate and scope out projects</li>\n<li>Work with Creative team during planning, discovery, and production phase. </li>\n<li>Work with both front-end and back-end development teams to create and optimize solutions</li>\n<li>Optimizing code for performance</li>\n<li>Comment code and produce documentation to industry standards as needed. </li>\n<li>Produce code to the highest standards while adhering to industry accepted architecture and design pattern techniques and methodologies (e.g., MVC, SOA, OOP, DI etc.) </li>\n<li>Defining and developing APIs</li>\n<li>Contribute to the analysis and design of software products and tools</li>\n<li>Evaluate and advise on the technical feasibility</li>\n<li>Create quality prototypes for a clearer understanding of UI designs</li>\n<li>Test and confirm software is fit for purpose with intended audiences</li>\n<li>Recommend and implement refinements and improvements</li>\n<li>Follow formal Software Engineering best-practices</li>\n<li>Mentoring and guiding team members</li>\n<li>Monitoring and measuring customer experience and KPIs  </li>\n<li>Managing periodic reporting on the progress to the management and the customer</li>\n</ul><h3>Experience: </h3><ul>\n<li>At least 8+ years of experience in building Applications </li>\n<li>At least 6+ years of experience with React and/or Angular  </li>\n<li>Good understanding of OOPs concepts. </li>\n<li>Strong hands-on knowledge on HTML5, CSS3, ES6+ </li>\n<li>Strong understanding of the React Virtual DOM, JSX and API </li>\n<li>Hands on experience on REST APIs, GraphQL and WebSocket </li>\n<li>Experience with a State-management framework like Redux (with middleware) or MobX </li>\n<li>Understanding of cloud-based technologies, Azure, SQL and relational databases, SOAP and REST Web-Services, JSON, XML, MSAL. </li>\n<li>Comfortable with concepts like Container/Presentation components, Higher Order Components </li>\n<li>Worked with UI libraries like Material-UI, Semantic UI, Bootstrap or similar </li>\n<li>Good understanding of CSS in JS, aka scoped-css or Styled Components </li>\n<li>Unit testing with Karma + Mocha or Jest </li>\n<li>Experience on working with frontend build systems and automating the same using Grunt / Gulp</li>\n<li>Experience on MVC frameworks (Backbone.js, or similar) and knowledge of common JavaScript design patterns will be good to have </li>\n<li>Experience of working with server-side JavaScript frameworks based on Node.js  </li>\n<li>Exposure to Style Guides, Atomic Design </li>\n<li>Exposure to Scrum and Agile methodologies</li>\n</ul><p><strong>﻿﻿﻿</strong></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "Minimum ﻿Requirements: • ﻿﻿Matric • Bachelors degree in computer science, engineering or equivalent experience Responsibilities:• Work within a Software Development team, following Agile development methodologies • Work with Project management and solution architects to estimate and scope out projects • Work with Creative team during planning, discovery, and production phase.",
+            "expiryDate": 1792627096,
+            "guid": "https://himalayas.app/companies/boardroom-appointments/jobs/senior-software-developer",
+            "locationRestrictions": [
+              "South Africa"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [
+              "Developer"
+            ],
+            "pubDate": 1787443096,
+            "salaryPeriod": "annual",
+            "seniority": [
               "Senior"
             ],
             "timezoneRestrictions": [
-              0
+              2
             ],
-            "title": "Senior Manager, SEO & GEO"
+            "title": "Senior Software Developer"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 27,
-        "updatedAt": 1788559026
+        "totalCount": 25,
+        "updatedAt": 1788554737
       }
     },
     {
@@ -2832,47 +2828,6 @@
               2
             ],
             "title": "Semantic Data Engineer"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
-            "categories": [
-              "Knowledge-Engineering",
-              "Ontology",
-              "Semantic-Web",
-              "Data-Engineering",
-              "Data-Modeling",
-              "Knowledge-Management",
-              "Senior-Knowledge-Graph-Engineer",
-              "Remote-Senior-Ontology-Specialist",
-              "Senior-Semantic-Data-Consultant",
-              "Ontology-Specialist"
-            ],
-            "companyLogo": "https://cdn-images.himalayas.app/pghdpb1ckeql6pdxte70tcgm13ax",
-            "companyName": "digetiers",
-            "companySlug": "digetiers",
-            "currency": null,
-            "description": "<h3>wie du die welt von morgen prägen kannst</h3><p></p><ul>\n<li>\n<strong>Wissen modellieren: </strong>Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.  </li>\n<li>\n<strong>Brücken bauen:</strong> Du agierst als zentraler Übersetzer zwischen den Fachbereichen und und unserem Engineering Team. Du stellst sicher, dass das Wissensmodell sowohl die fachliche Realität abbildet als auch technisch exzellent umsetzbar ist. </li>\n<li>\n<strong>Konzepte gestalten: </strong>Du entwirfst und moderierst Workshops, um gemeinsam mit Stakeholdern ein einheitliches Verständnis (eine \"Shared Language\") für zentrale Geschäftskonzepte zu entwickeln und zu etablieren. </li>\n<li>\n<strong>Datenquellen integrieren:</strong> Du arbeitest eng mit unserem Engineering Team zusammen, um die Anbindung von Datenbanken, APIs und anderen Quellen an den Knowledge Graphen konzeptionell zu begleiten.</li>\n<li>\n<strong>Ontologien entwickeln und pflegen:</strong> Mit Standards wie OWL/RDF erstellst du nicht nur das Modell, sondern definierst auch die logischen Regeln und Constraints, die die Qualität und Konsistenz unseres Knowledge Graphen sicherstellen.</li>\n</ul><p></p><h3>was dich auszeichnet</h3><p></p><ul>\n<li>\n<strong>Leidenschaft für Struktur und Logik: </strong>Du denkst abstrakt und liebst es, komplexe Zusammenhänge in klare, formale Strukturen zu überführen. Deine Fähigkeit, vom Konkreten zum Abstrakten zu gelangen, zeichnet dich aus. </li>\n<li>\n<strong>Erfahrung in der Modellierung:</strong> Du hast bereits Erfahrung in der Modellierung, z. B. mit UML oder idealerweise bereits mit semantischen Technologien (RDF, OWL). </li>\n<li>\n<strong>Kommunikationsstärke: </strong>Du kannst komplexe technische und logische Modelle so erklären, dass sie sowohl für Fachexperten als auch für Entwickler verständlich und überzeugend sind. Du hörst exzellent zu und stellst die richtigen Fragen. </li>\n<li>\n<strong>Technisches Grundverständnis:</strong> Du weißt, wie Daten in Systemen fließen. Begriffe wie APIs, Datenbanken und Datenpipelines sind dir nicht fremd. Erste Erfahrungen mit Graph-Technologien (z. B. SPARQL, Cypher) sind ein großes Plus, aber kein Muss. </li>\n<li>\n<strong>Neugier und Gestaltungswille: </strong>Du hast den Antrieb, nicht nur bestehende Systeme zu verwalten, sondern eine neue Art der Wissensorganisation für KI von Grund auf mitzugestalten und voranzutreiben. </li>\n</ul><p></p><h3>dich erwartet ein team, das</h3><p></p><ul>\n<li>\n<strong>Vertrauen lebt.</strong> Wir glauben daran, dass du selbst am besten weißt, wie, wann und wo du produktiv bist. Ob Homeoffice, Co-Working-Space oder zeitweise im europäischen Ausland - du gestaltest deinen Arbeitsalltag nach deinen Bedürfnissen. Wenn wir uns treffen, sind unsere Events echte Highlights, die uns als Team noch enger zusammenbringen.</li>\n<li>\n<strong>Neugier fördert</strong>. Lernen hört bei uns nie auf. Wir unterstützen dich dabei, dich kontinuierlich weiterzuentwickeln - mit Zeit, Budget und einem Umfeld, das Austausch und Weiterdenken fördert. Neugier ist für uns kein \"Nice-to-have\", sondern ein zentraler Wert.</li>\n<li>\n<strong>Co-Creation inspiriert.</strong> Bei <a href=\"https://himalayas.app/companies/digetiers\">digetiers</a> gestaltest du nicht nur deine eigene Rolle, sondern auch unser Unternehmen aktiv mit. Ob in Projekten, Prozessen oder unserer Kultur - deine Ideen zählen. Wir glauben an mutige Mitgestaltung statt starrer Strukturen.</li>\n<li>\n<strong>Mit Leidenschaft professionell arbeitet.</strong> Wir lachen gerne - und liefern trotzdem auf höchstem Niveau. Spaß und Leistungsbereitschaft schließen sich bei uns nicht aus, sondern beflügeln sich gegenseitig.</li>\n<li>\n<strong>Als Musketiere zusammenhält.</strong> Einer für alle, alle für einen - bei <a href=\"https://himalayas.app/companies/digetiers\">digetiers</a> ist das nicht nur Ursprung unseres Namens, sondern gelebte Realität. Wir gewinnen als Team und halten uns gegenseitig den Rücken frei.</li>\n</ul><p></p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "wie du die welt von morgen prägen kannst • Wissen modellieren: Du sprichst mit Fachexpert:innen aus unterschiedlichen Abteilungen, verstehst deren Domänenwissen und übersetzt es in formale, semantische Modelle.",
-            "expiryDate": 1788644656,
-            "guid": "https://himalayas.app/companies/digetiers/jobs/knowledge-engineer-ontologist-m-w-d-6993061471",
-            "locationRestrictions": [
-              "Austria",
-              "Germany",
-              "Switzerland"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [],
-            "pubDate": 1783460656,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              1
-            ],
-            "title": "Knowledge Engineer / Ontologist (m/w/d)"
           },
           {
             "applicationLink": "https://himalayas.app/companies/irium-portugal/jobs/senior-ontologist-semantic-knowledge-engineer-european-union-full-remote",
@@ -3049,52 +3004,6 @@
               2
             ],
             "title": "Senior Backend Engineer (Python)"
-          },
-          {
-            "applicationLink": "https://himalayas.app/companies/sosi/jobs/ontologist",
-            "categories": [
-              "Ontologist",
-              "Ontology-Engineer",
-              "Semantic-Technologies-Specialist",
-              "Knowledge-Engineer",
-              "Data-Integration-Specialist",
-              "Ontology-Expert",
-              "Ontology-Specialist",
-              "Ontology",
-              "Ontology-Development",
-              "Ontologies-And-Taxonomies",
-              "Remote-Senior-Ontology-Specialist"
-            ],
-            "companyLogo": "",
-            "companyName": "SOSi",
-            "companySlug": "sosi",
-            "currency": "USD",
-            "description": "<p><strong>*** This position is contingent upon contract award ***</strong></p><p><a href=\"https://himalayas.app/companies/sosi\">SOSi</a> is seeking an Ontologist to support mission requirements for a structured approach to further develop, integrate, and sustain a scalable, federated data ecosystem that enhances interoperability, governance, and mission-driven analytics for a DoD customer. The primary objective of the program is to bridge the operational gaps between DoD, IC, interagency, and non-traditional international partners to enable real-time information sharing, dynamic data integration, and mission-tailored analytical capabilities.</p><h3>Essential Job Duties:</h3><ul>\n<li>Develop, refine, and maintain domain-specific ontologies to support structured data integration, semantic search, and AI-assisted decision support.</li>\n<li>Enforce adherence to W3C standards and metadata alignment between Databricks Unity Catalog, GIS metadata systems, and operational data stores.</li>\n<li>Collaborate with data scientists and analysts to ensure ontology-driven tagging and entity resolution enhances the relevance of research outputs.</li>\n<li>Submit the Ontology Governance &amp; Standardization Report, detailing ontology updates, integrations, and compliance with metadata standards.</li>\n</ul><ul>\n<li>Master’s degree or higher (e.g., Ph.D.) in Computer Science, Information Science, Artificial Intelligence, Geospatial Science, GIS, Data Science, Business Analytics, Cognitive Science, or a closely related field; OR a minimum of 11+ years of experience in ontology development, semantic technologies.</li>\n<li>Possess the knowledge and capability to develop ontologies:<ul>\n<li>Proficiency in writing advanced SPARQL queries.</li>\n<li>Strong skills in the W3C Web Ontology Language (OWL).</li>\n<li>Solid understanding of Basic Formal Ontology (BFO) and Common Core Ontologies (CCO). </li>\n<li>Proficiency in both Java and Python for ontology-driven application development</li>\n<li>Experience with Bash scripting for automation tasks.</li>\n</ul>\n</li>\n<li>Hands-on experience with ESRI data tools, including ArcGIS.</li>\n<li>Background in DevSecOps practices, version control systems (e.g., Git) and CI/CD pipelines.</li>\n<li>Strong analytical skills, attention to detail, and the ability to work collaboratively.</li>\n<li>Demonstrated expertise in ontology design, semantic data modeling, and SPARQL query development, with proficiency in W3C standards (RDF, OWL, SHACL) and supporting frameworks like Basic Formal Ontology (BFO) and Common Core Ontologies (CCO). </li>\n</ul><h3>Working Conditions</h3><ul><li>Remote. Offsite. </li></ul><h3>Working at <a href=\"https://himalayas.app/companies/sosi\">SOSi</a>\n</h3><p>All interested individuals will receive consideration and will not be discriminated against for any reason.</p><p>Founded in 1989, <a href=\"https://himalayas.app/companies/sosi\">SOSi</a> is among the largest private, founder-owned technology and services integrators in the defense and government services industry. We deliver tailored solutions, tested leadership, and trusted results to enable national security missions worldwide.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
-            "employmentType": "Full Time",
-            "excerpt": "*** This position is contingent upon contract award *** SOSi is seeking an Ontologist to support mission requirements for a structured approach to further develop, integrate, and sustain a scalable, federated data ecosystem that enhances interoperability, governance, and mission-driven analytics for a DoD customer.",
-            "expiryDate": 1788659757,
-            "guid": "https://himalayas.app/companies/sosi/jobs/ontologist",
-            "locationRestrictions": [
-              "United States"
-            ],
-            "maxSalary": null,
-            "minSalary": null,
-            "parentCategories": [],
-            "pubDate": 1786134667,
-            "salaryPeriod": "annual",
-            "seniority": [
-              "Senior"
-            ],
-            "timezoneRestrictions": [
-              -10,
-              -9,
-              -8,
-              -7,
-              -6,
-              -5,
-              14
-            ],
-            "title": "Ontologist"
           },
           {
             "applicationLink": "https://himalayas.app/companies/adesso-belgium/jobs/freelance-data-scientist-with-ontology-and-graph-expertise",
@@ -3656,11 +3565,104 @@
               14
             ],
             "title": "Principal Solutions Architect - Expert Services"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai",
+            "categories": [
+              "Director-of-Applied-Science",
+              "Knowledge-Graph-Engineering",
+              "AI-Research-Leadership",
+              "Graph-ML",
+              "Director-Of-Applied-AI",
+              "Applied-AI-Director",
+              "Director-Of-AI-Engineering",
+              "Director-AI-Engineering",
+              "Director-Of-Artificial-Intelligence",
+              "Director-Of-Data-And-AI"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/z9gs4xym4vktlzemrxt6sqp9wdt3",
+            "companyName": "Outreach.io",
+            "companySlug": "outreach-io",
+            "currency": null,
+            "description": "<h3>About Outreach</h3><div>Outreach, founded in 2014, is the only complete <strong>agentic AI</strong> platform for revenue teams. Outreach infuses agentic AI, conversation intelligence, and assistive AI to power hundreds of use cases across revenue motions. From new logo prospecting to expansions, deal acceleration, driving retention, and forecasting, Outreach AI automates workflows and frees sellers to focus on more strategic conversations and actions. Revenue leaders benefit from connected account visibility, performance insights, and higher forecasting accuracy across every GTM team. World leading enterprise organizations use Outreach to power their revenue teams, including Databricks, SAP, Siemens, and Verizon to name a few.  </div><div><div>\n<div><h3><strong>The Role</strong></h3></div>\n<div><p>We are looking for a Director of Applied Science and Engineering to lead the vision, strategy, and execution of Outreach's Knowledge Graph and contextual AI capabilities. This is a senior leadership position for someone who combines deep technical expertise in knowledge representation, graph-based learning, and reasoning systems with the ability to build, inspire, and scale a high-performing team. </p></div>\n<div><p>You will own the end-to-end technical direction of a per-tenant contextual knowledge graph that captures the full complexity of each customer's sales environment: accounts, deals, contacts, rep behaviors, competitive landscape, and the signals buried in calls, emails, and CRM activity. This graph is the reasoning backbone of the platform, powering next-best-action recommendations, deal risk signals, coaching suggestions, competitive intelligence, and agentic AI workflows. In this role, you will set the research agenda, define the architecture, hire and grow the team, and drive measurable business impact through applied science innovation.</p></div>\n</div></div><h3>Your Daily Adventures Will Include:</h3><ul><div>\n<li>Technical Vision &amp; Strategy: Define and own the multi-year technical roadmap for Outreach's Knowledge Graph platform, including entity resolution, temporal reasoning, graph-based learning, and contextual inference. Translate business objectives into a coherent applied science strategy that balances research ambition with production delivery.</li>\n<li>Team Leadership: Build, hire, and lead a team of applied scientists and research engineers. Establish team culture, research rigor, career development frameworks, and a high bar for both scientific quality and production impact. Mentor senior ICs into technical leaders.</li>\n<li>Knowledge Graph Architecture: Drive the design of per-tenant knowledge graph schemas, ontologies, and data models tailored to the sales execution domain. Own decisions on graph databases, query languages, storage engines, and tenant isolation strategies at scale.</li>\n<li>Information Extraction at Scale: Oversee pipelines that extract structured knowledge from unstructured conversational and document data (sales calls, emails, CRM notes), including coreference resolution, relation extraction, event detection, and entity linking.</li>\n<li>Reasoning &amp; Inference Systems: Lead the development of reasoning and inference layers over the knowledge graph to power next-best-action suggestions, deal risk scoring, coaching recommendations, competitive intelligence, and agentic AI decision-making.</li>\n<li>Representation Learning &amp; Graph ML: Direct research into graph-based models (GNNs, relational embeddings, link prediction, temporal graph networks) over heterogeneous, multi-relational graph structures to support downstream reasoning, retrieval, and recommendation tasks.</li>\n<li>Cross-functional Leadership: Partner with leaders in Engineering, Product, Design, and Data to align science investments with product priorities. Represent the applied science function in executive reviews, roadmap planning, and technical design reviews.</li>\n<li>Research-to-Production Pipeline: Establish processes and infrastructure for moving from research exploration to production deployment: experiment tracking, model evaluation frameworks, A/B testing, and continuous model improvement loops.</li>\n<li>Industry &amp; Academic Engagement: Keep the team at the frontier of knowledge graph research. Foster connections with the academic community through conference participation, publications, and strategic academic partnerships.</li>\n</div></ul><h3>Our Vision Of You:</h3><ul><div><div><div>\n<li>PhD in Computer Science, Machine Learning, NLP, or a related field with a focus on knowledge representation and reasoning, graph neural networks, information extraction, recommender systems or conversational AI and dialogue systems</li>\n<li>10+ years of experience in applied science or machine learning, with at least 3 years in a people leadership role managing teams of 5+ applied scientists or research engineers.</li>\n<li>Demonstrated track record of building and shipping knowledge graph, NLP, or graph ML systems at production scale: not just publishing papers, but delivering measurable business outcomes.</li>\n<li>Deep expertise in at least three of: knowledge graph construction, entity resolution, information extraction, graph neural networks, temporal reasoning, representation learning, or recommender systems.</li>\n<li>Strong engineering fundamentals. You can write production-quality code, not just prototype notebooks. Proficiency in Python / Golang; and graph databases or query languages (e.g., Neo4j, SPARQL, Cypher) is required.</li>\n<li>Experience recruiting, developing, and retaining top applied science talent. You have grown ICs into senior technical leaders and built teams with a strong shipping culture.</li>\n<li>Executive communication skills. You can translate complex research concepts into business impact narratives for C-suite and board audiences.</li>\n<li>Comfort with deep ambiguity. You will define the problem space, not just solve well-scoped problems. You thrive when chartering new technical directions from scratch.</li>\n<li>Strong Ownership: Take end-to-end responsibility for research and model development initiatives, from problem formulation and data analysis through experimentation, production deployment, and ongoing performance monitoring, driving outcomes with minimal oversight.</li>\n</div></div></div></ul><h3>Nice To Have:</h3><ul><div>\n<li>Experience building multi-tenant knowledge graph systems with per-customer isolation and scale requirements.</li>\n<li>Background in sales, revenue, or B2B SaaS domains: understanding of deal cycles, pipeline management, and CRM data models.</li>\n<li>Experience integrating knowledge graphs with LLM-based systems (RAG architectures, tool-augmented generation, agentic frameworks).</li>\n<li>Strong communication skills with the ability to translate research concepts into product impact for cross-functional audiences.</li>\n<li>Publications in top-tier venues (KDD, NeurIPS, ACL, EMNLP, ICLR, WWW, SIGIR, etc.) in knowledge graphs, NLP, or graph learning.</li>\n<li>Experience with graph databases at scale (Neo4j, Amazon Neptune, or similar) including performance tuning, query optimization, and multi-region deployment.</li>\n<li>Familiarity with the Model Context Protocol (MCP) or similar agent-tool integration patterns.</li>\n<li>Track record of building applied science teams from scratch (0→1 team formation).</li>\n</div></ul><h3>Why Join Us?</h3><ul><div><div>\n<li>Foundational Leadership: You will define how Outreach thinks about knowledge representation and contextual reasoning, decisions that shape the platform for years. This is not an optimization role; it is a charter-defining one.</li>\n<li>Greenfield Architecture: Build the knowledge graph platform from the ground up with the latitude to make foundational technical decisions on schema design, graph infrastructure, and reasoning systems.</li>\n<li>Scale &amp; Impact: Outreach processes millions of sales interactions across 4,000+ enterprise customers. Your team's work will directly power agentic AI workflows that change how revenue teams operate globally.</li>\n<li>Executive Visibility: Direct exposure to top leadership in the company. Present research direction and results at the executive level.</li>\n<li>World-Class Team: Join a culture that values scientific rigor, engineering excellence, and intellectual honesty. Collaborate with senior engineers, product leaders, and data scientists who care deeply about getting it right.</li>\n<li>Growth into executive level: For the right leader, this role is a path to executive level as the function scales. You will shape not just the technology but the organizational structure of applied science at Outreach.</li>\n</div></div></ul><h3>Why You’ll Love It Here</h3><div>● Highly competitive salary</div><div>● 25 days annual vacation time + sick time and casual leave</div><div>● Group medical policy coverage available to employees and up to 5 eligible family members</div><div>● OPD benefit covered up to INR 10,000</div><div>● Life insurance and personal accident insurance at 3x annual CTC</div><div>● 26 weeks of maternity leave pay, and 15 days of paternity leave pay</div><div>● Opportunity to be part of company success via the RSU program</div><div>● Diversity and inclusion programs that promote employee resource groups like OWN+ (Outreach Women's Network), Adelante (Latinx community), OBX (Outreach Black Connection), Mosaic (AAPI community), Pride (LGBTQIA+), Gender+, Disability Community, and Veterans/Military </div><div>● Employee referral bonuses to encourage the addition of great new people to the team</div><div>● Fun company and team outings because we play just as hard as we work</div><div><em>Outreach is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status.</em></div><div><strong><em>Our success is reliant on building teams that include people from different backgrounds and experiences who can elevate assumptions and ideas with fresh perspectives. We're dedicated to hiring the whole human, not just a resume. To that end, we look for a diverse pool of applicants-including those from historically marginalized groups. We would like to invite you to apply even if you don't think you meet all of the requirements listed below. We don't want a few lines in a job description to get between us and the opportunity to meet you.</em></strong></div><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "About OutreachOutreach, founded in 2014, is the only complete agentic AI platform for revenue teams.",
+            "expiryDate": 1789920761,
+            "guid": "https://himalayas.app/companies/outreach-io/jobs/director-of-applied-science-and-engineering-knowledge-graphs-ai",
+            "locationRestrictions": [
+              "India"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [],
+            "pubDate": 1784736761,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Director"
+            ],
+            "timezoneRestrictions": [
+              5.5
+            ],
+            "title": "Director of Applied Science and Engineering - Knowledge Graphs & AI"
+          },
+          {
+            "applicationLink": "https://himalayas.app/companies/servicenow/jobs/solution-architect-ai-data",
+            "categories": [
+              "Solutions-Architect",
+              "AI-Consulting",
+              "Enterprise-Architecture",
+              "Data-Architecture",
+              "Technical-Consulting",
+              "AI-Strategy",
+              "AI-Architecture",
+              "AI-Solution-Architect",
+              "AI-Solutions-Architect",
+              "AI-ML-Solutions-Architect",
+              "Data-Solutions-Architect",
+              "Data-and-BI-Solution-Architect",
+              "Principal-AI-Solutions-Architect",
+              "ML-Solutions-Architect",
+              "Enterprise-AI-Solutions-Architect",
+              "Machine-Learning-Solutions-Architect"
+            ],
+            "companyLogo": "https://cdn-images.himalayas.app/1obeo82yz36ie3vahs7wk40urpt9",
+            "companyName": "ServiceNow",
+            "companySlug": "servicenow",
+            "currency": null,
+            "description": "<h3>The Team</h3><p>The Customer Excellence Group at <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> works with customers to help them achieve their business outcomes by providing prescriptive guidance. As part of the Customer Excellence Group, you will work with our customers to drive consumption, adoption, and customer satisfaction and ultimately help our customers grow their business on the <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> platform by getting them to see the value of their <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> investment.</p><h3>Solution Architect - AI &amp; Data, Expert Services</h3><p>As part of the Expert Services AI Practice, the Solution Architect - AI &amp; Data will serve as a senior strategic and technical lead, reshaping how enterprise organizations adopt AI at the core of their operating models. This role goes beyond implementation — it bridges C-suite advisory, enterprise architecture, and organizational change to deliver lasting transformation outcomes.</p><p>The Solution Architect - AI &amp; Data will operate at the intersection of AI strategy, solution architecture, and customer success — leading engagements from transformation vision and use-case definition through architecture design, governance, adoption, and ongoing value realization.</p><h3>What you will do in this role:</h3><h3>AI Strategy &amp; Transformation Advisory</h3><ul>\n<li>Lead enterprise AI transformation engagements — from opportunity identification and business case development through to operating model design and value realization.</li>\n<li>Advise C-suite and senior stakeholders on AI strategy, prioritization frameworks, and transformation roadmaps tailored to their industry, maturity, and risk appetite.</li>\n<li>Facilitate discovery workshops, current-state assessments, and future-state visioning sessions to establish a shared transformation agenda.</li>\n<li>Define AI-enabled target operating models, including process redesign, workforce impact analysis, and governance structures.</li>\n</ul><h3>Solution Architecture &amp; Delivery Leadership</h3><ul>\n<li>Design end-to-end solution architectures spanning Now Assist, AI Agents, Agentic workflows, AI Control Tower, RAG, knowledge graphs, and enterprise integrations (A2A, MCP).</li>\n<li>Lead scoping and solutioning for complex, multi-workload AI engagements — ensuring architectural integrity, scalability, and alignment to customer outcomes.</li>\n<li>Provide hands-on architecture leadership during pilot and early-phase delivery, establishing patterns and standards for broader team execution.</li>\n<li>Develop reusable practice IP: reference architectures, deployment patterns, transformation playbooks, and verticalized use-case catalogs.</li>\n<li>Architect enterprise data catalog strategies using platforms defining target-state designs that align metadata management, data lineage, and governance structures to broader AI and business objectives.</li>\n<li>Define integration patterns and architectural standards for connecting data catalog solutions across heterogeneous enterprise environments — cloud platforms, data warehouses, BI layers, and <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> workflows.</li>\n</ul><h3>Data Architecture &amp; Catalog Strategy</h3><ul>\n<li>Lead the architectural design of enterprise data catalog programs — defining scope, platform selection criteria, governance operating models, and phased adoption roadmaps.</li>\n<li>Advise on the strategic application of knowledge graph concepts, semantic technologies, and ontological frameworks (RDF, SPARQL) to enterprise data and AI use cases.</li>\n<li>Shape data architecture principles and standards that underpin AI readiness — including data lineage, metadata quality, classification taxonomies, and access governance.</li>\n<li>Translate complex data architecture requirements into clear, actionable designs that can be executed by delivery and technical teams.</li>\n<li>Define success metrics and maturity benchmarks for data catalog programs, enabling customers to track progress and demonstrate value to executive stakeholders.</li>\n</ul><h3>AI Governance, Risk &amp; Responsible AI</h3><ul>\n<li>Define and embed AI governance frameworks covering data stewardship, model risk, bias controls, audit trails, and compliance postures.</li>\n<li>Support customers in operationalize responsible AI practices aligned to regulatory requirements and internal policies.</li>\n<li>Establish data governance frameworks that position metadata management, data stewardship, and knowledge graph capabilities as foundational trust layers for enterprise AI programs.</li>\n<li>Guide customers in regulated industries on aligning data catalog and governance architectures to compliance and regulatory obligations, embedding controls into the design rather than as an afterthought.</li>\n<li>Partner with AI Control Tower to establish monitoring, observability, and continuous optimization capabilities post-deployment.</li>\n</ul><h3>Adoption, Enablement &amp; Change Management</h3><ul>\n<li>Lead AI adoption strategies including readiness assessments, stakeholder engagement plans, AI literacy programmers, and change communications.</li>\n<li>Define adoption KPIs and value realization metrics; track and report outcomes; provide consultative guidance for continuous optimization and expansion.</li>\n<li>Coach customer teams to build internal AI capability, reducing dependency and accelerating long-term self-sufficiency.</li>\n<li>Monitor adoption, usage, and value realization metrics post-deployment; provide recommendations for risk mitigation and growth.</li>\n</ul><h3>Practice Development &amp; Thought Leadership</h3><ul>\n<li>Collaborate cross-functionally with Sales, Solution Consulting, Customer Success, Platform, and Product teams to embed AI advisory across the customer lifecycle.</li>\n<li>Build and maintain industry-specific AI advisory playbooks and frameworks — verticalized use-case catalogs, value models, governance templates, and deployment patterns — to support scalable, repeatable delivery.</li>\n<li>Act as a thought-leader internally and externally: contribute to white papers, points-of-view, reference architectures, best-practice guides, and represent the organization at AI forums and customer briefings.</li>\n<li>Support pre-sales by qualifying opportunities, shaping proposals, and presenting transformation vision to executive buyers.</li>\n</ul><h3>To be successful in this role, you will have</h3><ul>\n<li>Experience in leveraging or critically thinking about how to integrate AI into work processes, decision-making, or problem-solving. This may include using AI-powered tools, automating workflows, analyzing AI-driven insights, or exploring AI's potential impact on the function or industry.</li>\n<li>10+ years of experience in management consulting, enterprise architecture, or a senior technology advisory role, with a demonstrated focus on Artificial Intelligence, Machine Learning, or digital transformation at enterprise scale.</li>\n<li>Experience facilitating executive AI strategy engagements — including visioning workshops, maturity assessments, and transformation roadmap sessions — where the output is a customer-owned AI narrative, not just a delivery plan. </li>\n<li>Proven track record designing and managing complex, multi-stakeholder AI or digital-transformation engagements — including use-case definition, business case development, integration, data strategy, governance, and operational adoption.</li>\n<li>Strong understanding of enterprise data architecture, data quality, knowledge management, integrations, and compliance and regulatory frameworks.</li>\n<li>Demonstrated ability to architect enterprise data catalog and metadata management strategies, with knowledge of platforms.</li>\n<li>Excellent communication and interpersonal skills — ability to articulate technical and business value to C-level executives, align stakeholders, and influence strategic decision-making.</li>\n<li>AI domain knowledge required, including: Generative AI Skills, AI Agents and Agentic workflows, Retrieval-Augmented Generation (RAG), Knowledge Graphs, Agent-to-Agent (A2A), and Model Context Protocol (MCP). </li>\n<li>Experience working in fast-paced, dynamic environments with capability to manage ambiguity and tailor consulting deliverables to different customer maturity levels, from early adopters to AI-ready enterprises.</li>\n<li>Working knowledge of knowledge graph principles, semantic technologies, and standards (RDF, SPARQL) as applied to enterprise data architecture.</li>\n<li>Broad familiarity with the <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> platform and modules (ITSM, CSM, FSM, HRSD, App Engine), ideally including implementation or architecture experience. <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> certifications (Certified System Administrator, Certified Implementation Specialist, Certified Technical Architect) are desirable.</li>\n<li>AI/ML certifications (e.g. AWS Machine Learning Specialty, Google Professional Machine Learning Engineer, or equivalent) are desirable.</li>\n<li>Background in one or more target industries — Financial Services, Healthcare, Public Sector, Manufacturing, or Retail — is highly desirable.</li>\n</ul><h3>Work Personas</h3><p>We approach our distributed world of work with flexibility and trust. Work personas (flexible, remote, or required in office) are categories that are assigned to <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> employees depending on the nature of their work and their assigned work location. Learn more here. To determine eligibility for a work persona, <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> may confirm the distance between your primary residence and the closest <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> office using a third-party service.</p><h3>Equal Opportunity Employer</h3><p><a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, creed, religion, sex, sexual orientation, national origin or nationality, ancestry, age, disability, gender identity or expression, marital status, veteran status, or any other category protected by law. In addition, all qualified applicants with arrest or conviction records will be considered for employment in accordance with legal requirements. </p><h3>Accommodations</h3><p>We strive to create an accessible and inclusive experience for all candidates. If you require a reasonable accommodation to complete any part of the application process, or are unable to use this online application and need an alternative method to apply, please contact  for assistance. </p><h3>Export Control Regulations</h3><p>For positions requiring access to controlled technology subject to export control regulations, including the U.S. Export Administration Regulations (EAR), <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> may be required to obtain export control approval from government authorities for certain individuals. All employment is contingent upon <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> obtaining any export license or other approval that may be required by relevant export control authorities. </p><p>From Fortune. ©2025 Fortune Media IP Limited. All rights reserved. Used under license. </p><p>It all started in sunny San Diego, California in 2004 when a visionary engineer, Fred Luddy, saw the potential to transform how we work. Fast forward to today — <a href=\"https://himalayas.app/companies/servicenow\">ServiceNow</a> stands as a global market leader, bringing innovative AI-enhanced technology to over 8,100 customers, including 85% of the Fortune 500®. Our intelligent cloud-based platform seamlessly connects people, systems, and processes to empower organizations to find smarter, faster, and better ways to work. But this is just the beginning of our journey. Join us as we pursue our purpose to make the world work better for everyone.</p><p>Originally posted on <a href=\"https://himalayas.app\">Himalayas</a></p>",
+            "employmentType": "Full Time",
+            "excerpt": "The TeamThe Customer Excellence Group at ServiceNow works with customers to help them achieve their business outcomes by providing prescriptive guidance.",
+            "expiryDate": 1792483320,
+            "guid": "https://himalayas.app/companies/servicenow/jobs/solution-architect-ai-data",
+            "locationRestrictions": [
+              "United States"
+            ],
+            "maxSalary": null,
+            "minSalary": null,
+            "parentCategories": [
+              "Developer",
+              "Data Science"
+            ],
+            "pubDate": 1787299320,
+            "salaryPeriod": "annual",
+            "seniority": [
+              "Senior"
+            ],
+            "timezoneRestrictions": [
+              -10,
+              -9,
+              -8,
+              -7,
+              -6,
+              -5,
+              14
+            ],
+            "title": "Solution Architect - AI & Data"
           }
         ],
         "limit": 20,
         "offset": 0,
-        "totalCount": 22,
+        "totalCount": 19,
         "updatedAt": 1788553864
       }
     }
