@@ -2002,6 +2002,18 @@
     okg:title "Cell Line Ontology - hPSCreg" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138494162> .
 
+<https://openknowledgegraphs.com/resource/cell-markers-ontology/> a okg:Ontology ;
+    rdfs:label "Cell Markers Ontology" ;
+    okg:alias "CLM" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "integrates cell type markers for cells in the Cell Ontology" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:sourceRepo <https://github.com/Cellular-Semantics/CellMark> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Cell Markers Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q55118285> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141305573> .
+
 <https://openknowledgegraphs.com/resource/cellular-microscopy-phenotype-ontology/> a okg:Ontology ;
     rdfs:label "Cellular Microscopy Phenotype Ontology" ;
     okg:alias "CMPO" ;
@@ -2442,6 +2454,18 @@
     okg:sourceType <http://www.wikidata.org/entity/Q139700003> ;
     okg:title "Combined Nomenclature" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1427897> .
+
+<https://openknowledgegraphs.com/resource/common-core-ontologies/> a okg:Ontology ;
+    rdfs:label "Common Core Ontologies" ;
+    okg:alias "CCO" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "suite of ontologies for representing common core concepts" ;
+    okg:homepage <http://www.cubrc.org/index.php/data-science-and-information-fusion/ontology> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Common Core Ontologies" ;
+    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118323> .
 
 <https://openknowledgegraphs.com/resource/common-thesaurus-of-audiovisual-archives/> a okg:ControlledVocabulary ;
     rdfs:label "Common Thesaurus of Audiovisual Archives" ;
@@ -5606,16 +5630,6 @@
     okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Gene_Ontology_OBO_Tools" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138493833> .
-
-<https://openknowledgegraphs.com/resource/en-q138493915/> a okg:KnowledgeGraph ;
-    rdfs:label "Chemical Information Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <http://bioportal.bioontology.org/ontologies/1444> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Chemical Information Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138493915> .
 
 <https://openknowledgegraphs.com/resource/en-q138494034/> a okg:KnowledgeGraph ;
     rdfs:label "Group 4-Data Science in Practice" ;
@@ -12874,18 +12888,6 @@
     okg:title "Vaccine Investigation and Design Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138495235> .
 
-<https://openknowledgegraphs.com/resource/en-q138495237/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Experimental Factor Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <https://www.ebi.ac.uk/ols4/ontologies/efo> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Experimental Factor Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138495237> .
-
 <https://openknowledgegraphs.com/resource/en-q138495239/> a okg:KnowledgeGraph ;
     rdfs:label "MWS-WSM" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
@@ -13005,16 +13007,6 @@
     okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Kidney Tissue Atlas Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138523445> .
-
-<https://openknowledgegraphs.com/resource/en-q138523447/> a okg:KnowledgeGraph ;
-    rdfs:label "Interaction Network Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <https://github.com/INO-ontology/ino> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Interaction Network Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138523447> .
 
 <https://openknowledgegraphs.com/resource/en-q138523448/> a okg:KnowledgeGraph ;
     rdfs:label "HINO: Human Interaction Network Ontology" ;
@@ -13485,16 +13477,6 @@
     okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Gene Expression Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q138524844> .
-
-<https://openknowledgegraphs.com/resource/en-q138524845/> a okg:KnowledgeGraph ;
-    rdfs:label "Ontology for Biomedical Investigations" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:homepage <http://obi-ontology.org> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:sourceType <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Ontology for Biomedical Investigations" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q138524845> .
 
 <https://openknowledgegraphs.com/resource/en-q138524848/> a okg:KnowledgeGraph ;
     rdfs:label "Ontology of Genes and Genomes" ;
@@ -14110,23 +14092,6 @@
         <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Experimental condition ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661839> .
-
-<https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Experimental Factor Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:alias "EFO" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "ontology" ;
-    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
-    okg:homepage <http://bioportal.bioontology.org/ontologies/1136> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Experimental Factor Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q16251642> .
 
 <https://openknowledgegraphs.com/resource/expose-an-ontology-for-data-mining-experiments/> a okg:Ontology ;
     rdfs:label "Exposé: An Ontology for Data Mining Experiments" ;
@@ -15005,6 +14970,17 @@
     okg:title "Geologic Unit Type" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q63464453> .
 
+<https://openknowledgegraphs.com/resource/geology-ontology/> a okg:Ontology ;
+    rdfs:label "Geology Ontology" ;
+    okg:alias "IGS ontology",
+        "IGSInt ontology" ;
+    okg:category okg:EnvironmentAgriculture ;
+    okg:description "domain ontology for basic geologic concepts and lithology" ;
+    okg:sourceRepo <https://github.com/denevers/Geology-Ontology> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Geology Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141311859> .
+
 <https://openknowledgegraphs.com/resource/geonames-ontology/> a okg:Ontology ;
     rdfs:label "GeoNames ontology" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q830106> ;
@@ -15025,13 +15001,15 @@
     okg:title "geopolitical ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q3112318> .
 
-<https://openknowledgegraphs.com/resource/geoscience-ontology/> a okg:Ontology ;
+<https://openknowledgegraphs.com/resource/geoscience-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
     rdfs:label "GeoScience Ontology" ;
     okg:alias "GSO" ;
     okg:category okg:EnvironmentAgriculture ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:sourceRepo <https://github.com/Loop3D/GKM> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
     okg:title "GeoScience Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q141222183> .
 
@@ -19338,21 +19316,6 @@
     okg:title "Integrative and Conjugative Element Ontology" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661661> .
 
-<https://openknowledgegraphs.com/resource/interaction-network-ontology/> a okg:Ontology ;
-    rdfs:label "Interaction Network Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "INO" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "ontology for gene-gene interactions" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
-    okg:homepage <https://github.com/INO-ontology/ino> ;
-    okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Interaction Network Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118418> .
-
 <https://openknowledgegraphs.com/resource/interdisciplinary-prostate-ontology-project/> a okg:Ontology ;
     rdfs:label "Interdisciplinary Prostate Ontology Project" ;
     okg:alias "IPOP" ;
@@ -21761,6 +21724,7 @@
     okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
     okg:homepage <https://github.com/obo-behavior/behavior-ontology/> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254>,
         <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Neuro Behavior Ontology" ;
@@ -21975,9 +21939,7 @@
 
 <https://openknowledgegraphs.com/resource/nndb/> a okg:ControlledVocabulary ;
     rdfs:label "NNDB" ;
-    okg:alias "(16) NNDB",
-        "Notable Names Database",
-        "nndb.com" ;
+    okg:alias "Notable Names Database" ;
     okg:category okg:GeneralCrossDomain ;
     okg:description "database of famous people" ;
     okg:homepage <https://www.nndb.com/> ;
@@ -23926,7 +23888,8 @@
     okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
     okg:homepage <https://github.com/PopulationAndCommunityOntology/pco> ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254>,
         <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Population and Community Ontology" ;
@@ -25673,22 +25636,6 @@
     okg:title "Semantics of Business Vocabulary and Business Rules" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7449106> .
 
-<https://openknowledgegraphs.com/resource/semanticscience-integrated-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Semanticscience Integrated Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
-    okg:alias "SIO" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "ontology" ;
-    okg:homepage <http://bioportal.bioontology.org/ontologies/1532> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Semanticscience Integrated Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118609> .
-
 <https://openknowledgegraphs.com/resource/semiotic-ontology/> a okg:Ontology ;
     rdfs:label "semiotic ontology" ;
     okg:alias "semiotics" ;
@@ -25745,7 +25692,8 @@
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <http://www.sequenceontology.org/> ;
     okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
     okg:sourceRepo <https://github.com/The-Sequence-Ontology/SO-Ontologies> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
     okg:title "Sequence types and features ontology" ;
@@ -28074,6 +28022,32 @@
     okg:title "Unipathway" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q85719315> .
 
+<https://openknowledgegraphs.com/resource/uniprot/> a okg:KnowledgeGraph ;
+    rdfs:label "UniProt" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q109496594>,
+        <http://www.wikidata.org/entity/Q3152521>,
+        <http://www.wikidata.org/entity/Q43984865>,
+        <http://www.wikidata.org/entity/Q54837> ;
+    okg:alias "UniProt Knowledge Base" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:creator okg:Creator_EMBL_s_European_Bioinformatics_Institute_Q1341845,
+        okg:Creator_Protein_Information_Resource_Q1256927,
+        okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 ;
+    okg:description "database of protein sequence and functional information" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257,
+        okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 ;
+    okg:homepage <https://www.uniprot.org/> ;
+    okg:partOf "ELIXIR EMBL-EBI Node" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/chebi/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q108654442>,
+        <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q4117139>,
+        <http://www.wikidata.org/entity/Q5227240>,
+        <http://www.wikidata.org/entity/Q595971>,
+        <http://www.wikidata.org/entity/Q7094076> ;
+    okg:title "UniProt" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q905695> .
+
 <https://openknowledgegraphs.com/resource/unique-population-registry-code/> a okg:ControlledVocabulary ;
     rdfs:label "Unique Population Registry Code" ;
     okg:alias "Personal ID Code Number",
@@ -29928,24 +29902,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118243> .
 
-<https://openknowledgegraphs.com/resource/biological-spatial-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Biological Spatial Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "BSPO",
-        "Biospatial Ontology" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "ontology for respresenting spatial concepts used in biology" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
-    okg:homepage <https://github.com/obophenotype/biological-spatial-ontology> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Biological Spatial Ontology" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q81661546> .
-
 <https://openknowledgegraphs.com/resource/biomimetic-ontology/> a okg:Ontology ;
     rdfs:label "Biomimetic Ontology" ;
     okg:category okg:GeneralCrossDomain ;
@@ -29971,22 +29927,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
         <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "BioPAX" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q4914639> .
-
-<https://openknowledgegraphs.com/resource/chemical-information-ontology/> a okg:Ontology ;
-    rdfs:label "Chemical Information Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "CHEMINF" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "Ontology for descriptors used in chemoinformatics database" ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <http://code.google.com/p/semanticchemistry/> ;
-    okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/enanomapper-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Chemical Information Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118298> .
 
 <https://openknowledgegraphs.com/resource/chemical-methods-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
@@ -30024,37 +29964,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Collembola Anatomy Ontology" ;
     okg:uses <http://www.wikidata.org/entity/Q28729320> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q111274067> .
-
-<https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Common Anatomy Reference Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "CARO" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "reference ontology for common anatomical structures across species" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
-    okg:homepage <https://github.com/obophenotype/caro/> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Common Anatomy Reference Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118319> .
-
-<https://openknowledgegraphs.com/resource/common-core-ontologies/> a okg:Ontology ;
-    rdfs:label "Common Core Ontologies" ;
-    okg:alias "CCO" ;
-    okg:category okg:GeneralCrossDomain ;
-    okg:description "suite of ontologies for representing common core concepts" ;
-    okg:homepage <http://www.cubrc.org/index.php/data-science-and-information-fusion/ontology> ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Common Core Ontologies" ;
-    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118323> .
 
 <https://openknowledgegraphs.com/resource/common-procurement-vocabulary/> a okg:ControlledVocabulary ;
     rdfs:label "Common Procurement Vocabulary" ;
@@ -30543,20 +30452,24 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:title "Newspaper Genre List" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q106632466> .
 
-<https://openknowledgegraphs.com/resource/ontology-for-biomedical-investigations/> a okg:Ontology ;
+<https://openknowledgegraphs.com/resource/ontology-for-biomedical-investigations/> a okg:KnowledgeGraph,
+        okg:Ontology ;
     rdfs:label "Ontology for Biomedical Investigations" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
     okg:alias "OBI" ;
     okg:category okg:LifeSciencesHealthcare ;
     okg:description "international cross-domain ontology effort" ;
     okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
     okg:homepage <http://obi-ontology.org> ;
-    okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
         <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/>,
         <https://openknowledgegraphs.com/resource/radiation-biology-ontology/> ;
     okg:sourceRepo <https://github.com/obi-ontology/obi> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
     okg:title "Ontology for Biomedical Investigations" ;
     okg:uses <http://www.wikidata.org/entity/Q4866972> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q7095051> .
@@ -30638,7 +30551,8 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
         <https://openknowledgegraphs.com/resource/cell-ontology/>,
-        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/> ;
+        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254>,
         <http://www.wikidata.org/entity/Q4117139> ;
     okg:title "Protein Ontology" ;
@@ -30821,6 +30735,29 @@ okg:License_hpo_license_Q112817130 a okg:License ;
         <http://www.wikidata.org/entity/Q498267> ;
     okg:title "Semantic Scholar" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q22908627> .
+
+<https://openknowledgegraphs.com/resource/semanticscience-integrated-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Semanticscience Integrated Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q54837> ;
+    okg:alias "SIO" ;
+    okg:category okg:GeneralCrossDomain ;
+    okg:description "ontology" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <http://code.google.com/p/semanticscience/wiki/SIO> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/chemical-information-ontology/>,
+        <https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/>,
+        <https://openknowledgegraphs.com/resource/interaction-network-ontology/> ;
+    okg:sourceRepo <https://github.com/MaastrichtU-IDS/semanticscience> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Semanticscience Integrated Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118609> .
 
 <https://openknowledgegraphs.com/resource/shape-expressions/> a okg:Ontology ;
     rdfs:label "Shape Expressions" ;
@@ -31014,32 +30951,6 @@ okg:License_hpo_license_Q112817130 a okg:License ;
     okg:sourceType <http://www.wikidata.org/entity/Q1469824> ;
     okg:title "UNIMARC: Medium of Performance" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104914992> .
-
-<https://openknowledgegraphs.com/resource/uniprot/> a okg:KnowledgeGraph ;
-    rdfs:label "UniProt" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q109496594>,
-        <http://www.wikidata.org/entity/Q3152521>,
-        <http://www.wikidata.org/entity/Q43984865>,
-        <http://www.wikidata.org/entity/Q54837> ;
-    okg:alias "UniProt Knowledge Base" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:creator okg:Creator_EMBL_s_European_Bioinformatics_Institute_Q1341845,
-        okg:Creator_Protein_Information_Resource_Q1256927,
-        okg:Creator_SIB_Swiss_Institute_of_Bioinformatics_Q3152521 ;
-    okg:description "database of protein sequence and functional information" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257,
-        okg:License_Creative_Commons_Attribution_NoDerivs_3_0_Unported_Q18810160 ;
-    okg:homepage <https://www.uniprot.org/> ;
-    okg:partOf "ELIXIR EMBL-EBI Node" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/chebi/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q108654442>,
-        <http://www.wikidata.org/entity/Q33002955>,
-        <http://www.wikidata.org/entity/Q4117139>,
-        <http://www.wikidata.org/entity/Q5227240>,
-        <http://www.wikidata.org/entity/Q595971>,
-        <http://www.wikidata.org/entity/Q7094076> ;
-    okg:title "UniProt" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q905695> .
 
 <https://openknowledgegraphs.com/resource/units-of-measurement-ontology/> a okg:Ontology ;
     rdfs:label "Units of measurement ontology" ;
@@ -31299,6 +31210,25 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "Autores.uy" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q22975461> .
 
+<https://openknowledgegraphs.com/resource/biological-spatial-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Biological Spatial Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "BSPO",
+        "Biospatial Ontology" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "ontology for respresenting spatial concepts used in biology" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
+    okg:homepage <https://github.com/obophenotype/biological-spatial-ontology> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
+    okg:title "Biological Spatial Ontology" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q81661546> .
+
 <https://openknowledgegraphs.com/resource/chemical-entities-of-biological-interest/> a okg:Ontology ;
     rdfs:label "Chemical Entities of Biological Interest" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q7072326>,
@@ -31344,6 +31274,26 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q859161> ;
     okg:title "Cointegrity Web3 Glossary" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q139584010> .
+
+<https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Common Anatomy Reference Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "CARO" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "reference ontology for common anatomical structures across species" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
+    okg:homepage <https://github.com/obophenotype/caro/> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
+    okg:title "Common Anatomy Reference Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118319> .
 
 <https://openknowledgegraphs.com/resource/conceptnet/> a okg:KnowledgeGraph ;
     rdfs:label "ConceptNet" ;
@@ -31596,7 +31546,8 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
         <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/> ;
+        <https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
     okg:sourceRepo <https://github.com/information-artifact-ontology/IAO> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254>,
         <http://www.wikidata.org/entity/Q33002955> ;
@@ -31708,6 +31659,26 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
     okg:title "National Library of Korea Linked Open Data" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q61095607> .
 
+<https://openknowledgegraphs.com/resource/ncbi-organismal-classification/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "NCBI organismal classification" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "ncbitaxon" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "ontology representation of the NCBI organismal taxonomy" ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <http://bioportal.bioontology.org/ontologies/1132> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-line-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
+    okg:title "NCBI organismal classification" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q81661717> .
+
 <https://openknowledgegraphs.com/resource/ndf-rt/> a okg:KnowledgeGraph ;
     rdfs:label "NDF-RT" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
@@ -31737,6 +31708,30 @@ okg:License_Resource_4_clause_BSD_License_Q21503790 a okg:License ;
         <http://www.wikidata.org/entity/Q856638> ;
     okg:title "NUKAT" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11789729> .
+
+<https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/> a okg:Ontology ;
+    rdfs:label "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "aism" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "ontology describing the anatomy of insect skeletal and muscular systems" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <https://github.com/insect-morphology/aism> ;
+    okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/biological-spatial-ontology/>,
+        <https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/>,
+        <https://openknowledgegraphs.com/resource/uberon/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
+    okg:title "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)" ;
+    okg:uses <http://www.wikidata.org/entity/Q28729320>,
+        <http://www.wikidata.org/entity/Q4866972>,
+        <http://www.wikidata.org/entity/Q55118319>,
+        <http://www.wikidata.org/entity/Q7876491>,
+        <http://www.wikidata.org/entity/Q81661522>,
+        <http://www.wikidata.org/entity/Q81661546> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q112972813> .
 
 <https://openknowledgegraphs.com/resource/ontology-of-units-of-measure-2-0/> a okg:Ontology ;
     rdfs:label "Ontology of units of Measure 2.0" ;
@@ -32563,6 +32558,27 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Essence" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q124511945> .
 
+<https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Experimental Factor Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561> ;
+    okg:alias "EFO" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "ontology" ;
+    okg:hasLicense okg:License_Apache_Software_License_2_0_Q13785927 ;
+    okg:homepage <http://bioportal.bioontology.org/ontologies/1136> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/chemical-information-ontology/>,
+        <https://openknowledgegraphs.com/resource/interaction-network-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Experimental Factor Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q16251642> .
+
 <https://openknowledgegraphs.com/resource/extensions-to-the-owl-time-ontology-entity-relations/> a okg:Ontology ;
     rdfs:label "Extensions to the OWL-Time Ontology - entity relations" ;
     okg:alias "vocab-owl-time-rel" ;
@@ -32678,7 +32694,8 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:partOf "OBO Foundry" ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
         <https://openknowledgegraphs.com/resource/cell-ontology/>,
-        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/> ;
+        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
     okg:sourceType <http://www.wikidata.org/entity/Q324254>,
         <http://www.wikidata.org/entity/Q81314568> ;
     okg:title "Gene Ontology" ;
@@ -32724,6 +32741,29 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Getty Thesaurus of Geographic Names" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q1520117> .
 
+<https://openknowledgegraphs.com/resource/interaction-network-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Interaction Network Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183>,
+        <http://www.wikidata.org/entity/Q54837> ;
+    okg:alias "INO" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "ontology for gene-gene interactions" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
+    okg:homepage <https://github.com/INO-ontology/ino> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/chemical-information-ontology/>,
+        <https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Interaction Network Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118418> .
+
 <https://openknowledgegraphs.com/resource/national-registry-of-science-technology-and-innovation/> a okg:ControlledVocabulary ;
     rdfs:label "National Registry of Science, Technology and Innovation" ;
     okg:alias "Renacyt" ;
@@ -32740,26 +32780,6 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
         <http://www.wikidata.org/entity/Q4182287> ;
     okg:title "National Registry of Science, Technology and Innovation" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q110900119> .
-
-<https://openknowledgegraphs.com/resource/ncbi-organismal-classification/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "NCBI organismal classification" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "ncbitaxon" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "ontology representation of the NCBI organismal taxonomy" ;
-    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
-    okg:homepage <http://bioportal.bioontology.org/ontologies/1132> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
-        <https://openknowledgegraphs.com/resource/cell-line-ontology/>,
-        <https://openknowledgegraphs.com/resource/cell-ontology/>,
-        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "NCBI organismal classification" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q81661717> .
 
 <https://openknowledgegraphs.com/resource/neomanitai-q138773774/> a okg:KnowledgeGraph ;
     rdfs:label "Neomanitai" ;
@@ -32797,30 +32817,6 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
     okg:title "Onto-exhibit" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q140363106> .
 
-<https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/> a okg:Ontology ;
-    rdfs:label "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "aism" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "ontology describing the anatomy of insect skeletal and muscular systems" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <https://github.com/insect-morphology/aism> ;
-    okg:partOf "Open Biological and Biomedical Ontology Foundry Ontologies" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/biological-spatial-ontology/>,
-        <https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/>,
-        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/>,
-        <https://openknowledgegraphs.com/resource/uberon/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254> ;
-    okg:title "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)" ;
-    okg:uses <http://www.wikidata.org/entity/Q28729320>,
-        <http://www.wikidata.org/entity/Q4866972>,
-        <http://www.wikidata.org/entity/Q55118319>,
-        <http://www.wikidata.org/entity/Q7876491>,
-        <http://www.wikidata.org/entity/Q81661522>,
-        <http://www.wikidata.org/entity/Q81661546> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q112972813> .
-
 <https://openknowledgegraphs.com/resource/parks-canada-descriptive-and-visual-dictionary-of-objects/> a okg:ControlledVocabulary ;
     rdfs:label "Parks Canada Descriptive and Visual Dictionary of Objects" ;
     okg:alias "Parks Canada DVD" ;
@@ -32852,29 +32848,6 @@ okg:License_proprietary_license_Q3238057 a okg:License ;
         <http://www.wikidata.org/entity/Q35127> ;
     okg:title "PeriodO" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104904881> .
-
-<https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Phenotype And Trait Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "PATO" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "OBO Foundry ontology" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
-    okg:homepage <https://github.com/pato-ontology/pato/> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/agronomy-ontology/>,
-        <https://openknowledgegraphs.com/resource/cell-ontology/>,
-        <https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/>,
-        <https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/>,
-        <https://openknowledgegraphs.com/resource/radiation-biology-ontology/> ;
-    okg:sourceRepo <https://github.com/pato-ontology/pato> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Phenotype And Trait Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q112336713> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q81661522> .
 
 <https://openknowledgegraphs.com/resource/q131303294/> a okg:KnowledgeGraph ;
     rdfs:label "Q131303294" ;
@@ -33150,6 +33123,30 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
         <http://www.wikidata.org/entity/Q7876491>,
         <http://www.wikidata.org/entity/Q81661717> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q21039006> .
+
+<https://openknowledgegraphs.com/resource/chemical-information-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Chemical Information Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183>,
+        <http://www.wikidata.org/entity/Q54837> ;
+    okg:alias "CHEMINF" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "Ontology for descriptors used in chemoinformatics database" ;
+    okg:hasLicense okg:License_Creative_Commons_CC0_License_Q6938433 ;
+    okg:homepage <http://code.google.com/p/semanticchemistry/> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/enanomapper-ontology/>,
+        <https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/>,
+        <https://openknowledgegraphs.com/resource/interaction-network-ontology/> ;
+    okg:sourceRepo <https://github.com/semanticchemistry/semanticchemistry> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Chemical Information Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q4866972> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118298> .
 
 <https://openknowledgegraphs.com/resource/computer-science-ontology/> a okg:Ontology ;
     rdfs:label "Computer Science Ontology" ;
@@ -33682,6 +33679,34 @@ okg:License_Open_Data_Commons_Attribution_License_Q30940585 a okg:License ;
     okg:title "Places of War" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q107530657> .
 
+<https://openknowledgegraphs.com/resource/radiation-biology-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Radiation Biology Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "rbo" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "ontology for radiation biology concepts and radiobiological effects" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
+    okg:homepage <https://github.com/Radiobiology-Informatics-Consortium/RBO> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
+        <https://openknowledgegraphs.com/resource/chemical-methods-ontology/>,
+        <https://openknowledgegraphs.com/resource/ontology-for-biomedical-investigations/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/>,
+        <https://openknowledgegraphs.com/resource/units-of-measurement-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q33002955> ;
+    okg:title "Radiation Biology Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q28729320>,
+        <http://www.wikidata.org/entity/Q31110555>,
+        <http://www.wikidata.org/entity/Q4866972>,
+        <http://www.wikidata.org/entity/Q55118301>,
+        <http://www.wikidata.org/entity/Q7095051>,
+        <http://www.wikidata.org/entity/Q81661522>,
+        <http://www.wikidata.org/entity/Q81661826> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q113014438> .
+
 <https://openknowledgegraphs.com/resource/rda-form-of-musical-notation/> a okg:ControlledVocabulary ;
     rdfs:label "RDA form of musical notation" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q104417848> ;
@@ -34098,34 +34123,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
     okg:title "Open Science Thesaurus" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q108928644> .
 
-<https://openknowledgegraphs.com/resource/radiation-biology-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Radiation Biology Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "rbo" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "ontology for radiation biology concepts and radiobiological effects" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_3_0_Unported_Q14947546 ;
-    okg:homepage <https://github.com/Radiobiology-Informatics-Consortium/RBO> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/basic-formal-ontology/>,
-        <https://openknowledgegraphs.com/resource/chemical-methods-ontology/>,
-        <https://openknowledgegraphs.com/resource/ontology-for-biomedical-investigations/>,
-        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/>,
-        <https://openknowledgegraphs.com/resource/units-of-measurement-ontology/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Radiation Biology Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q28729320>,
-        <http://www.wikidata.org/entity/Q31110555>,
-        <http://www.wikidata.org/entity/Q4866972>,
-        <http://www.wikidata.org/entity/Q55118301>,
-        <http://www.wikidata.org/entity/Q7095051>,
-        <http://www.wikidata.org/entity/Q81661522>,
-        <http://www.wikidata.org/entity/Q81661826> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q113014438> .
-
 <https://openknowledgegraphs.com/resource/rda-type-of-recording/> a okg:ControlledVocabulary ;
     rdfs:label "RDA type of recording" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q104417848> ;
@@ -34190,29 +34187,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_3_0_Unported_Q14946043 a okg
 okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
     rdfs:label "Getty Research Institute" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q11203476> .
-
-<https://openknowledgegraphs.com/resource/chebi/> a okg:Ontology ;
-    rdfs:label "ChEBI" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q109496594>,
-        <http://www.wikidata.org/entity/Q7072326> ;
-    okg:alias "Chemical Entities of Biological Interest" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "database and ontology of molecular entities focused on small chemical compounds" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <http://www.ebi.ac.uk/chebi> ;
-    okg:partOf "ELIXIR EMBL-EBI Node" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/cell-ontology/>,
-        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/>,
-        <https://openknowledgegraphs.com/resource/chemical-entities-of-biological-interest/>,
-        <https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/>,
-        <https://openknowledgegraphs.com/resource/uniprot/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q108654442>,
-        <http://www.wikidata.org/entity/Q2881060>,
-        <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q4117139>,
-        <http://www.wikidata.org/entity/Q81314568> ;
-    okg:title "ChEBI" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q902623> .
 
 <https://openknowledgegraphs.com/resource/library-of-congress-children-s-subject-headings/> a okg:ControlledVocabulary ;
     rdfs:label "Library of Congress Children's Subject Headings" ;
@@ -34350,6 +34324,29 @@ okg:Creator_Getty_Research_Institute_Q11203476 a okg:Organization ;
         <http://www.wikidata.org/entity/Q902623> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q113006226> .
 
+<https://openknowledgegraphs.com/resource/chebi/> a okg:Ontology ;
+    rdfs:label "ChEBI" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q109496594>,
+        <http://www.wikidata.org/entity/Q7072326> ;
+    okg:alias "Chemical Entities of Biological Interest" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "database and ontology of molecular entities focused on small chemical compounds" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <http://www.ebi.ac.uk/chebi> ;
+    okg:partOf "ELIXIR EMBL-EBI Node" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/>,
+        <https://openknowledgegraphs.com/resource/chemical-entities-of-biological-interest/>,
+        <https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q108654442>,
+        <http://www.wikidata.org/entity/Q2881060>,
+        <http://www.wikidata.org/entity/Q324254>,
+        <http://www.wikidata.org/entity/Q4117139>,
+        <http://www.wikidata.org/entity/Q81314568> ;
+    okg:title "ChEBI" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q902623> .
+
 <https://openknowledgegraphs.com/resource/gellish-english/> a okg:ControlledVocabulary,
         okg:Ontology ;
     rdfs:label "Gellish English" ;
@@ -34446,39 +34443,6 @@ okg:License_Creative_Commons_Attribution_ShareAlike_4_0_International_Q18199165 
     rdfs:label "Creative Commons Attribution-ShareAlike 4.0 International" ;
     okg:licenseName "Creative Commons Attribution-ShareAlike 4.0 International" .
 
-okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
-    rdfs:label "3-clause BSD License" ;
-    okg:licenseName "3-clause BSD License" .
-
-<https://openknowledgegraphs.com/resource/cell-ontology/> a okg:KnowledgeGraph,
-        okg:Ontology ;
-    rdfs:label "Cell Ontology" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
-        <http://www.wikidata.org/entity/Q4117183> ;
-    okg:alias "cl" ;
-    okg:category okg:LifeSciencesHealthcare ;
-    okg:description "an ontology for cell types" ;
-    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
-    okg:homepage <http://obofoundry.org/ontology/cl.html> ;
-    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/cell-line-ontology/>,
-        <https://openknowledgegraphs.com/resource/chebi/>,
-        <https://openknowledgegraphs.com/resource/gene-ontology/>,
-        <https://openknowledgegraphs.com/resource/ncbi-organismal-classification/>,
-        <https://openknowledgegraphs.com/resource/protein-ontology/> ;
-    okg:sourceRepo <https://github.com/obophenotype/cell-ontology> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q324254>,
-        <http://www.wikidata.org/entity/Q33002955> ;
-    okg:title "Cell Ontology" ;
-    okg:uses <http://www.wikidata.org/entity/Q135085>,
-        <http://www.wikidata.org/entity/Q28729320>,
-        <http://www.wikidata.org/entity/Q55118584>,
-        <http://www.wikidata.org/entity/Q7876491>,
-        <http://www.wikidata.org/entity/Q81661522>,
-        <http://www.wikidata.org/entity/Q81661717>,
-        <http://www.wikidata.org/entity/Q902623> ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q55118285> .
-
 <https://openknowledgegraphs.com/resource/rof-extension-mode/> a okg:ControlledVocabulary ;
     rdfs:label "ROF extension mode" ;
     dcterms:isPartOf <http://www.wikidata.org/entity/Q104533647> ;
@@ -34498,6 +34462,10 @@ okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
         <http://www.wikidata.org/entity/Q1469824> ;
     okg:title "ROF extension mode" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104538260> .
+
+okg:License_Resource_3_clause_BSD_License_Q18491847 a okg:License ;
+    rdfs:label "3-clause BSD License" ;
+    okg:licenseName "3-clause BSD License" .
 
 <https://openknowledgegraphs.com/resource/credit/> a okg:ControlledVocabulary ;
     rdfs:label "CRediT" ;
@@ -34610,22 +34578,6 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
     rdfs:label "Apache Software License 2.0" ;
     okg:licenseName "Apache Software License 2.0" .
 
-<https://openknowledgegraphs.com/resource/ifla-value-vocabularies/> a okg:ControlledVocabulary ;
-    rdfs:label "IFLA Value Vocabularies" ;
-    dcterms:isPartOf <http://www.wikidata.org/entity/Q54410458> ;
-    okg:category okg:LibraryCulturalHeritage ;
-    okg:description "vocabulary encoding schemes" ;
-    okg:homepage <https://www.iflastandards.info/unimarc/terms/> ;
-    okg:partOf "IFLA Library Reference Model" ;
-    okg:relatedTo <https://openknowledgegraphs.com/resource/unimarc-church-mode-of-musical-work/>,
-        <https://openknowledgegraphs.com/resource/unimarc-form-of-musical-work/>,
-        <https://openknowledgegraphs.com/resource/unimarc-format-of-notated-music-type-of-score/>,
-        <https://openknowledgegraphs.com/resource/unimarc-key-of-musical-work/>,
-        <https://openknowledgegraphs.com/resource/unimarc-medium-of-performance/> ;
-    okg:sourceType <http://www.wikidata.org/entity/Q1469824> ;
-    okg:title "IFLA Value Vocabularies" ;
-    okg:wikidataId <https://www.wikidata.org/wiki/Q104804819> .
-
 <https://openknowledgegraphs.com/resource/agronomy-ontology/> a okg:KnowledgeGraph,
         okg:Ontology ;
     rdfs:label "Agronomy Ontology" ;
@@ -34662,6 +34614,51 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
         <http://www.wikidata.org/entity/Q81661826>,
         <http://www.wikidata.org/entity/Q81661839> ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q81661533> .
+
+<https://openknowledgegraphs.com/resource/cell-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Cell Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "cl" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "an ontology for cell types" ;
+    okg:hasLicense okg:License_Creative_Commons_Attribution_4_0_International_Q20007257 ;
+    okg:homepage <http://obofoundry.org/ontology/cl.html> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/cell-line-ontology/>,
+        <https://openknowledgegraphs.com/resource/chebi/>,
+        <https://openknowledgegraphs.com/resource/gene-ontology/>,
+        <https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/>,
+        <https://openknowledgegraphs.com/resource/protein-ontology/> ;
+    okg:sourceRepo <https://github.com/obophenotype/cell-ontology> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Cell Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q135085>,
+        <http://www.wikidata.org/entity/Q28729320>,
+        <http://www.wikidata.org/entity/Q55118584>,
+        <http://www.wikidata.org/entity/Q7876491>,
+        <http://www.wikidata.org/entity/Q81661522>,
+        <http://www.wikidata.org/entity/Q81661717>,
+        <http://www.wikidata.org/entity/Q902623> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q55118285> .
+
+<https://openknowledgegraphs.com/resource/ifla-value-vocabularies/> a okg:ControlledVocabulary ;
+    rdfs:label "IFLA Value Vocabularies" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q54410458> ;
+    okg:category okg:LibraryCulturalHeritage ;
+    okg:description "vocabulary encoding schemes" ;
+    okg:homepage <https://www.iflastandards.info/unimarc/terms/> ;
+    okg:partOf "IFLA Library Reference Model" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/unimarc-church-mode-of-musical-work/>,
+        <https://openknowledgegraphs.com/resource/unimarc-form-of-musical-work/>,
+        <https://openknowledgegraphs.com/resource/unimarc-format-of-notated-music-type-of-score/>,
+        <https://openknowledgegraphs.com/resource/unimarc-key-of-musical-work/>,
+        <https://openknowledgegraphs.com/resource/unimarc-medium-of-performance/> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q1469824> ;
+    okg:title "IFLA Value Vocabularies" ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q104804819> .
 
 <https://openknowledgegraphs.com/resource/rof-character/> a okg:ControlledVocabulary ;
     rdfs:label "ROF character" ;
@@ -34722,6 +34719,44 @@ okg:License_Apache_Software_License_2_0_Q13785927 a okg:License ;
         <http://www.wikidata.org/entity/Q1469824> ;
     okg:title "ROF extension termination" ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q104538346> .
+
+<https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/> a okg:KnowledgeGraph,
+        okg:Ontology ;
+    rdfs:label "Phenotype And Trait Ontology" ;
+    dcterms:isPartOf <http://www.wikidata.org/entity/Q137008561>,
+        <http://www.wikidata.org/entity/Q4117183> ;
+    okg:alias "PATO" ;
+    okg:category okg:LifeSciencesHealthcare ;
+    okg:description "OBO Foundry ontology" ;
+    okg:hasLicense okg:License_Resource_3_clause_BSD_License_Q18491847 ;
+    okg:homepage <https://pato-ontology.github.io/pato/> ;
+    okg:partOf "BLOD: Biomedical Linked Open Datasets" ;
+    okg:relatedTo <https://openknowledgegraphs.com/resource/biological-spatial-ontology/>,
+        <https://openknowledgegraphs.com/resource/cell-ontology/>,
+        <https://openknowledgegraphs.com/resource/chebi/>,
+        <https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/>,
+        <https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/> ;
+    okg:sourceRepo <https://github.com/pato-ontology/pato> ;
+    okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
+        <http://www.wikidata.org/entity/Q56316737> ;
+    okg:title "Phenotype And Trait Ontology" ;
+    okg:uses <http://www.wikidata.org/entity/Q112336713>,
+        <http://www.wikidata.org/entity/Q12159796>,
+        <http://www.wikidata.org/entity/Q135085>,
+        <http://www.wikidata.org/entity/Q141305573>,
+        <http://www.wikidata.org/entity/Q4866972>,
+        <http://www.wikidata.org/entity/Q55118285>,
+        <http://www.wikidata.org/entity/Q55118319>,
+        <http://www.wikidata.org/entity/Q55118415>,
+        <http://www.wikidata.org/entity/Q55118575>,
+        <http://www.wikidata.org/entity/Q55118584>,
+        <http://www.wikidata.org/entity/Q7095051>,
+        <http://www.wikidata.org/entity/Q7876491>,
+        <http://www.wikidata.org/entity/Q81661546>,
+        <http://www.wikidata.org/entity/Q81661716>,
+        <http://www.wikidata.org/entity/Q81661803>,
+        <http://www.wikidata.org/entity/Q902623> ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q81661522> .
 
 <https://openknowledgegraphs.com/resource/rda-onix-framework-value-vocabularies/> a okg:ControlledVocabulary ;
     rdfs:label "RDA/ONIX framework value vocabularies" ;
@@ -34877,8 +34912,8 @@ okg:TechnologyWeb a okg:Category ;
     okg:relatedTo <https://openknowledgegraphs.com/resource/afo-foundational-ontology/>,
         <https://openknowledgegraphs.com/resource/behavior-perspective-model/>,
         <https://openknowledgegraphs.com/resource/biomimetic-ontology/>,
-        <https://openknowledgegraphs.com/resource/common-core-ontologies/>,
-        <https://openknowledgegraphs.com/resource/information-artifact-ontology/> ;
+        <https://openknowledgegraphs.com/resource/information-artifact-ontology/>,
+        <https://openknowledgegraphs.com/resource/semanticscience-integrated-ontology/> ;
     okg:sourceRepo <https://github.com/bfo-ontology/BFO-2020> ;
     okg:sourceType <http://www.wikidata.org/entity/Q33002955>,
         <http://www.wikidata.org/entity/Q3882785> ;

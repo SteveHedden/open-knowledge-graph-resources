@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T09:58:10Z",
+  "generatedAt": "2026-09-06T10:12:30Z",
   "items": [
     {
       "title": "'CPR Ontology for the Institute of Medicine''s Computer-Based Patient Record Ontology'",
@@ -2283,12 +2283,12 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/biomimetic-ontology/"
         },
         {
-          "title": "Common Core Ontologies",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/common-core-ontologies/"
-        },
-        {
           "title": "Information Artifact Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/information-artifact-ontology/"
+        },
+        {
+          "title": "Semanticscience Integrated Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/semanticscience-integrated-ontology/"
         }
       ]
     },
@@ -3133,6 +3133,10 @@
         {
           "title": "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -4804,6 +4808,23 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets"
     },
     {
+      "title": "Cell Markers Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141305573",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-markers-ontology/",
+      "description": "integrates cell type markers for cells in the Cell Ontology",
+      "aliases": [
+        "CLM"
+      ],
+      "category": "Life Sciences & Healthcare",
+      "sourceRepo": "https://github.com/Cellular-Semantics/CellMark",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ]
+    },
+    {
       "title": "Cell Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q55118285",
       "types": [
@@ -4836,8 +4857,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/gene-ontology/"
         },
         {
-          "title": "NCBI organismal classification",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/ncbi-organismal-classification/"
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         },
         {
           "title": "Protein Ontology",
@@ -5146,8 +5167,8 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/"
         },
         {
-          "title": "UniProt",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/uniprot/"
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -5282,20 +5303,9 @@
     },
     {
       "title": "Chemical Information Ontology",
-      "wikidataId": "https://www.wikidata.org/wiki/Q138493915",
-      "types": [
-        "KnowledgeGraph"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138493915/",
-      "aliases": [],
-      "category": "General / Cross-domain",
-      "homepage": "http://bioportal.bioontology.org/ontologies/1444",
-      "partOf": "BLOD: Biomedical Linked Open Datasets"
-    },
-    {
-      "title": "Chemical Information Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q55118298",
       "types": [
+        "KnowledgeGraph",
         "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/",
@@ -5305,7 +5315,8 @@
       ],
       "category": "Life Sciences & Healthcare",
       "homepage": "http://code.google.com/p/semanticchemistry/",
-      "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
+      "sourceRepo": "https://github.com/semanticchemistry/semanticchemistry",
+      "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons CC0 License"
       ],
@@ -5315,8 +5326,20 @@
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
         },
         {
+          "title": "Cell Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
           "title": "eNanoMapper ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/enanomapper-ontology/"
+        },
+        {
+          "title": "Experimental Factor Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/"
+        },
+        {
+          "title": "Interaction Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/interaction-network-ontology/"
         }
       ]
     },
@@ -6352,6 +6375,10 @@
         {
           "title": "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -11351,19 +11378,6 @@
     },
     {
       "title": "Experimental Factor Ontology",
-      "wikidataId": "https://www.wikidata.org/wiki/Q138495237",
-      "types": [
-        "KnowledgeGraph",
-        "Ontology"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138495237/",
-      "aliases": [],
-      "category": "General / Cross-domain",
-      "homepage": "https://www.ebi.ac.uk/ols4/ontologies/efo",
-      "partOf": "BLOD: Biomedical Linked Open Datasets"
-    },
-    {
-      "title": "Experimental Factor Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q16251642",
       "types": [
         "KnowledgeGraph",
@@ -11384,6 +11398,22 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Cell Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "Chemical Information Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
+        },
+        {
+          "title": "Interaction Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/interaction-network-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -13384,6 +13414,10 @@
         {
           "title": "CHEBI Integrated Role Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -13936,6 +13970,21 @@
       ]
     },
     {
+      "title": "Geology Ontology",
+      "wikidataId": "https://www.wikidata.org/wiki/Q141311859",
+      "types": [
+        "Ontology"
+      ],
+      "canonicalUrl": "https://openknowledgegraphs.com/resource/geology-ontology/",
+      "description": "domain ontology for basic geologic concepts and lithology",
+      "aliases": [
+        "IGS ontology",
+        "IGSInt ontology"
+      ],
+      "category": "Environment & Agriculture",
+      "sourceRepo": "https://github.com/denevers/Geology-Ontology"
+    },
+    {
       "title": "GeoNames ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q29896506",
       "types": [
@@ -13964,6 +14013,7 @@
       "title": "GeoScience Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q141222183",
       "types": [
+        "KnowledgeGraph",
         "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/geoscience-ontology/",
@@ -21800,6 +21850,10 @@
         {
           "title": "Clytia hemisphaerica Development and Anatomy Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/clytia-hemisphaerica-development-and-anatomy-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -22112,20 +22166,9 @@
     },
     {
       "title": "Interaction Network Ontology",
-      "wikidataId": "https://www.wikidata.org/wiki/Q138523447",
-      "types": [
-        "KnowledgeGraph"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138523447/",
-      "aliases": [],
-      "category": "General / Cross-domain",
-      "homepage": "https://github.com/INO-ontology/ino",
-      "partOf": "BLOD: Biomedical Linked Open Datasets"
-    },
-    {
-      "title": "Interaction Network Ontology",
       "wikidataId": "https://www.wikidata.org/wiki/Q55118418",
       "types": [
+        "KnowledgeGraph",
         "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/interaction-network-ontology/",
@@ -22135,7 +22178,7 @@
       ],
       "category": "Life Sciences & Healthcare",
       "homepage": "https://github.com/INO-ontology/ino",
-      "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
+      "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
       ],
@@ -22143,6 +22186,22 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Cell Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "Chemical Information Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
+        },
+        {
+          "title": "Experimental Factor Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -28699,6 +28758,12 @@
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 3.0 Unported"
+      ],
+      "relatedTools": [
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
+        }
       ]
     },
     {
@@ -29269,9 +29334,7 @@
       "canonicalUrl": "https://openknowledgegraphs.com/resource/nndb/",
       "description": "database of famous people",
       "aliases": [
-        "(16) NNDB",
-        "Notable Names Database",
-        "nndb.com"
+        "Notable Names Database"
       ],
       "category": "General / Cross-domain",
       "homepage": "https://www.nndb.com/"
@@ -30491,20 +30554,9 @@
     },
     {
       "title": "Ontology for Biomedical Investigations",
-      "wikidataId": "https://www.wikidata.org/wiki/Q138524845",
-      "types": [
-        "KnowledgeGraph"
-      ],
-      "canonicalUrl": "https://openknowledgegraphs.com/resource/en-q138524845/",
-      "aliases": [],
-      "category": "General / Cross-domain",
-      "homepage": "http://obi-ontology.org",
-      "partOf": "BLOD: Biomedical Linked Open Datasets"
-    },
-    {
-      "title": "Ontology for Biomedical Investigations",
       "wikidataId": "https://www.wikidata.org/wiki/Q7095051",
       "types": [
+        "KnowledgeGraph",
         "Ontology"
       ],
       "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-biomedical-investigations/",
@@ -30515,7 +30567,7 @@
       "category": "Life Sciences & Healthcare",
       "homepage": "http://obi-ontology.org",
       "sourceRepo": "https://github.com/obi-ontology/obi",
-      "partOf": "Open Biological and Biomedical Ontology Foundry Ontologies",
+      "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
         "Creative Commons Attribution 4.0 International"
       ],
@@ -30527,6 +30579,10 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         },
         {
           "title": "Radiation Biology Ontology",
@@ -33582,32 +33638,32 @@
         "PATO"
       ],
       "category": "Life Sciences & Healthcare",
-      "homepage": "https://github.com/pato-ontology/pato/",
+      "homepage": "https://pato-ontology.github.io/pato/",
       "sourceRepo": "https://github.com/pato-ontology/pato",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
       "licenses": [
-        "Creative Commons Attribution 3.0 Unported"
+        "3-clause BSD License"
       ],
       "relatedTools": [
         {
-          "title": "Agronomy Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/agronomy-ontology/"
+          "title": "Biological Spatial Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/biological-spatial-ontology/"
         },
         {
           "title": "Cell Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
         },
         {
+          "title": "ChEBI",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi/"
+        },
+        {
+          "title": "Common Anatomy Reference Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/common-anatomy-reference-ontology/"
+        },
+        {
           "title": "Compositional Dietary Nutrition Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/compositional-dietary-nutrition-ontology/"
-        },
-        {
-          "title": "Ontology for the Anatomy of the Insect SkeletoMuscular system (AISM)",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/ontology-for-the-anatomy-of-the-insect-skeletomuscular-system-aism/"
-        },
-        {
-          "title": "Radiation Biology Ontology",
-          "canonicalUrl": "https://openknowledgegraphs.com/resource/radiation-biology-ontology/"
         }
       ]
     },
@@ -34456,6 +34512,10 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -35026,6 +35086,10 @@
         {
           "title": "CHEBI Integrated Role Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/chebi-integrated-role-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },
@@ -40155,12 +40219,32 @@
         "SIO"
       ],
       "category": "General / Cross-domain",
-      "homepage": "http://bioportal.bioontology.org/ontologies/1532",
+      "homepage": "http://code.google.com/p/semanticscience/wiki/SIO",
+      "sourceRepo": "https://github.com/MaastrichtU-IDS/semanticscience",
       "partOf": "BLOD: Biomedical Linked Open Datasets",
+      "licenses": [
+        "Creative Commons Attribution 4.0 International"
+      ],
       "relatedTools": [
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Cell Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/cell-ontology/"
+        },
+        {
+          "title": "Chemical Information Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/chemical-information-ontology/"
+        },
+        {
+          "title": "Experimental Factor Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/experimental-factor-ontology-q16251642/"
+        },
+        {
+          "title": "Interaction Network Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/interaction-network-ontology/"
         }
       ]
     },
@@ -40314,6 +40398,10 @@
         {
           "title": "Basic Formal Ontology",
           "canonicalUrl": "https://openknowledgegraphs.com/resource/basic-formal-ontology/"
+        },
+        {
+          "title": "Phenotype And Trait Ontology",
+          "canonicalUrl": "https://openknowledgegraphs.com/resource/phenotype-and-trait-ontology/"
         }
       ]
     },

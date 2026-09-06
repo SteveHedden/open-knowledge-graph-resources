@@ -651,6 +651,9 @@
 <https://openknowledgegraphs.com/resource/cell-line-ontology/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q21039006> .
 
+<https://openknowledgegraphs.com/resource/cell-markers-ontology/> okg:category okg:LifeSciencesHealthcare ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141305573> .
+
 <https://openknowledgegraphs.com/resource/cell-ontology/> okg:category okg:LifeSciencesHealthcare ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q55118285> .
 
@@ -5975,6 +5978,9 @@
 
 <https://openknowledgegraphs.com/resource/geologic-unit-type/> okg:category okg:EnvironmentAgriculture ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q63464453> .
+
+<https://openknowledgegraphs.com/resource/geology-ontology/> okg:category okg:EnvironmentAgriculture ;
+    okg:wikidataId <https://www.wikidata.org/wiki/Q141311859> .
 
 <https://openknowledgegraphs.com/resource/geonames-ontology/> okg:category okg:Geospatial ;
     okg:wikidataId <https://www.wikidata.org/wiki/Q29896506> .
